@@ -1,6 +1,6 @@
 import React from 'react';
 import { Text, View } from 'react-native';
-import { Card, WhiteSpace, WingBlank } from 'poprn-antd';
+import { Card, WhiteSpace, WingBlank } from 'popui-rn';
 
 export default class BasicCardExample extends React.Component<any, any> {
   render() {

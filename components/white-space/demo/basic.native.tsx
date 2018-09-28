@@ -1,7 +1,7 @@
 // tslint:disable:jsx-no-multiline-js
 import React from 'react';
 import { Text, View } from 'react-native';
-import { WhiteSpace } from 'poprn-antd';
+import { WhiteSpace } from 'popui-rn';
 
 const PlaceHolder = (props: any) => (
   <View

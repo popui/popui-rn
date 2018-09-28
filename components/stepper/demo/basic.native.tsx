@@ -2,7 +2,7 @@
 /* tslint:disable:no-console */
 import React from 'react';
 import { View } from 'react-native';
-import { List, Stepper } from 'poprn-antd';
+import { List, Stepper } from 'popui-rn';
 
 function onChange(value: any) {
   console.log('changed', value);

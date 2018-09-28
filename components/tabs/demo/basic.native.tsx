@@ -1,7 +1,7 @@
 /* tslint:disable:no-console */
 import React from 'react';
 import { ScrollView, Text, View } from 'react-native';
-import { Tabs } from 'poprn-antd';
+import { Tabs } from 'popui-rn';
 
 const renderContent = (tab: any, index: any) => {
   const style = {

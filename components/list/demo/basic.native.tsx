@@ -2,7 +2,7 @@
 // tslint:disable:no-empty
 import React from 'react';
 import { Image, ScrollView, View } from 'react-native';
-import { List } from 'poprn-antd';
+import { List } from 'popui-rn';
 
 const Item = List.Item;
 const Brief = Item.Brief;

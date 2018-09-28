@@ -1,5 +1,5 @@
 import React from 'react';
-import { Grid, Icon } from 'poprn-antd';
+import { Grid, Icon } from 'popui-rn';
 
 const list = [
   'check-circle',

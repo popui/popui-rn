@@ -6,7 +6,7 @@ import {
   Flex,
   WhiteSpace,
   WingBlank,
-} from 'poprn-antd';
+} from 'popui-rn';
 
 export default class ActivityIndicatorExample extends React.Component<any, any> {
   closeTimer: any;

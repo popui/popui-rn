@@ -1,7 +1,7 @@
 /* tslint:disable:no-console */
 import React from 'react';
 import { DeviceEventEmitter } from 'react-native';
-import { Button, Toast, WhiteSpace, WingBlank } from 'poprn-antd';
+import { Button, Toast, WhiteSpace, WingBlank } from 'popui-rn';
 
 function showToast() {
   Toast.info('This is a toast tips !!!');

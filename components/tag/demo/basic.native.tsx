@@ -2,7 +2,7 @@
 /* tslint:disable:no-console */
 import React from 'react';
 import { View } from 'react-native';
-import { Tag, WhiteSpace } from 'poprn-antd';
+import { Tag, WhiteSpace } from 'popui-rn';
 
 function onChange(selected: any) {
   console.log(`tag selected: ${selected}`);

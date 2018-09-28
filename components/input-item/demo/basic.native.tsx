@@ -1,7 +1,7 @@
 /* tslint:disable:jsx-no-multiline-js */
 import React from 'react';
 import { ScrollView, Text } from 'react-native';
-import { Button, InputItem, List } from 'poprn-antd';
+import { Button, InputItem, List } from 'popui-rn';
 
 declare var jest: any;
 

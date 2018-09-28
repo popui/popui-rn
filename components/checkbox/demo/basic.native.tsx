@@ -1,7 +1,7 @@
 // tslint:disable:jsx-no-multiline-js
 import React from 'react';
 import { Text, View } from 'react-native';
-import { Checkbox, List, WhiteSpace } from 'poprn-antd';
+import { Checkbox, List, WhiteSpace } from 'popui-rn';
 const AgreeItem = Checkbox.AgreeItem;
 const CheckboxItem = Checkbox.CheckboxItem;
 

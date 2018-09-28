@@ -1,7 +1,7 @@
 /* tslint:disable:no-console */
 import React from 'react';
 import { View } from 'react-native';
-import { Accordion, List } from 'poprn-antd';
+import { Accordion, List } from 'popui-rn';
 
 export default class AccordionExmple extends React.Component<any, any> {
   onChange = (key: string) => {

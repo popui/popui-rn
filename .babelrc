@@ -8,7 +8,7 @@
         [
           "import",
           {
-            "libraryName": "poprn-antd",
+            "libraryName": "popui-rn",
             "libraryDirectory": "components"
           }
         ]
@@ -22,7 +22,7 @@
         [
           "import",
           {
-            "libraryName": "poprn-antd",
+            "libraryName": "popui-rn",
             "libraryDirectory": "components"
           }
         ]
@@ -36,7 +36,7 @@
         [
           "import",
           {
-            "libraryName": "poprn-antd",
+            "libraryName": "popui-rn",
             "libraryDirectory": "components"
           }
         ]

@@ -2,7 +2,7 @@
 
 import React from 'react';
 import { Text, View } from 'react-native';
-import { WhiteSpace, WingBlank } from 'poprn-antd';
+import { WhiteSpace, WingBlank } from 'popui-rn';
 
 const PlaceHolder = (props: any) => (
   <View

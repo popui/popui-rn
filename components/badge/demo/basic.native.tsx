@@ -2,7 +2,7 @@
 /* tslint:disable:no-console */
 import React from 'react';
 import { ScrollView, View } from 'react-native';
-import { Badge, WhiteSpace } from 'poprn-antd';
+import { Badge, WhiteSpace } from 'popui-rn';
 
 export default class BasicTagExample extends React.Component<any, any> {
   render() {

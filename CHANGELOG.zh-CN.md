@@ -4,7 +4,7 @@ title: 更新日志
 toc: false
 ---
 
-`poprn-antd` 严格遵循 [Semantic Versioning 2.0.0](http://semver.org/lang/zh-CN/) 语义化版本规范。
+`popui-rn` 严格遵循 [Semantic Versioning 2.0.0](http://semver.org/lang/zh-CN/) 语义化版本规范。
 
 #### 发布周期
 
@@ -25,7 +25,7 @@ toc: false
 
 `2018-06-15`
 
-- 拆分 antd-mobile react native 代码到 `poprn-antd` 包。
+- 拆分 antd-mobile react native 代码到 `popui-rn` 包。
 - 特性: 使 `Tag` 组件支持长按。([#20](https://github.com/ant-design/ant-design-mobile-rn/issues/20))
 
 ### 2.1.11

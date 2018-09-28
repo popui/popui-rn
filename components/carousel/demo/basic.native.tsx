@@ -1,6 +1,6 @@
 import React from 'react';
 import { StyleSheet, Text, TextStyle, View, ViewStyle } from 'react-native';
-import { Carousel } from 'poprn-antd';
+import { Carousel } from 'popui-rn';
 
 export default class BasicCarouselExample extends React.Component<any, any> {
   onHorizontalSelectedIndexChange(index: number) {

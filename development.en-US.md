@@ -7,7 +7,7 @@ node = 6+
 npm = 3+
 ```
 
-## Code convention for poprn-antd
+## Code convention for popui-rn
 
 TypeScript
 
@@ -84,7 +84,7 @@ export default Button;
 - `components/button/demo/basic.native.tsx`
 
 ```jsx
-import { Button } from 'poprn-antd';
+import { Button } from 'popui-rn';
 import * as React from 'react';
 import { Text, View } from 'react-native';
 

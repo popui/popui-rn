@@ -1,7 +1,7 @@
 /* tslint:disable:jsx-no-multiline-js */
 import React from 'react';
 import { Text, View } from 'react-native';
-import { List, Radio, WhiteSpace } from 'poprn-antd';
+import { List, Radio, WhiteSpace } from 'popui-rn';
 const RadioItem = Radio.RadioItem;
 
 export default class BasicRadioExample extends React.Component<any, any> {

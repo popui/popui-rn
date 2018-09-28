@@ -1,7 +1,7 @@
 /* tslint:disable:no-console */
 import React from 'react';
 import { ScrollView } from 'react-native';
-import { List, TextareaItem } from 'poprn-antd';
+import { List, TextareaItem } from 'popui-rn';
 
 export default class BasicTextAreaItemExample extends React.Component<
   any,

@@ -3,7 +3,7 @@ order: 0
 title: Ant Design Mobile RN of React
 ---
 
-`poprn-antd` 是 [Ant Design](http://ant.design) 的移动规范的 React 实现，服务于蚂蚁及口碑无线业务。
+`popui-rn` 是 [Ant Design](http://ant.design) 的移动规范的 React 实现，服务于蚂蚁及口碑无线业务。
 
 <div class="pic-plus">
   <img width="160" src="https://gw.alipayobjects.com/zos/rmsportal/KDpgvguMpGfqaHPjicRK.svg">
@@ -58,7 +58,7 @@ title: Ant Design Mobile RN of React
 ### 2. 安装
 
 ```bash
-$ npm install poprn-antd --save
+$ npm install popui-rn --save
 ```
 
 ### 3. 使用
@@ -68,7 +68,7 @@ $ npm install poprn-antd --save
 ```jsx
 import React, { Component } from 'react';
 import { AppRegistry } from 'react-native';
-import Button from 'poprn-antd/lib/button';
+import Button from 'popui-rn/lib/button';
 
 class HelloWorldApp extends Component {
   render() {
@@ -89,15 +89,15 @@ AppRegistry.registerComponent('HelloWorldApp', () => HelloWorldApp);
    // .babelrc or babel-loader option
    {
      "plugins": [
-       ["import", { libraryName: "poprn-antd" }] // 与 Web 平台的区别是不需要设置 style
+       ["import", { libraryName: "popui-rn" }] // 与 Web 平台的区别是不需要设置 style
      ]
    }
    ```
 
-   然后改变从 poprn-antd 引入模块方式即可。
+   然后改变从 popui-rn 引入模块方式即可。
 
    ```jsx
-   import { Button } from 'poprn-antd';
+   import { Button } from 'popui-rn';
    ```
 
    > 说明：有人反映通过 `react-native init` 创建的项目在使用时可能会报 [Unable to resolve module `react-dom`](https://github.com/ant-design/ant-design-mobile/issues/2054) 的错误 ，此时不妨安装 [babel-plugin-module-resolver](https://www.npmjs.com/package/babel-plugin-module-resolver) 试试~
@@ -105,7 +105,7 @@ AppRegistry.registerComponent('HelloWorldApp', () => HelloWorldApp);
 - 手动引入
 
    ```jsx
-   import Button from 'poprn-antd/lib/button';
+   import Button from 'popui-rn/lib/button';
    ```
 
 ##### 更多增强 (非必须):
@@ -115,8 +115,8 @@ AppRegistry.registerComponent('HelloWorldApp', () => HelloWorldApp);
 
 ## 版本
 
-- 稳定版：[![npm package](http://img.shields.io/npm/v/poprn-antd.svg?style=flat-square)](http://npmjs.com/package/poprn-antd)
-- 开发版：[![npm package](https://img.shields.io/npm/v/poprn-antd/next.svg)](http://npmjs.com/package/poprn-antd)
+- 稳定版：[![npm package](http://img.shields.io/npm/v/popui-rn.svg?style=flat-square)](http://npmjs.com/package/popui-rn)
+- 开发版：[![npm package](https://img.shields.io/npm/v/popui-rn/next.svg)](http://npmjs.com/package/popui-rn)
 
 ## 链接
 
@@ -134,7 +134,7 @@ AppRegistry.registerComponent('HelloWorldApp', () => HelloWorldApp);
 
 如果您在使用的过程中碰到问题，可以通过下面几个途径寻求帮助，同时我们也鼓励资深用户通过下面的途径给新人提供帮助。
 
-通过 Stack Overflow 或者 Segment Fault 提问时，建议加上 `antd`/`poprn-antd` 标签。
+通过 Stack Overflow 或者 Segment Fault 提问时，建议加上 `antd`/`popui-rn` 标签。
 
 1. [Stack Overflow](http://stackoverflow.com/questions/tagged/antd)（推荐）
 2. [Segment Fault](https://segmentfault.com/t/antd)

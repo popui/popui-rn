@@ -1,6 +1,6 @@
 import React from 'react';
 import { Alert, View } from 'react-native';
-import { SearchBar } from 'poprn-antd';
+import { SearchBar } from 'popui-rn';
 
 export default class SearchBarDemo extends React.Component<any, any> {
   state = {

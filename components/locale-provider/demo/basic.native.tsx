@@ -3,7 +3,7 @@ import { View } from 'react-native';
 import {
   Pagination, LocaleProvider, List, DatePicker, WhiteSpace, WingBlank,
   Picker, SearchBar,
-} from 'poprn-antd';
+} from 'popui-rn';
 import enUS from '../en_US';
 import ruRU from '../ru_RU';
 

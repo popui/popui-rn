@@ -1,5 +1,5 @@
 import React from 'react';
-import { Pagination, WhiteSpace, WingBlank } from 'poprn-antd';
+import { Pagination, WhiteSpace, WingBlank } from 'popui-rn';
 
 const locale = {
   prevText: '上一步',

@@ -9,17 +9,17 @@
 # Ant Design Mobile RN
 [![](https://img.shields.io/travis/ant-design/ant-design-mobile-rn.svg?style=flat-square)](https://travis-ci.org/ant-design/ant-design-mobile-rn)
 [![Codecov](https://img.shields.io/codecov/c/github/ant-design/ant-design-mobile-rn.svg?style=flat-square)](https://codecov.io/gh/ant-design/ant-design-mobile-rn)
-[![npm package](https://img.shields.io/npm/v/poprn-antd.svg?style=flat-square)](https://www.npmjs.org/package/poprn-antd)
-[![NPM downloads](http://img.shields.io/npm/dm/poprn-antd.svg?style=flat-square)](https://npmjs.org/package/poprn-antd)
+[![npm package](https://img.shields.io/npm/v/popui-rn.svg?style=flat-square)](https://www.npmjs.org/package/popui-rn)
+[![NPM downloads](http://img.shields.io/npm/dm/popui-rn.svg?style=flat-square)](https://npmjs.org/package/popui-rn)
 [![Dependency Status](https://david-dm.org/ant-design/ant-design-mobile-rn.svg?style=flat-square)](https://david-dm.org/ant-design/ant-design-mobile-rn)
 [![Percentage of issues still open](http://isitmaintained.com/badge/open/ant-design/ant-design-mobile-rn.svg)](http://isitmaintained.com/project/ant-design/ant-design-mobile-rn "Percentage of issues still open")
 [![Join the chat at https://gitter.im/ant-design/ant-design](https://img.shields.io/gitter/room/ant-design/ant-design.svg?style=flat-square)](https://gitter.im/ant-design/ant-design?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 
-Ant Design 移动端设计规范。`poprn-antd` 是 Ant Design 的移动规范的 React 实现，服务于蚂蚁及口碑无线业务。
+Ant Design 移动端设计规范。`popui-rn` 是 Ant Design 的移动规范的 React 实现，服务于蚂蚁及口碑无线业务。
 
 ## 通知
 
-首先，很感谢信任我们，使用`poprn-antd`。但由于RN目前应用场景比较少以及精力所限，`poprn-antd`仓库不再更新、维护。
+首先，很感谢信任我们，使用`popui-rn`。但由于RN目前应用场景比较少以及精力所限，`popui-rn`仓库不再更新、维护。
 如果社区中有人有意愿维护，可以私信我们。
 
 ## 特性

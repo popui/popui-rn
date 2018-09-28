@@ -1,6 +1,6 @@
 import React from 'react';
 import { View, Text, Platform } from 'react-native';
-import { ActionSheet, Button } from 'poprn-antd';
+import { ActionSheet, Button } from 'popui-rn';
 
 export default class Test extends React.Component<any, any> {
   constructor(props: any) {

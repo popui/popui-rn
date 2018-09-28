@@ -2,7 +2,7 @@
 /* tslint:disable:no-console */
 import React from 'react';
 import { View } from 'react-native';
-import { DatePicker, List } from 'poprn-antd';
+import { DatePicker, List } from 'popui-rn';
 
 // const now = new Date();
 

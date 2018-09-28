@@ -2,7 +2,7 @@
 /* tslint:disable:no-console */
 import React from 'react';
 import { Image, Text, View } from 'react-native';
-import { NoticeBar, WhiteSpace } from 'poprn-antd';
+import { NoticeBar, WhiteSpace } from 'popui-rn';
 
 export default class NoticeBarExample extends React.Component<any, any> {
   render() {

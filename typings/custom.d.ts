@@ -1,4 +1,4 @@
-declare module 'poprn-antd';
+declare module 'popui-rn';
 
 declare module 'antd-mobile-demo-data';
 

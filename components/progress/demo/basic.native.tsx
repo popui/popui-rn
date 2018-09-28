@@ -1,6 +1,6 @@
 import React from 'react';
 import { Text, View, ViewStyle } from 'react-native';
-import { Button, Progress, WhiteSpace } from 'poprn-antd';
+import { Button, Progress, WhiteSpace } from 'popui-rn';
 
 export default class BasicProgressExample extends React.Component<any, any> {
   constructor(props: any) {

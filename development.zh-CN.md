@@ -84,7 +84,7 @@ export default Button;
 - `components/button/demo/basic.native.tsx`
 
 ```jsx
-import { Button } from 'poprn-antd';
+import { Button } from 'popui-rn';
 import React from 'react';
 import { Text, View } from 'react-native';
 
