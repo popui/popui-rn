@@ -223,6 +223,55 @@
 			remoteGlobalIDString = 134814201AA4EA6300B7C361;
 			remoteInfo = RCTGeolocation;
 		};
+		96993472215E19A500759FA5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 932268BD1DEEC0BC0095E0B5 /* CodePush.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = F886647B1F4ADB500036D01B;
+			remoteInfo = "CodePush-tvOS";
+		};
+		96993488215E19A500759FA5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9356BACB1DEEBBC800E00E20 /* RCTWebSocket.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 3DBE0D001F3B181A0099AA32;
+			remoteInfo = fishhook;
+		};
+		9699348A215E19A500759FA5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9356BACB1DEEBBC800E00E20 /* RCTWebSocket.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 3DBE0D0D1F3B181C0099AA32;
+			remoteInfo = "fishhook-tvOS";
+		};
+		96993498215E19A500759FA5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 932268B41DEEC0B10095E0B5 /* React.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 139D7ECE1E25DB7D00323FB7;
+			remoteInfo = "third-party";
+		};
+		9699349A215E19A500759FA5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 932268B41DEEC0B10095E0B5 /* React.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 3D383D3C1EBD27B6005632C8;
+			remoteInfo = "third-party-tvOS";
+		};
+		9699349C215E19A500759FA5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 932268B41DEEC0B10095E0B5 /* React.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 139D7E881E25C6D100323FB7;
+			remoteInfo = "double-conversion";
+		};
+		9699349E215E19A500759FA5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 932268B41DEEC0B10095E0B5 /* React.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 3D383D621EBD27B9005632C8;
+			remoteInfo = "double-conversion-tvOS";
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
@@ -358,6 +407,10 @@
 				9336DCEB1EADE757002F61E4 /* libcxxreact.a */,
 				9336DCED1EADE757002F61E4 /* libjschelpers.a */,
 				9336DCEF1EADE757002F61E4 /* libjschelpers.a */,
+				96993499215E19A500759FA5 /* libthird-party.a */,
+				9699349B215E19A500759FA5 /* libthird-party.a */,
+				9699349D215E19A500759FA5 /* libdouble-conversion.a */,
+				9699349F215E19A500759FA5 /* libdouble-conversion.a */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -366,6 +419,7 @@
 			isa = PBXGroup;
 			children = (
 				932268C21DEEC0BC0095E0B5 /* libCodePush.a */,
+				96993473215E19A500759FA5 /* libCodePush.a */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -374,7 +428,7 @@
 			isa = PBXGroup;
 			children = (
 				932268E61DEEC3470095E0B5 /* libRCTAnimation.a */,
-				932268E81DEEC3470095E0B5 /* libRCTAnimation-tvOS.a */,
+				932268E81DEEC3470095E0B5 /* libRCTAnimation.a */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -384,6 +438,8 @@
 			children = (
 				9356BAD11DEEBBC900E00E20 /* libRCTWebSocket.a */,
 				9356BAD31DEEBBC900E00E20 /* libRCTWebSocket-tvOS.a */,
+				96993489215E19A500759FA5 /* libfishhook.a */,
+				9699348B215E19A500759FA5 /* libfishhook-tvOS.a */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -504,7 +560,7 @@
 				ORGANIZATIONNAME = Facebook;
 				TargetAttributes = {
 					13B07F861A680F5B00A75B9A = {
-						DevelopmentTeam = Q5PJGLWG38;
+						DevelopmentTeam = Q9Q5L778HT;
 					};
 				};
 			};
@@ -609,10 +665,10 @@
 			remoteRef = 932268E51DEEC3470095E0B5 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		932268E81DEEC3470095E0B5 /* libRCTAnimation-tvOS.a */ = {
+		932268E81DEEC3470095E0B5 /* libRCTAnimation.a */ = {
 			isa = PBXReferenceProxy;
 			fileType = archive.ar;
-			path = "libRCTAnimation-tvOS.a";
+			path = libRCTAnimation.a;
 			remoteRef = 932268E71DEEC3470095E0B5 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
@@ -770,6 +826,55 @@
 			remoteRef = 9356BB171DEEBC4900E00E20 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
+		96993473215E19A500759FA5 /* libCodePush.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libCodePush.a;
+			remoteRef = 96993472215E19A500759FA5 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		96993489215E19A500759FA5 /* libfishhook.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libfishhook.a;
+			remoteRef = 96993488215E19A500759FA5 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		9699348B215E19A500759FA5 /* libfishhook-tvOS.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = "libfishhook-tvOS.a";
+			remoteRef = 9699348A215E19A500759FA5 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		96993499215E19A500759FA5 /* libthird-party.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = "libthird-party.a";
+			remoteRef = 96993498215E19A500759FA5 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		9699349B215E19A500759FA5 /* libthird-party.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = "libthird-party.a";
+			remoteRef = 9699349A215E19A500759FA5 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		9699349D215E19A500759FA5 /* libdouble-conversion.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = "libdouble-conversion.a";
+			remoteRef = 9699349C215E19A500759FA5 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		9699349F215E19A500759FA5 /* libdouble-conversion.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = "libdouble-conversion.a";
+			remoteRef = 9699349E215E19A500759FA5 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
 /* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
@@ -820,7 +925,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CURRENT_PROJECT_VERSION = 1;
 				DEAD_CODE_STRIPPING = NO;
-				DEVELOPMENT_TEAM = Q5PJGLWG38;
+				DEVELOPMENT_TEAM = Q9Q5L778HT;
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
@@ -835,7 +940,7 @@
 					"-ObjC",
 					"-lc++",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.mybank.ios.phone.test;
+				PRODUCT_BUNDLE_IDENTIFIER = com.popapp.ios.phone.test;
 				PRODUCT_NAME = "antd-mobile-rn";
 				VERSIONING_SYSTEM = "apple-generic";
 			};
@@ -846,7 +951,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = Q5PJGLWG38;
+				DEVELOPMENT_TEAM = Q9Q5L778HT;
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
@@ -861,7 +966,7 @@
 					"-ObjC",
 					"-lc++",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.mybank.ios.phone.test;
+				PRODUCT_BUNDLE_IDENTIFIER = com.popapp.ios.phone.test;
 				PRODUCT_NAME = "antd-mobile-rn";
 				VERSIONING_SYSTEM = "apple-generic";
 			};
