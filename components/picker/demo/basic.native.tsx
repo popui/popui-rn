@@ -1,6 +1,6 @@
 import React from 'react';
 import { View, Text, TouchableOpacity } from 'react-native';
-import { List, Picker } from 'antd-mobile-rn';
+import { List, Picker } from 'poprn-antd';
 
 import { district } from 'antd-mobile-demo-data';
 

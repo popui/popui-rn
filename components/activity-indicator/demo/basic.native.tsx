@@ -6,7 +6,7 @@ import {
   Flex,
   WhiteSpace,
   WingBlank,
-} from 'antd-mobile-rn';
+} from 'poprn-antd';
 
 export default class ActivityIndicatorExample extends React.Component<any, any> {
   closeTimer: any;

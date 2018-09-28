@@ -84,7 +84,7 @@ export default Button;
 - `components/button/demo/basic.native.tsx`
 
 ```jsx
-import { Button } from 'antd-mobile-rn';
+import { Button } from 'poprn-antd';
 import * as React from 'react';
 import { Text, View } from 'react-native';
 

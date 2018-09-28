@@ -97,7 +97,7 @@ AppRegistry.registerComponent('HelloWorldApp', () => HelloWorldApp);
    然后改变从 antd-mobile-rn 引入模块方式即可。
 
    ```jsx
-   import { Button } from 'antd-mobile-rn';
+   import { Button } from 'poprn-antd';
    ```
 
    > 说明：有人反映通过 `react-native init` 创建的项目在使用时可能会报 [Unable to resolve module `react-dom`](https://github.com/ant-design/ant-design-mobile/issues/2054) 的错误 ，此时不妨安装 [babel-plugin-module-resolver](https://www.npmjs.com/package/babel-plugin-module-resolver) 试试~

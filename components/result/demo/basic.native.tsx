@@ -1,7 +1,7 @@
 // tslint:disable:jsx-no-multiline-js
 import React from 'react';
 import { Image, ScrollView, Text } from 'react-native';
-import { Result } from 'antd-mobile-rn';
+import { Result } from 'poprn-antd';
 
 export default class ResultExample extends React.Component<any, any> {
   render() {

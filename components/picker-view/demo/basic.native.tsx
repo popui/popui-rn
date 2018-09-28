@@ -1,5 +1,5 @@
 import React from 'react';
-import { PickerView } from 'antd-mobile-rn';
+import { PickerView } from 'poprn-antd';
 
 const seasons = [
   [
