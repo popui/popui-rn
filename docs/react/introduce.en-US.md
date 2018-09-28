@@ -3,7 +3,7 @@ order: 0
 title: Ant Design Mobile RN of React
 ---
 
-`antd-mobile-rn` is the React implementation of the [Ant Design](http://ant.design)'s mobile specification, serving the ant and koubei wireless service.
+`poprn-antd` is the React implementation of the [Ant Design](http://ant.design)'s mobile specification, serving the ant and koubei wireless service.
 
 <div class="pic-plus">
   <img width="160" src="https://gw.alipayobjects.com/zos/rmsportal/KDpgvguMpGfqaHPjicRK.svg">
@@ -58,7 +58,7 @@ The complete procedure please check the document here: [antd-mobile-sample/creat
 ### 2. Installation
 
 ```bash
-$ npm install antd-mobile-rn --save
+$ npm install poprn-antd --save
 ```
 
 ### 3. Usage
@@ -68,7 +68,7 @@ Example of usage:
 ```jsx
 import React, { Component } from 'react';
 import { AppRegistry } from 'react-native';
-import Button from 'antd-mobile-rn/lib/button';
+import Button from 'poprn-antd/lib/button';
 
 class HelloWorldApp extends Component {
   render() {
@@ -79,7 +79,7 @@ class HelloWorldApp extends Component {
 AppRegistry.registerComponent('HelloWorldApp', () => HelloWorldApp);
 ```
 
-##### Use modularized antd-mobile-rn
+##### Use modularized poprn-antd
 
 The following two ways used to load the **only components you used**, select one of the ways you like.
 
@@ -89,12 +89,12 @@ The following two ways used to load the **only components you used**, select one
    // .babelrc or babel-loader option
    {
      "plugins": [
-       ["import", { libraryName: "antd-mobile-rn" }] // The difference with the Web platform is that you do not need to set the style
+       ["import", { libraryName: "poprn-antd" }] // The difference with the Web platform is that you do not need to set the style
      ]
    }
    ```
 
-   Then just change the way of import modules from antd-mobile-rn.
+   Then just change the way of import modules from poprn-antd.
 
    ```jsx
    import { Button } from 'poprn-antd';
@@ -105,7 +105,7 @@ The following two ways used to load the **only components you used**, select one
 - Manually import
 
    ```jsx
-   import Button from 'antd-mobile-rn/lib/button';
+   import Button from 'poprn-antd/lib/button';
    ```
 
 ##### More enhanced (optional):
@@ -115,8 +115,8 @@ The following two ways used to load the **only components you used**, select one
 
 ## Version
 
-- Stable: [![npm package](http://img.shields.io/npm/v/antd-mobile-rn.svg?style=flat-square)](http://npmjs.com/package/antd-mobile-rn)
-- Next: [![npm package](https://img.shields.io/npm/v/antd-mobile-rn/next.svg)](http://npmjs.com/package/antd-mobile-rn)
+- Stable: [![npm package](http://img.shields.io/npm/v/poprn-antd.svg?style=flat-square)](http://npmjs.com/package/poprn-antd)
+- Next: [![npm package](https://img.shields.io/npm/v/poprn-antd/next.svg)](http://npmjs.com/package/poprn-antd)
 
 ## Links
 
@@ -128,13 +128,13 @@ The following two ways used to load the **only components you used**, select one
 
 Please read our [CONTRIBUTING.md](https://github.com/ant-design/ant-design-mobile-rn/blob/master/.github/CONTRIBUTING.md) first.
 
-If you'd like to help us improve antd-mobile-rn, just create a [Pull Request](https://github.com/ant-design/ant-design-mobile-rn/pulls). Feel free to report bugs and issues [here](https://github.com/ant-design/ant-design-mobile-rn/issues/new).
+If you'd like to help us improve poprn-antd, just create a [Pull Request](https://github.com/ant-design/ant-design-mobile-rn/pulls). Feel free to report bugs and issues [here](https://github.com/ant-design/ant-design-mobile-rn/issues/new).
 
 > If you're new to posting issues, we ask that you read [*How To Ask Questions The Smart Way*](http://www.catb.org/~esr/faqs/smart-questions.html) and [How to Ask a Question in Open Source Community](https://github.com/seajs/seajs/issues/545) and [How to Report Bugs Effectively](http://www.chiark.greenend.org.uk/~sgtatham/bugs.html) prior to posting. Well written bug reports help us help you!
 
 ## Need Help?
 
-For questions on how to use antd, please post questions to [stackoverflow](http://stackoverflow.com/questions/tagged/antd) using the `antd`/`antd-mobile-rn` tag. If you're not finding what you need on stackoverflow, you can find us on [gitter](https://gitter.im/ant-design/ant-design-english?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge) as well.
+For questions on how to use antd, please post questions to [stackoverflow](http://stackoverflow.com/questions/tagged/antd) using the `antd`/`poprn-antd` tag. If you're not finding what you need on stackoverflow, you can find us on [gitter](https://gitter.im/ant-design/ant-design-english?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge) as well.
 
 As always, we encourage experienced users to help those who are not familiar with `antd`!
 

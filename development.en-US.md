@@ -7,7 +7,7 @@ node = 6+
 npm = 3+
 ```
 
-## Code convention for antd-mobile-rn
+## Code convention for poprn-antd
 
 TypeScript
 

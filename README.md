@@ -9,8 +9,8 @@ English | [简体中文](./README.zh-CN.md)
 # Ant Design Mobile RN
 [![](https://img.shields.io/travis/ant-design/ant-design-mobile-rn.svg?style=flat-square)](https://travis-ci.org/ant-design/ant-design-mobile-rn)
 [![Codecov](https://img.shields.io/codecov/c/github/ant-design/ant-design-mobile-rn.svg?style=flat-square)](https://codecov.io/gh/ant-design/ant-design-mobile-rn)
-[![npm package](https://img.shields.io/npm/v/antd-mobile-rn.svg?style=flat-square)](https://www.npmjs.org/package/antd-mobile-rn)
-[![NPM downloads](http://img.shields.io/npm/dm/antd-mobile-rn.svg?style=flat-square)](https://npmjs.org/package/antd-mobile-rn)
+[![npm package](https://img.shields.io/npm/v/poprn-antd.svg?style=flat-square)](https://www.npmjs.org/package/poprn-antd)
+[![NPM downloads](http://img.shields.io/npm/dm/poprn-antd.svg?style=flat-square)](https://npmjs.org/package/poprn-antd)
 [![Dependency Status](https://david-dm.org/ant-design/ant-design-mobile-rn.svg?style=flat-square)](https://david-dm.org/ant-design/ant-design-mobile-rn)
 [![Percentage of issues still open](http://isitmaintained.com/badge/open/ant-design/ant-design-mobile-rn.svg)](http://isitmaintained.com/project/ant-design/ant-design-mobile-rn "Percentage of issues still open")
 [![Join the chat at https://gitter.im/ant-design/ant-design](https://img.shields.io/gitter/room/ant-design/ant-design.svg?style=flat-square)](https://gitter.im/ant-design/ant-design?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
@@ -19,7 +19,7 @@ A configurable Mobile UI specification and React-based implementation.
 
 ## Announcement
 
-Thank you all for trusting us and using antd-mobile-rn. Due to limited application secnarios and development resouces, we regret to annouce antd-mobile-rn will not be officially mainained and updated. If anyone in the community is interested to continue to maintain this project, please contact us in private.
+Thank you all for trusting us and using poprn-antd. Due to limited application secnarios and development resouces, we regret to annouce poprn-antd will not be officially mainained and updated. If anyone in the community is interested to continue to maintain this project, please contact us in private.
 
 ## Features
 

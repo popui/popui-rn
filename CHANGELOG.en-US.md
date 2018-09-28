@@ -4,7 +4,7 @@ title: Change Log
 toc: false
 ---
 
-`antd-mobile-rn` strictly follows [Semantic Versioning 2.0.0](http://semver.org/).
+`poprn-antd` strictly follows [Semantic Versioning 2.0.0](http://semver.org/).
 
 #### Release Schedule
 
@@ -25,7 +25,7 @@ toc: false
 
 `2018-06-15`
 
-- split the antd-mobile react native code to `antd-mobile-rn` package.
+- split the antd-mobile react native code to `poprn-antd` package.
 - Feature: Make `Tag` support long press. ([#20](https://github.com/ant-design/ant-design-mobile-rn/issues/20))
 
 ### 2.1.11
