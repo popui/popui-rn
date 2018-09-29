@@ -11,7 +11,11 @@
     "types": [
       "react",
       "react-native"
-    ]
+    ],
+    "baseUrl": ".",
+    "paths": {
+      "popui-rn":["."]
+    }
   },
   "exclude": [
     "node_modules",
