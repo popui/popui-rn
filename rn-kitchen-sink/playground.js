@@ -4,12 +4,9 @@ import NoticeBarExample from '../components/notice-bar/demo/basic.native'
 
 export default class App extends React.Component {
     render(){
-        return <NoticeBarExample />
+        return <SafeAreaView >
+            <NoticeBarExample />
+        </SafeAreaView>
     }
-    // render(){
-    //     return <SafeAreaView >
-    //         <NoticeBarExample />
-    //     </SafeAreaView>
-    // }
 }
 
