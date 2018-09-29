@@ -48,8 +48,8 @@
   },
   "devDependencies": {
     "@types/prop-types": "^15.5.2",
-    "@types/react-dom": "^16.0.8",
     "@types/react": "^16.3.1",
+    "@types/react-dom": "^16.0.8",
     "@types/react-i18next": "^7.3.2",
     "@types/react-native": "^0.55.4",
     "@types/react-native-collapsible": "^0.8.0",
@@ -83,6 +83,7 @@
     "eslint-plugin-markdown": "~1.0.0-beta.6",
     "eslint-plugin-react": "~7.2.0",
     "eslint-tinker": "~0.4.1",
+    "expo": "^30.0.1",
     "glob": "^7.1.1",
     "jest": "^21.0.0",
     "jsonml.js": "^0.1.0",
@@ -100,12 +101,15 @@
     "react-intl": "^2.2.3",
     "react-native": "https://github.com/expo/react-native/archive/sdk-30.0.0.tar.gz",
     "react-native-code-push": "^5.1.1-beta",
+    "react-native-debugger-open": "^0.3.17",
     "react-native-mocker": "^0.0.12",
     "react-navigation": "1.0.0-beta.12",
     "react-test-renderer": "^16.4.0",
     "typescript": "~2.4.0"
   },
   "scripts": {
+    "expo": "EXPO_DEBUG=true REACT_DEBUGGER=\"unset ELECTRON_RUN_AS_NODE && open -g 'rndebugger://set-debugger-loc?host=127.0.0.1&port=19001'\" expo start --max-workers 12 --lan --dev --no-minify",
+    "expo-clean": "DEBUG='Metro:*' EXPO_DEBUG=true REACT_DEBUGGER=\"unset ELECTRON_RUN_AS_NODE && open -g 'rndebugger://set-debugger-loc?host=127.0.0.1&port=19001'\" expo start --max-workers 12 --lan --dev --no-minify -c",
     "lint": "npm run tslint && npm run srclint && npm run applint",
     "srclint": "eslint site scripts --ext '.js,.jsx'",
     "tslint": "antd-tools run ts-lint && npm run compile && rm -rf lib",
