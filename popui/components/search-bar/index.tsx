@@ -1,5 +1,5 @@
 import SearchBar from 'popui/components/SearchBar/SearchBar'
 
-export {
+export default {
     SearchBar,
 }

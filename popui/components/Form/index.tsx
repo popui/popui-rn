@@ -9,7 +9,7 @@ import Switch from 'popui/components/Form/Switch'
 import TextArea from 'popui/components/Form/TextArea'
 import Uploader from 'popui/components/Form/Uploader'
 
-export {
+export default {
     TextArea,
     Input,
     Switch,

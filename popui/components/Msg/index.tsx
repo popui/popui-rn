@@ -1,5 +1,5 @@
 import Msg from 'popui/components/Msg/Msg'
 
-export {
+export default {
     Msg,
 }

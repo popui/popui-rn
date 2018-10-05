@@ -6,7 +6,7 @@ import MediaInfo from 'popui/components/Media/MediaInfo'
 import MediaInfoMeta from 'popui/components/Media/MediaInfoMeta'
 import MediaTitle from 'popui/components/Media/MediaTitle'
 
-export {
+export default {
     Media,
     MediaHeader,
     MediaBody,

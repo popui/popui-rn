@@ -6,7 +6,7 @@ import PreviewItem from 'popui/components/Preview/PreviewItem'
 import PreviewLabel from 'popui/components/Preview/PreviewLabel'
 import PreviewValue from 'popui/components/Preview/PreviewValue'
 
-export {
+export default {
     Preview,
     PreviewHeader,
     PreviewBody,

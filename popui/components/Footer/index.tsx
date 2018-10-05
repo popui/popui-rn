@@ -4,7 +4,7 @@ import FooterLinks from 'popui/components/Footer/FooterLinks'
 import FooterLinkSeparator from 'popui/components/Footer/FooterLinkSeparator'
 import FooterText from 'popui/components/Footer/FooterText'
 
-export {
+export default {
     Footer,
     FooterText,
     FooterLinks,

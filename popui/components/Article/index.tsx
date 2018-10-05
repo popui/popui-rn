@@ -7,4 +7,4 @@ import H5 from 'popui/components/Article/H5'
 import P from 'popui/components/Article/P'
 import Section from 'popui/components/Article/Section'
 
-export { Article, Section, H1, H2, H3, H4, H5, P }
+export default { Article, Section, H1, H2, H3, H4, H5, P }

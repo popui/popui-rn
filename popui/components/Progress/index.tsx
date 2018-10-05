@@ -1,5 +1,5 @@
 import Progress from 'popui/components/Progress/Progress'
 
-export {
+export default {
     Progress,
 }

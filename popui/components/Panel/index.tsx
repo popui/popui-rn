@@ -3,7 +3,7 @@ import PanelBody from 'popui/components/Panel/PanelBody'
 import PanelFooter from 'popui/components/Panel/PanelFooter'
 import PanelHeader from 'popui/components/Panel/PanelHeader'
 
-export {
+export default {
     Panel,
     PanelHeader,
     PanelBody,

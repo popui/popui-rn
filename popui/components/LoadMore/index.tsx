@@ -1,5 +1,5 @@
-import LoadMore from 'popui/components/LoadMore/LoadMore'
+import LoadMore from './LoadMore'
 
-export {
-    LoadMore,
+export default {
+  LoadMore,
 }

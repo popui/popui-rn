@@ -1,7 +1,7 @@
 import Popup from 'popui/components/Popup/Popup'
 import PopupHeader from 'popui/components/Popup/PopupHeader'
 
-export {
+export default {
     Popup,
     PopupHeader,
 }
