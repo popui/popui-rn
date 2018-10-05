@@ -4,7 +4,7 @@ import { Modal, Platform, StyleSheet, Text, View, ViewPropTypes } from 'react-na
 import { Mask } from 'popui/components/Mask'
 import { Popup } from 'popui/components/Popup'
 import V from '../style/themes/weui'
-import TouchableWithFallback from 'popui/components/Touchable/TouchableWithFallback'
+import TouchableWithFallback from '../touchable-with-fallback'
 
 const styles = StyleSheet.create({
     iosActionsheet: {

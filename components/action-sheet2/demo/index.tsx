@@ -1,16 +1,13 @@
 import { ActionSheet, Button, ButtonArea, PageWrapper, Popup, PopupHeader } from 'popui'
 import React from 'react'
-import { NavigationScreenProps } from 'react-navigation'
 import { View } from 'react-native'
 
 
-export interface IProps extends NavigationScreenProps<void> {
+export interface IProps  {
 
 }
 
-import { observer } from 'mobx-react'
 
-@observer
 export default class ActionSheetScreen extends React.Component<IProps, any> {
     static navigationOptions = {
         title: 'ActionSheet',

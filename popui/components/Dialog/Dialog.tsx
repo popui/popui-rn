@@ -4,7 +4,7 @@ import { Dimensions, Modal, Platform, StyleSheet, Text, View, ViewPropTypes } fr
 import { Mask } from 'popui/components/Mask'
 import { create } from 'popui/components/StyleSheet'
 import V from '../style/themes/weui'
-import TouchableWithFallback from 'popui/components/Touchable/TouchableWithFallback'
+import TouchableWithFallback from '../touchable-with-fallback'
 
 const { width } = Dimensions.get('window')
 const styles = create({

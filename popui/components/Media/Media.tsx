@@ -2,7 +2,7 @@ import PropTypes from 'prop-types'
 import React from 'react'
 import { StyleSheet, View, ViewPropTypes } from 'react-native'
 import V from '../style/themes/weui'
-import TouchableWithFallback from 'popui/components/Touchable/TouchableWithFallback'
+import TouchableWithFallback from '../touchable-with-fallback'
 
 const underlayColor = '#ECECEC'
 

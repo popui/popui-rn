@@ -4,7 +4,7 @@ import { Dimensions, StyleSheet, TouchableHighlight, View, ViewPropTypes } from 
 import V from '../style/themes/weui'
 import GridIcon from 'popui/components/Grid/GridIcon'
 import GridLabel from 'popui/components/Grid/GridLabel'
-import TouchableWithFallback from 'popui/components/Touchable/TouchableWithFallback'
+import TouchableWithFallback from '../touchable-with-fallback'
 
 const styles = StyleSheet.create({
     grid: {

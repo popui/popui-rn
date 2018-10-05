@@ -1,29 +1,45 @@
 import React from 'react';
-import { StyleSheet, Text, SafeAreaView,ScrollView } from 'react-native';
-// import {Button} from 'popui-rn';
-// import Button from 'popui-rn/components/button/index.native';
-import CellExample from 'popui-rn/components/cell/demo/basic.native';
-import BadgeExample from 'popui-rn/components/badge/demo/basic.native';
-import ListExample from 'popui-rn/components/list/demo/basic.native';
-import InputItemExample from 'popui-rn/components/input-item/demo/basic.native';
+import { StyleSheet, Text, SafeAreaView } from 'react-native';
+import ActionSheetExample from 'popui-rn/components/action-sheet/demo/basic.native';
+import { ActionSheet2 } from 'popui-rn'
 
 export default class App extends React.Component {
+  hideActionSheet=()=>{
+
+  }
   render() {
     return (
       <SafeAreaView style={styles.container}>
-        <ScrollView>
-          <Text>Cell:</Text>
-          <CellExample />
+        <Text>Open up App.js to start working on your app!</Text>
 
-          <Text>Badge:</Text>
-          <BadgeExample />
+        <Text>ActionSheetExample:</Text>
+        <ActionSheetExample />
 
-          <Text>List:</Text>
-          <ListExample />
-
-          <Text>InputItem:</Text>
-          <InputItemExample />
-        </ScrollView>
+        <Text>ActionSheet2Example:</Text>
+        <ActionSheet2
+          autoDectect={false}
+          type="android"
+          visible={true}
+          onClose={this.hideActionSheet}
+          menus={[
+              {
+                  type: 'default',
+                  label: '拍照',
+                  onPress: this.hideActionSheet,
+              }, {
+                  type: 'default',
+                  label: '从手机相册选择',
+                  onPress: this.hideActionSheet,
+              },
+          ]}
+          actions={[
+              {
+                  type: 'default',
+                  label: '取消',
+                  onPress: this.hideActionSheet,
+              },
+          ]}
+      />
       </SafeAreaView>
     );
   }
@@ -33,5 +49,7 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: '#fff',
+    alignItems: 'center',
+    justifyContent: 'center',
   },
 });
