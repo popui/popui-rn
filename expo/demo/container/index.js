@@ -1,15 +1,11 @@
 import React from 'react';
-import { StyleSheet,  SafeAreaView } from 'react-native';
-// import ActionSheetExample from 'popui-rn/components/action-sheet/demo/basic.native';
-// import { ActionSheet2 } from 'popui-rn'
-import AllComp from '../../../rn-kitchen-sink/allComponents';
+import { StyleSheet, Text, SafeAreaView } from 'react-native';
 
 export default class App extends React.Component {
-
   render() {
     return (
       <SafeAreaView style={styles.container}>
-        <AllComp />
+        <Text>Open up App.js to start working on your app!</Text>
       </SafeAreaView>
     );
   }
@@ -18,6 +14,8 @@ export default class App extends React.Component {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#000',
+    backgroundColor: '#fff',
+    alignItems: 'center',
+    justifyContent: 'center',
   },
 });
