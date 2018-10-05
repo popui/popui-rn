@@ -66,3 +66,7 @@ PopuiIcon.propTypes = {
 }
 
 export default PopuiIcon
+
+export {
+  PurePopuiIcon
+}

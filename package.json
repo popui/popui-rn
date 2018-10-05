@@ -150,7 +150,7 @@
     ]
   },
   "typings": "lib/index.native.d.ts",
-  "pre-commit": [
+  "pre-commit1": [
     "lint-staged"
   ]
 }

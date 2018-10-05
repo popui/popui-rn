@@ -131,3 +131,7 @@ WeuiIcon.propTypes = {
 }
 
 export default WeuiIcon
+
+export {
+  PureWeuiIcon
+}

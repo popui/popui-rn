@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types'
 import React, { PureComponent } from 'react'
 import { StyleSheet, TouchableOpacity, View, ViewPropTypes } from 'react-native'
-import { WeuiIcon } from 'popui/components/Icon'
+import WeuiIcon from '../weui-icon'
 import V from 'popui/theme/ThemeVariables'
 
 const styles = StyleSheet.create({

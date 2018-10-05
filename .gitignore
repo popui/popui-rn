@@ -39,6 +39,8 @@ rn-kitchen-sink/app/*.apk
 xcuserdata
 components/**/*.jsx
 components/**/*.js
+popui/**/*.jsx
+popui/**/*.js
 my-release-key.keystore
 .vscode
 yarn.lock

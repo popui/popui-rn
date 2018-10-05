@@ -2,7 +2,7 @@ import PropTypes from 'prop-types'
 import React from 'react'
 import { StyleSheet, ViewPropTypes } from 'react-native'
 import { Cell, CellBody, Cells, CellText } from 'popui/components/Cell'
-import { WeuiIcon } from 'popui/components/Icon'
+import WeuiIcon from '../weui-icon'
 import V from 'popui/theme/ThemeVariables'
 
 const styles = StyleSheet.create({

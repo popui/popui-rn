@@ -1,6 +1,6 @@
 import React from 'react'
 import { ActivityIndicator, StyleSheet, Text, View } from 'react-native'
-import { WeuiIcon } from 'popui/components/Icon'
+import WeuiIcon from '../weui-icon'
 import V from 'popui/theme/ThemeVariables'
 
 const styles = StyleSheet.create({

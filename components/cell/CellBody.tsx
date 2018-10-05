@@ -1,9 +1,9 @@
 import PropTypes from 'prop-types'
 import React from 'react'
 import { StyleSheet, View, ViewPropTypes } from 'react-native'
-import { WeuiIcon } from 'popui/components/Icon'
-import V from 'popui/theme/ThemeVariables'
-import CellText from 'popui/components/Cell/CellText'
+import WeuiIcon from '../weui-icon'
+import V from '../style/themes/weui'
+import CellText from './CellText'
 
 const styles = StyleSheet.create({
     cellBody: {

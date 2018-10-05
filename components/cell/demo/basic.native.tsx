@@ -1,16 +1,18 @@
 import { Image, View } from 'react-native'
 import React from 'react'
-import { NavigationScreenProps } from 'react-navigation'
-import { Badge, Cell, CellBody, CellFooter, CellHeader, Cells, CellsTitle, CellText, PageWrapper } from 'popui'
+import {
+  // Badge,
+  Cell as CellComp } from 'popui-rn';
+const {
+  Cell , CellBody, CellFooter,
+  CellHeader, Cells, CellsTitle,
+  CellText
+} = CellComp
 
-
-export interface IProps extends NavigationScreenProps<void> {
+export interface IProps  {
 
 }
 
-import { observer } from 'mobx-react'
-
-@observer
 export default class CellScreen extends React.Component<IProps, any> {
     static navigationOptions = {
         title: 'Cell',
@@ -18,7 +20,7 @@ export default class CellScreen extends React.Component<IProps, any> {
 
     render() {
         return (
-            <PageWrapper>
+            <View>
                 <CellsTitle>带说明的列表项</CellsTitle>
                 <Cells>
                     <Cell>
@@ -47,7 +49,8 @@ export default class CellScreen extends React.Component<IProps, any> {
                             </View>
                         </CellBody>
                         <CellFooter>
-                            说明文字<Badge preset="footer">8</Badge>
+                            说明文字
+                            <Badge preset="footer">8</Badge>
                         </CellFooter>
                     </Cell>
                 </Cells>
@@ -96,7 +99,7 @@ export default class CellScreen extends React.Component<IProps, any> {
                         <CellFooter>说明文字</CellFooter>
                     </Cell>
                 </Cells>
-            </PageWrapper>
+            </View>
         )
     }
 }

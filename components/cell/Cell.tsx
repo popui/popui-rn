@@ -1,8 +1,8 @@
 import PropTypes from 'prop-types'
 import React from 'react'
 import { StyleSheet, View, ViewPropTypes } from 'react-native'
-import V from 'popui/theme/ThemeVariables'
-import TouchableWithFallback from 'popui/components/Touchable/TouchableWithFallback'
+import V from '../style/themes/weui'
+import TouchableWithFallback from '../touchable-with-fallback'
 
 const styles = StyleSheet.create({
     cell: {

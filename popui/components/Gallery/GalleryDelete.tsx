@@ -1,6 +1,6 @@
 import React from 'react'
 import { StyleSheet, TouchableWithoutFeedback, View, ViewPropTypes } from 'react-native'
-import { WeuiIcon } from 'popui/components/Icon'
+import WeuiIcon from '../weui-icon'
 
 const styles = StyleSheet.create({
     galleryDelete: {
