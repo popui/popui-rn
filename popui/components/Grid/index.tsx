@@ -1,7 +1,7 @@
-import Grid from 'popui/components/Grid/Grid'
-import GridIcon from 'popui/components/Grid/GridIcon'
-import GridLabel from 'popui/components/Grid/GridLabel'
-import Grids from 'popui/components/Grid/Grids'
+import Grid from './Grid'
+import GridIcon from './GridIcon'
+import GridLabel from './GridLabel'
+import Grids from './Grids'
 
 export default {
     Grids,

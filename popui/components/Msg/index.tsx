@@ -1,4 +1,4 @@
-import Msg from 'popui/components/Msg/Msg'
+import Msg from './Msg'
 
 export default {
     Msg,

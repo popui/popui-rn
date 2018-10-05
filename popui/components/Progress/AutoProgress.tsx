@@ -1,5 +1,5 @@
 import React, { PureComponent } from 'react'
-import Progress from 'popui/components/Progress/Progress'
+import Progress from './Progress'
 
 export interface IAutoProgressProps {
   isLoading?: boolean

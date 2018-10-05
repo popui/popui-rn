@@ -1,10 +1,10 @@
-import Preview from 'popui/components/Preview/Preview'
-import PreviewBody from 'popui/components/Preview/PreviewBody'
-import PreviewFooter from 'popui/components/Preview/PreviewFooter'
-import PreviewHeader from 'popui/components/Preview/PreviewHeader'
-import PreviewItem from 'popui/components/Preview/PreviewItem'
-import PreviewLabel from 'popui/components/Preview/PreviewLabel'
-import PreviewValue from 'popui/components/Preview/PreviewValue'
+import Preview from './Preview'
+import PreviewBody from './PreviewBody'
+import PreviewFooter from './PreviewFooter'
+import PreviewHeader from './PreviewHeader'
+import PreviewItem from './PreviewItem'
+import PreviewLabel from './PreviewLabel'
+import PreviewValue from './PreviewValue'
 
 export default {
     Preview,

@@ -1,4 +1,4 @@
-import Mask from 'popui/components/Mask/Mask'
+import Mask from './Mask'
 
 export default {
     Mask,

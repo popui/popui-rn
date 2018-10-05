@@ -1,7 +1,7 @@
-import Panel from 'popui/components/Panel/Panel'
-import PanelBody from 'popui/components/Panel/PanelBody'
-import PanelFooter from 'popui/components/Panel/PanelFooter'
-import PanelHeader from 'popui/components/Panel/PanelHeader'
+import Panel from './Panel'
+import PanelBody from './PanelBody'
+import PanelFooter from './PanelFooter'
+import PanelHeader from './PanelHeader'
 
 export default {
     Panel,

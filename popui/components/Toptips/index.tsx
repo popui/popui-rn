@@ -1,4 +1,4 @@
-import Toptips from 'popui/components/Toptips/Toptips'
+import Toptips from './Toptips'
 
 export {
     Toptips,

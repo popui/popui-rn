@@ -1,5 +1,5 @@
-import Gallery from 'popui/components/Gallery/Gallery'
-import GalleryDelete from 'popui/components/Gallery/GalleryDelete'
+import Gallery from './Gallery'
+import GalleryDelete from './GalleryDelete'
 
 export default {
     Gallery,

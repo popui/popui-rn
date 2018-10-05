@@ -1,4 +1,4 @@
-import Progress from 'popui/components/Progress/Progress'
+import Progress from './Progress'
 
 export default {
     Progress,

@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types'
 import React from 'react'
-import { Text, ViewPropTypes } from 'react-native'
-import { create } from 'popui/components/StyleSheet'
+import { Text } from 'react-native'
+import { create } from '../style/utils/StyleSheet'
 import V from '../style/themes/weui'
 
 const baseFontSize = 14

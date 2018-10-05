@@ -1,5 +1,5 @@
-import Tab from 'popui/components/Tab/Tab'
-import NavBar from 'popui/components/Tab/NavBar'
+import Tab from './Tab'
+import NavBar from './NavBar'
 
 export {
     Tab,

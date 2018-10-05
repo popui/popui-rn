@@ -1,8 +1,8 @@
-import Footer from 'popui/components/Footer/Footer'
-import FooterLink from 'popui/components/Footer/FooterLink'
-import FooterLinks from 'popui/components/Footer/FooterLinks'
-import FooterLinkSeparator from 'popui/components/Footer/FooterLinkSeparator'
-import FooterText from 'popui/components/Footer/FooterText'
+import Footer from './Footer'
+import FooterLink from './FooterLink'
+import FooterLinks from './FooterLinks'
+import FooterLinkSeparator from './FooterLinkSeparator'
+import FooterText from './FooterText'
 
 export default {
     Footer,

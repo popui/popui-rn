@@ -2,7 +2,7 @@
 import React, { PureComponent } from 'react'
 import PropTypes from 'prop-types'
 import ScrollableTabView from 'react-native-scrollable-tab-view'
-import NavBar from 'popui/components/Tab/NavBar'
+import NavBar from './NavBar'
 
 export default class Tab extends PureComponent {
     static propTypes = {

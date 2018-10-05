@@ -1,5 +1,5 @@
-import Flex from 'popui/components/Flex/Flex'
-import FlexItem from 'popui/components/Flex/FlexItem'
+import Flex from './Flex'
+import FlexItem from './FlexItem'
 
 export default {
     Flex,

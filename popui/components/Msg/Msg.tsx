@@ -1,9 +1,9 @@
 import PropTypes from 'prop-types'
 import React from 'react'
 import { Text, View, ViewPropTypes } from 'react-native'
-import Button from 'popui/components/Button/Button'
+import Button from './Button'
 import WeuiIcon from '../weui-icon'
-import { create } from 'popui/components/StyleSheet'
+import { create } from '../style/utils/StyleSheet'
 import V from '../style/themes/weui'
 
 const styles = create({

@@ -1,13 +1,13 @@
-import Agreement from 'popui/components/Form/Agreement'
-import CheckboxCells from 'popui/components/Form/CheckboxCells'
-import Input from 'popui/components/Form/Input'
-import Label from 'popui/components/Form/Label'
-import RadioCells from 'popui/components/Form/RadioCells'
-import Select from 'popui/components/Form/Select'
-import Slider from 'popui/components/Form/Slider'
-import Switch from 'popui/components/Form/Switch'
-import TextArea from 'popui/components/Form/TextArea'
-import Uploader from 'popui/components/Form/Uploader'
+import Agreement from './Agreement'
+import CheckboxCells from './CheckboxCells'
+import Input from './Input'
+import Label from './Label'
+import RadioCells from './RadioCells'
+import Select from './Select'
+import Slider from './Slider'
+import Switch from './Switch'
+import TextArea from './TextArea'
+import Uploader from './Uploader'
 
 export default {
     TextArea,

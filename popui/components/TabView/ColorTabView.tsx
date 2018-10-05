@@ -1,7 +1,7 @@
 import React from 'react'
 
 import { Platform, StyleSheet } from 'react-native'
-import ColorTabBar from 'popui/components/TabView/ColorTabBar'
+import ColorTabBar from './ColorTabBar'
 import { TabView } from 'react-native-tab-view'
 // debug
 import { createDebug } from 'common/utils/debug'

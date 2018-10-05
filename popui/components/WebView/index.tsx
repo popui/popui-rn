@@ -1,4 +1,4 @@
-import WebView from 'popui/components/WebView/WebView'
+import WebView from './WebView'
 
 export {
     WebView,

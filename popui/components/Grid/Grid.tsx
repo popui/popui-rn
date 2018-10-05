@@ -2,8 +2,8 @@ import PropTypes from 'prop-types'
 import React from 'react'
 import { Dimensions, StyleSheet, TouchableHighlight, View, ViewPropTypes } from 'react-native'
 import V from '../style/themes/weui'
-import GridIcon from 'popui/components/Grid/GridIcon'
-import GridLabel from 'popui/components/Grid/GridLabel'
+import GridIcon from './GridIcon'
+import GridLabel from './GridLabel'
 import TouchableWithFallback from '../touchable-with-fallback'
 
 const styles = StyleSheet.create({
