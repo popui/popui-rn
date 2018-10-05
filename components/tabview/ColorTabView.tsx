@@ -6,7 +6,7 @@ import { TabView } from 'react-native-tab-view'
 // debug
 import { createDebug } from 'common/utils/debug'
 const debug = createDebug('popui:TabView/ColorTabView')
-import { observer } from 'mobx-react'
+
 
 
 export interface IProps {
@@ -40,7 +40,7 @@ function getCurrentRoute(props: any) {
   return routes[index]
 }
 
-@observer
+
 export class ColorTabView extends React.Component<IProps, any> {
   render() {
     debug('render')

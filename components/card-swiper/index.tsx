@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import { PanResponder, Text, View, Dimensions, Animated } from 'react-native'
 import PropTypes from 'prop-types'
 import isEqual from 'lodash/isEqual'
-import { observer } from 'mobx-react'
+
 
 import styles from './styles'
 // debug
@@ -18,7 +18,7 @@ const LABEL_TYPES = {
   BOTTOM: 'bottom'
 }
 
-@observer
+
 class Swiper extends Component {
   constructor(props: any) {
     super(props)
