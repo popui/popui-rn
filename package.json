@@ -27,8 +27,8 @@
     "es"
   ],
   "license": "MIT",
-  "main": "lib/index.native.js",
-  "module": "es/index.native.js",
+  "main": "node_modules/expo/AppEntry.js",
+  "private": true,
   "dependencies": {
     "expo": "^30.0.1",
     "react": "16.3.1",
