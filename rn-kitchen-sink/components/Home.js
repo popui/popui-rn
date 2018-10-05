@@ -12,10 +12,10 @@ import {
   StatusBar,
 } from 'react-native';
 import { List } from 'popui-rn';
-import codePush from 'react-native-code-push';
+// import codePush from 'react-native-code-push';
 import AppInfo from './appInfo.js';
 
-const codePushOptions = { checkFrequency: codePush.CheckFrequency.MANUAL };
+// const codePushOptions = { checkFrequency: codePush.CheckFrequency.MANUAL };
 
 const styles = StyleSheet.create({
   container: {
@@ -134,15 +134,15 @@ class Home extends React.Component {
       });
       Alert.alert(null, `发生错误: ${error}`);
     };
-    codePush.sync({
-      updateDialog: {
-        updateTitle: '检测有更新',
-        optionalUpdateMessage: 'demo app 有新版本，是否安装？',
-        optionalIgnoreButtonLabel: 'No',
-        optionalInstallButtonLabel: 'Yes',
-      },
-      installMode: codePush.InstallMode.IMMEDIATE,
-    }, onSyncStatusChange, null, onError);
+    // codePush.sync({
+    //   updateDialog: {
+    //     updateTitle: '检测有更新',
+    //     optionalUpdateMessage: 'demo app 有新版本，是否安装？',
+    //     optionalIgnoreButtonLabel: 'No',
+    //     optionalInstallButtonLabel: 'Yes',
+    //   },
+    //   installMode: codePush.InstallMode.IMMEDIATE,
+    // }, onSyncStatusChange, null, onError);
   }
 
   render() {
@@ -181,4 +181,5 @@ class Home extends React.Component {
   }
 }
 
-export default codePush(codePushOptions)(Home);
+// export default codePush(codePushOptions)(Home);
+export default Home
