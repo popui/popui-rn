@@ -1,7 +1,7 @@
 import React from 'react'
 import { ActivityIndicator, StyleSheet, Text, View } from 'react-native'
 import WeuiIcon from '../weui-icon'
-import V from 'popui/theme/ThemeVariables'
+import V from '../style/themes/weui'
 
 const styles = StyleSheet.create({
   toastWrapper: {

@@ -1,7 +1,7 @@
 import React from 'react'
 import { ActivityIndicator, Dimensions, StyleSheet, Text, View, ViewPropTypes } from 'react-native'
 import { create } from 'popui/components/StyleSheet'
-import V from 'popui/theme/ThemeVariables'
+import V from '../style/themes/weui'
 
 const { width } = Dimensions.get('window')
 const styles = create({

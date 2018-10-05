@@ -4,7 +4,7 @@ import { Text, View, ViewPropTypes } from 'react-native'
 import Button from 'popui/components/Button/Button'
 import WeuiIcon from '../weui-icon'
 import { create } from 'popui/components/StyleSheet'
-import V from 'popui/theme/ThemeVariables'
+import V from '../style/themes/weui'
 
 const styles = create({
   msg: {

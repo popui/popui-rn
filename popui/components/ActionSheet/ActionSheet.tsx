@@ -3,7 +3,7 @@ import React from 'react'
 import { Modal, Platform, StyleSheet, Text, View, ViewPropTypes } from 'react-native'
 import { Mask } from 'popui/components/Mask'
 import { Popup } from 'popui/components/Popup'
-import V from 'popui/theme/ThemeVariables'
+import V from '../style/themes/weui'
 import TouchableWithFallback from 'popui/components/Touchable/TouchableWithFallback'
 
 const styles = StyleSheet.create({

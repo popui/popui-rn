@@ -2,7 +2,7 @@ import PropTypes from 'prop-types'
 import React from 'react'
 import { Text, ViewPropTypes } from 'react-native'
 import { create } from 'popui/components/StyleSheet'
-import V from 'popui/theme/ThemeVariables'
+import V from '../style/themes/weui'
 
 const styles = create({
     h3: {

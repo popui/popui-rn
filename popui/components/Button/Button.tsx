@@ -1,6 +1,6 @@
 import React from 'react'
 import { StyleSheet, TouchableOpacity, View, ViewPropTypes } from 'react-native'
-import V from 'popui/theme/ThemeVariables'
+import V from '../style/themes/weui'
 import ButtonText from 'popui/components/Button/ButtonText'
 import TouchableWithFallback from 'popui/components/Touchable/TouchableWithFallback'
 

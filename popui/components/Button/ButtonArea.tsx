@@ -1,6 +1,6 @@
 import React from 'react'
 import { StyleSheet, View } from 'react-native'
-import V from 'popui/theme/ThemeVariables'
+import V from '../style/themes/weui'
 
 const styles = StyleSheet.create({
     BtnArea: {

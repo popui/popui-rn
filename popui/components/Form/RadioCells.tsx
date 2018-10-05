@@ -3,7 +3,7 @@ import React from 'react'
 import { StyleSheet, ViewPropTypes } from 'react-native'
 import { Cell, CellBody, Cells, CellText } from 'popui/components/Cell'
 import WeuiIcon from '../weui-icon'
-import V from 'popui/theme/ThemeVariables'
+import V from '../style/themes/weui'
 
 const styles = StyleSheet.create({
     radio: {

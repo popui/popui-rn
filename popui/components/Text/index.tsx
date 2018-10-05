@@ -1,6 +1,6 @@
 import React from 'react'
 import { StyleSheet, Text as RNText } from 'react-native'
-import V from 'popui/theme/ThemeVariables'
+import V from '../style/themes/weui'
 
 export interface ITextProps {
   style?: any

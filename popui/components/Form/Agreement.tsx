@@ -2,7 +2,7 @@ import PropTypes from 'prop-types'
 import React from 'react'
 import { StyleSheet, Text, TouchableWithoutFeedback, View, ViewPropTypes } from 'react-native'
 import WeuiIcon from '../weui-icon'
-import V from 'popui/theme/ThemeVariables'
+import V from '../style/themes/weui'
 
 const styles = StyleSheet.create({
     agreement: {

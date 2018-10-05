@@ -2,7 +2,7 @@ import PropTypes from 'prop-types'
 import React, { PureComponent } from 'react'
 import { StyleSheet, TouchableOpacity, View, ViewPropTypes } from 'react-native'
 import WeuiIcon from '../weui-icon'
-import V from 'popui/theme/ThemeVariables'
+import V from '../style/themes/weui'
 
 const styles = StyleSheet.create({
   progress: {

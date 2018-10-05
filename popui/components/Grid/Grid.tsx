@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types'
 import React from 'react'
 import { Dimensions, StyleSheet, TouchableHighlight, View, ViewPropTypes } from 'react-native'
-import V from 'popui/theme/ThemeVariables'
+import V from '../style/themes/weui'
 import GridIcon from 'popui/components/Grid/GridIcon'
 import GridLabel from 'popui/components/Grid/GridLabel'
 import TouchableWithFallback from 'popui/components/Touchable/TouchableWithFallback'
