@@ -6,7 +6,7 @@ import _msg from './components/Msg'
 import _progress from './components/Progress'
 import _dialog from './components/Dialog'
 import _form from './components/Form'
-import _global from './/Global'
+import _global from './Global'
 
 const defaultConfig = merge(
   {},

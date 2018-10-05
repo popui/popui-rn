@@ -7,7 +7,7 @@ import CellsTips from './CellsTips'
 import CellsTitle from './CellsTitle'
 import CellText from './CellText'
 
-export {
+export default {
     Cells,
     CellsTitle,
     CellsTips,

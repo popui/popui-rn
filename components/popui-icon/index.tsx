@@ -2,8 +2,8 @@
 
 import PropTypes from 'prop-types'
 import React from 'react'
-import { StyleSheet, ViewPropTypes } from 'react-native'
-import PurePopuiIcon from 'popui/components/Icon/PopuiIcon/PurePopuiIcon'
+import { StyleSheet } from 'react-native'
+import PurePopuiIcon from './PurePopuiIcon'
 
 const styles = StyleSheet.create({
     icon: {

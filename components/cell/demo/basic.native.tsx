@@ -1,7 +1,7 @@
 import { Image, View } from 'react-native'
 import React from 'react'
 import {
-  // Badge,
+  Badge,
   Cell as CellComp } from 'popui-rn';
 const {
   Cell , CellBody, CellFooter,

@@ -2,8 +2,8 @@
 
 import PropTypes from 'prop-types'
 import React from 'react'
-import { StyleSheet, Text, ViewPropTypes } from 'react-native'
-import PureWeuiIcon from 'popui/components/Icon/WeuiIcon/PureWeuiIcon'
+import { StyleSheet, Text } from 'react-native'
+import PureWeuiIcon from './PureWeuiIcon'
 
 const styles = StyleSheet.create({
     icon: {
