@@ -13,7 +13,6 @@ export default class App extends React.Component {
             <ResultExample />
             <Result2Example />
           </ScrollView>
-
         </SafeAreaView>
       </ResourceLoader>);
     }

@@ -16,6 +16,7 @@ export default {
   color_text_placeholder: '#bbbbbb',           // 文本框提示
   color_text_disabled: '#bbbbbb',              // 失效
   color_text_caption: '#888888',               // 辅助描述
+  color_text_gray: '#999999',               // 灰色
   color_text_paragraph: '#333333',             // 段落
   color_link: brandPrimary,                 // 链接
 
@@ -81,7 +82,7 @@ export default {
 
   // 高度
   // ---
-  line_height_base: 1,           // 单行行高
+  line_height_base: 1.6,           // 单行行高
   line_height_paragraph: 1.5,    // 多行行高
 
   // 图标尺寸
@@ -179,4 +180,13 @@ export default {
   action_sheet_zindex: 1000,
   popup_zindex: 999,
   modal_zindex: 999,
+
+  // result
+  result_padding_top: 36,
+  result_icon_gap: 30,
+  result_title_gap: 5,
+  result_message_gap: 25,
+  result_buttons_gap: 25,
+  result_extra_gap: 15,
+  result_extra_Of_minHeight: 438,
 };

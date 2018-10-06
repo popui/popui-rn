@@ -9,7 +9,7 @@ import {
   View,
   ViewStyle,
 } from 'react-native';
-import Button from '../button/index';
+import IconWeui from '../icon-weui'
 import { ResultPropsType } from './PropsType';
 import ResultStyle, { IResultStyle } from './style/index';
 
@@ -23,21 +23,24 @@ const ResultStyles = StyleSheet.create<any>(ResultStyle);
 export default class Result extends React.Component<ResultNativeProps, any> {
   static defaultProps = {
     styles: ResultStyles,
-    buttonType: '',
-    buttonClick: () => {},
   };
-  renderImgContent =()=>{
+  renderIconView =()=>{
     const {
-      img,
+      icon,
       imgUrl,
+      iconName
     } = this.props;
     const styles = this.props.styles!;
-    let imgContent: JSX.Element | null = null;
-    if (img) {
-      imgContent = <View style={styles.imgWrap}>{img}</View>;
-    } else if (imgUrl) {
-      imgContent = (
-        <View style={styles.imgWrap}>
+    let iconContent: JSX.Element | null = null;
+    if (icon) {
+      iconContent = <View style={styles.iconWrap}>{icon}</View>;
+    }else if (iconName) {
+      iconContent = <View style={styles.iconWrap}>
+        <IconWeui name={iconName} msg />
+      </View>;
+    }else if (imgUrl) {
+      iconContent = (
+        <View style={styles.iconWrap}>
           <Image
             source={imgUrl as ImageURISource | ImageURISource[]}
             style={styles.img}
@@ -45,9 +48,9 @@ export default class Result extends React.Component<ResultNativeProps, any> {
         </View>
       );
     }
-    return imgContent
+    return iconContent
   }
-  renderTitle =()=>{
+  renderTitleView =()=>{
     const {
       title,
     } = this.props;
@@ -60,7 +63,7 @@ export default class Result extends React.Component<ResultNativeProps, any> {
       )}
     </View>)
   }
-  renderMessage =()=>{
+  renderMessageView =()=>{
     const {
       message,
     } = this.props;
@@ -75,37 +78,42 @@ export default class Result extends React.Component<ResultNativeProps, any> {
       </View>
     )
   }
-  renderBtns = ()=>{
-    const {
-      buttonText,
-      onButtonClick,
-      buttonType,
-    } = this.props;
+  renderBtnsView = ()=>{
+    const renderButtons = this.props.renderButtons!;
     const styles = this.props.styles!;
     return (<View style={styles.buttonWrap}>
-      <Button
-        style={styles.button}
-        type={buttonType}
-        onClick={onButtonClick}
-      >
-        {buttonText}
-      </Button>
+      {renderButtons()}
     </View>)
+  }
+  renderExtraView = ()=>{
+    const styles = this.props.styles!;
+    const extra = this.props.extra!;
+    return  (
+      <View style={styles.extra}>
+        {typeof extra === 'string' ? (
+          <Text style={styles.extraText}>{extra}</Text>
+        ) : (
+          extra
+        )}
+      </View>
+    )
   }
   render() {
     const {
       style,
       title,
       message,
-      buttonText,
+      renderButtons,
+      extra
     } = this.props;
     const styles = this.props.styles!;
     return (
       <View style={[styles.result, style]}>
-        {this.renderImgContent()}
-        {title && this.renderTitle()}
-        {message && this.renderMessage()}
-        {buttonText && this.renderBtns()}
+        {this.renderIconView()}
+        {title && this.renderTitleView()}
+        {message && this.renderMessageView()}
+        {renderButtons && this.renderBtnsView()}
+        {extra && this.renderExtraView()}
       </View>
     );
   }

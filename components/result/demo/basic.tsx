@@ -7,7 +7,15 @@ export default class ResultExample extends React.Component<any, any> {
   render() {
     return (
       <ScrollView style={{ backgroundColor: '#F5F5F9', flex: 1 }}>
-        <Text style={{ margin: 10, color: '#999' }}>URI 图片</Text>
+      <Text style={{ margin: 10, color: '#999' }}>iconName</Text>
+        <Result
+          iconName='success'
+          title="验证成功"
+          message="所提交内容已成功完成验证"
+          extra="extra 所提交内容已成功完成验证"
+        />
+
+        {/* <Text style={{ margin: 10, color: '#999' }}>URI 图片</Text>
         <Result
           imgUrl={{
             uri:
@@ -46,10 +54,7 @@ export default class ResultExample extends React.Component<any, any> {
           }
           title="验证成功"
           message="所提交内容已成功完成验证"
-          buttonText="完成"
-          buttonType="primary"
-          buttonClick={(e: any) => alert(e.toString())}
-        />
+        /> */}
       </ScrollView>
     );
   }

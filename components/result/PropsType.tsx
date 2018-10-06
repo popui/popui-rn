@@ -2,10 +2,10 @@ import React from 'react';
 
 export interface ResultPropsType {
   imgUrl?: string;
-  img?: React.ReactNode;
+  iconName?: string;
+  icon?: React.ReactNode;
   title?: React.ReactNode;
   message?: React.ReactNode;
-  buttonText?: string;
-  buttonType?: 'primary' | 'ghost';
-  onButtonClick?: () => void;
+  renderButtons?:Function
+  extra?:React.ReactNode;
 }
