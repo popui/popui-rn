@@ -1,9 +1,9 @@
-// Usage: <PopuiIcon name="icon-name" size={20} color="#4F8EF7" />
+// Usage: <IconPopui name="icon-name" size={20} color="#4F8EF7" />
 
 import PropTypes from 'prop-types'
 import React from 'react'
 import { StyleSheet } from 'react-native'
-import PurePopuiIcon from './PurePopuiIcon'
+import PureIconPopui from './PureIconPopui'
 
 const styles = StyleSheet.create({
     icon: {
@@ -27,7 +27,7 @@ export interface Iprops {
 }
 
 /**
- * 带有默认值的 PopuiIcon
+ * 带有默认值的 IconPopui
  * @param {any} name
  * @param {any} msg
  * @param {any} size
@@ -37,7 +37,7 @@ export interface Iprops {
  * @constructor
  */
 
-function PopuiIcon(props: Iprops) {
+function IconPopui(props: Iprops) {
     const {
         name = 'question',
         size,
@@ -48,7 +48,7 @@ function PopuiIcon(props: Iprops) {
     // 默认配置
     const iconConfig = iconConfigs[name] ? iconConfigs[name] : iconConfigs['default']
     const iconStyles = [styles.icon, style]
-    return (<PurePopuiIcon
+    return (<PureIconPopui
         name={name}
         size={iconConfig.size}
         color={iconConfig.color}
@@ -58,15 +58,15 @@ function PopuiIcon(props: Iprops) {
 }
 
 
-PopuiIcon.propTypes = {
+IconPopui.propTypes = {
     name: PropTypes.string,
     size: PropTypes.number,
     color: PropTypes.string,
     style: PropTypes.any,
 }
 
-export default PopuiIcon
+export default IconPopui
 
 export {
-  PurePopuiIcon
+  PureIconPopui
 }
