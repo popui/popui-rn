@@ -187,19 +187,19 @@ class Carousel extends React.Component<CarouselProps, CarouselState> {
     );
   }
 
-  onScrollEnd = (eEvent: NativeSyntheticEvent<NativeScrollEvent>) => {
+  onScrollEnd = (e: NativeSyntheticEvent<NativeScrollEvent>) => {
     this.setState({ isScrolling: false });
     // android incompatible
-    if (!eEvent.contentOffset) {
+    if (!e.nativeEvent.contentOffset) {
       // kind of hack ? see: line 282
-      const position = (eEvent as any).position;
-      (eEvent as any).contentOffset = {
+      const position = (e.nativeEvent as any).position;
+      (e.nativeEvent as any).contentOffset = {
         x: position * this.state.width,
         y: position * this.state.height,
       };
     }
 
-    this.updateIndex(eEvent.contentOffset);
+    this.updateIndex(e.nativeEvent.contentOffset);
 
     this.scrollEndTimter = setTimeout(() => {
       this.autoplay();
@@ -210,12 +210,12 @@ class Carousel extends React.Component<CarouselProps, CarouselState> {
     });
   }
 
-  onScrollEndDrag = (eEvent: NativeSyntheticEvent<NativeScrollEvent>) => {
+  onScrollEndDrag = (e: NativeSyntheticEvent<NativeScrollEvent>) => {
     const { offset, selectedIndex } = this.state;
     const { vertical, children } = this.props;
 
     const previousOffset = vertical ? offset.y : offset.x;
-    const newOffset = vertical ? eEvent.contentOffset.y : eEvent.contentOffset.x;
+    const newOffset = vertical ? e.nativeEvent.contentOffset.y : e.nativeEvent.contentOffset.x;
     const count = this.getChildrenCount(children);
 
     if (
@@ -230,7 +230,7 @@ class Carousel extends React.Component<CarouselProps, CarouselState> {
     // pagingEnabled: Vertical pagination is not supported on Android.
     // implement android vertical paging
     // if upgrade rn to 0.53, can use snapToInterval to implement vertical paging
-    this.paging(eEvent.contentOffset.y);
+    this.paging(e.nativeEvent.contentOffset.y);
   }
 
   paging = (offsetY: number) => {
@@ -383,14 +383,14 @@ class Carousel extends React.Component<CarouselProps, CarouselState> {
       : null;
   }
 
-  onLayout = (eEvent: LayoutChangeEvent) => {
+  onLayout = (e: LayoutChangeEvent) => {
     // for horizontal, get width, scollTo
     // for vertical, get height, scollTo
     const { children, infinite, vertical } = this.props;
     const count = this.getChildrenCount(children);
     const selectedIndex =
       count > 1 ? Math.min(this.props.selectedIndex as number, count - 1) : 0;
-    const width = eEvent.layout.width;
+    const width = e.nativeEvent.layout.width;
     const offsetX = vertical ? 0 : (width * (selectedIndex + (infinite ? 1 : 0)));
     const offsetY = vertical ? (this.state.height * (selectedIndex + (infinite ? 1 : 0))) : 0;
 
@@ -410,9 +410,9 @@ class Carousel extends React.Component<CarouselProps, CarouselState> {
     );
   }
 
-  onChildLayout = (eEvent: LayoutChangeEvent) => {
+  onChildLayout = (e: LayoutChangeEvent) => {
     if (this.props.vertical) {
-      this.setState({ height: eEvent.layout.height });
+      this.setState({ height: e.nativeEvent.layout.height });
     }
   }
 
