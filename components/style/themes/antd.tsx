@@ -41,7 +41,7 @@ export default {
   brand_wait: '#108ee9',
 
   // 边框色
-  border_color_base: '#dddddd',
+  border_color_base: '#D9D9D9',
 
   // 字体尺寸
   // ---

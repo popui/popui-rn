@@ -187,7 +187,7 @@ class Carousel extends React.Component<CarouselProps, CarouselState> {
     );
   }
 
-  onScrollEnd = (e: NativeSyntheticEvent<NativeScrollEvent>) => {
+  onScrollEnd = (eEvent: NativeSyntheticEvent<NativeScrollEvent>) => {
     this.setState({ isScrolling: false });
     // android incompatible
     if (!eEvent.contentOffset) {
@@ -210,7 +210,7 @@ class Carousel extends React.Component<CarouselProps, CarouselState> {
     });
   }
 
-  onScrollEndDrag = (e: NativeSyntheticEvent<NativeScrollEvent>) => {
+  onScrollEndDrag = (eEvent: NativeSyntheticEvent<NativeScrollEvent>) => {
     const { offset, selectedIndex } = this.state;
     const { vertical, children } = this.props;
 
@@ -383,7 +383,7 @@ class Carousel extends React.Component<CarouselProps, CarouselState> {
       : null;
   }
 
-  onLayout = (e: LayoutChangeEvent) => {
+  onLayout = (eEvent: LayoutChangeEvent) => {
     // for horizontal, get width, scollTo
     // for vertical, get height, scollTo
     const { children, infinite, vertical } = this.props;
@@ -410,7 +410,7 @@ class Carousel extends React.Component<CarouselProps, CarouselState> {
     );
   }
 
-  onChildLayout = (e: LayoutChangeEvent) => {
+  onChildLayout = (eEvent: LayoutChangeEvent) => {
     if (this.props.vertical) {
       this.setState({ height: eEvent.layout.height });
     }

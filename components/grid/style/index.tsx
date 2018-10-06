@@ -1,16 +1,21 @@
 import variables from '../../style/themes/default';
+import {
+  StyleSheet,
+} from 'react-native';
 
 export default {
   grayBorderBox: {
     borderColor: variables.border_color_base,
   },
   icon: {
-    width: variables.icon_size_md,
-    height: variables.icon_size_md,
+    width: 28,
+    height: 28,
+    alignSelf: 'center',
   },
   text: {
-    fontSize: variables.font_size_caption_sm,
+    textAlign: 'center',
+    fontSize: variables.font_size_base,
     color: variables.color_text_base,
-    marginTop: variables.v_spacing_md,
+    marginTop: 5,
   },
 };

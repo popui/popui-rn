@@ -1,6 +1,5 @@
 import merge from 'lodash/merge'
 import _button from './components/Button'
-import _grid from './components/Grid'
 import _cell from './components/Cell'
 import _msg from './components/Msg'
 import _progress from './components/Progress'
@@ -12,7 +11,6 @@ const defaultConfig = merge(
   {},
   _global,
   _button,
-  _grid,
   _cell,
   _msg,
   _progress,
