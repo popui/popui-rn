@@ -2,7 +2,7 @@ import React from 'react'
 
 import { Image, Text } from 'react-native'
 import {
-    Agreement, Cell, CellBody, CellFooter, CellHeader, Cells, CellsTips, CellsTitle, CellText, CheckboxCells, Input, Label, PageWrapper,
+    Agreement, Cell, CellBody, CellFooter, CellHeader, Cells, CellsTips, CellsTitle, CellText, CheckboxCells, Input, Label, WingBlank,
     RadioCells, Switch, TextArea,
 } from 'popui-rn'
 
@@ -37,7 +37,7 @@ export default class InputScreen extends React.Component<IProps, any> {
 
     render() {
         return (
-            <PageWrapper>
+            <WingBlank>
                 <CellsTitle>单选列表项</CellsTitle>
                 <RadioCells
                     options={[
@@ -119,7 +119,7 @@ export default class InputScreen extends React.Component<IProps, any> {
                     value={this.state.agreement}
                     onChange={value => this.setState({ agreement: value })}
                 >同意该协议</Agreement>
-            </PageWrapper>
+            </WingBlank>
         )
     }
 

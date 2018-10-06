@@ -1,20 +1,15 @@
-import { Image, Text } from 'react-native'
-
-import {
-  Media,
-  MediaBody,
-  MediaDescription,
-  MediaHeader,
-  MediaTitle,
-  PageWrapper,
-  Panel,
-  PanelBody,
-  PanelFooter,
-  PanelHeader,
-  SearchBar
-} from 'popui-rn'
-import SampleData from 'demoModule/screens/SearchBar/nameDB'
 import React from 'react'
+import { Image, Text,ScrollView } from 'react-native'
+import {
+  SearchBar,
+  Media as MediaComps,
+  Panel as PanelComps,
+} from 'popui-rn'
+const {Media, MediaBody, MediaDescription, 
+MediaHeader,MediaTitle} = MediaComps
+const {Panel, PanelBody, PanelFooter, PanelHeader, } = PanelComps
+
+import SampleData from './nameDB'
 
 
 const appMsgIcon = (
@@ -54,7 +49,7 @@ export default class SearchBarScreen extends React.Component<IProps, any> {
 
   render() {
     return (
-      <PageWrapper>
+      <ScrollView>
         <SearchBar onChange={this.handleChange} />
         {!this.state.searchText ? null : (
           <Panel style={{ marginTop: 0 }}>
@@ -81,7 +76,7 @@ export default class SearchBarScreen extends React.Component<IProps, any> {
             <PanelFooter access>查看更多</PanelFooter>
           </Panel>
         )}
-      </PageWrapper>
+      </ScrollView>
     )
   }
 }

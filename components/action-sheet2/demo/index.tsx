@@ -1,4 +1,4 @@
-import { ActionSheet, Button, ButtonArea, PageWrapper, Popup, PopupHeader } from 'popui-rn'
+import { ActionSheet, Button, ButtonArea, WingBlank, Popup, PopupHeader } from 'popui-rn'
 import React from 'react'
 import { View } from 'react-native'
 
@@ -26,7 +26,7 @@ export default class ActionSheetScreen extends React.Component<IProps, any> {
 
     render() {
         return (
-            <PageWrapper hasPadddingHorizontal>
+            <WingBlank hasPadddingHorizontal>
                 <ButtonArea>
                     <Button
                         type="primary"
@@ -86,7 +86,7 @@ export default class ActionSheetScreen extends React.Component<IProps, any> {
                 {/*source={{uri: 'https://facebook.github.io/react/img/logo_og.png'}}*/}
                 {/*onPress={() => this.setState({galleryVisible: false})}*/}
                 {/*><GalleryDelete onPress={() => console.log('1')}/></Gallery>*/}
-            </PageWrapper>
+            </WingBlank>
         )
     }
 

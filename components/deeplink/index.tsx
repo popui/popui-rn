@@ -1,4 +1,4 @@
-import { Button, ButtonArea, PageWrapper } from 'popui-rn'
+import { Button, ButtonArea, WingBlank } from 'popui-rn'
 import React from 'react'
 
 import { openUrl } from 'linkUtils'
@@ -17,11 +17,11 @@ export default class DeepLinkScreen extends React.Component<IProps, any> {
 
     render() {
         return (
-            <PageWrapper>
+            <WingBlank>
                 {this.renderButtonItem('GO TO: Navigation Playground', 'exp://exp.host/@huangciyin/NavigationPlayground')}
                 {this.renderButtonItem('GO TO: Native Component List', 'exp://exp.host/@community/native-component-list')}
                 {this.renderButtonItem('Error Demo', 'foo:bar?a=123', 'warn')}
-            </PageWrapper>
+            </WingBlank>
         )
     }
 

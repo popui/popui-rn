@@ -1,6 +1,6 @@
-import { Button, ButtonArea, PageWrapper } from 'popui-rn'
+import { ButtonWeui, WingBlank } from 'popui-rn'
+const {Button, ButtonArea} = ButtonWeui
 import React from 'react'
-
 import stylekit from 'react-native-stylekit'
 
 const S = stylekit({})
@@ -16,7 +16,7 @@ export default class ButtonScreen extends React.Component<IProps, any> {
 
     render() {
         return (
-            <PageWrapper>
+            <WingBlank>
                 <ButtonArea>
                     <Button type="primary" onPress={() => {
                     }}>Normal</Button>
@@ -55,7 +55,7 @@ export default class ButtonScreen extends React.Component<IProps, any> {
                     <Button size="small" onPress={() => {
                     }}>Button</Button>
                 </ButtonArea>
-            </PageWrapper>
+            </WingBlank>
         )
     }
 }

@@ -21,8 +21,8 @@ export default class IconsScreen extends React.Component<IProps, any> {
     }
     render() {
         return (
-            <ScrollView>
-              <View style={[SK.column, SK.plr30, SK.mt10]}>
+            <ScrollView >
+              <View style={[SK.column, SK.plr30, SK.mt10,SK.mb30]}>
                   {this.renderBigIcon('success')}
                   {this.renderBigIcon('info')}
                   {this.renderBigIcon('warn')}

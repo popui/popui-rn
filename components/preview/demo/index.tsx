@@ -1,15 +1,12 @@
 import React from 'react'
-
-
-import { ButtonPreview, PageWrapper, Preview, PreviewBody, PreviewFooter, PreviewHeader, PreviewItem, PreviewLabel, PreviewValue } from 'popui-rn'
-
-
+import {ScrollView} from 'react-native'
+import { ButtonWeui, WingBlank, Preview as PreviewComps } from 'popui-rn'
+const {Preview, PreviewBody, PreviewFooter, PreviewHeader, 
+  PreviewItem, PreviewLabel, PreviewValue} = PreviewComps
+const {ButtonPreview} = ButtonWeui
 export interface IProps  {
 
 }
-
-
-
 
 export default class PreviewScreen extends React.Component<IProps, any> {
     static navigationOptions = {
@@ -18,7 +15,7 @@ export default class PreviewScreen extends React.Component<IProps, any> {
 
     render() {
         return (
-            <PageWrapper>
+            <ScrollView>
                 <Preview>
                     <PreviewHeader>
                         <PreviewItem>
@@ -74,7 +71,7 @@ export default class PreviewScreen extends React.Component<IProps, any> {
                         <ButtonPreview primary={!false}>Action</ButtonPreview>
                     </PreviewFooter>
                 </Preview>
-            </PageWrapper>
+            </ScrollView>
         )
     }
 }

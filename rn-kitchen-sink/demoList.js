@@ -14,6 +14,12 @@ module.exports = {
       module: require('../components/search-bar/demo/basic'),
     },
     {
+      title: 'SearchBar2',
+      description: '搜索栏',
+      icon: 'https://os.alipayobjects.com/rmsportal/QnAmpSwlfPzjpSL.png',
+      module: require('../components/search-bar2/demo/basic'),
+    },
+    {
       title: 'TabBar',
       description: '标签栏',
       icon: 'https://zos.alipayobjects.com/rmsportal/OZInMeAaDCHtaJU.png',
@@ -53,7 +59,7 @@ module.exports = {
     },
     {
       title: 'Icon Weui',
-      description: 'Weui 图标',
+      description: '图标',
       icon: 'https://os.alipayobjects.com/rmsportal/yhnfleZZoezOjtU.png',
       module: require('../components/icon-weui/demo/basic'),
     },
@@ -62,6 +68,24 @@ module.exports = {
       description: '列表',
       icon: 'https://os.alipayobjects.com/rmsportal/tiapjpdKPQGHhnC.png',
       module: require('../components/list/demo/basic'),
+    },
+    {
+      title: 'Panel',
+      description: '面板',
+      icon: 'https://os.alipayobjects.com/rmsportal/tiapjpdKPQGHhnC.png',
+      module: require('../components/panel/demo/basic'),
+    },
+    {
+      title: 'Preview',
+      description: '预览',
+      icon: 'https://os.alipayobjects.com/rmsportal/tiapjpdKPQGHhnC.png',
+      module: require('../components/preview/demo/index'),
+    },
+    {
+      title: 'Cell',
+      description: '',
+      icon: 'https://os.alipayobjects.com/rmsportal/tiapjpdKPQGHhnC.png',
+      module: require('../components/cell/demo/basic'),
     },
     {
       title: 'Modal',
@@ -106,6 +130,12 @@ module.exports = {
       description: '按钮',
       icon: 'https://os.alipayobjects.com/rmsportal/ZRDUYEzfOzKWdzE.png',
       module: require('../components/button/demo/basic'),
+    },
+    {
+      title: 'Button Weui',
+      description: '按钮',
+      icon: 'https://os.alipayobjects.com/rmsportal/ZRDUYEzfOzKWdzE.png',
+      module: require('../components/button-weui/demo/index'),
     },
     {
       title: 'Carousel', // 必须
@@ -162,10 +192,22 @@ module.exports = {
       module: require('../components/progress/demo/basic'),
     },
     {
+      title: 'Progress2',
+      description: '进度条',
+      icon: 'https://os.alipayobjects.com/rmsportal/ihijukOXDlqXvPS.png',
+      module: require('../components/progress2/demo/basic'),
+    },
+    {
       title: 'Pagination',
       description: '分页器',
       icon: 'https://zos.alipayobjects.com/rmsportal/fOQwMYUYaRRKYtd.png',
       module: require('../components/pagination/demo/basic'),
+    },
+    {
+      title: 'LoadMore',
+      description: '加载更多',
+      icon: 'https://zos.alipayobjects.com/rmsportal/fOQwMYUYaRRKYtd.png',
+      module: require('../components/load-more/demo/index'),
     },
     {
       title: 'Radio',
@@ -226,6 +268,12 @@ module.exports = {
       description: '多行输入',
       icon: 'https://os.alipayobjects.com/rmsportal/PfzuWlDVfndrQUK.png',
       module: require('../components/textarea-item/demo/basic'),
+    },
+    {
+      title: 'Footer',
+      description: '版权信息',
+      icon: 'https://os.alipayobjects.com/rmsportal/PfzuWlDVfndrQUK.png',
+      module: require('../components/footer/demo/basic'),
     },
   ],
   OTHERS: [

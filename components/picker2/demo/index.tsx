@@ -9,7 +9,7 @@ import {
   Cells,
   CellsTitle,
   Label,
-  PageWrapper,
+  WingBlank,
   Picker,
   Select
 } from 'popui-rn'
@@ -44,7 +44,7 @@ export default class PickerScreen extends React.Component<IProps, any> {
 
   render() {
     return (
-      <PageWrapper>
+      <WingBlank>
         <CellsTitle>选择</CellsTitle>
         <Cells>
           <Cell access>
@@ -98,7 +98,7 @@ export default class PickerScreen extends React.Component<IProps, any> {
           }}
           onClose={() => this.setState({ pickerVisible: false })}
         />
-      </PageWrapper>
+      </WingBlank>
     )
   }
 

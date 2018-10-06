@@ -1,10 +1,14 @@
-import { Image } from 'react-native'
+import { Image,ScrollView } from 'react-native'
 import {
-    Badge, Cell, CellBody, CellFooter, CellHeader, CellText, Media, MediaBody, MediaDescription, MediaHeader, MediaInfo, MediaInfoMeta,
-    MediaTitle, PageWrapper, Panel, PanelBody, PanelFooter, PanelHeader,
+    Badge2, Cell as CellComps, 
+    Media as MediaComps,
+    Panel as PanelComps,
 } from 'popui-rn'
+const {Cell, CellBody, CellFooter, CellHeader, CellText} = CellComps
+const {Media, MediaBody, MediaDescription, 
+  MediaHeader, MediaInfo, MediaInfoMeta,MediaTitle} = MediaComps
+  const {Panel, PanelBody, PanelFooter, PanelHeader, } = PanelComps
 import React from 'react'
-
 
 export interface IProps  {
 
@@ -20,14 +24,14 @@ export default class PanelScreen extends React.Component<IProps, any> {
 
     render() {
         return (
-            <PageWrapper>
+            <ScrollView>
                 <Panel>
                     <PanelHeader>图文组合列表</PanelHeader>
                     <PanelBody>
                         <Media type="appmsg">
                             <MediaHeader>
                                 <Image source={{ uri: 'https://weui.io/images/icon_tabbar.png' }}/>
-                                <Badge preset="header">8</Badge>
+                                <Badge2 preset="header">8</Badge2>
                             </MediaHeader>
                             <MediaBody>
                                 <MediaTitle>标题一</MediaTitle>
@@ -102,7 +106,7 @@ export default class PanelScreen extends React.Component<IProps, any> {
                         </Media>
                     </PanelBody>
                 </Panel>
-            </PageWrapper>
+            </ScrollView>
         )
     }
 }

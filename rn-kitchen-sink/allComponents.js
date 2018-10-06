@@ -1,7 +1,7 @@
 import { StackNavigator } from 'react-navigation';
-import Home from './components/Home';
+// import Home from './components/Home';
 import RnIndex from './components/RnIndex';
-import WebIndex from './components/WebIndex';
+// import WebIndex from './components/WebIndex';
 import { UIVIEWS, UICONTROLS, OTHERS, UIBARS } from './demoList';
 
 const getOptions = title => ({
@@ -13,14 +13,14 @@ const getOptions = title => ({
 });
 
 const scenes = {
-  Home: {
-    screen: Home,
-    navigationOptions: getOptions('Ant Design Mobile'),
-  },
-  web: {
-    screen: WebIndex,
-    navigationOptions: getOptions('Antm Web Component'),
-  },
+  // Home: {
+  //   screen: Home,
+  //   navigationOptions: getOptions('Ant Design Mobile'),
+  // },
+  // web: {
+  //   screen: WebIndex,
+  //   navigationOptions: getOptions('Antm Web Component'),
+  // },
   native: {
     screen: RnIndex,
     navigationOptions: getOptions('Antm React Native'),

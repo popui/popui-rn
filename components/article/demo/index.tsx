@@ -1,4 +1,4 @@
-import { Article, H1, H2, H3, P, PageWrapper, Section } from 'popui-rn'
+import { Article, H1, H2, H3, P, WingBlank, Section } from 'popui-rn'
 
 import React from 'react'
 
@@ -18,9 +18,9 @@ export default class ButtonScreen extends React.Component<IProps, any> {
 
     render() {
         return (
-            <PageWrapper hasPadddingHorizontal>
+            <WingBlank hasPadddingHorizontal>
                 {this.renderContent()}
-            </PageWrapper>
+            </WingBlank>
         )
     }
 

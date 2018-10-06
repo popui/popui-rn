@@ -1,7 +1,7 @@
 import React from 'react'
 
 
-import { AnimatedImage, GapH, LoadMore, PageWrapper } from 'popui-rn'
+import { AnimatedImage, GapH, LoadMore, WingBlank } from 'popui-rn'
 
 import { StyleSheet, Text } from 'react-native'
 
@@ -41,7 +41,7 @@ export default class AnimatedImageDemoScreen extends React.Component<IProps, any
 
     render() {
         return (
-            <PageWrapper style={styles.pageContainer} hasPaddingTop>
+            <WingBlank style={styles.pageContainer} hasPaddingTop>
                 <Text>placeholderSource, 延迟 1s </Text>
                 <AnimatedImage
                     delay={1000}
@@ -79,7 +79,7 @@ export default class AnimatedImageDemoScreen extends React.Component<IProps, any
                     style={style}/>
                 <GapH/>
 
-            </PageWrapper>
+            </WingBlank>
         )
     }
 }

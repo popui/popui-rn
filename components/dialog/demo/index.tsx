@@ -1,6 +1,6 @@
 import React from 'react'
 import { Text } from 'react-native'
-import { Button, ButtonArea, Dialog, PageWrapper } from 'popui-rn'
+import { Button, ButtonArea, Dialog, WingBlank } from 'popui-rn'
 import stylekit from 'react-native-stylekit'
 
 
@@ -65,7 +65,7 @@ export default class DialogScreen extends React.Component<IProps, any> {
 
     render() {
         return (
-            <PageWrapper hasPadddingHorizontal>
+            <WingBlank hasPadddingHorizontal>
                 <ButtonArea>
                     <Button
                         type="primary"
@@ -103,7 +103,7 @@ export default class DialogScreen extends React.Component<IProps, any> {
                         },
                     ]}
                 ><Text>呵呵</Text></Dialog>
-            </PageWrapper>
+            </WingBlank>
         )
     }
 }

@@ -1,6 +1,6 @@
 import React from 'react'
 
-import { Cell, CellBody, Cells, CellsTitle, PageWrapper } from 'popui-rn'
+import { Cell, CellBody, Cells, CellsTitle, WingBlank } from 'popui-rn'
 
 
 export interface IProps  {
@@ -25,7 +25,7 @@ export default class UploaderScreen extends React.Component<IProps, any> {
 
     render() {
         return (
-            <PageWrapper>
+            <WingBlank>
                 <CellsTitle>图片上传</CellsTitle>
                 <Cells>
                     <Cell>
@@ -53,7 +53,7 @@ export default class UploaderScreen extends React.Component<IProps, any> {
                         </CellBody>
                     </Cell>
                 </Cells>
-            </PageWrapper>
+            </WingBlank>
         )
     }
 

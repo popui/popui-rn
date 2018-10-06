@@ -1,6 +1,6 @@
 import Media from './Media'
 import MediaBody from './MediaBody'
-import MediaDescription from './MediaDesc'
+import MediaDescription from './MediaDescription'
 import MediaHeader from './MediaHeader'
 import MediaInfo from './MediaInfo'
 import MediaInfoMeta from './MediaInfoMeta'

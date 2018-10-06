@@ -1,7 +1,8 @@
 import React from 'react'
 
 import { Text } from 'react-native'
-import { Footer, FooterLink, FooterLinks, FooterText, PageWrapper } from 'popui-rn'
+import { Footer as FooterComp, WingBlank } from 'popui-rn'
+const {Footer, FooterLink, FooterLinks, FooterText} = FooterComp
 
 import stylekit from 'react-native-stylekit'
 
@@ -13,9 +14,6 @@ export interface IProps  {
 
 }
 
-
-
-
 export default class FooterScreen extends React.Component<IProps, any> {
     static navigationOptions = {
         title: 'Footer',
@@ -23,7 +21,7 @@ export default class FooterScreen extends React.Component<IProps, any> {
 
     renderFooter2() {
         return (
-            <Footer style={S.mb30}>
+            <Footer style={[S.mb30,S.mt30]}>
                 <FooterLinks>
                     <FooterLink onPress={() => {
                     }}>{'底部链接'}</FooterLink>
@@ -52,11 +50,11 @@ export default class FooterScreen extends React.Component<IProps, any> {
 
     render() {
         return (
-            <PageWrapper hasPadddingHorizontal hasPaddingTop>
+            <WingBlank hasPadddingHorizontal hasPaddingTop>
                 {this.renderFooter1()}
                 {this.renderFooter2()}
                 {this.renderFooter3()}
-            </PageWrapper>
+            </WingBlank>
         )
     }
 

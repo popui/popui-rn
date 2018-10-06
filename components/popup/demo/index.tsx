@@ -1,6 +1,6 @@
 import React from 'react'
 
-import { Button, ButtonArea, PageWrapper, Popup, PopupHeader } from 'popui-rn'
+import { Button, ButtonArea, WingBlank, Popup, PopupHeader } from 'popui-rn'
 import { StyleSheet, Text, View } from 'react-native'
 
 const styles = StyleSheet.create({
@@ -42,7 +42,7 @@ export default class PopupScreen extends React.Component<IProps, any> {
 
   render() {
     return (
-      <PageWrapper hasPadddingHorizontal>
+      <WingBlank hasPadddingHorizontal>
         <ButtonArea>
           <Button type="primary" onPress={() => this.showPopup()}>
             Show Popup
@@ -61,7 +61,7 @@ export default class PopupScreen extends React.Component<IProps, any> {
             <Text> I am in Popup!</Text>
           </View>
         </Popup>
-      </PageWrapper>
+      </WingBlank>
     )
   }
 }

@@ -1,6 +1,7 @@
-import { Button, ButtonArea, PageWrapper, Progress } from 'popui-rn'
-
 import React from 'react'
+import { ScrollView } from 'react-native'
+import { ButtonWeui,  Progress2 as Progress } from 'popui-rn'
+const {Button, ButtonArea} = ButtonWeui
 
 import stylekit from 'react-native-stylekit'
 
@@ -9,9 +10,6 @@ const $SK = stylekit({})
 export interface IProps  {
 
 }
-
-
-
 
 export default class ProgressScreen extends React.Component<IProps, any> {
     static navigationOptions = {
@@ -60,14 +58,19 @@ export default class ProgressScreen extends React.Component<IProps, any> {
 
     render() {
         return (
-            <PageWrapper spacing>
-                <Progress value={this.state.value || 0} onCancel={this.pause} style={[$SK.mt15]}/>
-                <Progress value={this.state.value || 50} onCancel={this.pause} style={[$SK.mt15]}/>
-                <Progress value={this.state.value || 80} onCancel={this.pause} style={[$SK.mt15]}/>
+            <ScrollView>
+                <Progress value={this.state.value || 0} 
+                onCancel={this.pause} style={[$SK.mt15]}/>
+                <Progress value={this.state.value || 50} 
+                onCancel={this.pause} style={[$SK.mt15]}/>
+                <Progress 
+                  value={this.state.value || 80} 
+                  onCancel={this.pause} 
+                  style={[$SK.mt15]}/>
                 <ButtonArea style={[$SK.mt15]}>
                     <Button type="primary" onPress={this.start}>上传</Button>
                 </ButtonArea>
-            </PageWrapper>
+            </ScrollView>
         )
     }
 }

@@ -17,7 +17,7 @@ export interface IProps {
  * 提供 PaddingTop,PadddingHorizontal,scrollView 包装
  * @returns {any}
  */
-export default function PageWrapper(props: IProps) {
+export default function WingBlank(props: IProps) {
     const {
         hasPaddingTop,
         hasPaddingBottom,
@@ -50,7 +50,7 @@ export default function PageWrapper(props: IProps) {
     return contentViewWithWrapper
 }
 
-PageWrapper.propTypes = {
+WingBlank.propTypes = {
     hasPaddingTop: PropTypes.bool,
     hasPaddingBottom: PropTypes.bool,
     hasPadddingHorizontal: PropTypes.bool,

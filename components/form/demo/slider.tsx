@@ -1,6 +1,6 @@
 import React from 'react'
 
-import { PageWrapper, Slider } from 'popui-rn'
+import { WingBlank, Slider } from 'popui-rn'
 
 
 export interface IProps  {
@@ -26,7 +26,7 @@ export default class SliderScreen extends React.Component<IProps, any> {
 
     render() {
         return (
-            <PageWrapper hasPadddingHorizontal hasPaddingTop>
+            <WingBlank hasPadddingHorizontal hasPaddingTop>
                 <Slider
                     max={100}
                     min={0}
@@ -38,7 +38,7 @@ export default class SliderScreen extends React.Component<IProps, any> {
                     value={this.state.sliderValue}
                     onChange={this.handleSliderChange}
                 />
-            </PageWrapper>
+            </WingBlank>
         )
     }
 

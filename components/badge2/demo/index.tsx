@@ -1,6 +1,6 @@
 import React from 'react'
 
-import { Badge, Cell, CellBody, CellFooter, CellHeader, Cells, CellsTitle, CellText, PageWrapper } from 'popui-rn'
+import { Badge, Cell, CellBody, CellFooter, CellHeader, Cells, CellsTitle, CellText, WingBlank } from 'popui-rn'
 
 import { Image, View } from 'react-native'
 
@@ -18,7 +18,7 @@ export default class BadgeScreen extends React.Component<IProps, any> {
 
     render() {
         return (
-            <PageWrapper>
+            <WingBlank>
                 <CellsTitle>新消息提示跟摘要信息后，统一在列表右侧</CellsTitle>
                 <Cells>
                     <Cell>
@@ -88,7 +88,7 @@ export default class BadgeScreen extends React.Component<IProps, any> {
                         </CellFooter>
                     </Cell>
                 </Cells>
-            </PageWrapper>
+            </WingBlank>
         )
     }
 }
