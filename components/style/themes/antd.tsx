@@ -183,10 +183,11 @@ export default {
 
   // result
   result_padding_top: 36,
+  result_padding_bottom: 15,
   result_icon_gap: 30,
   result_title_gap: 5,
   result_message_gap: 25,
-  result_buttons_gap: 25,
-  result_extra_gap: 15,
+  result_buttons_gap: 15,
+  // result_extra_gap: 15,
   result_extra_Of_minHeight: 438,
 };

@@ -18,7 +18,8 @@ export interface IResultStyle {
 export default {
   result: {
     alignItems: 'center',
-    paddingVertical: variables.result_padding_top,
+    paddingTop: variables.result_padding_top,
+    paddingBottom: variables.result_padding_bottom,
     backgroundColor: variables.fill_base,
     borderBottomColor: variables.border_color_base,
   },
@@ -26,8 +27,8 @@ export default {
     margin: 0,
   },
   img: {
-    width: 60,
-    height: 60,
+    width: 100,
+    height: 100,
   },
   title: {
     marginTop: variables.result_icon_gap,
@@ -41,7 +42,6 @@ export default {
     color: variables.color_text_base,
   },
   message: {
-    marginBottom: variables.result_message_gap,
     paddingHorizontal: variables.h_spacing_lg,
   },
   messageText: {
@@ -58,10 +58,11 @@ export default {
     alignItems: 'center',
     justifyContent: 'center',
     paddingHorizontal: variables.h_spacing_lg,
+    marginTop: variables.result_message_gap,
     marginBottom: variables.result_buttons_gap,
   },
   extra: {
-    marginBottom: variables.result_extra_gap,
+    // marginBottom: variables.result_extra_gap,
     paddingHorizontal: variables.h_spacing_lg,
   },
   extraText: {
