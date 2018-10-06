@@ -3,7 +3,7 @@
 
 // import Popover from '../index';
 
-// // No need to render Snapshot again, because of `./demo.test.native.js`
+// // No need to render Snapshot again, because of `./demo.test.js`
 
 describe('Popover', () => {
   it('trigger event correctly', () => {

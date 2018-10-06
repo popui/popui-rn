@@ -9,7 +9,7 @@ import {
 } from 'react-native';
 import List from '../list/index';
 import { RadioItemPropsType } from './PropsType';
-import Radio from './Radio.native';
+import Radio from './Radio';
 import RadioItemStyle, { IRadioStyle } from './style/index';
 
 const ListItem = List.Item;

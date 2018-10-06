@@ -2,7 +2,7 @@
 // // import { shallow } from 'enzyme';
 // import Drawer from '../index';
 
-// // No need to render Snapshot again, because of `./demo.test.native.js`
+// // No need to render Snapshot again, because of `./demo.test.js`
 
 describe('Drawer', () => {
   it('trigger correctly', () => {

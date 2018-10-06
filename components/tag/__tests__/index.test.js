@@ -3,7 +3,7 @@ import { Text } from 'react-native';
 import { shallow } from 'enzyme';
 import Tag from '../index';
 
-// No need to render Snapshot again, because of `./demo.test.native.js`
+// No need to render Snapshot again, because of `./demo.test.js`
 
 describe('Tag', () => {
   it('small size does not have closeDom', () => {

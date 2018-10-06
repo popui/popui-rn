@@ -1,6 +1,6 @@
 import React from 'react';
 import topView from 'rn-topview';
-import OperationContainer from './OperationContainer.native';
+import OperationContainer from './OperationContainer';
 
 export default function a(...args: any[]) {
   const actions = args[0] || [{ text: '确定' }];

@@ -2,7 +2,7 @@ import React from 'react';
 import { shallow } from 'enzyme';
 import SearchBar from '../index';
 
-// No need to render Snapshot again, because of `./demo.test.native.js`
+// No need to render Snapshot again, because of `./demo.test.js`
 
 describe('SearchBar', () => {
   describe('test some events', () => {

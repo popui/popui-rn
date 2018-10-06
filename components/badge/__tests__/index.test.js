@@ -2,7 +2,7 @@
 // // import { shallow } from 'enzyme';
 // import Badge from '../index';
 
-// No need to render Snapshot again, because of `./demo.test.native.js`
+// No need to render Snapshot again, because of `./demo.test.js`
 
 describe('Badge', () => {
   it('trigger event correctly', () => {

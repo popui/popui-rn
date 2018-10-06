@@ -1,6 +1,6 @@
 import React from 'react';
 import { StyleProp, StyleSheet, Text, View, ViewStyle } from 'react-native';
-import Item from './ListItem.native';
+import Item from './ListItem';
 import { ListPropsType } from './PropsType';
 import listStyle from './style/index';
 

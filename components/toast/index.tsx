@@ -1,6 +1,6 @@
 import React from 'react';
 import topView from 'rn-topview';
-import ToastContainer from './ToastContainer.native';
+import ToastContainer from './ToastContainer';
 
 function notice(
   content: string,

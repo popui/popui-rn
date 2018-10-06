@@ -8,7 +8,7 @@ import {
   View,
   ViewStyle,
 } from 'react-native';
-import Checkbox from './Checkbox.native';
+import Checkbox from './Checkbox';
 import { CheckboxPropsType } from './PropsType';
 import AgreeItemstyle, { ICheckboxStyle } from './style/index';
 

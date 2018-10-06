@@ -5,7 +5,7 @@
 // import Picker from '../index';
 // import List from '../../list/index';
 
-// // No need to render Snapshot again, because of `./demo.test.native.js`
+// // No need to render Snapshot again, because of `./demo.test.js`
 
 describe('Picker', () => {
   it('trigger event correctly', () => {

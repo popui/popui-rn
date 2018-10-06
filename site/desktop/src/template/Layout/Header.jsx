@@ -46,7 +46,7 @@ export default class Header extends React.Component {
 
   handleMenuIconClick = (e) => {
     e.stopPropagation();
-    e.nativeEvent.stopImmediatePropagation();
+    eEvent.stopImmediatePropagation();
     this.setState({
       menuVisible: true,
     });

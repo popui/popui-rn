@@ -1,7 +1,7 @@
 import React from 'react';
 import { ImageStyle, StyleProp, StyleSheet, ViewStyle } from 'react-native';
 import List from '../list/index';
-import Checkbox from './Checkbox.native';
+import Checkbox from './Checkbox';
 import { CheckboxItemPropsType } from './PropsType';
 import CheckboxItemStyle, { ICheckboxStyle } from './style/index';
 

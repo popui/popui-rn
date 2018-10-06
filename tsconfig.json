@@ -1,5 +1,6 @@
 {
   "compilerOptions": {
+    "noEmitOnError":false,
     "strictNullChecks": true,
     "moduleResolution": "node",
     "jsx": "preserve",
@@ -7,7 +8,7 @@
     "noUnusedLocals": true,
     "allowSyntheticDefaultImports":true,
     "target": "es6",
-    "noImplicitAny": true,
+    "noImplicitAny": false,
     "types": [
       "react",
       "react-native"

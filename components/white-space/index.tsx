@@ -1,6 +1,6 @@
 import React from 'react';
 import { StyleProp, View, ViewStyle } from 'react-native';
-import varibles from '../style/themes/default.native';
+import varibles from '../style/themes/default';
 import { WhiteSpacePropsType } from './PropsType';
 export interface WhiteSpaceProps extends WhiteSpacePropsType {
   style?: StyleProp<ViewStyle>;

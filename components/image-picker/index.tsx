@@ -8,7 +8,7 @@ import {
   TouchableWithoutFeedback,
   View,
 } from 'react-native';
-import ImageRoll from './ImageRoll.native';
+import ImageRoll from './ImageRoll';
 import { ImagePickerPropTypes } from './PropsType';
 import imagePickerStyle, { IImagePickerStyle } from './style/index';
 

@@ -1,6 +1,6 @@
 import React from 'react';
 import topView from 'rn-topview';
-import AlertContainer from './AlertContainer.native';
+import AlertContainer from './AlertContainer';
 
 export default function a(
   title: React.ReactNode,

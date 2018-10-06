@@ -5,7 +5,7 @@ import { SegmentedControl, WhiteSpace } from 'popui-rn';
 
 export default class BasicTagExample extends React.Component<any, any> {
   onChange = (e: any) => {
-    console.log(`selectedIndex:${e.nativeEvent.selectedSegmentIndex}`);
+    console.log(`selectedIndex:${eEvent.selectedSegmentIndex}`);
   }
 
   onValueChange = (value: any) => {

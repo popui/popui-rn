@@ -9,7 +9,7 @@ import {
   TouchableWithoutFeedback,
   View,
 } from 'react-native';
-import variables from '../style/themes/default.native';
+import variables from '../style/themes/default';
 import { TextAreaItemPropsType } from './PropsType';
 import TextAreaItemStyle, { ITextareaItemStyle } from './style/index';
 import { Omit } from '../_util/types';
@@ -73,7 +73,7 @@ export default class TextAreaItem extends React.Component<
       eventCount: number;
     };
   }) => {
-    const text = event.nativeEvent.text;
+    const text = eventEvent.text;
     const { onChange } = this.props;
 
     this.setState({
@@ -92,7 +92,7 @@ export default class TextAreaItem extends React.Component<
     const { autoHeight, onContentSizeChange } = this.props;
     const rows = this.props.rows as number;
     if (autoHeight) {
-      height = event.nativeEvent.contentSize.height;
+      height = eventEvent.contentSize.height;
     } else if (rows > 1) {
       height = 6 * rows * 4;
     } else {

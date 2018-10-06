@@ -48,7 +48,7 @@ class Marquee extends React.PureComponent<MarqueeProps, any> {
       return;
     }
 
-    this.twidth = e.nativeEvent.layout.width;
+    this.twidth = eEvent.layout.width;
     // onLayout may be earlier than onLayoutContainer on android, can not be sure width < twidth at that time.
     this.tryStart();
   }
@@ -61,7 +61,7 @@ class Marquee extends React.PureComponent<MarqueeProps, any> {
 
   onLayoutContainer = (e: LayoutChangeEvent) => {
     if (!this.width) {
-      this.width = e.nativeEvent.layout.width;
+      this.width = eEvent.layout.width;
       this.setState(
         {
           left: new Animated.Value(0),

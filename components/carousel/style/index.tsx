@@ -1,4 +1,4 @@
-import variables from '../../style/themes/default.native';
+import variables from '../../style/themes/default';
 
 export default {
   pagination: {

@@ -50,7 +50,7 @@ class NavBar extends PureComponent {
         tabsContainerStyle: {},
     }
     onTabContainerLayout = (e) => {
-        this._tabContainerMeasurements = e.nativeEvent.layout
+        this._tabContainerMeasurements = eEvent.layout
         let width = this._tabContainerMeasurements.width
         if (width < WINDOW_WIDTH) {
             width = WINDOW_WIDTH
@@ -58,7 +58,7 @@ class NavBar extends PureComponent {
         this.setState({ _containerWidth: width })
     }
     onContainerLayout = (e) => {
-        this._containerMeasurements = e.nativeEvent.layout
+        this._containerMeasurements = eEvent.layout
     }
     updateView = (offset) => {
         const position = Math.floor(offset.value)

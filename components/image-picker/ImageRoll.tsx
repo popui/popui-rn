@@ -8,7 +8,7 @@ import {
   View,
 } from 'react-native';
 import CameraRollPicker from 'react-native-camera-roll-picker';
-import varibles from '../style/themes/default.native';
+import varibles from '../style/themes/default';
 
 export interface ImageRollProps {
   onCancel: () => void;

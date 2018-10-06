@@ -3,7 +3,7 @@ import { shallow } from 'enzyme';
 
 import NoticeBar from '../index';
 
-// No need to render Snapshot again, because of `./demo.test.native.js`
+// No need to render Snapshot again, because of `./demo.test.js`
 
 describe('NoticeBar', () => {
   describe('onClick', () => {

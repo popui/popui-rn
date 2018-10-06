@@ -93,7 +93,7 @@ export class UnderLineTabBar extends PureComponent {
 
     onTabLayout(event, page) {
         const { tabs } = this.props
-        const { x, y, width, height } = event.nativeEvent.layout
+        const { x, y, width, height } = eventEvent.layout
         this.tabState[page] = { x, y, width, height }
         if (tabs.length === Object.keys(this.tabState).length) {
             this.setState({ renderUnderline: true })
@@ -171,7 +171,7 @@ export class UnderLineTabBar extends PureComponent {
                             ref={(node) => this.scrollTabs = node}
                             bounces={false}
                             scrollEventThrottle={16}
-                            onScroll={(e) => this.setState({ tabScrollValue: e.nativeEvent.contentOffset.x })}
+                            onScroll={(e) => this.setState({ tabScrollValue: eEvent.contentOffset.x })}
                 >
                     {tabs.map(this.renderTab)}
                     {this.state.renderUnderline && this.renderUnderline()}

@@ -8,9 +8,9 @@ import {
   View,
   TextStyle,
 } from 'react-native';
-import Modal from './Modal.native';
+import Modal from './Modal';
 import { CallbackOrActions } from './PropsType';
-import promptStyle, { IPromptStyle } from './style/prompt.native';
+import promptStyle, { IPromptStyle } from './style/prompt';
 
 export interface PropmptContainerProps {
   title: React.ReactNode;

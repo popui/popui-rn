@@ -2,7 +2,7 @@
 import React from 'react';
 import { LayoutChangeEvent, StyleSheet, View } from 'react-native';
 import { StepsPropsType } from './PropsType';
-import RNStepsItem from './StepsItem.native';
+import RNStepsItem from './StepsItem';
 import StepStyle, { IStepsStyle } from './style/index';
 
 export interface StepsProps extends StepsPropsType {
@@ -36,7 +36,7 @@ export default class Steps extends React.Component<StepsNativeProps, any> {
 
   onLayout = (e: LayoutChangeEvent) => {
     this.setState({
-      wrapWidth: e.nativeEvent.layout.width,
+      wrapWidth: eEvent.layout.width,
     });
   }
 

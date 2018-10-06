@@ -119,7 +119,7 @@
     "prepublish": "antd-tools run guard",
     "prepare": "antd-tools run guard",
     "prepublishOnly": "antd-tools run guard",
-    "test": "jest --config .jest.native.js",
+    "test": "jest --config .jest.js",
     "test:all": "./scripts/test-all.sh",
     "compile": "cross-env BABEL_ENV=dist antd-tools run compile",
     "watch-tsc": "antd-tools run watch-tsc",

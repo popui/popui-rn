@@ -3,7 +3,7 @@
 
 // import Pagination from '../index';
 
-// // No need to render Snapshot again, because of `./demo.test.native.js`
+// // No need to render Snapshot again, because of `./demo.test.js`
 
 describe('Pagination', () => {
   it('trigger event correctly', () => {

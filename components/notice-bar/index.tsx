@@ -8,7 +8,7 @@ import {
   View,
   ViewStyle,
 } from 'react-native';
-import Marquee, { MarqueeProps } from './Marquee.native';
+import Marquee, { MarqueeProps } from './Marquee';
 import { NoticeBarPropsType } from './PropsType';
 import NoticeStyle, { INoticeBarStyle } from './style/index';
 

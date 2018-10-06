@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`renders ./components/tab-bar/demo/basic.native.tsx correctly 1`] = `
+exports[`renders ./components/tab-bar/demo/basic.tsx correctly 1`] = `
 <RCTTabBar
   barStyle={undefined}
   barTintColor="#ccc"

@@ -1,5 +1,5 @@
 import { TextStyle, ViewStyle } from 'react-native';
-import variables from '../../style/themes/default.native';
+import variables from '../../style/themes/default';
 
 export interface IActivityIndicatorStyle {
   container: ViewStyle;

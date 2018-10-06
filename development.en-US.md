@@ -81,7 +81,7 @@ class Button extends React.Component {
 export default Button;
 ```
 
-- `components/button/demo/basic.native.tsx`
+- `components/button/demo/basic.tsx`
 
 ```jsx
 import { Button } from 'popui-rn';

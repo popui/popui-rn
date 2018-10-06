@@ -12,7 +12,7 @@ const transformPackages = [
 module.exports = {
   preset: 'react-native',
   setupFiles: [
-    './tests/setup.native.js'
+    './tests/setup.js'
   ],
   moduleFileExtensions: [
     'native.ts',
@@ -35,9 +35,9 @@ module.exports = {
     '\\.js$': './node_modules/antd-tools/lib/jest/codePreprocessor',
     '\\.png': '<rootDir>/tests/imageStub.js',
   },
-  testRegex: libDir === 'dist' ? 'demo\\.test\\.native\\.js$' : '.*\\.test\\.native\\.js$',
+  testRegex: libDir === 'dist' ? 'demo\\.test\\\\.js$' : '.*\\.test\\\\.js$',
   collectCoverageFrom: [
-    'components/**/*.native.{ts,tsx}',
+    'components/**/*.{ts,tsx}',
     '!components/*/style/*.{ts,tsx}',
   ],
   transformIgnorePatterns: [

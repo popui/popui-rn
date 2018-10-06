@@ -1,6 +1,6 @@
 import React from 'react';
 import topView from 'rn-topview';
-import PromptContainer from './PromptContainer.native';
+import PromptContainer from './PromptContainer';
 import { CallbackOrActions } from './PropsType';
 import { TextStyle } from 'react-native';
 
