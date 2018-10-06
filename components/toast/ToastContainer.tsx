@@ -4,7 +4,7 @@ import React from "react";
 import {
   ActivityIndicator,
   Animated,
-  Image,
+  // Image,
   StyleSheet,
   Text,
   View
@@ -23,14 +23,6 @@ export interface ToastProps {
 }
 
 const ToastContainerStyles = StyleSheet.create<any>(ToastContainerStyle);
-
-const iconType: {
-  [key: string]: any;
-} = {
-  success: require("./images/success.png"),
-  fail: require("./images/fail.png"),
-  offline: require("./images/offline.png")
-};
 
 export default class ToastContainer extends React.Component<ToastProps, any> {
   static defaultProps = {
@@ -112,16 +104,17 @@ export default class ToastContainer extends React.Component<ToastProps, any> {
         iconDom = <PureIconWeui name={'success_no_circle'} style={[styles.toastIcon]} />;
         break;
       case "fail":
-        iconDom = <PureIconWeui name={'success_no_circle'} style={[styles.toastIcon]} />;
+        iconDom = <PureIconWeui name={'cancel'} style={[styles.toastIcon]} />;
         break;
       case "offline":
-        iconDom = <PureIconWeui name={'success_no_circle'} style={[styles.toastIcon]} />;
+        iconDom = <PureIconWeui name={'warn'} style={[styles.toastIcon]} />;
         break;
       case "info":
         iconDom = null;
         break;
       default:
-        iconDom = <Image source={iconType[type]} style={styles.toastImage} />;
+        iconDom = <PureIconWeui name={type} style={[styles.toastIcon]} />;
+        // iconDom = <Image source={iconType[type]} style={styles.toastImage} />;
         break;
     }
     return iconDom
