@@ -19,6 +19,7 @@ export default class MsgScreen extends React.Component<IProps, any> {
                     type="success"
                     title="操作成功"
                     description="内容详情，可根据实际需要安排"
+                    extraText="extraText 内容详情，可根据实际需要安排"
                     buttons={[{
                         type: 'primary',
                         label: '确定',
