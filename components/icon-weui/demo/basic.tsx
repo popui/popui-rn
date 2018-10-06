@@ -10,11 +10,8 @@ export interface IProps  {
 }
 
 const styles = StyleSheet.create({
-  smallIcons:{
+  whiteIcons:{
     backgroundColor:'#ddd'
-  },
-  bigIcons:{
-    backgroundColor:'#fff'
   }
 })
 
@@ -25,7 +22,7 @@ export default class IconsScreen extends React.Component<IProps, any> {
     render() {
         return (
             <ScrollView>
-              <View style={[SK.column, SK.plr30, SK.mt10,styles.bigIcons]}>
+              <View style={[SK.column, SK.plr30, SK.mt10]}>
                   {this.renderBigIcon('success')}
                   {this.renderBigIcon('info')}
                   {this.renderBigIcon('warn')}
@@ -44,7 +41,7 @@ export default class IconsScreen extends React.Component<IProps, any> {
                     {this.renderSmallIcon('waiting_circle')}
                     {this.renderSmallIcon('download')}
                 </View>
-                <View style={[SK.row, SK.plr30, SK.mt10,styles.smallIcons]}>
+                <View style={[SK.row, SK.plr30, SK.mt10,styles.whiteIcons]}>
                     {this.renderSmallIcon('back')}
                     {this.renderSmallIcon('delete')}
                 </View>
