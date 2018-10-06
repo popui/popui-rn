@@ -6,7 +6,7 @@ export interface IProps {
     style?: any
 }
 
-function VGap(props: IProps) {
+function GapV(props: IProps) {
     const { level = 5, style, children, ...others } = props
     return (<View
         style={[styles[`level${level}`], style]}
@@ -53,4 +53,4 @@ const styles = StyleSheet.create({
     },
 })
 
-export default VGap
+export default GapV

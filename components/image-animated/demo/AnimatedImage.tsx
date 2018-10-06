@@ -1,7 +1,7 @@
 import React from 'react'
 
 
-import { AnimatedImage, HGap, LoadMore, PageWrapper } from 'popui-rn'
+import { AnimatedImage, GapH, LoadMore, PageWrapper } from 'popui-rn'
 
 import { StyleSheet, Text } from 'react-native'
 
@@ -50,7 +50,7 @@ export default class AnimatedImageDemoScreen extends React.Component<IProps, any
                         uri: placeholderUri,
                     }}
                     style={style}/>
-                <HGap/>
+                <GapH/>
 
                 <Text>placeholderColor, fade, 延迟 2s </Text>
                 <AnimatedImage
@@ -59,7 +59,7 @@ export default class AnimatedImageDemoScreen extends React.Component<IProps, any
                     source={{ uri }}
                     placeholderColor={placeholderColor}
                     style={style}/>
-                <HGap/>
+                <GapH/>
 
                 <Text>placeholderColor, shrink, 延迟 2s </Text>
                 <AnimatedImage
@@ -68,7 +68,7 @@ export default class AnimatedImageDemoScreen extends React.Component<IProps, any
                     source={{ uri }}
                     placeholderColor={placeholderColor}
                     style={style}/>
-                <HGap/>
+                <GapH/>
 
                 <Text>placeholderColor, explode, 延迟 2s </Text>
                 <AnimatedImage
@@ -77,7 +77,7 @@ export default class AnimatedImageDemoScreen extends React.Component<IProps, any
                     source={{ uri }}
                     placeholderColor={placeholderColor}
                     style={style}/>
-                <HGap/>
+                <GapH/>
 
             </PageWrapper>
         )

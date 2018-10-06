@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types'
 import React from 'react'
 import { Dimensions, Modal, Platform, StyleSheet, Text, View, ViewPropTypes } from 'react-native'
-import { Mask } from 'popui/components/Mask'
+import { Mask } from 'popui-rn/components/Mask'
 import { create } from '../style/utils/StyleSheet'
 import V from '../style/themes/weui'
 import TouchableWithFallback from '../touchable-with-fallback'

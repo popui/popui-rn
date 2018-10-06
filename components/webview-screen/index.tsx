@@ -1,15 +1,15 @@
 import React, { PureComponent } from 'react'
 import { Platform, View, WebView } from 'react-native'
-import AutoProgress from 'popui/components/Progress/AutoProgress'
+import AutoProgress from 'popui-rn/components/Progress/AutoProgress'
 import Menu, {
   MenuContext,
   MenuOption,
   MenuOptions,
   MenuTrigger
 } from 'react-native-popup-menu'
-import Toast from 'popui/components/Toast/Toast'
+import Toast from 'popui-rn/components/Toast/Toast'
 
-import CONSTANTS from 'popui/components/WebViewScreen/constants'
+import CONSTANTS from 'popui-rn/components/WebViewScreen/constants'
 
 class WebViewScreen extends PureComponent {
   static navigatorButtons = {

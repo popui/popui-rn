@@ -52,6 +52,12 @@ module.exports = {
       module: require('../components/icon/demo/basic'),
     },
     {
+      title: 'Icon Weui',
+      description: 'Weui 图标',
+      icon: 'https://os.alipayobjects.com/rmsportal/yhnfleZZoezOjtU.png',
+      module: require('../components/icon-weui/demo/basic'),
+    },
+    {
       title: 'List',
       description: '列表',
       icon: 'https://os.alipayobjects.com/rmsportal/tiapjpdKPQGHhnC.png',

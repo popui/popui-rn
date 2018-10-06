@@ -1,6 +1,6 @@
 import React from 'react'
-import Toast from 'popui/components/Toast/Toast'
-import RootModal from 'popui/components/RootModalViews/RootModal'
+import Toast from 'popui-rn/components/Toast/Toast'
+import RootModal from 'popui-rn/components/RootModalViews/RootModal'
 
 export const RootModalToast = (props: {
   isOpen: boolean

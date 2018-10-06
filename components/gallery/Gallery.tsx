@@ -2,7 +2,7 @@ import PropTypes from 'prop-types'
 import React, { PureComponent } from 'react'
 import { ActivityIndicator, Dimensions, Modal, StatusBar, StyleSheet, View, ViewPropTypes } from 'react-native'
 import PhotoView from 'react-native-photo-view'
-import { Mask } from 'popui/components/Mask'
+import { Mask } from 'popui-rn/components/Mask'
 
 const { width, height } = Dimensions.get('window')
 const styles = StyleSheet.create({

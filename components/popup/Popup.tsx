@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types'
 import React, { PureComponent } from 'react'
 import { Animated, Dimensions, Easing, Modal, StyleSheet, View, ViewPropTypes } from 'react-native'
-import { Mask } from 'popui/components/Mask'
+import { Mask } from 'popui-rn/components/Mask'
 
 const { width, height } = Dimensions.get('window')
 const styles = StyleSheet.create({

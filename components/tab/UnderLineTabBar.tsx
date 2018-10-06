@@ -3,7 +3,7 @@
 import React, { Component, PropTypes } from 'react'
 import { Animated, Dimensions, ScrollView, Text, TouchableOpacity, View } from 'react-native'
 
-import { PureIconPopui } from 'popui/components/Icon'
+import { PureIconPopui } from 'popui-rn/components/Icon'
 
 const SCREEN_WIDTH = Dimensions.get('window').width
 
