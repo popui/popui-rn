@@ -1,4 +1,4 @@
-import { View } from 'react-native'
+import { View,Text } from 'react-native'
 import {  IconWeui } from 'popui-rn'
 import React from 'react'
 import stylekit from 'react-native-stylekit'
@@ -47,11 +47,13 @@ export default class IconsScreen extends React.Component<IProps, any> {
 
     private renderBigIcon(iconName: string) {
         return (<View style={[SK.row, SK.center]}>
+              <Text>{iconName+" big"}</Text>
             <IconWeui name={iconName} msg style={[SK.plr5]}/>
         </View>)
     }
 
     private renderSmallIcon(iconName: string) {
+        <Text>{iconName+" small"}</Text>
         return (<IconWeui name={iconName} style={[SK.plr5]}/>)
     }
 }

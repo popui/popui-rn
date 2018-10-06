@@ -15,15 +15,24 @@ class ResourceLoader extends Component {
     constructor() {
         super(...arguments);
         this.state = {
-            loading: true
+            loading: true,
+            errMsg: ''
         };
     }
     componentDidMount() {
         return __awaiter(this, void 0, void 0, function* () {
-            yield Font.loadAsync({
-                'weui': require('./../../../assets/fonts/Weui.ttf'),
-            });
-            this.setState({ loading: false });
+            try {
+                yield Font.loadAsync({
+                    Weui: require('assets/fonts/Weui.ttf'),
+                });
+                this.setState({ loading: false });
+            }
+            catch (err) {
+                this.setState({
+                    loading: false,
+                    errMsg: err + ''
+                });
+            }
         });
     }
     render() {

@@ -26,6 +26,6 @@ export const glyphMap = {
 /**
  * 不带默认值的 IconWeui
  */
-const PureIconWeui = createIconSet(glyphMap, 'Weui', 'Weui.ttf')
+const PureIconWeui = createIconSet(glyphMap, 'Weui')
 
 export default PureIconWeui

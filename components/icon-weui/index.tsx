@@ -1,6 +1,6 @@
 // Usage: <IconWeui name="icon-name" size={20} color="#4F8EF7" />
 
-import PropTypes from 'prop-types'
+// import PropTypes from 'prop-types'
 import React from 'react'
 import { StyleSheet, Text } from 'react-native'
 import PureIconWeui from './PureIconWeui'
@@ -108,8 +108,8 @@ const IconWeui = ({
                       size = msg ? glyphMap.msg.size : glyphMap[name].size,
                       color = glyphMap[name].color,
                       style,
-                      ...others,
-                  }) =>
+                      ...others
+                  }:any) =>
     <PureIconWeui
         name={name}
         size={size}
@@ -118,17 +118,17 @@ const IconWeui = ({
         {...others}
     />
 
-IconWeui.propTypes = {
-    msg: PropTypes.bool,
-    name: PropTypes.oneOf(['success', 'waiting', 'warn', 'info', 'success_circle',
-        'success_no_circle', 'waiting_circle', 'circle', 'download',
-        'info_circle', 'safe_success', 'safe_warn', 'cancel', 'back', 'delete',
-        'search', 'clear',
-    ]),
-    size: PropTypes.number,
-    color: PropTypes.string,
-    style: Text.propTypes.style,
-}
+// IconWeui.propTypes = {
+//     msg: PropTypes.bool,
+//     name: PropTypes.oneOf(['success', 'waiting', 'warn', 'info', 'success_circle',
+//         'success_no_circle', 'waiting_circle', 'circle', 'download',
+//         'info_circle', 'safe_success', 'safe_warn', 'cancel', 'back', 'delete',
+//         'search', 'clear',
+//     ]),
+//     size: PropTypes.number,
+//     color: PropTypes.string,
+//     style: Text.propTypes.style,
+// }
 
 export default IconWeui
 

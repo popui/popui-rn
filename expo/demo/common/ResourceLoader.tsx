@@ -5,13 +5,21 @@ import { Font } from 'expo';
 // create a component
 class ResourceLoader extends Component {
   state ={
-    loading:true
+    loading:true,
+    errMsg:''
   }
   async componentDidMount() {
-    await Font.loadAsync({
-      'weui': require('./../../../assets/fonts/Weui.ttf'),
-    });
-    this.setState({ loading: false });
+    try{
+      await Font.loadAsync({
+        Weui: require('assets/fonts/Weui.ttf')
+      });
+      this.setState({ loading: false });
+    }catch(err){
+      this.setState({
+        loading:false,
+        errMsg:err +''
+      })
+    }
   }
   render() {
     if(this.state.loading){
