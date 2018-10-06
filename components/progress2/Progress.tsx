@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types'
 import React, { PureComponent } from 'react'
 import { StyleSheet, TouchableOpacity, View, ViewPropTypes } from 'react-native'
-import WeuiIcon from '../icon-weui'
+import IconWeui from '../icon-weui'
 import V from '../style/themes/weui'
 
 const styles = StyleSheet.create({
@@ -30,7 +30,7 @@ export function Opration({ onCancel }: any) {
   }
   return (
     <TouchableOpacity onPress={onCancel} style={styles.progressOpr}>
-      <WeuiIcon name="cancel" />
+      <IconWeui name="cancel" />
     </TouchableOpacity>
   )
 }

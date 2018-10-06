@@ -2,7 +2,7 @@ import PropTypes from 'prop-types'
 import React from 'react'
 import { Text, View, ViewPropTypes } from 'react-native'
 import Button from './Button'
-import WeuiIcon from '../icon-weui'
+import IconWeui from '../icon-weui'
 import { create } from '../style/utils/StyleSheet'
 import V from '../style/themes/weui'
 
@@ -82,7 +82,7 @@ const Msg = ({
 }) => {
   const iconView = (
     <View style={styles.iconArea}>
-      <WeuiIcon name={type} msg />
+      <IconWeui name={type} msg />
     </View>
   )
   const titleView = title ? (

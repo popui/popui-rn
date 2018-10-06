@@ -1,7 +1,8 @@
 import React from 'react';
 import { StyleSheet, Text, SafeAreaView } from 'react-native';
 // import Button from 'popui-rn/components/button/index';
-import ToastExample from 'popui-rn/components/toast/demo/basic';
+// import ToastExample from 'popui-rn/components/toast/demo/basic';
+import IconExample from 'popui-rn/components/icon-weui/demo/basic';
 import ResourceLoader from '../common/ResourceLoader';
 
 export default class App extends React.Component {
@@ -9,7 +10,7 @@ export default class App extends React.Component {
     return (
       <ResourceLoader >
         <SafeAreaView style={styles.container}>
-          <ToastExample />
+          <IconExample />
         </SafeAreaView>
       </ResourceLoader>
     );

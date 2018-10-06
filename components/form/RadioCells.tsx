@@ -2,7 +2,7 @@ import PropTypes from 'prop-types'
 import React from 'react'
 import { StyleSheet, ViewPropTypes } from 'react-native'
 import { Cell, CellBody, Cells, CellText } from 'popui/components/Cell'
-import WeuiIcon from '../icon-weui'
+import IconWeui from '../icon-weui'
 import V from '../style/themes/weui'
 
 const styles = StyleSheet.create({
@@ -23,7 +23,7 @@ const RadioCells = ({ value, options, onChange, disabled, style, children, ...ot
                     <CellText>{option.label || option.value}</CellText>
                 </CellBody>
                 {value === option.value ? (
-                    <WeuiIcon name="success_no_circle" style={styles.radio}/>
+                    <IconWeui name="success_no_circle" style={styles.radio}/>
                 ) : null}
             </Cell>,
         )}
@@ -35,7 +35,7 @@ RadioCells.propTypes = {
     options: PropTypes.array.isRequired,
     onChange: PropTypes.func,
     disabled: PropTypes.bool,
-    style: WeuiIcon.propTypes.style,
+    style: IconWeui.propTypes.style,
     children: PropTypes.node,
 }
 

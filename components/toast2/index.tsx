@@ -1,6 +1,6 @@
 import React from 'react'
 import { ActivityIndicator, StyleSheet, Text, View } from 'react-native'
-import WeuiIcon from '../icon-weui'
+import IconWeui from '../icon-weui'
 import V from '../style/themes/weui'
 
 const styles = StyleSheet.create({
@@ -48,7 +48,7 @@ export const Toast = (props: {
         style={styles.toastLoading}
       />
     ) : (
-      <WeuiIcon name={icon} style={[styles.toastIcon]} />
+      <IconWeui name={icon} style={[styles.toastIcon]} />
     )
   const textViewStyle = textStyle? [styles.toastContent, textStyle]: styles.toastContent
   const textView = text ? (

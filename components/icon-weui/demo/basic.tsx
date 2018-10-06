@@ -1,27 +1,21 @@
 import { View } from 'react-native'
-import { PageWrapper, WeuiIcon } from 'popui-rn'
+import {  IconWeui } from 'popui-rn'
 import React from 'react'
-
 import stylekit from 'react-native-stylekit'
 
 const SK = stylekit({})
-
 
 export interface IProps  {
 
 }
 
-
-
-
 export default class IconsScreen extends React.Component<IProps, any> {
     static navigationOptions = {
         title: 'Icons',
     }
-
     render() {
         return (
-            <PageWrapper hasPadddingHorizontal hasPaddingTop>
+            <View>
                 {this.renderBigIcon('success')}
                 {this.renderBigIcon('info')}
                 {this.renderBigIcon('warn')}
@@ -47,17 +41,17 @@ export default class IconsScreen extends React.Component<IProps, any> {
                     {this.renderSmallIcon('back')}
                     {this.renderSmallIcon('delete')}
                 </View>
-            </PageWrapper>
+            </View>
         )
     }
 
     private renderBigIcon(iconName: string) {
         return (<View style={[SK.row, SK.center]}>
-            <WeuiIcon name={iconName} msg style={[SK.plr5]}/>
+            <IconWeui name={iconName} msg style={[SK.plr5]}/>
         </View>)
     }
 
     private renderSmallIcon(iconName: string) {
-        return (<WeuiIcon name={iconName} style={[SK.plr5]}/>)
+        return (<IconWeui name={iconName} style={[SK.plr5]}/>)
     }
 }

@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 import React from 'react'
 import { StyleSheet, ViewPropTypes } from 'react-native'
 import { Cell, CellBody, CellHeader, Cells, CellText } from 'popui/components/Cell'
-import WeuiIcon from '../icon-weui'
+import IconWeui from '../icon-weui'
 import V from '../style/themes/weui'
 
 const styles = StyleSheet.create({
@@ -35,7 +35,7 @@ const CheckboxCells = ({
           onPress={() => !disabled && onChange(xor(value, [option.value]))}
         >
           <CellHeader>
-            <WeuiIcon
+            <IconWeui
               name={inArray(option.value) ? 'success' : 'circle'}
               style={styles.checkbox}
             />
@@ -55,7 +55,7 @@ CheckboxCells.propTypes = {
   onChange: PropTypes.func,
   options: PropTypes.array.isRequired,
   disabled: PropTypes.bool,
-  style: WeuiIcon.propTypes.style,
+  style: IconWeui.propTypes.style,
   children: PropTypes.node
 }
 

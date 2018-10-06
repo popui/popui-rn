@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types'
 import React from 'react'
 import { StyleSheet, Text, TouchableWithoutFeedback, View, ViewPropTypes } from 'react-native'
-import WeuiIcon from '../icon-weui'
+import IconWeui from '../icon-weui'
 import V from '../style/themes/weui'
 
 const styles = StyleSheet.create({
@@ -37,7 +37,7 @@ const Agreement = ({ value = false, onChange, disabled, style, textStyle, childr
         <View style={[styles.agreement, style]}>
             <View style={[styles.checkbox, disabled ? styles.disabled : null]}>
                 {value
-                    ? <WeuiIcon name="success_no_circle" size={10} {...(disabled ? { color: '#ADADAD' } : {})} />
+                    ? <IconWeui name="success_no_circle" size={10} {...(disabled ? { color: '#ADADAD' } : {})} />
                     : false
                 }
             </View>

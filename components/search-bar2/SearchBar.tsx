@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types'
 import React, { PureComponent } from 'react'
 import { StyleSheet, Text, TextInput, TouchableOpacity, View, ViewPropTypes } from 'react-native'
-import WeuiIcon from '../icon-weui'
+import IconWeui from '../icon-weui'
 
 const styles = StyleSheet.create({
     searchBar: {
@@ -143,7 +143,7 @@ class SearchBar extends PureComponent {
             <View style={[styles.searchBar, style]}>
                 <View style={styles.searchOuter}>
                     <View style={styles.searchInner}>
-                        <WeuiIcon name="search"/>
+                        <IconWeui name="search"/>
                         <TextInput
                             ref={ref => {
                                 this.searchInput = ref
@@ -160,13 +160,13 @@ class SearchBar extends PureComponent {
                         />
                         {text ? (
                             <Text onPress={this.clearHandle}>
-                                <WeuiIcon name="clear" style={styles.clearIcon}/>
+                                <IconWeui name="clear" style={styles.clearIcon}/>
                             </Text>
                         ) : null}
                     </View>
                     {(focus || text) ? null :
                         <TouchableOpacity style={styles.searchCover} onPress={this.focus}>
-                            <WeuiIcon name="search"/>
+                            <IconWeui name="search"/>
                             <Text style={styles.searchCoverText}>{placeholder}</Text>
                         </TouchableOpacity>
                     }

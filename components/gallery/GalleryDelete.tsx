@@ -1,6 +1,6 @@
 import React from 'react'
 import { StyleSheet, TouchableWithoutFeedback, View, ViewPropTypes } from 'react-native'
-import WeuiIcon from '../icon-weui'
+import IconWeui from '../icon-weui'
 
 const styles = StyleSheet.create({
     galleryDelete: {
@@ -13,7 +13,7 @@ const styles = StyleSheet.create({
 
 const GalleryDelete = ({ style, ...others }) =>
     <TouchableWithoutFeedback {...others}>
-        <View style={[styles.galleryDelete, style]}><WeuiIcon name="delete"/></View>
+        <View style={[styles.galleryDelete, style]}><IconWeui name="delete"/></View>
     </TouchableWithoutFeedback>
 
 GalleryDelete.propTypes = {

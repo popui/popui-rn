@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types'
 import React from 'react'
 import { StyleSheet, View, ViewPropTypes } from 'react-native'
-import WeuiIcon from '../icon-weui'
+import IconWeui from '../icon-weui'
 import V from '../style/themes/weui'
 import CellText from './CellText'
 
@@ -33,7 +33,7 @@ const CellBody = ({ error, children, style, ...others }) => {
     return (
         <View style={[styles.cellBody, style, error ? { flexDirection: 'row' } : null]} {...others}>
             {childrenWithProps}
-            {error ? <WeuiIcon name="warn"/> : false}
+            {error ? <IconWeui name="warn"/> : false}
         </View>
     )
 }
