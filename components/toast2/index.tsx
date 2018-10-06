@@ -50,8 +50,9 @@ export const Toast = (props: {
     ) : (
       <WeuiIcon name={icon} style={[styles.toastIcon]} />
     )
+  const textViewStyle = textStyle? [styles.toastContent, textStyle]: styles.toastContent
   const textView = text ? (
-    <Text style={[styles.toastContent, textStyle]}>{text}</Text>
+    <Text style={textViewStyle}>{text}</Text>
   ) : null
   return (
     <View style={[styles.toast, style]}>

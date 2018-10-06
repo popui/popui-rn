@@ -1,18 +1,19 @@
 // tslint:disable:jsx-no-multiline-js
 
-import React from 'react';
+import React from "react";
 import {
   ActivityIndicator,
   Animated,
   Image,
   StyleSheet,
   Text,
-  View,
-} from 'react-native';
-import ToastContainerStyle, { IToastStyle } from './style/index';
+  View
+} from "react-native";
+import ToastContainerStyle, { IToastStyle } from "./style/index";
 
 export interface ToastProps {
   content: string;
+  textStyle?: any;
   duration?: number;
   onClose?: () => void;
   mask?: boolean;
@@ -23,12 +24,20 @@ export interface ToastProps {
 
 const ToastContainerStyles = StyleSheet.create<any>(ToastContainerStyle);
 
+const iconType: {
+  [key: string]: any;
+} = {
+  success: require("./images/success.png"),
+  fail: require("./images/fail.png"),
+  offline: require("./images/offline.png")
+};
+
 export default class ToastContainer extends React.Component<ToastProps, any> {
   static defaultProps = {
     duration: 3,
     mask: true,
     onClose() {},
-    styles: ToastContainerStyles,
+    styles: ToastContainerStyles
   };
 
   anim: Animated.CompositeAnimation | null;
@@ -36,7 +45,7 @@ export default class ToastContainer extends React.Component<ToastProps, any> {
   constructor(props: ToastProps) {
     super(props);
     this.state = {
-      fadeAnim: new Animated.Value(0),
+      fadeAnim: new Animated.Value(0)
     };
   }
 
@@ -49,7 +58,7 @@ export default class ToastContainer extends React.Component<ToastProps, any> {
     }
     const animArr = [
       timing(this.state.fadeAnim, { toValue: 1, duration: 200 }),
-      Animated.delay(duration * 1000),
+      Animated.delay(duration * 1000)
     ];
     if (duration > 0) {
       animArr.push(timing(this.state.fadeAnim, { toValue: 0, duration: 200 }));
@@ -74,49 +83,58 @@ export default class ToastContainer extends React.Component<ToastProps, any> {
       this.anim = null;
     }
   }
-
-  render() {
-    const { type = '', content, mask } = this.props;
+  renderContent = () => {
+    const { content, textStyle } = this.props;
     const styles = this.props.styles!;
-    const iconType: {
-      [key: string]: any;
-    } = {
-      success: require('./images/success.png'),
-      fail: require('./images/fail.png'),
-      offline: require('./images/offline.png'),
-    };
-
+    // content
+    const textViewStyle = textStyle
+      ? [styles.toastContent, textStyle]
+      : styles.toastContent;
+    if (content) {
+      return <Text style={textViewStyle}>{content}</Text>;
+    }
+    return null;
+  }
+  renderIcon = () =>{
+    const { type = "" } = this.props;
+    const styles = this.props.styles!;
     let iconDom: React.ReactElement<any> | null = null;
-    if (type === 'loading') {
+    if (type === "loading") {
       iconDom = (
         <ActivityIndicator
           animating
-          style={[styles.centering]}
+          style={styles.toastLoading}
           color="#fff"
           size="large"
         />
       );
-    } else if (type === 'info') {
+    } else if (type === "info") {
       iconDom = null;
     } else {
-      iconDom = <Image source={iconType[type]} style={styles.image} />;
+      iconDom = <Image source={iconType[type]} style={styles.toastImage} />;
     }
-
+    return iconDom
+  }
+  render() {
+    const { type = "",  mask,  children } = this.props;
+    const styles = this.props.styles!;
+    const hasIcon =  type !== "info"
     return (
       <View
         style={[styles.container]}
-        pointerEvents={mask ? undefined : 'box-none'}
+        pointerEvents={mask ? undefined : "box-none"}
       >
         <View style={[styles.innerContainer]}>
           <Animated.View style={{ opacity: this.state.fadeAnim }}>
             <View
               style={[
                 styles.innerWrap,
-                iconDom ? styles.iconToast : styles.textToast,
+                hasIcon ? styles.iconToast : styles.textToast
               ]}
             >
-              {iconDom}
-              <Text style={styles.content}>{content}</Text>
+              {this.renderIcon()}
+              {this.renderContent()}
+              {children}
             </View>
           </Animated.View>
         </View>

@@ -8,8 +8,11 @@ export interface IToastStyle {
   iconToast: ViewStyle;
   textToast: ViewStyle;
   content: TextStyle;
-  image: ImageStyle;
+  toastContent:TextStyle;
+  toastImage: ImageStyle;
   centering: ViewStyle;
+  toastLoading:ViewStyle
+  toastIcon:ViewStyle
 }
 
 export default {
@@ -30,29 +33,42 @@ export default {
   innerWrap: {
     alignItems: 'center',
     backgroundColor: variables.toast_fill,
-    minWidth: 100,
   },
   iconToast: {
-    borderRadius: variables.radius_lg,
+    borderRadius: variables.radius_md,
     padding: variables.v_spacing_lg,
+    minWidth: 121.6,
+    minHeight:121.6
   },
   textToast: {
     borderRadius: variables.radius_sm,
     paddingVertical: variables.v_spacing_md,
     paddingHorizontal: variables.v_spacing_lg,
   },
-  content: {
-    color: variables.color_text_base_inverse,
-    fontSize: variables.font_size_subhead,
-  },
-  image: {
-    width: variables.icon_size_lg,
-    height: variables.icon_size_lg,
-    marginBottom: variables.v_spacing_xs,
-  },
   centering: {
     alignItems: 'center',
     justifyContent: 'center',
     padding: variables.v_spacing_md,
   },
+  toastIcon: {
+    marginTop: 22,
+    color: variables.color_text_base_inverse,
+    fontSize: 55,
+    textAlign: 'center'
+  },
+  toastImage: {
+    marginTop: 15,
+    width: variables.icon_size_lg,
+    height: variables.icon_size_lg,
+    marginBottom: 15,
+  },
+  toastContent: {
+    color: variables.color_text_base_inverse,
+    fontSize: variables.font_size_base,
+    textAlign: 'center'
+  },
+  toastLoading: {
+    marginTop: 15,
+    marginBottom: 15
+  }
 };

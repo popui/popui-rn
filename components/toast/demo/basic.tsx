@@ -1,7 +1,10 @@
 /* tslint:disable:no-console */
 import React from 'react';
-import { DeviceEventEmitter } from 'react-native';
+import { DeviceEventEmitter,Text } from 'react-native';
 import { Button, Toast,Toast2, WhiteSpace, WingBlank } from 'popui-rn';
+import ToastContainer from 'popui-rn/components/toast/ToastContainer';
+const testText = "This is a toast tips !!! This is a toast tips !!! This is a toast tips !!! This is a toast tips !!! This is a toast tips !!!"
+// const testText = "Loading..."
 
 function showToast() {
   Toast.info('This is a toast tips !!!');
@@ -30,7 +33,7 @@ function loadingToast() {
 }
 
 function alwaysLoadingToast() {
-  Toast.loading('Loading...', 0);
+  Toast.loading(testText, 0);
 }
 
 export default class ToastExample extends React.Component<any, any> {
@@ -39,7 +42,7 @@ export default class ToastExample extends React.Component<any, any> {
     DeviceEventEmitter.addListener('navigatorBack', () => {
       Toast.hide();
     });
-    alwaysLoadingToast()
+    // alwaysLoadingToast()
   }
 
   componentWillUnmount() {
@@ -60,7 +63,27 @@ export default class ToastExample extends React.Component<any, any> {
   render() {
     return (
       <WingBlank style={{ marginTop: 80 }}>
-        <Toast2 icon="loading" show={true}>加载中...</Toast2>
+        <Toast2 icon="loading" show={true} text={testText}></Toast2>
+        <WhiteSpace />
+        <Text>ToastContainer:</Text>
+        {/* <ToastContainer
+          content={testText}
+          duration={0}
+          onClose={()=>{}}
+          type={'loading'}
+          mask={false}
+          onAnimationEnd={()=>{}}
+        /> */}
+
+        <ToastContainer
+          content={testText}
+          duration={0}
+          onClose={()=>{}}
+          type={'success'}
+          mask={false}
+          onAnimationEnd={()=>{}}
+        />
+
         <WhiteSpace />
         <Button onClick={showToastNoMask}>Without mask</Button>
         <WhiteSpace />

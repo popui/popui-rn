@@ -152,7 +152,7 @@ export default {
   tab_bar_height: 50,
 
   // toast
-  toast_fill: 'rgba(0, 0, 0, .8)',
+  toast_fill: 'rgba(40, 40, 40, 0.75)',
 
   // search_bar
   search_bar_fill: '#efeff4',
