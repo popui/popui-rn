@@ -1,13 +1,14 @@
 import React from 'react';
 import { StyleSheet, Text, SafeAreaView } from 'react-native';
-import Button from 'popui-rn/components/button/index';
+// import Button from 'popui-rn/components/button/index';
+import { Button } from 'popui-rn';
 
 export default class App extends React.Component {
   render() {
     return (
       <SafeAreaView style={styles.container}>
         <Text>Open up App.js to start working on your app!</Text>
-        <Button >Button Test</Button>
+        <Button >Button Test 2 </Button>
       </SafeAreaView>
     );
   }
