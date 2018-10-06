@@ -51,7 +51,7 @@ export default {
     padding: variables.v_spacing_md,
   },
   toastIcon: {
-    marginTop: 22,
+    marginTop: 7,
     color: variables.color_text_base_inverse,
     fontSize: 55,
     textAlign: 'center'

@@ -63,9 +63,9 @@ export default class ToastExample extends React.Component<any, any> {
   render() {
     return (
       <WingBlank style={{ marginTop: 80 }}>
-        <Toast2 icon="success_no_circle" show={true} text={"加载成功"}></Toast2>
-        <WhiteSpace />
         <Toast2 icon="success_no_circle" show={true} text={testText}></Toast2>
+        <WhiteSpace />
+        <Toast2 icon="loading" show={true} text={testText}></Toast2>
         <WhiteSpace />
         <Text>ToastContainer:</Text>
         {/* <ToastContainer

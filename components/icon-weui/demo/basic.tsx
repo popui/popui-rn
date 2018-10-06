@@ -1,4 +1,4 @@
-import { View,ScrollView,Text } from 'react-native'
+import { View,ScrollView,Text,StyleSheet } from 'react-native'
 import {  IconWeui } from 'popui-rn'
 import React from 'react'
 import stylekit from 'react-native-stylekit'
@@ -9,6 +9,15 @@ export interface IProps  {
 
 }
 
+const styles = StyleSheet.create({
+  smallIcons:{
+    backgroundColor:'#ddd'
+  },
+  bigIcons:{
+    backgroundColor:'#fff'
+  }
+})
+
 export default class IconsScreen extends React.Component<IProps, any> {
     static navigationOptions = {
         title: 'Icons',
@@ -16,28 +25,26 @@ export default class IconsScreen extends React.Component<IProps, any> {
     render() {
         return (
             <ScrollView>
-                {this.renderBigIcon('success')}
-                {this.renderBigIcon('info')}
-                {this.renderBigIcon('warn')}
-                {this.renderBigIcon('warn')}
-                {this.renderBigIcon('waiting')}
-                {this.renderBigIcon('safe_success')}
-                {this.renderBigIcon('safe_warn')}
-                <View style={[SK.row, SK.plr30, SK.mt10]}>
-                    {this.renderSmallIcon('success')}
-                    {this.renderSmallIcon('success_circle')}
-                    {this.renderSmallIcon('success_no_circle')}
-                    {this.renderSmallIcon('info')}
-                    {this.renderSmallIcon('info_circle')}
-                    {this.renderSmallIcon('waiting')}
-                    {this.renderSmallIcon('waiting_circle')}
+              <View style={[SK.column, SK.plr30, SK.mt10,styles.bigIcons]}>
+                  {this.renderBigIcon('success')}
+                  {this.renderBigIcon('info')}
+                  {this.renderBigIcon('warn')}
+                  {this.renderBigIcon('cancel')}
+                  {this.renderBigIcon('waiting')}
+                  {this.renderBigIcon('safe_success')}
+                  {this.renderBigIcon('safe_warn')}
                 </View>
                 <View style={[SK.row, SK.plr30, SK.mt10]}>
                     {this.renderSmallIcon('circle')}
-                    {this.renderSmallIcon('warn')}
-                    {this.renderSmallIcon('download')}
                     {this.renderSmallIcon('search')}
                     {this.renderSmallIcon('clear')}
+                    {this.renderSmallIcon('success_circle')}
+                    {this.renderSmallIcon('success_no_circle')}
+                    {this.renderSmallIcon('info_circle')}
+                    {this.renderSmallIcon('waiting_circle')}
+                    {this.renderSmallIcon('download')}
+                </View>
+                <View style={[SK.row, SK.plr30, SK.mt10,styles.smallIcons]}>
                     {this.renderSmallIcon('back')}
                     {this.renderSmallIcon('delete')}
                 </View>

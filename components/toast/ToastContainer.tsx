@@ -10,7 +10,7 @@ import {
   View
 } from "react-native";
 import ToastContainerStyle, { IToastStyle } from "./style/index";
-
+import PureIconWeui  from '../icon-weui/PureIconWeui'
 export interface ToastProps {
   content: string;
   textStyle?: any;
@@ -99,19 +99,30 @@ export default class ToastContainer extends React.Component<ToastProps, any> {
     const { type = "" } = this.props;
     const styles = this.props.styles!;
     let iconDom: React.ReactElement<any> | null = null;
-    if (type === "loading") {
-      iconDom = (
-        <ActivityIndicator
-          animating
-          style={styles.toastLoading}
-          color="#fff"
-          size="large"
-        />
-      );
-    } else if (type === "info") {
-      iconDom = null;
-    } else {
-      iconDom = <Image source={iconType[type]} style={styles.toastImage} />;
+    switch (type) {
+      case "loading":
+        iconDom = (<ActivityIndicator
+            animating
+            style={styles.toastLoading}
+            color="#fff"
+            size="large"
+          />);
+        break;
+      case "success":
+        iconDom = <PureIconWeui name={'success_no_circle'} style={[styles.toastIcon]} />;
+        break;
+      case "fail":
+        iconDom = <PureIconWeui name={'success_no_circle'} style={[styles.toastIcon]} />;
+        break;
+      case "offline":
+        iconDom = <PureIconWeui name={'success_no_circle'} style={[styles.toastIcon]} />;
+        break;
+      case "info":
+        iconDom = null;
+        break;
+      default:
+        iconDom = <Image source={iconType[type]} style={styles.toastImage} />;
+        break;
     }
     return iconDom
   }
