@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types'
 import React, { PureComponent } from 'react'
 import { StyleSheet, Text, TextInput, TouchableOpacity, View, ViewPropTypes } from 'react-native'
-import WeuiIcon from '../weui-icon'
+import WeuiIcon from '../icon-weui'
 
 const styles = StyleSheet.create({
     searchBar: {

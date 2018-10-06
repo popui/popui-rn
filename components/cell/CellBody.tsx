@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types'
 import React from 'react'
 import { StyleSheet, View, ViewPropTypes } from 'react-native'
-import WeuiIcon from '../weui-icon'
+import WeuiIcon from '../icon-weui'
 import V from '../style/themes/weui'
 import CellText from './CellText'
 

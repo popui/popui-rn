@@ -2,7 +2,7 @@ import PropTypes from 'prop-types'
 import React from 'react'
 import { Text, View, ViewPropTypes } from 'react-native'
 import Button from './Button'
-import WeuiIcon from '../weui-icon'
+import WeuiIcon from '../icon-weui'
 import { create } from '../style/utils/StyleSheet'
 import V from '../style/themes/weui'
 

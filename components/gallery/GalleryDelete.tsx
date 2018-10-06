@@ -1,6 +1,6 @@
 import React from 'react'
 import { StyleSheet, TouchableWithoutFeedback, View, ViewPropTypes } from 'react-native'
-import WeuiIcon from '../weui-icon'
+import WeuiIcon from '../icon-weui'
 
 const styles = StyleSheet.create({
     galleryDelete: {
