@@ -92,7 +92,7 @@ export default class ToastContainer extends React.Component<ToastProps, any> {
         <ActivityIndicator
           animating
           style={[styles.centering]}
-          color="white"
+          color="#fff"
           size="large"
         />
       );

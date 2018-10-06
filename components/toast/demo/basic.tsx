@@ -1,7 +1,7 @@
 /* tslint:disable:no-console */
 import React from 'react';
 import { DeviceEventEmitter } from 'react-native';
-import { Button, Toast, WhiteSpace, WingBlank } from 'popui-rn';
+import { Button, Toast,Toast2, WhiteSpace, WingBlank } from 'popui-rn';
 
 function showToast() {
   Toast.info('This is a toast tips !!!');
@@ -29,12 +29,17 @@ function loadingToast() {
   });
 }
 
+function alwaysLoadingToast() {
+  Toast.loading('Loading...', 0);
+}
+
 export default class ToastExample extends React.Component<any, any> {
   timer: any;
   componentDidMount() {
     DeviceEventEmitter.addListener('navigatorBack', () => {
       Toast.hide();
     });
+    alwaysLoadingToast()
   }
 
   componentWillUnmount() {
@@ -55,6 +60,7 @@ export default class ToastExample extends React.Component<any, any> {
   render() {
     return (
       <WingBlank style={{ marginTop: 80 }}>
+        <Toast2 icon="loading" show={true}>加载中...</Toast2>
         <WhiteSpace />
         <Button onClick={showToastNoMask}>Without mask</Button>
         <WhiteSpace />
