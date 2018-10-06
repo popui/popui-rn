@@ -1,7 +1,8 @@
 import React from 'react';
 import { StyleSheet, SafeAreaView, ScrollView } from 'react-native';
 // import Button from 'popui-rn/components/button/index';
-import GridExample from 'popui-rn/components/grid/demo/basic';
+import ResultExample from 'popui-rn/components/result/demo/basic';
+import Result2Example from 'popui-rn/components/result2/demo/basic';
 // import IconExample from 'popui-rn/components/icon-weui/demo/basic';
 import ResourceLoader from '../common/ResourceLoader';
 export default class App extends React.Component {
@@ -9,8 +10,10 @@ export default class App extends React.Component {
         return (<ResourceLoader>
         <SafeAreaView style={styles.container}>
           <ScrollView>
-            <GridExample />
+            <ResultExample />
+            <Result2Example />
           </ScrollView>
+
         </SafeAreaView>
       </ResourceLoader>);
     }
@@ -18,8 +21,6 @@ export default class App extends React.Component {
 const styles = StyleSheet.create({
     container: {
         flex: 1,
-        backgroundColor: '#fff',
-        alignItems: 'center',
-        justifyContent: 'center',
+        backgroundColor: '#fff'
     },
 });

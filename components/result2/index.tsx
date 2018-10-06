@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types'
 import React from 'react'
 import { Text, View, ViewPropTypes } from 'react-native'
-import Button from './Button'
+import Button from '../button-weui'
 import IconWeui from '../icon-weui'
 import { create } from '../style/utils/StyleSheet'
 import V from '../style/themes/weui'
@@ -61,14 +61,14 @@ const _renderButtons = buttons =>
   buttons.map((button, idx) => {
     const { type, label, style, ...others } = button
     return (
-      <Button
+      <Button.Button
         key={idx}
         type={type}
         style={[styles.oprAreaButton, style]}
         {...others}
       >
         {label}
-      </Button>
+      </Button.Button>
     )
   })
 

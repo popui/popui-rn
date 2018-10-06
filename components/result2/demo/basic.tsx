@@ -1,4 +1,4 @@
-import { Msg, PageWrapper } from 'popui-rn'
+import { Result2 } from 'popui-rn'
 import React from 'react'
 
 
@@ -8,8 +8,6 @@ export interface IProps  {
 }
 
 
-
-
 export default class MsgScreen extends React.Component<IProps, any> {
     static navigationOptions = {
         title: 'Msg',
@@ -17,8 +15,7 @@ export default class MsgScreen extends React.Component<IProps, any> {
 
     render() {
         return (
-            <PageWrapper hasPadddingHorizontal>
-                <Msg
+                <Result2
                     type="success"
                     title="操作成功"
                     description="内容详情，可根据实际需要安排"
@@ -34,7 +31,6 @@ export default class MsgScreen extends React.Component<IProps, any> {
                         },
                     }]}
                 />
-            </PageWrapper>
         )
     }
 }
