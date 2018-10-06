@@ -17,6 +17,7 @@ import GridStyle from './style/index';
 export interface GridProps extends GridPropsType {
   styles?: any;
   itemStyle?: StyleProp<ViewStyle>;
+  containerStyle?: StyleProp<ViewStyle>;
 }
 
 const GridStyles = StyleSheet.create<any>(GridStyle);
@@ -30,6 +31,7 @@ export default class Grid extends React.Component<GridProps, any> {
     carouselMaxRow: 2,
     styles: GridStyles,
     itemStyle: {},
+    containerStyle:{}
   };
 
   getFlexItemStyle(columnNum: number) {
@@ -48,6 +50,7 @@ export default class Grid extends React.Component<GridProps, any> {
       // tslint:disable-next-line:no-empty
       onClick = () => {},
       styles,
+      containerStyle
     } = this.props;
     // https://github.com/DefinitelyTyped/DefinitelyTyped/issues/11640
     const columnNum = this.props.columnNum as number;
@@ -165,7 +168,7 @@ export default class Grid extends React.Component<GridProps, any> {
         {pagesArr}
       </Carousel>
     ) : (
-      <Flex direction="column">{rowsArr}</Flex>
+      <Flex direction="column" style={containerStyle}>{rowsArr}</Flex>
     );
   }
 }
