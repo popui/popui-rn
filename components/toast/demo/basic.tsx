@@ -3,8 +3,8 @@ import React from 'react';
 import { DeviceEventEmitter,Text } from 'react-native';
 import { Button, Toast,Toast2, WhiteSpace, WingBlank } from 'popui-rn';
 import ToastContainer from 'popui-rn/components/toast/ToastContainer';
-const testText = "This is a toast tips !!! This is a toast tips !!! This is a toast tips !!! This is a toast tips !!! This is a toast tips !!!"
-// const testText = "Loading..."
+// const testText = "This is a toast tips !!! This is a toast tips !!! This is a toast tips !!! This is a toast tips !!! This is a toast tips !!!"
+const testText = "testText..."
 
 function showToast() {
   Toast.info('This is a toast tips !!!');
@@ -63,7 +63,9 @@ export default class ToastExample extends React.Component<any, any> {
   render() {
     return (
       <WingBlank style={{ marginTop: 80 }}>
-        <Toast2 icon="loading" show={true} text={testText}></Toast2>
+        <Toast2 icon="success_no_circle" show={true} text={"加载成功"}></Toast2>
+        <WhiteSpace />
+        <Toast2 icon="success_no_circle" show={true} text={testText}></Toast2>
         <WhiteSpace />
         <Text>ToastContainer:</Text>
         {/* <ToastContainer
