@@ -14,7 +14,9 @@ export default class BasicGridExample extends React.Component<any, any> {
         <View style={[{ margin: 10 }]}>
           <Text>Simple</Text>
         </View>
-        <Grid data={data}  />
+        <View style={{backgroundColor: '#fbf9fe'}}>
+          <Grid data={data} hasLine={false} />
+        </View>
         <View style={[{ margin: 10 }]}>
           <Text>Carousel</Text>
         </View>
@@ -30,7 +32,7 @@ export default class BasicGridExample extends React.Component<any, any> {
         <Grid
           data={data}
           columnNum={3}
-          itemStyle={{ height: 150, backgroundColor: '#ffff00' }}
+          itemStyle={{ height: 150, backgroundColor: '#fbf9fe', }}
         />
       </ScrollView>
     );

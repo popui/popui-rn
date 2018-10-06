@@ -1,11 +1,14 @@
 {
   "expo": {
     "name": "expo-popui-rn",
-    "description": "This project is really great.",
-    "slug": "expo-popui-rn",
+    "description": "popui",
+    "slug": "popui",
     "privacy": "public",
     "sdkVersion": "30.0.0",
-    "platforms": ["ios", "android"],
+    "platforms": [
+      "ios",
+      "android"
+    ],
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
