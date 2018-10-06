@@ -13,7 +13,7 @@ import {
   InteractionManager,
 } from 'react-native';
 import { CarouselPropsType } from './PropsType';
-import CarouselStyle from './style/index.native';
+import CarouselStyle from './style/index';
 
 export interface CarouselProps extends CarouselPropsType {
   bounces?: boolean;

@@ -1,7 +1,7 @@
 import React from 'react'
 
 
-import { LoadMore, PageWrapper } from 'popui'
+import { LoadMore, PageWrapper } from 'popui-rn'
 
 
 export interface IProps  {

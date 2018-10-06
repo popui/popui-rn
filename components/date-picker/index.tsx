@@ -5,7 +5,7 @@ import { StyleSheet } from 'react-native';
 import RCDatePicker from 'rmc-date-picker/lib/DatePicker';
 import PopupDatePicker from 'rmc-date-picker/lib/Popup';
 import { getComponentLocale } from '../_util/getLocale';
-import PickerStyle, { IPickerStyle } from '../picker/style/index.native';
+import PickerStyle, { IPickerStyle } from '../picker/style/index';
 import { DatePickerPropsType } from './PropsType';
 import { formatFn } from './utils';
 

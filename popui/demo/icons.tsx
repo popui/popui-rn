@@ -1,5 +1,5 @@
 import { View } from 'react-native'
-import { PageWrapper, WeuiIcon } from 'popui'
+import { PageWrapper, WeuiIcon } from 'popui-rn'
 import React from 'react'
 
 import stylekit from 'react-native-stylekit'

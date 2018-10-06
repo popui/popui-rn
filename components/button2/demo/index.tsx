@@ -1,4 +1,4 @@
-import { Button, ButtonArea, PageWrapper } from 'popui'
+import { Button, ButtonArea, PageWrapper } from 'popui-rn'
 import React from 'react'
 
 import stylekit from 'react-native-stylekit'

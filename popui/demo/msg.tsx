@@ -1,4 +1,4 @@
-import { Msg, PageWrapper } from 'popui'
+import { Msg, PageWrapper } from 'popui-rn'
 import React from 'react'
 
 

@@ -1,7 +1,7 @@
 import React from 'react'
 
 
-import { ButtonPreview, PageWrapper, Preview, PreviewBody, PreviewFooter, PreviewHeader, PreviewItem, PreviewLabel, PreviewValue } from 'popui'
+import { ButtonPreview, PageWrapper, Preview, PreviewBody, PreviewFooter, PreviewHeader, PreviewItem, PreviewLabel, PreviewValue } from 'popui-rn'
 
 
 export interface IProps  {

@@ -4,7 +4,7 @@ import { Image, Text } from 'react-native'
 import {
     Agreement, Cell, CellBody, CellFooter, CellHeader, Cells, CellsTips, CellsTitle, CellText, CheckboxCells, Input, Label, PageWrapper,
     RadioCells, Switch, TextArea,
-} from 'popui'
+} from 'popui-rn'
 
 
 export interface IProps  {

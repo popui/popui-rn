@@ -9,10 +9,10 @@ import {
   View,
   ViewStyle,
 } from 'react-native';
-import Carousel from '../carousel/index.native';
-import Flex from '../flex/index.native';
+import Carousel from '../carousel/index';
+import Flex from '../flex/index';
 import { DataItem, GridPropsType } from './PropsType';
-import GridStyle from './style/index.native';
+import GridStyle from './style/index';
 
 export interface GridProps extends GridPropsType {
   styles?: any;

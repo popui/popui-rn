@@ -12,7 +12,7 @@ import {
   PanelFooter,
   PanelHeader,
   SearchBar
-} from 'popui'
+} from 'popui-rn'
 import SampleData from 'demoModule/screens/SearchBar/nameDB'
 import React from 'react'
 

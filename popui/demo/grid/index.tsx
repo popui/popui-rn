@@ -1,4 +1,4 @@
-import { Grids, PageWrapper } from 'popui'
+import { Grids, PageWrapper } from 'popui-rn'
 import screensData from 'demoModule/screens/Grid/data'
 import React from 'react'
 

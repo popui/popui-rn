@@ -1,7 +1,7 @@
 import React from 'react'
 
 
-import { AnimatedImage, HGap, LoadMore, PageWrapper } from 'popui'
+import { AnimatedImage, HGap, LoadMore, PageWrapper } from 'popui-rn'
 
 import { StyleSheet, Text } from 'react-native'
 

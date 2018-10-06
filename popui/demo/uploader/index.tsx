@@ -1,6 +1,6 @@
 import React from 'react'
 
-import { Cell, CellBody, Cells, CellsTitle, PageWrapper } from 'popui'
+import { Cell, CellBody, Cells, CellsTitle, PageWrapper } from 'popui-rn'
 
 
 export interface IProps  {

@@ -10,7 +10,7 @@ import {
 import normalizeColor from 'normalize-css-color';
 import setNormalizedColorAlpha from 'react-native/Libraries/StyleSheet/setNormalizedColorAlpha';
 import { SegmentedControlPropsType } from './PropsType';
-import AndroidStyle, { ISegmentControlStyle } from './style/index.native';
+import AndroidStyle, { ISegmentControlStyle } from './style/index';
 
 export interface SegmentControlNativeProps extends SegmentedControlPropsType {
   styles?: ISegmentControlStyle;

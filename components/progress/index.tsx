@@ -9,7 +9,7 @@ import {
   ViewStyle,
 } from 'react-native';
 import { ProgressPropsType } from './PropsType';
-import ProgressStyle from './style/index.native';
+import ProgressStyle from './style/index';
 
 export interface ProgressProps extends ProgressPropsType {
   wrapWidth?: number;

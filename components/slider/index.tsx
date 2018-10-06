@@ -1,7 +1,7 @@
 import React from 'react';
 import { Slider, View } from 'react-native';
 import { SliderPropsType } from './PropsType';
-import SliderStyle from './style/index.native';
+import SliderStyle from './style/index';
 
 export interface SliderProps extends SliderPropsType {
   maximumTrackTintColor?: string;

@@ -1,7 +1,7 @@
 import React from 'react';
 import { TextStyle } from 'react-native';
 import Modal from './Modal.native';
-import modalStyle from './style/index.native';
+import modalStyle from './style/index';
 import { Action } from './PropsType';
 
 export interface OperationContainerProps {

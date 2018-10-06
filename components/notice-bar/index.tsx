@@ -10,7 +10,7 @@ import {
 } from 'react-native';
 import Marquee, { MarqueeProps } from './Marquee.native';
 import { NoticeBarPropsType } from './PropsType';
-import NoticeStyle, { INoticeBarStyle } from './style/index.native';
+import NoticeStyle, { INoticeBarStyle } from './style/index';
 
 export interface NoticeNativeProps extends NoticeBarPropsType {
   styles?: INoticeBarStyle;

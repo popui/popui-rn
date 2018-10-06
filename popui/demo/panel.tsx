@@ -2,7 +2,7 @@ import { Image } from 'react-native'
 import {
     Badge, Cell, CellBody, CellFooter, CellHeader, CellText, Media, MediaBody, MediaDescription, MediaHeader, MediaInfo, MediaInfoMeta,
     MediaTitle, PageWrapper, Panel, PanelBody, PanelFooter, PanelHeader,
-} from 'popui'
+} from 'popui-rn'
 import React from 'react'
 
 

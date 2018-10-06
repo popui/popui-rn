@@ -10,7 +10,7 @@ import Modal from 'rmc-dialog/lib/Modal';
 import styles, {
   ActionSheetStyle,
   vars as variables,
-} from './style/index.native';
+} from './style/index';
 
 export interface ActionSheetNativeProps {
   onAnimationEnd?: (visible: boolean) => void;

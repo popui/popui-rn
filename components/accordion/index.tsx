@@ -3,7 +3,7 @@ import React from 'react';
 import { Image, StyleProp, Text, View, ViewStyle } from 'react-native';
 import RNAccordion from 'react-native-collapsible/Accordion';
 import { AccordionPropsTypes } from './PropsType';
-import AccordionStyles, { AccordionStyle } from './style/index.native';
+import AccordionStyles, { AccordionStyle } from './style/index';
 
 export interface AccordionPanelProps {
   key?: string;

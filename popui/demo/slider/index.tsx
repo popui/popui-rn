@@ -1,6 +1,6 @@
 import React from 'react'
 
-import { PageWrapper, Slider } from 'popui'
+import { PageWrapper, Slider } from 'popui-rn'
 
 
 export interface IProps  {

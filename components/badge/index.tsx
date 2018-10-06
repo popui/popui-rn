@@ -1,7 +1,7 @@
 import React from 'react';
 import { StyleProp, StyleSheet, Text, View, ViewStyle } from 'react-native';
 import { BadgePropsTypes } from './PropsType';
-import BadgeStyle, { IBadgeStyle } from './style/index.native';
+import BadgeStyle, { IBadgeStyle } from './style/index';
 
 export interface BadgeNativeProps extends BadgePropsTypes {
   styles?: IBadgeStyle;

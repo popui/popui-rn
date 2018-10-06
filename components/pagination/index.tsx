@@ -2,11 +2,11 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import { StyleProp, StyleSheet, Text, View, ViewStyle } from 'react-native';
 import { getComponentLocale } from '../_util/getLocale';
-import Button from '../button/index.native';
-import Flex from '../flex/index.native';
+import Button from '../button/index';
+import Flex from '../flex/index';
 import zh_CN from './locale/zh_CN';
 import { PaginationPropsType, PaginationState } from './PropsType';
-import PaginationStyle, { IPaginationStyle } from './style/index.native';
+import PaginationStyle, { IPaginationStyle } from './style/index';
 
 export interface PaginationNativeProps extends PaginationPropsType {
   styles?: IPaginationStyle;

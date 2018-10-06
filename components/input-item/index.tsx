@@ -14,7 +14,7 @@ import {
 import variables from '../style/themes/default.native';
 import Input from './Input.native';
 import { InputItemPropsType } from './PropsType';
-import InputItemStyle from './style/index.native';
+import InputItemStyle from './style/index';
 import { Omit } from '../_util/types';
 
 /**

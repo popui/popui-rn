@@ -9,7 +9,7 @@ import {
   View,
 } from 'react-native';
 import { RadioPropsType } from './PropsType';
-import RadioStyle, { IRadioStyle } from './style/index.native';
+import RadioStyle, { IRadioStyle } from './style/index';
 
 export interface RadioNativeProps extends RadioPropsType {
   styles?: IRadioStyle;

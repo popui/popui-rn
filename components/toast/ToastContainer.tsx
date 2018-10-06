@@ -9,7 +9,7 @@ import {
   Text,
   View,
 } from 'react-native';
-import ToastContainerStyle, { IToastStyle } from './style/index.native';
+import ToastContainerStyle, { IToastStyle } from './style/index';
 
 export interface ToastProps {
   content: string;

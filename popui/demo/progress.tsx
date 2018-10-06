@@ -1,4 +1,4 @@
-import { Button, ButtonArea, PageWrapper, Progress } from 'popui'
+import { Button, ButtonArea, PageWrapper, Progress } from 'popui-rn'
 
 import React from 'react'
 

@@ -10,7 +10,7 @@ import {
 } from 'react-native';
 import Checkbox from './Checkbox.native';
 import { CheckboxPropsType } from './PropsType';
-import AgreeItemstyle, { ICheckboxStyle } from './style/index.native';
+import AgreeItemstyle, { ICheckboxStyle } from './style/index';
 
 const refCheckbox = 'checkbox';
 

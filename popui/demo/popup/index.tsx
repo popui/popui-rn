@@ -1,6 +1,6 @@
 import React from 'react'
 
-import { Button, ButtonArea, PageWrapper, Popup, PopupHeader } from 'popui'
+import { Button, ButtonArea, PageWrapper, Popup, PopupHeader } from 'popui-rn'
 import { StyleSheet, Text, View } from 'react-native'
 
 const styles = StyleSheet.create({

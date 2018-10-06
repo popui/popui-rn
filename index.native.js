@@ -1,1 +1,1 @@
-module.exports = require('./components/index.native');
+module.exports = require('./components/index');

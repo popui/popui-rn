@@ -4,7 +4,7 @@ import CardBody from './CardBody.native';
 import CardFooter from './CardFooter.native';
 import CardHeader from './CardHeader.native';
 import { CardPropsType } from './PropsType';
-import CardStyle, { ICardStyle } from './style/index.native';
+import CardStyle, { ICardStyle } from './style/index';
 
 export interface CardNativeProps extends CardPropsType {
   styles?: ICardStyle;

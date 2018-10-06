@@ -53,13 +53,13 @@ $ npm run lint
 
 无特殊情况（iOS Android 代码完全一致）不用带后缀.
 
-- `components/button/index.native.tsx`
+- `components/button/index.tsx`
 
 ```jsx
 import React from 'react';
 import { View, StyleSheet } from 'react-native';
 
-// 可独立到 components/button/style/index.native.tsx
+// 可独立到 components/button/style/index.tsx
 const styles = StyleSheet.create({
   button: {
     borderRadius: 4,

@@ -9,9 +9,9 @@ import {
   View,
   ViewStyle,
 } from 'react-native';
-import Button from '../button/index.native';
+import Button from '../button/index';
 import { ResultPropsType } from './PropsType';
-import ResultStyle, { IResultStyle } from './style/index.native';
+import ResultStyle, { IResultStyle } from './style/index';
 
 export interface ResultNativeProps extends ResultPropsType {
   styles?: IResultStyle;

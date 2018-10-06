@@ -9,7 +9,7 @@ import {
   View,
 } from 'react-native';
 import { ButtonPropsType } from './PropsType';
-import buttonStyle from './style/index.native';
+import buttonStyle from './style/index';
 
 export interface ButtonProps
   extends ButtonPropsType,

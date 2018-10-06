@@ -10,7 +10,7 @@ import {
 } from 'react-native';
 
 import { CheckboxPropsType } from './PropsType';
-import CheckboxStyle, { ICheckboxStyle } from './style/index.native';
+import CheckboxStyle, { ICheckboxStyle } from './style/index';
 
 export interface ICheckboxNativeProps extends CheckboxPropsType {
   styles?: ICheckboxStyle;

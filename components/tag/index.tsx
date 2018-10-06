@@ -10,7 +10,7 @@ import {
   ViewStyle,
 } from 'react-native';
 import { TagPropsType } from './PropsType';
-import TagStyle, { ITagStyle } from './style/index.native';
+import TagStyle, { ITagStyle } from './style/index';
 
 export interface TagNativeProps extends TagPropsType {
   styles?: ITagStyle;

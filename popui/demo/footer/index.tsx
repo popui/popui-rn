@@ -1,7 +1,7 @@
 import React from 'react'
 
 import { Text } from 'react-native'
-import { Footer, FooterLink, FooterLinks, FooterText, PageWrapper } from 'popui'
+import { Footer, FooterLink, FooterLinks, FooterText, PageWrapper } from 'popui-rn'
 
 import stylekit from 'react-native-stylekit'
 

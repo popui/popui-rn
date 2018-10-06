@@ -10,7 +10,7 @@ import {
 } from 'react-native';
 import ImageRoll from './ImageRoll.native';
 import { ImagePickerPropTypes } from './PropsType';
-import imagePickerStyle, { IImagePickerStyle } from './style/index.native';
+import imagePickerStyle, { IImagePickerStyle } from './style/index';
 
 export interface ImagePickerNativeProps extends ImagePickerPropTypes {
   styles?: IImagePickerStyle;

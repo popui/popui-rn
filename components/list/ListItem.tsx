@@ -13,7 +13,7 @@ import {
   BriefProps as BriefBasePropsType,
   ListItemPropsType,
 } from './PropsType';
-import listItemStyle from './style/index.native';
+import listItemStyle from './style/index';
 
 export interface ListItemProps extends ListItemPropsType {
   styles?: {

@@ -1,5 +1,5 @@
 import React from 'react'
-import { Button, ButtonArea, PageWrapper, Toast } from 'popui'
+import { Button, ButtonArea, PageWrapper, Toast } from 'popui-rn'
 import stylekit from 'react-native-stylekit'
 
 

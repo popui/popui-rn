@@ -2,7 +2,7 @@ import React from 'react';
 import { StyleProp, StyleSheet, Text, View, ViewStyle } from 'react-native';
 import Item from './ListItem.native';
 import { ListPropsType } from './PropsType';
-import listStyle from './style/index.native';
+import listStyle from './style/index';
 
 export interface ListProps extends ListPropsType {
   styles?: typeof listStyle;

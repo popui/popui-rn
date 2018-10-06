@@ -51,3 +51,4 @@ coverage
 package-lock.json
 .cdnkey
 .expo/*
+ana/

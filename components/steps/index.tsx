@@ -3,7 +3,7 @@ import React from 'react';
 import { LayoutChangeEvent, StyleSheet, View } from 'react-native';
 import { StepsPropsType } from './PropsType';
 import RNStepsItem from './StepsItem.native';
-import StepStyle, { IStepsStyle } from './style/index.native';
+import StepStyle, { IStepsStyle } from './style/index';
 
 export interface StepsProps extends StepsPropsType {
   direction?: 'vertical' | 'horizontal';

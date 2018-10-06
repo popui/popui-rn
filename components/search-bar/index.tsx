@@ -12,7 +12,7 @@ import {
 } from 'react-native';
 import { getComponentLocale } from '../_util/getLocale';
 import { defaultProps, SearchBarPropsType, SearchBarState } from './PropsType';
-import SearchBarStyle, { ISearchBarStyle } from './style/index.native';
+import SearchBarStyle, { ISearchBarStyle } from './style/index';
 
 export interface SearchBarNativeProps extends SearchBarPropsType {
   styles: ISearchBarStyle;

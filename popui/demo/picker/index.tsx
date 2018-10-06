@@ -12,7 +12,7 @@ import {
   PageWrapper,
   Picker,
   Select
-} from 'popui'
+} from 'popui-rn'
 import { Text } from 'react-native'
 
 import {

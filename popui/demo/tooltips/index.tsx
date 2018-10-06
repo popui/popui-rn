@@ -1,6 +1,6 @@
 import React from 'react'
 
-import { Button, ButtonArea, PageWrapper, Toptips } from 'popui'
+import { Button, ButtonArea, PageWrapper, Toptips } from 'popui-rn'
 
 
 export interface IProps  {

@@ -1,6 +1,6 @@
 import React from 'react'
 import { Text } from 'react-native'
-import { Button, ButtonArea, Dialog, PageWrapper } from 'popui'
+import { Button, ButtonArea, Dialog, PageWrapper } from 'popui-rn'
 import stylekit from 'react-native-stylekit'
 
 

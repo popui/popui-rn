@@ -149,7 +149,7 @@
       "npm run lint-staged:es"
     ]
   },
-  "typings": "lib/index.native.d.ts",
+  "typings": "lib/index.d.ts",
   "pre-commit1": [
     "lint-staged"
   ]

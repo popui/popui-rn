@@ -1,4 +1,4 @@
-import { Article, H1, H2, H3, LoadMore, P, PageWrapper, Section } from 'popui'
+import { Article, H1, H2, H3, LoadMore, P, PageWrapper, Section } from 'popui-rn'
 
 import React from 'react'
 

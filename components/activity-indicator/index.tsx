@@ -1,7 +1,7 @@
 import React from 'react';
 import { ActivityIndicator, StyleSheet, Text, View } from 'react-native';
 import { ActivityIndicatorPropTypes } from './PropsType';
-import indicatorStyle, { IActivityIndicatorStyle } from './style/index.native';
+import indicatorStyle, { IActivityIndicatorStyle } from './style/index';
 
 export interface ActivityIndicatorNativeProps
   extends ActivityIndicatorPropTypes {
