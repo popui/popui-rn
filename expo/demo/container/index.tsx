@@ -1,30 +1,20 @@
 import React from 'react';
-import { StyleSheet, Text, SafeAreaView,ScrollView } from 'react-native';
-// import {Button} from 'popui-rn';
-// import Button from 'popui-rn/components/button/index';
-import CellExample from 'popui-rn/components/cell/demo/basic';
-import BadgeExample from 'popui-rn/components/badge/demo/basic';
-import ListExample from 'popui-rn/components/list/demo/basic';
-import InputItemExample from 'popui-rn/components/input-item/demo/basic';
+import { StyleSheet,  SafeAreaView,Text } from 'react-native';
+import SearchBarExample from 'popui-rn/components/search-bar/demo/basic';
+import SearchBar2Example from 'popui-rn/components/search-bar2/demo/basic';
+import ResourceLoader from '../common/ResourceLoader';
 
 export default class App extends React.Component {
   render() {
     return (
-      <SafeAreaView style={styles.container}>
-        <ScrollView>
-          <Text>Cell:</Text>
-          <CellExample />
-
-          <Text>Badge:</Text>
-          <BadgeExample />
-
-          <Text>List:</Text>
-          <ListExample />
-
-          <Text>InputItem:</Text>
-          <InputItemExample />
-        </ScrollView>
-      </SafeAreaView>
+      <ResourceLoader >
+        <SafeAreaView style={styles.container}>
+          <Text>SearchBar Example:</Text>
+           <SearchBarExample/>
+           <Text>SearchBar2 Example:</Text>
+          <SearchBar2Example />
+        </SafeAreaView>
+      </ResourceLoader>
     );
   }
 }
