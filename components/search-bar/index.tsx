@@ -13,6 +13,8 @@ import {
 import { getComponentLocale } from '../_util/getLocale';
 import { defaultProps, SearchBarPropsType, SearchBarState } from './PropsType';
 import SearchBarStyle, { ISearchBarStyle } from './style/index';
+import IconWeui from '../icon-weui'
+
 
 export interface SearchBarNativeProps extends SearchBarPropsType {
   styles: ISearchBarStyle;
@@ -110,7 +112,7 @@ export default class SearchBar extends React.Component<
       onChange,
       disabled,
       style,
-      ...restProps,
+      ...restProps
     } = this.props;
 
     // tslint:disable-next-line:variable-name
@@ -140,13 +142,18 @@ export default class SearchBar extends React.Component<
             onSubmitEditing={this.onSubmit}
             onFocus={this.onFocus}
             onBlur={this.onBlur}
+            returnKeyType="search"
+            blurOnSubmit={true}
           />
         </View>
-        <Image
+        <IconWeui name="search"
+          style={styles.search}
+        />
+        {/* <Image
           source={require('../style/images/search.png')}
           style={styles.search}
           resizeMode="stretch"
-        />
+        /> */}
         {_showCancelButton && (
           <View style={styles.cancelTextContainer}>
             <Text style={styles.cancelText} onPress={this.onCancel}>
