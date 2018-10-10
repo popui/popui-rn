@@ -23,7 +23,7 @@ class ResourceLoader extends Component {
         return __awaiter(this, void 0, void 0, function* () {
             try {
                 yield Font.loadAsync({
-                    Weui: require('assets/fonts/Weui.ttf'),
+                    Weui: require('assets/fonts/Weui.ttf')
                 });
                 this.setState({ loading: false });
             }
