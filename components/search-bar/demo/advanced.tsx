@@ -33,7 +33,7 @@ export default class SearchBarScreen extends React.Component<IProps, any> {
     }
     this.handleChange = this.handleChange.bind(this)
   }
-
+  
   handleChange(text) {
     const keywords = [text]
     let results = SampleData.filter(

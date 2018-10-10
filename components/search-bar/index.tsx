@@ -79,9 +79,12 @@ export default class SearchBar extends React.Component<
     }
   }
 
-  onCancel = () => {
+  onCancelPress = () => {
     if (this.props.onCancel) {
       this.props.onCancel(this.state.value || '');
+    }else{
+      // 默认是clear
+      this.onClear()
     }
   }
 
@@ -162,7 +165,7 @@ export default class SearchBar extends React.Component<
         </View>
         {_showCancelButton && (
           <View style={styles.cancelTextContainer}>
-            <Text style={styles.cancelText} onPress={this.onCancel}>
+            <Text style={styles.cancelText} onPress={this.onCancelPress}>
               {cancelText || _locale.cancelText}
             </Text>
           </View>
