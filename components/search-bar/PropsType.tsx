@@ -27,7 +27,7 @@ export interface SearchBarState {
 
 export const defaultProps = {
   prefixCls: 'am-search',
-  placeholder: '',
+  placeholder: '搜索',
   onSubmit: noop,
   onChange: noop,
   onFocus: noop,
