@@ -10,8 +10,7 @@ export interface ISearchBarStyle {
   search: ImageStyle;
 }
 const wrapperPaddingLeft = variables.h_spacing_md
-const inputIconPaddingLeft = variables.h_spacing_md
-const inputPaddingLeft = variables.icon_size_xxs + inputIconPaddingLeft*2// 图标左右边距均为 h_spacing_md
+const searchInnerPaddingLeft = 15 - variables.h_spacing_md
 
 export default {
   wrapper: {
@@ -22,40 +21,40 @@ export default {
     flexDirection: 'row',
     alignItems: 'center',
   },
-  inputWrapper: {
+  searchOuter: {
+    position: 'relative',
     flex: 1,
-    flexDirection: 'row',
-  },
-  input: {
-    borderRadius: variables.radius_md,
-    backgroundColor: '#fff',
-    borderColor: '#E6E6EA',
+    backgroundColor: '#FFFFFF',
     borderWidth: StyleSheet.hairlineWidth,
-    height: variables.search_bar_input_height,
-    color: variables.color_text_base,
-    fontSize: variables.font_size_base,
-    paddingLeft: inputPaddingLeft,
-    paddingRight:  inputPaddingLeft,
+    borderColor: '#E6E6EA',
+    borderRadius: 5,
+},
+  searchInner: {
+    position: 'relative',
+    paddingLeft: searchInnerPaddingLeft,
+    paddingRight: searchInnerPaddingLeft,
+    paddingTop: 5,
+    paddingBottom: 5,
+    flexDirection: 'row',
+    alignItems: 'center',
+},
+searchInput: {
+    marginLeft: 5,
+    height: 20,
+    fontSize: 14,
     flex: 1,
-    paddingTop: 0,
-    paddingBottom: 0,
-  },
+},
+clearIcon:{
+
+},
   cancelTextContainer: {
     height: variables.search_bar_input_height,
     justifyContent: 'center',
     alignItems: 'center',
   },
   cancelText: {
-    fontSize: variables.link_button_font_size,
+    fontSize: variables.font_size_base,
     color: variables.color_link,
     paddingLeft: 10,
-  },
-  search: {
-    tintColor: variables.input_color_icon,
-    position: 'absolute',
-    left: wrapperPaddingLeft + inputIconPaddingLeft, // input 外左边距(h_spacing_md) + input 内左边距(h_spacing_md)
-    top: (variables.search_bar_height - variables.icon_size_xxs) / 2,
-    width: variables.icon_size_xxs,
-    height: variables.icon_size_xxs,
-  },
+  }
 };

@@ -102,6 +102,12 @@ export default class SearchBar extends React.Component<
       this.props.onBlur();
     }
   }
+
+  onClear = ()=>{
+    this.setState({
+      value:''
+    })
+  }
   render() {
     const {
       showCancelButton,
@@ -129,31 +135,31 @@ export default class SearchBar extends React.Component<
 
     return (
       <View style={styles.wrapper}>
-        <View style={styles.inputWrapper}>
-          <TextInput
-            clearButtonMode="always"
-            underlineColorAndroid="transparent"
-            editable={!disabled}
-            {...restProps}
-            style={[styles.input, style]}
-            ref={el => ((this.inputRef as any) = el)}
-            value={value}
-            onChangeText={this.onChangeText}
-            onSubmitEditing={this.onSubmit}
-            onFocus={this.onFocus}
-            onBlur={this.onBlur}
-            returnKeyType="search"
-            blurOnSubmit={true}
-          />
+        <View style={styles.searchOuter}>
+          <View style={styles.searchInner}>
+                <IconWeui name="search"/>
+                <TextInput
+                  clearButtonMode="never"
+                  underlineColorAndroid="transparent"
+                  editable={!disabled}
+                  {...restProps}
+                  style={[styles.searchInput, style]}
+                  ref={el => ((this.inputRef as any) = el)}
+                  value={value}
+                  onChangeText={this.onChangeText}
+                  onSubmitEditing={this.onSubmit}
+                  onFocus={this.onFocus}
+                  onBlur={this.onBlur}
+                  returnKeyType="search"
+                  blurOnSubmit={true}
+                />
+                {value ? (
+                    <Text onPress={this.onClear}>
+                        <IconWeui name="clear" style={styles.clearIcon}/>
+                    </Text>
+                ) : null}
+            </View>
         </View>
-        <IconWeui name="search"
-          style={styles.search}
-        />
-        {/* <Image
-          source={require('../style/images/search.png')}
-          style={styles.search}
-          resizeMode="stretch"
-        /> */}
         {_showCancelButton && (
           <View style={styles.cancelTextContainer}>
             <Text style={styles.cancelText} onPress={this.onCancel}>

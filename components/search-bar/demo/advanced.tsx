@@ -1,7 +1,7 @@
 import React from 'react'
 import { Image, Text,ScrollView } from 'react-native'
 import {
-  SearchBar2 as SearchBar,
+  SearchBar,
   Media as MediaComps,
   Panel as PanelComps,
 } from 'popui-rn'
