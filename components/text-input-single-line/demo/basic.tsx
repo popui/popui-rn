@@ -1,11 +1,11 @@
 /* tslint:disable:jsx-no-multiline-js */
 import React from 'react';
-import { ScrollView, Text,Alert } from 'react-native';
-import { Button, TeAxtInputSingleLine, List } from 'popui-rn';
+import { ScrollView, Text, Alert } from 'react-native';
+import { Button, TextInputSingleLine, List } from 'popui-rn';
 
 declare var jest: any;
 
-export default class BasicTeAxtInputSingleLineExample extends React.Component<any, any> {
+export default class BasicTextInputSingleLineExample extends React.Component<any, any> {
   inputRef: any;
 
   constructor(props: any) {
@@ -30,13 +30,14 @@ export default class BasicTeAxtInputSingleLineExample extends React.Component<an
   render() {
     return (
       <ScrollView
-        style={{ flex: 1,backgroundColor:'#eee' }}
+        style={{ flex: 1, backgroundColor: '#eee' }}
         automaticallyAdjustContentInsets={false}
         showsHorizontalScrollIndicator={false}
         showsVerticalScrollIndicator={false}
       >
         <List renderHeader={() => '基本'}>
-          <TeAxtInputSingleLine
+          <TextInputSingleLine
+            left="输入框"
             clear
             error={!this.state.value}
             onErrorPress={() => Alert.alert('clicked me')}
@@ -49,9 +50,10 @@ export default class BasicTeAxtInputSingleLineExample extends React.Component<an
             extra="元"
             placeholder="有标签"
           >
-            输入框
-          </TeAxtInputSingleLine>
-          <TeAxtInputSingleLine
+
+          </TextInputSingleLine>
+          <TextInputSingleLine
+            left="输入框"
             clear
             onErrorPress={() => {
               Alert.alert("can not edit");
@@ -66,9 +68,9 @@ export default class BasicTeAxtInputSingleLineExample extends React.Component<an
             placeholder="不可编辑"
             editable={false}
           >
-            输入框
-          </TeAxtInputSingleLine>
-          <TeAxtInputSingleLine
+
+          </TextInputSingleLine>
+          <TextInputSingleLine
             clear
             value={this.state.value1}
             onChange={(value: any) => {
@@ -78,7 +80,8 @@ export default class BasicTeAxtInputSingleLineExample extends React.Component<an
             }}
             placeholder="无标签"
           />
-          <TeAxtInputSingleLine
+          <TextInputSingleLine
+            left="标题"
             defaultValue="xx"
             clear
             placeholder="自动获取光标"
@@ -87,15 +90,16 @@ export default class BasicTeAxtInputSingleLineExample extends React.Component<an
               'undefined'
             }
           >
-            标题
-          </TeAxtInputSingleLine>
-          <TeAxtInputSingleLine
+
+          </TextInputSingleLine>
+          <TextInputSingleLine
+            left="标题"
             clear
             placeholder="点击下方按钮该输入框会获取光标"
             ref={(el: any) => (this.inputRef = el)}
           >
-            标题
-          </TeAxtInputSingleLine>
+
+          </TextInputSingleLine>
           <List.Item>
             <Button
               onClick={() => {
@@ -108,7 +112,8 @@ export default class BasicTeAxtInputSingleLineExample extends React.Component<an
           </List.Item>
         </List>
         <List renderHeader={() => '固定标签字数'}>
-          <TeAxtInputSingleLine
+          <TextInputSingleLine
+            left="姓名"
             clear
             value={this.state.labelnum1}
             onChange={(value: any) => {
@@ -119,9 +124,10 @@ export default class BasicTeAxtInputSingleLineExample extends React.Component<an
             labelNumber={2}
             placeholder="两个字标签"
           >
-            姓名
-          </TeAxtInputSingleLine>
-          <TeAxtInputSingleLine
+
+          </TextInputSingleLine>
+          <TextInputSingleLine
+            left="校验码"
             clear
             value={this.state.labelnum2}
             onChange={(value: any) => {
@@ -132,9 +138,10 @@ export default class BasicTeAxtInputSingleLineExample extends React.Component<an
             labelNumber={3}
             placeholder="三个字标签"
           >
-            校验码
-          </TeAxtInputSingleLine>
-          <TeAxtInputSingleLine
+
+          </TextInputSingleLine>
+          <TextInputSingleLine
+            left="四字标签"
             clear
             value={this.state.labelnum3}
             onChange={(value: any) => {
@@ -145,11 +152,12 @@ export default class BasicTeAxtInputSingleLineExample extends React.Component<an
             labelNumber={4}
             placeholder="四个字标签（默认）"
           >
-            四字标签
-          </TeAxtInputSingleLine>
+
+          </TextInputSingleLine>
         </List>
         <List renderHeader={() => '格式'}>
-          <TeAxtInputSingleLine
+          <TextInputSingleLine
+            left="文本输入"
             clear
             error
             value={this.state.text}
@@ -160,9 +168,10 @@ export default class BasicTeAxtInputSingleLineExample extends React.Component<an
             }}
             placeholder="text"
           >
-            文本输入
-          </TeAxtInputSingleLine>
-          <TeAxtInputSingleLine
+
+          </TextInputSingleLine>
+          <TextInputSingleLine
+            left="银行卡"
             clear
             type="bankCard"
             value={this.state.bankcard}
@@ -173,9 +182,10 @@ export default class BasicTeAxtInputSingleLineExample extends React.Component<an
             }}
             placeholder="bankCard"
           >
-            银行卡
-          </TeAxtInputSingleLine>
-          <TeAxtInputSingleLine
+
+          </TextInputSingleLine>
+          <TextInputSingleLine
+            left="手机号"
             clear
             type="phone"
             value={this.state.phone}
@@ -186,9 +196,10 @@ export default class BasicTeAxtInputSingleLineExample extends React.Component<an
             }}
             placeholder="phone"
           >
-            手机号
-          </TeAxtInputSingleLine>
-          <TeAxtInputSingleLine
+
+          </TextInputSingleLine>
+          <TextInputSingleLine
+            left="密码"
             clear
             type="password"
             value={this.state.password}
@@ -199,9 +210,10 @@ export default class BasicTeAxtInputSingleLineExample extends React.Component<an
             }}
             placeholder="password"
           >
-            密码
-          </TeAxtInputSingleLine>
-          <TeAxtInputSingleLine
+
+          </TextInputSingleLine>
+          <TextInputSingleLine
+            left="数字"
             clear
             type="number"
             value={this.state.number}
@@ -212,8 +224,8 @@ export default class BasicTeAxtInputSingleLineExample extends React.Component<an
             }}
             placeholder="number"
           >
-            数字
-          </TeAxtInputSingleLine>
+
+          </TextInputSingleLine>
         </List>
       </ScrollView>
     );
