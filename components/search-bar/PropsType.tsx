@@ -10,6 +10,7 @@ export interface SearchBarPropsType {
   onBlur?: () => void;
   onCancel?: (value: string) => void;
   showCancelButton?: boolean;
+  clearButtonMode?: 'while-editing' | 'never' | 'always'
   cancelText?: string;
   disabled?: boolean;
   styles?: any;
@@ -33,6 +34,7 @@ export const defaultProps = {
   onFocus: noop,
   onBlur: noop,
   onClear: noop,
-  showCancelButton: false,
+  // showCancelButton: false,
+  clearButtonMode:'while-editing',
   disabled: false,
 };

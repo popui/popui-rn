@@ -15,7 +15,6 @@ import { defaultProps, SearchBarPropsType, SearchBarState } from './PropsType';
 import SearchBarStyle, { ISearchBarStyle } from './style/index';
 import IconWeui from '../icon-weui'
 
-
 export interface SearchBarNativeProps extends SearchBarPropsType {
   styles: ISearchBarStyle;
   onChangeText?: (text: string) => void;
@@ -113,7 +112,7 @@ export default class SearchBar extends React.Component<
   }
   render() {
     const {
-      showCancelButton,
+      clearButtonMode,
       styles,
       value: propsValue,
       cancelText,
@@ -134,7 +133,19 @@ export default class SearchBar extends React.Component<
 
     const { value, focus } = this.state;
     // tslint:disable-next-line:variable-name
-    const _showCancelButton = showCancelButton || focus;
+    let _showCancelButton =  false;
+    switch(clearButtonMode){
+      case 'always':
+        _showCancelButton = true;
+        break;
+      case 'never':
+        _showCancelButton = false;
+        break;
+      case 'while-editing':
+      default:
+        _showCancelButton = !!focus;
+        break;
+    }
 
     return (
       <View style={styles.wrapper}>
@@ -158,16 +169,18 @@ export default class SearchBar extends React.Component<
                 />
                 {value ? (
                     <Text onPress={this.onClear}>
-                        <IconWeui name="clear" style={styles.clearIcon}/>
+                        <IconWeui name="clear"/>
                     </Text>
                 ) : null}
             </View>
         </View>
         {_showCancelButton && (
-          <TouchableOpacity style={styles.cancelTextContainer} onPress={this.onCancelPress}>
-            <Text style={styles.cancelText}>
-              {cancelText || _locale.cancelText}
-            </Text>
+          <TouchableOpacity 
+            style={styles.cancelTextBtn} 
+            onPress={this.onCancelPress}>
+              <Text style={styles.cancelText}>
+                {cancelText || _locale.cancelText}
+              </Text>
           </TouchableOpacity>
         )}
       </View>

@@ -1,13 +1,14 @@
 import variables from '../../style/themes/default';
-import { ViewStyle, TextStyle, ImageStyle, StyleSheet } from 'react-native';
+import { ViewStyle, TextStyle, StyleSheet } from 'react-native';
 
 export interface ISearchBarStyle {
-  input: TextStyle;
-  inputWrapper: ViewStyle;
   wrapper: ViewStyle;
-  cancelTextContainer: ViewStyle;
+  searchOuter: ViewStyle;
+  searchInner: ViewStyle;
+  searchInput: ViewStyle;
+  clearIcon:ViewStyle;
+  cancelTextBtn: ViewStyle;
   cancelText: TextStyle;
-  search: ImageStyle;
 }
 const wrapperPaddingLeft = variables.h_spacing_md
 const searchInnerPaddingLeft = 15 - variables.h_spacing_md
@@ -47,9 +48,9 @@ export default {
   clearIcon: {
 
   },
-  cancelTextContainer: {
+  cancelTextBtn: {
     height: variables.search_bar_input_height,
-    paddingRight: wrapperPaddingLeft, // 使文字尽可能有更大的有效点击区域
+    paddingRight: wrapperPaddingLeft, // 使取消按钮尽可能有更大的有效点击区域
     justifyContent: 'center',
     alignItems: 'center',
   },

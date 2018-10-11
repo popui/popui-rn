@@ -19,7 +19,7 @@ export default class SearchBarDemo extends React.Component<any, any> {
   }
   render() {
     return (
-      <ScrollView keyboardShouldPersistTaps={true}>
+      <ScrollView keyboardShouldPersistTaps={'always'}>
         <SearchBar defaultValue="初始值" placeholder="搜索" />
         <WhiteSpace />
         <SearchBar
