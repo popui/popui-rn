@@ -37,6 +37,7 @@ export default class BasicTextInputSingleLineExample extends React.Component<any
       >
           <Text>测试: </Text>
           <TextInputSingleLine
+            left="输入框"
             clear
             onErrorPress={() => alert('clicked me')}
             value={this.state.value}
@@ -48,10 +49,10 @@ export default class BasicTextInputSingleLineExample extends React.Component<any
             extra="取消"
             placeholder="有标签"
           >
-            测试输入框
           </TextInputSingleLine>
         <List renderHeader={() => '基本'}>
           <TextInputSingleLine
+            left="输入框"
             clear
             error
             onErrorPress={() => alert('clicked me')}
@@ -64,9 +65,9 @@ export default class BasicTextInputSingleLineExample extends React.Component<any
             extra="元"
             placeholder="有标签"
           >
-            输入框
           </TextInputSingleLine>
           <TextInputSingleLine
+            left="输入框"
             clear
             onErrorPress={() => {
               alert(1);
@@ -81,7 +82,6 @@ export default class BasicTextInputSingleLineExample extends React.Component<any
             placeholder="不可编辑"
             editable={false}
           >
-            输入框
           </TextInputSingleLine>
           <TextInputSingleLine
             clear
@@ -94,6 +94,7 @@ export default class BasicTextInputSingleLineExample extends React.Component<any
             placeholder="无标签"
           />
           <TextInputSingleLine
+            left="标题"
             defaultValue="xx"
             clear
             placeholder="自动获取光标"
@@ -102,14 +103,13 @@ export default class BasicTextInputSingleLineExample extends React.Component<any
               'undefined'
             }
           >
-            标题
           </TextInputSingleLine>
           <TextInputSingleLine
+            left="标题"
             clear
             placeholder="点击下方按钮该输入框会获取光标"
             ref={(el: any) => (this.inputRef = el)}
           >
-            标题
           </TextInputSingleLine>
           <List.Item>
             <Button
@@ -124,6 +124,7 @@ export default class BasicTextInputSingleLineExample extends React.Component<any
         </List>
         <List renderHeader={() => '固定标签字数'}>
           <TextInputSingleLine
+            left="姓名"
             clear
             value={this.state.labelnum1}
             onChange={(value: any) => {
@@ -134,9 +135,9 @@ export default class BasicTextInputSingleLineExample extends React.Component<any
             labelNumber={2}
             placeholder="两个字标签"
           >
-            姓名
           </TextInputSingleLine>
           <TextInputSingleLine
+            left="校验码"
             clear
             value={this.state.labelnum2}
             onChange={(value: any) => {
@@ -147,9 +148,10 @@ export default class BasicTextInputSingleLineExample extends React.Component<any
             labelNumber={3}
             placeholder="三个字标签"
           >
-            校验码
+            
           </TextInputSingleLine>
           <TextInputSingleLine
+            left="四字标签"
             clear
             value={this.state.labelnum3}
             onChange={(value: any) => {
@@ -160,11 +162,11 @@ export default class BasicTextInputSingleLineExample extends React.Component<any
             labelNumber={4}
             placeholder="四个字标签（默认）"
           >
-            四字标签
           </TextInputSingleLine>
         </List>
         <List renderHeader={() => '格式'}>
           <TextInputSingleLine
+            left="文本输入"
             clear
             error
             value={this.state.text}
@@ -175,9 +177,10 @@ export default class BasicTextInputSingleLineExample extends React.Component<any
             }}
             placeholder="text"
           >
-            文本输入
+            
           </TextInputSingleLine>
           <TextInputSingleLine
+            left="银行卡"
             clear
             type="bankCard"
             value={this.state.bankcard}
@@ -188,9 +191,10 @@ export default class BasicTextInputSingleLineExample extends React.Component<any
             }}
             placeholder="bankCard"
           >
-            银行卡
+            
           </TextInputSingleLine>
           <TextInputSingleLine
+            left="手机号"
             clear
             type="phone"
             value={this.state.phone}
@@ -201,9 +205,10 @@ export default class BasicTextInputSingleLineExample extends React.Component<any
             }}
             placeholder="phone"
           >
-            手机号
+            
           </TextInputSingleLine>
           <TextInputSingleLine
+            left="密码"
             clear
             type="password"
             value={this.state.password}
@@ -214,9 +219,10 @@ export default class BasicTextInputSingleLineExample extends React.Component<any
             }}
             placeholder="password"
           >
-            密码
+            
           </TextInputSingleLine>
           <TextInputSingleLine
+            left="数字"
             clear
             type="number"
             value={this.state.number}
@@ -227,7 +233,7 @@ export default class BasicTextInputSingleLineExample extends React.Component<any
             }}
             placeholder="number"
           >
-            数字
+            
           </TextInputSingleLine>
         </List>
       </ScrollView>
