@@ -25,3 +25,7 @@ subtitle: 滑动输入条
 | maximumTrackTintColor(`iOS`)    |  String     | `#108ee9`（RN)    | 底部背景色 |
 | minimumTrackTintColor(`iOS`)    |  String     | `#ddd` (RN)   | 当前选中部分的颜色 |
 | onAfterChange    |  Function     | Noop    | 与 `ontouchend` 触发时机一致，把当前值作为参数传入 |
+| style    |  any     | undefined    | 外层容器样式 |
+| sliderStyle    |  any     | undefined    | slider 样式 |
+| textStyle    |  any     | undefined    | value text 样式 |
+| showValue    |  boolean     | true    | 是否显示 value (当前值) |

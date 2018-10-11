@@ -9,4 +9,8 @@ export interface SliderPropsType {
   step?: number;
   disabled?: boolean;
   handle?: any;
+  style?:any
+  sliderStyle?:any
+  textStyle?:any
+  showValue?:boolean
 }

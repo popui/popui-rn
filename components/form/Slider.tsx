@@ -1,6 +1,6 @@
-import PropTypes from 'prop-types'
+// import PropTypes from 'prop-types'
 import React from 'react'
-import { Slider as RNSlider, StyleSheet, Text, View, ViewPropTypes } from 'react-native'
+import { Slider as RNSlider, StyleSheet, Text, View } from 'react-native'
 import V from '../style/themes/weui'
 
 const styles = StyleSheet.create({
@@ -50,18 +50,18 @@ const Slider = ({
         {showValue ? <Text style={[styles.sliderText, textStyle]}>{value}</Text> : false}
     </View>
 
-Slider.propTypes = {
-    max: PropTypes.number,
-    min: PropTypes.number,
-    step: PropTypes.number,
-    defaultValue: PropTypes.number,
-    showValue: PropTypes.bool,
-    value: PropTypes.number,
-    onChange: PropTypes.func,
-    disabled: PropTypes.bool,
-    style: ViewPropTypes.style,
-    sliderStyle: RNSlider.propTypes.style,
-    textStyle: Text.propTypes.style,
-}
+// Slider.propTypes = {
+//     max: PropTypes.number,
+//     min: PropTypes.number,
+//     step: PropTypes.number,
+//     defaultValue: PropTypes.number,
+//     showValue: PropTypes.bool,
+//     value: PropTypes.number,
+//     onChange: PropTypes.func,
+//     disabled: PropTypes.bool,
+//     style: ViewPropTypes.style,
+//     sliderStyle: RNSlider.propTypes.style,
+//     textStyle: Text.propTypes.style,
+// }
 
 export default Slider
