@@ -1,5 +1,5 @@
 import React from 'react'
-import { Image, Text,ScrollView } from 'react-native'
+import { Image, Text,View } from 'react-native'
 import {
   SearchBar,
   Media as MediaComps,
@@ -20,21 +20,13 @@ export interface IProps  {}
 
 
 
-export default class SearchBarScreen extends React.Component<IProps, any> {
-  static navigationOptions = {
-    title: 'SearchBar'
-  }
-
-  constructor(props) {
-    super(props)
-    this.state = {
-      searchText: '',
-      results: []
-    }
-    this.handleChange = this.handleChange.bind(this)
+export default class SearchBarWithResult extends React.Component<IProps, any> {
+  state = {
+    searchText: '',
+    results: []
   }
   
-  handleChange(text) {
+  handleChange = (text) => {
     const keywords = [text]
     let results = SampleData.filter(
       /./.test.bind(new RegExp(keywords.join('|'), 'i'))
@@ -49,7 +41,7 @@ export default class SearchBarScreen extends React.Component<IProps, any> {
 
   render() {
     return (
-      <ScrollView>
+      <View>
         <SearchBar onChange={this.handleChange} />
         {!this.state.searchText ? null : (
           <Panel style={{ marginTop: 0 }}>
@@ -76,7 +68,7 @@ export default class SearchBarScreen extends React.Component<IProps, any> {
             <PanelFooter access>查看更多</PanelFooter>
           </Panel>
         )}
-      </ScrollView>
+      </View>
     )
   }
 }

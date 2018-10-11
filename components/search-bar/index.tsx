@@ -2,13 +2,13 @@
 import PropTypes from 'prop-types';
 import React from 'react';
 import {
-  Image,
   StyleProp,
   StyleSheet,
   Text,
   TextInput,
   TextStyle,
   View,
+  TouchableOpacity
 } from 'react-native';
 import { getComponentLocale } from '../_util/getLocale';
 import { defaultProps, SearchBarPropsType, SearchBarState } from './PropsType';
@@ -164,11 +164,11 @@ export default class SearchBar extends React.Component<
             </View>
         </View>
         {_showCancelButton && (
-          <View style={styles.cancelTextContainer}>
-            <Text style={styles.cancelText} onPress={this.onCancelPress}>
+          <TouchableOpacity style={styles.cancelTextContainer} onPress={this.onCancelPress}>
+            <Text style={styles.cancelText}>
               {cancelText || _locale.cancelText}
             </Text>
-          </View>
+          </TouchableOpacity>
         )}
       </View>
     );
