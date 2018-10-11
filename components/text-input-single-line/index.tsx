@@ -80,7 +80,7 @@ export default class TextInputSingleLine extends React.Component<TextInputSingle
   inputRef: Input | null;
 
   onChange = (event: any) => {
-    let text = event.text
+    let {text} = event.nativeEvent;
     const { onChange, type } = this.props;
     const maxLength = this.props.maxLength as number;
     switch (type) {
@@ -123,10 +123,16 @@ export default class TextInputSingleLine extends React.Component<TextInputSingle
   }
 
   onInputClear = () => {
+    console.log("onInputClear")
     if (this.inputRef) {
+      console.log("onInputClear inputRef")
       this.inputRef.clear();
     }
-    this.onChange('');
+    const { onChange } = this.props;
+    if (onChange) {
+      console.log("onInputClear onChange")
+      onChange('');
+    }
   }
 
   // this is instance method for user to use
@@ -182,15 +188,15 @@ export default class TextInputSingleLine extends React.Component<TextInputSingle
       styles,
       value
     } = this.props;
-    /* 只在有 value 的 受控模式 下展示 自定义的 安卓 clear 按钮 */
-    // if(editable && clear && value && Platform.OS === 'android'){
+    /* 只在有 value 的 受控模式 下展示 自定义的 clear 按钮 */
+    // ios 原生的 clear 在focus 的情况下, 需要点击外面一次取消focus, 再点一次才能正常操作, 容易造成误解. 因此这里全部都使用 独立渲染的 clear 按钮, 显示与否跟是否 focus 无关. 
     if (editable && clear && value) {
       return (<TouchableOpacity
         style={[styles.clear]}
         onPress={this.onInputClear}
         hitSlop={{ top: 5, left: 5, bottom: 5, right: 5 }}
       >
-        <IconWeui name="clear" style={{ width: 12, height: 12 }} />
+        <IconWeui name="clear" />
       </TouchableOpacity>)
     }
     return null
@@ -256,7 +262,8 @@ export default class TextInputSingleLine extends React.Component<TextInputSingle
     const valueProps = this.getValueProps()
     const keyboardType = this.getkeyboardType()
     return (<Input
-      clearButtonMode={clear ? 'while-editing' : 'never'}
+      // clearButtonMode={clear ? 'while-editing' : 'never'}
+      clearButtonMode={'never'}
       underlineColorAndroid="transparent"
       ref={el => (this.inputRef = el)}
       {...restProps}

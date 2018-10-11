@@ -31,6 +31,7 @@ export default class BasicTextInputSingleLineExample extends React.Component<any
     return (
       <ScrollView
         style={{ flex: 1,backgroundColor:'#eee' }}
+        keyboardShouldPersistTaps={'always'}
         automaticallyAdjustContentInsets={false}
         showsHorizontalScrollIndicator={false}
         showsVerticalScrollIndicator={false}

@@ -16,7 +16,12 @@ class Input extends React.Component<TextInputProps, any> {
       this.inputRef.clear();
     }
   }
-
+  isFocused =() =>{
+    if (this.inputRef) {
+      return  this.inputRef.isFocused();
+    }
+    return false
+  }
   render() {
     return (
       <TextInput
