@@ -42,7 +42,7 @@ export default class BasicTextInputSingleLineExample extends React.Component<any
             error={!this.state.value}
             onErrorPress={() => Alert.alert('clicked me')}
             value={this.state.value}
-            onChange={(value: any) => {
+            onChangeText={(value: any) => {
               this.setState({
                 value,
               });
@@ -59,7 +59,7 @@ export default class BasicTextInputSingleLineExample extends React.Component<any
               Alert.alert("can not edit");
             }}
             value="不可编辑"
-            onChange={(value: any) => {
+            onChangeText={(value: any) => {
               this.setState({
                 value,
               });
@@ -73,7 +73,7 @@ export default class BasicTextInputSingleLineExample extends React.Component<any
           <TextInputSingleLine
             clear
             value={this.state.value1}
-            onChange={(value: any) => {
+            onChangeText={(value: any) => {
               this.setState({
                 value1: value,
               });
@@ -116,7 +116,7 @@ export default class BasicTextInputSingleLineExample extends React.Component<any
             left="姓名"
             clear
             value={this.state.labelnum1}
-            onChange={(value: any) => {
+            onChangeText={(value: any) => {
               this.setState({
                 labelnum1: value,
               });
@@ -130,7 +130,7 @@ export default class BasicTextInputSingleLineExample extends React.Component<any
             left="校验码"
             clear
             value={this.state.labelnum2}
-            onChange={(value: any) => {
+            onChangeText={(value: any) => {
               this.setState({
                 labelnum2: value,
               });
@@ -144,7 +144,7 @@ export default class BasicTextInputSingleLineExample extends React.Component<any
             left="四字标签"
             clear
             value={this.state.labelnum3}
-            onChange={(value: any) => {
+            onChangeText={(value: any) => {
               this.setState({
                 labelnum3: value,
               });
@@ -161,7 +161,7 @@ export default class BasicTextInputSingleLineExample extends React.Component<any
             clear
             error
             value={this.state.text}
-            onChange={(value: any) => {
+            onChangeText={(value: any) => {
               this.setState({
                 text: value,
               });
@@ -175,7 +175,7 @@ export default class BasicTextInputSingleLineExample extends React.Component<any
             clear
             type="bankCard"
             value={this.state.bankcard}
-            onChange={(value: any) => {
+            onChangeText={(value: any) => {
               this.setState({
                 bankcard: value,
               });
@@ -189,7 +189,7 @@ export default class BasicTextInputSingleLineExample extends React.Component<any
             clear
             type="phone"
             value={this.state.phone}
-            onChange={(value: any) => {
+            onChangeText={(value: any) => {
               this.setState({
                 phone: value,
               });
@@ -203,7 +203,7 @@ export default class BasicTextInputSingleLineExample extends React.Component<any
             clear
             type="password"
             value={this.state.password}
-            onChange={(value: any) => {
+            onChangeText={(value: any) => {
               this.setState({
                 password: value,
               });
@@ -217,7 +217,7 @@ export default class BasicTextInputSingleLineExample extends React.Component<any
             clear
             type="number"
             value={this.state.number}
-            onChange={(value: any) => {
+            onChangeText={(value: any) => {
               this.setState({
                 number: value,
               });

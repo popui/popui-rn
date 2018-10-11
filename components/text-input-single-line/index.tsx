@@ -77,8 +77,7 @@ export default class TextInputSingleLine extends React.Component<TextInputSingle
 
   inputRef: Input | null;
 
-  onChangeText = (event: any) => {
-    let {text} = event.nativeEvent;
+  onChangeText = (text:string) => {
     const { onChangeText, type } = this.props;
     const maxLength = this.props.maxLength as number;
     switch (type) {
@@ -104,7 +103,7 @@ export default class TextInputSingleLine extends React.Component<TextInputSingle
         break;
     }
     if (onChangeText) {
-      onChangeText(event);
+      onChangeText(text);
     }
   }
 
