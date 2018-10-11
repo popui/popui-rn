@@ -1,6 +1,6 @@
 /* tslint:disable:jsx-no-multiline-js */
 import React from 'react';
-import { ScrollView, Text,View } from 'react-native';
+import { ScrollView, Text,View,Alert } from 'react-native';
 import { Button, TextInputSingleLine, List } from 'popui-rn';
 
 declare var jest: any;
@@ -38,8 +38,9 @@ export default class BasicTextInputSingleLineExample extends React.Component<any
           <Text>测试: </Text>
           <TextInputSingleLine
             left="输入框"
+            error={!this.state.value}
             clear
-            onErrorPress={() => alert('clicked me')}
+            onErrorPress={() => Alert.alert('clicked me')}
             value={this.state.value}
             onChange={(value: any) => {
               this.setState({
@@ -55,7 +56,7 @@ export default class BasicTextInputSingleLineExample extends React.Component<any
             left="输入框"
             clear
             error
-            onErrorPress={() => alert('clicked me')}
+            onErrorPress={() => Alert.alert('clicked me')}
             value={this.state.value}
             onChange={(value: any) => {
               this.setState({
@@ -70,7 +71,7 @@ export default class BasicTextInputSingleLineExample extends React.Component<any
             left="输入框"
             clear
             onErrorPress={() => {
-              alert(1);
+              Alert.alert("1");
             }}
             value="不可编辑"
             onChange={(value: any) => {

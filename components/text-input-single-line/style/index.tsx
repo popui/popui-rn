@@ -30,9 +30,7 @@ export default {
     color: '#f50',
   },
   clear: {
-    backgroundColor: variables.color_icon_base,
-    borderRadius: 15,
-    padding: 2,
+    padding: 5,
   },
   extra: {
     marginLeft: variables.h_spacing_sm,
@@ -41,7 +39,7 @@ export default {
   },
   errorIcon: {
     marginLeft: variables.h_spacing_sm,
-    width: variables.icon_size_sm,
-    height: variables.icon_size_sm,
+    width: variables.icon_size_xs,
+    height: variables.icon_size_xs,
   },
 };

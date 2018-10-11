@@ -16,6 +16,7 @@ import Input from '../text-input';
 import { TextInputSingleLinePropsType } from './PropsType';
 import InputItemStyle from './style/index';
 import { Omit } from '../_util/types';
+import IconWeui from '../icon-weui'
 
 const keyboardTypeArray = [
   'default',
@@ -38,7 +39,7 @@ const keyboardTypeArray = [
 export type TextInputProps = Omit<
   TextInputProperties,
   'onChange' | 'onFocus' | 'onBlur'
->;
+  >;
 
 export interface TextInputSingleLineProps extends TextInputSingleLinePropsType, TextInputProps {
   last?: boolean;
@@ -46,7 +47,7 @@ export interface TextInputSingleLineProps extends TextInputSingleLinePropsType, 
   onErrorClick?: (event: GestureResponderEvent) => void;
 }
 
-const noop = () => {};
+const noop = () => { };
 
 function normalizeValue(value?: string) {
   if (typeof value === 'undefined' || value === null) {
@@ -78,7 +79,7 @@ export default class TextInputSingleLine extends React.Component<TextInputSingle
 
   inputRef: Input | null;
 
-  onChange = (event:any) => {
+  onChange = (event: any) => {
     let text = event.text
     const { onChange, type } = this.props;
     const maxLength = this.props.maxLength as number;
@@ -134,46 +135,47 @@ export default class TextInputSingleLine extends React.Component<TextInputSingle
       this.inputRef.focus();
     }
   }
-  renderLeftView =()=>{
+  renderLeftView = () => {
     const {
       left,
       styles,
       labelNumber
     } = this.props
-      const textStyle = {
-        width: variables.font_size_heading * (labelNumber as number) * 1.05,
-      };
-        if(typeof left === 'string'){
-          return <Text style={[styles.text, textStyle]}>{left}</Text>
-        }
-      return left
+    const textStyle = {
+      width: variables.font_size_heading * (labelNumber as number) * 1.05,
+    };
+    if (typeof left === 'string') {
+      return <Text style={[styles.text, textStyle]}>{left}</Text>
+    }
+    return left
   }
-  
-  renderExtraView = () =>{
+
+  renderExtraView = () => {
     const {
       extra,
       styles,
       onExtraClick,
     } = this.props;
+    const TouchComp = onExtraClick?TouchableOpacity:TouchableWithoutFeedback
     const extraStyle = {
       width:
         typeof extra === 'string' && (extra as string).length > 0
           ? (extra as string).length * variables.font_size_heading
           : 0,
     };
-    return ( (
-      <TouchableWithoutFeedback onPress={onExtraClick}>
+    return ((
+      <TouchComp onPress={onExtraClick}>
         <View>
           {typeof extra === 'string' ? (
             <Text style={[styles.extra, extraStyle]}>{extra}</Text>
           ) : (
-            extra
-          )}
+              extra
+            )}
         </View>
-      </TouchableWithoutFeedback>
+      </TouchComp>
     ))
   }
-  renderClearView=()=>{
+  renderClearView = () => {
     const {
       clear,
       editable,
@@ -181,40 +183,31 @@ export default class TextInputSingleLine extends React.Component<TextInputSingle
       value
     } = this.props;
     /* 只在有 value 的 受控模式 下展示 自定义的 安卓 clear 按钮 */
-    if(editable && clear && value && Platform.OS === 'android'){
+    // if(editable && clear && value && Platform.OS === 'android'){
+    if (editable && clear && value) {
       return (<TouchableOpacity
         style={[styles.clear]}
         onPress={this.onInputClear}
         hitSlop={{ top: 5, left: 5, bottom: 5, right: 5 }}
       >
-        <Image
-          source={require('../style/images/cross_w.png')}
-          style={{ width: 12, height: 12 }}
-        />
+        <IconWeui name="clear" style={{ width: 12, height: 12 }} />
       </TouchableOpacity>)
     }
     return null
   }
-  renderErrorView =()=>{
+  renderErrorView = () => {
     const {
       onErrorClick,
       styles,
     } = this.props;
+    const TouchComp = onErrorClick?TouchableOpacity:TouchableWithoutFeedback
     return (
-      <TouchableWithoutFeedback onPress={onErrorClick}>
-        <View style={[styles.errorIcon]}>
-          <Image
-            source={require('../style/images/error.png')}
-            style={{
-              width: variables.icon_size_xs,
-              height: variables.icon_size_xs,
-            }}
-          />
-        </View>
-      </TouchableWithoutFeedback>
+      <TouchComp onPress={onErrorClick}>
+          <IconWeui name="warn" size={variables.icon_size_xs} style={[styles.errorIcon]}/>
+      </TouchComp>
     )
   }
-  getkeyboardType =()=>{
+  getkeyboardType = () => {
     const {
       type,
     } = this.props;
@@ -230,7 +223,7 @@ export default class TextInputSingleLine extends React.Component<TextInputSingle
     }
     return keyboardType
   }
-  getValueProps =() =>{
+  getValueProps = () => {
     const {
       value, defaultValue
     } = this.props;
@@ -246,7 +239,7 @@ export default class TextInputSingleLine extends React.Component<TextInputSingle
     }
     return valueProps
   }
-  renderInputView=()=>{
+  renderInputView = () => {
     const {
       left,
       type,
@@ -293,22 +286,22 @@ export default class TextInputSingleLine extends React.Component<TextInputSingle
     const { style } = restProps;
 
     let borderBottomWidth = 0
-    if(!last){
-      if(error){
-        borderBottomWidth =1 
-      }else{
+    if (!last) {
+      if (error) {
+        borderBottomWidth = 1
+      } else {
         borderBottomWidth = StyleSheet.hairlineWidth
       }
     }
     const containerStyle = {
       borderBottomWidth,
-      borderBottomColor: error? 'red' : variables.border_color_base,
+      borderBottomColor: error ? 'red' : variables.border_color_base,
     };
     return (
       <View style={[styles.container, containerStyle, style]}>
         {left && this.renderLeftView()}
         {this.renderInputView()}
-        { this.renderClearView()}
+        {this.renderClearView()}
         {extra && this.renderExtraView()}
         {error && this.renderErrorView()}
       </View>
