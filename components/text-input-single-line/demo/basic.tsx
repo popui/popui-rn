@@ -1,11 +1,11 @@
 /* tslint:disable:jsx-no-multiline-js */
 import React from 'react';
 import { ScrollView, Text,View } from 'react-native';
-import { Button, InputItem, List } from 'popui-rn';
+import { Button, TextInputSingleLine, List } from 'popui-rn';
 
 declare var jest: any;
 
-export default class BasicInputItemExample extends React.Component<any, any> {
+export default class BasicTextInputSingleLineExample extends React.Component<any, any> {
   inputRef: any;
 
   constructor(props: any) {
@@ -35,9 +35,8 @@ export default class BasicInputItemExample extends React.Component<any, any> {
         showsHorizontalScrollIndicator={false}
         showsVerticalScrollIndicator={false}
       >
-      <Text>测试: </Text>
-       <View>
-          <InputItem
+          <Text>测试: </Text>
+          <TextInputSingleLine
             clear
             onErrorPress={() => alert('clicked me')}
             value={this.state.value}
@@ -50,10 +49,9 @@ export default class BasicInputItemExample extends React.Component<any, any> {
             placeholder="有标签"
           >
             测试输入框
-          </InputItem>
-        </View>
+          </TextInputSingleLine>
         <List renderHeader={() => '基本'}>
-          <InputItem
+          <TextInputSingleLine
             clear
             error
             onErrorPress={() => alert('clicked me')}
@@ -67,8 +65,8 @@ export default class BasicInputItemExample extends React.Component<any, any> {
             placeholder="有标签"
           >
             输入框
-          </InputItem>
-          <InputItem
+          </TextInputSingleLine>
+          <TextInputSingleLine
             clear
             onErrorPress={() => {
               alert(1);
@@ -84,8 +82,8 @@ export default class BasicInputItemExample extends React.Component<any, any> {
             editable={false}
           >
             输入框
-          </InputItem>
-          <InputItem
+          </TextInputSingleLine>
+          <TextInputSingleLine
             clear
             value={this.state.value1}
             onChange={(value: any) => {
@@ -95,7 +93,7 @@ export default class BasicInputItemExample extends React.Component<any, any> {
             }}
             placeholder="无标签"
           />
-          <InputItem
+          <TextInputSingleLine
             defaultValue="xx"
             clear
             placeholder="自动获取光标"
@@ -105,14 +103,14 @@ export default class BasicInputItemExample extends React.Component<any, any> {
             }
           >
             标题
-          </InputItem>
-          <InputItem
+          </TextInputSingleLine>
+          <TextInputSingleLine
             clear
             placeholder="点击下方按钮该输入框会获取光标"
             ref={(el: any) => (this.inputRef = el)}
           >
             标题
-          </InputItem>
+          </TextInputSingleLine>
           <List.Item>
             <Button
               onClick={() => {
@@ -125,7 +123,7 @@ export default class BasicInputItemExample extends React.Component<any, any> {
           </List.Item>
         </List>
         <List renderHeader={() => '固定标签字数'}>
-          <InputItem
+          <TextInputSingleLine
             clear
             value={this.state.labelnum1}
             onChange={(value: any) => {
@@ -137,8 +135,8 @@ export default class BasicInputItemExample extends React.Component<any, any> {
             placeholder="两个字标签"
           >
             姓名
-          </InputItem>
-          <InputItem
+          </TextInputSingleLine>
+          <TextInputSingleLine
             clear
             value={this.state.labelnum2}
             onChange={(value: any) => {
@@ -150,8 +148,8 @@ export default class BasicInputItemExample extends React.Component<any, any> {
             placeholder="三个字标签"
           >
             校验码
-          </InputItem>
-          <InputItem
+          </TextInputSingleLine>
+          <TextInputSingleLine
             clear
             value={this.state.labelnum3}
             onChange={(value: any) => {
@@ -163,10 +161,10 @@ export default class BasicInputItemExample extends React.Component<any, any> {
             placeholder="四个字标签（默认）"
           >
             四字标签
-          </InputItem>
+          </TextInputSingleLine>
         </List>
         <List renderHeader={() => '格式'}>
-          <InputItem
+          <TextInputSingleLine
             clear
             error
             value={this.state.text}
@@ -178,8 +176,8 @@ export default class BasicInputItemExample extends React.Component<any, any> {
             placeholder="text"
           >
             文本输入
-          </InputItem>
-          <InputItem
+          </TextInputSingleLine>
+          <TextInputSingleLine
             clear
             type="bankCard"
             value={this.state.bankcard}
@@ -191,8 +189,8 @@ export default class BasicInputItemExample extends React.Component<any, any> {
             placeholder="bankCard"
           >
             银行卡
-          </InputItem>
-          <InputItem
+          </TextInputSingleLine>
+          <TextInputSingleLine
             clear
             type="phone"
             value={this.state.phone}
@@ -204,8 +202,8 @@ export default class BasicInputItemExample extends React.Component<any, any> {
             placeholder="phone"
           >
             手机号
-          </InputItem>
-          <InputItem
+          </TextInputSingleLine>
+          <TextInputSingleLine
             clear
             type="password"
             value={this.state.password}
@@ -217,8 +215,8 @@ export default class BasicInputItemExample extends React.Component<any, any> {
             placeholder="password"
           >
             密码
-          </InputItem>
-          <InputItem
+          </TextInputSingleLine>
+          <TextInputSingleLine
             clear
             type="number"
             value={this.state.number}
@@ -230,7 +228,7 @@ export default class BasicInputItemExample extends React.Component<any, any> {
             placeholder="number"
           >
             数字
-          </InputItem>
+          </TextInputSingleLine>
         </List>
       </ScrollView>
     );

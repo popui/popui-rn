@@ -12,7 +12,7 @@ import {
   TouchableOpacity,
 } from 'react-native';
 import variables from '../style/themes/default';
-import Input from './Input';
+import Input from '../text-input';
 import { InputItemPropsType } from './PropsType';
 import InputItemStyle from './style/index';
 import { Omit } from '../_util/types';
@@ -206,7 +206,7 @@ export default class InputItem extends React.Component<InputItemProps, any> {
           {...valueProps}
           style={[styles.input, error ? styles.inputErrorColor : null]}
           keyboardType={keyboardType}
-          onChange={event => this.onChange(eventEvent.text)}
+          onChange={event => this.onChange(event.text)}
           secureTextEntry={type === 'password'}
           onBlur={this.onInputBlur}
           onFocus={this.onInputFocus}
