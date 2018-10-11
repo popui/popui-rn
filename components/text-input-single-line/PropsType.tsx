@@ -30,7 +30,7 @@ export interface TextInputSingleLinePropsType {
   updatePlaceholder?: boolean;
   styles?: any;
   locale?: object;
-  onChange?: (event: any) => void;
+  onChangeText?: (text: string) => void;
   onFocus?: InputEventHandler;
   onBlur?: InputEventHandler;
   onVirtualKeyboardConfirm?: InputEventHandler;

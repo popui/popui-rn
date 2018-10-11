@@ -1,11 +1,11 @@
 /* tslint:disable:jsx-no-multiline-js */
 import React from 'react';
-import { ScrollView, Text,View,Alert } from 'react-native';
-import { Button, TextInputSingleLine, List } from 'popui-rn';
+import { ScrollView, Text,Alert } from 'react-native';
+import { Button, TeAxtInputSingleLine, List } from 'popui-rn';
 
 declare var jest: any;
 
-export default class BasicTextInputSingleLineExample extends React.Component<any, any> {
+export default class BasicTeAxtInputSingleLineExample extends React.Component<any, any> {
   inputRef: any;
 
   constructor(props: any) {
@@ -31,56 +31,54 @@ export default class BasicTextInputSingleLineExample extends React.Component<any
     return (
       <ScrollView
         style={{ flex: 1,backgroundColor:'#eee' }}
-        keyboardShouldPersistTaps={'always'}
         automaticallyAdjustContentInsets={false}
         showsHorizontalScrollIndicator={false}
         showsVerticalScrollIndicator={false}
       >
         <List renderHeader={() => '基本'}>
-          <TextInputSingleLine
-            left="输入框"
+          <TeAxtInputSingleLine
             clear
             error={!this.state.value}
             onErrorPress={() => Alert.alert('clicked me')}
             value={this.state.value}
-            onChange={(event: any) => {
+            onChange={(value: any) => {
               this.setState({
-                value:event.nativeEvent.text,
+                value,
               });
             }}
             extra="元"
             placeholder="有标签"
           >
-          </TextInputSingleLine>
-          <TextInputSingleLine
-            left="输入框"
+            输入框
+          </TeAxtInputSingleLine>
+          <TeAxtInputSingleLine
             clear
             onErrorPress={() => {
-              Alert.alert("1");
+              Alert.alert("can not edit");
             }}
             value="不可编辑"
-            onChange={(event: any) => {
+            onChange={(value: any) => {
               this.setState({
-                value:event.nativeEvent.text,
+                value,
               });
             }}
             extra={<Text>元</Text>}
             placeholder="不可编辑"
             editable={false}
           >
-          </TextInputSingleLine>
-          <TextInputSingleLine
+            输入框
+          </TeAxtInputSingleLine>
+          <TeAxtInputSingleLine
             clear
             value={this.state.value1}
-            onChange={(event: any) => {
+            onChange={(value: any) => {
               this.setState({
-                value1:event.nativeEvent.text,
+                value1: value,
               });
             }}
             placeholder="无标签"
           />
-          <TextInputSingleLine
-            left="标题"
+          <TeAxtInputSingleLine
             defaultValue="xx"
             clear
             placeholder="自动获取光标"
@@ -89,14 +87,15 @@ export default class BasicTextInputSingleLineExample extends React.Component<any
               'undefined'
             }
           >
-          </TextInputSingleLine>
-          <TextInputSingleLine
-            left="标题"
+            标题
+          </TeAxtInputSingleLine>
+          <TeAxtInputSingleLine
             clear
             placeholder="点击下方按钮该输入框会获取光标"
             ref={(el: any) => (this.inputRef = el)}
           >
-          </TextInputSingleLine>
+            标题
+          </TeAxtInputSingleLine>
           <List.Item>
             <Button
               onClick={() => {
@@ -109,118 +108,112 @@ export default class BasicTextInputSingleLineExample extends React.Component<any
           </List.Item>
         </List>
         <List renderHeader={() => '固定标签字数'}>
-          <TextInputSingleLine
-            left="姓名"
+          <TeAxtInputSingleLine
             clear
             value={this.state.labelnum1}
-            onChange={(event: any) => {
+            onChange={(value: any) => {
               this.setState({
-                labelnum1:event.nativeEvent.text,
+                labelnum1: value,
               });
             }}
             labelNumber={2}
             placeholder="两个字标签"
           >
-          </TextInputSingleLine>
-          <TextInputSingleLine
-            left="校验码"
+            姓名
+          </TeAxtInputSingleLine>
+          <TeAxtInputSingleLine
             clear
             value={this.state.labelnum2}
-            onChange={(event: any) => {
+            onChange={(value: any) => {
               this.setState({
-                labelnum2:event.nativeEvent.text,
+                labelnum2: value,
               });
             }}
             labelNumber={3}
             placeholder="三个字标签"
           >
-            
-          </TextInputSingleLine>
-          <TextInputSingleLine
-            left="四字标签"
+            校验码
+          </TeAxtInputSingleLine>
+          <TeAxtInputSingleLine
             clear
             value={this.state.labelnum3}
-            onChange={(event: any) => {
+            onChange={(value: any) => {
               this.setState({
-                labelnum3:event.nativeEvent.text,
+                labelnum3: value,
               });
             }}
             labelNumber={4}
             placeholder="四个字标签（默认）"
           >
-          </TextInputSingleLine>
+            四字标签
+          </TeAxtInputSingleLine>
         </List>
         <List renderHeader={() => '格式'}>
-          <TextInputSingleLine
-            left="文本输入"
+          <TeAxtInputSingleLine
             clear
             error
             value={this.state.text}
-            onChange={(event: any) => {
+            onChange={(value: any) => {
               this.setState({
-                text:event.nativeEvent.text,
+                text: value,
               });
             }}
             placeholder="text"
           >
-            
-          </TextInputSingleLine>
-          <TextInputSingleLine
-            left="银行卡"
+            文本输入
+          </TeAxtInputSingleLine>
+          <TeAxtInputSingleLine
             clear
             type="bankCard"
             value={this.state.bankcard}
-            onChange={(event: any) => {
+            onChange={(value: any) => {
               this.setState({
-                bankcard:event.nativeEvent.text,
+                bankcard: value,
               });
             }}
             placeholder="bankCard"
           >
-            
-          </TextInputSingleLine>
-          <TextInputSingleLine
-            left="手机号"
+            银行卡
+          </TeAxtInputSingleLine>
+          <TeAxtInputSingleLine
             clear
             type="phone"
             value={this.state.phone}
-            onChange={(event: any) => {
+            onChange={(value: any) => {
               this.setState({
-                phone:event.nativeEvent.text,
+                phone: value,
               });
             }}
             placeholder="phone"
           >
-            
-          </TextInputSingleLine>
-          <TextInputSingleLine
-            left="密码"
+            手机号
+          </TeAxtInputSingleLine>
+          <TeAxtInputSingleLine
             clear
             type="password"
             value={this.state.password}
-            onChange={(event: any) => {
+            onChange={(value: any) => {
               this.setState({
-                password:event.nativeEvent.text,
+                password: value,
               });
             }}
             placeholder="password"
           >
-            
-          </TextInputSingleLine>
-          <TextInputSingleLine
-            left="数字"
+            密码
+          </TeAxtInputSingleLine>
+          <TeAxtInputSingleLine
             clear
             type="number"
             value={this.state.number}
-            onChange={(event: any) => {
+            onChange={(value: any) => {
               this.setState({
-                number:event.nativeEvent.text,
+                number: value,
               });
             }}
             placeholder="number"
           >
-            
-          </TextInputSingleLine>
+            数字
+          </TeAxtInputSingleLine>
         </List>
       </ScrollView>
     );

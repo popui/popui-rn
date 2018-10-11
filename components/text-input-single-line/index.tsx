@@ -36,7 +36,7 @@ const keyboardTypeArray = [
  */
 export type TextInputProps = Omit<
   TextInputProperties,
-  'onChange' | 'onFocus' | 'onBlur'
+  'onChangeText' | 'onFocus' | 'onBlur'
   >;
 
 export interface TextInputSingleLineProps extends TextInputSingleLinePropsType, TextInputProps {
@@ -61,7 +61,7 @@ export default class TextInputSingleLine extends React.Component<TextInputSingle
     type: 'text',
     editable: true,
     clear: false,
-    onChange: noop,
+    onChangeText: noop,
     onBlur: noop,
     onFocus: noop,
     extra: '',
@@ -77,9 +77,9 @@ export default class TextInputSingleLine extends React.Component<TextInputSingle
 
   inputRef: Input | null;
 
-  onChange = (event: any) => {
+  onChangeText = (event: any) => {
     let {text} = event.nativeEvent;
-    const { onChange, type } = this.props;
+    const { onChangeText, type } = this.props;
     const maxLength = this.props.maxLength as number;
     switch (type) {
       case 'bankCard':
@@ -103,8 +103,8 @@ export default class TextInputSingleLine extends React.Component<TextInputSingle
       default:
         break;
     }
-    if (onChange) {
-      onChange(event);
+    if (onChangeText) {
+      onChangeText(event);
     }
   }
 
@@ -121,15 +121,12 @@ export default class TextInputSingleLine extends React.Component<TextInputSingle
   }
 
   onInputClear = () => {
-    console.log("onInputClear")
     if (this.inputRef) {
-      console.log("onInputClear inputRef")
       this.inputRef.clear();
     }
-    const { onChange } = this.props;
-    if (onChange) {
-      console.log("onInputClear onChange")
-      onChange('');
+    const { onChangeText } = this.props;
+    if (onChangeText) {
+      onChangeText('');
     }
   }
 
@@ -268,7 +265,7 @@ export default class TextInputSingleLine extends React.Component<TextInputSingle
       {...valueProps}
       style={[styles.input, error ? styles.inputErrorColor : null]}
       keyboardType={keyboardType}
-      onChange={this.onChange}
+      onChangeText={this.onChangeText}
       secureTextEntry={type === 'password'}
       onBlur={this.onInputBlur}
       onFocus={this.onInputFocus}
