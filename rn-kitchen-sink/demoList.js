@@ -174,12 +174,6 @@ module.exports = {
       module: require('../components/form/demo/input'),
     },
     {
-      title: 'Form Slider',
-      description: '滑块',
-      icon: 'https://os.alipayobjects.com/rmsportal/SdSqpihcSBoBrFO.png',
-      module: require('../components/form/demo/slider'),
-    },
-    {
       title: 'Form Uploader',
       description: '上传图片',
       icon: 'https://os.alipayobjects.com/rmsportal/SdSqpihcSBoBrFO.png',

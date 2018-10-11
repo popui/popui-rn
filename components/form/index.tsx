@@ -4,7 +4,6 @@ import Input from './Input'
 import Label from './Label'
 import RadioCells from './RadioCells'
 import Select from './Select'
-import Slider from './Slider'
 import Switch from './Switch'
 import TextArea from './TextArea'
 import Uploader from './Uploader'
@@ -18,6 +17,5 @@ export default {
     Uploader,
     Label,
     Select,
-    Slider,
     Agreement,
 }
