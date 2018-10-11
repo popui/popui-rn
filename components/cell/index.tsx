@@ -17,3 +17,15 @@ export default {
     CellFooter,
     CellText,
 }
+
+
+export {
+    Cells,
+    CellsTitle,
+    CellsTips,
+    Cell,
+    CellHeader,
+    CellBody,
+    CellFooter,
+    CellText,
+}

@@ -93,7 +93,7 @@ export class UnderLineTabBar extends PureComponent {
 
     onTabLayout(event, page) {
         const { tabs } = this.props
-        const { x, y, width, height } = eventEvent.layout
+        const { x, y, width, height } = event.layout
         this.tabState[page] = { x, y, width, height }
         if (tabs.length === Object.keys(this.tabState).length) {
             this.setState({ renderUnderline: true })

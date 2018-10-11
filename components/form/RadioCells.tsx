@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types'
 import React from 'react'
 import { StyleSheet, ViewPropTypes } from 'react-native'
-import { Cell, CellBody, Cells, CellText } from 'popui-rn/components/Cell'
+import { Cell, CellBody, Cells, CellText } from 'popui-rn/components/cell'
 import IconWeui from '../icon-weui'
 import V from '../style/themes/weui'
 
@@ -30,13 +30,13 @@ const RadioCells = ({ value, options, onChange, disabled, style, children, ...ot
         {children}
     </Cells>
 
-RadioCells.propTypes = {
-    value: PropTypes.any,
-    options: PropTypes.array.isRequired,
-    onChange: PropTypes.func,
-    disabled: PropTypes.bool,
-    style: IconWeui.propTypes.style,
-    children: PropTypes.node,
-}
+// RadioCells.propTypes = {
+//     value: PropTypes.any,
+//     options: PropTypes.array.isRequired,
+//     onChange: PropTypes.func,
+//     disabled: PropTypes.bool,
+//     style: IconWeui.propTypes.style,
+//     children: PropTypes.node,
+// }
 
 export default RadioCells

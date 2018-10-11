@@ -73,7 +73,7 @@ export default class TextAreaItem extends React.Component<
       eventCount: number;
     };
   }) => {
-    const text = eventEvent.text;
+    const text = event.nativeEvent.text;
     const { onChange } = this.props;
 
     this.setState({
@@ -92,7 +92,7 @@ export default class TextAreaItem extends React.Component<
     const { autoHeight, onContentSizeChange } = this.props;
     const rows = this.props.rows as number;
     if (autoHeight) {
-      height = eventEvent.contentSize.height;
+      height = event.contentSize.height;
     } else if (rows > 1) {
       height = 6 * rows * 4;
     } else {

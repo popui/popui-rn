@@ -1,24 +1,16 @@
 import React from 'react'
 
-import { Image, Text } from 'react-native'
+import { Image, Text,ScrollView } from 'react-native'
 import {
-    Agreement, Cell, CellBody, CellFooter, CellHeader, Cells, CellsTips, CellsTitle, CellText, CheckboxCells, Input, Label, WingBlank,
-    RadioCells, Switch, TextArea,
+ Form as FormComps,  
 } from 'popui-rn'
-
-
+import CellComp from 'popui-rn/components/cell';
+const { Cell, CellBody, CellFooter, CellHeader, Cells, CellsTips, CellsTitle, CellText, } = CellComp
+ const { CheckboxCells, Input, Label,RadioCells, Switch, TextArea,Agreement} = FormComps
 export interface IProps  {
 
 }
-
-
-
-
 export default class InputScreen extends React.Component<IProps, any> {
-    static navigationOptions = {
-        title: 'Input',
-    }
-
     private constructor() {
         super()
         this.state = {
@@ -37,7 +29,7 @@ export default class InputScreen extends React.Component<IProps, any> {
 
     render() {
         return (
-            <WingBlank>
+            <ScrollView>
                 <CellsTitle>单选列表项</CellsTitle>
                 <RadioCells
                     options={[
@@ -119,7 +111,7 @@ export default class InputScreen extends React.Component<IProps, any> {
                     value={this.state.agreement}
                     onChange={value => this.setState({ agreement: value })}
                 >同意该协议</Agreement>
-            </WingBlank>
+            </ScrollView>
         )
     }
 

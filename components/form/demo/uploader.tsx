@@ -1,14 +1,11 @@
 import React from 'react'
-
-import { Cell, CellBody, Cells, CellsTitle, WingBlank } from 'popui-rn'
-
+import { Image, Text,ScrollView } from 'react-native'
+import CellComp from 'popui-rn/components/cell';
+const { Cell, CellBody, CellFooter, CellHeader, Cells, CellsTips, CellsTitle, CellText, } = CellComp
 
 export interface IProps  {
 
 }
-
-
-
 
 export default class UploaderScreen extends React.Component<IProps, any> {
     static navigationOptions = {
@@ -25,7 +22,7 @@ export default class UploaderScreen extends React.Component<IProps, any> {
 
     render() {
         return (
-            <WingBlank>
+            <ScrollView>
                 <CellsTitle>图片上传</CellsTitle>
                 <Cells>
                     <Cell>
@@ -53,7 +50,7 @@ export default class UploaderScreen extends React.Component<IProps, any> {
                         </CellBody>
                     </Cell>
                 </Cells>
-            </WingBlank>
+            </ScrollView>
         )
     }
 

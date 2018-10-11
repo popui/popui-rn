@@ -2,7 +2,7 @@ import xor from 'lodash/xor'
 import PropTypes from 'prop-types'
 import React from 'react'
 import { StyleSheet, ViewPropTypes } from 'react-native'
-import { Cell, CellBody, CellHeader, Cells, CellText } from 'popui-rn/components/Cell'
+import { Cell, CellBody, CellHeader, Cells, CellText } from 'popui-rn/components/cell'
 import IconWeui from '../icon-weui'
 import V from '../style/themes/weui'
 
@@ -50,13 +50,13 @@ const CheckboxCells = ({
   )
 }
 
-CheckboxCells.propTypes = {
-  value: PropTypes.any,
-  onChange: PropTypes.func,
-  options: PropTypes.array.isRequired,
-  disabled: PropTypes.bool,
-  style: IconWeui.propTypes.style,
-  children: PropTypes.node
-}
+// CheckboxCells.propTypes = {
+//   value: PropTypes.any,
+//   onChange: PropTypes.func,
+//   options: PropTypes.array.isRequired,
+//   disabled: PropTypes.bool,
+//   style: IconWeui.propTypes.style,
+//   children: PropTypes.node
+// }
 
 export default CheckboxCells

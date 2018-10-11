@@ -1,14 +1,10 @@
 import React from 'react'
-
-import { WingBlank, Slider } from 'popui-rn'
-
+import { Image, Text,ScrollView } from 'react-native'
+import Slider from 'popui-rn/components/form/Slider';
 
 export interface IProps  {
 
 }
-
-
-
 
 export default class SliderScreen extends React.Component<IProps, any> {
     static navigationOptions = {
@@ -26,7 +22,7 @@ export default class SliderScreen extends React.Component<IProps, any> {
 
     render() {
         return (
-            <WingBlank hasPadddingHorizontal hasPaddingTop>
+            <ScrollView>
                 <Slider
                     max={100}
                     min={0}
@@ -38,7 +34,7 @@ export default class SliderScreen extends React.Component<IProps, any> {
                     value={this.state.sliderValue}
                     onChange={this.handleSliderChange}
                 />
-            </WingBlank>
+            </ScrollView>
         )
     }
 
