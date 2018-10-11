@@ -2,13 +2,11 @@
 import React from 'react';
 import {
   GestureResponderEvent,
-  Image,
   StyleSheet,
   Text,
   TextInputProperties,
   TouchableWithoutFeedback,
   View,
-  Platform,
   TouchableOpacity,
 } from 'react-native';
 import variables from '../style/themes/default';
@@ -106,7 +104,7 @@ export default class TextInputSingleLine extends React.Component<TextInputSingle
         break;
     }
     if (onChange) {
-      onChange(text);
+      onChange(event);
     }
   }
 

@@ -36,32 +36,16 @@ export default class BasicTextInputSingleLineExample extends React.Component<any
         showsHorizontalScrollIndicator={false}
         showsVerticalScrollIndicator={false}
       >
-          <Text>测试: </Text>
-          <TextInputSingleLine
-            left="输入框"
-            error={!this.state.value}
-            clear
-            onErrorPress={() => Alert.alert('clicked me')}
-            value={this.state.value}
-            onChange={(value: any) => {
-              this.setState({
-                value,
-              });
-            }}
-            extra="取消"
-            placeholder="有标签"
-          >
-          </TextInputSingleLine>
         <List renderHeader={() => '基本'}>
           <TextInputSingleLine
             left="输入框"
             clear
-            error
+            error={!this.state.value}
             onErrorPress={() => Alert.alert('clicked me')}
             value={this.state.value}
-            onChange={(value: any) => {
+            onChange={(event: any) => {
               this.setState({
-                value,
+                value:event.nativeEvent.text,
               });
             }}
             extra="元"
@@ -75,9 +59,9 @@ export default class BasicTextInputSingleLineExample extends React.Component<any
               Alert.alert("1");
             }}
             value="不可编辑"
-            onChange={(value: any) => {
+            onChange={(event: any) => {
               this.setState({
-                value,
+                value:event.nativeEvent.text,
               });
             }}
             extra={<Text>元</Text>}
@@ -88,9 +72,9 @@ export default class BasicTextInputSingleLineExample extends React.Component<any
           <TextInputSingleLine
             clear
             value={this.state.value1}
-            onChange={(value: any) => {
+            onChange={(event: any) => {
               this.setState({
-                value1: value,
+                value1:event.nativeEvent.text,
               });
             }}
             placeholder="无标签"
@@ -129,9 +113,9 @@ export default class BasicTextInputSingleLineExample extends React.Component<any
             left="姓名"
             clear
             value={this.state.labelnum1}
-            onChange={(value: any) => {
+            onChange={(event: any) => {
               this.setState({
-                labelnum1: value,
+                labelnum1:event.nativeEvent.text,
               });
             }}
             labelNumber={2}
@@ -142,9 +126,9 @@ export default class BasicTextInputSingleLineExample extends React.Component<any
             left="校验码"
             clear
             value={this.state.labelnum2}
-            onChange={(value: any) => {
+            onChange={(event: any) => {
               this.setState({
-                labelnum2: value,
+                labelnum2:event.nativeEvent.text,
               });
             }}
             labelNumber={3}
@@ -156,9 +140,9 @@ export default class BasicTextInputSingleLineExample extends React.Component<any
             left="四字标签"
             clear
             value={this.state.labelnum3}
-            onChange={(value: any) => {
+            onChange={(event: any) => {
               this.setState({
-                labelnum3: value,
+                labelnum3:event.nativeEvent.text,
               });
             }}
             labelNumber={4}
@@ -172,9 +156,9 @@ export default class BasicTextInputSingleLineExample extends React.Component<any
             clear
             error
             value={this.state.text}
-            onChange={(value: any) => {
+            onChange={(event: any) => {
               this.setState({
-                text: value,
+                text:event.nativeEvent.text,
               });
             }}
             placeholder="text"
@@ -186,9 +170,9 @@ export default class BasicTextInputSingleLineExample extends React.Component<any
             clear
             type="bankCard"
             value={this.state.bankcard}
-            onChange={(value: any) => {
+            onChange={(event: any) => {
               this.setState({
-                bankcard: value,
+                bankcard:event.nativeEvent.text,
               });
             }}
             placeholder="bankCard"
@@ -200,9 +184,9 @@ export default class BasicTextInputSingleLineExample extends React.Component<any
             clear
             type="phone"
             value={this.state.phone}
-            onChange={(value: any) => {
+            onChange={(event: any) => {
               this.setState({
-                phone: value,
+                phone:event.nativeEvent.text,
               });
             }}
             placeholder="phone"
@@ -214,9 +198,9 @@ export default class BasicTextInputSingleLineExample extends React.Component<any
             clear
             type="password"
             value={this.state.password}
-            onChange={(value: any) => {
+            onChange={(event: any) => {
               this.setState({
-                password: value,
+                password:event.nativeEvent.text,
               });
             }}
             placeholder="password"
@@ -228,9 +212,9 @@ export default class BasicTextInputSingleLineExample extends React.Component<any
             clear
             type="number"
             value={this.state.number}
-            onChange={(value: any) => {
+            onChange={(event: any) => {
               this.setState({
-                number: value,
+                number:event.nativeEvent.text,
               });
             }}
             placeholder="number"

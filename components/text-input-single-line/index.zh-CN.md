@@ -27,7 +27,7 @@ subtitle: 文本输入
 | editable    | 是否可编辑        | bool |  true  |
 | clear      |  是否带清除功能(仅`editable`为`true`,`disabled`为`false`才生效) | bool | false  |
 | maxLength      |  最大长度      | number |  无  |
-| onChange    | change 事件触发的回调函数 | (val: string): void |  -  |
+| onChange    | change 事件触发的回调函数 | (event: any): void |  -  |
 | onBlur     | blur 事件触发的回调函数 | (val: string): void |   -  |
 | onFocus    | focus 事件触发的回调函数 | (val: string): void |  -  |
 | error       | 报错样式        | bool |  false  |

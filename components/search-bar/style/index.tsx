@@ -18,7 +18,7 @@ export default {
     backgroundColor: variables.search_bar_fill,
     height: variables.search_bar_height,
     paddingLeft: wrapperPaddingLeft,
-    // paddingRight: wrapperPaddingLeft,
+    paddingRight: wrapperPaddingLeft,
     flexDirection: 'row',
     alignItems: 'center',
   },
@@ -50,7 +50,6 @@ export default {
   },
   cancelTextBtn: {
     height: variables.search_bar_input_height,
-    paddingRight: wrapperPaddingLeft, // 使取消按钮尽可能有更大的有效点击区域
     justifyContent: 'center',
     alignItems: 'center',
   },
