@@ -1,6 +1,5 @@
 import CheckboxCells from './CheckboxCells'
 import Input from './Input'
-import Label from './Label'
 import RadioCells from './RadioCells'
 import Select from './Select'
 import TextArea from './TextArea'
@@ -12,6 +11,5 @@ export default {
     RadioCells,
     CheckboxCells,
     Uploader,
-    Label,
     Select,
 }

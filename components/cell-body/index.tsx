@@ -3,7 +3,7 @@ import React from 'react'
 import { StyleSheet, View, ViewPropTypes } from 'react-native'
 import IconWeui from '../icon-weui'
 import V from '../style/themes/weui'
-import CellText from './CellText'
+import CellText from '../cell-text'
 
 const styles = StyleSheet.create({
     cellBody: {
