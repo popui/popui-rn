@@ -1,10 +1,10 @@
 import React from 'react'
 
-import { Image, Text,ScrollView } from 'react-native'
+import { Image, Text,View } from 'react-native'
 import {
  Form as FormComps,  
 } from 'popui-rn'
-import CellComp from 'popui-rn/components/cell';
+import CellComp from 'popui-rn';
 const { Cell, CellBody, CellFooter, CellHeader, Cells, CellsTips, CellsTitle, CellText, } = CellComp
  const { CheckboxCells, Input, Label,RadioCells,  TextArea} = FormComps
 export interface IProps  {
@@ -29,7 +29,7 @@ export default class InputScreen extends React.Component<IProps, any> {
 
     render() {
         return (
-            <ScrollView>
+            <View>
                 {/* <CellsTitle>单选列表项</CellsTitle>
                 <RadioCells
                     options={[
@@ -65,7 +65,6 @@ export default class InputScreen extends React.Component<IProps, any> {
                     disabled
                 /> */}
    
-                <CellsTitle>表单</CellsTitle>
                 <Cells>
                     <Cell>
                         <CellHeader><Label>qq</Label></CellHeader>
@@ -83,8 +82,7 @@ export default class InputScreen extends React.Component<IProps, any> {
                         <CellFooter><Image source={{ uri: 'https://weui.io/images/vcode.jpg' }}/></CellFooter>
                     </Cell>
                 </Cells>
-                <CellsTips>底部说明文字底部说明文字</CellsTips>
-            </ScrollView>
+            </View>
         )
     }
 

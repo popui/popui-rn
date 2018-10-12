@@ -1,8 +1,7 @@
 import xor from 'lodash/xor'
-import PropTypes from 'prop-types'
 import React from 'react'
-import { StyleSheet, ViewPropTypes } from 'react-native'
-import { Cell, CellBody, CellHeader, Cells, CellText } from 'popui-rn/components/cell'
+import { StyleSheet } from 'react-native'
+import { Cell, CellBody, CellHeader, Cells, CellText } from 'popui-rn'
 import IconWeui from '../icon-weui'
 import V from '../style/themes/weui'
 

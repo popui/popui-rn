@@ -1,6 +1,7 @@
 import React from 'react'
 import { StyleSheet } from 'react-native'
-import { Cell, CellBody, Cells, CellText } from 'popui-rn/components/cell'
+import { Cell, CellBody, Cells, CellText } from 'popui-rn'
+
 import IconWeui from '../icon-weui'
 import V from '../style/themes/weui'
 
