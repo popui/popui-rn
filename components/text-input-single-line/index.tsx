@@ -216,7 +216,8 @@ export default class TextInputSingleLine extends React.Component<TextInputSingle
     }
     const containerStyle = {
       borderBottomWidth,
-      borderBottomColor: error ? 'red' : variables.border_color_base,
+      // borderBottomColor: error ? 'red' : variables.border_color_base,
+      borderBottomColor:  variables.border_color_base,
     };
     return (
       <View style={[styles.container, containerStyle, style]}>

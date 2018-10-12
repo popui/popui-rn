@@ -34,7 +34,7 @@ export default class TextAreaItem extends React.Component<
     onFocus() { },
     onBlur() { },
     onErrorPress() { },
-    clear: true,
+    clear: false,
     error: false,
     editable: true,
     rows: 4,
@@ -202,7 +202,8 @@ export default class TextAreaItem extends React.Component<
     }
     const containerStyle = {
       borderBottomWidth,
-      borderBottomColor: error ? 'red' : variables.border_color_base,
+      borderBottomColor:  variables.border_color_base,
+      // borderBottomColor: error ? 'red' : variables.border_color_base,
     };
     return (
       <View
