@@ -1,6 +1,5 @@
-import PropTypes from 'prop-types'
 import React from 'react'
-import { StyleSheet, Text, ViewPropTypes } from 'react-native'
+import { StyleSheet, Text, ViewPropTypes, ViewStyle } from 'react-native'
 import V from '../style/themes/weui'
 
 const styles = StyleSheet.create({
@@ -12,18 +11,28 @@ const styles = StyleSheet.create({
     },
 })
 
-const Label = ({ style, children, ...others }) =>
-    <Text
+
+export interface CellLabelProps {
+      style?: ViewStyle
+    children?: string
+}
+
+export interface CellLabelState {
+}
+
+export default class CellLabel extends React.Component<CellLabelProps, CellLabelState> {
+  public render() {
+    const { style, children, ...others } = this.props
+    // 最小是4
+    // const textLength = children!.length > 4 ?children!.length:4
+    return (
+      <Text
         style={[styles.label, style]}
         numberOfLines={1}
         {...others}
     >
         {children}
     </Text>
-
-Label.propTypes = {
-    style: Text.propTypes.style,
-    children: PropTypes.node,
+    );
+  }
 }
-
-export default Label

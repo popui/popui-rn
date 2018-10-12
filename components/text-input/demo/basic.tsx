@@ -75,7 +75,7 @@ export default class BasicTextInputExample extends React.Component<any, any> {
                 }}
                 placeholder="有标签"
               />
-              <CellText>元</CellText>
+              <CellText style={{marginLeft: 5,}}>元</CellText>
             </CellBody>
             <CellFooter />
           </Cell>
