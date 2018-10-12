@@ -1,60 +1,101 @@
 /* tslint:disable:jsx-no-multiline-js */
-import React from 'react';
-import { ScrollView, Text, Alert } from 'react-native';
-import { Button, TextInputSingleLine, List } from 'popui-rn';
+import React from "react";
+import {
+  ScrollView,
+  Text,
+  TextInput as RNTextInput,
+  Alert,
+  Image
+} from "react-native";
+import {
+  Button,
+  TextInputSingleLine,
+  List,
+  CellLabel,
+  Cell,
+  CellBody,
+  CellFooter,
+  CellHeader,
+  Cells,
+  CellsTips,
+  CellsTitle,
+  CellText
+} from "popui-rn";
 
 declare var jest: any;
 
-export default class BasicTextInputSingleLineExample extends React.Component<any, any> {
+export default class BasicTextInputSingleLineExample extends React.Component<
+  any,
+  any
+> {
   inputRef: any;
 
   constructor(props: any) {
     super(props);
     this.state = {
-      value: '',
-      value1: '',
-      value2: '',
-      value3: '',
-      value4: '',
-      labelnum1: '',
-      labelnum2: '',
-      labelnum3: '',
-      text: '',
-      bankCard: '',
-      phone: '',
-      password: '',
-      number: '',
+      value: "",
+      value1: "",
+      value2: "",
+      value3: "",
+      value4: "",
+      labelnum1: "",
+      labelnum2: "",
+      labelnum3: "",
+      text: "",
+      bankCard: "",
+      phone: "",
+      password: "",
+      number: ""
     };
   }
-  onClearPress = ()=>{
-    Alert.alert('Clear Pressed!')
-  }
+  onClearPress = () => {
+    Alert.alert("Clear Pressed!");
+  };
   render() {
     return (
       <ScrollView
-        style={{ flex: 1, backgroundColor: '#eee' }}
+        style={{ flex: 1, backgroundColor: "#eee" }}
         automaticallyAdjustContentInsets={false}
         showsHorizontalScrollIndicator={false}
         showsVerticalScrollIndicator={false}
       >
-        <List renderHeader={() => '基本'}>
+        <Cells>
+          <Cell>
+            <CellHeader>
+              <CellLabel>qq</CellLabel>
+            </CellHeader>
+            <CellBody>
+              <RNTextInput placeholder="请输入 qq 号" value={"TEST"} />
+            </CellBody>
+          </Cell>
+          <Cell vcode error>
+            <CellHeader>
+              <CellLabel>验证码</CellLabel>
+            </CellHeader>
+            <CellBody>
+              <RNTextInput placeholder="请输入验证码" defaultValue="111" />
+            </CellBody>
+            <CellFooter>
+              <Image source={{ uri: "https://weui.io/images/vcode.jpg" }} />
+            </CellFooter>
+          </Cell>
+        </Cells>
+        <List renderHeader={() => "基本"}>
           <TextInputSingleLine
             left="输入框"
             clear
             error={!this.state.value}
-            onErrorPress={() => Alert.alert('clicked me')}
+            onErrorPress={() => Alert.alert("clicked me")}
             onClearPress={this.onClearPress}
             value={this.state.value}
             onChangeText={(value: any) => {
               this.setState({
-                value,
+                value
               });
             }}
             extra="元"
             placeholder="有标签"
-          >
-
-          </TextInputSingleLine>
+          />
           <TextInputSingleLine
             left="输入框"
             clear
@@ -66,15 +107,13 @@ export default class BasicTextInputSingleLineExample extends React.Component<any
             extra={"元"}
             placeholder="不可编辑"
             editable={false}
-          >
-
-          </TextInputSingleLine>
+          />
           <TextInputSingleLine
             clear
             value={this.state.value1}
             onChangeText={(value: any) => {
               this.setState({
-                value1: value,
+                value1: value
               });
             }}
             onClearPress={this.onClearPress}
@@ -88,20 +127,16 @@ export default class BasicTextInputSingleLineExample extends React.Component<any
             onClearPress={this.onClearPress}
             autoFocus={
               /* TODO: https://github.com/facebook/jest/issues/3707  */ typeof jest ===
-              'undefined'
+              "undefined"
             }
-          >
-
-          </TextInputSingleLine>
+          />
           <TextInputSingleLine
             left="标题"
             clear
             onClearPress={this.onClearPress}
             placeholder="点击下方按钮该输入框会获取光标"
             ref={(el: any) => (this.inputRef = el)}
-          >
-
-          </TextInputSingleLine>
+          />
           <List.Item>
             <Button
               onClick={() => {
@@ -113,7 +148,7 @@ export default class BasicTextInputSingleLineExample extends React.Component<any
             </Button>
           </List.Item>
         </List>
-        <List renderHeader={() => '固定标签字数'}>
+        <List renderHeader={() => "固定标签字数"}>
           <TextInputSingleLine
             left="姓名"
             clear
@@ -121,14 +156,12 @@ export default class BasicTextInputSingleLineExample extends React.Component<any
             value={this.state.labelnum1}
             onChangeText={(value: any) => {
               this.setState({
-                labelnum1: value,
+                labelnum1: value
               });
             }}
             labelNumber={2}
             placeholder="两个字标签"
-          >
-
-          </TextInputSingleLine>
+          />
           <TextInputSingleLine
             left="校验码"
             clear
@@ -136,14 +169,12 @@ export default class BasicTextInputSingleLineExample extends React.Component<any
             value={this.state.labelnum2}
             onChangeText={(value: any) => {
               this.setState({
-                labelnum2: value,
+                labelnum2: value
               });
             }}
             labelNumber={3}
             placeholder="三个字标签"
-          >
-
-          </TextInputSingleLine>
+          />
           <TextInputSingleLine
             left="四字标签"
             clear
@@ -151,16 +182,14 @@ export default class BasicTextInputSingleLineExample extends React.Component<any
             value={this.state.labelnum3}
             onChangeText={(value: any) => {
               this.setState({
-                labelnum3: value,
+                labelnum3: value
               });
             }}
             labelNumber={4}
             placeholder="四个字标签（默认）"
-          >
-
-          </TextInputSingleLine>
+          />
         </List>
-        <List renderHeader={() => '格式'}>
+        <List renderHeader={() => "格式"}>
           <TextInputSingleLine
             left="文本输入"
             clear
@@ -169,13 +198,11 @@ export default class BasicTextInputSingleLineExample extends React.Component<any
             value={this.state.text}
             onChangeText={(value: any) => {
               this.setState({
-                text: value,
+                text: value
               });
             }}
             placeholder="text"
-          >
-
-          </TextInputSingleLine>
+          />
           <TextInputSingleLine
             left="银行卡"
             clear
@@ -184,13 +211,11 @@ export default class BasicTextInputSingleLineExample extends React.Component<any
             value={this.state.bankcard}
             onChangeText={(value: any) => {
               this.setState({
-                bankcard: value,
+                bankcard: value
               });
             }}
             placeholder="bankCard"
-          >
-
-          </TextInputSingleLine>
+          />
           <TextInputSingleLine
             left="手机号"
             clear
@@ -199,13 +224,11 @@ export default class BasicTextInputSingleLineExample extends React.Component<any
             value={this.state.phone}
             onChangeText={(value: any) => {
               this.setState({
-                phone: value,
+                phone: value
               });
             }}
             placeholder="phone"
-          >
-
-          </TextInputSingleLine>
+          />
           <TextInputSingleLine
             left="密码"
             clear
@@ -214,13 +237,11 @@ export default class BasicTextInputSingleLineExample extends React.Component<any
             value={this.state.password}
             onChangeText={(value: any) => {
               this.setState({
-                password: value,
+                password: value
               });
             }}
             placeholder="password"
-          >
-
-          </TextInputSingleLine>
+          />
           <TextInputSingleLine
             left="数字"
             clear
@@ -229,13 +250,11 @@ export default class BasicTextInputSingleLineExample extends React.Component<any
             value={this.state.number}
             onChangeText={(value: any) => {
               this.setState({
-                number: value,
+                number: value
               });
             }}
             placeholder="number"
-          >
-
-          </TextInputSingleLine>
+          />
         </List>
       </ScrollView>
     );
