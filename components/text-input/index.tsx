@@ -1,8 +1,16 @@
 import React from 'react';
-import { TextInput } from 'react-native';
+import { TextInput as RNTextInput } from 'react-native';
 import { TextInputProps} from './PropsType'
 
-class Input extends React.Component<TextInputProps, any> {
+function normalizeValue(value?: string) {
+  if (typeof value === 'undefined' || value === null) {
+    return '';
+  }
+  return value;
+}
+
+
+export default class PopTextInput extends React.Component<TextInputProps, any> {
   inputRef: TextInput | null;
 
   focus = () => {
@@ -22,15 +30,36 @@ class Input extends React.Component<TextInputProps, any> {
     }
     return false
   }
+  getValueProps = () => {
+    const {
+      value, defaultValue
+    } = this.props;
+    let valueProps;
+    if ('value' in this.props) {
+      valueProps = {
+        value: normalizeValue(value),
+      };
+    } else {
+      valueProps = {
+        defaultValue,
+      };
+    }
+    console.log('getValueProps',{
+      valueProps
+    })
+    return valueProps
+  }
   render() {
+    const valueProps = this.getValueProps()
     return (
-      <TextInput
+      <RNTextInput
         ref={el => ((this.inputRef as any) = el)}
+        clearButtonMode={'always'}
         underlineColorAndroid="transparent"
+        placeholderTextColor={'#B2B2B2'}
         {...this.props}
+        {...valueProps}
       />
     );
   }
 }
-
-export default Input;

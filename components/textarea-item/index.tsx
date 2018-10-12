@@ -3,7 +3,6 @@ import React from 'react';
 import {
   StyleSheet,
   Text,
-  TextInput,
   TextInputProperties,
   View,
   NativeSyntheticEvent,
@@ -14,13 +13,7 @@ import { TextAreaItemPropsType } from './PropsType';
 import TextAreaItemStyle, { ITextareaItemStyle } from './style/index';
 import TextInputControls from '../text-input-controls'
 import get from 'lodash/get'
-
-function fixControlledValue(value?: string) {
-  if (typeof value === 'undefined' || value === null) {
-    return '';
-  }
-  return value;
-}
+import TextInput from '../text-input';
 
 export interface TextareaItemNativeProps
   extends TextAreaItemPropsType,
@@ -41,7 +34,6 @@ export default class TextAreaItem extends React.Component<
     onFocus() { },
     onBlur() { },
     onErrorPress() { },
-    value:'',
     clear: true,
     error: false,
     editable: true,
@@ -56,7 +48,7 @@ export default class TextAreaItem extends React.Component<
   constructor(props: TextareaItemNativeProps) {
     super(props);
     this.state = {
-      value:props.defaultValue || props.value,
+      // value:props.defaultValue || props.value,
       inputCount: 0,
       height:
         props.rows !== undefined && props.rows > 1
@@ -64,19 +56,19 @@ export default class TextAreaItem extends React.Component<
           : variables.list_item_height,
     };
   }
-  static getDerivedStateFromProps(nextProps:TextareaItemNativeProps, prevState:any){
-    if(nextProps.value !== prevState.value){
-      return {
-        value: fixControlledValue(nextProps.value)
-      }
-    }
-    return null
-  }
+  // static getDerivedStateFromProps(nextProps:TextareaItemNativeProps, prevState:any){
+  //   if(nextProps.value !== prevState.value){
+  //     return {
+  //       value: fixControlledValue(nextProps.value)
+  //     }
+  //   }
+  //   return null
+  // }
   onChange = (event:NativeSyntheticEvent<TextInputChangeEventData>) => {
     const text = event.nativeEvent.text
     const { onChange } = this.props;
     this.setState({
-      value:text,
+      // value:text,
       inputCount: text.length,
     });
 
@@ -85,13 +77,13 @@ export default class TextAreaItem extends React.Component<
     }
   }
   onClearPress = ()=>{
-    if (this.inputRef) {
-      this.inputRef.clear();
-    }
-    this.setState({
-      value:'',
-      inputCount:0
-    })
+    // if (this.inputRef) {
+    //   this.inputRef.clear();
+    // }
+    // this.setState({
+    //   value:'',
+    //   inputCount:0
+    // })
     const { onClearPress } = this.props;
     if(onClearPress){
       onClearPress()
@@ -115,11 +107,9 @@ export default class TextAreaItem extends React.Component<
     } else {
       height = variables.list_item_height;
     }
-
     this.setState({
       height,
     });
-
     if (onContentSizeChange) {
       onContentSizeChange(event);
     }
@@ -145,14 +135,11 @@ export default class TextAreaItem extends React.Component<
       error,
       clear,
       count,
-      onBlur,
-      onFocus,
       autoHeight,
       last,
       onErrorPress,
       styles,
       style,
-      defaultValue,
       ...restProps
     } = this.props;
     const textareaStyle = {
@@ -166,24 +153,17 @@ export default class TextAreaItem extends React.Component<
       { height: Math.max(45, this.state.height) },
       style,
     ]
-    const {value} = this.state
     return (
       <TextInput
         ref={el => (this.inputRef = el)}
-        clearButtonMode={'never'}
-        underlineColorAndroid="transparent"
-        placeholderTextColor={'#B2B2B2'}
-        style={inputStyle}
-        defaultValue={defaultValue}
         {...restProps}
-        value={value}
+        clearButtonMode={'never'}
+        style={inputStyle}
         onChange={this.onChange}
         onContentSizeChange={this.onContentSizeChange}
         multiline={rows! > 1 || autoHeight}
         numberOfLines={rows}
         maxLength={maxLength}
-        onBlur={onBlur}
-        onFocus={onFocus}
       />
     )
   }

@@ -26,7 +26,9 @@ export default class BasicTextInputSingleLineExample extends React.Component<any
       number: '',
     };
   }
-
+  onClearPress = ()=>{
+    Alert.alert('Clear Pressed!')
+  }
   render() {
     return (
       <ScrollView
@@ -41,6 +43,7 @@ export default class BasicTextInputSingleLineExample extends React.Component<any
             clear
             error={!this.state.value}
             onErrorPress={() => Alert.alert('clicked me')}
+            onClearPress={this.onClearPress}
             value={this.state.value}
             onChangeText={(value: any) => {
               this.setState({
@@ -58,6 +61,7 @@ export default class BasicTextInputSingleLineExample extends React.Component<any
             onErrorPress={() => {
               Alert.alert("can not edit");
             }}
+            onClearPress={this.onClearPress}
             value="不可编辑"
             extra={"元"}
             placeholder="不可编辑"
@@ -73,6 +77,7 @@ export default class BasicTextInputSingleLineExample extends React.Component<any
                 value1: value,
               });
             }}
+            onClearPress={this.onClearPress}
             placeholder="无标签"
           />
           <TextInputSingleLine
@@ -80,6 +85,7 @@ export default class BasicTextInputSingleLineExample extends React.Component<any
             defaultValue="xx"
             clear
             placeholder="自动获取光标"
+            onClearPress={this.onClearPress}
             autoFocus={
               /* TODO: https://github.com/facebook/jest/issues/3707  */ typeof jest ===
               'undefined'
@@ -90,6 +96,7 @@ export default class BasicTextInputSingleLineExample extends React.Component<any
           <TextInputSingleLine
             left="标题"
             clear
+            onClearPress={this.onClearPress}
             placeholder="点击下方按钮该输入框会获取光标"
             ref={(el: any) => (this.inputRef = el)}
           >
@@ -110,6 +117,7 @@ export default class BasicTextInputSingleLineExample extends React.Component<any
           <TextInputSingleLine
             left="姓名"
             clear
+            onClearPress={this.onClearPress}
             value={this.state.labelnum1}
             onChangeText={(value: any) => {
               this.setState({
@@ -124,6 +132,7 @@ export default class BasicTextInputSingleLineExample extends React.Component<any
           <TextInputSingleLine
             left="校验码"
             clear
+            onClearPress={this.onClearPress}
             value={this.state.labelnum2}
             onChangeText={(value: any) => {
               this.setState({
@@ -138,6 +147,7 @@ export default class BasicTextInputSingleLineExample extends React.Component<any
           <TextInputSingleLine
             left="四字标签"
             clear
+            onClearPress={this.onClearPress}
             value={this.state.labelnum3}
             onChangeText={(value: any) => {
               this.setState({
@@ -154,6 +164,7 @@ export default class BasicTextInputSingleLineExample extends React.Component<any
           <TextInputSingleLine
             left="文本输入"
             clear
+            onClearPress={this.onClearPress}
             error
             value={this.state.text}
             onChangeText={(value: any) => {
@@ -168,6 +179,7 @@ export default class BasicTextInputSingleLineExample extends React.Component<any
           <TextInputSingleLine
             left="银行卡"
             clear
+            onClearPress={this.onClearPress}
             type="bankCard"
             value={this.state.bankcard}
             onChangeText={(value: any) => {
@@ -182,6 +194,7 @@ export default class BasicTextInputSingleLineExample extends React.Component<any
           <TextInputSingleLine
             left="手机号"
             clear
+            onClearPress={this.onClearPress}
             type="phone"
             value={this.state.phone}
             onChangeText={(value: any) => {
@@ -196,6 +209,7 @@ export default class BasicTextInputSingleLineExample extends React.Component<any
           <TextInputSingleLine
             left="密码"
             clear
+            onClearPress={this.onClearPress}
             type="password"
             value={this.state.password}
             onChangeText={(value: any) => {
@@ -210,6 +224,7 @@ export default class BasicTextInputSingleLineExample extends React.Component<any
           <TextInputSingleLine
             left="数字"
             clear
+            onClearPress={this.onClearPress}
             type="number"
             value={this.state.number}
             onChangeText={(value: any) => {
