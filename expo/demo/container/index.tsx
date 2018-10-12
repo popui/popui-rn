@@ -3,8 +3,8 @@ import { StyleSheet,  SafeAreaView,Text } from 'react-native';
 import ResourceLoader from '../common/ResourceLoader';
 // import SearchBarExample from 'popui-rn/components/search-bar/demo/basic';
 // import ListExample from 'popui-rn/components/list/demo/basic';
-import TextInputWithControlsExample from 
-'popui-rn/components/text-input-with-controls/demo/basic';
+import TextInputExample from
+'popui-rn/components/text-input/demo/basic';
 // import FormInputExample from 'popui-rn/components/form/demo/input';
 // import TextAreaExample from 'popui-rn/components/textarea-item/demo/basic';
 // import BasicTextInputControlsExample from 'popui-rn/components/text-input-controls/demo/basic';
@@ -16,8 +16,8 @@ export default class App extends React.Component {
         <SafeAreaView style={styles.container}>
         {/* <Text>Form Input: </Text>  */}
            {/* <FormInputExample /> */}
-           <Text>TextInputSingleLineExample:</Text>
-          <TextInputWithControlsExample />
+           <Text>TextInput Example:</Text>
+          <TextInputExample />
 
           {/* <Text>TextArea Example:</Text>
           <TextAreaExample /> */}

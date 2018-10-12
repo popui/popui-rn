@@ -27,7 +27,7 @@ declare var jest: any;
 export default class BasicTextInputWithControlsExample extends React.Component<
   any,
   any
-> {
+  > {
   inputRef: any;
 
   constructor(props: any) {
@@ -62,21 +62,32 @@ export default class BasicTextInputWithControlsExample extends React.Component<
         <Cells>
           <Cell access error>
             <CellHeader>
-              <CellLabel>qq</CellLabel>
-            </CellHeader>
-            <CellBody>
-              <RNTextInput placeholder="请输入 qq 号" value={this.state.text} />
-            </CellBody>
-            <CellFooter />
-          </Cell>
-          <Cell access >
-            <CellHeader error>
-              <CellLabel>qq</CellLabel>
+              <CellLabel>qq1</CellLabel>
             </CellHeader>
             <CellBody>
               <TextInputWithControls
                 clear
-                error
+                onErrorPress={() => Alert.alert("clicked me")}
+                onClearPress={this.onClearPress}
+                value={this.state.value}
+                onChangeText={(value: any) => {
+                  this.setState({
+                    value
+                  });
+                }}
+                placeholder="有标签"
+              />
+              <CellText>元</CellText>
+            </CellBody>
+            <CellFooter />
+          </Cell>
+          <Cell access error>
+            <CellHeader >
+              <CellLabel>qq2</CellLabel>
+            </CellHeader>
+            <CellBody>
+              <TextInputWithControls
+                clear
                 onErrorPress={() => Alert.alert("clicked me")}
                 onClearPress={this.onClearPress}
                 value={this.state.value}
@@ -96,7 +107,19 @@ export default class BasicTextInputWithControlsExample extends React.Component<
               <CellLabel>验证码</CellLabel>
             </CellHeader>
             <CellBody>
-              <RNTextInput placeholder="请输入验证码" defaultValue="111" />
+              <TextInputWithControls
+                clear
+                onErrorPress={() => Alert.alert("clicked me")}
+                onClearPress={this.onClearPress}
+                value={this.state.value}
+                onChangeText={(value: any) => {
+                  this.setState({
+                    value
+                  });
+                }}
+                extra="元"
+                placeholder="请输入验证码"
+              />
             </CellBody>
             <CellFooter>
               <Image source={{ uri: "https://weui.io/images/vcode.jpg" }} />

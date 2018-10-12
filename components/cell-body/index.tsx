@@ -15,6 +15,9 @@ const styles = StyleSheet.create({
     flex: 1,
     color: V.ColorWarn,
   },
+  errorIcon:{
+    marginLeft:5
+  }
 })
 
 
@@ -27,7 +30,7 @@ export interface CellBodyProps {
 export interface CellBodyState {
 }
 
-export default class CellBodyComponent extends React.Component<CellBodyProps, CellBodyState> {
+export default class CellBody extends React.Component<CellBodyProps, CellBodyState> {
 
   private renderChildrenWithProps = () => {
     const { error, children } = this.props;
@@ -43,11 +46,12 @@ export default class CellBodyComponent extends React.Component<CellBodyProps, Ce
     return childrenWithProps
   }
   public render() {
-    const { error, style } = this.props;
+    const { error, style,...others } = this.props;
     return (
-      <View style={[styles.cellBody, style, error ? { flexDirection: 'row' } : null]} {...others}>
+      <View style={[styles.cellBody, style, error ? { flexDirection: 'row' } : null]}
+        {...others}>
         {this.renderChildrenWithProps()}
-        {error ? <IconWeui name="warn" /> : false}
+        {error && <IconWeui name="warn" style={styles.errorIcon}/>}
       </View>
     )
   }
