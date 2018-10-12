@@ -3,14 +3,14 @@ import React from 'react';
 import {
   StyleSheet,
   Text,
+  TextInput,
   TextInputProperties,
   View,
 } from 'react-native';
 import variables from '../style/themes/default';
-import Input from '../text-input';
 import { TextInputSingleLinePropsType } from './PropsType';
 import InputItemStyle from './style/index';
-import { Omit } from '../_util/types';
+// import { Omit } from '../_util/types';
 import TextInputControls from '../text-input-controls'
 
 const keyboardTypeArray = [
@@ -28,18 +28,17 @@ const keyboardTypeArray = [
   'web-search',
 ];
 
-/**
- * React Native TextInput Props except these props
- */
-export type TextInputProps = Omit<
-  TextInputProperties,
-  'onChangeText' | 'onFocus' | 'onBlur'
-  >;
+// /**
+//  * React Native TextInput Props except these props
+//  */
+// export type TextInputProps = Omit<
+//   TextInputProperties,
+//   'style'
+//   >;
 
-export interface TextInputSingleLineProps extends TextInputSingleLinePropsType, TextInputProps {
+export interface TextInputSingleLineProps extends TextInputSingleLinePropsType, TextInputProperties {
   last?: boolean;
-  onExtraPress?: () => void;
-  onErrorPress?: () => void;
+  style?: any;
 }
 
 const noop = () => { };
@@ -73,7 +72,21 @@ export default class TextInputSingleLine extends React.Component<TextInputSingle
     styles: InputItemStyles,
   };
 
-  inputRef: Input | null;
+  inputRef: TextInput | null;
+  constructor(props: TextInputSingleLineProps) {
+    super(props);
+    this.state = {
+      value:props.defaultValue || props.value
+    };
+  }
+  static getDerivedStateFromProps(nextProps:TextInputSingleLineProps, prevState:any){
+    if(nextProps.value !== prevState.value){
+      return {
+        value: normalizeValue(nextProps.value)
+      }
+    }
+    return null
+  }
 
   onChangeText = (text:string) => {
     const { onChangeText, type } = this.props;
@@ -105,22 +118,13 @@ export default class TextInputSingleLine extends React.Component<TextInputSingle
     }
   }
 
-  onInputBlur = () => {
-    if (this.props.onBlur) {
-      this.props.onBlur(this.props.value);
-    }
-  }
-
-  onInputFocus = () => {
-    if (this.props.onFocus) {
-      this.props.onFocus(this.props.value);
-    }
-  }
-
   onClearPress = () => {
     if (this.inputRef) {
       this.inputRef.clear();
     }
+    this.setState({
+      value:''
+    })
     const { onClearPress } = this.props;
     if(onClearPress){
       onClearPress()
@@ -189,6 +193,8 @@ export default class TextInputSingleLine extends React.Component<TextInputSingle
       children,
       error,
       extra,
+      onBlur,
+      onFocus,
       labelNumber,
       last,
       onErrorPress,
@@ -197,19 +203,19 @@ export default class TextInputSingleLine extends React.Component<TextInputSingle
     } = this.props;
     const valueProps = this.getValueProps()
     const keyboardType = this.getkeyboardType()
-    return (<Input
-      // clearButtonMode={clear ? 'while-editing' : 'never'}
+    const inputStyle = [styles.input, error ? styles.inputErrorColor : null]
+    return (<TextInput
       clearButtonMode={'never'}
       underlineColorAndroid="transparent"
       ref={el => (this.inputRef = el)}
       {...restProps}
       {...valueProps}
-      style={[styles.input, error ? styles.inputErrorColor : null]}
+      style={inputStyle}
       keyboardType={keyboardType}
       onChangeText={this.onChangeText}
       secureTextEntry={type === 'password'}
-      onBlur={this.onInputBlur}
-      onFocus={this.onInputFocus}
+      onBlur={onBlur}
+      onFocus={onFocus}
     />)
   }
   render() {

@@ -14,9 +14,9 @@ export default class BasicTextAreaItemExample extends React.Component<
     };
   }
 
-  onChange = (val: any) => {
+  onChange = (e: any) => {
     // console.log(val);
-    this.setState({ val });
+    this.setState({ val: e.nativeEvent.text});
   }
 
   render() {
