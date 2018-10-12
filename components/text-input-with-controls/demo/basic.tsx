@@ -9,7 +9,7 @@ import {
 } from "react-native";
 import {
   Button,
-  TextInputSingleLine,
+  TextInputWithControls,
   List,
   CellLabel,
   Cell,
@@ -24,7 +24,7 @@ import {
 
 declare var jest: any;
 
-export default class BasicTextInputSingleLineExample extends React.Component<
+export default class BasicTextInputWithControlsExample extends React.Component<
   any,
   any
 > {
@@ -60,13 +60,23 @@ export default class BasicTextInputSingleLineExample extends React.Component<
         showsVerticalScrollIndicator={false}
       >
         <Cells>
-          <Cell>
-              <TextInputSingleLine
-              style={{
-                flex:1
-              }}
+          <Cell access error>
+            <CellHeader>
+              <CellLabel>qq</CellLabel>
+            </CellHeader>
+            <CellBody>
+              <RNTextInput placeholder="请输入 qq 号" value={this.state.text} />
+            </CellBody>
+            <CellFooter />
+          </Cell>
+          <Cell access >
+            <CellHeader error>
+              <CellLabel>qq</CellLabel>
+            </CellHeader>
+            <CellBody>
+              <TextInputWithControls
                 clear
-                error={!this.state.value}
+                error
                 onErrorPress={() => Alert.alert("clicked me")}
                 onClearPress={this.onClearPress}
                 value={this.state.value}
@@ -78,6 +88,8 @@ export default class BasicTextInputSingleLineExample extends React.Component<
                 extra="元"
                 placeholder="有标签"
               />
+            </CellBody>
+            <CellFooter />
           </Cell>
           <Cell vcode error>
             <CellHeader>
@@ -92,7 +104,7 @@ export default class BasicTextInputSingleLineExample extends React.Component<
           </Cell>
         </Cells>
         <List renderHeader={() => "基本"}>
-          <TextInputSingleLine
+          <TextInputWithControls
             left="输入框"
             clear
             error={!this.state.value}
@@ -107,7 +119,7 @@ export default class BasicTextInputSingleLineExample extends React.Component<
             extra="元"
             placeholder="有标签"
           />
-          <TextInputSingleLine
+          <TextInputWithControls
             left="输入框"
             clear
             onErrorPress={() => {
@@ -119,7 +131,7 @@ export default class BasicTextInputSingleLineExample extends React.Component<
             placeholder="不可编辑"
             editable={false}
           />
-          <TextInputSingleLine
+          <TextInputWithControls
             clear
             value={this.state.value1}
             onChangeText={(value: any) => {
@@ -130,7 +142,7 @@ export default class BasicTextInputSingleLineExample extends React.Component<
             onClearPress={this.onClearPress}
             placeholder="无标签"
           />
-          <TextInputSingleLine
+          <TextInputWithControls
             left="标题"
             defaultValue="xx"
             clear
@@ -141,7 +153,7 @@ export default class BasicTextInputSingleLineExample extends React.Component<
               "undefined"
             }
           />
-          <TextInputSingleLine
+          <TextInputWithControls
             left="标题"
             clear
             onClearPress={this.onClearPress}
@@ -160,7 +172,7 @@ export default class BasicTextInputSingleLineExample extends React.Component<
           </List.Item>
         </List>
         <List renderHeader={() => "固定标签字数"}>
-          <TextInputSingleLine
+          <TextInputWithControls
             left="姓名"
             clear
             onClearPress={this.onClearPress}
@@ -173,7 +185,7 @@ export default class BasicTextInputSingleLineExample extends React.Component<
             labelNumber={2}
             placeholder="两个字标签"
           />
-          <TextInputSingleLine
+          <TextInputWithControls
             left="校验码"
             clear
             onClearPress={this.onClearPress}
@@ -186,7 +198,7 @@ export default class BasicTextInputSingleLineExample extends React.Component<
             labelNumber={3}
             placeholder="三个字标签"
           />
-          <TextInputSingleLine
+          <TextInputWithControls
             left="四字标签"
             clear
             onClearPress={this.onClearPress}
@@ -201,7 +213,7 @@ export default class BasicTextInputSingleLineExample extends React.Component<
           />
         </List>
         <List renderHeader={() => "格式"}>
-          <TextInputSingleLine
+          <TextInputWithControls
             left="文本输入"
             clear
             onClearPress={this.onClearPress}
@@ -214,7 +226,7 @@ export default class BasicTextInputSingleLineExample extends React.Component<
             }}
             placeholder="text"
           />
-          <TextInputSingleLine
+          <TextInputWithControls
             left="银行卡"
             clear
             onClearPress={this.onClearPress}
@@ -227,7 +239,7 @@ export default class BasicTextInputSingleLineExample extends React.Component<
             }}
             placeholder="bankCard"
           />
-          <TextInputSingleLine
+          <TextInputWithControls
             left="手机号"
             clear
             onClearPress={this.onClearPress}
@@ -240,7 +252,7 @@ export default class BasicTextInputSingleLineExample extends React.Component<
             }}
             placeholder="phone"
           />
-          <TextInputSingleLine
+          <TextInputWithControls
             left="密码"
             clear
             onClearPress={this.onClearPress}
@@ -253,7 +265,7 @@ export default class BasicTextInputSingleLineExample extends React.Component<
             }}
             placeholder="password"
           />
-          <TextInputSingleLine
+          <TextInputWithControls
             left="数字"
             clear
             onClearPress={this.onClearPress}

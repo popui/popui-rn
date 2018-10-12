@@ -14,9 +14,6 @@ export interface IProps  {
 
 }
 
-
-
-
 export default class PanelScreen extends React.Component<IProps, any> {
     static navigationOptions = {
         title: 'Panel',

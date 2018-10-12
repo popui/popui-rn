@@ -6,7 +6,6 @@ export default {
     flexDirection: 'row',
     alignItems: 'center',
     justifyContent: 'center',
-    
   },
   clear: {
     marginTop:2
@@ -18,7 +17,7 @@ export default {
   },
   errorIcon: {
     marginLeft: variables.h_spacing_sm,
-    width: variables.icon_size_xs,
-    height: variables.icon_size_xs,
+    width: variables.textinput_base_height,
+    height: variables.textinput_base_height,
   },
 };

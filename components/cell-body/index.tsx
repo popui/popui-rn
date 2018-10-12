@@ -23,11 +23,14 @@ const CellBody = ({ error, children, style, ...others }) => {
         if (typeof child === 'string') {
             return <CellText style={[error ? styles.error : null]}>{child}</CellText>
         }
-        return React.cloneElement(child, {
-            style: [child.props.style,
-                error ? styles.error : null,
-            ],
-        })
+        if(typeof child === "string"){
+            return React.cloneElement(child, {
+                style: [child.props.style,
+                    error ? styles.error : null,
+                ],
+            })
+        }
+        return child
     })
 
     return (

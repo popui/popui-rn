@@ -11,7 +11,7 @@ function normalizeValue(value?: string) {
 
 
 export default class PopTextInput extends React.Component<TextInputProps, any> {
-  inputRef: TextInput | null;
+  inputRef: RNTextInput | null;
 
   focus = () => {
     if (this.inputRef) {
@@ -44,9 +44,9 @@ export default class PopTextInput extends React.Component<TextInputProps, any> {
         defaultValue,
       };
     }
-    console.log('getValueProps',{
-      valueProps
-    })
+    // console.log('getValueProps',{
+    //   valueProps
+    // })
     return valueProps
   }
   render() {

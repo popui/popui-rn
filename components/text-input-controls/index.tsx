@@ -86,7 +86,6 @@ export default class TextInputControls extends React.Component<TextInputControls
       <TouchComp onPress={onErrorPress}>
           <IconWeui 
             name="warn" 
-            size={variables.icon_size_xs} 
             style={[styles.errorIcon]}/>
       </TouchComp>
     )

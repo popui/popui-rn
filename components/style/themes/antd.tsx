@@ -190,4 +190,6 @@ export default {
   result_buttons_gap: 15,
   // result_extra_gap: 15,
   result_extra_Of_minHeight: 438,
+
+  textInputHeight:30
 };
