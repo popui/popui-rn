@@ -10,9 +10,9 @@ export interface TextAreaItemPropsType {
   clear?: boolean;
   rows?: number;
   count?: number;
-
   error?: boolean;
   onErrorPress?: () => void;
+  onClearPress?: () => void;
   autoHeight?: boolean;
   editable?: boolean;
   disabled?: boolean;

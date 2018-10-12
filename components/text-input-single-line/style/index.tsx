@@ -13,7 +13,7 @@ export default {
     flexDirection: 'row',
     alignItems: 'center',
   },
-  text: {
+  leftLabel: {
     marginRight: variables.h_spacing_sm,
     textAlignVertical: 'center',
     fontSize: variables.font_size_heading,
@@ -26,20 +26,7 @@ export default {
     fontSize: variables.input_font_size,
     color: variables.color_text_base,
   },
-  inputErrorColor: {
-    color: '#f50',
-  },
-  clear: {
-    padding: 5,
-  },
-  extra: {
-    marginLeft: variables.h_spacing_sm,
-    fontSize: variables.font_size_subhead,
-    color: variables.color_text_caption,
-  },
-  errorIcon: {
-    marginLeft: variables.h_spacing_sm,
-    width: variables.icon_size_xs,
-    height: variables.icon_size_xs,
-  },
+  controls:{
+
+  }
 };

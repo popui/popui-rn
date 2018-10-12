@@ -39,7 +39,9 @@ export default {
     position: 'absolute',
     right: variables.h_spacing_md,
     bottom: variables.h_spacing_md,
-    flexDirection: 'row',
+    flexDirection: 'column',
+    alignItems: 'center',
+    justifyContent: 'center',
   },
   clear:{
 

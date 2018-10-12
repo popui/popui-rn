@@ -21,8 +21,9 @@ export interface TextInputSingleLinePropsType {
   maxLength?: number;
   extra?: React.ReactNode;
   error?: boolean;
-  // can not find out where it used
-  onErrorPress?: Function;
+  onExtraPress?: () => void;
+  onErrorPress?: () => void;
+  onClearPress?: () => void;
   // size?: 'large' | 'small';
   labelNumber?: number;
   labelPosition?: 'left' | 'top';

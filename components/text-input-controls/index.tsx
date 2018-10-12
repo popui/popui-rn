@@ -12,6 +12,7 @@ import { TextInputControlsPropsType } from './PropsType';
 import PlainStyle from './style/index';
 import IconWeui from '../icon-weui'
 
+const hitSlop={ top: 5, left: 5, bottom: 5, right: 5 }// 点击外延距离
 export interface TextInputControlsProps extends TextInputControlsPropsType {
 
 }
@@ -22,25 +23,14 @@ const styles = StyleSheet.create<any>(PlainStyle);
 
 export default class TextInputControls extends React.Component<TextInputControlsProps, any> {
   static defaultProps = {
-    editable: true,
     clear: false,
-    extra: '',
+    onClearPress:noop,
+    extra: undefined,
     onExtraPress: noop,
     error: false,
     onErrorPress: noop,
-    styles,
+    styles
   };
-
-  onInputClear = () => {
-    if (this.inputRef) {
-      this.inputRef.clear();
-    }
-    const { onChangeText } = this.props;
-    if (onChangeText) {
-      onChangeText('');
-    }
-  }
-
 
   renderExtraView = () => {
     const {
@@ -55,32 +45,28 @@ export default class TextInputControls extends React.Component<TextInputControls
           ? (extra as string).length * variables.font_size_heading
           : 0,
     };
+    const textStyle = [styles.extra, extraStyle]
     return ((
       <TouchComp onPress={onExtraPress}>
-        <View>
           {typeof extra === 'string' ? (
-            <Text style={[styles.extra, extraStyle]}>{extra}</Text>
-          ) : (
-              extra
-            )}
-        </View>
+            <Text style={textStyle}>{extra}</Text>
+          ) :extra}
       </TouchComp>
     ))
   }
   renderClearView = () => {
     const {
       clear,
-      editable,
       styles,
-      value
+      onClearPress
     } = this.props;
     /* 只在有 value 的 受控模式 下展示 自定义的 clear 按钮 */
     // ios 原生的 clear 在focus 的情况下, 需要点击外面一次取消focus, 再点一次才能正常操作, 容易造成误解. 因此这里全部都使用 独立渲染的 clear 按钮, 显示与否跟是否 focus 无关. 
-    if (editable && clear && value) {
+    if (clear) {
       return (<TouchableOpacity
-        style={[styles.clear]}
-        onPress={this.onInputClear}
-        hitSlop={{ top: 5, left: 5, bottom: 5, right: 5 }}
+        style={styles.clear}
+        onPress={onClearPress}
+        hitSlop={hitSlop}
       >
         <IconWeui name="clear" />
       </TouchableOpacity>)
@@ -95,7 +81,10 @@ export default class TextInputControls extends React.Component<TextInputControls
     const TouchComp = onErrorPress?TouchableOpacity:TouchableWithoutFeedback
     return (
       <TouchComp onPress={onErrorPress}>
-          <IconWeui name="warn" size={variables.icon_size_xs} style={[styles.errorIcon]}/>
+          <IconWeui 
+            name="warn" 
+            size={variables.icon_size_xs} 
+            style={[styles.errorIcon]}/>
       </TouchComp>
     )
   }

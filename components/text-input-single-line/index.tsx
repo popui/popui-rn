@@ -1,20 +1,17 @@
 /* tslint:disable:jsx-no-multiline-js */
 import React from 'react';
 import {
-  GestureResponderEvent,
   StyleSheet,
   Text,
   TextInputProperties,
-  TouchableWithoutFeedback,
   View,
-  TouchableOpacity,
 } from 'react-native';
 import variables from '../style/themes/default';
 import Input from '../text-input';
 import { TextInputSingleLinePropsType } from './PropsType';
 import InputItemStyle from './style/index';
 import { Omit } from '../_util/types';
-import IconWeui from '../icon-weui'
+import TextInputControls from '../text-input-controls'
 
 const keyboardTypeArray = [
   'default',
@@ -41,8 +38,8 @@ export type TextInputProps = Omit<
 
 export interface TextInputSingleLineProps extends TextInputSingleLinePropsType, TextInputProps {
   last?: boolean;
-  onExtraPress?: (event: GestureResponderEvent) => void;
-  onErrorPress?: (event: GestureResponderEvent) => void;
+  onExtraPress?: () => void;
+  onErrorPress?: () => void;
 }
 
 const noop = () => { };
@@ -60,13 +57,14 @@ export default class TextInputSingleLine extends React.Component<TextInputSingle
   static defaultProps = {
     type: 'text',
     editable: true,
-    clear: false,
     onChangeText: noop,
     onBlur: noop,
     onFocus: noop,
-    extra: '',
-    onExtraPress: noop,
+    clear: false,
     error: false,
+    extra: '',
+    onClearPress:noop,
+    onExtraPress: noop,
     onErrorPress: noop,
     labelNumber: 4,
     labelPosition: 'left',
@@ -119,13 +117,13 @@ export default class TextInputSingleLine extends React.Component<TextInputSingle
     }
   }
 
-  onInputClear = () => {
+  onClearPress = () => {
     if (this.inputRef) {
       this.inputRef.clear();
     }
-    const { onChangeText } = this.props;
-    if (onChangeText) {
-      onChangeText('');
+    const { onClearPress } = this.props;
+    if(onClearPress){
+      onClearPress()
     }
   }
 
@@ -135,6 +133,7 @@ export default class TextInputSingleLine extends React.Component<TextInputSingle
       this.inputRef.focus();
     }
   }
+
   renderLeftView = () => {
     const {
       left,
@@ -145,68 +144,11 @@ export default class TextInputSingleLine extends React.Component<TextInputSingle
       width: variables.font_size_heading * (labelNumber as number) * 1.05,
     };
     if (typeof left === 'string') {
-      return <Text style={[styles.text, textStyle]}>{left}</Text>
+      return <Text style={[styles.leftLabel, textStyle]}>{left}</Text>
     }
     return left
   }
 
-  renderExtraView = () => {
-    const {
-      extra,
-      styles,
-      onExtraPress,
-    } = this.props;
-    const TouchComp = onExtraPress?TouchableOpacity:TouchableWithoutFeedback
-    const extraStyle = {
-      width:
-        typeof extra === 'string' && (extra as string).length > 0
-          ? (extra as string).length * variables.font_size_heading
-          : 0,
-    };
-    return ((
-      <TouchComp onPress={onExtraPress}>
-        <View>
-          {typeof extra === 'string' ? (
-            <Text style={[styles.extra, extraStyle]}>{extra}</Text>
-          ) : (
-              extra
-            )}
-        </View>
-      </TouchComp>
-    ))
-  }
-  renderClearView = () => {
-    const {
-      clear,
-      editable,
-      styles,
-      value
-    } = this.props;
-    /* 只在有 value 的 受控模式 下展示 自定义的 clear 按钮 */
-    // ios 原生的 clear 在focus 的情况下, 需要点击外面一次取消focus, 再点一次才能正常操作, 容易造成误解. 因此这里全部都使用 独立渲染的 clear 按钮, 显示与否跟是否 focus 无关. 
-    if (editable && clear && value) {
-      return (<TouchableOpacity
-        style={[styles.clear]}
-        onPress={this.onInputClear}
-        hitSlop={{ top: 5, left: 5, bottom: 5, right: 5 }}
-      >
-        <IconWeui name="clear" />
-      </TouchableOpacity>)
-    }
-    return null
-  }
-  renderErrorView = () => {
-    const {
-      onErrorPress,
-      styles,
-    } = this.props;
-    const TouchComp = onErrorPress?TouchableOpacity:TouchableWithoutFeedback
-    return (
-      <TouchComp onPress={onErrorPress}>
-          <IconWeui name="warn" size={variables.icon_size_xs} style={[styles.errorIcon]}/>
-      </TouchComp>
-    )
-  }
   getkeyboardType = () => {
     const {
       type,
@@ -280,6 +222,7 @@ export default class TextInputSingleLine extends React.Component<TextInputSingle
       extra,
       labelNumber,
       last,
+      onExtraPress,
       onErrorPress,
       styles,
       ...restProps
@@ -302,9 +245,14 @@ export default class TextInputSingleLine extends React.Component<TextInputSingle
       <View style={[styles.container, containerStyle, style]}>
         {left && this.renderLeftView()}
         {this.renderInputView()}
-        {this.renderClearView()}
-        {extra && this.renderExtraView()}
-        {error && this.renderErrorView()}
+        <TextInputControls 
+          clear={clear}
+          extra={extra}
+          error={error}
+          onClearPress={this.onClearPress}
+          onExtraPress={onExtraPress}
+          onErrorPress={onErrorPress}
+        />
       </View>
     );
   }
