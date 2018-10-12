@@ -4,11 +4,9 @@ import { Image, Text,View } from 'react-native'
 import {
  Form as FormComps,  
 } from 'popui-rn'
-import CellComp from 'popui-rn';
-const { Cell, CellBody, CellFooter, CellHeader, Cells, CellsTips, CellsTitle, CellText, } = CellComp
- const { CheckboxCells, Input, Label,RadioCells,  TextArea} = FormComps
+import { CellLabel as Label, Cell, CellBody, CellFooter, CellHeader, Cells, CellsTips, CellsTitle, CellText, } from 'popui-rn';
+ const { CheckboxCells, Input, RadioCells} = FormComps
 export interface IProps  {
-
 }
 export default class InputScreen extends React.Component<IProps, any> {
     private constructor() {

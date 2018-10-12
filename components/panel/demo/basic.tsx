@@ -1,10 +1,10 @@
 import { Image,ScrollView } from 'react-native'
 import {
-    Badge2, Cell as CellComps, 
+    Badge2, 
     Media as MediaComps,
     Panel as PanelComps,
+    Cell, CellBody, CellFooter, CellHeader, CellText
 } from 'popui-rn'
-const {Cell, CellBody, CellFooter, CellHeader, CellText} = CellComps
 const {Media, MediaBody, MediaDescription, 
   MediaHeader, MediaInfo, MediaInfoMeta,MediaTitle} = MediaComps
   const {Panel, PanelBody, PanelFooter, PanelHeader, } = PanelComps

@@ -2,12 +2,10 @@ import { Image, View } from 'react-native'
 import React from 'react'
 import {
   Badge,
-  Cell as CellComp } from 'popui-rn';
-const {
   Cell , CellBody, CellFooter,
   CellHeader, Cells, CellsTitle,
-  CellText
-} = CellComp
+  CellText } from 'popui-rn';
+
 
 export interface IProps  {
 
