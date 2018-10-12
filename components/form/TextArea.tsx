@@ -1,4 +1,4 @@
-import PropTypes from 'prop-types'
+// import PropTypes from 'prop-types'
 import React from 'react'
 import { Text, TextInput, View, ViewPropTypes } from 'react-native'
 import { create } from '../style/utils/StyleSheet'
@@ -6,15 +6,15 @@ import V from '../style/themes/weui'
 
 const styles = create({
     textarea: {
-        fontSize: V.CellFontSize,
-        height: V.CellFontSize * V.baseLineHeight * 3,
-        lineHeight: V.CellFontSize * V.baseLineHeight,
+        fontSize: V.CellFontSize,// 17
+        height: V.CellFontSize * V.baseLineHeight * 3, //81.6
+        lineHeight: V.CellFontSize * V.baseLineHeight, //27.2
         android: {
             lineHeight: Math.round(V.CellFontSize * V.baseLineHeight),
         },
     },
     textareaCounter: {
-        color: V.TextColorTips,
+        color: V.TextColorTips, // B2B2B2
         textAlign: 'right',
     },
 })
@@ -27,7 +27,7 @@ const TextArea = ({
                       defaultValue,
                       disabled = false,
                       style,
-                      ...others,
+                      ...others
                   }) =>
     <View>
         <TextInput
@@ -47,14 +47,14 @@ const TextArea = ({
             : false}
     </View>
 
-TextArea.propTypes = {
-    value: PropTypes.string,
-    showCounter: PropTypes.bool,
-    maxLength: PropTypes.number,
-    defaultValue: PropTypes.string,
-    onChange: PropTypes.func,
-    disabled: PropTypes.bool,
-    style: TextInput.propTypes.style,
-}
+// TextArea.propTypes = {
+//     value: PropTypes.string,
+//     showCounter: PropTypes.bool,
+//     maxLength: PropTypes.number,
+//     defaultValue: PropTypes.string,
+//     onChange: PropTypes.func,
+//     disabled: PropTypes.bool,
+//     style: TextInput.propTypes.style,
+// }
 
 export default TextArea

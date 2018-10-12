@@ -12,7 +12,7 @@ export interface TextAreaItemPropsType {
   count?: number;
 
   error?: boolean;
-  onErrorClick?: () => void;
+  onErrorPress?: () => void;
   autoHeight?: boolean;
   editable?: boolean;
   disabled?: boolean;

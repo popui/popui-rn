@@ -27,8 +27,8 @@ export type TextInputProps = Omit<
 
 export interface InputItemProps extends InputItemPropsType, TextInputProps {
   last?: boolean;
-  onExtraClick?: (event: GestureResponderEvent) => void;
-  onErrorClick?: (event: GestureResponderEvent) => void;
+  onExtraPress?: (event: GestureResponderEvent) => void;
+  onErrorPress?: (event: GestureResponderEvent) => void;
 }
 
 const noop = () => {};
@@ -51,9 +51,9 @@ export default class InputItem extends React.Component<InputItemProps, any> {
     onBlur: noop,
     onFocus: noop,
     extra: '',
-    onExtraClick: noop,
+    onExtraPress: noop,
     error: false,
-    onErrorClick: noop,
+    onErrorPress: noop,
     labelNumber: 4,
     labelPosition: 'left',
     textAlign: 'left',
@@ -129,8 +129,8 @@ export default class InputItem extends React.Component<InputItemProps, any> {
       extra,
       labelNumber,
       last,
-      onExtraClick,
-      onErrorClick,
+      onExtraPress,
+      onErrorPress,
       styles,
       ...restProps,
     } = this.props;
@@ -225,7 +225,7 @@ export default class InputItem extends React.Component<InputItemProps, any> {
           </TouchableOpacity>
         ) : null}
         {extra ? (
-          <TouchableWithoutFeedback onPress={onExtraClick}>
+          <TouchableWithoutFeedback onPress={onExtraPress}>
             <View>
               {typeof extra === 'string' ? (
                 <Text style={[styles.extra, extraStyle]}>{extra}</Text>
@@ -236,7 +236,7 @@ export default class InputItem extends React.Component<InputItemProps, any> {
           </TouchableWithoutFeedback>
         ) : null}
         {error && (
-          <TouchableWithoutFeedback onPress={onErrorClick}>
+          <TouchableWithoutFeedback onPress={onErrorPress}>
             <View style={[styles.errorIcon]}>
               <Image
                 source={require('../style/images/error.png')}

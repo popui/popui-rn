@@ -41,8 +41,8 @@ export type TextInputProps = Omit<
 
 export interface TextInputSingleLineProps extends TextInputSingleLinePropsType, TextInputProps {
   last?: boolean;
-  onExtraClick?: (event: GestureResponderEvent) => void;
-  onErrorClick?: (event: GestureResponderEvent) => void;
+  onExtraPress?: (event: GestureResponderEvent) => void;
+  onErrorPress?: (event: GestureResponderEvent) => void;
 }
 
 const noop = () => { };
@@ -65,9 +65,9 @@ export default class TextInputSingleLine extends React.Component<TextInputSingle
     onBlur: noop,
     onFocus: noop,
     extra: '',
-    onExtraClick: noop,
+    onExtraPress: noop,
     error: false,
-    onErrorClick: noop,
+    onErrorPress: noop,
     labelNumber: 4,
     labelPosition: 'left',
     textAlign: 'left',
@@ -154,9 +154,9 @@ export default class TextInputSingleLine extends React.Component<TextInputSingle
     const {
       extra,
       styles,
-      onExtraClick,
+      onExtraPress,
     } = this.props;
-    const TouchComp = onExtraClick?TouchableOpacity:TouchableWithoutFeedback
+    const TouchComp = onExtraPress?TouchableOpacity:TouchableWithoutFeedback
     const extraStyle = {
       width:
         typeof extra === 'string' && (extra as string).length > 0
@@ -164,7 +164,7 @@ export default class TextInputSingleLine extends React.Component<TextInputSingle
           : 0,
     };
     return ((
-      <TouchComp onPress={onExtraClick}>
+      <TouchComp onPress={onExtraPress}>
         <View>
           {typeof extra === 'string' ? (
             <Text style={[styles.extra, extraStyle]}>{extra}</Text>
@@ -197,12 +197,12 @@ export default class TextInputSingleLine extends React.Component<TextInputSingle
   }
   renderErrorView = () => {
     const {
-      onErrorClick,
+      onErrorPress,
       styles,
     } = this.props;
-    const TouchComp = onErrorClick?TouchableOpacity:TouchableWithoutFeedback
+    const TouchComp = onErrorPress?TouchableOpacity:TouchableWithoutFeedback
     return (
-      <TouchComp onPress={onErrorClick}>
+      <TouchComp onPress={onErrorPress}>
           <IconWeui name="warn" size={variables.icon_size_xs} style={[styles.errorIcon]}/>
       </TouchComp>
     )
@@ -249,7 +249,7 @@ export default class TextInputSingleLine extends React.Component<TextInputSingle
       extra,
       labelNumber,
       last,
-      onErrorClick,
+      onErrorPress,
       styles,
       ...restProps
     } = this.props;
@@ -280,7 +280,7 @@ export default class TextInputSingleLine extends React.Component<TextInputSingle
       extra,
       labelNumber,
       last,
-      onErrorClick,
+      onErrorPress,
       styles,
       ...restProps
     } = this.props;

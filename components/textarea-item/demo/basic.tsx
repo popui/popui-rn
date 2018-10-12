@@ -43,7 +43,7 @@ export default class BasicTextAreaItemExample extends React.Component<
           <TextareaItem
             error
             defaultValue="报错样式 error={true}"
-            onErrorClick={() => console.log('err')}
+            onErrorPress={() => console.log('err')}
           />
         </List>
       </ScrollView>

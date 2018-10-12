@@ -1,16 +1,22 @@
 import React from 'react';
-import { StyleSheet,  SafeAreaView } from 'react-native';
-// import ActionSheetExample from 'popui-rn/components/action-sheet/demo/basic';
-// import { ActionSheet2 } from 'popui-rn'
-import AllComp from 'popui-rn/rn-kitchen-sink/allComponents';
+import { StyleSheet,  SafeAreaView,Text } from 'react-native';
 import ResourceLoader from '../common/ResourceLoader';
+// import SearchBarExample from 'popui-rn/components/search-bar/demo/basic';
+// import ListExample from 'popui-rn/components/list/demo/basic';
+// import TextInputSingleLineExample from 
+// 'popui-rn/components/text-input-single-line/demo/basic';
+// import FormInputExample from 'popui-rn/components/form/demo/input';
+import TextAreaExample from 'popui-rn/components/textarea-item/demo/basic';
 
 export default class App extends React.Component {
   render() {
     return (
       <ResourceLoader >
         <SafeAreaView style={styles.container}>
-          <AllComp />
+        {/* <Text>Form Input: </Text> */} */}
+           {/* <FormInputExample /> */}
+          <Text>TextArea Example:</Text>
+          <TextAreaExample />
         </SafeAreaView>
       </ResourceLoader>
     );
@@ -20,6 +26,6 @@ export default class App extends React.Component {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#000',
+    backgroundColor: '#fff',
   },
 });

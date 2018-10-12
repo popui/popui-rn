@@ -7,6 +7,9 @@ export interface ITextareaItemStyle {
   icon: ViewStyle;
   errorIcon: ViewStyle;
   count: ViewStyle;
+  clear: ViewStyle;
+  countText:TextStyle;
+  rightBottom:ViewStyle;
 }
 
 export default {
@@ -18,7 +21,7 @@ export default {
     paddingHorizontal: variables.h_spacing_md,
     backgroundColor: variables.fill_base,
     fontSize: variables.font_size_heading,
-    lineHeight: Math.round(1.3 * variables.font_size_heading),
+    lineHeight: Math.round(1.6 * variables.font_size_heading),
     textAlignVertical: 'top',
   },
   icon: {
@@ -32,9 +35,19 @@ export default {
     right: 18,
     top: 12,
   },
-  count: {
+  rightBottom:{
     position: 'absolute',
     right: variables.h_spacing_md,
     bottom: variables.h_spacing_md,
+    flexDirection: 'row',
   },
+  clear:{
+
+  },
+  count:{
+
+  },
+  countText:{
+    color:"#B2B2B2",
+  }
 };

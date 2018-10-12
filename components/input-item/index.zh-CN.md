@@ -29,9 +29,9 @@ subtitle: 文本输入
 | onBlur     | blur 事件触发的回调函数 | (val: string): void |   -  |
 | onFocus    | focus 事件触发的回调函数 | (val: string): void |  -  |
 | error       | 报错样式        | bool |  false  |
-| onErrorClick       | 点击报错 icon 触发的回调函数  | (e: Object): void |  无  |
+| onErrorPress       | 点击报错 icon 触发的回调函数  | (e: Object): void |  无  |
 | extra       | 右边注释   | string or node |  ''  |
-| onExtraClick      | extra 点击事件触发的回调函数 | (e: Object): void |  无  |
+| onExtraPress      | extra 点击事件触发的回调函数 | (e: Object): void |  无  |
 | onVirtualKeyboardConfirm | 虚拟键盘点击确认时的回调函数 | (val: string): void |  无  |
 | labelNumber  | 标签的文字个数，可用`2-7`之间的数字 | number | `5` |
 | locale   | 国际化，可覆盖全局`[LocaleProvider](https://mobile.ant.design/components/locale-provider)`的配置, 当`type`为`money`，可以自定义确认按钮的文案。 | Object: { confirmLabel } |  无 |

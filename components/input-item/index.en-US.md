@@ -28,9 +28,9 @@ Properties | Description | Type | Default
 | onBlur     | callback that is called when the text input is blurred | (val: string): void |   -  |
 | onFocus    | callback that is called when the text input is focused | (val: string): void |  -  |
 | error       | whether to display error       | bool |  false  |
-| onErrorClick   | callback that is called when the error icon is clicked  | (e: Object): void |   |
+| onErrorPress   | callback that is called when the error icon is clicked  | (e: Object): void |   |
 | extra       | the right content of `InputItem`   | string or node |  ''  |
-| onExtraClick      | callback that is called when the extra content is clicked | (e: Object): void |  |
+| onExtraPress      | callback that is called when the extra content is clicked | (e: Object): void |  |
 | onVirtualKeyboardConfirm | callback that is called when "confirm" button of virtual keyboard is clicked | (val: string): void |  |
 | labelNumber  | number of label text, valid value is 2 to 7 | number | `5` |
 | locale   | 国际化，可覆盖全局`[LocaleProvider](https://mobile.ant.design/components/locale-provider)`的配置,  when`type`is`money`，can cunstom the keyboard confirm item's label | Object: { confirmLabel } |  无 |

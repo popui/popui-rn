@@ -26,7 +26,7 @@ Properties | Descrition | Type | Default
 | onBlur     | callback that is called when the textarea is blurred. | (val: string): void |   -  |
 | onFocus    | callback that is called when the textarea is focused. | (val: string): void |  -  |
 | error       | whether to display error         | bool |  false  |
-| onErrorClick   | callback that is called when the error icon is clicked   | (): void |    |
+| onErrorPress   | callback that is called when the error icon is clicked   | (): void |    |
 | autoHeight | auto adjust height (only use one of `autoHeight` and `rows` properties) | bool  | false  |
 | labelNumber  | number of label text, valid value is 2 to 7 | number | `5` |
 

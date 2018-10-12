@@ -6,7 +6,7 @@ import {
 } from 'popui-rn'
 import CellComp from 'popui-rn/components/cell';
 const { Cell, CellBody, CellFooter, CellHeader, Cells, CellsTips, CellsTitle, CellText, } = CellComp
- const { CheckboxCells, Input, Label,RadioCells, Switch, TextArea,Agreement} = FormComps
+ const { CheckboxCells, Input, Label,RadioCells,  TextArea,Agreement} = FormComps
 export interface IProps  {
 
 }
@@ -30,7 +30,7 @@ export default class InputScreen extends React.Component<IProps, any> {
     render() {
         return (
             <ScrollView>
-                <CellsTitle>单选列表项</CellsTitle>
+                {/* <CellsTitle>单选列表项</CellsTitle>
                 <RadioCells
                     options={[
                         {
@@ -64,16 +64,7 @@ export default class InputScreen extends React.Component<IProps, any> {
                     value={this.state.checkbox}
                     disabled
                 />
-                <CellsTitle>开关</CellsTitle>
-                <Cells>
-                    <Cell>
-                        <CellBody>标题文字</CellBody>
-                        <Switch
-                            onChange={this.handleSwitchChange}
-                            value={this.state.switchValue}
-                        />
-                    </Cell>
-                </Cells>
+   
                 <CellsTitle>表单</CellsTitle>
                 <Cells>
                     <Cell>
@@ -92,7 +83,7 @@ export default class InputScreen extends React.Component<IProps, any> {
                         <CellFooter><Image source={{ uri: 'https://weui.io/images/vcode.jpg' }}/></CellFooter>
                     </Cell>
                 </Cells>
-                <CellsTips>底部说明文字底部说明文字</CellsTips>
+                <CellsTips>底部说明文字底部说明文字</CellsTips> */}
 
                 <CellsTitle>文本域</CellsTitle>
                 <Cells>

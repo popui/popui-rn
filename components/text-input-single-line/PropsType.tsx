@@ -29,6 +29,7 @@ export interface TextInputSingleLinePropsType {
   textAlign?: 'left' | 'center';
   updatePlaceholder?: boolean;
   styles?: any;
+  style?: any;
   locale?: object;
   onChangeText?: (text: string) => void;
   onFocus?: InputEventHandler;
