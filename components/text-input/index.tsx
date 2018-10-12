@@ -67,8 +67,12 @@ export default class PopTextInput extends React.Component<TextInputProps, any> {
     const {
       clear,
       styles,
+      value
     } = this.props;
     /* 只在有 value 的 受控模式 下展示 自定义的 clear 按钮 */
+    if(!value || !clear){
+      return null
+    }
     // ios 原生的 clear 在focus 的情况下, 需要点击外面一次取消focus, 再点一次才能正常操作, 容易造成误解. 因此这里全部都使用 独立渲染的 clear 按钮, 显示与否跟是否 focus 无关.
     if (clear) {
       return (<TouchableOpacity
@@ -95,7 +99,7 @@ export default class PopTextInput extends React.Component<TextInputProps, any> {
           {...restProps}
           {...valueProps}
         />
-        {clear && this.renderClearView()}
+        {this.renderClearView()}
       </View>
     );
   }
