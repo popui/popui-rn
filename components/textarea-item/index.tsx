@@ -13,6 +13,7 @@ import variables from '../style/themes/default';
 import { TextAreaItemPropsType } from './PropsType';
 import TextAreaItemStyle, { ITextareaItemStyle } from './style/index';
 import TextInputControls from '../text-input-controls'
+import get from 'lodash/get'
 
 function fixControlledValue(value?: string) {
   if (typeof value === 'undefined' || value === null) {
@@ -74,9 +75,6 @@ export default class TextAreaItem extends React.Component<
   onChange = (event:NativeSyntheticEvent<TextInputChangeEventData>) => {
     const text = event.nativeEvent.text
     const { onChange } = this.props;
-    console.log('onChange',{
-      text
-    })
     this.setState({
       value:text,
       inputCount: text.length,
@@ -111,10 +109,7 @@ export default class TextAreaItem extends React.Component<
     const { autoHeight, onContentSizeChange } = this.props;
     const rows = this.props.rows as number;
     if (autoHeight) {
-      console.log("text area onContentSizeChange", {
-        event
-      })
-      height = event.nativeEvent.contentSize.height;
+      height = get(event,'nativeEvent.contentSize.height');
     } else if (rows > 1) {
       height = 6 * rows * 4;
     } else {
@@ -172,15 +167,12 @@ export default class TextAreaItem extends React.Component<
       style,
     ]
     const {value} = this.state
-    console.log("TextArea render Input",{
-      defaultValue,
-      value
-    })
     return (
       <TextInput
         ref={el => (this.inputRef = el)}
         clearButtonMode={'never'}
         underlineColorAndroid="transparent"
+        placeholderTextColor={'#B2B2B2'}
         style={inputStyle}
         defaultValue={defaultValue}
         {...restProps}

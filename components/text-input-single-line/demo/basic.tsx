@@ -59,11 +59,6 @@ export default class BasicTextInputSingleLineExample extends React.Component<any
               Alert.alert("can not edit");
             }}
             value="不可编辑"
-            onChangeText={(value: any) => {
-              this.setState({
-                value,
-              });
-            }}
             extra={"元"}
             placeholder="不可编辑"
             editable={false}

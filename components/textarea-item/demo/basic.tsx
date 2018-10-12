@@ -28,13 +28,14 @@ export default class BasicTextAreaItemExample extends React.Component<
         showsVerticalScrollIndicator={false}
       >
         <List renderHeader={() => '基本'}>
-          <TextareaItem rows={4} placeholder="固定行数" />
+          <TextareaItem rows={4}  defaultValue="默认值"/>
 
           <TextareaItem rows={4} placeholder="多行带计数" count={100} />
 
           <TextareaItem rows={4} placeholder="高度自适应" autoHeight style={{ paddingVertical: 5 }} />
 
-          <TextareaItem value={this.state.val} onChange={this.onChange} />
+          <TextareaItem value={this.state.val} onChange={this.onChange} 
+          placeholder="onChange事件"/>
 
           <TextareaItem value="不可编辑 editable = {false}" editable={false} />
 
@@ -42,7 +43,7 @@ export default class BasicTextAreaItemExample extends React.Component<
 
           <TextareaItem
             error
-            defaultValue="报错样式 error={true}"
+            placeholder="报错样式 error={true}"
             onErrorClick={() => console.log('err')}
           />
         </List>
