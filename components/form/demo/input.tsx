@@ -6,7 +6,7 @@ import {
 } from 'popui-rn'
 import CellComp from 'popui-rn/components/cell';
 const { Cell, CellBody, CellFooter, CellHeader, Cells, CellsTips, CellsTitle, CellText, } = CellComp
- const { CheckboxCells, Input, Label,RadioCells,  TextArea,Agreement} = FormComps
+ const { CheckboxCells, Input, Label,RadioCells,  TextArea} = FormComps
 export interface IProps  {
 
 }
@@ -63,7 +63,7 @@ export default class InputScreen extends React.Component<IProps, any> {
                     onChange={this.handleCheckboxChange}
                     value={this.state.checkbox}
                     disabled
-                />
+                /> */}
    
                 <CellsTitle>表单</CellsTitle>
                 <Cells>
@@ -83,25 +83,7 @@ export default class InputScreen extends React.Component<IProps, any> {
                         <CellFooter><Image source={{ uri: 'https://weui.io/images/vcode.jpg' }}/></CellFooter>
                     </Cell>
                 </Cells>
-                <CellsTips>底部说明文字底部说明文字</CellsTips> */}
-
-                <CellsTitle>文本域</CellsTitle>
-                <Cells>
-                    <Cell>
-                        <CellBody>
-                              <TextArea
-                                  placeholder="请输入评论"
-                                  value={this.state.textarea}
-                                  onChange={this.handleTextareaChange}
-                              />
-                        </CellBody>
-                    </Cell>
-                </Cells>
-
-                <Agreement
-                    value={this.state.agreement}
-                    onChange={value => this.setState({ agreement: value })}
-                >同意该协议</Agreement>
+                <CellsTips>底部说明文字底部说明文字</CellsTips>
             </ScrollView>
         )
     }

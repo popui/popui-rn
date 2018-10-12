@@ -1,4 +1,3 @@
-import Agreement from './Agreement'
 import CheckboxCells from './CheckboxCells'
 import Input from './Input'
 import Label from './Label'
@@ -15,5 +14,4 @@ export default {
     Uploader,
     Label,
     Select,
-    Agreement,
 }
