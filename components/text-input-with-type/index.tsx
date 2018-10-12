@@ -2,15 +2,12 @@
 import React from 'react';
 import {
   StyleSheet,
-  Text,
   TextInputProperties,
   View,
 } from 'react-native';
-import variables from '../style/themes/default';
-import { TextInputWithControlsPropsType } from './PropsType';
+import { TextInputWithTypeType } from './PropsType';
 import InputItemStyle from './style/index';
 // import { Omit } from '../_util/types';
-import TextInputControls from '../text-input-controls'
 import TextInput from '../text-input'
 const keyboardTypeArray = [
   'default',
@@ -26,60 +23,25 @@ const keyboardTypeArray = [
   'twitter',
   'web-search',
 ];
-
-// /**
-//  * React Native TextInput Props except these props
-//  */
-// export type TextInputProps = Omit<
-//   TextInputProperties,
-//   'style'
-//   >;
-
-export interface TextInputWithControlsProps extends TextInputWithControlsPropsType, TextInputProperties {
+export interface TextInputWithType extends TextInputWithTypeType, TextInputProperties {
   last?: boolean;
   style?: any;
 }
-
-const noop = () => { };
-
-
+import {noopFunc  } from "../_util/noop";
 const InputItemStyles = StyleSheet.create<any>(InputItemStyle);
 
-export default class TextInputWithControls extends React.Component<TextInputWithControlsProps, any> {
+export default class TextInputWithType extends React.Component<TextInputWithType, any> {
   static defaultProps = {
     type: 'text',
     editable: true,
-    onChangeText: noop,
-    onBlur: noop,
-    onFocus: noop,
-    clear: false,
-    error: false,
-    extra: '',
-    onClearPress:noop,
-    onExtraPress: noop,
-    onErrorPress: noop,
-    labelNumber: 4,
-    labelPosition: 'left',
+    onChangeText: noopFunc,
+    onBlur: noopFunc,
+    onFocus: noopFunc,
     textAlign: 'left',
-    last: false,
     styles: InputItemStyles,
   };
 
   inputRef: TextInput | null;
-  // constructor(props: TextInputWithControlsProps) {
-  //   super(props);
-  //   this.state = {
-  //     value:props.defaultValue || props.value
-  //   };
-  // }
-  // static getDerivedStateFromProps(nextProps:TextInputWithControlsProps, prevState:any){
-  //   if(nextProps.value !== prevState.value){
-  //     return {
-  //       value: normalizeValue(nextProps.value)
-  //     }
-  //   }
-  //   return null
-  // }
 
   onChangeText = (text:string) => {
     const { onChangeText, type } = this.props;
@@ -115,9 +77,6 @@ export default class TextInputWithControls extends React.Component<TextInputWith
     // if (this.inputRef) {
     //   this.inputRef.clear();
     // }
-    // this.setState({
-    //   value:''
-    // })
     const { onClearPress } = this.props;
     if(onClearPress){
       onClearPress()
@@ -129,21 +88,6 @@ export default class TextInputWithControls extends React.Component<TextInputWith
     if (this.inputRef) {
       this.inputRef.focus();
     }
-  }
-
-  renderLeftView = () => {
-    const {
-      left,
-      styles,
-      labelNumber
-    } = this.props
-    const textStyle = {
-      width: variables.font_size_heading * (labelNumber as number) * 1.05,
-    };
-    if (typeof left === 'string') {
-      return <Text style={[styles.leftLabel, textStyle]}>{left}</Text>
-    }
-    return left
   }
 
   getkeyboardType = () => {
@@ -181,7 +125,6 @@ export default class TextInputWithControls extends React.Component<TextInputWith
     const inputStyle = [styles.input, error ? styles.inputErrorColor : null]
     return (<TextInput
       {...restProps}
-      clearButtonMode={'never'}
       ref={el => (this.inputRef = el)}
       style={inputStyle}
       keyboardType={keyboardType}
@@ -191,33 +134,12 @@ export default class TextInputWithControls extends React.Component<TextInputWith
   }
   render() {
     const {
-      left,
-      type,
-      clear,
-      children,
-      error,
-      extra,
-      labelNumber,
-      last,
-      onExtraPress,
-      onErrorPress,
       styles,
-      ...restProps
+      style
     } = this.props;
-    const { style } = restProps;
-
     return (
       <View style={[styles.container, style]}>
-        {left && this.renderLeftView()}
         {this.renderInputView()}
-        <TextInputControls 
-          clear={clear}
-          extra={extra}
-          error={error}
-          onClearPress={this.onClearPress}
-          onExtraPress={onExtraPress}
-          onErrorPress={onErrorPress}
-        />
       </View>
     );
   }

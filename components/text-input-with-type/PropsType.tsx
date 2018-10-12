@@ -1,7 +1,6 @@
-import React from 'react';
 export type InputEventHandler = (value?: string) => void;
 
-export interface TextInputWithControlsPropsType {
+export interface TextInputWithTypeType {
   // left?: React.ReactNode;
   // right?: React.ReactNode;
   type?:
@@ -17,16 +16,8 @@ export interface TextInputWithControlsPropsType {
   value?: string;
   defaultValue?: string;
   placeholder?: string;
-  clear?: boolean;
   maxLength?: number;
-  extra?: React.ReactNode;
-  error?: boolean;
-  onExtraPress?: () => void;
-  onErrorPress?: () => void;
-  onClearPress?: () => void;
   // size?: 'large' | 'small';
-  labelNumber?: number;
-  labelPosition?: 'left' | 'top';
   textAlign?: 'left' | 'center';
   updatePlaceholder?: boolean;
   styles?: any;
