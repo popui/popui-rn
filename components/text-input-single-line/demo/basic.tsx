@@ -64,7 +64,7 @@ export default class BasicTextInputSingleLineExample extends React.Component<any
                 value,
               });
             }}
-            extra={<Text>元</Text>}
+            extra={"元"}
             placeholder="不可编辑"
             editable={false}
           >

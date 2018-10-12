@@ -39,15 +39,12 @@ export default {
     position: 'absolute',
     right: variables.h_spacing_md,
     bottom: variables.h_spacing_md,
-    flexDirection: 'column',
-    alignItems: 'center',
-    justifyContent: 'center',
   },
   clear:{
 
   },
   count:{
-
+    paddingLeft: 5,
   },
   countText:{
     color:"#B2B2B2",

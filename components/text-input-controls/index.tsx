@@ -31,8 +31,7 @@ export default class TextInputControls extends React.Component<TextInputControls
     onErrorPress: noop,
     styles
   };
-
-  renderExtraView = () => {
+  renderExtraText =() =>{
     const {
       extra,
       styles,
@@ -40,19 +39,23 @@ export default class TextInputControls extends React.Component<TextInputControls
     } = this.props;
     const TouchComp = onExtraPress?TouchableOpacity:TouchableWithoutFeedback
     const extraStyle = {
-      width:
-        typeof extra === 'string' && (extra as string).length > 0
-          ? (extra as string).length * variables.font_size_heading
-          : 0,
+      width:(extra as string).length * variables.font_size_heading,
     };
-    const textStyle = [styles.extra, extraStyle]
+    const textStyle = [styles.extraText, extraStyle]
     return ((
       <TouchComp onPress={onExtraPress}>
-          {typeof extra === 'string' ? (
-            <Text style={textStyle}>{extra}</Text>
-          ) :extra}
+          <Text style={textStyle}>{extra}</Text>
       </TouchComp>
     ))
+  }
+  renderExtraView = () => {
+    const {
+      extra,
+    } = this.props;
+    if(typeof extra === 'string' && (extra as string).length > 0){
+      return this.renderExtraText()
+    }
+    return extra
   }
   renderClearView = () => {
     const {

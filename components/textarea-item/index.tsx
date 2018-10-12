@@ -46,7 +46,7 @@ export default class TextAreaItem extends React.Component<
     clear: true,
     error: false,
     editable: true,
-    rows: 1,
+    rows: 4,
     count: 0,
     keyboardType: 'default',
     autoHeight: false,

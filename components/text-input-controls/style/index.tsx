@@ -5,11 +5,13 @@ export default {
   container: {
     flexDirection: 'row',
     alignItems: 'center',
+    justifyContent: 'center',
+    
   },
   clear: {
-    padding: 5,
+    marginTop:2
   },
-  extra: {
+  extraText:{
     marginLeft: variables.h_spacing_sm,
     fontSize: variables.font_size_subhead,
     color: variables.color_text_caption,
