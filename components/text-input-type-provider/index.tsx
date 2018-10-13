@@ -1,6 +1,7 @@
 import React from 'react';
 import { TextInputTypeProviderType } from './PropsType';
 import { noopFunc } from "../_util/noop";
+import { TextInputProperties } from 'react-native';
 
 const keyboardTypeArray = [
   'default',
@@ -16,15 +17,20 @@ const keyboardTypeArray = [
   'twitter',
   'web-search',
 ];
-export default class TextInputTypeProvider extends React.Component<TextInputTypeProviderType, any> {
+
+export interface TextInputTypeProviderProps extends TextInputTypeProviderType, TextInputProperties {
+}
+
+export default class TextInputTypeProvider extends React.Component<TextInputTypeProviderProps, any> {
   static defaultProps = {
     type: 'text',
     name:'TextInputTypeProvider',
     children: noopFunc
   };
 
-  getDisplayTextByType = (text:string,maxLength:number) => {
+  getDisplayTextByType = (text:string) => {
     const { type } = this.props;
+    const maxLength = this.props.maxLength as number;
     switch (type) {
       case 'bankCard':
         text = text.replace(/\D/g, '');
@@ -50,8 +56,6 @@ export default class TextInputTypeProvider extends React.Component<TextInputType
     return text
   }
 
-
-
   getkeyboardType = () => {
     const {
       type,
@@ -72,15 +76,22 @@ export default class TextInputTypeProvider extends React.Component<TextInputType
   render() {
     const {
       type,
+      value : originValue,
       children,
+      ...restProps
     } = this.props;
     const secureTextEntry = type === 'password'
     const keyboardType = this.getkeyboardType()
-
-    return children({
-      getDisplayTextByType:this.getDisplayTextByType,
+    const childrenArgs:TextInputProperties = {
+      ...restProps,
       keyboardType,
       secureTextEntry
-    })
+    }
+    if(originValue!==undefined){
+      // 处理 value
+      const value = this.getDisplayTextByType(originValue)
+      childrenArgs.value = value
+    }
+    return children(childrenArgs)
   }
 }

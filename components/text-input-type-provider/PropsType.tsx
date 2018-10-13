@@ -1,19 +1,19 @@
 export type InputEventHandler = (value?: string) => void;
+import { TextInputProperties } from "react-native";
 
-export interface IChildrenArgs {
-  getDisplayTextByType:(text:string,maxLength:number)=>string
-  keyboardType:string
-  secureTextEntry:boolean
+export interface ChildrenArgs extends TextInputProperties{
+
 }
 
 export interface TextInputTypeProviderType {
   type?:
-    | 'text'
-    | 'bankCard'
-    | 'phone'
-    | 'password'
-    | 'number'
-    | 'digit';
-  name?: string;
-  children:(args:IChildrenArgs)=>React.ReactNode
+  | 'text'
+  | 'bankCard'
+  | 'phone'
+  | 'password'
+  | 'number'
+  | 'digit';
+  value?: string;
+  maxLength?: number;
+  children: (args: ChildrenArgs) => React.ReactNode
 }
