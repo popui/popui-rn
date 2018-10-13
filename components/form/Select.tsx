@@ -1,4 +1,4 @@
-import PropTypes from 'prop-types'
+// import PropTypes from 'prop-types'
 import React, { PureComponent } from 'react'
 import { StyleSheet, Text, View, ViewPropTypes } from 'react-native'
 import { Picker } from 'popui-rn/components/picker'
