@@ -1,14 +1,7 @@
-/* tslint:disable:jsx-no-multiline-js */
 import React from 'react';
-import {
-  StyleSheet,
-  TextInputProperties,
-  View,
-} from 'react-native';
 import { TextInputTypeProviderType } from './PropsType';
-import InputItemStyle from './style/index';
-// import { Omit } from '../_util/types';
-import TextInput from '../text-input'
+import { noopFunc } from "../_util/noop";
+
 const keyboardTypeArray = [
   'default',
   'email-address',
@@ -23,29 +16,15 @@ const keyboardTypeArray = [
   'twitter',
   'web-search',
 ];
-export interface TextInputTypeProvider extends TextInputTypeProviderType, TextInputProperties {
-  last?: boolean;
-  style?: any;
-}
-import {noopFunc  } from "../_util/noop";
-const InputItemStyles = StyleSheet.create<any>(InputItemStyle);
-
-export default class TextInputTypeProvider extends React.Component<TextInputTypeProvider, any> {
+export default class TextInputTypeProvider extends React.Component<TextInputTypeProviderType, any> {
   static defaultProps = {
     type: 'text',
-    editable: true,
-    onChangeText: noopFunc,
-    onBlur: noopFunc,
-    onFocus: noopFunc,
-    textAlign: 'left',
-    styles: InputItemStyles,
+    name:'TextInputTypeProvider',
+    children: noopFunc
   };
 
-  inputRef: TextInput | null;
-
-  onChangeText = (text:string) => {
-    const { onChangeText, type } = this.props;
-    const maxLength = this.props.maxLength as number;
+  getDisplayTextByType = (text:string,maxLength:number) => {
+    const { type } = this.props;
     switch (type) {
       case 'bankCard':
         text = text.replace(/\D/g, '');
@@ -68,27 +47,10 @@ export default class TextInputTypeProvider extends React.Component<TextInputType
       default:
         break;
     }
-    if (onChangeText) {
-      onChangeText(text);
-    }
+    return text
   }
 
-  onClearPress = () => {
-    // if (this.inputRef) {
-    //   this.inputRef.clear();
-    // }
-    const { onClearPress } = this.props;
-    if(onClearPress){
-      onClearPress()
-    }
-  }
 
-  // this is instance method for user to use
-  focus = () => {
-    if (this.inputRef) {
-      this.inputRef.focus();
-    }
-  }
 
   getkeyboardType = () => {
     const {
@@ -107,40 +69,18 @@ export default class TextInputTypeProvider extends React.Component<TextInputType
     return keyboardType
   }
 
-  renderInputView = () => {
-    const {
-      left,
-      type,
-      clear,
-      children,
-      error,
-      extra,
-      labelNumber,
-      last,
-      onErrorPress,
-      styles,
-      ...restProps
-    } = this.props;
-    const keyboardType = this.getkeyboardType()
-    const inputStyle = [styles.input, error ? styles.inputErrorColor : null]
-    return (<TextInput
-      {...restProps}
-      ref={el => (this.inputRef = el)}
-      style={inputStyle}
-      keyboardType={keyboardType}
-      onChangeText={this.onChangeText}
-      secureTextEntry={type === 'password'}
-    />)
-  }
   render() {
     const {
-      styles,
-      style
+      type,
+      children,
     } = this.props;
-    return (
-      <View style={[styles.container, style]}>
-        {this.renderInputView()}
-      </View>
-    );
+    const secureTextEntry = type === 'password'
+    const keyboardType = this.getkeyboardType()
+
+    return children({
+      getDisplayTextByType:this.getDisplayTextByType,
+      keyboardType,
+      secureTextEntry
+    })
   }
 }
