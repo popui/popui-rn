@@ -23,7 +23,7 @@ const CheckboxCells = ({
   style,
   children,
   ...others
-}) => {
+}:any) => {
   const inArray = v => value.filter(a => a === v).length
 
   return (
