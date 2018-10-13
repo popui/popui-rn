@@ -2,23 +2,18 @@
 import React from "react";
 import {
   ScrollView,
-  Text,
   TextInput as RNTextInput,
   Alert,
-  Image,
-  TextInput
 } from "react-native";
 import {
-  Button,
+  TextInput,
   TextInputTypeProvider,
-  List,
   CellLabel,
   Cell,
   CellBody,
   CellFooter,
   CellHeader,
   Cells,
-  CellsTips,
   CellsTitle,
   CellText
 } from "popui-rn";
@@ -194,6 +189,7 @@ export default class BasicTextInputTypeProviderExample extends React.Component<
         showsHorizontalScrollIndicator={false}
         showsVerticalScrollIndicator={false}
       >
+        <CellsTitle >TextInputTypeProvider</CellsTitle>
         <Cells>
           {this.renderText()}
           {this.renderBankCard()}
