@@ -15,7 +15,7 @@ const styles = StyleSheet.create({
     },
 })
 
-const RadioCells = ({ value, options, onChange, disabled, style, children, ...others }) =>
+const RadioCells = ({ value, options, onChange, disabled, style, children, ...others }:any) =>
     <Cells style={[style, disabled ? styles.disabled : null]} {...others}>
         {options.map((option, idx) =>
             <Cell key={idx} onPress={() => !disabled && onChange(option.value)}>

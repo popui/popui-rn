@@ -4,7 +4,8 @@ import {
   Cell,
   CellBody,
   CellsTitle,
-  RadioCells
+  RadioCells,
+  WhiteSpace
 } from "popui-rn";
 const options = [
   {
@@ -31,6 +32,7 @@ const options = [
 export default class InputScreen extends React.Component<any, any> {
   state = {
     radio: "",
+    radio2: "",
   };
   render() {
     return (
@@ -47,6 +49,17 @@ export default class InputScreen extends React.Component<any, any> {
             </CellBody>
           </Cell>
         </RadioCells>
+
+        <WhiteSpace />
+
+        <CellsTitle>单选列表项(禁用)</CellsTitle>
+        <RadioCells
+          options={options}
+          onChange={this.handleRadio2Change}
+          value={this.state.radio2}
+          disabled
+        >
+        </RadioCells>
       </View>
     );
   }
@@ -56,5 +69,11 @@ export default class InputScreen extends React.Component<any, any> {
       value
     })
     this.setState({ radio:value });
+  };
+  private handleRadio2Change = (value: any) => {
+    console.log('handleRadioChange',{
+      value
+    })
+    this.setState({ radio2:value });
   };
 }
