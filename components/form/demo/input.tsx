@@ -1,11 +1,11 @@
 import React from 'react'
 
-import { Image, Text,View } from 'react-native'
+import { Text,View } from 'react-native'
 import {
- Form as FormComps,  
+ Form as FormComps,
 } from 'popui-rn'
-import { CellLabel as Label, Cell, CellBody, CellFooter, CellHeader, Cells, CellsTips, CellsTitle, CellText, } from 'popui-rn';
- const { CheckboxCells, Input, RadioCells} = FormComps
+import {  Cell, CellBody,  CellsTitle } from 'popui-rn';
+ const { CheckboxCells,  RadioCells} = FormComps
 export interface IProps  {
 }
 export default class InputScreen extends React.Component<IProps, any> {
@@ -28,7 +28,7 @@ export default class InputScreen extends React.Component<IProps, any> {
     render() {
         return (
             <View>
-                {/* <CellsTitle>单选列表项</CellsTitle>
+                <CellsTitle>单选列表项</CellsTitle>
                 <RadioCells
                     options={[
                         {
@@ -61,25 +61,7 @@ export default class InputScreen extends React.Component<IProps, any> {
                     onChange={this.handleCheckboxChange}
                     value={this.state.checkbox}
                     disabled
-                /> */}
-   
-                <Cells>
-                    <Cell>
-                        <CellHeader><Label>qq</Label></CellHeader>
-                        <CellBody>
-                            <Input
-                                placeholder="请输入 qq 号"
-                                value={this.state.text}
-                                onChangeText={this.handleChangeText}
-                            />
-                        </CellBody>
-                    </Cell>
-                    <Cell vcode error>
-                        <CellHeader><Label>验证码</Label></CellHeader>
-                        <CellBody><Input placeholder="请输入验证码" defaultValue="111"/></CellBody>
-                        <CellFooter><Image source={{ uri: 'https://weui.io/images/vcode.jpg' }}/></CellFooter>
-                    </Cell>
-                </Cells>
+                />
             </View>
         )
     }
