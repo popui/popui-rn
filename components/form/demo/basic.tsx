@@ -1,8 +1,12 @@
 import React from "react";
 import { Text, View } from "react-native";
-import { Form } from "popui-rn";
-const { Select, Uploader } = Form;
-
+// import Select from '../Select'
+import Uploader from '../Uploader'
+const files = [
+  { uri: 'https://weui.io/images/icon_tabbar.png', error:true, status:"status1", isVertical:true },
+  { uri: 'https://weui.io/images/icon_tabbar.png', error:false, status:"status2", isVertical:false },
+  { uri: 'https://weui.io/images/icon_tabbar.png', error:false, status:"status3", isVertical:true },
+]
 const options = [
   {
     label: "选项一",
@@ -31,9 +35,12 @@ export default class FormInputSample extends React.Component<any, any> {
     return (
       <View>
         <Text>FormInputSample 123</Text>
-        <Select value={[1]}
+        {/* <Select value={[1]}
         placeholder={"placeholder"}
-        options={options} />
+        options={options} /> */}
+        <Uploader title="Uploader" maxCount={5} files={files}
+        onChange={()=>{}}
+        onFilePress={()=>{}}/>
       </View>
     );
   }

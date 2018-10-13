@@ -89,7 +89,7 @@ const Uploader = ({
   disabled = false,
   style,
   ...others
-}) => {
+}:any) => {
   const options = {
     title,
     cancelButtonTitle: '取消',
