@@ -1,5 +1,5 @@
 import React from 'react';
-import { TextInput as RNTextInput, View, StyleSheet,TouchableOpacity } from 'react-native';
+import { TextInput as RNTextInput, View, StyleSheet,TouchableOpacity,Platform } from 'react-native';
 import { TextInputProps } from './PropsType'
 import InputItemStyle from './style/index';
 import IconWeui from '../icon-weui'
@@ -69,6 +69,9 @@ export default class PopTextInput extends React.Component<TextInputProps, any> {
       styles,
       value
     } = this.props;
+    if(Platform.OS === 'ios'){
+      return null
+    }
     /* 只在有 value 的 受控模式 下展示 自定义的 clear 按钮 */
     if(!value || !clear){
       return null
@@ -93,7 +96,7 @@ export default class PopTextInput extends React.Component<TextInputProps, any> {
         <RNTextInput
           style={[styles!.input, inputStyle]}
           ref={el => ((this.inputRef as any) = el)}
-          clearButtonMode={'never'}
+          clearButtonMode={'always'}
           underlineColorAndroid="transparent"
           placeholderTextColor={'#B2B2B2'}
           {...restProps}
