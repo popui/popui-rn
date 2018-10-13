@@ -101,13 +101,13 @@ class Select extends PureComponent {
     }
 }
 
-Select.propTypes = {
-    value: PropTypes.any,
-    options: PropTypes.array,
-    onChange: PropTypes.func,
-    style: Text.propTypes.style,
-    pickerStyle: ViewPropTypes.style,
-    placeholder: PropTypes.string,
-}
+// Select.propTypes = {
+//     value: PropTypes.any,
+//     options: PropTypes.array,
+//     onChange: PropTypes.func,
+//     style: Text.propTypes.style,
+//     pickerStyle: ViewPropTypes.style,
+//     placeholder: PropTypes.string,
+// }
 
 export default Select
