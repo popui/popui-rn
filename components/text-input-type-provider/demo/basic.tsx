@@ -9,7 +9,7 @@ import {
 } from "react-native";
 import {
   Button,
-  TextInputWithType,
+  TextInputTypeProvider,
   List,
   CellLabel,
   Cell,
@@ -24,7 +24,7 @@ import {
 
 declare var jest: any;
 
-export default class BasicTextInputWithTypeExample extends React.Component<
+export default class BasicTextInputTypeProviderExample extends React.Component<
   any,
   any
   > {
@@ -65,7 +65,7 @@ export default class BasicTextInputWithTypeExample extends React.Component<
               <CellLabel>qq1</CellLabel>
             </CellHeader>
             <CellBody>
-              <TextInputWithType
+              <TextInputTypeProvider
                 clear
                 onErrorPress={() => Alert.alert("clicked me")}
                 onClearPress={this.onClearPress}
@@ -86,7 +86,7 @@ export default class BasicTextInputWithTypeExample extends React.Component<
               <CellLabel>qq2</CellLabel>
             </CellHeader>
             <CellBody>
-              <TextInputWithType
+              <TextInputTypeProvider
                 clear
                 onErrorPress={() => Alert.alert("clicked me")}
                 onClearPress={this.onClearPress}
@@ -107,7 +107,7 @@ export default class BasicTextInputWithTypeExample extends React.Component<
               <CellLabel>验证码</CellLabel>
             </CellHeader>
             <CellBody>
-              <TextInputWithType
+              <TextInputTypeProvider
                 clear
                 onErrorPress={() => Alert.alert("clicked me")}
                 onClearPress={this.onClearPress}
@@ -127,7 +127,7 @@ export default class BasicTextInputWithTypeExample extends React.Component<
           </Cell>
         </Cells>
         <List renderHeader={() => "基本"}>
-          <TextInputWithType
+          <TextInputTypeProvider
             left="输入框"
             clear
             error={!this.state.value}
@@ -142,7 +142,7 @@ export default class BasicTextInputWithTypeExample extends React.Component<
             extra="元"
             placeholder="有标签"
           />
-          <TextInputWithType
+          <TextInputTypeProvider
             left="输入框"
             clear
             onErrorPress={() => {
@@ -154,7 +154,7 @@ export default class BasicTextInputWithTypeExample extends React.Component<
             placeholder="不可编辑"
             editable={false}
           />
-          <TextInputWithType
+          <TextInputTypeProvider
             clear
             value={this.state.value1}
             onChangeText={(value: any) => {
@@ -165,7 +165,7 @@ export default class BasicTextInputWithTypeExample extends React.Component<
             onClearPress={this.onClearPress}
             placeholder="无标签"
           />
-          <TextInputWithType
+          <TextInputTypeProvider
             left="标题"
             defaultValue="xx"
             clear
@@ -176,7 +176,7 @@ export default class BasicTextInputWithTypeExample extends React.Component<
               "undefined"
             }
           />
-          <TextInputWithType
+          <TextInputTypeProvider
             left="标题"
             clear
             onClearPress={this.onClearPress}
@@ -195,7 +195,7 @@ export default class BasicTextInputWithTypeExample extends React.Component<
           </List.Item>
         </List>
         <List renderHeader={() => "固定标签字数"}>
-          <TextInputWithType
+          <TextInputTypeProvider
             left="姓名"
             clear
             onClearPress={this.onClearPress}
@@ -208,7 +208,7 @@ export default class BasicTextInputWithTypeExample extends React.Component<
             labelNumber={2}
             placeholder="两个字标签"
           />
-          <TextInputWithType
+          <TextInputTypeProvider
             left="校验码"
             clear
             onClearPress={this.onClearPress}
@@ -221,7 +221,7 @@ export default class BasicTextInputWithTypeExample extends React.Component<
             labelNumber={3}
             placeholder="三个字标签"
           />
-          <TextInputWithType
+          <TextInputTypeProvider
             left="四字标签"
             clear
             onClearPress={this.onClearPress}
@@ -236,7 +236,7 @@ export default class BasicTextInputWithTypeExample extends React.Component<
           />
         </List>
         <List renderHeader={() => "格式"}>
-          <TextInputWithType
+          <TextInputTypeProvider
             left="文本输入"
             clear
             onClearPress={this.onClearPress}
@@ -249,7 +249,7 @@ export default class BasicTextInputWithTypeExample extends React.Component<
             }}
             placeholder="text"
           />
-          <TextInputWithType
+          <TextInputTypeProvider
             left="银行卡"
             clear
             onClearPress={this.onClearPress}
@@ -262,7 +262,7 @@ export default class BasicTextInputWithTypeExample extends React.Component<
             }}
             placeholder="bankCard"
           />
-          <TextInputWithType
+          <TextInputTypeProvider
             left="手机号"
             clear
             onClearPress={this.onClearPress}
@@ -275,7 +275,7 @@ export default class BasicTextInputWithTypeExample extends React.Component<
             }}
             placeholder="phone"
           />
-          <TextInputWithType
+          <TextInputTypeProvider
             left="密码"
             clear
             onClearPress={this.onClearPress}
@@ -288,7 +288,7 @@ export default class BasicTextInputWithTypeExample extends React.Component<
             }}
             placeholder="password"
           />
-          <TextInputWithType
+          <TextInputTypeProvider
             left="数字"
             clear
             onClearPress={this.onClearPress}

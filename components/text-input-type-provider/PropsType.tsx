@@ -1,6 +1,6 @@
 export type InputEventHandler = (value?: string) => void;
 
-export interface TextInputWithTypeType {
+export interface TextInputTypeProviderType {
   // left?: React.ReactNode;
   // right?: React.ReactNode;
   type?:

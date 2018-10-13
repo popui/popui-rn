@@ -5,7 +5,7 @@ import {
   TextInputProperties,
   View,
 } from 'react-native';
-import { TextInputWithTypeType } from './PropsType';
+import { TextInputTypeProviderType } from './PropsType';
 import InputItemStyle from './style/index';
 // import { Omit } from '../_util/types';
 import TextInput from '../text-input'
@@ -23,14 +23,14 @@ const keyboardTypeArray = [
   'twitter',
   'web-search',
 ];
-export interface TextInputWithType extends TextInputWithTypeType, TextInputProperties {
+export interface TextInputTypeProvider extends TextInputTypeProviderType, TextInputProperties {
   last?: boolean;
   style?: any;
 }
 import {noopFunc  } from "../_util/noop";
 const InputItemStyles = StyleSheet.create<any>(InputItemStyle);
 
-export default class TextInputWithType extends React.Component<TextInputWithType, any> {
+export default class TextInputTypeProvider extends React.Component<TextInputTypeProvider, any> {
   static defaultProps = {
     type: 'text',
     editable: true,
