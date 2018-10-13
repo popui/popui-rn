@@ -40,10 +40,16 @@ export interface CellProps {
 export interface CellState {
 }
 
-export default class CellComponent extends React.Component<CellProps, CellState> {
+export default class Cell extends React.Component<CellProps, CellState> {
   private renderChildrenWithProps = () => {
     const { access, error, children} = this.props
     const childrenWithProps = React.Children.map(children, (child: any) => {
+      if(!child){
+        console.log('renderChildrenWithProps: child is invalid!',{
+          child
+        })
+        return child
+      }
       if (child.type.name === 'CellFooter') {
         if (access || error) {
           return React.cloneElement(child, { access, error })

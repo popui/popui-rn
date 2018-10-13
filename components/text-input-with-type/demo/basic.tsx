@@ -162,7 +162,7 @@ export default class BasicTextInputTypeProviderExample extends React.Component<
         showsHorizontalScrollIndicator={false}
         showsVerticalScrollIndicator={false}
       >
-        <CellsTitle>TextInputTypeProvider</CellsTitle>
+        <CellsTitle>TextInput With Type</CellsTitle>
         <Cells>
           {this.renderText()}
           {this.renderBankCard()}
