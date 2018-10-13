@@ -37,24 +37,24 @@ export default class BasicTextInputTypeProviderExample extends React.Component<
       labelnum1: "",
       labelnum2: "",
       labelnum3: "",
-      text: "",
-      bankCard: "",
-      phone: "",
-      password: "",
-      number: ""
+      text: "text",
+      bankCard: "11112222333344445555",
+      phone: "18866660000",
+      password: "abcd1234",
+      number: "1234567890"
     };
   }
   onClearPress = () => {
     Alert.alert("Clear Pressed!");
   };
   renderText=()=>{
-    return (<Cell access error>
+    return (<Cell>
       <CellHeader>
         <CellLabel>文本输入</CellLabel>
       </CellHeader>
       <CellBody>
         <TextInputTypeProvider
-          value={this.state.value}
+          value={this.state.text}
         >
           {(props: any) => <TextInput
             {...props}
@@ -63,18 +63,17 @@ export default class BasicTextInputTypeProviderExample extends React.Component<
             placeholder="default (text)"
             onChangeText={(value: any) => {
               this.setState({
-                value
+                text:value
               });
             }}
           />}
         </TextInputTypeProvider>
-        <CellText>元</CellText>
       </CellBody>
       <CellFooter />
     </Cell>)
   }
   renderBankCard=()=>{
-    return (<Cell access error>
+    return (<Cell access>
       <CellHeader>
         <CellLabel>银行卡</CellLabel>
       </CellHeader>
@@ -95,13 +94,12 @@ export default class BasicTextInputTypeProviderExample extends React.Component<
             }}
           />}
         </TextInputTypeProvider>
-        <CellText>元</CellText>
       </CellBody>
       <CellFooter />
     </Cell>)
   }
   renderPhone=()=>{
-    return (<Cell access error>
+    return (<Cell>
       <CellHeader>
         <CellLabel>手机号</CellLabel>
       </CellHeader>
@@ -122,13 +120,12 @@ export default class BasicTextInputTypeProviderExample extends React.Component<
             }}
           />}
         </TextInputTypeProvider>
-        <CellText>元</CellText>
       </CellBody>
       <CellFooter />
     </Cell>)
   }
   renderPassword=()=>{
-    return (<Cell access error>
+    return (<Cell>
       <CellHeader>
         <CellLabel>密码</CellLabel>
       </CellHeader>
@@ -149,7 +146,6 @@ export default class BasicTextInputTypeProviderExample extends React.Component<
             }}
           />}
         </TextInputTypeProvider>
-        <CellText>元</CellText>
       </CellBody>
       <CellFooter />
     </Cell>)
@@ -176,7 +172,7 @@ export default class BasicTextInputTypeProviderExample extends React.Component<
             }}
           />}
         </TextInputTypeProvider>
-        <CellText>元</CellText>
+        <CellText style={{marginLeft: 5,}}>元</CellText>
       </CellBody>
       <CellFooter />
     </Cell>)
