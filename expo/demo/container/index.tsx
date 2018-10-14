@@ -18,6 +18,10 @@ import FormInputExample from 'popui-rn/components/form/demo/basic';
 // import RadioCellsExample from "popui-rn/components/radio-cells/demo/basic";
 // import CheckboxCellsExample from "popui-rn/components/checkbox-cells/demo/basic";
 
+
+import ImagePickerExample from "popui-rn/components/image-picker/demo/basic";
+
+
 export default class App extends React.Component {
   render() {
     return (
@@ -26,6 +30,10 @@ export default class App extends React.Component {
           <ScrollView>
             <Text>Form Input: </Text>
             <FormInputExample />
+
+            <Text>ImagePickerExample: </Text>
+            <ImagePickerExample />
+
 
             {/* <Text>TextInput Example:</Text>
           <TextInputExample /> */}
