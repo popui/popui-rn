@@ -138,12 +138,6 @@ module.exports = {
       module: require('../components/carousel/demo/basic'), // 必须
     },
     {
-      title: 'Checkbox', // 必须
-      description: '复选框',
-      icon: 'https://os.alipayobjects.com/rmsportal/dWPGltvdjaanrRd.png',
-      module: require('../components/checkbox/demo/basic'), // 必须
-    },
-    {
       title: 'DatePicker', // 必须
       description: '日期选择',
       icon: 'https://os.alipayobjects.com/rmsportal/IQtMSWmYwLEuqln.png',
@@ -214,6 +208,18 @@ module.exports = {
       description: '单选框',
       icon: 'https://os.alipayobjects.com/rmsportal/MJszdVSBKhtGmIP.png',
       module: require('../components/radio/demo/basic'), // 必须
+    },
+    {
+      title: 'Radio Cells',
+      description: '单选框',
+      icon: 'https://os.alipayobjects.com/rmsportal/MJszdVSBKhtGmIP.png',
+      module: require('../components/radio-cells/demo/basic'), // 必须
+    },
+    {
+      title: 'Checkbox Cells', // 必须
+      description: '复选框',
+      icon: 'https://os.alipayobjects.com/rmsportal/dWPGltvdjaanrRd.png',
+      module: require('../components/checkbox-cells/demo/basic'), // 必须
     },
     {
       title: 'Slider',
