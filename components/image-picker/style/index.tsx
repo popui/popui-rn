@@ -1,5 +1,6 @@
 import { ViewStyle, ImageStyle, TextStyle } from 'react-native';
 import varibles from '../../style/themes/default';
+import V from '../../style/themes/weui'
 
 export interface IImagePickerStyle {
   container: ViewStyle;
@@ -19,6 +20,7 @@ export default {
     flexWrap: 'wrap',
     flexDirection: 'row',
   },
+  
   size: {
     width: 80,
     height: 80,

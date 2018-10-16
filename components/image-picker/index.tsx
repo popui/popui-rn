@@ -16,7 +16,7 @@ import  {ensureHasPermission} from '../_util/permission'
 export interface ImagePickerNativeProps extends ImagePickerPropTypes {
   styles?: IImagePickerStyle;
 }
-
+import { noopFunc } from "../_util/noop";
 const imagePickerStyles = StyleSheet.create<any>(imagePickerStyle);
 
 export default class ImagePicker extends React.Component<
@@ -30,6 +30,7 @@ export default class ImagePicker extends React.Component<
     // tslint:disable-next-line:no-empty
     onFail() {},
     files: [],
+    renderHeader:noopFunc,
     selectable: true,
   };
 
@@ -58,7 +59,7 @@ export default class ImagePicker extends React.Component<
   }
 
   showPicker = async() => {
-    const {allowsEditing,onAddImageClick} = this.props
+    const {pickerOptions,onAddImageClick} = this.props
     if (onAddImageClick) {
        onAddImageClick();
       return;
@@ -68,10 +69,7 @@ export default class ImagePicker extends React.Component<
       await Expo.Permissions.askAsync(Expo.Permissions.CAMERA_ROLL)
     }
     await ensureHasPermission(Expo.Permissions.CAMERA_ROLL)
-    let result = await Expo.ImagePicker.launchImageLibraryAsync({
-      allowsEditing,
-    })
-    console.log(result);
+    let result = await Expo.ImagePicker.launchImageLibraryAsync(pickerOptions)
     if (!result.cancelled) {
       this.addImage(result)
       // this.setState({ image: result.uri });
@@ -172,12 +170,13 @@ export default class ImagePicker extends React.Component<
   //   );
   //   return imageRollEl
   // }
+ 
   render() {
-    const { selectable } = this.props;
+    const { selectable,renderHeader } = this.props;
     const styles = this.props.styles!;
-    
     return (
       <View style={styles.container}>
+        {renderHeader && renderHeader()}
         {this.renderFilesView()}
         {selectable && this.renderAddItemView()}
         {/* {this.state.visible && this.renderImageRollView()} */}

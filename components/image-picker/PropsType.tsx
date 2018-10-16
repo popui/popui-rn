@@ -7,7 +7,8 @@ export interface ImagePickerPropTypes {
   onImageClick?: (index?: number, files?: Array<ImageItemPropType>) => void;
   onAddImageClick?: () => void;
   onFail?: (msg: string) => void;
-  allowsEditing?:boolean
+  pickerOptions?:any
+  renderHeader?:()=>React.ReactNode
   selectable?: boolean;
   multiple?: boolean;
   accept?: string;

@@ -1,1 +1,3 @@
-export const noopFunc = () => { };
+export const noopFunc = () => { 
+    return null
+};
