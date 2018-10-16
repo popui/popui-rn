@@ -1,5 +1,5 @@
 import { ViewStyle, ImageStyle, TextStyle } from 'react-native';
-import V from '../../style/themes/weui'
+import V from '../../style/themes/default'
 
 export interface IImagePickerStyle {
   container: ViewStyle;

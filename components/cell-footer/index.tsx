@@ -6,7 +6,7 @@ import {
   View,
   ViewStyle
 } from "react-native";
-import V from "../style/themes/weui";
+import V from "../style/themes/default";
 // import IconWeui from '../icon-weui'
 const styles = StyleSheet.create({
   cellFooter: {

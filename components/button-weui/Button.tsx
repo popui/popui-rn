@@ -1,6 +1,6 @@
 import React from 'react'
 import { StyleSheet, TouchableOpacity, View, ViewPropTypes } from 'react-native'
-import V from '../style/themes/weui'
+import V from '../style/themes/default'
 import ButtonText from './ButtonText'
 import TouchableWithFallback from '../touchable-with-fallback'
 

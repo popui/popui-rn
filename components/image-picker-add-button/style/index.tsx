@@ -1,5 +1,5 @@
 import { ViewStyle } from 'react-native';
-import V from '../../style/themes/weui'
+import V from '../../style/themes/default'
 import varibles from '../../style/themes/default';
 
 export interface IImagePickerAddButtonStyle {

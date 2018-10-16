@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types'
 import React from 'react'
 import { StyleSheet, Text, TouchableHighlight, ViewPropTypes } from 'react-native'
-import V from '../style/themes/weui'
+import V from '../style/themes/default'
 import TouchableWithFallback from '../touchable-with-fallback'
 
 const styles = StyleSheet.create({

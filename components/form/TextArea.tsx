@@ -2,7 +2,7 @@
 import React from 'react'
 import { Text, TextInput, View, ViewPropTypes } from 'react-native'
 import { create } from '../style/utils/StyleSheet'
-import V from '../style/themes/weui'
+import V from '../style/themes/default'
 
 const styles = create({
     textarea: {

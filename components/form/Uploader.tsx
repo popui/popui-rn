@@ -3,7 +3,7 @@ import { View, Text, Image, TouchableOpacity, StyleSheet  } from 'react-native';
 // import ImagePicker from 'react-native-image-picker'
 // import concat from 'lodash/concat'
 import IconWeui from '../icon-weui'
-import V from '../style/themes/weui'
+import V from '../style/themes/default'
 
 const styles = StyleSheet.create({
   uploader: {},

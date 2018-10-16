@@ -2,7 +2,7 @@
 import React, { PureComponent } from 'react'
 import { StyleSheet, Text, View, ViewPropTypes } from 'react-native'
 import { Picker } from 'popui-rn/components/picker'
-import V from '../style/themes/weui'
+import V from '../style/themes/default'
 
 const styles = StyleSheet.create({
     text: {

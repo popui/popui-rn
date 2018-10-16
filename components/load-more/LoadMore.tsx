@@ -1,7 +1,7 @@
 import React from 'react'
 import { ActivityIndicator, Dimensions, StyleSheet, Text, View, ViewPropTypes } from 'react-native'
 import { create } from '../style/utils/StyleSheet'
-import V from '../style/themes/weui'
+import V from '../style/themes/default'
 
 const { width } = Dimensions.get('window')
 const styles = create({

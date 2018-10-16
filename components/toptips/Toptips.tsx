@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types'
 import React, { PureComponent } from 'react'
 import { Animated, Dimensions, Easing, Modal, StatusBar, StyleSheet, Text, View, ViewPropTypes } from 'react-native'
-import V from '../style/themes/weui'
+import V from '../style/themes/default'
 
 const { width, height } = Dimensions.get('window')
 const styles = StyleSheet.create({

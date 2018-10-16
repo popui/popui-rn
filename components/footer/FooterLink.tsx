@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types'
 import React from 'react'
 import { StyleSheet, Text, TouchableOpacity, ViewPropTypes } from 'react-native'
-import $V from '../style/themes/weui'
+import $V from '../style/themes/default'
 
 const TextFontSize = 14
 const styles = StyleSheet.create({

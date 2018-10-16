@@ -2,7 +2,7 @@ import PropTypes from 'prop-types'
 import React from 'react'
 import { Text } from 'react-native'
 import { create } from '../style/utils/StyleSheet'
-import V from '../style/themes/weui'
+import V from '../style/themes/default'
 
 const styles = create({
   cellsTips: {

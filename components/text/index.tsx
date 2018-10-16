@@ -1,6 +1,6 @@
 import React from 'react'
 import { StyleSheet, Text as RNText } from 'react-native'
-import V from '../style/themes/weui'
+import V from '../style/themes/default'
 
 export interface ITextProps {
   style?: any

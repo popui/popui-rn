@@ -1,5 +1,5 @@
 import varibles from '../../style/themes/default';
-import V from '../../style/themes/weui'
+import V from '../../style/themes/default'
 
 export interface IImagePickerItemStyle {
   [key:string]:any

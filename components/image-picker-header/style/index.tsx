@@ -1,11 +1,11 @@
 import { ViewStyle, ImageStyle, TextStyle } from 'react-native';
-import V from '../../style/themes/weui'
+import V from '../../style/themes/default'
 
 export interface IImagePickerHeaderStyle {
   uploaderHeader:ViewStyle;
   uploaderTitle:ViewStyle;
   uploaderCounter:ViewStyle;
- 
+
 }
 export default {
   uploaderHeader: {

@@ -9,7 +9,7 @@ import {
   TextStyle
 } from "react-native";
 import IconWeui from "../icon-weui";
-import V from "../style/themes/weui";
+import V from "../style/themes/default";
 
 const styles = StyleSheet.create({
   agreement: {

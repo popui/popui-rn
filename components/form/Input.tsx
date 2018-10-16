@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types'
 import React from 'react'
 import { StyleSheet, TextInput } from 'react-native'
-import V from '../style/themes/weui'
+import V from '../style/themes/default'
 
 const styles = StyleSheet.create({
     input: {
