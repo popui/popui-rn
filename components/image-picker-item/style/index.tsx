@@ -2,32 +2,11 @@ import { ViewStyle, ImageStyle, TextStyle } from 'react-native';
 import varibles from '../../style/themes/default';
 import V from '../../style/themes/weui'
 
-export interface IImagePickerStyle {
-  container: ViewStyle;
-  filesContainer:ViewStyle;
-  size: ViewStyle;
-  item: ViewStyle;
-  image: ImageStyle;
-  closeWrap: ViewStyle;
-  closeText: TextStyle;
-  plusWrap: ViewStyle;
-  plusWrapNormal: ViewStyle;
-  plusWrapHighlight: ViewStyle;
-  plusText: TextStyle;
+export interface IImagePickerItemStyle {
   [key:string]:any
 }
 
 export default {
-  container: {
-   flexDirection: 'column',
-  },
-  uploaderBody: {
-    marginBottom: V.CellGapH - (V.CellGapV + V.UploaderFileSpacing),
-    marginRight: 0 - V.UploaderFileSpacing,
-    flexDirection: 'row',
-    flexWrap: 'wrap',
-    overflow: 'hidden',
-  },
   uploaderFile: {
     position: 'relative',
     width: V.UploaderSize,
@@ -77,7 +56,6 @@ export default {
     height: V.UploaderSize / 2,
     backgroundColor: V.UploaderBorderColor,
   },
-
   item: {
     marginRight: varibles.h_spacing_sm,
     marginBottom: varibles.v_spacing_sm,

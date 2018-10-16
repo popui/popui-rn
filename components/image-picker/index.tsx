@@ -1,18 +1,17 @@
 /* tslint:disable:jsx-no-multiline-js */
 import React from "react";
 import {
-  Image,
   StyleSheet,
   Text,
-  TouchableOpacity,
   TouchableWithoutFeedback,
   View
 } from "react-native";
 // import ImageRoll from './ImageRoll';
-import { ImagePickerPropTypes, ImageItemPropType } from "./PropsType";
+import { ImagePickerPropTypes, ImageItemPropType,ImageItemFuncArgs } from "./PropsType";
 import imagePickerStyle, { IImagePickerStyle } from "./style/index";
 import Expo from "expo";
 import { ensureHasPermission } from "../_util/permission";
+import ImagePickerItem from '../image-picker-item'
 export interface ImagePickerNativeProps extends ImagePickerPropTypes {
   styles?: IImagePickerStyle;
 }
@@ -36,13 +35,6 @@ export default class ImagePicker extends React.Component<
 
   plusText: any;
   plusWrap: any;
-
-  // constructor(props: ImagePickerNativeProps) {
-  //   super(props);
-  //   this.state = {
-  //     // visible: false,
-  //   };
-  // }
 
   onPressIn = () => {
     const styles = this.props.styles!;
@@ -74,11 +66,7 @@ export default class ImagePicker extends React.Component<
     let result = await Expo.ImagePicker.launchImageLibraryAsync(pickerOptions);
     if (!result.cancelled) {
       this.addImage(result);
-      // this.setState({ image: result.uri });
     }
-    // this.setState({
-    //   visible: true,
-    // });
   };
 
   addImage(imageObj: ImageItemPropType) {
@@ -90,8 +78,9 @@ export default class ImagePicker extends React.Component<
   }
 
   removeImage(idx: number): void {
-    const newImages: any[] = [];
     const { files = [], onChange } = this.props;
+    const newImages: any[] = [];
+
     files.forEach((image, index) => {
       if (index !== idx) {
         newImages.push(image);
@@ -102,44 +91,22 @@ export default class ImagePicker extends React.Component<
     }
   }
 
-  // hideImageRoll = () => {
-  //   // this.setState({
-  //   //   visible: false,
-  //   // });
-  //   if (this.props.onFail) {
-  //     this.props.onFail('cancel image selection');
-  //   }
-  // }
-
-  onImageClick(index: number) {
+  onImageClick(idx: number) {
     if (this.props.onImageClick) {
-      this.props.onImageClick(index, this.props.files);
+      this.props.onImageClick(idx, this.props.files);
     }
   }
-  renderFilesView = () => {
+  renderImageItemView = (item:ImageItemPropType,index:number)=>{
+      return <ImagePickerItem
+      item={item}
+      index={index}
+      onImagePress={(options:ImageItemFuncArgs)=>this.onImageClick(options.index)}
+      onImageClosePress={(options:ImageItemFuncArgs)=>this.removeImage(options.index)}
+      />
+  }
+  renderImageItemsView = () => {
     const { files = [] } = this.props;
-    const styles = this.props.styles!;
-    const filesView = files.map((item: any, index) => (
-      <View key={index} style={[styles.item, styles.size]}>
-        <TouchableOpacity
-          onPress={() => this.onImageClick(index)}
-          activeOpacity={0.6}
-        >
-          <Image
-            source={{ uri: item.uri || item.url }}
-            style={[styles.size, styles.image]}
-          />
-        </TouchableOpacity>
-        <TouchableOpacity
-          onPress={() => this.removeImage(index)}
-          style={styles.closeWrap}
-          activeOpacity={0.6}
-        >
-          <Text style={styles.closeText}>×</Text>
-        </TouchableOpacity>
-      </View>
-    ));
-
+    const filesView = files.map(this.renderImageItemView);
     return filesView;
   };
   renderAddItemView = () => {
@@ -164,27 +131,16 @@ export default class ImagePicker extends React.Component<
       </TouchableWithoutFeedback>
     );
   };
-  // renderImageRollView =()=>{
-  //   const imageRollEl = (
-  //     <ImageRoll
-  //       onCancel={this.hideImageRoll}
-  //       onSelected={imgObj => this.addImage(imgObj)}
-  //     />
-  //   );
-  //   return imageRollEl
-  // }
-
   render() {
     const { selectable, renderHeader } = this.props;
     const styles = this.props.styles!;
     return (
       <View style={styles.container}>
         {renderHeader && renderHeader()}
-        <View style={styles.filesContainer}>
-          {this.renderFilesView()}
+        <View style={styles.uploaderBody}>
+          {this.renderImageItemsView()}
           {selectable && this.renderAddItemView()}
         </View>
-        {/* {this.state.visible && this.renderImageRollView()} */}
       </View>
     );
   }

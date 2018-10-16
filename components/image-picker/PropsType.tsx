@@ -1,5 +1,8 @@
 // import React from 'react';
-
+export interface ImageItemFuncArgs {
+  item:ImageItemPropType,
+  index:number
+}
 export interface ImagePickerPropTypes {
   style?: {};
   files?: Array<ImageItemPropType>;
@@ -15,6 +18,9 @@ export interface ImagePickerPropTypes {
 }
 
 export interface ImageItemPropType {
+  isVertical?:boolean
+  error?:boolean
+  statusText?:string
   uri: string;
   width: number;
   height: number;
