@@ -8,27 +8,27 @@ export default class ImagePickerExample extends React.Component<any, any> {
     this.state = {
       files: [
         {
-          url: 'https://zos.alipayobjects.com/rmsportal/WCxfiPKoDDHwLBM.png',
+          uri: 'https://zos.alipayobjects.com/rmsportal/WCxfiPKoDDHwLBM.png',
           id: '2121',
         },
         {
-          url: 'https://zos.alipayobjects.com/rmsportal/WCxfiPKoDDHwLBM.png',
+          uri: 'https://zos.alipayobjects.com/rmsportal/WCxfiPKoDDHwLBM.png',
           id: '2122',
         },
         {
-          url: 'https://zos.alipayobjects.com/rmsportal/WCxfiPKoDDHwLBM.png',
+          uri: 'https://zos.alipayobjects.com/rmsportal/WCxfiPKoDDHwLBM.png',
           id: '2123',
         },
         {
-          url: 'https://zos.alipayobjects.com/rmsportal/WCxfiPKoDDHwLBM.png',
+          uri: 'https://zos.alipayobjects.com/rmsportal/WCxfiPKoDDHwLBM.png',
           id: '2124',
         },
         {
-          url: 'https://zos.alipayobjects.com/rmsportal/WCxfiPKoDDHwLBM.png',
+          uri: 'https://zos.alipayobjects.com/rmsportal/WCxfiPKoDDHwLBM.png',
           id: '2125',
         },
         {
-          url: 'https://zos.alipayobjects.com/rmsportal/WCxfiPKoDDHwLBM.png',
+          uri: 'https://zos.alipayobjects.com/rmsportal/WCxfiPKoDDHwLBM.png',
           id: '2126',
         },
       ],
@@ -54,6 +54,7 @@ export default class ImagePickerExample extends React.Component<any, any> {
         <ImagePicker
           onChange={this.handleFileChange}
           files={this.state.files}
+          multiple={true}
         />
         <WhiteSpace />
         <ImagePicker

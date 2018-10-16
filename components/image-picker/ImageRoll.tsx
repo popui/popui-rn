@@ -6,6 +6,7 @@ import {
   Text,
   TouchableOpacity,
   View,
+  SafeAreaView
 } from 'react-native';
 import CameraRollPicker from 'react-native-camera-roll-picker';
 import varibles from '../style/themes/default';
@@ -56,7 +57,7 @@ export default class ImageRoll extends React.Component<ImageRollProps, any> {
         onRequestClose={() => {}}
         transparent={false}
       >
-        <View style={{ flex: 1 }}>
+        <SafeAreaView style={{ flex: 1 }}>
           <StatusBar barStyle="light-content" />
           <View style={styles.statusBarBg} />
           <View style={[styles.naviBar]}>
@@ -68,9 +69,8 @@ export default class ImageRoll extends React.Component<ImageRollProps, any> {
           <CameraRollPicker
             selected={[]}
             callback={this.onSelected}
-            maximum={1}
           />
-        </View>
+        </SafeAreaView>
       </Modal>
     );
   }
