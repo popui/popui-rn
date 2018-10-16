@@ -10,14 +10,17 @@ export default class ImagePickerExample extends React.Component<any, any> {
         {
           uri: 'https://zos.alipayobjects.com/rmsportal/WCxfiPKoDDHwLBM.png',
           id: '2121',
+          error:true
         },
         {
           uri: 'https://zos.alipayobjects.com/rmsportal/WCxfiPKoDDHwLBM.png',
           id: '2122',
+          statusText:"status"
         },
         {
           uri: 'https://zos.alipayobjects.com/rmsportal/WCxfiPKoDDHwLBM.png',
           id: '2123',
+          loading:true
         },
         {
           uri: 'https://zos.alipayobjects.com/rmsportal/WCxfiPKoDDHwLBM.png',

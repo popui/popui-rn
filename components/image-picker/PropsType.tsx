@@ -20,6 +20,7 @@ export interface ImagePickerPropTypes {
 export interface ImageItemPropType {
   isVertical?:boolean
   error?:boolean
+  loading?:boolean
   statusText?:string
   uri: string;
   width: number;
