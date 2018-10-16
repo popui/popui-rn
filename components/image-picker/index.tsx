@@ -2,16 +2,20 @@
 import React from "react";
 import {
   StyleSheet,
-  Text,
-  TouchableWithoutFeedback,
   View
 } from "react-native";
 // import ImageRoll from './ImageRoll';
-import { ImagePickerPropTypes, ImageItemPropType,ImageItemFuncArgs } from "./PropsType";
+import {
+  ImagePickerPropTypes,
+  ImageItemPropType,
+  ImageItemFuncArgs
+} from "./PropsType";
 import imagePickerStyle, { IImagePickerStyle } from "./style/index";
 import Expo from "expo";
 import { ensureHasPermission } from "../_util/permission";
-import ImagePickerItem from '../image-picker-item'
+import ImagePickerItem from "../image-picker-item";
+import ImagePickerAddButton from "../image-picker-add-button";
+
 export interface ImagePickerNativeProps extends ImagePickerPropTypes {
   styles?: IImagePickerStyle;
 }
@@ -31,23 +35,6 @@ export default class ImagePicker extends React.Component<
     files: [],
     renderHeader: noopFunc,
     selectable: true
-  };
-
-  plusText: any;
-  plusWrap: any;
-
-  onPressIn = () => {
-    const styles = this.props.styles!;
-    this.plusWrap.setNativeProps({
-      style: [styles.item, styles.size, styles.plusWrapHighlight]
-    });
-  };
-
-  onPressOut = () => {
-    const styles = this.props.styles!;
-    this.plusWrap.setNativeProps({
-      style: [styles.item, styles.size, styles.plusWrapNormal]
-    });
   };
 
   showPicker = async () => {
@@ -96,41 +83,26 @@ export default class ImagePicker extends React.Component<
       this.props.onImageClick(idx, this.props.files);
     }
   }
-  renderImageItemView = (item:ImageItemPropType,index:number)=>{
-      return <ImagePickerItem
-      item={item}
-      index={index}
-      onImagePress={(options:ImageItemFuncArgs)=>this.onImageClick(options.index)}
-      onImageClosePress={(options:ImageItemFuncArgs)=>this.removeImage(options.index)}
+  renderImageItemView = (item: ImageItemPropType, index: number) => {
+    return (
+      <ImagePickerItem
+        item={item}
+        index={index}
+        onImagePress={(options: ImageItemFuncArgs) =>
+          this.onImageClick(options.index)
+        }
+        onImageClosePress={(options: ImageItemFuncArgs) =>
+          this.removeImage(options.index)
+        }
       />
-  }
+    );
+  };
   renderImageItemsView = () => {
     const { files = [] } = this.props;
     const filesView = files.map(this.renderImageItemView);
     return filesView;
   };
-  renderAddItemView = () => {
-    const styles = this.props.styles!;
-    return (
-      <TouchableWithoutFeedback
-        onPress={this.showPicker}
-        onPressIn={this.onPressIn}
-        onPressOut={this.onPressOut}
-      >
-        <View
-          ref={conponent => (this.plusWrap = conponent)}
-          style={[
-            styles.item,
-            styles.size,
-            styles.plusWrap,
-            styles.plusWrapNormal
-          ]}
-        >
-          <Text style={[styles.plusText]}>+</Text>
-        </View>
-      </TouchableWithoutFeedback>
-    );
-  };
+
   render() {
     const { selectable, renderHeader } = this.props;
     const styles = this.props.styles!;
@@ -139,7 +111,11 @@ export default class ImagePicker extends React.Component<
         {renderHeader && renderHeader()}
         <View style={styles.uploaderBody}>
           {this.renderImageItemsView()}
-          {selectable && this.renderAddItemView()}
+          {selectable && (
+            <ImagePickerAddButton
+              onPress={this.showPicker}
+            />
+          )}
         </View>
       </View>
     );
