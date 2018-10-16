@@ -13,7 +13,8 @@ export interface ImagePickerPropTypes {
   pickerOptions?:any
   renderHeader?:()=>React.ReactNode
   selectable?: boolean;
-  multiple?: boolean;
+  maxCount?:number
+  // multiple?: boolean;
   accept?: string;
 }
 

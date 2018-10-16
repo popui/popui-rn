@@ -8,7 +8,7 @@ import ResourceLoader from "../common/ResourceLoader";
 // import BasicTextInputTypeProviderExample from
 // 'popui-rn/components/text-input-type-provider/demo/basic';
 // import BasicTextInputWithTypeExample from "popui-rn/components/text-input-with-type/demo/basic";
-import FormInputExample from 'popui-rn/components/form/demo/basic';
+// import FormInputExample from 'popui-rn/components/form/demo/basic';
 // import TextAreaExample from 'popui-rn/components/textarea-item/demo/basic';
 // import BasicTextInputControlsExample from 'popui-rn/components/text-input-controls/demo/basic';
 // import FormInputExample from "popui-rn/components/form/demo/input";
@@ -22,8 +22,7 @@ export default class App extends React.Component {
         return (<ResourceLoader>
         <SafeAreaView style={styles.container}>
           <ScrollView>
-            <Text>Form Input: </Text>
-            <FormInputExample />
+            
 
             <Text>ImagePickerExample: </Text>
             <ImagePickerExample />

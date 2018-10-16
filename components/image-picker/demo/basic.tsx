@@ -50,9 +50,14 @@ export default class ImagePickerExample extends React.Component<any, any> {
       files2,
     });
   }
-  renderHeader =()=>{
+  renderHeader1 =()=>{
     return <ImagePickerHeader title="Uploader"
     filesLength={this.state.files.length}
+    />
+  }
+  renderHeader2 =()=>{
+    return <ImagePickerHeader title="Image Picker"
+    filesLength={this.state.files2.length}
     maxCount={6}
     />
   }
@@ -62,13 +67,15 @@ export default class ImagePickerExample extends React.Component<any, any> {
         <ImagePicker
           onChange={this.handleFileChange}
           files={this.state.files}
-          multiple={true}
-          renderHeader={this.renderHeader}
+          maxCount={10}
+          renderHeader={this.renderHeader1}
         />
         <WhiteSpace />
         <ImagePicker
           onChange={this.handleFile2Change}
           files={this.state.files2}
+          maxCount={6}
+          renderHeader={this.renderHeader2}
         />
       </View>
     );

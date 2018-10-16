@@ -34,7 +34,8 @@ export default class ImagePicker extends React.Component<
     onFail() {},
     files: [],
     renderHeader: noopFunc,
-    selectable: true
+    selectable: true,
+    maxCount:5
   };
 
   showPicker = async () => {
@@ -103,7 +104,18 @@ export default class ImagePicker extends React.Component<
     const filesView = files.map(this.renderImageItemView);
     return filesView;
   };
-
+  renderAddButtonView =()=>{
+    const { selectable,maxCount,files=[] } = this.props;
+    if(!selectable){
+      return null
+    }
+    if(files.length>=(maxCount as number)){
+      return null
+    }
+    return (<ImagePickerAddButton
+      onPress={this.showPicker}
+    />)
+  }
   render() {
     const { selectable, renderHeader } = this.props;
     const styles = this.props.styles!;
@@ -112,11 +124,7 @@ export default class ImagePicker extends React.Component<
         {renderHeader && renderHeader()}
         <View style={styles.uploaderBody}>
           {this.renderImageItemsView()}
-          {selectable && (
-            <ImagePickerAddButton
-              onPress={this.showPicker}
-            />
-          )}
+          {this.renderAddButtonView()}
         </View>
       </View>
     );

@@ -18,6 +18,7 @@ subtitle: 图片选择器
 | onFail | 取消回调  | (msg: string): void |   |
 | selectable| 是否显示添加按钮  | boolean |  true |
 | multiple| 是否支持多选  | boolean |  false |
+| maxCount| 最多支持多少个图片  | number |  5 |
 | accept| 图片类型  | string |  image/* |
 
 
