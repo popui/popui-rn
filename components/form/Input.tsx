@@ -1,12 +1,12 @@
 import PropTypes from 'prop-types'
 import React from 'react'
 import { StyleSheet, TextInput } from 'react-native'
-import V from '../style/themes/default'
+import varibles from '../style/themes/default'
 
 const styles = StyleSheet.create({
     input: {
-        fontSize: V.CellFontSize,
-        height: V.CellLineHeight,
+        fontSize: varibles.CellFontSize,
+        height: varibles.CellLineHeight,
     },
 })
 

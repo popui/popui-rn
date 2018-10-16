@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types'
 import React from 'react'
 import { StyleSheet, Text, View, ViewPropTypes } from 'react-native'
-import V from '../style/themes/default'
+import varibles from '../style/themes/default'
 
 const styles = StyleSheet.create({
     panelHeader: {
@@ -11,10 +11,10 @@ const styles = StyleSheet.create({
         marginLeft: 15,
         borderBottomWidth: StyleSheet.hairlineWidth,
         borderStyle: 'solid',
-        borderColor: V.LineColorLight,
+        borderColor: varibles.LineColorLight,
     },
     panelHeaderText: {
-        color: V.TextColorGray,
+        color: varibles.TextColorGray,
         fontSize: 13,
     },
 })

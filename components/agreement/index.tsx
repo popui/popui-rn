@@ -9,7 +9,7 @@ import {
   TextStyle
 } from "react-native";
 import IconWeui from "../icon-weui";
-import V from "../style/themes/default";
+import varibles from "../style/themes/default";
 
 const styles = StyleSheet.create({
   agreement: {
@@ -22,7 +22,7 @@ const styles = StyleSheet.create({
   },
   agreementText: {
     fontSize: 13,
-    color: V.TextColorGray,
+    color: varibles.TextColorGray,
     marginLeft: 5
   },
   checkbox: {

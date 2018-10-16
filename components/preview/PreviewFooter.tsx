@@ -1,13 +1,13 @@
 import PropTypes from 'prop-types'
 import React from 'react'
 import { StyleSheet, View, ViewPropTypes } from 'react-native'
-import V from '../style/themes/default'
+import varibles from '../style/themes/default'
 
 const styles = StyleSheet.create({
     previewFooter: {
         flexDirection: 'row',
         borderTopWidth: StyleSheet.hairlineWidth,
-        borderColor: V.DialogLineColor,
+        borderColor: varibles.DialogLineColor,
     },
 })
 

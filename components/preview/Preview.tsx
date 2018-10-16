@@ -1,14 +1,14 @@
 import PropTypes from 'prop-types'
 import React from 'react'
 import { StyleSheet, View, ViewPropTypes } from 'react-native'
-import V from '../style/themes/default'
+import varibles from '../style/themes/default'
 
 const styles = StyleSheet.create({
     preview: {
         backgroundColor: '#FFFFFF',
         borderTopWidth: StyleSheet.hairlineWidth,
         borderBottomWidth: StyleSheet.hairlineWidth,
-        borderColor: V.CellBorderColor,
+        borderColor: varibles.CellBorderColor,
     },
 })
 

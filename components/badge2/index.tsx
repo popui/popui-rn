@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types'
 import React from 'react'
 import { StyleSheet, Text, ViewPropTypes } from 'react-native'
-import V from '../style/themes/default'
+import varibles from '../style/themes/default'
 
 const styles = StyleSheet.create({
   badge: {
@@ -12,7 +12,7 @@ const styles = StyleSheet.create({
     lineHeight: 14,
     paddingTop: 1,
     textAlign: 'center',
-    backgroundColor: V.ColorWarn,
+    backgroundColor: varibles.ColorWarn,
     borderWidth: 1.5,
     borderColor: 'transparent',
     borderRadius: 8.5,

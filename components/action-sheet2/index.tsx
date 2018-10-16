@@ -3,12 +3,12 @@ import React from 'react'
 import { Modal, Platform, StyleSheet, Text, View, ViewPropTypes } from 'react-native'
 import { Mask } from 'popui-rn/components/Mask'
 import { Popup } from 'popui-rn/components/Popup'
-import V from '../style/themes/default'
+import varibles from '../style/themes/default'
 import TouchableWithFallback from '../touchable-with-fallback'
 
 const styles = StyleSheet.create({
     iosActionsheet: {
-        backgroundColor: V.BgColorDefault,
+        backgroundColor: varibles.BgColorDefault,
     },
     androidActionsheetWrapper: {
         flexDirection: 'row',
@@ -17,8 +17,8 @@ const styles = StyleSheet.create({
     },
     androidActionsheet: {
         width: 274,
-        backgroundColor: V.BgColorDefault,
-        borderRadius: V.ActionSheetAndroidBorderRadius,
+        backgroundColor: varibles.BgColorDefault,
+        borderRadius: varibles.ActionSheetAndroidBorderRadius,
     },
     actionsheetMenu: {
         backgroundColor: '#fff',
@@ -29,7 +29,7 @@ const styles = StyleSheet.create({
     },
     actionsheetCell: {
         borderTopWidth: StyleSheet.hairlineWidth,
-        borderColor: V.CellBorderColor,
+        borderColor: varibles.CellBorderColor,
         borderStyle: 'solid',
     },
     iosActionsheetCell: {
@@ -48,8 +48,8 @@ const styles = StyleSheet.create({
     iosActionsheetCellText: {
         textAlign: 'center',
         fontSize: 18,
-        marginTop: ((18 * V.baseLineHeight) - 18) / 2,
-        marginBottom: ((18 * V.baseLineHeight) - 18) / 2,
+        marginTop: ((18 * varibles.baseLineHeight) - 18) / 2,
+        marginBottom: ((18 * varibles.baseLineHeight) - 18) / 2,
     },
     androidActionsheetCellText: {
         textAlign: 'left',
@@ -64,11 +64,11 @@ const styles = StyleSheet.create({
         color: '#0BB20C',
     },
     warnActionsheetCellText: {
-        color: V.ColorWarn,
+        color: varibles.ColorWarn,
     },
 })
 
-const underlayColor = V.BgColorActive
+const underlayColor = varibles.BgColorActive
 
 const ActionSheet = ({
                          visible,

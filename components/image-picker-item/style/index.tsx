@@ -1,5 +1,5 @@
 import varibles from '../../style/themes/default';
-import V from '../../style/themes/default'
+import varibles from '../../style/themes/default'
 
 export interface IImagePickerItemStyle {
   [key:string]:any
@@ -8,14 +8,14 @@ export interface IImagePickerItemStyle {
 export default {
   uploaderFile: {
     position: 'relative',
-    width: V.UploaderSize,
-    height: V.UploaderSize,
-    marginRight: V.UploaderFileSpacing,
-    marginBottom: V.UploaderFileSpacing,
+    width: varibles.UploaderSize,
+    height: varibles.UploaderSize,
+    marginRight: varibles.UploaderFileSpacing,
+    marginBottom: varibles.UploaderFileSpacing,
   },
   uploaderFileImage: {
-    width: V.UploaderSize,
-    height: V.UploaderSize,
+    width: varibles.UploaderSize,
+    height: varibles.UploaderSize,
     overflow: 'hidden',
     borderRadius: varibles.radius_sm,
   },

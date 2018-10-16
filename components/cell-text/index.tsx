@@ -1,13 +1,13 @@
 import PropTypes from 'prop-types'
 import React from 'react'
 import { StyleSheet, Text, ViewPropTypes } from 'react-native'
-import V from '../style/themes/default'
+import varibles from '../style/themes/default'
 
 const styles = StyleSheet.create({
     cellText: {
-        fontSize: V.CellFontSize,
-        marginTop: (V.CellLineHeight - V.CellFontSize) / 2,
-        marginBottom: (V.CellLineHeight - V.CellFontSize) / 2,
+        fontSize: varibles.CellFontSize,
+        marginTop: (varibles.CellLineHeight - varibles.CellFontSize) / 2,
+        marginBottom: (varibles.CellLineHeight - varibles.CellFontSize) / 2,
     },
 })
 

@@ -1,54 +1,54 @@
 import PropTypes from 'prop-types'
 import React from 'react'
 import { StyleSheet, Text, ViewPropTypes } from 'react-native'
-import V from '../style/themes/default'
+import varibles from '../style/themes/default'
 
 const styles = StyleSheet.create({
     text: {
-        fontSize: V.BtnFontSize,
+        fontSize: varibles.BtnFontSize,
         textAlign: 'center',
-        marginTop: (V.BtnHeight - V.BtnFontSize) / 2,
-        marginBottom: (V.BtnHeight - V.BtnFontSize) / 2,
+        marginTop: (varibles.BtnHeight - varibles.BtnFontSize) / 2,
+        marginBottom: (varibles.BtnHeight - varibles.BtnFontSize) / 2,
     },
 
     miniText: {
-        fontSize: V.BtnMiniFontSize,
-        marginTop: ((V.BtnMiniHeight * V.BtnMiniFontSize) - V.BtnMiniFontSize) / 2,
-        marginBottom: ((V.BtnMiniHeight * V.BtnMiniFontSize) - V.BtnMiniFontSize) / 2,
+        fontSize: varibles.BtnMiniFontSize,
+        marginTop: ((varibles.BtnMiniHeight * varibles.BtnMiniFontSize) - varibles.BtnMiniFontSize) / 2,
+        marginBottom: ((varibles.BtnMiniHeight * varibles.BtnMiniFontSize) - varibles.BtnMiniFontSize) / 2,
     },
 
     // primary
     primaryText: {
-        color: V.BtnFontColor,
+        color: varibles.BtnFontColor,
     },
 
     // warn
     warnText: {
-        color: V.BtnFontColor,
+        color: varibles.BtnFontColor,
     },
 
     // default
     defaultText: {
-        color: V.BtnDefaultFontColor,
+        color: varibles.BtnDefaultFontColor,
     },
 
     // primaryPlain
     primaryPlainText: {
-        color: V.BtnPlainPrimaryColor,
+        color: varibles.BtnPlainPrimaryColor,
     },
 
     // defaultPlain
     defaultPlainText: {
-        color: V.BtnPlainDefaultColor,
+        color: varibles.BtnPlainDefaultColor,
     },
 
     // disabled
     disabledText: {
-        color: V.BtnDisabledFontColor,
+        color: varibles.BtnDisabledFontColor,
     },
 
     defaultDisabledText: {
-        color: V.BtnDefaultDisabledFontColor,
+        color: varibles.BtnDefaultDisabledFontColor,
     },
 
     plainDisabledText: {

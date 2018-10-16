@@ -1,7 +1,7 @@
 import  React from 'react'
 import { StyleSheet, View, ViewStyle } from 'react-native'
 import IconWeui from '../icon-weui'
-import V from '../style/themes/default'
+import varibles from '../style/themes/default'
 import CellText from '../cell-text'
 
 const styles = StyleSheet.create({
@@ -13,7 +13,7 @@ const styles = StyleSheet.create({
   },
   error: {
     flex: 1,
-    color: V.ColorWarn,
+    color: varibles.ColorWarn,
   },
   errorIcon:{
     marginLeft:5

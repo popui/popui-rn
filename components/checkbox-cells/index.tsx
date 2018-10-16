@@ -3,12 +3,12 @@ import React from 'react'
 import { StyleSheet } from 'react-native'
 import { Cell, CellBody, CellHeader, Cells, CellText } from 'popui-rn'
 import IconWeui from '../icon-weui'
-import V from '../style/themes/default'
+import varibles from '../style/themes/default'
 
 const styles = StyleSheet.create({
   checkbox: {
     fontSize: 23,
-    paddingRight: V.CellInnerGapH
+    paddingRight: varibles.CellInnerGapH
   },
   disabled: {
     opacity: 0.5

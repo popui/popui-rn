@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types'
 import React, { PureComponent } from 'react'
 import { Animated, Dimensions, Easing, Modal, StatusBar, StyleSheet, Text, View, ViewPropTypes } from 'react-native'
-import V from '../style/themes/default'
+import varibles from '../style/themes/default'
 
 const { width, height } = Dimensions.get('window')
 const styles = StyleSheet.create({
@@ -14,13 +14,13 @@ const styles = StyleSheet.create({
         zIndex: 5000,
     },
     primaryToptips: {
-        backgroundColor: V.ColorPrimary,
+        backgroundColor: varibles.ColorPrimary,
     },
     warnToptips: {
-        backgroundColor: V.ColorWarn,
+        backgroundColor: varibles.ColorWarn,
     },
     infoToptips: {
-        backgroundColor: V.LinkColorDefault,
+        backgroundColor: varibles.LinkColorDefault,
     },
     toptipsText: {
         fontSize: 14,

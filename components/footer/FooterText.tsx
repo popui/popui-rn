@@ -6,7 +6,7 @@ import $V from '../style/themes/default'
 const TextFontSize = 12
 const styles = StyleSheet.create({
     footerText: {
-        color: $V.TextColorGray,
+        color: $varibles.TextColorGray,
         marginLeft: 0.34 * TextFontSize,
         marginRight: 0.34 * TextFontSize,
         fontSize: TextFontSize,

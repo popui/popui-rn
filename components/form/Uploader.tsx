@@ -3,7 +3,7 @@ import { View, Text, Image, TouchableOpacity, StyleSheet  } from 'react-native';
 // import ImagePicker from 'react-native-image-picker'
 // import concat from 'lodash/concat'
 import IconWeui from '../icon-weui'
-import V from '../style/themes/default'
+import varibles from '../style/themes/default'
 
 const styles = StyleSheet.create({
   uploader: {},
@@ -15,7 +15,7 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     alignItems: 'center',
     justifyContent: 'space-between',
-    height: 17 * V.baseLineHeight,
+    height: 17 * varibles.baseLineHeight,
   },
   uploaderTitle: {
     fontSize: 17,
@@ -25,22 +25,22 @@ const styles = StyleSheet.create({
     color: '#888',
   },
   uploaderBody: {
-    marginBottom: V.CellGapH - (V.CellGapV + V.UploaderFileSpacing),
-    marginRight: 0 - V.UploaderFileSpacing,
+    marginBottom: varibles.CellGapH - (varibles.CellGapV + varibles.UploaderFileSpacing),
+    marginRight: 0 - varibles.UploaderFileSpacing,
     flexDirection: 'row',
     flexWrap: 'wrap',
     overflow: 'hidden',
   },
   uploaderFile: {
     position: 'relative',
-    width: V.UploaderSize,
-    height: V.UploaderSize,
-    marginRight: V.UploaderFileSpacing,
-    marginBottom: V.UploaderFileSpacing,
+    width: varibles.UploaderSize,
+    height: varibles.UploaderSize,
+    marginRight: varibles.UploaderFileSpacing,
+    marginBottom: varibles.UploaderFileSpacing,
   },
   uploaderFileImage: {
-    width: V.UploaderSize,
-    height: V.UploaderSize,
+    width: varibles.UploaderSize,
+    height: varibles.UploaderSize,
   },
   uploaderStatus: {
     position: 'absolute',
@@ -63,20 +63,20 @@ const styles = StyleSheet.create({
   },
   uploaderAddButton: {
     position: 'relative',
-    marginRight: V.UploaderFileSpacing,
-    marginBottom: V.UploaderFileSpacing,
-    width: V.UploaderSize - (V.UploaderBorderWidth * 2),
-    height: V.UploaderSize - (V.UploaderBorderWidth * 2),
-    borderWidth: V.UploaderBorderWidth,
-    borderColor: V.UploaderBorderColor,
+    marginRight: varibles.UploaderFileSpacing,
+    marginBottom: varibles.UploaderFileSpacing,
+    width: varibles.UploaderSize - (varibles.UploaderBorderWidth * 2),
+    height: varibles.UploaderSize - (varibles.UploaderBorderWidth * 2),
+    borderWidth: varibles.UploaderBorderWidth,
+    borderColor: varibles.UploaderBorderColor,
   },
   uploaderAddButtonRec: {
     position: 'absolute',
-    top: (V.UploaderSize / 4) - 4,
-    left: (V.UploaderSize / 2) - 4,
-    width: V.UploaderBorderWidth + 1,
-    height: V.UploaderSize / 2,
-    backgroundColor: V.UploaderBorderColor,
+    top: (varibles.UploaderSize / 4) - 4,
+    left: (varibles.UploaderSize / 2) - 4,
+    width: varibles.UploaderBorderWidth + 1,
+    height: varibles.UploaderSize / 2,
+    backgroundColor: varibles.UploaderBorderColor,
   }
 })
 

@@ -1,7 +1,7 @@
 import React from 'react'
 import { ActivityIndicator, Dimensions, StyleSheet, Text, View, ViewPropTypes } from 'react-native'
 import { create } from '../style/utils/StyleSheet'
-import V from '../style/themes/default'
+import varibles from '../style/themes/default'
 
 const { width } = Dimensions.get('window')
 const styles = create({
@@ -17,7 +17,7 @@ const styles = create({
     },
     loadMoreLine: {
         borderTopWidth: StyleSheet.hairlineWidth,
-        borderColor: V.LineColorLight,
+        borderColor: varibles.LineColorLight,
         marginTop: 14 * 2.4,
     },
     loadMoreTips: {
@@ -33,7 +33,7 @@ const styles = create({
         top: 0 - (14 * 0.9),
         paddingLeft: 14 * 0.55,
         paddingRight: 14 * 0.55,
-        color: V.TextColorGray,
+        color: varibles.TextColorGray,
     },
     loadMoreDotTips: {
         paddingLeft: 14 * 0.16,
@@ -43,7 +43,7 @@ const styles = create({
     dot: {
         width: 4,
         height: 4,
-        backgroundColor: V.LineColorLight,
+        backgroundColor: varibles.LineColorLight,
         borderRadius: 12,
     },
 })

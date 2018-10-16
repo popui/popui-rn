@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types'
 import React from 'react'
 import { Image, StyleSheet, Text, TouchableHighlight, View, ViewPropTypes } from 'react-native'
-import V from '../style/themes/default'
+import varibles from '../style/themes/default'
 import TouchableWithFallback from '../touchable-with-fallback'
 
 const styles = StyleSheet.create({
@@ -12,20 +12,20 @@ const styles = StyleSheet.create({
         marginLeft: 15,
         borderTopWidth: StyleSheet.hairlineWidth,
         borderStyle: 'solid',
-        borderColor: V.LineColorLight,
+        borderColor: varibles.LineColorLight,
         position: 'relative',
         flexDirection: 'row',
         alignItems: 'center',
     },
     PanelFooterText: {
         flex: 1,
-        color: V.TextColorGray,
+        color: varibles.TextColorGray,
         fontSize: 14,
     },
 })
 
 const PanelFooter = ({ children, style, textStyle, access, ...others }) =>
-    <TouchableWithFallback style={style} underlayColor={V.BgColorActive} {...others}>
+    <TouchableWithFallback style={style} underlayColor={varibles.BgColorActive} {...others}>
         <View style={styles.PanelFooter}>
             <Text style={[styles.PanelFooterText, textStyle]}>
                 {children}

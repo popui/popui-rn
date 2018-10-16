@@ -1,5 +1,5 @@
 import { ViewStyle, ImageStyle, TextStyle } from 'react-native';
-import V from '../../style/themes/default'
+import varibles from '../../style/themes/default'
 
 export interface IImagePickerStyle {
   container: ViewStyle;
@@ -18,8 +18,8 @@ export default {
    flexDirection: 'column',
   },
   uploaderBody: {
-    marginBottom: V.CellGapH - (V.CellGapV + V.UploaderFileSpacing),
-    marginRight: 0 - V.UploaderFileSpacing,
+    marginBottom: varibles.CellGapH - (varibles.CellGapV + varibles.UploaderFileSpacing),
+    marginRight: 0 - varibles.UploaderFileSpacing,
     flexDirection: 'row',
     flexWrap: 'wrap',
     overflow: 'hidden',

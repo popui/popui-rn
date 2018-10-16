@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types'
 import React from 'react'
 import { StyleSheet, Text, TouchableHighlight, ViewPropTypes } from 'react-native'
-import V from '../style/themes/default'
+import varibles from '../style/themes/default'
 import TouchableWithFallback from '../touchable-with-fallback'
 
 const styles = StyleSheet.create({
@@ -9,17 +9,17 @@ const styles = StyleSheet.create({
         flex: 1,
         alignSelf: 'center',
         borderLeftWidth: StyleSheet.hairlineWidth,
-        borderColor: V.DialogLineColor,
+        borderColor: varibles.DialogLineColor,
     },
 
     previewBtnText: {
         textAlign: 'center',
-        color: V.DialogLinkColor,
+        color: varibles.DialogLinkColor,
         lineHeight: 50,
-        fontSize: V.baseFontSize,
+        fontSize: varibles.baseFontSize,
     },
     previewBtnDefaultText: {
-        color: V.TextColorGray,
+        color: varibles.TextColorGray,
     },
     previewBtnPrimaryText: {
         color: '#0BB20C',
@@ -27,7 +27,7 @@ const styles = StyleSheet.create({
 })
 
 const ButtonPreview = ({ primary, style, textStyle, children, ...others }) =>
-    <TouchableWithFallback underlayColor={V.DialogLinkActiveBc} style={[styles.previewBtn, style]}>
+    <TouchableWithFallback underlayColor={varibles.DialogLinkActiveBc} style={[styles.previewBtn, style]}>
         <Text
             style={[
                 styles.previewBtnText,

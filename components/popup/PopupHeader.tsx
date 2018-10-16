@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types'
 import React from 'react'
 import { StyleSheet, Text, View, ViewPropTypes } from 'react-native'
-import V from '../style/themes/default'
+import varibles from '../style/themes/default'
 
 const styles = StyleSheet.create({
     popupHeader: {
@@ -18,7 +18,7 @@ const styles = StyleSheet.create({
         paddingTop: 10,
         paddingBottom: 10,
         paddingLeft: 15,
-        fontSize: V.baseFontSize,
+        fontSize: varibles.baseFontSize,
     },
     popupActionRight: {
         flex: 1,
@@ -27,7 +27,7 @@ const styles = StyleSheet.create({
         paddingTop: 10,
         paddingBottom: 10,
         paddingRight: 15,
-        fontSize: V.baseFontSize,
+        fontSize: varibles.baseFontSize,
     },
 })
 

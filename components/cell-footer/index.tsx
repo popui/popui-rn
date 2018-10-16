@@ -6,7 +6,7 @@ import {
   View,
   ViewStyle
 } from "react-native";
-import V from "../style/themes/default";
+import varibles from "../style/themes/default";
 // import IconWeui from '../icon-weui'
 const styles = StyleSheet.create({
   cellFooter: {
@@ -16,8 +16,8 @@ const styles = StyleSheet.create({
   },
   cellFooterText: {
     textAlign: "center",
-    color: V.TextColorGray,
-    fontSize: V.CellFontSize
+    color: varibles.TextColorGray,
+    fontSize: varibles.CellFontSize
   },
   vcode: {
     width: 100,

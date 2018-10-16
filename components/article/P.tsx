@@ -2,15 +2,15 @@ import PropTypes from 'prop-types'
 import React from 'react'
 import { Text, ViewPropTypes } from 'react-native'
 import { create } from '../style/utils/StyleSheet'
-import V from '../style/themes/default'
+import varibles from '../style/themes/default'
 
 const styles = create({
     p: {
         fontSize: 15,
         marginBottom: 15 * 0.8,
-        lineHeight: 15 * V.baseLineHeight,
+        lineHeight: 15 * varibles.baseLineHeight,
         android: {
-            lineHeight: Math.round(15 * V.baseLineHeight),
+            lineHeight: Math.round(15 * varibles.baseLineHeight),
         },
     },
 })

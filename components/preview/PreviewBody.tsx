@@ -1,14 +1,14 @@
 import PropTypes from 'prop-types'
 import React from 'react'
 import { StyleSheet, View, ViewPropTypes } from 'react-native'
-import V from '../style/themes/default'
+import varibles from '../style/themes/default'
 
 const styles = StyleSheet.create({
     previewBody: {
-        paddingTop: V.CellGapV,
-        paddingBottom: V.CellGapV,
-        paddingLeft: V.CellGapH,
-        paddingRight: V.CellGapH,
+        paddingTop: varibles.CellGapV,
+        paddingBottom: varibles.CellGapV,
+        paddingLeft: varibles.CellGapH,
+        paddingRight: varibles.CellGapH,
     },
 })
 

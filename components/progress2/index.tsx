@@ -2,7 +2,7 @@ import PropTypes from 'prop-types'
 import React, { PureComponent } from 'react'
 import { StyleSheet, TouchableOpacity, View, ViewPropTypes } from 'react-native'
 import IconWeui from '../icon-weui'
-import V from '../style/themes/default'
+import varibles from '../style/themes/default'
 
 const styles = StyleSheet.create({
   progress: {
@@ -10,14 +10,14 @@ const styles = StyleSheet.create({
     alignItems: 'center'
   },
   progressBar: {
-    backgroundColor: V.ProgressBg,
-    height: V.ProgressHeight,
+    backgroundColor: varibles.ProgressBg,
+    height: varibles.ProgressHeight,
     flex: 1
   },
   progressInnerBar: {
     width: 0,
-    height: V.ProgressHeight,
-    backgroundColor: V.ProgressColor
+    height: varibles.ProgressHeight,
+    backgroundColor: varibles.ProgressColor
   },
   progressOpr: {
     marginLeft: 15

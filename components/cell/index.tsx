@@ -1,18 +1,18 @@
 import React from 'react'
 import { StyleSheet, View, ViewStyle } from 'react-native'
-import V from '../style/themes/default'
+import varibles from '../style/themes/default'
 import TouchableWithFallback from '../touchable-with-fallback'
 
 const styles = StyleSheet.create({
   cell: {
     flexDirection: 'row',
     alignItems: 'center',
-    marginLeft: V.CellGapH,
-    paddingTop: V.CellGapV,
-    paddingBottom: V.CellGapV,
-    paddingRight: V.CellGapH,
+    marginLeft: varibles.CellGapH,
+    paddingTop: varibles.CellGapV,
+    paddingBottom: varibles.CellGapV,
+    paddingRight: varibles.CellGapH,
     borderTopWidth: StyleSheet.hairlineWidth,
-    borderColor: V.CellBorderColor,
+    borderColor: varibles.CellBorderColor,
   },
   firstCell: {
     borderTopWidth: 0,
@@ -69,7 +69,7 @@ export default class Cell extends React.Component<CellProps, CellState> {
   public render() {
     const { access, vcode, error, first, disabled, children, style, ...others } = this.props
     return (
-      <TouchableWithFallback underlayColor={V.BgColorActive} {...others} >
+      <TouchableWithFallback underlayColor={varibles.BgColorActive} {...others} >
         <View
           style={[
             styles.cell,

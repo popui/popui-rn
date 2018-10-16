@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types'
 import React from 'react'
 import { StyleSheet, View, ViewPropTypes } from 'react-native'
-import V from '../style/themes/default'
+import varibles from '../style/themes/default'
 import TouchableWithFallback from '../touchable-with-fallback'
 
 const underlayColor = '#ECECEC'
@@ -14,7 +14,7 @@ const styles = StyleSheet.create({
         marginLeft: 15,
         borderTopWidth: StyleSheet.hairlineWidth,
         borderStyle: 'solid',
-        borderColor: V.LineColorLight,
+        borderColor: varibles.LineColorLight,
     },
 
     // appmsg

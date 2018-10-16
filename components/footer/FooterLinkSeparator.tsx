@@ -5,10 +5,10 @@ import $V from '../style/themes/default'
 
 const styles = StyleSheet.create({
     footerlinkseparator: {
-        borderColor: $V.grayColor,
+        borderColor: $varibles.grayColor,
         width: StyleSheet.hairlineWidth,
         borderRightWidth: StyleSheet.hairlineWidth,
-        height: $V.globalFontSize,
+        height: $varibles.globalFontSize,
     },
 })
 
