@@ -35,7 +35,7 @@ export default class ImagePickerItem extends React.Component<
     const source = { uri, isVertical };
     return (
       <TouchableOpacity
-        key={`image-picker-item-touch-${uri}`}
+        key={`image-picker-item-touch-${options.index}`}
         onPress={() => this.onImagePress(options)}
         activeOpacity={0.6}
       >
@@ -82,10 +82,9 @@ export default class ImagePickerItem extends React.Component<
     const styles = this.props.styles!;
     const { item, index } = this.props;
     const options = { item, index };
-    const { uri } = item;
     return (
       <View
-        key={`image-picker-item-container-${uri}`}
+        key={`image-picker-item-container-${index}`}
         style={styles.uploaderFile}
       >
         {this.renderImageItem(options)}

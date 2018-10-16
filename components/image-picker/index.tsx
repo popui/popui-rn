@@ -86,6 +86,7 @@ export default class ImagePicker extends React.Component<
   renderImageItemView = (item: ImageItemPropType, index: number) => {
     return (
       <ImagePickerItem
+        key={`ImagePickerItem-${index}`}
         item={item}
         index={index}
         onImagePress={(options: ImageItemFuncArgs) =>
