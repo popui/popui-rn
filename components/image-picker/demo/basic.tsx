@@ -1,6 +1,6 @@
 import React from 'react';
 import { View } from 'react-native';
-import { ImagePicker, WhiteSpace } from 'popui-rn';
+import { ImagePicker,ImagePickerHeader, WhiteSpace } from 'popui-rn';
 
 export default class ImagePickerExample extends React.Component<any, any> {
   constructor(props: any) {
@@ -47,14 +47,20 @@ export default class ImagePickerExample extends React.Component<any, any> {
       files2,
     });
   }
-
+  renderHeader =()=>{
+    return <ImagePickerHeader title="Uploader"
+    filesLength={this.state.files.length}
+    maxCount={6}
+    />
+  }
   render() {
     return (
-      <View style={{ marginTop: 20, marginLeft: 20 }}>
+      <View >
         <ImagePicker
           onChange={this.handleFileChange}
           files={this.state.files}
           multiple={true}
+          renderHeader={this.renderHeader}
         />
         <WhiteSpace />
         <ImagePicker

@@ -1,18 +1,18 @@
 /* tslint:disable:jsx-no-multiline-js */
-import React from 'react';
+import React from "react";
 import {
   Image,
   StyleSheet,
   Text,
   TouchableOpacity,
   TouchableWithoutFeedback,
-  View,
-} from 'react-native';
+  View
+} from "react-native";
 // import ImageRoll from './ImageRoll';
-import { ImagePickerPropTypes,ImageItemPropType } from './PropsType';
-import imagePickerStyle, { IImagePickerStyle } from './style/index';
-import Expo from 'expo';
-import  {ensureHasPermission} from '../_util/permission'
+import { ImagePickerPropTypes, ImageItemPropType } from "./PropsType";
+import imagePickerStyle, { IImagePickerStyle } from "./style/index";
+import Expo from "expo";
+import { ensureHasPermission } from "../_util/permission";
 export interface ImagePickerNativeProps extends ImagePickerPropTypes {
   styles?: IImagePickerStyle;
 }
@@ -30,8 +30,8 @@ export default class ImagePicker extends React.Component<
     // tslint:disable-next-line:no-empty
     onFail() {},
     files: [],
-    renderHeader:noopFunc,
-    selectable: true,
+    renderHeader: noopFunc,
+    selectable: true
   };
 
   plusText: any;
@@ -47,56 +47,58 @@ export default class ImagePicker extends React.Component<
   onPressIn = () => {
     const styles = this.props.styles!;
     this.plusWrap.setNativeProps({
-      style: [styles.item, styles.size, styles.plusWrapHighlight],
+      style: [styles.item, styles.size, styles.plusWrapHighlight]
     });
-  }
+  };
 
   onPressOut = () => {
     const styles = this.props.styles!;
     this.plusWrap.setNativeProps({
-      style: [styles.item, styles.size, styles.plusWrapNormal],
+      style: [styles.item, styles.size, styles.plusWrapNormal]
     });
-  }
+  };
 
-  showPicker = async() => {
-    const {pickerOptions,onAddImageClick} = this.props
+  showPicker = async () => {
+    const { pickerOptions, onAddImageClick } = this.props;
     if (onAddImageClick) {
-       onAddImageClick();
+      onAddImageClick();
       return;
     }
-    const { status } = await Expo.Permissions.getAsync(Expo.Permissions.CAMERA_ROLL);
-    if (status !== 'granted') {
-      await Expo.Permissions.askAsync(Expo.Permissions.CAMERA_ROLL)
+    const { status } = await Expo.Permissions.getAsync(
+      Expo.Permissions.CAMERA_ROLL
+    );
+    if (status !== "granted") {
+      await Expo.Permissions.askAsync(Expo.Permissions.CAMERA_ROLL);
     }
-    await ensureHasPermission(Expo.Permissions.CAMERA_ROLL)
-    let result = await Expo.ImagePicker.launchImageLibraryAsync(pickerOptions)
+    await ensureHasPermission(Expo.Permissions.CAMERA_ROLL);
+    let result = await Expo.ImagePicker.launchImageLibraryAsync(pickerOptions);
     if (!result.cancelled) {
-      this.addImage(result)
+      this.addImage(result);
       // this.setState({ image: result.uri });
     }
     // this.setState({
     //   visible: true,
     // });
-  }
+  };
 
   addImage(imageObj: ImageItemPropType) {
-    const { files = [],onChange } = this.props;
+    const { files = [], onChange } = this.props;
     const newImages = files.concat(imageObj);
     if (onChange) {
-      onChange(newImages, 'add');
+      onChange(newImages, "add");
     }
   }
 
   removeImage(idx: number): void {
     const newImages: any[] = [];
-    const { files = [],onChange } = this.props;
+    const { files = [], onChange } = this.props;
     files.forEach((image, index) => {
       if (index !== idx) {
         newImages.push(image);
       }
     });
     if (onChange) {
-      onChange(newImages, 'remove', idx);
+      onChange(newImages, "remove", idx);
     }
   }
 
@@ -114,7 +116,7 @@ export default class ImagePicker extends React.Component<
       this.props.onImageClick(index, this.props.files);
     }
   }
-  renderFilesView = () =>{
+  renderFilesView = () => {
     const { files = [] } = this.props;
     const styles = this.props.styles!;
     const filesView = files.map((item: any, index) => (
@@ -137,9 +139,10 @@ export default class ImagePicker extends React.Component<
         </TouchableOpacity>
       </View>
     ));
-    return filesView
-  }
-  renderAddItemView = () =>{
+
+    return filesView;
+  };
+  renderAddItemView = () => {
     const styles = this.props.styles!;
     return (
       <TouchableWithoutFeedback
@@ -153,14 +156,14 @@ export default class ImagePicker extends React.Component<
             styles.item,
             styles.size,
             styles.plusWrap,
-            styles.plusWrapNormal,
+            styles.plusWrapNormal
           ]}
         >
           <Text style={[styles.plusText]}>+</Text>
         </View>
       </TouchableWithoutFeedback>
-    )
-  }
+    );
+  };
   // renderImageRollView =()=>{
   //   const imageRollEl = (
   //     <ImageRoll
@@ -170,15 +173,17 @@ export default class ImagePicker extends React.Component<
   //   );
   //   return imageRollEl
   // }
- 
+
   render() {
-    const { selectable,renderHeader } = this.props;
+    const { selectable, renderHeader } = this.props;
     const styles = this.props.styles!;
     return (
       <View style={styles.container}>
         {renderHeader && renderHeader()}
-        {this.renderFilesView()}
-        {selectable && this.renderAddItemView()}
+        <View style={styles.filesContainer}>
+          {this.renderFilesView()}
+          {selectable && this.renderAddItemView()}
+        </View>
         {/* {this.state.visible && this.renderImageRollView()} */}
       </View>
     );

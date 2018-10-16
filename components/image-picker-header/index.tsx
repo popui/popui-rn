@@ -17,7 +17,8 @@ export default class ImagePickerHeader extends React.Component<
     maxCount: 10,
     styles:defaultStyles
   };
-  renderHeader = () =>{
+
+  public render() {
     const { title } = this.props;
     const filesLength =  (this.props.filesLength!).toFixed()
     const maxCount =  (this.props.maxCount!).toFixed()
@@ -28,12 +29,5 @@ export default class ImagePickerHeader extends React.Component<
       <Text style={styles.uploaderCounter}>{filesLength} / {maxCount}</Text>
     </View>
     )
-  }
-  public render() {
-    return (
-      <View>
-        <Text>ImagePickerHeader Component</Text>
-      </View>
-    );
   }
 }

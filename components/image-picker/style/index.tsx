@@ -4,6 +4,7 @@ import V from '../../style/themes/weui'
 
 export interface IImagePickerStyle {
   container: ViewStyle;
+  filesContainer:ViewStyle;
   size: ViewStyle;
   item: ViewStyle;
   image: ImageStyle;
@@ -17,10 +18,12 @@ export interface IImagePickerStyle {
 
 export default {
   container: {
+   flexDirection: 'column',
+  },
+  filesContainer:{
     flexWrap: 'wrap',
     flexDirection: 'row',
   },
-  
   size: {
     width: 80,
     height: 80,
