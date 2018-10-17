@@ -171,7 +171,7 @@ export class UnderLineTabBar extends PureComponent {
                             ref={(node) => this.scrollTabs = node}
                             bounces={false}
                             scrollEventThrottle={16}
-                            onScroll={(e) => this.setState({ tabScrollValue: eEvent.contentOffset.x })}
+                            onScroll={(e:any) => this.setState({ tabScrollValue: e.nativeEvent.contentOffset.x })}
                 >
                     {tabs.map(this.renderTab)}
                     {this.state.renderUnderline && this.renderUnderline()}

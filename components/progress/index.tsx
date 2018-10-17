@@ -63,7 +63,7 @@ export default class Progress extends React.Component<ProgressProps, any> {
 
   onLayout = (e: LayoutChangeEvent) => {
     this.setState({
-      wrapWidth: eEvent.layout.width,
+      wrapWidth: e.nativeEvent.layout.width,
     });
   }
 

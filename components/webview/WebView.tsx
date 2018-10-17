@@ -54,7 +54,7 @@ export default class WebView extends PureComponent {
     }
     _onMessage = (e) => {
         try {
-            const data = JSON.parse(eEvent.data)
+            const data = JSON.parse(e.nativeEvent.data)
             if (data && data.webClientHeight) {
                 this.setState({
                     webViewHeight: parseInt(data.webClientHeight),

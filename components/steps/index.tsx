@@ -36,7 +36,7 @@ export default class Steps extends React.Component<StepsNativeProps, any> {
 
   onLayout = (e: LayoutChangeEvent) => {
     this.setState({
-      wrapWidth: eEvent.layout.width,
+      wrapWidth: e.nativeEvent.layout.width,
     });
   }
 

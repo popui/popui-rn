@@ -52,8 +52,8 @@ export default class SegmentedControl extends React.Component<
   onPress(e: any, index: number, value: string) {
     const { disabled, onChange, onValueChange } = this.props;
     if (!disabled) {
-      eEvent.selectedSegmentIndex = index;
-      eEvent.value = value;
+      e.nativeEvent.selectedSegmentIndex = index;
+      e.nativeEvent.value = value;
       if (onChange) {
         onChange(e);
       }

@@ -208,7 +208,7 @@ class WebViewScreen extends PureComponent {
   }
 
   onMessage(e) {
-    const message = eEvent.data
+    const message = e.nativeEvent.data
     console.log('WebView onMessage e:', e, ' message:', message)
   }
 
