@@ -1,12 +1,12 @@
 import PropTypes from 'prop-types'
 import React from 'react'
 import { StyleSheet, Text, ViewPropTypes } from 'react-native'
-import $V from '../style/themes/default'
+import varibles from '../style/themes/default'
 
 const TextFontSize = 12
 const styles = StyleSheet.create({
     footerText: {
-        color: $varibles.TextColorGray,
+        color: varibles.TextColorGray,
         marginLeft: 0.34 * TextFontSize,
         marginRight: 0.34 * TextFontSize,
         fontSize: TextFontSize,
