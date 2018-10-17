@@ -1,48 +1,78 @@
-import React from 'react';
-import { Text, View, ViewStyle } from 'react-native';
-import { Button, Progress, WhiteSpace } from 'popui-rn';
-
+import React from "react";
+import { Text, View, ViewStyle } from "react-native";
+import { Button, ButtonWeui, Progress, WhiteSpace } from "popui-rn";
+const { Button, ButtonArea } = ButtonWeui;
 export default class BasicProgressExample extends React.Component<any, any> {
+  timer: any;
+  isUploading = false;
+
   constructor(props: any) {
     super(props);
     this.state = {
       percent: 40,
+      value: 0
     };
   }
 
-  onAdd = () => {
+  onAdd10 = () => {
     let p = this.state.percent + 10;
     if (this.state.percent >= 100) {
       p = 0;
     }
     this.setState({ percent: p });
+  };
+  start = () => {
+    if (this.isUploading) {
+      return;
+    }
+    this.isUploading = true;
+    this.upload();
+  };
+  stop = () =>{
+    if (!this.isUploading) {
+      return;
+    }
+    this.isUploading = false;
+    clearTimeout(this.timer)
   }
+  upload = () => {
+    if (!this.isUploading) {
+      return;
+    }
+    const percent = (this.state.percent + 1) % 100;
+    this.setState({
+      percent
+    });
+    this.timer = setTimeout(this.upload, 20);
+  };
 
   render() {
     const style = {
       marginTop: 80,
-      flexDirection: 'row',
-      justifyContent: 'space-between',
-      alignItems: 'center',
+      flexDirection: "row",
+      justifyContent: "space-between",
+      alignItems: "center"
     };
     return (
       <View>
         <Progress percent={90} position="fixed" />
-
         <View style={[style as ViewStyle]}>
           <View style={{ marginRight: 10, height: 4, flex: 1 }}>
             <Progress percent={this.state.percent} />
           </View>
           <Text>{this.state.percent}%</Text>
         </View>
-        <Button
-          style={{ width: 50, marginLeft: 10 }}
-          type="ghost"
-          size="small"
-          onClick={this.onAdd}
-        >
-          (+-)10
-        </Button>
+        <ButtonArea>
+        <Button  onPress={this.onAdd10}>
+            +10
+          </Button>
+          <Button type="primary" onPress={this.start}>
+            上传
+          </Button>
+          <Button onPress={this.stop}>
+            stop
+          </Button>
+        </ButtonArea>
 
         <WhiteSpace />
         <Progress percent={5} />

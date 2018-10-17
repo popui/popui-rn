@@ -1,8 +1,8 @@
 import React from 'react';
 import { StyleSheet,  SafeAreaView } from 'react-native';
-import ProgressExample from 'popui-rn/components/progress/demo/basic';
+// import ActionSheetExample from 'popui-rn/components/action-sheet/demo/basic';
 // import { ActionSheet2 } from 'popui-rn'
-// import AllComp from 'popui-rn/rn-kitchen-sink/allComponents';
+import AllComp from 'popui-rn/rn-kitchen-sink/allComponents';
 import ResourceLoader from '../common/ResourceLoader';
 
 export default class App extends React.Component {
@@ -10,7 +10,7 @@ export default class App extends React.Component {
     return (
       <ResourceLoader >
         <SafeAreaView style={styles.container}>
-          <ProgressExample />
+          <AllComp />
         </SafeAreaView>
       </ResourceLoader>
     );
@@ -20,6 +20,6 @@ export default class App extends React.Component {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    // backgroundColor: '#000',
+    backgroundColor: '#000',
   },
 });

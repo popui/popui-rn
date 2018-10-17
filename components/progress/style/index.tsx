@@ -1,13 +1,21 @@
 import variables from '../../style/themes/default';
 
 export default {
+  progressInnerBar: {
+    width: 0,
+    height: variables.ProgressHeight,
+    backgroundColor: variables.ProgressColor
+  },
   progressOuter: {
-    backgroundColor: variables.border_color_base,
+    flexDirection: 'row',
+    alignItems: 'center',
+    backgroundColor: variables.ProgressBg,
+    height: variables.ProgressHeight,
     flex: 1,
   },
   progressBar: {
-    borderBottomWidth: 4,
+    borderBottomWidth: variables.ProgressHeight,
     borderStyle: 'solid',
-    borderColor: variables.brand_primary,
+    borderColor: variables.ProgressColor,
   },
 };
