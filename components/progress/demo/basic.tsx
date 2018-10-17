@@ -62,14 +62,14 @@ export default class BasicProgressExample extends React.Component<any, any> {
           </View>
           <Text>{this.state.percent}%</Text>
         </View>
-        <ButtonArea>
-        <Button  onPress={this.onAdd10}>
+        <ButtonArea direction="horizontal">
+        <Button onPress={this.onAdd10} >
             +10
           </Button>
-          <Button type="primary" onPress={this.start}>
+          <Button type="primary" onPress={this.start} style={{marginLeft: 10}}>
             上传
           </Button>
-          <Button onPress={this.stop}>
+          <Button onPress={this.stop} style={{marginLeft: 10}}>
             stop
           </Button>
         </ButtonArea>
