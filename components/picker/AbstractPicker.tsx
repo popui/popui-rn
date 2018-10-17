@@ -7,7 +7,8 @@ import RMCMultiPicker from 'rmc-picker/lib/MultiPicker';
 import RMCPicker from 'rmc-picker/lib/Picker';
 import { getComponentLocale } from '../_util/getLocale';
 import { PickerData, PickerPropsType } from './PropsType';
-
+import { ActivityIndicator,View } from 'react-native';
+import { noopFunc} from '../_util/noop'
 export interface AbstractPickerProps extends PickerPropsType {
   pickerPrefixCls?: string;
   popupPrefixCls?: string;
@@ -26,6 +27,8 @@ export function getDefaultProps() {
     cols: 3,
     cascade: true,
     title: '',
+    loading:false,
+    onOk:noopFunc
   };
 }
 
@@ -133,32 +136,24 @@ export default abstract class AbstractPicker extends React.Component<
     }
   }
 
-  render() {
+  renderCascader = () =>{
     const {
-      children,
-      value = [],
-      popupPrefixCls,
       itemStyle,
       indicatorStyle,
-      okText,
-      dismissText,
-      extra,
       cascade,
       prefixCls,
       pickerPrefixCls,
       data,
       cols,
-      onOk,
-      ...restProps,
+      loading,
+      styles
     } = this.props;
-
-    // tslint:disable-next-line:variable-name
-    const _locale = getComponentLocale(this.props, this.context, 'Picker', () =>
-      require('./locale/zh_CN'),
-    );
-
+    if(loading){
+      return <View style={[styles.cascade,styles.cascadeStyle,styles.cascadeLoading]}>
+        <ActivityIndicator />
+      </View>
+    }
     let cascader;
-    let popupMoreProps = {};
     if (cascade) {
       cascader = (
         <RMCCascader
@@ -182,11 +177,49 @@ export default abstract class AbstractPicker extends React.Component<
           {this.getPickerCol()}
         </RMCMultiPicker>
       );
+    }
+    return <View style={[styles.cascade,styles.cascadeStyle]}>
+      {cascader}
+  </View>
+  }
+  getPopupMoreProps =()=>{
+    const {
+      cascade,
+    } = this.props;
+    let popupMoreProps = {};
+    if(!cascade){
       popupMoreProps = {
         pickerValueProp: 'selectedValue',
         pickerValueChangeProp: 'onValueChange',
       };
     }
+    return popupMoreProps
+  }
+  render() {
+    const {
+      children,
+      value = [],
+      loading,
+      popupPrefixCls,
+      itemStyle,
+      indicatorStyle,
+      okText,
+      dismissText,
+      extra,
+      cascade,
+      prefixCls,
+      pickerPrefixCls,
+      data,
+      cols,
+      onOk,
+      ...restProps,
+    } = this.props;
+    // tslint:disable-next-line:variable-name
+    const _locale = getComponentLocale(this.props, this.context, 'Picker', () =>
+      require('./locale/zh_CN'),
+    );
+    let popupMoreProps = this.getPopupMoreProps()
+    const cascader = this.renderCascader()
     return (
       <RMCPopupCascader
         cascader={cascader}

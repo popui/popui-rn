@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types'
 import React, { PureComponent } from 'react'
 import { StyleSheet, View, ViewPropTypes } from 'react-native'
-import { Popup, PopupHeader } from 'popui-rn/components/Popup'
+import { Popup, PopupHeader } from 'popui-rn/components/popup'
 import PickerSection from './PickerSection'
 
 /*

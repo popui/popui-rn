@@ -22,15 +22,20 @@ export default class PopupExample extends React.Component<any, any> {
       data: [],
       value: [],
       pickerValue: [],
+      loading:false
     };
   }
   onClick = () => {
     // console.log('start loading data');
+    this.setState({
+      loading:true
+    })
     setTimeout(() => {
       this.setState({
         data: district,
+        loading:false
       });
-    }, 500);
+    }, 3000);
   }
   onChange = (value: any) => {
     // console.log(value);
@@ -41,6 +46,7 @@ export default class PopupExample extends React.Component<any, any> {
       <View style={{ marginTop: 30 }}>
         <List>
           <Picker
+            loading={this.state.loading}
             data={this.state.data}
             cols={2}
             value={this.state.value}
@@ -51,6 +57,7 @@ export default class PopupExample extends React.Component<any, any> {
             </List.Item>
           </Picker>
           <Picker
+            loading={this.state.loading}
             title="选择地区"
             data={district}
             cols={2}

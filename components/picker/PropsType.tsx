@@ -16,4 +16,6 @@ export interface PickerPropsType extends IPopupPickerProps {
   onPickerChange?: (value: CascaderValue) => void;
   itemStyle?: any;
   indicatorStyle?: any;
+  loading?:boolean
+  cascadeStyle?:any
 }

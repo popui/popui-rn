@@ -1,4 +1,5 @@
-import { TextStyle, ViewStyle } from 'react-native';
+import { TextStyle, ViewStyle,StyleSheet } from 'react-native';
+import varibles from '../../style/themes/default'
 
 export interface IPickerStyle {
   modal: ViewStyle;
@@ -8,20 +9,30 @@ export interface IPickerStyle {
   title: TextStyle;
 }
 
-export default {
+const styles= {
   modal: {
     flex: 1,
     flexDirection: 'column',
     justifyContent: 'flex-end',
   },
-  header: {
-    flexGrow: 1,
-    height: 44,
+  cascade:{
+    backgroundColor: '#EFEFF4',
+  },
+  cascadeLoading:{
+    flexDirection: 'column',
+    justifyContent:'center',
     alignItems: 'center',
+    height:200
+  },
+  header: {
     flexDirection: 'row',
+    alignItems: 'center',
     justifyContent: 'center',
-    borderBottomWidth: 1,
-    borderBottomColor: '#e7e7e7',
+    flexGrow: 1,
+    borderBottomWidth: StyleSheet.hairlineWidth,
+    borderColor: '#E5E5E5',
+    backgroundColor: '#fbf9fe',
+    height: 44,
   },
   headerItem: {
     height: 44,
@@ -30,8 +41,8 @@ export default {
     justifyContent: 'center',
   },
   actionText: {
-    color: '#0ae',
-    fontSize: 18,
+    color: '#586C94',
+    fontSize: varibles.baseFontSize,
     textAlign: 'center',
   },
   okText: {},
@@ -42,3 +53,6 @@ export default {
     textAlign: 'center',
   },
 };
+
+
+export default styles
