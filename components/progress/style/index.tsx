@@ -12,5 +12,5 @@ export default {
     borderBottomWidth: variables.ProgressHeight,
     borderStyle: 'solid',
     borderColor: variables.ProgressColor,
-  },
+  }
 };

@@ -4,9 +4,9 @@ import { Button, ButtonWeui, Progress, WhiteSpace } from "popui-rn";
 const { Button, ButtonArea } = ButtonWeui;
 const styles = StyleSheet.create({
   container:{
-    marginTop: 30,
+    paddingTop:15
   },
-  advanced:{
+  advancedProgressRow:{
     flexDirection: "row",
     justifyContent: "space-between",
     alignItems: "center"
@@ -59,13 +59,11 @@ export default class BasicProgressExample extends React.Component<any, any> {
   renderAdvanced = () => {
     return <View>
       <Text>受控 percent </Text>
-      <View style={styles.advanced}>
-        <View style={{ marginRight: 10, height: 4, flex: 1 }}>
-          <Progress percent={this.state.percent} />
-        </View>
+      <View style={styles.advancedProgressRow}>
+          <Progress percent={this.state.percent} style={{ marginRight: 10, height: 4, flex: 1 }}/>
         <Text>{this.state.percent}%</Text>
       </View>
-      <ButtonArea direction="horizontal">
+      <ButtonArea direction="horizontal" >
         <Button onPress={this.onAdd10} >
           +10
           </Button>
@@ -81,16 +79,15 @@ export default class BasicProgressExample extends React.Component<any, any> {
   render() {
     return (
       <View style={styles.container}>
-        <Text>position="fixed"</Text>
-        <Progress percent={90} position="fixed" />
-        <WhiteSpace />
+        <Text>{"最上方 percent={80} position=\"fixed\""}</Text>
+        <Progress percent={80} position="fixed" />
+        <WhiteSpace size="xl"/>
 
-        {/* <Text>固定 percent</Text>
-        <Progress percent={35} />
-        <WhiteSpace />
+        <Text>{"固定 percent={35} unfilled={false}"}</Text>
+        <Progress percent={35} unfilled={false}/>
+        <WhiteSpace size="xl"/>
         
-        <WhiteSpace />
-        {this.renderAdvanced()} */}
+        {this.renderAdvanced()}
       </View>
     );
   }

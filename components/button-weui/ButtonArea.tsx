@@ -11,6 +11,8 @@ const styles = StyleSheet.create({
     },
     BtnAreaInline: {
         flexDirection: 'row',
+        justifyContent:'center',
+        alignItems:'center'
     },
 })
 

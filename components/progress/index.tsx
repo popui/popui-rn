@@ -62,8 +62,12 @@ export default class Progress extends React.Component<ProgressProps, any> {
   }
 
   onLayout = (e: LayoutChangeEvent) => {
+    if(this.props.position==="fixed"){
+      return
+    }
+    const wrapWidth = e.nativeEvent.layout.width
     this.setState({
-      wrapWidth: e.nativeEvent.layout.width,
+      wrapWidth
     });
   }
 
@@ -97,6 +101,7 @@ export default class Progress extends React.Component<ProgressProps, any> {
 
     const outerStyle = [
       styles.progressOuter,
+      {width:this.state.wrapWidth},
       position === 'fixed' ? { position: 'absolute', top: 0 } : null,
       !unfilled ? { backgroundColor: 'transparent' } : null,
       style,
