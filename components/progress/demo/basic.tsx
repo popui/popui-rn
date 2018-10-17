@@ -1,7 +1,18 @@
 import React from "react";
-import { Text, View, ViewStyle } from "react-native";
+import { Text, View, ViewStyle,StyleSheet,SafeAreaView } from "react-native";
 import { Button, ButtonWeui, Progress, WhiteSpace } from "popui-rn";
 const { Button, ButtonArea } = ButtonWeui;
+const styles = StyleSheet.create({
+  container:{
+    marginTop: 30,
+  },
+  advanced:{
+    flexDirection: "row",
+    justifyContent: "space-between",
+    alignItems: "center"
+  }
+})
+
 export default class BasicProgressExample extends React.Component<any, any> {
   timer: any;
   isUploading = false;
@@ -28,7 +39,7 @@ export default class BasicProgressExample extends React.Component<any, any> {
     this.isUploading = true;
     this.upload();
   };
-  stop = () =>{
+  stop = () => {
     if (!this.isUploading) {
       return;
     }
@@ -45,37 +56,41 @@ export default class BasicProgressExample extends React.Component<any, any> {
     });
     this.timer = setTimeout(this.upload, 20);
   };
-
-  render() {
-    const style = {
-      marginTop: 80,
-      flexDirection: "row",
-      justifyContent: "space-between",
-      alignItems: "center"
-    };
-    return (
-      <View>
-        <Progress percent={90} position="fixed" />
-        <View style={[style as ViewStyle]}>
-          <View style={{ marginRight: 10, height: 4, flex: 1 }}>
-            <Progress percent={this.state.percent} />
-          </View>
-          <Text>{this.state.percent}%</Text>
+  renderAdvanced = () => {
+    return <View>
+      <Text>受控 percent </Text>
+      <View style={styles.advanced}>
+        <View style={{ marginRight: 10, height: 4, flex: 1 }}>
+          <Progress percent={this.state.percent} />
         </View>
-        <ButtonArea direction="horizontal">
+        <Text>{this.state.percent}%</Text>
+      </View>
+      <ButtonArea direction="horizontal">
         <Button onPress={this.onAdd10} >
-            +10
+          +10
           </Button>
-          <Button type="primary" onPress={this.start} style={{marginLeft: 10}}>
-            上传
+        <Button type="primary" onPress={this.start} style={{ marginLeft: 10 }}>
+          上传
           </Button>
-          <Button onPress={this.stop} style={{marginLeft: 10}}>
-            stop
+        <Button onPress={this.stop} style={{ marginLeft: 10 }}>
+          stop
           </Button>
-        </ButtonArea>
-
+      </ButtonArea>
+    </View>
+  }
+  render() {
+    return (
+      <View style={styles.container}>
+        <Text>position="fixed"</Text>
+        <Progress percent={90} position="fixed" />
         <WhiteSpace />
-        <Progress percent={5} />
+
+        {/* <Text>固定 percent</Text>
+        <Progress percent={35} />
+        <WhiteSpace />
+        
+        <WhiteSpace />
+        {this.renderAdvanced()} */}
       </View>
     );
   }

@@ -81,9 +81,9 @@ export default class Progress extends React.Component<ProgressProps, any> {
 
   render() {
     const { position, unfilled, style, styles, barStyle } = this.props;
-
+    const width = this.getWidth()
     const percentStyle = {
-      width: this.getWidth(),
+      width,
       height: 0,
     };
 
