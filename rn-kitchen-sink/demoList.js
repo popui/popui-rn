@@ -186,12 +186,6 @@ module.exports = {
       module: require('../components/progress/demo/basic'),
     },
     {
-      title: 'Progress2',
-      description: '进度条',
-      icon: 'https://os.alipayobjects.com/rmsportal/ihijukOXDlqXvPS.png',
-      module: require('../components/progress2/demo/basic'),
-    },
-    {
       title: 'Pagination',
       description: '分页器',
       icon: 'https://zos.alipayobjects.com/rmsportal/fOQwMYUYaRRKYtd.png',
