@@ -7,7 +7,7 @@ import RMCMultiPicker from 'rmc-picker/lib/MultiPicker';
 import RMCPicker from 'rmc-picker/lib/Picker';
 import { getComponentLocale } from '../_util/getLocale';
 import { PickerData, PickerPropsType } from './PropsType';
-import { ActivityIndicator,View } from 'react-native';
+import { ActivityIndicator,View,StyleSheet } from 'react-native';
 import { noopFunc} from '../_util/noop'
 export interface AbstractPickerProps extends PickerPropsType {
   pickerPrefixCls?: string;
@@ -154,9 +154,14 @@ export default abstract class AbstractPicker extends React.Component<
       </View>
     }
     let cascader;
+    const cascadeStyle = {
+      ...StyleSheet.flatten(styles.cascade),
+      ...StyleSheet.flatten(styles.cascadeStyle)
+    }
     if (cascade) {
       cascader = (
         <RMCCascader
+          style={cascadeStyle}
           prefixCls={prefixCls}
           pickerPrefixCls={pickerPrefixCls}
           data={data as PickerData[]}
@@ -170,7 +175,7 @@ export default abstract class AbstractPicker extends React.Component<
     } else {
       cascader = (
         <RMCMultiPicker
-          style={{ flexDirection: 'row', alignItems: 'center' }}
+          style={cascadeStyle}
           prefixCls={prefixCls}
           onScrollChange={this.setScrollValue}
         >
@@ -178,9 +183,7 @@ export default abstract class AbstractPicker extends React.Component<
         </RMCMultiPicker>
       );
     }
-    return <View style={[styles.cascade,styles.cascadeStyle]}>
-      {cascader}
-  </View>
+    return cascader
   }
   getPopupMoreProps =()=>{
     const {
@@ -212,7 +215,7 @@ export default abstract class AbstractPicker extends React.Component<
       data,
       cols,
       onOk,
-      ...restProps,
+      ...restProps
     } = this.props;
     // tslint:disable-next-line:variable-name
     const _locale = getComponentLocale(this.props, this.context, 'Picker', () =>

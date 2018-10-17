@@ -17,6 +17,8 @@ const styles= {
   },
   cascade:{
     backgroundColor: '#EFEFF4',
+    flexDirection: 'row', 
+    alignItems: 'center'
   },
   cascadeLoading:{
     flexDirection: 'column',

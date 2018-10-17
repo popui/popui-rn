@@ -9,7 +9,6 @@ export interface PickerNativeProps extends PickerPropsType {
 }
 
 const pickerStyles = StyleSheet.create<any>(pickerStyle);
-
 export default class Picker extends AbstractPicker {
   static defaultProps = {
     ...getDefaultProps(),
