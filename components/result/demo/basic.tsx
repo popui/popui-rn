@@ -1,14 +1,14 @@
 // tslint:disable:jsx-no-multiline-js
 import React from "react";
 import { Image, ScrollView, Text, Alert } from "react-native";
-import { Result, ButtonWeui, Flex } from "popui-rn";
+import { Result,  WeuiButton as Button,WeuiButtonArea, Flex } from "popui-rn";
 
 export default class ResultExample extends React.Component<any, any> {
   renderButtons = () => {
     return (
       <Flex direction="row" style={{ paddingLeft: 20, paddingRight: 20 }}>
         <Flex.Item>
-          <ButtonWeui.Button
+          <Button
             onPress={() => {
               Alert.alert("cancel");
             }}
@@ -17,18 +17,18 @@ export default class ResultExample extends React.Component<any, any> {
             }}
           >
             Cancel
-          </ButtonWeui.Button>
+          </Button>
         </Flex.Item>
 
         <Flex.Item>
-          <ButtonWeui.Button
+          <Button
             type="primary"
             onPress={() => {
               Alert.alert("ok");
             }}
           >
             OK
-          </ButtonWeui.Button>
+          </Button>
         </Flex.Item>
       </Flex>
     );

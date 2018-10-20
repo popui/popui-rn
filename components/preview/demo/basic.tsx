@@ -1,8 +1,7 @@
 import React from 'react'
 import {View} from 'react-native'
-import { ButtonWeui,  Preview, PreviewBody, PreviewFooter, PreviewHeader,
+import { WeuiButtonPreview,  Preview, PreviewBody, PreviewFooter, PreviewHeader,
   PreviewItem, PreviewLabel, PreviewValue } from 'popui-rn'
-const {WeuiButtonPreview} = ButtonWeui
 export interface IProps  {
 
 }

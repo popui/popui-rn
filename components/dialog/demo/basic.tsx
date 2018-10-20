@@ -1,7 +1,6 @@
 import React from 'react'
 import { Text,ScrollView } from 'react-native'
-import { ButtonWeui,Dialog, GapV } from 'popui-rn'
-const { Button, WeuiButtonArea} = ButtonWeui
+import {  WeuiButton as Button,WeuiButtonArea,Dialog, GapV } from 'popui-rn'
 
 
 export interface IProps  {

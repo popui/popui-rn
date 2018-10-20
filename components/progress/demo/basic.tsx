@@ -1,7 +1,7 @@
 import React from "react";
-import { Text, View, ViewStyle,StyleSheet,SafeAreaView } from "react-native";
-import { Button, ButtonWeui, Progress, GapH } from "popui-rn";
-const { Button, WeuiButtonArea } = ButtonWeui;
+import { Text, View,StyleSheet,SafeAreaView } from "react-native";
+import {  WeuiButton as Button,WeuiButtonArea, Progress, GapH } from "popui-rn";
+
 const styles = StyleSheet.create({
   container:{
     paddingTop:15
@@ -86,7 +86,7 @@ export default class BasicProgressExample extends React.Component<any, any> {
         <Text>{"固定 percent={35} unfilled={false}"}</Text>
         <Progress percent={35} unfilled={false}/>
         <GapH size="xl"/>
-        
+
         {this.renderAdvanced()}
       </View>
     );

@@ -1,7 +1,7 @@
 import React from "react";
 
-import { ButtonWeui, View, Toptips } from "popui-rn";
-const {Button, WeuiButtonArea } = ButtonWeui
+import {  WeuiButton as Button,WeuiButtonArea, View, Toptips } from "popui-rn";
+
 export interface IProps {}
 
 export default class TooltipsScreen extends React.Component<IProps, any> {
