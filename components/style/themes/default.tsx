@@ -69,9 +69,12 @@ export default {
   // 间距
   // ---
   // 水平间距
+  h_spacing_xs: 3,
   h_spacing_sm: 5,
   h_spacing_md: 8,
   h_spacing_lg: 15,
+  h_spacing_xl: 20,
+  h_spacing_xxl: 30,
 
   // 垂直间距
   v_spacing_xs: 3,
@@ -79,6 +82,7 @@ export default {
   v_spacing_md: 9,
   v_spacing_lg: 15,
   v_spacing_xl: 21,
+  v_spacing_xxl: 30,
 
   // 高度
   // ---
