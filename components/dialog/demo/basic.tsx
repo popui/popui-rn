@@ -1,18 +1,12 @@
 import React from 'react'
 import { Text } from 'react-native'
-import { Button, ButtonArea, Dialog, WingBlank } from 'popui-rn'
-import stylekit from 'react-native-stylekit'
-
-
-const S = stylekit({})
+import { ButtonWeui,Dialog, WingBlank } from 'popui-rn'
+const { Button, ButtonArea} = ButtonWeui
 
 
 export interface IProps  {
 
 }
-
-
-
 
 export default class DialogScreen extends React.Component<IProps, any> {
     static navigationOptions = {
@@ -71,7 +65,7 @@ export default class DialogScreen extends React.Component<IProps, any> {
                         type="primary"
                         onPress={this.showDialog1}
                     >点击弹出 Dialog 样式一</Button>
-                    <Button type="primary" onPress={this.showDialog2} style={S.mt15}>点击弹出 Dialog 样式二</Button>
+                    <Button type="primary" onPress={this.showDialog2}>点击弹出 Dialog 样式二</Button>
                 </ButtonArea>
                 <Dialog
                     visible={this.state.visible1}

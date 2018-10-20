@@ -1,7 +1,9 @@
 import React from 'react';
 import { StyleSheet,  SafeAreaView } from 'react-native';
 // import ProgressExample from 'popui-rn/components/progress/demo/basic';
-import ToptipsExample from 'popui-rn/components/toptips/demo/basic';
+import DialogExample from 'popui-rn/components/dialog/demo/basic';
+import ModalExample from 'popui-rn/components/modal/demo/basic';
+// import ToptipsExample from 'popui-rn/components/toptips/demo/basic';
 // import PickerExample from 'popui-rn/components/picker/demo/basic';
 // import Picker2Example from 'popui-rn/components/picker2/demo';
 // import { ActionSheet2 } from 'popui-rn'
@@ -14,7 +16,9 @@ export default class App extends React.Component {
       <ResourceLoader >
         <SafeAreaView style={styles.container}>
           {/* <ProgressExample /> */}
-          <ToptipsExample />
+          <DialogExample />
+          <ModalExample />
+          {/* <ToptipsExample /> */}
           {/* <PickerExample/> */}
           {/* <Picker2Example/> */}
         </SafeAreaView>
