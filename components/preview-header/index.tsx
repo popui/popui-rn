@@ -1,7 +1,8 @@
-import PropTypes from 'prop-types'
+// import PropTypes from 'prop-types'
 import React from 'react'
-import { StyleSheet, View, ViewPropTypes } from 'react-native'
+import { StyleSheet, View } from 'react-native'
 import variables from '../style/themes/default'
+import {PreviewHeaderPropsType} from './PropsType';
 
 const styles = StyleSheet.create({
     previewHeader: {
@@ -14,8 +15,8 @@ const styles = StyleSheet.create({
     },
 })
 
-const PreviewHeader = ({ style, children, ...other }) => {
-    const childrenWithProps = React.Children.map(children, child => {
+const PreviewHeader = ({ style, children, ...other }:PreviewHeaderPropsType) => {
+    const childrenWithProps = React.Children.map(children, (child:any) => {
         if (child.type.name === 'PreviewItem') {
             return React.cloneElement(child, { preset: 'header' })
         }
@@ -27,9 +28,9 @@ const PreviewHeader = ({ style, children, ...other }) => {
     )
 }
 
-PreviewHeader.propTypes = {
-    style: ViewPropTypes.style,
-    children: PropTypes.node,
-}
+// PreviewHeader.propTypes = {
+//     style: ViewPropTypes.style,
+//     children: PropTypes.node,
+// }
 
 export default PreviewHeader

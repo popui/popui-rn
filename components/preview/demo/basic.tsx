@@ -1,8 +1,7 @@
 import React from 'react'
 import {ScrollView} from 'react-native'
-import { ButtonWeui, WingBlank, Preview as PreviewComps } from 'popui-rn'
-const {Preview, PreviewBody, PreviewFooter, PreviewHeader, 
-  PreviewItem, PreviewLabel, PreviewValue} = PreviewComps
+import { ButtonWeui,  Preview, PreviewBody, PreviewFooter, PreviewHeader,
+  PreviewItem, PreviewLabel, PreviewValue } from 'popui-rn'
 const {ButtonPreview} = ButtonWeui
 export interface IProps  {
 

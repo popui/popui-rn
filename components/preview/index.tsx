@@ -1,8 +1,8 @@
-import PropTypes from 'prop-types'
+// import PropTypes from 'prop-types'
 import React from 'react'
-import { StyleSheet, View, ViewPropTypes } from 'react-native'
+import { StyleSheet, View } from 'react-native'
 import variables from '../style/themes/default'
-
+import {PreviewPropsType} from './PropsType';
 const styles = StyleSheet.create({
     preview: {
         backgroundColor: '#FFFFFF',
@@ -12,12 +12,12 @@ const styles = StyleSheet.create({
     },
 })
 
-const Preview = ({ style, children, ...other }) =>
+const Preview = ({ style, children, ...other }:PreviewPropsType) =>
     <View style={[styles.preview, style]} {...other}>{children}</View>
 
-Preview.propTypes = {
-    style: ViewPropTypes.style,
-    children: PropTypes.node,
-}
+// Preview.propTypes = {
+//     style: ViewPropTypes.style,
+//     children: PropTypes.node,
+// }
 
 export default Preview

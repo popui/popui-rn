@@ -1,7 +1,8 @@
-import PropTypes from 'prop-types'
+// import PropTypes from 'prop-types'
 import React from 'react'
-import { StyleSheet, View, ViewPropTypes } from 'react-native'
+import { StyleSheet, View } from 'react-native'
 import variables from '../style/themes/default'
+import {PreviewItemPropsType} from './PropsType';
 
 const styles = StyleSheet.create({
     formPreviewItem: {
@@ -30,8 +31,8 @@ const styles = StyleSheet.create({
     },
 })
 
-const PreviewItem = ({ style, children, preset = 'body', ...others }) => {
-    const childrenWithProps = React.Children.map(children, child => {
+const PreviewItem = ({ style, children, preset = 'body', ...others }:PreviewItemPropsType) => {
+    const childrenWithProps = React.Children.map(children, (child:any) => {
         if (child.type.name === 'PreviewLabel') {
             return React.cloneElement(child, { style: [child.props.style, styles[`${preset}PreviewLabel`]] })
         }
@@ -46,10 +47,10 @@ const PreviewItem = ({ style, children, preset = 'body', ...others }) => {
     )
 }
 
-PreviewItem.propTypes = {
-    style: ViewPropTypes.style,
-    children: PropTypes.node,
-    preset: PropTypes.string,
-}
+// PreviewItem.propTypes = {
+//     style: ViewPropTypes.style,
+//     children: PropTypes.node,
+//     preset: PropTypes.string,
+// }
 
 export default PreviewItem

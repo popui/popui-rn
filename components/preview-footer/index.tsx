@@ -1,8 +1,8 @@
-import PropTypes from 'prop-types'
+// import PropTypes from 'prop-types'
 import React from 'react'
-import { StyleSheet, View, ViewPropTypes } from 'react-native'
+import { StyleSheet, View } from 'react-native'
 import variables from '../style/themes/default'
-
+import {PreviewFooterPropsType} from './PropsType';
 const styles = StyleSheet.create({
     previewFooter: {
         flexDirection: 'row',
@@ -11,12 +11,12 @@ const styles = StyleSheet.create({
     },
 })
 
-const PreviewFooter = ({ style, children, ...other }) =>
+const PreviewFooter = ({ style, children, ...other }:PreviewFooterPropsType) =>
     <View style={[styles.previewFooter, style]} {...other}>{children}</View>
 
-PreviewFooter.propTypes = {
-    style: ViewPropTypes.style,
-    children: PropTypes.node,
-}
+// PreviewFooter.propTypes = {
+//     style: ViewPropTypes.style,
+//     children: PropTypes.node,
+// }
 
 export default PreviewFooter

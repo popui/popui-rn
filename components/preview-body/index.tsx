@@ -1,8 +1,8 @@
-import PropTypes from 'prop-types'
+// import PropTypes from 'prop-types'
 import React from 'react'
-import { StyleSheet, View, ViewPropTypes } from 'react-native'
+import { StyleSheet, View } from 'react-native'
 import variables from '../style/themes/default'
-
+import {PreviewBodyPropsType} from './PropsType';
 const styles = StyleSheet.create({
     previewBody: {
         paddingTop: variables.CellGapV,
@@ -12,9 +12,9 @@ const styles = StyleSheet.create({
     },
 })
 
-const PreviewBody = ({ style, children, ...other }) => {
-    const childrenWithProps = React.Children.map(children, child => {
-        if (child.type.name === 'PreviewItem') {
+const PreviewBody = ({ style, children, ...other }:PreviewBodyPropsType) => {
+    const childrenWithProps = React.Children.map(children, (child:any) => {
+      if (child.type.name === 'PreviewItem') {
             return React.cloneElement(child, { preset: 'body' })
         }
         return child
@@ -25,9 +25,9 @@ const PreviewBody = ({ style, children, ...other }) => {
     )
 }
 
-PreviewBody.propTypes = {
-    style: ViewPropTypes.style,
-    children: PropTypes.node,
-}
+// PreviewBody.propTypes = {
+//     style: ViewPropTypes.style,
+//     children: PropTypes.node,
+// }
 
 export default PreviewBody
