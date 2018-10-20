@@ -1,8 +1,5 @@
 import React from 'react'
-import { ScrollView } from 'react-native'
-
-import { LoadMore, GapV } from 'popui-rn'
-
+import { LoadMore, ScrollView } from 'popui-rn'
 
 export interface IProps  {
 

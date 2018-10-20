@@ -1,8 +1,6 @@
-import { Article, H1, H2, H3, P, GapV, Section } from 'popui-rn'
+import { Article, H1, H2, H3, P, GapV, Section,ScrollView } from 'popui-rn'
 
 import React from 'react'
-
-import { ScrollView } from 'react-native'
 
 
 export interface IProps  {

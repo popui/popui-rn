@@ -1,6 +1,5 @@
-import { ActionSheet, Button, ButtonArea, GapV, Popup, PopupHeader } from 'popui-rn'
+import { ActionSheet, Button, ButtonArea, GapV, Popup, PopupHeader,View,ScrollView } from 'popui-rn'
 import React from 'react'
-import { View,ScrollView } from 'react-native'
 
 export interface IProps  {
 

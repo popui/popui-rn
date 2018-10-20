@@ -1,6 +1,6 @@
 import React from 'react';
-import { Alert, View,ScrollView } from 'react-native';
-import { SearchBar,GapH } from 'popui-rn';
+import { Alert } from 'react-native';
+import { SearchBar,GapH,ScrollView } from 'popui-rn';
 import SearchBarWithResult from './SearchBarWithResult'
 export default class SearchBarDemo extends React.Component<any, any> {
   state = {
