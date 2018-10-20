@@ -1,6 +1,7 @@
-import PropTypes from 'prop-types'
+// import PropTypes from 'prop-types'
 import React from 'react'
-import { StyleSheet, View, ViewPropTypes } from 'react-native'
+import { StyleSheet, View } from 'react-native'
+import {MediaInfoPropsType} from './PropsType';
 
 const styles = StyleSheet.create({
     mediaInfo: {
@@ -12,14 +13,14 @@ const styles = StyleSheet.create({
     },
 })
 
-const MediaInfo = ({ style, children, ...others }) =>
+const MediaInfo = ({ style, children, ...others }:MediaInfoPropsType) =>
     <View style={[styles.mediaInfo, style]} {...others}>
         {children}
     </View>
 
-MediaInfo.propTypes = {
-    style: ViewPropTypes.style,
-    children: PropTypes.node,
-}
+// MediaInfo.propTypes = {
+//     style: ViewPropTypes.style,
+//     children: PropTypes.node,
+// }
 
 export default MediaInfo

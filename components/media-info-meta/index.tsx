@@ -1,6 +1,7 @@
-import PropTypes from 'prop-types'
+// import PropTypes from 'prop-types'
 import React from 'react'
-import { StyleSheet, Text, View, ViewPropTypes } from 'react-native'
+import { StyleSheet, Text, View } from 'react-native'
+import {MediaInfoMetaPropsType} from './PropsType';
 
 const styles = StyleSheet.create({
     mediaInfoMeta: {
@@ -18,18 +19,18 @@ const styles = StyleSheet.create({
     },
 })
 
-const MediaInfoMeta = ({ extra, style, textStyle, children, ...others }) =>
+const MediaInfoMeta = ({ extra, style, textStyle, children, ...others }:MediaInfoMetaPropsType) =>
     <View style={[styles.mediaInfoMeta, extra ? styles.mediaInfoMetaExtra : {}, style]}>
         <Text style={[styles.mediaInfoMetaText, textStyle]} {...others}>
             {children}
         </Text>
     </View>
 
-MediaInfoMeta.propTypes = {
-    extra: PropTypes.bool,
-    style: ViewPropTypes.style,
-    textStyle: Text.propTypes.style,
-    children: PropTypes.node,
-}
+// MediaInfoMeta.propTypes = {
+//     extra: PropTypes.bool,
+//     style: ViewPropTypes.style,
+//     textStyle: Text.propTypes.style,
+//     children: PropTypes.node,
+// }
 
 export default MediaInfoMeta

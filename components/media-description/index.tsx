@@ -1,8 +1,9 @@
-import PropTypes from 'prop-types'
+// import PropTypes from 'prop-types'
 import React from 'react'
-import { Text, ViewPropTypes } from 'react-native'
+import { Text } from 'react-native'
 import { create } from '../style/utils/StyleSheet'
 import variables from '../style/themes/default'
+import {MediaDescriptionPropsType} from './PropsType';
 
 const styles = create({
     mediaDesc: {
@@ -15,14 +16,14 @@ const styles = create({
     },
 })
 
-const MediaDescription = ({ style, children, ...others }) =>
+const MediaDescription = ({ style, children, ...others }:MediaDescriptionPropsType) =>
     <Text style={[styles.mediaDesc, style]} numberOfLines={2} {...others}>
         {children}
     </Text>
 
-MediaDescription.propTypes = {
-    style: Text.propTypes.style,
-    children: PropTypes.node,
-}
+// MediaDescription.propTypes = {
+//     style: Text.propTypes.style,
+//     children: PropTypes.node,
+// }
 
 export default MediaDescription

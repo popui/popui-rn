@@ -1,7 +1,8 @@
-import PropTypes from 'prop-types'
+// import PropTypes from 'prop-types'
 import React from 'react'
-import { StyleSheet, View, ViewPropTypes } from 'react-native'
+import { StyleSheet, View } from 'react-native'
 import variables from '../style/themes/default'
+import {MediaHeaderPropsType} from './PropsType';
 
 const styles = StyleSheet.create({
     mediaHeader: {
@@ -15,8 +16,8 @@ const styles = StyleSheet.create({
     },
 })
 
-const MediaHeader = ({ style, children, ...others }) => {
-    const childrenWithProps = React.Children.map(children, child => {
+const MediaHeader = ({ style, children, ...others }:MediaHeaderPropsType) => {
+    const childrenWithProps = React.Children.map(children, (child:any) => {
         if (child.type.displayName === 'Image' && !child.props.style) {
             return React.cloneElement(child, { style: [styles.mediaAppmsgThumb, child.props.style] })
         }
@@ -28,9 +29,9 @@ const MediaHeader = ({ style, children, ...others }) => {
     )
 }
 
-MediaHeader.propTypes = {
-    style: ViewPropTypes.style,
-    children: PropTypes.node,
-}
+// MediaHeader.propTypes = {
+//     style: ViewPropTypes.style,
+//     children: PropTypes.node,
+// }
 
 export default MediaHeader
