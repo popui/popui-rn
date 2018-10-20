@@ -1,13 +1,11 @@
 import React from 'react'
 
 import { Platform, StyleSheet } from 'react-native'
-import ColorTabBar from './ColorTabBar'
+import ColorTabBar from '../color-tab-view-tab-bar'
 import { TabView } from 'react-native-tab-view'
 // debug
-import { createDebug } from 'common/utils/debug'
-const debug = createDebug('popui:TabView/ColorTabView')
-
-
+// import { createDebug } from 'common/utils/debug'
+// const debug = createDebug('popui:TabView/ColorTabView')
 
 export interface IProps {
   navigationState: any
@@ -43,7 +41,7 @@ function getCurrentRoute(props: any) {
 
 export class ColorTabView extends React.Component<IProps, any> {
   render() {
-    debug('render')
+    // debug('render')
     const {
       navigationState,
       renderScene,
@@ -53,7 +51,7 @@ export class ColorTabView extends React.Component<IProps, any> {
       style
     } = this.props
     // style
-    let tabViewStyle = null
+    let tabViewStyle:any = null
     if (Platform.OS === 'android') {
       tabViewStyle = styles.tabViewAndroid
     }
@@ -92,4 +90,4 @@ const styles = StyleSheet.create({
   }
 })
 
-export default ColorTabView
+export default TabViewColor

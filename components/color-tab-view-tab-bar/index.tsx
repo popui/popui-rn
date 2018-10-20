@@ -3,13 +3,13 @@ import React, { PureComponent } from 'react'
 import { TabBar } from 'react-native-tab-view'
 import { Image, StyleSheet, Text } from 'react-native'
 // debug
-import { createDebug } from 'common/utils/debug'
-const debug = createDebug('popui:TabView:ColorTabBar')
+// import { createDebug } from 'common/utils/debug'
+// const debug = createDebug('popui:TabView:ColorTabBar')
 
 /**
  * 每个 Tab 可以有不同的主题色, TabBar 会根据 Tab 的主题色调整颜色
  */
-export default class ColorTabBar extends PureComponent<
+export default class TabViewColorTabBar extends PureComponent<
   {
     navigationState: any
   },
