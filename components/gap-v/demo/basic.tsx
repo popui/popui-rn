@@ -2,7 +2,7 @@
 
 import React from 'react';
 import { Text, View } from 'react-native';
-import { WhiteSpace, GapV } from 'popui-rn';
+import { GapH, GapV } from 'popui-rn';
 
 const PlaceHolder = (props: any) => (
   <View
@@ -22,17 +22,17 @@ export default class GapVExample extends React.Component<any, any> {
   render() {
     return (
       <View>
-        <WhiteSpace />
+        <GapH />
         <GapV>
           <PlaceHolder />
         </GapV>
 
-        <WhiteSpace size="lg" />
+        <GapH size="lg" />
         <GapV size="md">
           <PlaceHolder />
         </GapV>
 
-        <WhiteSpace size="lg" />
+        <GapH size="lg" />
         <GapV size="sm">
           <PlaceHolder />
         </GapV>

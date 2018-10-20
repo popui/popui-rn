@@ -1,7 +1,7 @@
 import React from 'react'
 
 import { Text } from 'react-native'
-import { Footer as FooterComp, WingBlank } from 'popui-rn'
+import { Footer as FooterComp, GapV } from 'popui-rn'
 const {Footer, FooterLink, FooterLinks, FooterText} = FooterComp
 
 import stylekit from 'react-native-stylekit'
@@ -50,11 +50,11 @@ export default class FooterScreen extends React.Component<IProps, any> {
 
     render() {
         return (
-            <WingBlank hasPadddingHorizontal hasPaddingTop>
+            <GapV hasPadddingHorizontal hasPaddingTop>
                 {this.renderFooter1()}
                 {this.renderFooter2()}
                 {this.renderFooter3()}
-            </WingBlank>
+            </GapV>
         )
     }
 

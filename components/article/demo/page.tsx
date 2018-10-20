@@ -1,4 +1,4 @@
-import { Article, H1, H2, H3, LoadMore, P, WingBlank, Section } from 'popui-rn'
+import { Article, H1, H2, H3, LoadMore, P, GapV, Section } from 'popui-rn'
 
 import React from 'react'
 
@@ -26,7 +26,7 @@ export default class PageScreen extends React.Component<IProps, any> {
 
     render() {
         return (
-            <WingBlank hasPadddingHorizontal>
+            <GapV hasPadddingHorizontal>
                 <Article>
                     <H1>大标题</H1>
                     <Section>
@@ -49,7 +49,7 @@ export default class PageScreen extends React.Component<IProps, any> {
                     </Section>
                 </Article>
                 {this.renderFooter()}
-            </WingBlank>
+            </GapV>
         )
     }
 

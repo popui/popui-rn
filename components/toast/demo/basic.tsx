@@ -1,7 +1,7 @@
 /* tslint:disable:no-console */
 import React from 'react';
 import { DeviceEventEmitter,Text } from 'react-native';
-import { Button, Toast, WhiteSpace, WingBlank } from 'popui-rn';
+import { Button, Toast, GapH, GapV } from 'popui-rn';
 // import ToastContainer from 'popui-rn/components/toast/ToastContainer';
 // const testText = "This is a toast tips !!! This is a toast tips !!! This is a toast tips !!! This is a toast tips !!! This is a toast tips !!!"
 const testText = "testText..."
@@ -62,23 +62,23 @@ export default class ToastExample extends React.Component<any, any> {
 
   render() {
     return (
-      <WingBlank style={{ marginTop: 80 }}>
-        <WhiteSpace />
+      <GapV style={{ marginTop: 80 }}>
+        <GapH />
         <Button onClick={showToastNoMask}>Without mask</Button>
-        <WhiteSpace />
+        <GapH />
         <Button onClick={showToast}>Text toast</Button>
-        <WhiteSpace />
+        <GapH />
         <Button onClick={successToast}>Success toast</Button>
-        <WhiteSpace />
+        <GapH />
         <Button onClick={failToast}>Failed toast</Button>
-        <WhiteSpace />
+        <GapH />
         <Button onClick={offline}>Network failure toast</Button>
-        <WhiteSpace />
+        <GapH />
         <Button onClick={loadingToast}>Loading toast</Button>
-        <WhiteSpace />
+        <GapH />
         <Button onClick={this.alwaysShowToast}>Toast width duration = 0</Button>
-        <WhiteSpace />
-      </WingBlank>
+        <GapH />
+      </GapV>
     );
   }
 }

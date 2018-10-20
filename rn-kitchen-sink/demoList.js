@@ -296,13 +296,13 @@ module.exports = {
       module: require('../components/locale-provider/demo/basic'),
     },
     {
-      title: 'WhiteSpace',
+      title: 'GapH',
       description: '上下留白',
       icon: 'https://os.alipayobjects.com/rmsportal/NfomhEsOdhFxEws.png',
       module: require('../components/white-space/demo/basic'),
     },
     {
-      title: 'WingBlank',
+      title: 'GapV',
       description: '两翼留白',
       icon: 'https://os.alipayobjects.com/rmsportal/DUkfOYZVcLctGot.png',
       module: require('../components/wing-blank/demo/basic'),

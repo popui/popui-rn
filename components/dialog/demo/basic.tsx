@@ -1,6 +1,6 @@
 import React from 'react'
 import { Text } from 'react-native'
-import { ButtonWeui,Dialog, WingBlank } from 'popui-rn'
+import { ButtonWeui,Dialog, GapV } from 'popui-rn'
 const { Button, ButtonArea} = ButtonWeui
 
 
@@ -59,7 +59,7 @@ export default class DialogScreen extends React.Component<IProps, any> {
 
     render() {
         return (
-            <WingBlank hasPadddingHorizontal>
+            <GapV hasPadddingHorizontal>
                 <ButtonArea>
                     <Button
                         type="primary"
@@ -97,7 +97,7 @@ export default class DialogScreen extends React.Component<IProps, any> {
                         },
                     ]}
                 ><Text>呵呵</Text></Dialog>
-            </WingBlank>
+            </GapV>
         )
     }
 }

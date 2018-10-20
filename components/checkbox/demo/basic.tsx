@@ -1,7 +1,7 @@
 // tslint:disable:jsx-no-multiline-js
 import React from 'react';
 import { Text, View } from 'react-native';
-import { Checkbox, List, WhiteSpace } from 'popui-rn';
+import { Checkbox, List, GapH } from 'popui-rn';
 const AgreeItem = Checkbox.AgreeItem;
 const CheckboxItem = Checkbox.CheckboxItem;
 
@@ -26,20 +26,20 @@ export default class BasicCheckboxExample extends React.Component<any, any> {
               this.setState({ checkBox1: event.target.checked });
             }}
           />
-          <WhiteSpace />
+          <GapH />
           <Checkbox>Checkbox</Checkbox>
-          <WhiteSpace />
+          <GapH />
           <Checkbox checked disabled />
-          <WhiteSpace />
+          <GapH />
           <Checkbox disabled />
         </View>
 
-        <WhiteSpace />
+        <GapH />
         <AgreeItem>
           Agree agreement agreement agreement agreement agreement agreement
           agreement
         </AgreeItem>
-        <WhiteSpace />
+        <GapH />
         <AgreeItem
           checked={this.state.agreeItem1}
           checkboxStyle={{ tintColor: '#f00' }}
@@ -49,9 +49,9 @@ export default class BasicCheckboxExample extends React.Component<any, any> {
         >
           Agree agreement
         </AgreeItem>
-        <WhiteSpace />
+        <GapH />
         <AgreeItem disabled>Not selected. Not editable</AgreeItem>
-        <WhiteSpace />
+        <GapH />
         <AgreeItem checked disabled>
           Force selected. Not editable
         </AgreeItem>

@@ -1,7 +1,7 @@
 import React from 'react'
 
 
-import { LoadMore, WingBlank } from 'popui-rn'
+import { LoadMore, GapV } from 'popui-rn'
 
 
 export interface IProps  {
@@ -18,11 +18,11 @@ export default class LoadMoreScreen extends React.Component<IProps, any> {
 
     render() {
         return (
-            <WingBlank hasPadddingHorizontal>
+            <GapV hasPadddingHorizontal>
                 <LoadMore loading={!false}>Loading</LoadMore>
                 <LoadMore showLine={!false}>No Data</LoadMore>
                 <LoadMore showLine={!false} showDot={!false}/>
-            </WingBlank>
+            </GapV>
         )
     }
 }

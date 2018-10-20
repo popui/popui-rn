@@ -5,7 +5,7 @@ import {
   CellBody,
   CellsTitle,
   RadioCells,
-  WhiteSpace
+  GapH
 } from "popui-rn";
 const options = [
   {
@@ -50,7 +50,7 @@ export default class InputScreen extends React.Component<any, any> {
           </Cell>
         </RadioCells>
 
-        <WhiteSpace />
+        <GapH />
 
         <CellsTitle>单选列表项(禁用)</CellsTitle>
         <RadioCells

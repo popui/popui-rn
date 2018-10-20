@@ -1,6 +1,6 @@
 import React from 'react';
 import { View } from 'react-native';
-import { ImagePicker,ImagePickerHeader, WhiteSpace } from 'popui-rn';
+import { ImagePicker,ImagePickerHeader, GapH } from 'popui-rn';
 
 export default class ImagePickerExample extends React.Component<any, any> {
   constructor(props: any) {
@@ -70,7 +70,7 @@ export default class ImagePickerExample extends React.Component<any, any> {
           maxCount={10}
           renderHeader={this.renderHeader1}
         />
-        <WhiteSpace />
+        <GapH />
         <ImagePicker
           onChange={this.handleFile2Change}
           files={this.state.files2}

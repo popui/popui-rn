@@ -2,7 +2,7 @@
 /* tslint:disable:no-console */
 import React from 'react';
 import { ScrollView, View } from 'react-native';
-import { Badge, WhiteSpace } from 'popui-rn';
+import { Badge, GapH } from 'popui-rn';
 
 export default class BasicTagExample extends React.Component<any, any> {
   render() {
@@ -24,7 +24,7 @@ export default class BasicTagExample extends React.Component<any, any> {
             />
           </Badge>
 
-          <WhiteSpace size="lg" />
+          <GapH size="lg" />
 
           <Badge text={109} overflowCount={100}>
             <View
@@ -36,7 +36,7 @@ export default class BasicTagExample extends React.Component<any, any> {
             />
           </Badge>
 
-          <WhiteSpace size="lg" />
+          <GapH size="lg" />
 
           <Badge text={109}>
             <View
@@ -48,7 +48,7 @@ export default class BasicTagExample extends React.Component<any, any> {
             />
           </Badge>
 
-          <WhiteSpace size="lg" />
+          <GapH size="lg" />
 
           <Badge text="new">
             <View
@@ -60,7 +60,7 @@ export default class BasicTagExample extends React.Component<any, any> {
             />
           </Badge>
 
-          <WhiteSpace size="lg" />
+          <GapH size="lg" />
 
           <Badge text={109} dot>
             <View
@@ -72,7 +72,7 @@ export default class BasicTagExample extends React.Component<any, any> {
             />
           </Badge>
 
-          <WhiteSpace size="lg" />
+          <GapH size="lg" />
 
           <Badge text={33} corner>
             <View

@@ -1,7 +1,7 @@
 /* tslint:disable:jsx-no-multiline-js */
 import React from 'react';
 import { ScrollView, Text, View } from 'react-native';
-import { Icon, WingBlank, Steps } from 'popui-rn';
+import { Icon, GapV, Steps } from 'popui-rn';
 const Step = Steps.Step;
 
 export default class BasicTimelineExample extends React.Component<any, any> {
@@ -46,7 +46,7 @@ export default class BasicTimelineExample extends React.Component<any, any> {
         showsVerticalScrollIndicator={false}
       >
         <View style={{ marginTop: 60 }}>
-          <WingBlank size="lg">
+          <GapV size="lg">
             <Steps size="small" current={1} direction="horizontal">
               {this.state.steps1.map((item: any, index: any) => (
                 <Step
@@ -60,10 +60,10 @@ export default class BasicTimelineExample extends React.Component<any, any> {
                 />
               ))}
             </Steps>
-          </WingBlank>
+          </GapV>
         </View>
         <View style={{ marginTop: 60 }}>
-          <WingBlank size="lg">
+          <GapV size="lg">
             <Steps size="small" current={1}>
               {this.state.steps1.map((item: any, index: any) => (
                 <Step
@@ -82,10 +82,10 @@ export default class BasicTimelineExample extends React.Component<any, any> {
                 />
               ))}
             </Steps>
-          </WingBlank>
+          </GapV>
         </View>
         <View>
-          <WingBlank size="lg">
+          <GapV size="lg">
             <Steps size="small">
               {this.state.steps2.map((item: any, index: any) => (
                 <Step
@@ -96,10 +96,10 @@ export default class BasicTimelineExample extends React.Component<any, any> {
                 />
               ))}
             </Steps>
-          </WingBlank>
+          </GapV>
         </View>
         <View>
-          <WingBlank size="lg">
+          <GapV size="lg">
             <Steps current={1}>
               {this.state.steps1.map((item: any, index: any) => (
                 <Step
@@ -110,10 +110,10 @@ export default class BasicTimelineExample extends React.Component<any, any> {
                 />
               ))}
             </Steps>
-          </WingBlank>
+          </GapV>
         </View>
         <View>
-          <WingBlank size="lg">
+          <GapV size="lg">
             <Steps>
               {this.state.steps2.map((item: any, index: any) => (
                 <Step
@@ -124,10 +124,10 @@ export default class BasicTimelineExample extends React.Component<any, any> {
                 />
               ))}
             </Steps>
-          </WingBlank>
+          </GapV>
         </View>
         <View>
-          <WingBlank size="lg">
+          <GapV size="lg">
             <Steps current={1}>
               <Step
                 key={0}
@@ -149,7 +149,7 @@ export default class BasicTimelineExample extends React.Component<any, any> {
                 icon={<Icon type="down" size={20} color="white" />}
               />
             </Steps>
-          </WingBlank>
+          </GapV>
         </View>
       </ScrollView>
     );

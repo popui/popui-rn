@@ -1,7 +1,7 @@
 /* tslint:disable:no-console */
 import React from 'react';
 import { Text, View, ScrollView } from 'react-native';
-import { Button, Modal, WhiteSpace, WingBlank } from 'popui-rn';
+import { Button, Modal, GapH, GapV } from 'popui-rn';
 
 export default class BasicModalExample extends React.Component<any, any> {
   constructor(props: any) {
@@ -84,33 +84,33 @@ export default class BasicModalExample extends React.Component<any, any> {
     ];
     return (
       <ScrollView style={{ marginTop: 20 }}>
-        <WingBlank>
+        <GapV>
           <Button onClick={() => this.setState({ visible: true })}>
             showModal
           </Button>
-          <WhiteSpace />
+          <GapH />
           <Button onClick={() => this.setState({ visible1: true })}>
             transparent:false
           </Button>
-          <WhiteSpace />
+          <GapH />
           <Button onClick={() => this.setState({ visible2: true })}>
             popup
           </Button>
-          <WhiteSpace />
+          <GapH />
           <Button onClick={this.onButtonClick}>Modal.alert</Button>
-          <WhiteSpace />
+          <GapH />
           <Button onClick={this.onButtonClick2}>Modal.opertation</Button>
-          <WhiteSpace />
+          <GapH />
           <Button onClick={this.onButtonClick5}>Modal.prompt (default)</Button>
-          <WhiteSpace />
+          <GapH />
           <Button onClick={this.onButtonClick3}>
             Modal.prompt (login-password)
           </Button>
-          <WhiteSpace />
+          <GapH />
           <Button onClick={this.onButtonClick4}>
             Modal.prompt (secure-text)
           </Button>
-        </WingBlank>
+        </GapV>
         <Modal
           title="Title"
           transparent
