@@ -43,6 +43,8 @@ popui/**/*.jsx
 popui/**/*.js
 expo/**/*.jsx
 expo/**/*.js
+expo/**/*/*.jsx
+expo/**/*/*.js
 my-release-key.keystore
 .vscode
 yarn.lock
