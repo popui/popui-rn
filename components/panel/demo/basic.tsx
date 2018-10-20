@@ -1,4 +1,4 @@
-import { Image, ScrollView } from "react-native";
+import { Image, ScrollView,View } from "react-native";
 import {
   Badge2,
   Media,
@@ -29,7 +29,7 @@ export default class PanelScreen extends React.Component<IProps, any> {
 
   render() {
     return (
-      <ScrollView>
+      <View>
         <Panel>
           <PanelHeader>图文组合列表</PanelHeader>
           <PanelBody>
@@ -133,7 +133,7 @@ export default class PanelScreen extends React.Component<IProps, any> {
             </Media>
           </PanelBody>
         </Panel>
-      </ScrollView>
+      </View>
     );
   }
 }

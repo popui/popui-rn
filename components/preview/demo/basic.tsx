@@ -1,5 +1,5 @@
 import React from 'react'
-import {ScrollView} from 'react-native'
+import {View} from 'react-native'
 import { ButtonWeui,  Preview, PreviewBody, PreviewFooter, PreviewHeader,
   PreviewItem, PreviewLabel, PreviewValue } from 'popui-rn'
 const {ButtonPreview} = ButtonWeui
@@ -14,7 +14,7 @@ export default class PreviewScreen extends React.Component<IProps, any> {
 
     render() {
         return (
-            <ScrollView>
+            <View>
                 <Preview>
                     <PreviewHeader>
                         <PreviewItem>
@@ -70,7 +70,7 @@ export default class PreviewScreen extends React.Component<IProps, any> {
                         <ButtonPreview primary={!false}>Action</ButtonPreview>
                     </PreviewFooter>
                 </Preview>
-            </ScrollView>
+            </View>
         )
     }
 }
