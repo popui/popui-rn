@@ -1,4 +1,4 @@
-import { Button, ButtonArea, GapV } from 'popui-rn'
+import { Button, WeuiButtonArea, GapV } from 'popui-rn'
 import React from 'react'
 
 import { openUrl } from 'linkUtils'
@@ -26,8 +26,8 @@ export default class DeepLinkScreen extends React.Component<IProps, any> {
     }
 
     private renderButtonItem(title: string, url: string, type? = '') {
-        return (<ButtonArea>
+        return (<WeuiButtonArea>
             <Button type={type} onPress={() => openUrl(url)}>{title}</Button>
-        </ButtonArea>)
+        </WeuiButtonArea>)
     }
 }

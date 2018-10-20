@@ -1,7 +1,7 @@
 import React from 'react'
 import { Text,ScrollView } from 'react-native'
 import { ButtonWeui,Dialog, GapV } from 'popui-rn'
-const { Button, ButtonArea} = ButtonWeui
+const { Button, WeuiButtonArea} = ButtonWeui
 
 
 export interface IProps  {
@@ -60,13 +60,13 @@ export default class DialogScreen extends React.Component<IProps, any> {
     render() {
         return (
             <ScrollView>
-                <ButtonArea>
+                <WeuiButtonArea>
                     <Button
                         type="primary"
                         onPress={this.showDialog1}
                     >点击弹出 Dialog 样式一</Button>
                     <Button type="primary" onPress={this.showDialog2}>点击弹出 Dialog 样式二</Button>
-                </ButtonArea>
+                </WeuiButtonArea>
                 <Dialog
                     visible={this.state.visible1}
                     title="标题一"

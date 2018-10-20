@@ -15,5 +15,5 @@ export interface ButtonPropsType {
   onLongPress?: (any) => any
   mainColor?: string
   activeOpacity?: number
-  renderButtonText?: (any) => any
+  renderWeuiButtonText?: (any) => any
 }

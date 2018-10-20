@@ -1,7 +1,7 @@
 import React from 'react'
 import { StyleSheet, View } from 'react-native'
 import variables from '../style/themes/default'
-import {ButtonAreaPropsType} from './PropsType'
+import {WeuiButtonAreaPropsType} from './PropsType'
 const styles = StyleSheet.create({
     BtnArea: {
         marginTop: variables.CellsMarginTop,
@@ -16,7 +16,7 @@ const styles = StyleSheet.create({
     },
 })
 
-const ButtonArea = ({ direction = 'vertical', style, children }: ButtonAreaPropsType) => {
+const WeuiButtonArea = ({ direction = 'vertical', style, children }: WeuiButtonAreaPropsType) => {
     const buttonAreaStyle = [styles.BtnArea]
     if (direction === 'horizontal') {
         buttonAreaStyle.push(styles.BtnAreaInline)
@@ -25,4 +25,4 @@ const ButtonArea = ({ direction = 'vertical', style, children }: ButtonAreaProps
 }
 
 
-export default ButtonArea
+export default WeuiButtonArea

@@ -1,7 +1,7 @@
 import React from "react";
 import { Text, View, ViewStyle,StyleSheet,SafeAreaView } from "react-native";
 import { Button, ButtonWeui, Progress, GapH } from "popui-rn";
-const { Button, ButtonArea } = ButtonWeui;
+const { Button, WeuiButtonArea } = ButtonWeui;
 const styles = StyleSheet.create({
   container:{
     paddingTop:15
@@ -63,7 +63,7 @@ export default class BasicProgressExample extends React.Component<any, any> {
           <Progress percent={this.state.percent} style={{ marginRight: 10, height: 4, flex: 1 }}/>
         <Text>{this.state.percent}%</Text>
       </View>
-      <ButtonArea direction="horizontal" >
+      <WeuiButtonArea direction="horizontal" >
         <Button onPress={this.onAdd10} >
           +10
           </Button>
@@ -73,7 +73,7 @@ export default class BasicProgressExample extends React.Component<any, any> {
         <Button onPress={this.stop} style={{ marginLeft: 10 }}>
           stop
           </Button>
-      </ButtonArea>
+      </WeuiButtonArea>
     </View>
   }
   render() {

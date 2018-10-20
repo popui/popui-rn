@@ -1,6 +1,6 @@
 // import React from 'react';
 
-export interface ButtonTextPropsType {
+export interface WeuiButtonTextPropsType {
   style: any;
   children: any;
   type?: "default" | "primary" | "warn";

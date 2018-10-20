@@ -1,7 +1,7 @@
 import React from "react";
 
 import { ButtonWeui, View, Toptips } from "popui-rn";
-const {Button, ButtonArea } = ButtonWeui
+const {Button, WeuiButtonArea } = ButtonWeui
 export interface IProps {}
 
 export default class TooltipsScreen extends React.Component<IProps, any> {
@@ -16,11 +16,11 @@ export default class TooltipsScreen extends React.Component<IProps, any> {
   render() {
     return (
       <View style={{marginTop: 50,}}>
-        <ButtonArea>
+        <WeuiButtonArea>
           <Button type="primary" onPress={this.onToptipsShow}>
             Toptips
           </Button>
-        </ButtonArea>
+        </WeuiButtonArea>
         <Toptips visible={this.state.toptipsVisible}>Test Toptips!</Toptips>
       </View>
     );

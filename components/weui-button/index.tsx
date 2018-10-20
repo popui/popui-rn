@@ -1,7 +1,7 @@
 import React from 'react'
 import { StyleSheet, TouchableOpacity, View } from 'react-native'
 import variables from '../style/themes/default'
-import ButtonText from '../weui-button-text'
+import WeuiButtonText from '../weui-button-text'
 import TouchableWithFallback from '../touchable-with-fallback'
 import {ButtonPropsType} from './PropsType'
 
@@ -111,7 +111,7 @@ const Button = (props: ButtonPropsType) => {
     disabled = false,
     style,
     children,
-    renderButtonText,
+    renderWeuiButtonText,
     mainColor,
     activeOpacity = 0.6,
     ...others
@@ -143,8 +143,8 @@ const Button = (props: ButtonPropsType) => {
       {...touchableProps}
     >
       <View>
-        {renderButtonText || (
-          <ButtonText {...buttonTextProps}>{children}</ButtonText>
+        {renderWeuiButtonText || (
+          <WeuiButtonText {...buttonTextProps}>{children}</WeuiButtonText>
         )}
       </View>
     </TouchableWithFallback>

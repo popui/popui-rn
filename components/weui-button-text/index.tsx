@@ -2,7 +2,7 @@
 import React from 'react'
 import { StyleSheet, Text } from 'react-native'
 import variables from '../style/themes/default'
-import {ButtonTextPropsType} from './PropsType'
+import {WeuiButtonTextPropsType} from './PropsType'
 
 const styles = StyleSheet.create({
     text: {
@@ -79,7 +79,7 @@ const getTextStyles = ({ type, plain, size, disabled }) => {
 }
 
 
-const ButtonText = (props: ButtonTextPropsType) => {
+const WeuiButtonText = (props: WeuiButtonTextPropsType) => {
     const { disabled = false, type = 'default', size, plain = false, style, children, mainColor } = props
     const textStyles = getTextStyles({ type, plain, size, disabled })
     // if(mainColor){
@@ -90,7 +90,7 @@ const ButtonText = (props: ButtonTextPropsType) => {
     return <Text style={[styles.text, ...textStyles, style]}>{children}</Text>
 }
 
-// ButtonText.propTypes = {
+// WeuiButtonText.propTypes = {
 //     type: PropTypes.oneOf(['default', 'primary', 'warn']),
 //     size: PropTypes.oneOf(['small']),
 //     plain: PropTypes.bool,
@@ -99,4 +99,4 @@ const ButtonText = (props: ButtonTextPropsType) => {
 //     children: PropTypes.node,
 // }
 
-export default ButtonText
+export default WeuiButtonText

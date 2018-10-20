@@ -1,4 +1,4 @@
-import { ActionSheet, Button, ButtonArea, GapV, Popup, PopupHeader,View,ScrollView } from 'popui-rn'
+import { ActionSheet, Button, WeuiButtonArea, GapV, Popup, PopupHeader,View,ScrollView } from 'popui-rn'
 import React from 'react'
 
 export interface IProps  {
@@ -25,24 +25,24 @@ export default class ActionSheetScreen extends React.Component<IProps, any> {
     render() {
         return (
             <ScrollView>
-                <ButtonArea>
+                <WeuiButtonArea>
                     <Button
                         type="primary"
                         onPress={this.showActionSheet}
                     >点击弹出 ActionSheet</Button>
-                </ButtonArea>
-                <ButtonArea>
+                </WeuiButtonArea>
+                <WeuiButtonArea>
                     <Button
                         type="primary"
                         onPress={() => this.setState({ popupVisible: true })}
                     >点击弹出 Popup</Button>
-                </ButtonArea>
-                <ButtonArea>
+                </WeuiButtonArea>
+                <WeuiButtonArea>
                     <Button
                         type="primary"
                         onPress={() => this.setState({ galleryVisible: true })}
                     >点击弹出 Gallery</Button>
-                </ButtonArea>
+                </WeuiButtonArea>
                 <ActionSheet
                     autoDectect={false}
                     type="android"
