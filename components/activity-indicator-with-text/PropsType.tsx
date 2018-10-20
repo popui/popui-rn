@@ -1,4 +1,4 @@
-export interface ActivityIndicatorPropTypes {
+export interface ActivityIndicatorWithTextPropTypes {
   animating?: boolean;
   toast?: boolean;
   size?: 'large' | 'small';

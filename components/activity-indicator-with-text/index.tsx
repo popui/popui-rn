@@ -1,17 +1,17 @@
 import React from 'react';
 import { ActivityIndicator, StyleSheet, Text, View } from 'react-native';
-import { ActivityIndicatorPropTypes } from './PropsType';
+import { ActivityIndicatorWithTextPropTypes } from './PropsType';
 import indicatorStyle, { IActivityIndicatorStyle } from './style/index';
 
 export interface ActivityIndicatorNativeProps
-  extends ActivityIndicatorPropTypes {
+  extends ActivityIndicatorWithTextPropTypes {
   styles?: IActivityIndicatorStyle;
   color?: string;
 }
 
 const indicatorStyles = StyleSheet.create<any>(indicatorStyle);
 
-export default class RNActivityIndicator extends React.Component<
+export default class RNActivityIndicatorWithText extends React.Component<
   ActivityIndicatorNativeProps,
   any
 > {
