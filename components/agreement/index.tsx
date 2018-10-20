@@ -8,7 +8,7 @@ import {
   ViewStyle,
   TextStyle
 } from "react-native";
-import IconWeui from "../icon-weui";
+import WeuiIcon from "../icon-weui";
 import variables from "../style/themes/default";
 
 const styles = StyleSheet.create({
@@ -68,7 +68,7 @@ export default class AgreementComponent extends React.Component<
     return (
       <View style={[styles.checkbox, disabled ? styles.disabled : null]}>
         {value ? (
-          <IconWeui
+          <WeuiIcon
             name="success_no_circle"
             size={10}
             {...(disabled ? { color: "#ADADAD" } : {})}

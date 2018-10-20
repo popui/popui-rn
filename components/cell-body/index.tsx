@@ -1,6 +1,6 @@
 import  React from 'react'
 import { StyleSheet, View, ViewStyle } from 'react-native'
-import IconWeui from '../icon-weui'
+import WeuiIcon from '../icon-weui'
 import variables from '../style/themes/default'
 import CellText from '../cell-text'
 
@@ -51,7 +51,7 @@ export default class CellBody extends React.Component<CellBodyProps, CellBodySta
       <View style={[styles.cellBody, style, error ? { flexDirection: 'row' } : null]}
         {...others}>
         {this.renderChildrenWithProps()}
-        {error && <IconWeui name="warn" style={styles.errorIcon}/>}
+        {error && <WeuiIcon name="warn" style={styles.errorIcon}/>}
       </View>
     )
   }

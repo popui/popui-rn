@@ -1,9 +1,9 @@
-// Usage: <IconWeui name="icon-name" size={20} color="#4F8EF7" />
+// Usage: <WeuiIcon name="icon-name" size={20} color="#4F8EF7" />
 
 // import PropTypes from 'prop-types'
 import React from 'react'
 import { StyleSheet, Text } from 'react-native'
-import PureIconWeui from './PureIconWeui'
+import PureWeuiIcon from './PureWeuiIcon'
 
 const styles = StyleSheet.create({
     icon: {
@@ -93,7 +93,7 @@ const glyphMap = {
 }
 
 /**
- * 带有默认值的 IconWeui
+ * 带有默认值的 WeuiIcon
  * @param {any} name
  * @param {any} msg
  * @param {any} size
@@ -102,7 +102,7 @@ const glyphMap = {
  * @param {any} others
  * @constructor
  */
-const IconWeui = ({
+const WeuiIcon = ({
                       name = 'success',
                       msg = false,
                       size = msg ? glyphMap.msg.size : glyphMap[name].size,
@@ -110,7 +110,7 @@ const IconWeui = ({
                       style,
                       ...others
                   }:any) =>
-    <PureIconWeui
+    <PureWeuiIcon
         name={name}
         size={size}
         color={color}
@@ -118,7 +118,7 @@ const IconWeui = ({
         {...others}
     />
 
-// IconWeui.propTypes = {
+// WeuiIcon.propTypes = {
 //     msg: PropTypes.bool,
 //     name: PropTypes.oneOf(['success', 'waiting', 'warn', 'info', 'success_circle',
 //         'success_no_circle', 'waiting_circle', 'circle', 'download',
@@ -130,8 +130,8 @@ const IconWeui = ({
 //     style: Text.propTypes.style,
 // }
 
-export default IconWeui
+export default WeuiIcon
 
 export {
-  PureIconWeui
+  PureWeuiIcon
 }

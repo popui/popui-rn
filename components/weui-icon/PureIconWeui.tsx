@@ -1,6 +1,6 @@
 /**
  * Icon icon set component.
- * Usage: <PureIconWeui name=icon_name size={20} color=#4F8EF7 />
+ * Usage: <PureWeuiIcon name=icon_name size={20} color=#4F8EF7 />
  */
 import { createIconSet } from '@expo/vector-icons'
 
@@ -24,8 +24,8 @@ export const glyphMap = {
     delete: 59921,
 }
 /**
- * 不带默认值的 IconWeui
+ * 不带默认值的 WeuiIcon
  */
-const PureIconWeui = createIconSet(glyphMap, 'Weui')
+const PureWeuiIcon = createIconSet(glyphMap, 'Weui')
 
-export default PureIconWeui
+export default PureWeuiIcon

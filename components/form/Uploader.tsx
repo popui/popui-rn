@@ -2,7 +2,7 @@ import React from 'react';;
 import { View, Text, Image, TouchableOpacity, StyleSheet  } from 'react-native';
 // import ImagePicker from 'react-native-image-picker'
 // import concat from 'lodash/concat'
-import IconWeui from '../icon-weui'
+import WeuiIcon from '../icon-weui'
 import variables from '../style/themes/default'
 
 const styles = StyleSheet.create({
@@ -146,7 +146,7 @@ const Uploader = ({
                 <Image source={source} style={styles.uploaderFileImage} />
                 {error || status ?
                   <View style={styles.uploaderStatus}>
-                    {error ? <IconWeui name="warn" />
+                    {error ? <WeuiIcon name="warn" />
                     : <Text style={styles.uploaderStatusContent}>{status}</Text>}
                   </View> : null}
               </View>

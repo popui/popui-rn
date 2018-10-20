@@ -2,7 +2,7 @@ import xor from 'lodash/xor'
 import React from 'react'
 import { StyleSheet } from 'react-native'
 import { Cell, CellBody, CellHeader, Cells, CellText } from 'popui-rn'
-import IconWeui from '../icon-weui'
+import WeuiIcon from '../icon-weui'
 import variables from '../style/themes/default'
 
 const styles = StyleSheet.create({
@@ -34,7 +34,7 @@ const CheckboxCells = ({
           onPress={() => !disabled && onChange(xor(value, [option.value]))}
         >
           <CellHeader>
-            <IconWeui
+            <WeuiIcon
               name={inArray(option.value) ? 'success' : 'circle'}
               style={styles.checkbox}
             />
@@ -54,7 +54,7 @@ const CheckboxCells = ({
 //   onChange: PropTypes.func,
 //   options: PropTypes.array.isRequired,
 //   disabled: PropTypes.bool,
-//   style: IconWeui.propTypes.style,
+//   style: WeuiIcon.propTypes.style,
 //   children: PropTypes.node
 // }
 

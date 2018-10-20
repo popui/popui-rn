@@ -7,7 +7,7 @@ import {
   ViewStyle
 } from "react-native";
 import variables from "../style/themes/default";
-// import IconWeui from '../icon-weui'
+// import WeuiIcon from '../icon-weui'
 const styles = StyleSheet.create({
   cellFooter: {
     flexDirection: "row",
@@ -74,7 +74,7 @@ export default class CellFooter extends React.Component<
     return (
       <View style={cellFooterStyle}>
         {this.renderChildrenWithProps()}
-        {/* {error && <IconWeui name="warn" />} */}
+        {/* {error && <WeuiIcon name="warn" />} */}
         {access && (
           <Image
             style={{ width: 7.5, height: 12, marginLeft: 5 }}

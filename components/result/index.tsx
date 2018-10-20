@@ -9,7 +9,7 @@ import {
   View,
   ViewStyle,
 } from 'react-native';
-import IconWeui from '../icon-weui'
+import WeuiIcon from '../icon-weui'
 import { ResultPropsType } from './PropsType';
 import ResultStyle, { IResultStyle } from './style/index';
 
@@ -36,7 +36,7 @@ export default class Result extends React.Component<ResultNativeProps, any> {
       iconContent = <View style={styles.iconWrap}>{icon}</View>;
     }else if (iconName) {
       iconContent = <View style={styles.iconWrap}>
-        <IconWeui name={iconName} msg />
+        <WeuiIcon name={iconName} msg />
       </View>;
     }else if (imgUrl) {
       iconContent = (
