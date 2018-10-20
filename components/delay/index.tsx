@@ -1,12 +1,7 @@
-import React, { Component } from 'react'
-import PropTypes from 'prop-types'
-
-class Delay extends Component<any, any> {
+import React from 'react'
+import {DelayPropsType  } from "./PropsType";
+class Delay extends React.Component<DelayPropsType, any> {
   timer: any
-  static propTypes = {
-    children: PropTypes.node,
-    wait: PropTypes.number
-  }
 
   static defaultProps = {
     wait: 250
@@ -29,10 +24,11 @@ class Delay extends Component<any, any> {
   }
 
   render() {
-    if (!this.state.waiting) {
-      return this.props.children
+    const {children } = this.props
+    const {waiting} = this.state
+    if (!waiting) {
+      return children
     }
-
     return null
   }
 }
