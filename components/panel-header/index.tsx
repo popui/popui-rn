@@ -1,7 +1,8 @@
-import PropTypes from 'prop-types'
+// import PropTypes from 'prop-types'
 import React from 'react'
-import { StyleSheet, Text, View, ViewPropTypes } from 'react-native'
+import { StyleSheet, Text, View } from 'react-native'
 import variables from '../style/themes/default'
+import {PanelHeaderPropsType} from './PropsType';
 
 const styles = StyleSheet.create({
     panelHeader: {
@@ -19,15 +20,15 @@ const styles = StyleSheet.create({
     },
 })
 
-const PanelHeader = ({ children, style, textStyle, ...others }) =>
+const PanelHeader = ({ children, style, textStyle, ...others }:PanelHeaderPropsType) =>
     <View style={[styles.panelHeader, style]} {...others}>
         <Text style={[styles.panelHeaderText, textStyle]}>{children}</Text>
     </View>
 
-PanelHeader.propTypes = {
-    children: PropTypes.node,
-    style: ViewPropTypes.style,
-    textStyle: Text.propTypes.style,
-}
+// PanelHeader.propTypes = {
+//     children: PropTypes.node,
+//     style: ViewPropTypes.style,
+//     textStyle: Text.propTypes.style,
+// }
 
 export default PanelHeader

@@ -1,8 +1,9 @@
-import PropTypes from 'prop-types'
+// import PropTypes from 'prop-types'
 import React from 'react'
-import { Image, StyleSheet, Text, TouchableHighlight, View, ViewPropTypes } from 'react-native'
+import { Image, StyleSheet, Text,  View } from 'react-native'
 import variables from '../style/themes/default'
 import TouchableWithFallback from '../touchable-with-fallback'
+import {PanelFooterPropsType} from './PropsType';
 
 const styles = StyleSheet.create({
     PanelFooter: {
@@ -24,7 +25,7 @@ const styles = StyleSheet.create({
     },
 })
 
-const PanelFooter = ({ children, style, textStyle, access, ...others }) =>
+const PanelFooter = ({ children, style, textStyle, access, ...others }:PanelFooterPropsType) =>
     <TouchableWithFallback style={style} underlayColor={variables.BgColorActive} {...others}>
         <View style={styles.PanelFooter}>
             <Text style={[styles.PanelFooterText, textStyle]}>
@@ -38,11 +39,11 @@ const PanelFooter = ({ children, style, textStyle, access, ...others }) =>
         </View>
     </TouchableWithFallback>
 
-PanelFooter.propTypes = {
-    access: PropTypes.bool,
-    children: PropTypes.node,
-    style: TouchableHighlight.propTypes.style,
-    textStyle: Text.propTypes.style,
-}
+// PanelFooter.propTypes = {
+//     access: PropTypes.bool,
+//     children: PropTypes.node,
+//     style: TouchableHighlight.propTypes.style,
+//     textStyle: Text.propTypes.style,
+// }
 
 export default PanelFooter
