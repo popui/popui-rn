@@ -1,56 +1,23 @@
-import React from 'react'
-import { StyleSheet, View, ViewPropTypes } from 'react-native'
+import React from 'react';
+import { StyleProp, View, ViewStyle } from 'react-native';
+import variables from '../style/themes/default';
+import { GapHPropsType } from './PropsType';
+export interface GapHProps extends GapHPropsType {
+  style?: StyleProp<ViewStyle>;
+}
+class GapH extends React.Component<GapHProps, any> {
+  static defaultProps = {
+    size: 'md',
+  };
 
-export interface IProps {
-    level?: number // 1-10
-    style?: any
+  render() {
+    const { size, style } = this.props;
+    return (
+      <View
+        style={[{ height: (variables as any)[`v_spacing_${size}`] }, style]}
+      />
+    );
+  }
 }
 
-function GapH(props: IProps) {
-    const { level = 5, style, children, ...others } = props
-    return (<View
-        style={[styles[`level${level}`], style]}
-        {...others}
-    >{children}</View>)
-}
-
-const styles = StyleSheet.create({
-    level1: {
-        marginTop: StyleSheet.hairlineWidth,
-    },
-    level2: {
-        marginTop: 6,
-    },
-    level3: {
-        marginTop: 9,
-    },
-    level4: {
-        marginTop: 12,
-    },
-    level5: {
-        marginTop: 15,
-    },
-    level6: {
-        marginTop: 18,
-    },
-    level7: {
-        marginTop: 25,
-    },
-    level8: {
-        marginTop: 30,
-    },
-    level9: {
-        marginTop: 36,
-    },
-    level10: {
-        marginTop: 42,
-    },
-    level11: {
-        marginTop: 50,
-    },
-    level12: {
-        marginTop: 60,
-    },
-})
-
-export default GapH
+export default GapH;

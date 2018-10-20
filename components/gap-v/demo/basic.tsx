@@ -1,7 +1,8 @@
 // tslint:disable:jsx-no-multiline-js
+
 import React from 'react';
 import { Text, View } from 'react-native';
-import { WhiteSpace } from 'popui-rn';
+import { WhiteSpace, GapV } from 'popui-rn';
 
 const PlaceHolder = (props: any) => (
   <View
@@ -17,24 +18,24 @@ const PlaceHolder = (props: any) => (
   </View>
 );
 
-export default class WhiteSpaceExample extends React.Component<any, any> {
+export default class GapVExample extends React.Component<any, any> {
   render() {
     return (
       <View>
-        <WhiteSpace size="xs" />
-        <PlaceHolder />
-
-        <WhiteSpace size="sm" />
-        <PlaceHolder />
-
         <WhiteSpace />
-        <PlaceHolder />
+        <GapV>
+          <PlaceHolder />
+        </GapV>
 
         <WhiteSpace size="lg" />
-        <PlaceHolder />
+        <GapV size="md">
+          <PlaceHolder />
+        </GapV>
 
-        <WhiteSpace size="xl" />
-        <PlaceHolder />
+        <WhiteSpace size="lg" />
+        <GapV size="sm">
+          <PlaceHolder />
+        </GapV>
       </View>
     );
   }

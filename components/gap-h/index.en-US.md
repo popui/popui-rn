@@ -1,7 +1,7 @@
 ---
 category: Components
 type: Layout
-title: WhiteSpace
+title: GapH
 ---
 
 Layout controls

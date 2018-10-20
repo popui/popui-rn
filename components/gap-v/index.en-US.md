@@ -1,7 +1,7 @@
 ---
 category: Components
 type: Layout
-title: WingBlank
+title: GapV
 ---
 
 Layout controls

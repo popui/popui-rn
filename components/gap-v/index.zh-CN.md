@@ -1,7 +1,7 @@
 ---
 category: Components
 type: Layout
-title: WingBlank
+title: GapV
 subtitle: 两翼留白
 ---
 
