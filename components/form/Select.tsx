@@ -2,16 +2,16 @@
 import React, { PureComponent } from 'react'
 import { StyleSheet, Text, View, ViewPropTypes } from 'react-native'
 import { Picker } from 'popui-rn/components/picker'
-import varibles from '../style/themes/default'
+import variables from '../style/themes/default'
 
 const styles = StyleSheet.create({
     text: {
-        fontSize: varibles.CellFontSize,
-        marginTop: (varibles.CellLineHeight - varibles.CellFontSize) / 2,
-        marginBottom: (varibles.CellLineHeight - varibles.CellFontSize) / 2,
+        fontSize: variables.CellFontSize,
+        marginTop: (variables.CellLineHeight - variables.CellFontSize) / 2,
+        marginBottom: (variables.CellLineHeight - variables.CellFontSize) / 2,
     },
     placeholder: {
-        color: varibles.TextColorGray,
+        color: variables.TextColorGray,
     },
 })
 

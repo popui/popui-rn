@@ -1,11 +1,11 @@
 import PropTypes from 'prop-types'
 import React from 'react'
 import { StyleSheet, View, ViewPropTypes } from 'react-native'
-import varibles from '../style/themes/default'
+import variables from '../style/themes/default'
 
 const styles = StyleSheet.create({
     mediaHeader: {
-        marginRight: varibles.baseFontSize * 0.8,
+        marginRight: variables.baseFontSize * 0.8,
         width: 60,
         height: 60,
     },

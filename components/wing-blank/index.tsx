@@ -1,6 +1,6 @@
 import React from 'react';
 import { StyleProp, View, ViewStyle } from 'react-native';
-import varibles from '../style/themes/default';
+import variables from '../style/themes/default';
 
 import { WingBlankPropsType } from './PropsType';
 export interface WingBlankProps extends WingBlankPropsType {
@@ -13,7 +13,7 @@ class WingBlank extends React.Component<WingBlankProps, any> {
 
   render() {
     const { size, style, children } = this.props;
-    const margin = (varibles as any)[`h_spacing_${size}`];
+    const margin = (variables as any)[`h_spacing_${size}`];
     return (
       <View style={[{ marginLeft: margin, marginRight: margin }, style]}>
         {children}

@@ -9,7 +9,7 @@ import {
   SafeAreaView
 } from 'react-native';
 import CameraRollPicker from 'react-native-camera-roll-picker';
-import varibles from '../style/themes/default';
+import variables from '../style/themes/default';
 
 export interface ImageRollProps {
   onCancel: () => void;
@@ -37,7 +37,7 @@ const styles = StyleSheet.create({
   },
   rightBtn: {
     width: 14 * 4,
-    color: varibles.brand_primary,
+    color: variables.brand_primary,
     fontSize: 16,
   },
 });

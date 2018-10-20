@@ -1,16 +1,16 @@
 import PropTypes from 'prop-types'
 import React from 'react'
 import { StyleSheet, Text, ViewPropTypes } from 'react-native'
-import varibles from '../style/themes/default'
+import variables from '../style/themes/default'
 
 const styles = StyleSheet.create({
     cellsTitle: {
-        marginTop: (varibles.CellTipsFontSize * 0.77) + (((14 * varibles.baseLineHeight) - 14) * 0.5),
-        marginBottom: (varibles.CellTipsFontSize * 0.3) + (((14 * varibles.baseLineHeight) - 14) * 0.5),
-        paddingLeft: varibles.CellGapH,
-        paddingRight: varibles.CellGapH,
-        fontSize: varibles.CellTipsFontSize,
-        color: varibles.TextColorGray,
+        marginTop: (variables.CellTipsFontSize * 0.77) + (((14 * variables.baseLineHeight) - 14) * 0.5),
+        marginBottom: (variables.CellTipsFontSize * 0.3) + (((14 * variables.baseLineHeight) - 14) * 0.5),
+        paddingLeft: variables.CellGapH,
+        paddingRight: variables.CellGapH,
+        fontSize: variables.CellTipsFontSize,
+        color: variables.TextColorGray,
     },
 })
 

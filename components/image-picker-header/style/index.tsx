@@ -1,5 +1,5 @@
 import { ViewStyle, ImageStyle, TextStyle } from 'react-native';
-// import varibles from '../../style/themes/default'
+// import variables from '../../style/themes/default'
 
 export interface IImagePickerHeaderStyle {
   uploaderHeader:ViewStyle;
@@ -16,7 +16,7 @@ export default {
     flexDirection: 'row',
     alignItems: 'center',
     justifyContent: 'space-between',
-    // height: 17 * varibles.baseLineHeight,
+    // height: 17 * variables.baseLineHeight,
   },
   uploaderTitle: {
     fontSize: 17,

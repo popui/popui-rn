@@ -3,12 +3,12 @@ import React from 'react'
 import { Modal, Platform, StyleSheet, Text, View, ViewPropTypes } from 'react-native'
 import { Mask } from '../mask'
 import { Popup } from 'popui-rn/components/Popup'
-import varibles from '../style/themes/default'
+import variables from '../style/themes/default'
 import TouchableWithFallback from '../touchable-with-fallback'
 
 const styles = StyleSheet.create({
     iosActionsheet: {
-        backgroundColor: varibles.BgColorDefault,
+        backgroundColor: variables.BgColorDefault,
     },
     androidActionsheetWrapper: {
         flexDirection: 'row',
@@ -17,8 +17,8 @@ const styles = StyleSheet.create({
     },
     androidActionsheet: {
         width: 274,
-        backgroundColor: varibles.BgColorDefault,
-        borderRadius: varibles.ActionSheetAndroidBorderRadius,
+        backgroundColor: variables.BgColorDefault,
+        borderRadius: variables.ActionSheetAndroidBorderRadius,
     },
     actionsheetMenu: {
         backgroundColor: '#fff',
@@ -29,7 +29,7 @@ const styles = StyleSheet.create({
     },
     actionsheetCell: {
         borderTopWidth: StyleSheet.hairlineWidth,
-        borderColor: varibles.CellBorderColor,
+        borderColor: variables.CellBorderColor,
         borderStyle: 'solid',
     },
     iosActionsheetCell: {
@@ -48,8 +48,8 @@ const styles = StyleSheet.create({
     iosActionsheetCellText: {
         textAlign: 'center',
         fontSize: 18,
-        marginTop: ((18 * varibles.baseLineHeight) - 18) / 2,
-        marginBottom: ((18 * varibles.baseLineHeight) - 18) / 2,
+        marginTop: ((18 * variables.baseLineHeight) - 18) / 2,
+        marginBottom: ((18 * variables.baseLineHeight) - 18) / 2,
     },
     androidActionsheetCellText: {
         textAlign: 'left',
@@ -64,11 +64,11 @@ const styles = StyleSheet.create({
         color: '#0BB20C',
     },
     warnActionsheetCellText: {
-        color: varibles.ColorWarn,
+        color: variables.ColorWarn,
     },
 })
 
-const underlayColor = varibles.BgColorActive
+const underlayColor = variables.BgColorActive
 
 const ActionSheet = ({
                          visible,

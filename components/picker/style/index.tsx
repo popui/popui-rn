@@ -1,5 +1,5 @@
 import { TextStyle, ViewStyle,StyleSheet } from 'react-native';
-import varibles from '../../style/themes/default'
+import variables from '../../style/themes/default'
 
 export interface IPickerStyle {
   modal: ViewStyle;
@@ -44,7 +44,7 @@ const styles= {
   },
   actionText: {
     color: '#586C94',
-    fontSize: varibles.baseFontSize,
+    fontSize: variables.baseFontSize,
     textAlign: 'center',
   },
   okText: {},

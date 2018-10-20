@@ -1,12 +1,12 @@
 import PropTypes from 'prop-types'
 import React from 'react'
 import { StyleSheet, Text, ViewPropTypes } from 'react-native'
-import varibles from '../style/themes/default'
+import variables from '../style/themes/default'
 
 const styles = StyleSheet.create({
     formPreviewLabel: {
         textAlign: 'justify',
-        color: varibles.TextColorGray,
+        color: variables.TextColorGray,
     },
 })
 

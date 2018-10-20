@@ -1,6 +1,6 @@
 import React from 'react';
 import { StyleProp, View, ViewStyle } from 'react-native';
-import varibles from '../style/themes/default';
+import variables from '../style/themes/default';
 import { WhiteSpacePropsType } from './PropsType';
 export interface WhiteSpaceProps extends WhiteSpacePropsType {
   style?: StyleProp<ViewStyle>;
@@ -14,7 +14,7 @@ class WhiteSpace extends React.Component<WhiteSpaceProps, any> {
     const { size, style } = this.props;
     return (
       <View
-        style={[{ height: (varibles as any)[`v_spacing_${size}`] }, style]}
+        style={[{ height: (variables as any)[`v_spacing_${size}`] }, style]}
       />
     );
   }

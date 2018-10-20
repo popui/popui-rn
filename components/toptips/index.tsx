@@ -9,7 +9,8 @@ import {
   Text,
   View,
 } from "react-native";
-import varibles from "../style/themes/default";
+import variables from "../style/themes/default";
+
 import { ToptipsPropsType } from "./PropsType";
 const { width, height } = Dimensions.get("window");
 const styles = StyleSheet.create({
@@ -22,13 +23,13 @@ const styles = StyleSheet.create({
     zIndex: 5000
   },
   primaryToptips: {
-    backgroundColor: varibles.ColorPrimary
+    backgroundColor: variables.ColorPrimary
   },
   warnToptips: {
-    backgroundColor: varibles.ColorWarn
+    backgroundColor: variables.ColorWarn
   },
   infoToptips: {
-    backgroundColor: varibles.LinkColorDefault
+    backgroundColor: variables.LinkColorDefault
   },
   toptipsText: {
     fontSize: 14,

@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types'
 import React from 'react'
 import { StyleSheet, View, ViewPropTypes } from 'react-native'
-import varibles from '../style/themes/default'
+import variables from '../style/themes/default'
 
 const styles = StyleSheet.create({
     formPreviewItem: {
@@ -9,23 +9,23 @@ const styles = StyleSheet.create({
         flexDirection: 'row',
     },
     bodyPreviewLabel: {
-        marginRight: varibles.baseFontSize * 0.9,
-        fontSize: varibles.baseFontSize * 0.9,
-        lineHeight: varibles.baseFontSize * 0.9 * 2,
+        marginRight: variables.baseFontSize * 0.9,
+        fontSize: variables.baseFontSize * 0.9,
+        lineHeight: variables.baseFontSize * 0.9 * 2,
     },
     bodyPreviewValue: {
-        fontSize: varibles.baseFontSize * 0.9,
-        lineHeight: varibles.baseFontSize * 0.9 * 2,
-        color: varibles.TextColorGray,
+        fontSize: variables.baseFontSize * 0.9,
+        lineHeight: variables.baseFontSize * 0.9 * 2,
+        color: variables.TextColorGray,
     },
     headerPreviewLabel: {
-        marginRight: varibles.baseFontSize,
-        fontSize: varibles.baseFontSize,
-        lineHeight: varibles.baseFontSize * 2.5,
+        marginRight: variables.baseFontSize,
+        fontSize: variables.baseFontSize,
+        lineHeight: variables.baseFontSize * 2.5,
     },
     headerPreviewValue: {
-        fontSize: varibles.baseFontSize * 1.6,
-        lineHeight: varibles.baseFontSize * 2.5,
+        fontSize: variables.baseFontSize * 1.6,
+        lineHeight: variables.baseFontSize * 2.5,
         fontStyle: 'normal',
     },
 })

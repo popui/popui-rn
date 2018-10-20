@@ -3,12 +3,12 @@ import { StyleSheet } from 'react-native'
 import { Cell, CellBody, Cells, CellText } from 'popui-rn'
 
 import IconWeui from '../icon-weui'
-import varibles from '../style/themes/default'
+import variables from '../style/themes/default'
 
 const styles = StyleSheet.create({
     radio: {
         fontSize: 16,
-        paddingLeft: varibles.CellInnerGapH,
+        paddingLeft: variables.CellInnerGapH,
     },
     disabled: {
         opacity: 0.5,

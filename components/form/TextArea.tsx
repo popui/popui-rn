@@ -2,19 +2,19 @@
 import React from 'react'
 import { Text, TextInput, View, ViewPropTypes } from 'react-native'
 import { create } from '../style/utils/StyleSheet'
-import varibles from '../style/themes/default'
+import variables from '../style/themes/default'
 
 const styles = create({
     textarea: {
-        fontSize: varibles.CellFontSize,// 17
-        height: varibles.CellFontSize * varibles.baseLineHeight * 3, //81.6
-        lineHeight: varibles.CellFontSize * varibles.baseLineHeight, //27.2
+        fontSize: variables.CellFontSize,// 17
+        height: variables.CellFontSize * variables.baseLineHeight * 3, //81.6
+        lineHeight: variables.CellFontSize * variables.baseLineHeight, //27.2
         android: {
-            lineHeight: Math.round(varibles.CellFontSize * varibles.baseLineHeight),
+            lineHeight: Math.round(variables.CellFontSize * variables.baseLineHeight),
         },
     },
     textareaCounter: {
-        color: varibles.TextColorTips, // B2B2B2
+        color: variables.TextColorTips, // B2B2B2
         textAlign: 'right',
     },
 })

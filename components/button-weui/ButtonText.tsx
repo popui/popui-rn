@@ -1,54 +1,54 @@
 import PropTypes from 'prop-types'
 import React from 'react'
 import { StyleSheet, Text, ViewPropTypes } from 'react-native'
-import varibles from '../style/themes/default'
+import variables from '../style/themes/default'
 
 const styles = StyleSheet.create({
     text: {
-        fontSize: varibles.BtnFontSize,
+        fontSize: variables.BtnFontSize,
         textAlign: 'center',
-        marginTop: (varibles.BtnHeight - varibles.BtnFontSize) / 2,
-        marginBottom: (varibles.BtnHeight - varibles.BtnFontSize) / 2,
+        marginTop: (variables.BtnHeight - variables.BtnFontSize) / 2,
+        marginBottom: (variables.BtnHeight - variables.BtnFontSize) / 2,
     },
 
     miniText: {
-        fontSize: varibles.BtnMiniFontSize,
-        marginTop: ((varibles.BtnMiniHeight * varibles.BtnMiniFontSize) - varibles.BtnMiniFontSize) / 2,
-        marginBottom: ((varibles.BtnMiniHeight * varibles.BtnMiniFontSize) - varibles.BtnMiniFontSize) / 2,
+        fontSize: variables.BtnMiniFontSize,
+        marginTop: ((variables.BtnMiniHeight * variables.BtnMiniFontSize) - variables.BtnMiniFontSize) / 2,
+        marginBottom: ((variables.BtnMiniHeight * variables.BtnMiniFontSize) - variables.BtnMiniFontSize) / 2,
     },
 
     // primary
     primaryText: {
-        color: varibles.BtnFontColor,
+        color: variables.BtnFontColor,
     },
 
     // warn
     warnText: {
-        color: varibles.BtnFontColor,
+        color: variables.BtnFontColor,
     },
 
     // default
     defaultText: {
-        color: varibles.BtnDefaultFontColor,
+        color: variables.BtnDefaultFontColor,
     },
 
     // primaryPlain
     primaryPlainText: {
-        color: varibles.BtnPlainPrimaryColor,
+        color: variables.BtnPlainPrimaryColor,
     },
 
     // defaultPlain
     defaultPlainText: {
-        color: varibles.BtnPlainDefaultColor,
+        color: variables.BtnPlainDefaultColor,
     },
 
     // disabled
     disabledText: {
-        color: varibles.BtnDisabledFontColor,
+        color: variables.BtnDisabledFontColor,
     },
 
     defaultDisabledText: {
-        color: varibles.BtnDefaultDisabledFontColor,
+        color: variables.BtnDefaultDisabledFontColor,
     },
 
     plainDisabledText: {

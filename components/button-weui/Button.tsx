@@ -1,6 +1,6 @@
 import React from 'react'
 import { StyleSheet, TouchableOpacity, View, ViewPropTypes } from 'react-native'
-import varibles from '../style/themes/default'
+import variables from '../style/themes/default'
 import ButtonText from './ButtonText'
 import TouchableWithFallback from '../touchable-with-fallback'
 
@@ -9,7 +9,7 @@ import TouchableWithFallback from '../touchable-with-fallback'
 const styles = StyleSheet.create({
   // global
   button: {
-    borderRadius: varibles.BtnBorderRadius,
+    borderRadius: variables.BtnBorderRadius,
     borderWidth: StyleSheet.hairlineWidth,
     paddingLeft: 14,
     paddingRight: 14,
@@ -19,30 +19,30 @@ const styles = StyleSheet.create({
 
   // mini
   mini: {
-    paddingLeft: varibles.BtnMiniFontSize * 0.75,
-    paddingRight: varibles.BtnMiniFontSize * 0.75
+    paddingLeft: variables.BtnMiniFontSize * 0.75,
+    paddingRight: variables.BtnMiniFontSize * 0.75
   },
 
   // primary
   primary: {
-    backgroundColor: varibles.BtnPrimaryBg
+    backgroundColor: variables.BtnPrimaryBg
   },
 
   // warn
   warn: {
-    backgroundColor: varibles.BtnWarnBg
+    backgroundColor: variables.BtnWarnBg
   },
 
   // default
   default: {
-    backgroundColor: varibles.BtnDefaultBg
+    backgroundColor: variables.BtnDefaultBg
   },
 
   // primaryPlain
   primaryPlain: {
     borderWidth: 1,
     borderStyle: 'solid',
-    borderColor: varibles.BtnPlainPrimaryBorderColor,
+    borderColor: variables.BtnPlainPrimaryBorderColor,
     backgroundColor: 'transparent'
   },
 
@@ -50,19 +50,19 @@ const styles = StyleSheet.create({
   defaultPlain: {
     borderWidth: 1,
     borderStyle: 'solid',
-    borderColor: varibles.BtnPlainDefaultBorderColor,
+    borderColor: variables.BtnPlainDefaultBorderColor,
     backgroundColor: 'transparent'
   },
 
   // disabled
   primaryDisabled: {
-    backgroundColor: varibles.BtnPrimaryDisabledBg
+    backgroundColor: variables.BtnPrimaryDisabledBg
   },
   warnDisabled: {
-    backgroundColor: varibles.BtnWarnDisabledBg
+    backgroundColor: variables.BtnWarnDisabledBg
   },
   defaultDisabled: {
-    backgroundColor: varibles.BtnDefaultDisabledBg
+    backgroundColor: variables.BtnDefaultDisabledBg
   },
   plainDisabled: {
     borderColor: 'rgba(0,0,0,.2)',
@@ -71,9 +71,9 @@ const styles = StyleSheet.create({
 })
 
 const underlayColors = {
-  primaryActive: varibles.BtnPrimaryActiveBg,
-  warnActive: varibles.BtnWarnActiveBg,
-  defaultActive: varibles.BtnDefaultActiveBg,
+  primaryActive: variables.BtnPrimaryActiveBg,
+  warnActive: variables.BtnWarnActiveBg,
+  defaultActive: variables.BtnDefaultActiveBg,
   primaryPlainActive: 'transparent',
   defaultPlainActive: 'transparent'
 }

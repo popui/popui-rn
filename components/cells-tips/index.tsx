@@ -2,18 +2,18 @@ import PropTypes from 'prop-types'
 import React from 'react'
 import { Text } from 'react-native'
 import { create } from '../style/utils/StyleSheet'
-import varibles from '../style/themes/default'
+import variables from '../style/themes/default'
 
 const styles = create({
   cellsTips: {
-    paddingLeft: varibles.CellGapH,
-    paddingRight: varibles.CellGapH,
-    fontSize: varibles.CellTipsFontSize,
-    color: varibles.TextColorGray,
-    marginTop: varibles.CellTipsFontSize * 0.3,
-    lineHeight: varibles.CellTipsFontSize * varibles.baseLineHeight,
+    paddingLeft: variables.CellGapH,
+    paddingRight: variables.CellGapH,
+    fontSize: variables.CellTipsFontSize,
+    color: variables.TextColorGray,
+    marginTop: variables.CellTipsFontSize * 0.3,
+    lineHeight: variables.CellTipsFontSize * variables.baseLineHeight,
     android: {
-      lineHeight: Math.round(varibles.CellTipsFontSize * varibles.baseLineHeight)
+      lineHeight: Math.round(variables.CellTipsFontSize * variables.baseLineHeight)
     }
   }
 })

@@ -2,10 +2,10 @@ import PropTypes from 'prop-types'
 import React from 'react'
 import { Text } from 'react-native'
 import { create } from '../style/utils/StyleSheet'
-import varibles from '../style/themes/default'
+import variables from '../style/themes/default'
 
 const baseFontSize = 14
-const lineHeight = baseFontSize * varibles.baseLineHeight
+const lineHeight = baseFontSize * variables.baseLineHeight
 const styles = create({
     h3: {
         lineHeight,

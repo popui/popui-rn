@@ -1,6 +1,6 @@
 import React from 'react'
 import { StyleSheet, Text as RNText } from 'react-native'
-import varibles from '../style/themes/default'
+import variables from '../style/themes/default'
 
 export interface ITextProps {
   style?: any
@@ -8,8 +8,8 @@ export interface ITextProps {
 }
 const Text = ({ style, children, ...others }: ITextProps) => {
   const styleObj: any = StyleSheet.flatten(style)
-  const fontSize = styleObj.fontSize || varibles.baseFontSize
-  const lineHeight = styleObj.lineHeight || fontSize * varibles.baseLineHeight
+  const fontSize = styleObj.fontSize || variables.baseFontSize
+  const lineHeight = styleObj.lineHeight || fontSize * variables.baseLineHeight
 
   return (
     <RNText style={[style, { fontSize, lineHeight }]} {...others}>

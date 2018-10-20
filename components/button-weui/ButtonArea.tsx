@@ -1,13 +1,13 @@
 import React from 'react'
 import { StyleSheet, View } from 'react-native'
-import varibles from '../style/themes/default'
+import variables from '../style/themes/default'
 
 const styles = StyleSheet.create({
     BtnArea: {
-        marginTop: varibles.CellsMarginTop,
-        marginRight: varibles.BtnDefaultGap,
+        marginTop: variables.CellsMarginTop,
+        marginRight: variables.BtnDefaultGap,
         marginBottom: 16 * 0.3,
-        marginLeft: varibles.BtnDefaultGap,
+        marginLeft: variables.BtnDefaultGap,
     },
     BtnAreaInline: {
         flexDirection: 'row',
