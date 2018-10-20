@@ -1,7 +1,7 @@
 // import React from 'react';
 
 
-export interface ButtonPreviewPropsType {
+export interface WeuiButtonPreviewPropsType {
   style: any
   children: any
   primary?:boolean

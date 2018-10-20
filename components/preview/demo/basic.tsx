@@ -2,7 +2,7 @@ import React from 'react'
 import {View} from 'react-native'
 import { ButtonWeui,  Preview, PreviewBody, PreviewFooter, PreviewHeader,
   PreviewItem, PreviewLabel, PreviewValue } from 'popui-rn'
-const {ButtonPreview} = ButtonWeui
+const {WeuiButtonPreview} = ButtonWeui
 export interface IProps  {
 
 }
@@ -39,7 +39,7 @@ export default class PreviewScreen extends React.Component<IProps, any> {
                         </PreviewItem>
                     </PreviewBody>
                     <PreviewFooter>
-                        <ButtonPreview primary={!false}>Action</ButtonPreview>
+                        <WeuiButtonPreview primary={!false}>Action</WeuiButtonPreview>
                     </PreviewFooter>
                 </Preview>
                 <Preview style={{ marginTop: 20 }}>
@@ -66,8 +66,8 @@ export default class PreviewScreen extends React.Component<IProps, any> {
                         </PreviewItem>
                     </PreviewBody>
                     <PreviewFooter>
-                        <ButtonPreview>Action</ButtonPreview>
-                        <ButtonPreview primary={!false}>Action</ButtonPreview>
+                        <WeuiButtonPreview>Action</WeuiButtonPreview>
+                        <WeuiButtonPreview primary={!false}>Action</WeuiButtonPreview>
                     </PreviewFooter>
                 </Preview>
             </View>

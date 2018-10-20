@@ -3,7 +3,7 @@ import React from 'react'
 import { StyleSheet, Text} from 'react-native'
 import variables from '../style/themes/default'
 import TouchableWithFallback from '../touchable-with-fallback'
-import {ButtonPreviewPropsType} from './PropsType'
+import {WeuiButtonPreviewPropsType} from './PropsType'
 
 const styles = StyleSheet.create({
     previewBtn: {
@@ -27,7 +27,7 @@ const styles = StyleSheet.create({
     },
 })
 
-const ButtonPreview = ({ primary, style, textStyle, children, ...others }:ButtonPreviewPropsType) =>
+const WeuiButtonPreview = ({ primary, style, textStyle, children, ...others }:WeuiButtonPreviewPropsType) =>
     <TouchableWithFallback underlayColor={variables.DialogLinkActiveBc} style={[styles.previewBtn, style]}>
         <Text
             style={[
@@ -40,11 +40,11 @@ const ButtonPreview = ({ primary, style, textStyle, children, ...others }:Button
         </Text>
     </TouchableWithFallback>
 
-// ButtonPreview.propTypes = {
+// WeuiButtonPreview.propTypes = {
 //     primary: PropTypes.bool,
 //     style: TouchableHighlight.propTypes.style,
 //     textStyle: Text.propTypes.style,
 //     children: PropTypes.node,
 // }
 
-export default ButtonPreview
+export default WeuiButtonPreview
