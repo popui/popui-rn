@@ -1,7 +1,7 @@
 import { Article, H1, H2, H3, LoadMore, P, GapV, Section } from 'popui-rn'
 
 import React from 'react'
-
+import { ScrollView } from 'react-native'
 
 
 export interface IProps  {
@@ -26,7 +26,7 @@ export default class PageScreen extends React.Component<IProps, any> {
 
     render() {
         return (
-            <GapV hasPadddingHorizontal>
+            <ScrollView>
                 <Article>
                     <H1>大标题</H1>
                     <Section>
@@ -49,7 +49,7 @@ export default class PageScreen extends React.Component<IProps, any> {
                     </Section>
                 </Article>
                 {this.renderFooter()}
-            </GapV>
+            </ScrollView>
         )
     }
 

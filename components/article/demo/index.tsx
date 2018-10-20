@@ -2,6 +2,7 @@ import { Article, H1, H2, H3, P, GapV, Section } from 'popui-rn'
 
 import React from 'react'
 
+import { ScrollView } from 'react-native'
 
 
 export interface IProps  {
@@ -18,9 +19,9 @@ export default class ButtonScreen extends React.Component<IProps, any> {
 
     render() {
         return (
-            <GapV hasPadddingHorizontal>
+            <ScrollView>
                 {this.renderContent()}
-            </GapV>
+            </ScrollView>
         )
     }
 

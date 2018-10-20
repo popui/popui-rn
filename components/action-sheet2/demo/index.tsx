@@ -1,7 +1,6 @@
 import { ActionSheet, Button, ButtonArea, GapV, Popup, PopupHeader } from 'popui-rn'
 import React from 'react'
-import { View } from 'react-native'
-
+import { View,ScrollView } from 'react-native'
 
 export interface IProps  {
 
@@ -26,7 +25,7 @@ export default class ActionSheetScreen extends React.Component<IProps, any> {
 
     render() {
         return (
-            <GapV hasPadddingHorizontal>
+            <ScrollView>
                 <ButtonArea>
                     <Button
                         type="primary"
@@ -86,7 +85,7 @@ export default class ActionSheetScreen extends React.Component<IProps, any> {
                 {/*source={{uri: 'https://facebook.github.io/react/img/logo_og.png'}}*/}
                 {/*onPress={() => this.setState({galleryVisible: false})}*/}
                 {/*><GalleryDelete onPress={() => console.log('1')}/></Gallery>*/}
-            </GapV>
+            </ScrollView>
         )
     }
 

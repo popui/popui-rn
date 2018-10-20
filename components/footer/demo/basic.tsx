@@ -1,6 +1,6 @@
 import React from 'react'
 
-import { Text } from 'react-native'
+import { Text,ScrollView } from 'react-native'
 import { Footer as FooterComp, GapV } from 'popui-rn'
 const {Footer, FooterLink, FooterLinks, FooterText} = FooterComp
 
@@ -50,11 +50,11 @@ export default class FooterScreen extends React.Component<IProps, any> {
 
     render() {
         return (
-            <GapV hasPadddingHorizontal hasPaddingTop>
+            <ScrollView hasPaddingTop>
                 {this.renderFooter1()}
                 {this.renderFooter2()}
                 {this.renderFooter3()}
-            </GapV>
+            </ScrollView>
         )
     }
 

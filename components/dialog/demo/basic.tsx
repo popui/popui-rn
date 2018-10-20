@@ -1,5 +1,5 @@
 import React from 'react'
-import { Text } from 'react-native'
+import { Text,ScrollView } from 'react-native'
 import { ButtonWeui,Dialog, GapV } from 'popui-rn'
 const { Button, ButtonArea} = ButtonWeui
 
@@ -59,7 +59,7 @@ export default class DialogScreen extends React.Component<IProps, any> {
 
     render() {
         return (
-            <GapV hasPadddingHorizontal>
+            <ScrollView>
                 <ButtonArea>
                     <Button
                         type="primary"
@@ -97,7 +97,7 @@ export default class DialogScreen extends React.Component<IProps, any> {
                         },
                     ]}
                 ><Text>呵呵</Text></Dialog>
-            </GapV>
+            </ScrollView>
         )
     }
 }
