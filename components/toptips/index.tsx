@@ -40,7 +40,8 @@ const styles = StyleSheet.create({
 
 class Toptips extends PureComponent<ToptipsPropsType, any> {
   state = { visible: false, translateY: new Animated.Value(-height) };
-
+  height:number
+  toptips:React.ReactNode
   public componentWillReceiveProps(nextProp) {
     if (this.props.visible !== nextProp.visible) {
       if (nextProp.visible) {
