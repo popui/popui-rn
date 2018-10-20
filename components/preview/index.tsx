@@ -1,17 +1,23 @@
-import Preview from './Preview'
-import PreviewBody from './PreviewBody'
-import PreviewFooter from './PreviewFooter'
-import PreviewHeader from './PreviewHeader'
-import PreviewItem from './PreviewItem'
-import PreviewLabel from './PreviewLabel'
-import PreviewValue from './PreviewValue'
+import PropTypes from 'prop-types'
+import React from 'react'
+import { StyleSheet, View, ViewPropTypes } from 'react-native'
+import variables from '../style/themes/default'
 
-export default {
-    Preview,
-    PreviewHeader,
-    PreviewBody,
-    PreviewFooter,
-    PreviewItem,
-    PreviewLabel,
-    PreviewValue,
+const styles = StyleSheet.create({
+    preview: {
+        backgroundColor: '#FFFFFF',
+        borderTopWidth: StyleSheet.hairlineWidth,
+        borderBottomWidth: StyleSheet.hairlineWidth,
+        borderColor: variables.CellBorderColor,
+    },
+})
+
+const Preview = ({ style, children, ...other }) =>
+    <View style={[styles.preview, style]} {...other}>{children}</View>
+
+Preview.propTypes = {
+    style: ViewPropTypes.style,
+    children: PropTypes.node,
 }
+
+export default Preview
