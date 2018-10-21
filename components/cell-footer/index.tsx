@@ -34,6 +34,7 @@ export interface CellFooterProps {
 
 export interface CellFooterState {}
 
+@observer
 export default class CellFooter extends React.Component<
   CellFooterProps,
   CellFooterState

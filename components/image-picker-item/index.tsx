@@ -7,6 +7,7 @@ import { ImagePickerItemProps, ImagePickerItemState } from "./PropsType";
 import { ImageItemFuncArgs } from "../image-picker/PropsType";
 import { noopFunc } from "../_util/noop";
 
+@observer
 export default class ImagePickerItem extends React.Component<
   ImagePickerItemProps,
   ImagePickerItemState

@@ -1,6 +1,7 @@
 /* tslint:disable:jsx-no-multiline-js */
 import treeFilter from 'array-tree-filter';
 import React from 'react';
+import { observer } from 'mobx-react'
 import RMCCascader from 'rmc-cascader/lib/Cascader';
 import RMCPopupCascader from 'rmc-cascader/lib/Popup';
 import RMCMultiPicker from 'rmc-picker/lib/MultiPicker';

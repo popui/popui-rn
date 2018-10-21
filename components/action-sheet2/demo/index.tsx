@@ -6,6 +6,7 @@ export interface IProps  {
 }
 
 
+@observer
 export default class ActionSheetScreen extends React.Component<IProps, any> {
     static navigationOptions = {
         title: 'ActionSheet',

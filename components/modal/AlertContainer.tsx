@@ -1,5 +1,6 @@
 /* tslint:disable:jsx-no-multiline-js */
 import React from 'react';
+import { observer } from 'mobx-react'
 import { ScrollView, Text, TextStyle } from 'react-native';
 import Modal from './Modal';
 import { Action } from './PropsType';
@@ -11,6 +12,7 @@ export interface AlertContainerProps {
   onAnimationEnd?: (visible: boolean) => void;
 }
 
+@observer
 export default class AlertContainer extends React.Component<
   AlertContainerProps,
   any

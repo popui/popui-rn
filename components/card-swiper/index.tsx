@@ -19,6 +19,7 @@ const LABEL_TYPES = {
 }
 
 
+@observer
 class Swiper extends Component {
   constructor(props: any) {
     super(props)

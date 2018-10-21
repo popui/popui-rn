@@ -20,6 +20,7 @@ export interface CellLabelProps {
 export interface CellLabelState {
 }
 
+@observer
 export default class CellLabel extends React.Component<CellLabelProps, CellLabelState> {
   public render() {
     const { style, children, ...others } = this.props

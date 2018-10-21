@@ -6,6 +6,7 @@ import { View, StyleSheet, ensureComponentIsNative, Image } from 'react-native'
 import { createDebug } from 'common/utils/debug'
 const debug = createDebug('popui:Image/CacheProgressiveImage/ImageBackground')
 
+@observer
 class ImageBackground extends React.Component {
   setNativeProps(props: any) {
     const viewRef = this._viewRef

@@ -14,6 +14,7 @@ const InputItemStyles = StyleSheet.create<any>(InputItemStyle);
 import { noopFunc } from "../_util/noop";
 import { hitSlop } from "../_util/touch";
 
+@observer
 export default class PopTextInput extends React.Component<TextInputProps, any> {
   displayName: "PopTextInput";
   static defaultProps = {

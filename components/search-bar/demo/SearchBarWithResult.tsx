@@ -20,6 +20,7 @@ export interface IProps  {}
 
 
 
+@observer
 export default class SearchBarWithResult extends React.Component<IProps, any> {
   state = {
     searchText: '',

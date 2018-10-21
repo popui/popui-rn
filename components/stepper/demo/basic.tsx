@@ -1,6 +1,7 @@
 // tslint:disable:jsx-no-multiline-js
 /* tslint:disable:no-console */
 import React from 'react';
+import { observer } from 'mobx-react'
 import { View } from 'react-native';
 import { List, Stepper } from 'popui-rn';
 
@@ -8,6 +9,7 @@ function onChange(value: any) {
   console.log('changed', value);
 }
 
+@observer
 export default class StepperExample extends React.Component<any, any> {
   render() {
     const readOnly = (

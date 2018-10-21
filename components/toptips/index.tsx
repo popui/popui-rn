@@ -38,6 +38,7 @@ const styles = StyleSheet.create({
   }
 });
 
+@observer
 class Toptips extends PureComponent<ToptipsPropsType, any> {
   state = { visible: false, translateY: new Animated.Value(-height) };
   height:number

@@ -15,6 +15,7 @@ export interface IAutoProgressState {
   isLoading: boolean
 }
 
+@observer
 class AutoProgress extends PureComponent<
   IAutoProgressProps,
   IAutoProgressState

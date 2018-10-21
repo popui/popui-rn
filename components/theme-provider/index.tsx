@@ -9,6 +9,7 @@ export interface IProps {
 /**
  * 把 props 中的 themeVariables 转换到 context
  */
+@observer
 export default class ThemeProvider extends React.Component<IProps, any> {
     static propTypes = {
         themeVariables: PropTypes.object.isRequired,

@@ -1,4 +1,5 @@
 import React from 'react';
+import { observer } from 'mobx-react'
 import {
   ImageStyle,
   StyleProp,
@@ -22,6 +23,7 @@ export interface AgreeItemNativeProps extends CheckboxPropsType {
 
 const AgreeItemstyles = StyleSheet.create<any>(AgreeItemstyle);
 
+@observer
 export default class AgreeItem extends React.Component<
   AgreeItemNativeProps,
   any

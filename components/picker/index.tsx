@@ -9,6 +9,7 @@ export interface PickerNativeProps extends PickerPropsType {
 }
 
 const pickerStyles = StyleSheet.create<any>(pickerStyle);
+@observer
 export default class Picker extends AbstractPicker {
   static defaultProps = {
     ...getDefaultProps(),

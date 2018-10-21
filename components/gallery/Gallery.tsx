@@ -30,6 +30,7 @@ const styles = StyleSheet.create({
     },
 })
 
+@observer
 class Gallery extends PureComponent {
     constructor(props) {
         super(props)

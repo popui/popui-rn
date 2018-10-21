@@ -1,5 +1,6 @@
 /* tslint:disable:jsx-no-multiline-js */
 import React from 'react';
+import { observer } from 'mobx-react'
 import {
   Dimensions,
   Image,
@@ -22,6 +23,7 @@ export interface GridProps extends GridPropsType {
 
 const GridStyles = StyleSheet.create<any>(GridStyle);
 
+@observer
 export default class Grid extends React.Component<GridProps, any> {
   static defaultProps = {
     data: [],

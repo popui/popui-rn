@@ -15,6 +15,7 @@ const styles = StyleSheet.create({
   }
 })
 
+@observer
 export default class IconsScreen extends React.Component<IProps, any> {
     static navigationOptions = {
         title: 'Icons',

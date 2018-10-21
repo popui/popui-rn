@@ -52,6 +52,7 @@ const initLabel = arg => {
     return <Text style={[styles.text, styles.placeholder]}>{arg.placeholder}</Text>
 }
 
+@observer
 class Select extends PureComponent {
     constructor(props) {
         super(props)

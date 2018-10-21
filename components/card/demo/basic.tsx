@@ -1,7 +1,9 @@
 import React from 'react';
+import { observer } from 'mobx-react'
 import { Text, View } from 'react-native';
 import { Card, GapH, GapV } from 'popui-rn';
 
+@observer
 export default class BasicCardExample extends React.Component<any, any> {
   render() {
     return (

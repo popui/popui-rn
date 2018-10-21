@@ -10,6 +10,7 @@ export interface IProps  {
 
 
 
+@observer
 export default class ButtonScreen extends React.Component<IProps, any> {
     static navigationOptions = {
         title: 'Article',

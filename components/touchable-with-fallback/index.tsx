@@ -31,6 +31,7 @@ if (TouchableComponent !== TouchableNativeFeedback) {
   TouchableComponent.canUseNativeForeground = () => false
 }
 
+@observer
 export default class TouchableWithFallback extends React.Component<any, any> {
   static SelectableBackground = TouchableComponent.SelectableBackground
   static SelectableBackgroundBorderless =

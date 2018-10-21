@@ -1,8 +1,10 @@
 /* tslint:disable:no-console */
 import React from 'react';
+import { observer } from 'mobx-react'
 import { View } from 'react-native';
 import { List, SwipeAction } from 'popui-rn';
 
+@observer
 export default class BasicSwipeActionExample extends React.Component<any, any> {
   render() {
     const right = [

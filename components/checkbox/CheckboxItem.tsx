@@ -1,4 +1,5 @@
 import React from 'react';
+import { observer } from 'mobx-react'
 import { ImageStyle, StyleProp, StyleSheet, ViewStyle } from 'react-native';
 import List from '../list/index';
 import Checkbox from './Checkbox';
@@ -16,6 +17,7 @@ export interface ICheckboxItemNativeProps extends CheckboxItemPropsType {
 
 const CheckboxItemStyles = StyleSheet.create<any>(CheckboxItemStyle);
 
+@observer
 export default class CheckboxItem extends React.Component<
   ICheckboxItemNativeProps,
   any

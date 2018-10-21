@@ -27,6 +27,7 @@ interface ImageState {
   intensity: Animated.Value
 }
 
+@observer
 export default class Image extends React.Component<ImageProps, ImageState> {
   mounted = true
   static defaultProps = { transitionDuration: 300, tint: 'dark' }

@@ -40,6 +40,7 @@ export interface CellProps {
 export interface CellState {
 }
 
+@observer
 export default class Cell extends React.Component<CellProps, CellState> {
   private renderChildrenWithProps = () => {
     const { access, error, children} = this.props

@@ -14,6 +14,7 @@ export interface IProps  {
 
 }
 
+@observer
 export default class FooterScreen extends React.Component<IProps, any> {
     static navigationOptions = {
         title: 'Footer',

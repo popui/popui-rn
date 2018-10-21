@@ -1,8 +1,10 @@
 /* tslint:disable:no-console */
 import React from 'react';
+import { observer } from 'mobx-react'
 import { View } from 'react-native';
 import { Accordion, List } from 'popui-rn';
 
+@observer
 export default class AccordionExmple extends React.Component<any, any> {
   onChange = (key: string) => {
     console.log(key);

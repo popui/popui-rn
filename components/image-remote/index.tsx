@@ -5,6 +5,7 @@ import PropTypes from 'prop-types'
 import cloneReferencedElement from 'react-clone-referenced-element'
 import { Image, PixelRatio } from 'react-native'
 
+@observer
 export default class RemoteImage extends React.Component {
 
     static propTypes = {

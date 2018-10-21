@@ -30,6 +30,7 @@ export interface CellBodyProps {
 export interface CellBodyState {
 }
 
+@observer
 export default class CellBody extends React.Component<CellBodyProps, CellBodyState> {
 
   private renderChildrenWithProps = () => {

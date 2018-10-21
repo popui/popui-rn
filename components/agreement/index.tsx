@@ -50,6 +50,7 @@ export interface AgreementProps {
 
 export interface AgreementState {}
 
+@observer
 export default class AgreementComponent extends React.Component<
   AgreementProps,
   AgreementState

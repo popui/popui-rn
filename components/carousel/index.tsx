@@ -1,4 +1,5 @@
 import React from 'react';
+import { observer } from 'mobx-react'
 import {
   LayoutChangeEvent,
   NativeScrollEvent,
@@ -85,6 +86,7 @@ const defaultPagination = (props: PaginationProps) => {
   );
 };
 
+@observer
 class Carousel extends React.Component<CarouselProps, CarouselState> {
   static defaultProps: CarouselProps = {
     bounces: true,

@@ -8,6 +8,7 @@ export interface IProps  {
 
 
 
+@observer
 export default class LoadMoreScreen extends React.Component<IProps, any> {
     static navigationOptions = {
         title: 'LoadMore',

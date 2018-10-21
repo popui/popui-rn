@@ -1,5 +1,6 @@
 /* tslint:disable:jsx-no-multiline-js */
 import React from 'react';
+import { observer } from 'mobx-react'
 import DrawerLayout from 'react-native-drawer-layout';
 import { DrawerProps } from './PropsType';
 
@@ -8,6 +9,7 @@ export interface DrawerNativeProps extends DrawerProps {
   drawerWidth?: number;
   drawerBackgroundColor?: string;
 }
+@observer
 export default class Drawer extends React.Component<DrawerNativeProps, any> {
   static defaultProps = {
     position: 'left',

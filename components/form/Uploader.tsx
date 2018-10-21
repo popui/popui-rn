@@ -1,4 +1,5 @@
-import React from 'react';;
+import React from 'react';
+import { observer } from 'mobx-react';
 import { View, Text, Image, TouchableOpacity, StyleSheet  } from 'react-native';
 // import ImagePicker from 'react-native-image-picker'
 // import concat from 'lodash/concat'

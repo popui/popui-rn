@@ -24,6 +24,7 @@ import {
 
 declare var jest: any;
 
+@observer
 export default class BasicTextInputExample extends React.Component<any, any> {
   inputRef: any;
 

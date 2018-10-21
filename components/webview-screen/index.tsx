@@ -11,6 +11,7 @@ import Toast from '../toast'
 
 import CONSTANTS from './constants'
 
+@observer
 class WebViewScreen extends PureComponent {
   static navigatorButtons = {
     leftButtons: [

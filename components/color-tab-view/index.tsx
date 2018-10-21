@@ -39,6 +39,7 @@ function getCurrentRoute(props: any) {
 }
 
 
+@observer
 export class ColorTabView extends React.Component<IProps, any> {
   render() {
     // debug('render')

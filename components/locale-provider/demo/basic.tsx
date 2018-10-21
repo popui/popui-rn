@@ -1,4 +1,5 @@
 import React from 'react';
+import { observer } from 'mobx-react'
 import { View } from 'react-native';
 import {
   Pagination, LocaleProvider, List, DatePicker, GapH, GapV,
@@ -55,6 +56,7 @@ const Page = () => (
   </View>
 );
 
+@observer
 export default class LocaleProviderExample extends React.Component<any, any> {
   constructor(props: any) {
     super(props);

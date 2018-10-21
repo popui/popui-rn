@@ -6,6 +6,7 @@ export interface IProps  {
 
 }
 
+@observer
 export default class PreviewScreen extends React.Component<IProps, any> {
     static navigationOptions = {
         title: 'Preview',

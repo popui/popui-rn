@@ -6,6 +6,7 @@
     "jsx": "preserve",
     "noUnusedParameters": true,
     "noUnusedLocals": true,
+    "experimentalDecorators":true,
     "allowSyntheticDefaultImports":true,
     "target": "es6",
     "noImplicitAny": false,

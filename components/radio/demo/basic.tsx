@@ -1,9 +1,11 @@
 /* tslint:disable:jsx-no-multiline-js */
 import React from 'react';
+import { observer } from 'mobx-react'
 import { Text, View } from 'react-native';
 import { List, Radio, GapH } from 'popui-rn';
 const RadioItem = Radio.RadioItem;
 
+@observer
 export default class BasicRadioExample extends React.Component<any, any> {
   state = {
     part1Value: 1,

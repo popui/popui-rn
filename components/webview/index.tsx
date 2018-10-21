@@ -38,6 +38,7 @@ const injectedScript = function () {
     waitForBridge()
 }
 
+@observer
 export default class WebView extends PureComponent {
     static propTypes = {
         children: PropTypes.node,

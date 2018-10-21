@@ -1,4 +1,5 @@
 import React from 'react';
+import { observer } from 'mobx-react'
 import {
   Dimensions,
   LayoutChangeEvent,
@@ -30,6 +31,7 @@ export interface IModalNativeProps extends ModalPropsType<TextStyle> {
 
 const modalStyles = StyleSheet.create<any>(modalStyle);
 
+@observer
 class AntmModal extends React.Component<IModalNativeProps, any> {
   static defaultProps = {
     visible: false,

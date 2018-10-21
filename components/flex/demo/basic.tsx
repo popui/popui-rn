@@ -1,5 +1,6 @@
 // tslint:disable:jsx-no-multiline-js
 import React from 'react';
+import { observer } from 'mobx-react'
 import { ScrollView, Text, TouchableWithoutFeedback, View } from 'react-native';
 import { Button, Flex, GapH, GapV } from 'popui-rn';
 
@@ -15,6 +16,7 @@ const Circle = (props: any) => {
   return <View style={style} />;
 };
 
+@observer
 export default class FlexExample extends React.Component<any, any> {
   render() {
     return (

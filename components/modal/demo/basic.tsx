@@ -1,8 +1,10 @@
 /* tslint:disable:no-console */
 import React from 'react';
+import { observer } from 'mobx-react'
 import { Text, View, ScrollView } from 'react-native';
 import { Button, Modal, GapH, GapV } from 'popui-rn';
 
+@observer
 export default class BasicModalExample extends React.Component<any, any> {
   constructor(props: any) {
     super(props);

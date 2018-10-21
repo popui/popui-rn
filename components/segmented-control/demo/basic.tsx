@@ -1,8 +1,10 @@
 /* tslint:disable:no-console */
 import React from 'react';
+import { observer } from 'mobx-react'
 import { Text, View } from 'react-native';
 import { SegmentedControl, GapH } from 'popui-rn';
 
+@observer
 export default class BasicTagExample extends React.Component<any, any> {
   onChange = (e: any) => {
     console.log(`selectedIndex:${eEvent.selectedSegmentIndex}`);

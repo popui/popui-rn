@@ -13,6 +13,7 @@ const styles = StyleSheet.create({
   }
 })
 
+@observer
 export default class BasicProgressExample extends React.Component<any, any> {
   timer: any;
   isUploading = false;

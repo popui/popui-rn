@@ -1,4 +1,5 @@
 import React from 'react';
+import { observer } from 'mobx-react'
 import {
   Animated,
   Dimensions,
@@ -20,6 +21,7 @@ export interface ProgressProps extends ProgressPropsType {
 
 const ProgressStyles = StyleSheet.create<any>(ProgressStyle);
 
+@observer
 export default class Progress extends React.Component<ProgressProps, any> {
   static defaultProps = {
     percent: 0,

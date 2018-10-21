@@ -1,6 +1,7 @@
 /* tslint:disable:no-unused-variable */
 // tslint:disable:jsx-no-multiline-js
 import React from 'react';
+import { observer } from 'mobx-react'
 import { Button, GapH, GapV } from 'popui-rn';
 
 /* tslint:disable:no-console */

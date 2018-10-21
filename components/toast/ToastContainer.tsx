@@ -24,6 +24,7 @@ export interface ToastProps {
 
 const ToastContainerStyles = StyleSheet.create<any>(ToastContainerStyle);
 
+@observer
 export default class ToastContainer extends React.Component<ToastProps, any> {
   static defaultProps = {
     duration: 3,

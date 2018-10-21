@@ -11,6 +11,7 @@ export interface IProps  {
 
 }
 
+@observer
 export default class CellScreen extends React.Component<IProps, any> {
     static navigationOptions = {
         title: 'Cell',

@@ -1,10 +1,12 @@
 /* tslint:disable:jsx-no-multiline-js */
 import React from 'react';
+import { observer } from 'mobx-react'
 import { ScrollView, Text,View } from 'react-native';
 import { Button, InputItem, List } from 'popui-rn';
 
 declare var jest: any;
 
+@observer
 export default class BasicInputItemExample extends React.Component<any, any> {
   inputRef: any;
 

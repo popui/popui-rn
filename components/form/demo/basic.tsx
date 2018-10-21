@@ -30,6 +30,7 @@ const options = [
   }
 ]
 
+@observer
 export default class FormInputSample extends React.Component<any, any> {
   render() {
     return (

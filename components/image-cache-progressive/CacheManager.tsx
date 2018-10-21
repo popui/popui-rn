@@ -10,6 +10,7 @@ export async function init() {
 
 // init()
 
+@observer
 export class CacheEntry {
   uri: string
   path: string = ''
@@ -29,6 +30,7 @@ export class CacheEntry {
   }
 }
 
+@observer
 export default class CacheManager {
   static entries: { [uri: string]: CacheEntry } = {}
 

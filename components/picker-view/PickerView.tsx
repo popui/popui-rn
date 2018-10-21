@@ -1,5 +1,6 @@
 /* tslint:disable:jsx-no-multiline-js */
 import React from 'react';
+import { observer } from 'mobx-react'
 import RMCCascader from 'rmc-cascader/lib/Cascader';
 import RMCMultiPicker from 'rmc-picker/lib/MultiPicker';
 import RMCPicker from 'rmc-picker/lib/Picker';
@@ -30,6 +31,7 @@ export interface IPickerView {
   itemStyle?: any;
 }
 
+@observer
 export default class PickerView extends React.Component<IPickerView, any> {
   static defaultProps = getDefaultProps();
 

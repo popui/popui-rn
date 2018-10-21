@@ -1,4 +1,5 @@
 import React from 'react';
+import { observer } from 'mobx-react'
 import { SegmentedControlIOS, StyleProp, ViewStyle } from 'react-native';
 import { SegmentedControlPropsType } from './PropsType';
 
@@ -7,6 +8,7 @@ export interface SegmentedControlProps extends SegmentedControlPropsType {
   style?: StyleProp<ViewStyle>;
 }
 
+@observer
 export default class SegmentedControl extends React.Component<
   SegmentedControlProps,
   any

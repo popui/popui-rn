@@ -22,6 +22,7 @@ import React from "react";
 
 export interface IProps {}
 
+@observer
 export default class PanelScreen extends React.Component<IProps, any> {
   static navigationOptions = {
     title: "Panel"

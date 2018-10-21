@@ -6,6 +6,7 @@ const defaultStyles = StyleSheet.create<any>(plainStyles)
 
 export interface ImagePickerHeaderState {}
 
+@observer
 export default class ImagePickerHeader extends React.Component<
   ImagePickerHeaderProps,
   ImagePickerHeaderState

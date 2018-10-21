@@ -11,6 +11,7 @@ export interface IProps  {
 
 
 
+@observer
 export default class BadgeScreen extends React.Component<IProps, any> {
     static navigationOptions = {
         title: 'Badge',

@@ -7,6 +7,7 @@ const data = Array.from(new Array(9)).map((_val, i) => ({
   text: `Item ${i}`
 }));
 
+@observer
 export default class BasicGridExample extends React.Component<any, any> {
   render() {
     return (

@@ -1,5 +1,6 @@
 // tslint:disable:jsx-no-multiline-js
 import React from 'react';
+import { observer } from 'mobx-react'
 import {
   Platform,
   StyleProp,
@@ -19,6 +20,7 @@ export interface TagNativeProps extends TagPropsType {
 
 const TagStyles = StyleSheet.create<any>(TagStyle);
 
+@observer
 export default class Tag extends React.Component<TagNativeProps, any> {
   static defaultProps = {
     disabled: false,

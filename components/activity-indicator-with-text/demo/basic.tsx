@@ -1,4 +1,5 @@
 import React from 'react';
+import { observer } from 'mobx-react'
 import { StyleSheet, Text, View } from 'react-native';
 import {
   ActivityIndicator,
@@ -8,6 +9,7 @@ import {
   GapV,
 } from 'popui-rn';
 
+@observer
 export default class ActivityIndicatorExample extends React.Component<any, any> {
   closeTimer: any;
   constructor(props: any) {

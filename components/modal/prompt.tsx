@@ -1,4 +1,5 @@
 import React from 'react';
+import { observer } from 'mobx-react'
 import topView from 'rn-topview';
 import PromptContainer from './PromptContainer';
 import { CallbackOrActions } from './PropsType';

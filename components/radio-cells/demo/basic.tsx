@@ -29,6 +29,7 @@ const options = [
     value: 5
   }
 ]
+@observer
 export default class InputScreen extends React.Component<any, any> {
   state = {
     radio: "",

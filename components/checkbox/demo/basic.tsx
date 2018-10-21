@@ -1,10 +1,12 @@
 // tslint:disable:jsx-no-multiline-js
 import React from 'react';
+import { observer } from 'mobx-react'
 import { Text, View } from 'react-native';
 import { Checkbox, List, GapH } from 'popui-rn';
 const AgreeItem = Checkbox.AgreeItem;
 const CheckboxItem = Checkbox.CheckboxItem;
 
+@observer
 export default class BasicCheckboxExample extends React.Component<any, any> {
   constructor(props: any, context: any) {
     super(props, context);

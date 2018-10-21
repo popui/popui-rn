@@ -6,6 +6,7 @@ const defaultStyles = StyleSheet.create<any>(plainStyles);
 import { noopFunc } from "../_util/noop";
 export interface ImagePickerAddButtonState {}
 
+@observer
 export default class ImagePickerAddButton extends React.Component<
   ImagePickerAddButtonProps,
   ImagePickerAddButtonState

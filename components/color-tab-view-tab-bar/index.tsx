@@ -9,6 +9,7 @@ import { Image, StyleSheet, Text } from 'react-native'
 /**
  * 每个 Tab 可以有不同的主题色, TabBar 会根据 Tab 的主题色调整颜色
  */
+@observer
 export default class TabViewColorTabBar extends PureComponent<
   {
     navigationState: any

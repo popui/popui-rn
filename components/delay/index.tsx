@@ -1,5 +1,6 @@
 import React from 'react'
 import {DelayPropsType  } from "./PropsType";
+@observer
 class Delay extends React.Component<DelayPropsType, any> {
   timer: any
 

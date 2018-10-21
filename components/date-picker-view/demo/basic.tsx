@@ -1,8 +1,10 @@
 /* tslint:disable:no-console */
 import React from 'react';
+import { observer } from 'mobx-react'
 import { Text, View } from 'react-native';
 import { DatePickerView } from 'popui-rn';
 
+@observer
 export default class DatePickerViewExample extends React.Component {
   state = {
     value: null,

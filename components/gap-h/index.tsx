@@ -1,10 +1,12 @@
 import React from 'react';
+import { observer } from 'mobx-react'
 import { StyleProp, View, ViewStyle } from 'react-native';
 import variables from '../style/themes/default';
 import { GapHPropsType } from './PropsType';
 export interface GapHProps extends GapHPropsType {
   style?: StyleProp<ViewStyle>;
 }
+@observer
 class GapH extends React.Component<GapHProps, any> {
   static defaultProps = {
     size: 'md',

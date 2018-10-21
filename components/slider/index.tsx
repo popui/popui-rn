@@ -1,4 +1,5 @@
 import React from 'react';
+import { observer } from 'mobx-react'
 import { Slider as RNSlider, View, Text } from 'react-native';
 import { SliderPropsType } from './PropsType';
 import SliderStyle from './style/index';
@@ -8,6 +9,7 @@ export interface SliderProps extends SliderPropsType {
   minimumTrackTintColor?: string;
 }
 
+@observer
 export default class SliderAntm extends React.Component<SliderProps, any> {
   static defaultProps = {
     onChange() { },
