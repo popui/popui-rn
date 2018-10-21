@@ -28,6 +28,12 @@ module.exports = {
       module: require('../components/accordion/demo/basic'),
     },
     {
+      title: 'toptips',
+      description: '提示',
+      icon: 'https://os.alipayobjects.com/rmsportal/gfWmRfZNzMyVUss.png',
+      module: require('../components/toptips/demo/basic'),
+    },
+    {
       title: 'ActionSheet',
       description: '动作面板',
       icon: 'https://zos.alipayobjects.com/rmsportal/cYmaBafYBnAxCqQ.png',
@@ -52,10 +58,10 @@ module.exports = {
       module: require('../components/icon/demo/basic'),
     },
     {
-      title: 'Icon Weui',
+      title: 'Weui Icon',
       description: '图标',
       icon: 'https://os.alipayobjects.com/rmsportal/yhnfleZZoezOjtU.png',
-      module: require('../components/icon-weui/demo/basic'),
+      module: require('../components/weui-icon/demo/basic'),
     },
     {
       title: 'List',
@@ -111,7 +117,19 @@ module.exports = {
       title: 'ActivityIndicator',
       description: '活动指示器',
       icon: 'https://zos.alipayobjects.com/rmsportal/yVtRfZGoDxXObTK.png',
-      module: require('../components/activity-indicator/demo/basic'),
+      module: require('../components/activity-indicator-with-text/demo/basic'),
+    },
+    {
+      title: 'agreement',
+      description: '同意',
+      icon: 'https://zos.alipayobjects.com/rmsportal/yVtRfZGoDxXObTK.png',
+      module: require('../components/agreement/demo/basic'),
+    },
+    {
+      title: 'article',
+      description: '文章排版',
+      icon: 'https://zos.alipayobjects.com/rmsportal/yVtRfZGoDxXObTK.png',
+      module: require('../components/article/demo/basic'),
     },
     {
       title: 'Badge',
@@ -299,13 +317,13 @@ module.exports = {
       title: 'GapH',
       description: '上下留白',
       icon: 'https://os.alipayobjects.com/rmsportal/NfomhEsOdhFxEws.png',
-      module: require('../components/white-space/demo/basic'),
+      module: require('../components/gap-h/demo/basic'),
     },
     {
       title: 'GapV',
       description: '两翼留白',
       icon: 'https://os.alipayobjects.com/rmsportal/DUkfOYZVcLctGot.png',
-      module: require('../components/wing-blank/demo/basic'),
+      module: require('../components/gap-v/demo/basic'),
     },
   ],
 };
