@@ -4,7 +4,7 @@ import defaultThemeVariables from "../style/themes/default";
 
 // debug
 import { createDebug } from "../_util/debug";
-const debug = createDebug("ig:store:IGUserStateStore");
+const debug = createDebug("popui:store:theme");
 
 class ThemeStore {
   @persist
