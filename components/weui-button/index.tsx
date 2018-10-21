@@ -1,6 +1,7 @@
 import React from 'react'
 import { StyleSheet, TouchableOpacity, View } from 'react-native'
-import variables from '../style/themes/default'
+import { themeStore } from '../theme-store';
+const { themeVars } = themeStore;
 import WeuiButtonText from '../weui-button-text'
 import TouchableWithFallback from '../touchable-with-fallback'
 import {ButtonPropsType} from './PropsType'

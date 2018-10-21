@@ -1,6 +1,7 @@
 import React from 'react'
 import { StyleSheet, Text as RNText } from 'react-native'
-import variables from '../style/themes/default'
+import { themeStore } from '../theme-store';
+const { themeVars } = themeStore;
 
 export interface ITextProps {
   style?: any

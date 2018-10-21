@@ -1,7 +1,8 @@
 import React from 'react'
 import { ActivityIndicator, Dimensions, StyleSheet, Text, View, ViewPropTypes } from 'react-native'
 import { create } from '../style/utils/StyleSheet'
-import variables from '../style/themes/default'
+import { themeStore } from '../theme-store';
+const { themeVars } = themeStore;
 
 const { width } = Dimensions.get('window')
 const styles = create({

@@ -3,7 +3,8 @@ import React from 'react'
 import { Dimensions, Modal, Platform, StyleSheet, Text, View, ViewPropTypes } from 'react-native'
 import  Mask from '../mask'
 import { create } from '../style/utils/StyleSheet'
-import variables from '../style/themes/default'
+import { themeStore } from '../theme-store';
+const { themeVars } = themeStore;
 import TouchableWithFallback from '../touchable-with-fallback'
 
 const { width } = Dimensions.get('window')
