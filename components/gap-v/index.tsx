@@ -1,7 +1,8 @@
 import React from 'react';
 import { observer } from 'mobx-react'
 import { StyleProp, View, ViewStyle } from 'react-native';
-import variables from '../style/themes/default';
+import {themeStore} from '../theme-store';
+const { variables } = themeStore;
 
 import { GapVPropsType } from './PropsType';
 export interface GapVProps extends GapVPropsType {

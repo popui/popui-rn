@@ -9,7 +9,8 @@ import {
   NativeSyntheticEvent,
   TextInputChangeEventData
 } from 'react-native';
-import variables from '../style/themes/default';
+import {themeStore} from '../theme-store';
+const { variables } = themeStore;
 import { TextAreaItemPropsType } from './PropsType';
 import TextAreaItemStyle, { ITextareaItemStyle } from './style/index';
 import TextInputControls from '../text-input-controls'

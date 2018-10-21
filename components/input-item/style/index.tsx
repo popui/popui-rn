@@ -1,5 +1,6 @@
 import { StyleSheet } from 'react-native';
-import variables from '../../style/themes/default';
+import {themeStore} from '../../theme-store';
+const { variables } = themeStore;
 
 export default {
   container: {
