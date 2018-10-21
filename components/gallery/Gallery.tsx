@@ -1,5 +1,6 @@
 import PropTypes from 'prop-types'
 import React, { PureComponent } from 'react'
+import { observer } from 'mobx-react';
 import { ActivityIndicator, Dimensions, Modal, StatusBar, StyleSheet, View, ViewPropTypes } from 'react-native'
 import PhotoView from 'react-native-photo-view'
 import { Mask } from 'popui-rn/components/Mask'

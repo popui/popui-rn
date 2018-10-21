@@ -1,4 +1,5 @@
 import React from "react";
+import { observer } from 'mobx-react';
 import { Text, View,StyleSheet,SafeAreaView } from "react-native";
 import {  WeuiButton as Button,WeuiButtonArea, Progress, GapH } from "popui-rn";
 

@@ -1,4 +1,5 @@
 import React, { PureComponent } from "react";
+import { observer } from 'mobx-react';
 import {
   Animated,
   Dimensions,

@@ -1,4 +1,5 @@
 import React from 'react';
+import { observer } from 'mobx-react';
 import { Text } from 'react-native';
 import { shallow } from 'enzyme';
 import Tag from '../index';

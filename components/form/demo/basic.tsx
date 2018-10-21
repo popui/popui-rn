@@ -1,4 +1,5 @@
 import React from "react";
+import { observer } from 'mobx-react';
 import { Text, View } from "react-native";
 // import Select from '../Select'
 import Uploader from '../Uploader'

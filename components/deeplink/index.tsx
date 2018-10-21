@@ -1,5 +1,6 @@
 import { Button, WeuiButtonArea, GapV } from 'popui-rn'
 import React from 'react'
+import { observer } from 'mobx-react';
 
 import { openUrl } from 'linkUtils'
 

@@ -1,6 +1,7 @@
 // tslint:disable:jsx-no-multiline-js
 
 import React from "react";
+import { observer } from 'mobx-react';
 import {
   ActivityIndicator,
   Animated,

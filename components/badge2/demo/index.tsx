@@ -1,4 +1,5 @@
 import React from 'react'
+import { observer } from 'mobx-react';
 
 import { Badge, Cell, CellBody, CellFooter, CellHeader, Cells, CellsTitle, CellText, GapV } from 'popui-rn'
 

@@ -1,6 +1,7 @@
 import { View,ScrollView,Text,StyleSheet } from 'react-native'
 import {  WeuiIcon } from 'popui-rn'
 import React from 'react'
+import { observer } from 'mobx-react';
 import stylekit from 'react-native-stylekit'
 
 const SK = stylekit({})

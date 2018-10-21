@@ -1,4 +1,5 @@
 import React, { PureComponent } from 'react'
+import { observer } from 'mobx-react';
 
 import { TabBar } from 'react-native-tab-view'
 import { Image, StyleSheet, Text } from 'react-native'

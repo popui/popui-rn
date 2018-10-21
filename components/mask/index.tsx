@@ -1,4 +1,5 @@
 import React from 'react'
+import { observer } from 'mobx-react';
 import { StyleSheet, TouchableWithoutFeedback, View, ViewPropTypes } from 'react-native'
 import { MaskPropsType } from "./PropsType";
 const styles = StyleSheet.create({

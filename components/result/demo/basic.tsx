@@ -1,5 +1,6 @@
 // tslint:disable:jsx-no-multiline-js
 import React from "react";
+import { observer } from 'mobx-react';
 import { Image, ScrollView, Text, Alert } from "react-native";
 import { Result,  WeuiButton as Button,WeuiButtonArea, Flex } from "popui-rn";
 

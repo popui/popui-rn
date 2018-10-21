@@ -1,4 +1,5 @@
 import React from 'react'
+import { observer } from 'mobx-react';
 import Toast from 'popui-rn/components/Toast/Toast'
 import RootModal from 'popui-rn/components/RootModalViews/RootModal'
 

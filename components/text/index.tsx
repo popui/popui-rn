@@ -1,4 +1,5 @@
 import React from 'react'
+import { observer } from 'mobx-react';
 import { StyleSheet, Text as RNText } from 'react-native'
 import { themeStore } from '../theme-store';
 const { themeVars } = themeStore;

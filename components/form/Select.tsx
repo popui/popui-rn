@@ -1,5 +1,6 @@
 // import PropTypes from 'prop-types'
 import React, { PureComponent } from 'react'
+import { observer } from 'mobx-react';
 import { StyleSheet, Text, View, ViewPropTypes } from 'react-native'
 import { Picker } from 'popui-rn/components/picker'
 import { themeStore } from '../theme-store';

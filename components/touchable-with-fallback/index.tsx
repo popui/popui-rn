@@ -5,6 +5,7 @@
  * 默认的 fallback 从 TouchableOpacity 改为 TouchableHighlight
  */
 import React from 'react'
+import { observer } from 'mobx-react';
 import {
   Platform,
   TouchableHighlight,

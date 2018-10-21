@@ -1,4 +1,5 @@
 import React from "react";
+import { observer } from 'mobx-react';
 import { ScrollView, Text, View } from "react-native";
 import { Grid, GapH } from "popui-rn";
 

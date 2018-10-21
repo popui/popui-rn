@@ -1,5 +1,6 @@
 import PropTypes from 'prop-types'
 import React from 'react'
+import { observer } from 'mobx-react';
 import { Dimensions, Modal, Platform, StyleSheet, Text, View, ViewPropTypes } from 'react-native'
 import  Mask from '../mask'
 import { create } from '../style/utils/StyleSheet'

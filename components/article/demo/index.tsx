@@ -1,6 +1,7 @@
 import { Article, H1, H2, H3, P, GapV, Section,ScrollView } from 'popui-rn'
 
 import React from 'react'
+import { observer } from 'mobx-react';
 
 
 export interface IProps  {

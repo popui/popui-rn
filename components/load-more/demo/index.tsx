@@ -1,4 +1,5 @@
 import React from 'react'
+import { observer } from 'mobx-react';
 import { LoadMore, ScrollView } from 'popui-rn'
 
 export interface IProps  {

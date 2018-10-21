@@ -2,6 +2,7 @@
 
 // import PropTypes from 'prop-types'
 import React from 'react'
+import { observer } from 'mobx-react';
 import { StyleSheet, Text } from 'react-native'
 import PureWeuiIcon from './PureWeuiIcon'
 

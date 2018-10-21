@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import { observer } from 'mobx-react';
 import { PanResponder, Text, View, Dimensions, Animated } from 'react-native'
 import PropTypes from 'prop-types'
 import isEqual from 'lodash/isEqual'

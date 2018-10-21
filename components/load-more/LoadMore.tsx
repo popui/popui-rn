@@ -1,4 +1,5 @@
 import React from 'react'
+import { observer } from 'mobx-react';
 import { ActivityIndicator, Dimensions, StyleSheet, Text, View, ViewPropTypes } from 'react-native'
 import { create } from '../style/utils/StyleSheet'
 import { themeStore } from '../theme-store';

@@ -1,6 +1,7 @@
 'use strict'
 
 import React from 'react'
+import { observer } from 'mobx-react';
 import PropTypes from 'prop-types'
 import cloneReferencedElement from 'react-clone-referenced-element'
 import { Image, PixelRatio } from 'react-native'

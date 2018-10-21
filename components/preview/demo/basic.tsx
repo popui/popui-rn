@@ -1,4 +1,5 @@
 import React from 'react'
+import { observer } from 'mobx-react';
 import {View} from 'react-native'
 import { WeuiButtonPreview,  Preview, PreviewBody, PreviewFooter, PreviewHeader,
   PreviewItem, PreviewLabel, PreviewValue } from 'popui-rn'

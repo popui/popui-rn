@@ -10,6 +10,7 @@
  */
 
 import React, { PureComponent } from 'react'
+import { observer } from 'mobx-react';
 import PropTypes from 'prop-types'
 
 import { Dimensions, WebView as RNWebView } from 'react-native'

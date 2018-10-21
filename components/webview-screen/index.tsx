@@ -1,4 +1,5 @@
 import React, { PureComponent } from 'react'
+import { observer } from 'mobx-react';
 import { Platform, View, WebView } from 'react-native'
 import AutoProgress from '../progress-auto'
 import Menu, {

@@ -1,4 +1,5 @@
 import React from "react";
+import { observer } from 'mobx-react';
 
 import {  WeuiButton as Button,WeuiButtonArea, View, Toptips } from "popui-rn";
 

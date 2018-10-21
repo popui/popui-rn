@@ -1,4 +1,5 @@
 import React from 'react'
+import { observer } from 'mobx-react';
 import { StyleSheet } from 'react-native'
 import { Cell, CellBody, Cells, CellText } from 'popui-rn'
 
