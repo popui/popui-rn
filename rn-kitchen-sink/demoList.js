@@ -79,7 +79,7 @@ module.exports = {
       title: 'Preview',
       description: '预览',
       icon: 'https://os.alipayobjects.com/rmsportal/tiapjpdKPQGHhnC.png',
-      module: require('../components/preview/demo/index'),
+      module: require('../components/preview/demo/basic'),
     },
     {
       title: 'Cell',
@@ -117,7 +117,7 @@ module.exports = {
       title: 'ActivityIndicator',
       description: '活动指示器',
       icon: 'https://zos.alipayobjects.com/rmsportal/yVtRfZGoDxXObTK.png',
-      module: require('../components/activity-indicator-with-text/demo/basic'),
+      module: require('../components/activity-indicator/demo/basic'),
     },
     {
       title: 'agreement',
@@ -125,12 +125,12 @@ module.exports = {
       icon: 'https://zos.alipayobjects.com/rmsportal/yVtRfZGoDxXObTK.png',
       module: require('../components/agreement/demo/basic'),
     },
-    {
-      title: 'article',
-      description: '文章排版',
-      icon: 'https://zos.alipayobjects.com/rmsportal/yVtRfZGoDxXObTK.png',
-      module: require('../components/article/demo/basic'),
-    },
+    // {
+    //   title: 'article',
+    //   description: '文章排版',
+    //   icon: 'https://zos.alipayobjects.com/rmsportal/yVtRfZGoDxXObTK.png',
+    //   module: require('../components/article/demo/basic'),
+    // },
     {
       title: 'Badge',
       description: '徽标数',
@@ -147,7 +147,7 @@ module.exports = {
       title: 'Button Weui',
       description: '按钮',
       icon: 'https://os.alipayobjects.com/rmsportal/ZRDUYEzfOzKWdzE.png',
-      module: require('../components/button-weui/demo/index'),
+      module: require('../components/weui-button/demo/index'),
     },
     {
       title: 'Carousel', // 必须
