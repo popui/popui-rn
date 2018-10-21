@@ -22,7 +22,7 @@ export interface MarqueeProps {
 }
 
 @observer
-class Marquee extends React.PureComponent<MarqueeProps, any> {
+class Marquee extends React.Component<MarqueeProps, any> {
   static defaultProps = {
     text: '',
     loop: false,

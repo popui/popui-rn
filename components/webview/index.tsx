@@ -9,7 +9,7 @@
  * @prop ...props
  */
 
-import React, { PureComponent } from 'react'
+import React, { Component } from 'react'
 import { observer } from 'mobx-react';
 import PropTypes from 'prop-types'
 
@@ -40,7 +40,7 @@ const injectedScript = function () {
 }
 
 @observer
-export default class WebView extends PureComponent {
+export default class WebView extends Component {
     static propTypes = {
         children: PropTypes.node,
         width: PropTypes.number,

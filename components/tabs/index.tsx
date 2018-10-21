@@ -8,7 +8,7 @@ import TabsProps from './PropsType';
 import Styles from './style/index';
 
 @observer
-export default class Tabs extends React.PureComponent<TabsProps, {}> {
+export default class Tabs extends React.Component<TabsProps, {}> {
   public static DefaultTabBar = RMCDefaultTabBar;
 
   static defaultProps = {};

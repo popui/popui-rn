@@ -1,4 +1,4 @@
-import React, { PureComponent } from 'react'
+import React, { Component } from 'react'
 import { observer } from 'mobx-react';
 import { Platform, View, WebView } from 'react-native'
 import AutoProgress from '../progress-auto'
@@ -13,7 +13,7 @@ import Toast from '../toast'
 import CONSTANTS from './constants'
 
 @observer
-class WebViewScreen extends PureComponent {
+class WebViewScreen extends Component {
   static navigatorButtons = {
     leftButtons: [
       {

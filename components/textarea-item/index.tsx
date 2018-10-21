@@ -13,7 +13,7 @@ import {themeStore} from '../theme-store';
 const { themeVars } = themeStore;
 import { TextAreaItemPropsType } from './PropsType';
 import TextAreaItemStyle, { ITextareaItemStyle } from './style/index';
-import TextInputControls from '../text-input-controls'
+// import TextInputControls from '../text-input-controls'
 import get from 'lodash/get'
 import TextInput from '../text-input';
 
@@ -131,7 +131,7 @@ export default class TextAreaItem extends React.Component<
     }
     return null
   }
-  
+
   renderInputView = () => {
     const {
       rows,
@@ -179,13 +179,13 @@ export default class TextAreaItem extends React.Component<
     } = this.props;
     return (
       <View style={styles!.rightBottom}>
-        <TextInputControls 
+        {/* <TextInputControls
           clear={clear}
           error={error}
           extra={this.renderCountView()}
           onErrorPress={onErrorPress}
           onClearPress={this.onClearPress}
-        />
+        /> */}
       </View>
     )
   }

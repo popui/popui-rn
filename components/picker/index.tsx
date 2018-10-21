@@ -1,3 +1,4 @@
+import { observer } from 'mobx-react';
 import PropTypes from 'prop-types';
 import { StyleSheet } from 'react-native';
 import AbstractPicker, { getDefaultProps } from './AbstractPicker';

@@ -1,8 +1,5 @@
 import {themeStore} from '../../theme-store';
 const { themeVars } = themeStore;
-import { themeStore } from '../../theme-store';
-const { themeVars } = themeStore;
-
 export interface IImagePickerItemStyle {
   [key:string]:any
 }

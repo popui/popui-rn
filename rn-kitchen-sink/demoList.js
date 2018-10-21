@@ -281,12 +281,12 @@ module.exports = {
       icon: 'https://os.alipayobjects.com/rmsportal/gfstSzAhvXqKyEg.png',
       module: require('../components/tag/demo/basic'),
     },
-    {
-      title: 'TextAreaItem',
-      description: '多行输入',
-      icon: 'https://os.alipayobjects.com/rmsportal/PfzuWlDVfndrQUK.png',
-      module: require('../components/textarea-item/demo/basic'),
-    },
+    // {
+    //   title: 'TextAreaItem',
+    //   description: '多行输入',
+    //   icon: 'https://os.alipayobjects.com/rmsportal/PfzuWlDVfndrQUK.png',
+    //   module: require('../components/textarea-item/demo/basic'),
+    // },
     {
       title: 'Footer',
       description: '版权信息',

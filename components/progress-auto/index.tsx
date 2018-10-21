@@ -1,4 +1,4 @@
-import React, { PureComponent } from 'react'
+import React, { Component } from 'react'
 import { observer } from 'mobx-react';
 import Progress from './Progress'
 
@@ -17,7 +17,7 @@ export interface IAutoProgressState {
 }
 
 @observer
-class AutoProgress extends PureComponent<
+class AutoProgress extends Component<
   IAutoProgressProps,
   IAutoProgressState
 > {

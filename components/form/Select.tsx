@@ -1,5 +1,5 @@
 // import PropTypes from 'prop-types'
-import React, { PureComponent } from 'react'
+import React, { Component } from 'react'
 import { observer } from 'mobx-react';
 import { StyleSheet, Text, View, ViewPropTypes } from 'react-native'
 import { Picker } from 'popui-rn/components/picker'
@@ -55,7 +55,7 @@ const initLabel = arg => {
 }
 
 @observer
-class Select extends PureComponent {
+class Select extends Component {
     constructor(props) {
         super(props)
         this.state = {

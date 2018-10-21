@@ -1,4 +1,4 @@
-import React, { PureComponent } from "react";
+import React, { Component } from "react";
 import { observer } from 'mobx-react';
 import {
   Animated,
@@ -41,7 +41,7 @@ const styles = StyleSheet.create({
 });
 
 @observer
-class Toptips extends PureComponent<ToptipsPropsType, any> {
+class Toptips extends Component<ToptipsPropsType, any> {
   state = { visible: false, translateY: new Animated.Value(-height) };
   height:number
   toptips:React.ReactNode

@@ -1,5 +1,5 @@
 import PropTypes from 'prop-types'
-import React, { PureComponent } from 'react'
+import React, { Component } from 'react'
 import { observer } from 'mobx-react';
 import { ActivityIndicator, Dimensions, Modal, StatusBar, StyleSheet, View, ViewPropTypes } from 'react-native'
 import PhotoView from 'react-native-photo-view'
@@ -32,7 +32,7 @@ const styles = StyleSheet.create({
 })
 
 @observer
-class Gallery extends PureComponent {
+class Gallery extends Component {
     constructor(props) {
         super(props)
         this.state = { laoding: false }
