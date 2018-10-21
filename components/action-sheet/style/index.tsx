@@ -2,7 +2,6 @@ import { StyleSheet, TextStyle, ViewStyle } from 'react-native';
 import {themeStore} from '../../theme-store';
 const { themeVars } = themeStore;
 
-export const vars = variables;
 
 export interface ActionSheetStyle {
   container: ViewStyle;
@@ -20,7 +19,7 @@ export interface ActionSheetStyle {
 
 export default StyleSheet.create<any>({
   container: {
-    zIndex: vars.action_sheet_zindex,
+    zIndex: themeVars.action_sheet_zindex,
   },
   wrap: {
     position: 'absolute',

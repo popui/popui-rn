@@ -10,8 +10,9 @@ import {
 import Modal from 'rmc-dialog/lib/Modal';
 import styles, {
   ActionSheetStyle,
-  vars as variables,
 } from './style/index';
+import {themeStore} from '../theme-store';
+const { themeVars } = themeStore;
 
 export interface ActionSheetNativeProps {
   onAnimationEnd?: (visible: boolean) => void;

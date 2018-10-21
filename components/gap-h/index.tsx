@@ -17,7 +17,7 @@ class GapH extends React.Component<GapHProps, any> {
     const { size, style } = this.props;
     return (
       <View
-        style={[{ height: (variables as any)[`v_spacing_${size}`] }, style]}
+        style={[{ height: themeVars[`v_spacing_${size}`] }, style]}
       />
     );
   }

@@ -13,14 +13,14 @@ class ThemeStore {
 
   @persist
   @observable
-  themeVars: Object;
+  themeVars= defaultThemeVariables;
 
   constructor({
     initialTheme,
     initialThemeVars
   }: {
     initialTheme: string;
-    initialThemeVars: Object;
+    initialThemeVars: any;
   }) {
     runInAction(()=>{
       this.theme = initialTheme;
@@ -33,7 +33,7 @@ class ThemeStore {
     this.theme = val;
   }
   @action.bound
-  setThemeVars(val: Object) {
+  setThemeVars(val: any) {
     this.themeVars = val;
   }
 }

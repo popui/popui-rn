@@ -16,7 +16,7 @@ class GapV extends React.Component<GapVProps, any> {
 
   render() {
     const { size, style, children } = this.props;
-    const margin = (variables as any)[`h_spacing_${size}`];
+    const margin = themeVars[`h_spacing_${size}`];
     return (
       <View style={[{ marginLeft: margin, marginRight: margin }, style]}>
         {children}
