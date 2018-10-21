@@ -8,19 +8,19 @@ const debug = createDebug('ig:store:IGUserStateStore')
 class ThemeStore {
   @persist
   @observable
-  locale = ''
+  theme = ''
 
   @persist
   @observable
-  localeVars = {}
+  themeVars = {}
 
   @action.bound
-  setLocale(val: string) {
-    this.locale = val
+  setTheme(val: string) {
+    this.theme = val
   }
   @action.bound
-  setLocaleVars(val: Object) {
-    this.localeVars = val
+  setThemeVars(val: Object) {
+    this.themeVars = val
   }
 }
 export const themeStore = new ThemeStore()
