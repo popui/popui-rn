@@ -5,7 +5,7 @@ import { persist } from 'mobx-persist'
 import { createDebug } from '../_util/debug'
 const debug = createDebug('ig:store:IGUserStateStore')
 
-class ThemeStore {
+class LocaleStore {
   @persist
   @observable
   theme = ''
@@ -23,6 +23,6 @@ class ThemeStore {
     this.themeVars = val
   }
 }
-export const themeStore = new ThemeStore()
+export const localeStore = new LocaleStore()
 
-export default ThemeStore
+export default LocaleStore
