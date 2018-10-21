@@ -20,4 +20,4 @@ const MediaBody = ({ style, children, ...others }:MediaBodyPropsType) =>
 //     children: PropTypes.node,
 // }
 
-export default MediaBody
+export default observer(MediaBody)

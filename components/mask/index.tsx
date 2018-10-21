@@ -18,4 +18,4 @@ const Mask = ({ transparent = false, style, onPress, children }:MaskPropsType) =
         </View>
     </TouchableWithoutFeedback>
 
-export default Mask
+export default observer(Mask)

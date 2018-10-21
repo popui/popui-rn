@@ -55,4 +55,4 @@ const PreviewItem = ({ style, children, preset = 'body', ...others }:PreviewItem
 //     preset: PropTypes.string,
 // }
 
-export default PreviewItem
+export default observer(PreviewItem)

@@ -21,4 +21,4 @@ const PreviewFooter = ({ style, children, ...other }:PreviewFooterPropsType) =>
 //     children: PropTypes.node,
 // }
 
-export default PreviewFooter
+export default observer(PreviewFooter)

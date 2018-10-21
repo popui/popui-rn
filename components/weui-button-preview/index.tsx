@@ -49,4 +49,4 @@ const WeuiButtonPreview = ({ primary, style, textStyle, children, ...others }:We
 //     children: PropTypes.node,
 // }
 
-export default WeuiButtonPreview
+export default observer(WeuiButtonPreview)

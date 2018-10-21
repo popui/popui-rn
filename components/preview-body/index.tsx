@@ -32,4 +32,4 @@ const PreviewBody = ({ style, children, ...other }:PreviewBodyPropsType) => {
 //     children: PropTypes.node,
 // }
 
-export default PreviewBody
+export default observer(PreviewBody)

@@ -28,4 +28,4 @@ const Panel = ({ children, style, ...others }:PanelPropsType) =>
 //     style: ViewPropTypes.style,
 // }
 
-export default Panel
+export default observer(Panel)

@@ -28,4 +28,4 @@ const MediaDescription = ({ style, children, ...others }:MediaDescriptionPropsTy
 //     children: PropTypes.node,
 // }
 
-export default MediaDescription
+export default observer(MediaDescription)

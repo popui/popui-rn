@@ -36,4 +36,4 @@ const MediaHeader = ({ style, children, ...others }:MediaHeaderPropsType) => {
 //     children: PropTypes.node,
 // }
 
-export default MediaHeader
+export default observer(MediaHeader)

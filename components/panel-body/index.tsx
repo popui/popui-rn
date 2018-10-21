@@ -24,4 +24,4 @@ const PanelBody = ({ children, style, ...others }:PanelBodyPropsType) => {
 //     style: ViewPropTypes.style,
 // }
 
-export default PanelBody
+export default observer(PanelBody)

@@ -27,4 +27,4 @@ const WeuiButtonArea = ({ direction = 'vertical', style, children }: WeuiButtonA
 }
 
 
-export default WeuiButtonArea
+export default observer(WeuiButtonArea)

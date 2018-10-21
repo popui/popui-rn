@@ -22,4 +22,4 @@ const MediaTitle = ({ style, children, ...others }:MediaHeaderPropsType) =>
 //     children: PropTypes.node,
 // }
 
-export default MediaTitle
+export default observer(MediaTitle)

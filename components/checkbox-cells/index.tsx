@@ -60,4 +60,4 @@ const CheckboxCells = ({
 //   children: PropTypes.node
 // }
 
-export default CheckboxCells
+export default observer(CheckboxCells)

@@ -31,4 +31,4 @@ CellsTips.propTypes = {
   style: Text.propTypes.style
 }
 
-export default CellsTips
+export default observer(CellsTips)

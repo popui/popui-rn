@@ -101,4 +101,4 @@ const WeuiButtonText = (props: WeuiButtonTextPropsType) => {
 //     children: PropTypes.node,
 // }
 
-export default WeuiButtonText
+export default observer(WeuiButtonText)

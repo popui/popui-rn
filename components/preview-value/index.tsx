@@ -20,4 +20,4 @@ const PreviewValue = ({ style, children, ...others }:PreviewValuePropsType) =>
 //     children: PropTypes.node,
 // }
 
-export default PreviewValue
+export default observer(PreviewValue)

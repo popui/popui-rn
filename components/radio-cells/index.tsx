@@ -41,4 +41,4 @@ const RadioCells = ({ value, options, onChange, disabled, style, children, ...ot
 //     children: PropTypes.node,
 // }
 
-export default RadioCells
+export default observer(RadioCells)

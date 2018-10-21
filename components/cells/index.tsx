@@ -36,4 +36,4 @@ Cells.propTypes = {
   style: ViewPropTypes.style
 }
 
-export default Cells
+export default observer(Cells)

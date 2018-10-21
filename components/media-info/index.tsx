@@ -24,4 +24,4 @@ const MediaInfo = ({ style, children, ...others }:MediaInfoPropsType) =>
 //     children: PropTypes.node,
 // }
 
-export default MediaInfo
+export default observer(MediaInfo)

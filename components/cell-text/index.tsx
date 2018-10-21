@@ -21,4 +21,4 @@ CellText.propTypes = {
     style: Text.propTypes.style,
 }
 
-export default CellText
+export default observer(CellText)

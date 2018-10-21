@@ -48,4 +48,4 @@ const PanelFooter = ({ children, style, textStyle, access, ...others }:PanelFoot
 //     textStyle: Text.propTypes.style,
 // }
 
-export default PanelFooter
+export default observer(PanelFooter)

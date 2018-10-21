@@ -14,4 +14,4 @@ const View = ({ style, children, ...others }:any) => {
 //     children: PropTypes.node,
 // }
 
-export default View
+export default observer(View)

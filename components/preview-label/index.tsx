@@ -21,4 +21,4 @@ const PreviewLabel = ({ style, children, ...others }:PreviewLabelPropsType) =>
 //     children: PropTypes.node,
 // }
 
-export default PreviewLabel
+export default observer(PreviewLabel)

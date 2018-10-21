@@ -131,7 +131,7 @@ const WeuiIcon = ({
 //     style: Text.propTypes.style,
 // }
 
-export default WeuiIcon
+export default observer(WeuiIcon)
 
 export {
   PureWeuiIcon

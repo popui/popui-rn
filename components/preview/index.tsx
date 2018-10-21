@@ -22,4 +22,4 @@ const Preview = ({ style, children, ...other }:PreviewPropsType) =>
 //     children: PropTypes.node,
 // }
 
-export default Preview
+export default observer(Preview)

@@ -38,4 +38,4 @@ CellHeader.propTypes = {
     style: ViewPropTypes.style,
 }
 
-export default CellHeader
+export default observer(CellHeader)

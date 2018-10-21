@@ -24,4 +24,4 @@ CellsTitle.propTypes = {
     style: Text.propTypes.style,
 }
 
-export default CellsTitle
+export default observer(CellsTitle)

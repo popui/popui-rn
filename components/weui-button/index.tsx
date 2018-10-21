@@ -153,4 +153,4 @@ const Button = (props: ButtonPropsType) => {
   )
 }
 
-export default Button
+export default observer(Button)

@@ -55,4 +55,4 @@ const Media = ({ type, style, children, first, ...others }:MediaPropsType) =>
 //     first: PropTypes.bool,
 // }
 
-export default Media
+export default observer(Media)

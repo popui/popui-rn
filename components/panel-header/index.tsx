@@ -33,4 +33,4 @@ const PanelHeader = ({ children, style, textStyle, ...others }:PanelHeaderPropsT
 //     textStyle: Text.propTypes.style,
 // }
 
-export default PanelHeader
+export default observer(PanelHeader)

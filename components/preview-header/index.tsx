@@ -35,4 +35,4 @@ const PreviewHeader = ({ style, children, ...other }:PreviewHeaderPropsType) => 
 //     children: PropTypes.node,
 // }
 
-export default PreviewHeader
+export default observer(PreviewHeader)
