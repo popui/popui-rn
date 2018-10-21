@@ -10,7 +10,7 @@ import {
   View
 } from "react-native";
 import ToastContainerStyle, { IToastStyle } from "./style/index";
-import PureWeuiIcon  from '../icon-weui/PureWeuiIcon'
+import PureWeuiIcon  from '../weui-icon/PureWeuiIcon'
 export interface ToastProps {
   content: string;
   textStyle?: any;

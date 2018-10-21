@@ -14,7 +14,7 @@ import {
 import { getComponentLocale } from '../_util/getLocale';
 import { defaultProps, SearchBarPropsType, SearchBarState } from './PropsType';
 import SearchBarStyle, { ISearchBarStyle } from './style/index';
-import WeuiIcon from '../icon-weui'
+import WeuiIcon from '../weui-icon'
 
 export interface SearchBarNativeProps extends SearchBarPropsType {
   styles: ISearchBarStyle;

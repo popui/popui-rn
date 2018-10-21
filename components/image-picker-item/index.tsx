@@ -1,6 +1,6 @@
 import * as React from "react";
 import { View, StyleSheet, Text, TouchableOpacity, Image, ActivityIndicator } from "react-native";
-import WeuiIcon from "../icon-weui";
+import WeuiIcon from "../weui-icon";
 import plainStyles from "./style";
 const defaultStyles = StyleSheet.create<any>(plainStyles);
 import { ImagePickerItemProps, ImagePickerItemState } from "./PropsType";

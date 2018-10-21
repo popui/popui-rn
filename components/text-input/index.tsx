@@ -8,7 +8,7 @@ import {
 } from "react-native";
 import { TextInputProps } from "./PropsType";
 import InputItemStyle from "./style/index";
-import WeuiIcon from "../icon-weui";
+import WeuiIcon from "../weui-icon";
 
 const InputItemStyles = StyleSheet.create<any>(InputItemStyle);
 import { noopFunc } from "../_util/noop";

@@ -5,7 +5,7 @@ title:
   en-US: Basic
 ---
 
-[Demo Source Code](https://github.com/ant-design/ant-design-mobile-rn/blob/master/components/icon-weui/demo/basic.tsx)
+[Demo Source Code](https://github.com/ant-design/ant-design-mobile-rn/blob/master/components/weui-icon/demo/basic.tsx)
 
 ````jsx
 // todos: include('./basic.tsx')

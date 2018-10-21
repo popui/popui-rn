@@ -10,7 +10,7 @@ import {
   View,
   ViewStyle,
 } from 'react-native';
-import WeuiIcon from '../icon-weui'
+import WeuiIcon from '../weui-icon'
 import { ResultPropsType } from './PropsType';
 import ResultStyle, { IResultStyle } from './style/index';
 

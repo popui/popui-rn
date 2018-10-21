@@ -2,7 +2,7 @@ import React from 'react'
 import { StyleSheet } from 'react-native'
 import { Cell, CellBody, Cells, CellText } from 'popui-rn'
 
-import WeuiIcon from '../icon-weui'
+import WeuiIcon from '../weui-icon'
 import { themeStore } from '../theme-store';
 const { themeVars } = themeStore;
 

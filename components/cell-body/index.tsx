@@ -1,6 +1,6 @@
 import  React from 'react'
 import { StyleSheet, View, ViewStyle } from 'react-native'
-import WeuiIcon from '../icon-weui'
+import WeuiIcon from '../weui-icon'
 import { themeStore } from '../theme-store';
 const { themeVars } = themeStore;
 import CellText from '../cell-text'

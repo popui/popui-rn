@@ -3,7 +3,7 @@ import { observer } from 'mobx-react';
 import { View, Text, Image, TouchableOpacity, StyleSheet  } from 'react-native';
 // import ImagePicker from 'react-native-image-picker'
 // import concat from 'lodash/concat'
-import WeuiIcon from '../icon-weui'
+import WeuiIcon from '../weui-icon'
 import { themeStore } from '../theme-store';
 const { themeVars } = themeStore;
 

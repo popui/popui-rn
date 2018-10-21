@@ -9,7 +9,7 @@ import {
 import { themeStore } from '../theme-store';
 const { themeVars } = themeStore;
 
-// import WeuiIcon from '../icon-weui'
+// import WeuiIcon from '../weui-icon'
 const styles = StyleSheet.create({
   cellFooter: {
     flexDirection: "row",
