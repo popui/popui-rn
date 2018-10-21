@@ -28,4 +28,4 @@ H1.propTypes = {
     children: PropTypes.node,
 }
 
-export default H1
+export default observer(H1)

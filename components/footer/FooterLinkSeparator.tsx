@@ -29,4 +29,4 @@ FooterLinkSeparator.propTypes = {
     others: PropTypes.object,
 }
 
-export default FooterLinkSeparator
+export default observer(FooterLinkSeparator)

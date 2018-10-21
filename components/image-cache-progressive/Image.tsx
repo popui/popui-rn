@@ -1,5 +1,6 @@
 import * as _ from 'lodash'
 import * as React from 'react'
+import { observer } from 'mobx-react';
 import {
   Image as RNImage,
   Animated,

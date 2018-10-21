@@ -34,4 +34,4 @@ FooterLink.propTypes = {
     others: PropTypes.object,
 }
 
-export default FooterLink
+export default observer(FooterLink)

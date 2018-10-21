@@ -1,4 +1,5 @@
 import * as React from 'react'
+import { observer } from 'mobx-react';
 import { View, StyleSheet, ensureComponentIsNative, Image } from 'react-native'
 // import Image from 'expo-image-cache/src/Image'
 

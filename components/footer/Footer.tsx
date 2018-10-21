@@ -28,4 +28,4 @@ const Footer = (props: IFooterProps) => {
 }
 
 
-export default Footer
+export default observer(Footer)

@@ -29,4 +29,4 @@ H3.propTypes = {
     children: PropTypes.node,
 }
 
-export default H3
+export default observer(H3)

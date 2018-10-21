@@ -1,4 +1,5 @@
 import * as React from "react";
+import { observer } from 'mobx-react';
 import { View, StyleSheet, Text, TouchableOpacity } from "react-native";
 import { ImagePickerAddButtonProps } from "./PropsType";
 import plainStyles from "./style";

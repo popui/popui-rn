@@ -1,4 +1,5 @@
 import * as React from 'react';
+import { observer } from 'mobx-react';
 import { View, StyleSheet, Text } from 'react-native';
 import {Agreement} from 'popui-rn';
 

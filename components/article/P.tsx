@@ -27,4 +27,4 @@ P.propTypes = {
     children: PropTypes.node,
 }
 
-export default P
+export default observer(P)

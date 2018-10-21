@@ -30,4 +30,4 @@ FooterText.propTypes = {
     others: PropTypes.object,
 }
 
-export default FooterText
+export default observer(FooterText)
