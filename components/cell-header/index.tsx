@@ -12,7 +12,7 @@ const styles = StyleSheet.create({
         height: 24,
     },
     error: {
-        color: variables.ColorWarn,
+        color: themeVars.ColorWarn,
     },
 })
 

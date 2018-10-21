@@ -1,5 +1,5 @@
 import {themeStore} from '../../theme-store';
-const { variables } = themeStore;
+const { themeVars } = themeStore;
 import { ViewStyle, TextStyle, StyleSheet } from 'react-native';
 
 export interface ISearchBarStyle {
@@ -11,13 +11,13 @@ export interface ISearchBarStyle {
   cancelTextBtn: ViewStyle;
   cancelText: TextStyle;
 }
-const wrapperPaddingLeft = variables.h_spacing_md
-const searchInnerPaddingLeft = 15 - variables.h_spacing_md
+const wrapperPaddingLeft = themeVars.h_spacing_md
+const searchInnerPaddingLeft = 15 - themeVars.h_spacing_md
 
 export default {
   wrapper: {
-    backgroundColor: variables.search_bar_fill,
-    height: variables.search_bar_height,
+    backgroundColor: themeVars.search_bar_fill,
+    height: themeVars.search_bar_height,
     paddingLeft: wrapperPaddingLeft,
     paddingRight: wrapperPaddingLeft,
     flexDirection: 'row',
@@ -50,13 +50,13 @@ export default {
 
   },
   cancelTextBtn: {
-    height: variables.search_bar_input_height,
+    height: themeVars.search_bar_input_height,
     justifyContent: 'center',
     alignItems: 'center',
   },
   cancelText: {
-    fontSize: variables.font_size_base,
-    color: variables.color_link,
+    fontSize: themeVars.font_size_base,
+    color: themeVars.color_link,
     paddingLeft: 10,
   }
 };

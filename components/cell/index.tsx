@@ -7,12 +7,12 @@ const styles = StyleSheet.create({
   cell: {
     flexDirection: 'row',
     alignItems: 'center',
-    marginLeft: variables.CellGapH,
-    paddingTop: variables.CellGapV,
-    paddingBottom: variables.CellGapV,
-    paddingRight: variables.CellGapH,
+    marginLeft: themeVars.CellGapH,
+    paddingTop: themeVars.CellGapV,
+    paddingBottom: themeVars.CellGapV,
+    paddingRight: themeVars.CellGapH,
     borderTopWidth: StyleSheet.hairlineWidth,
-    borderColor: variables.CellBorderColor,
+    borderColor: themeVars.CellBorderColor,
   },
   firstCell: {
     borderTopWidth: 0,
@@ -70,7 +70,7 @@ export default class Cell extends React.Component<CellProps, CellState> {
   public render() {
     const { access, vcode, error, first, disabled, children, style, ...others } = this.props
     return (
-      <TouchableWithFallback underlayColor={variables.BgColorActive} {...others} >
+      <TouchableWithFallback underlayColor={themeVars.BgColorActive} {...others} >
         <View
           style={[
             styles.cell,

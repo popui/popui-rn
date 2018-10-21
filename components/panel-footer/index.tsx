@@ -13,20 +13,20 @@ const styles = StyleSheet.create({
         marginLeft: 15,
         borderTopWidth: StyleSheet.hairlineWidth,
         borderStyle: 'solid',
-        borderColor: variables.LineColorLight,
+        borderColor: themeVars.LineColorLight,
         position: 'relative',
         flexDirection: 'row',
         alignItems: 'center',
     },
     PanelFooterText: {
         flex: 1,
-        color: variables.TextColorGray,
+        color: themeVars.TextColorGray,
         fontSize: 14,
     },
 })
 
 const PanelFooter = ({ children, style, textStyle, access, ...others }:PanelFooterPropsType) =>
-    <TouchableWithFallback style={style} underlayColor={variables.BgColorActive} {...others}>
+    <TouchableWithFallback style={style} underlayColor={themeVars.BgColorActive} {...others}>
         <View style={styles.PanelFooter}>
             <Text style={[styles.PanelFooterText, textStyle]}>
                 {children}

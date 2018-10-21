@@ -6,7 +6,7 @@ import {MediaHeaderPropsType} from './PropsType';
 
 const styles = StyleSheet.create({
     mediaHeader: {
-        marginRight: variables.baseFontSize * 0.8,
+        marginRight: themeVars.baseFontSize * 0.8,
         width: 60,
         height: 60,
     },

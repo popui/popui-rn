@@ -8,7 +8,7 @@ import variables from '../style/themes/default'
 const styles = StyleSheet.create({
     radio: {
         fontSize: 16,
-        paddingLeft: variables.CellInnerGapH,
+        paddingLeft: themeVars.CellInnerGapH,
     },
     disabled: {
         opacity: 0.5,

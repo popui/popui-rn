@@ -13,7 +13,7 @@ import {
   TouchableOpacity,
 } from 'react-native';
 import {themeStore} from '../theme-store';
-const { variables } = themeStore;
+const { themeVars } = themeStore;
 import Input from '../text-input';
 import { InputItemPropsType } from './PropsType';
 import InputItemStyle from './style/index';
@@ -155,13 +155,13 @@ export default class InputItem extends React.Component<InputItemProps, any> {
     };
 
     const textStyle = {
-      width: variables.font_size_heading * (labelNumber as number) * 1.05,
+      width: themeVars.font_size_heading * (labelNumber as number) * 1.05,
     };
 
     const extraStyle = {
       width:
         typeof extra === 'string' && (extra as string).length > 0
-          ? (extra as string).length * variables.font_size_heading
+          ? (extra as string).length * themeVars.font_size_heading
           : 0,
     };
 
@@ -244,8 +244,8 @@ export default class InputItem extends React.Component<InputItemProps, any> {
               <Image
                 source={require('../style/images/error.png')}
                 style={{
-                  width: variables.icon_size_xs,
-                  height: variables.icon_size_xs,
+                  width: themeVars.icon_size_xs,
+                  height: themeVars.icon_size_xs,
                 }}
               />
             </View>

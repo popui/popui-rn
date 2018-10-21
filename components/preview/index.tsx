@@ -8,7 +8,7 @@ const styles = StyleSheet.create({
         backgroundColor: '#FFFFFF',
         borderTopWidth: StyleSheet.hairlineWidth,
         borderBottomWidth: StyleSheet.hairlineWidth,
-        borderColor: variables.CellBorderColor,
+        borderColor: themeVars.CellBorderColor,
     },
 })
 

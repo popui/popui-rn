@@ -1,5 +1,5 @@
 import {themeStore} from '../../theme-store';
-const { variables } = themeStore;
+const { themeVars } = themeStore;
 import { ViewStyle, TextStyle } from 'react-native';
 
 export interface IRadioStyle {
@@ -17,22 +17,22 @@ export default {
     alignItems: 'center',
   },
   icon: {
-    width: variables.icon_size_xxs,
-    height: variables.icon_size_xxs * 0.8,
+    width: themeVars.icon_size_xxs,
+    height: themeVars.icon_size_xxs * 0.8,
   },
   radioItem: {
     flexDirection: 'row',
     alignItems: 'center',
   },
   radioItemRadio: {
-    marginLeft: variables.h_spacing_lg,
-    marginRight: variables.h_spacing_md,
+    marginLeft: themeVars.h_spacing_lg,
+    marginRight: themeVars.h_spacing_md,
   },
   radioItemContent: {
-    color: variables.color_text_base,
-    fontSize: variables.font_size_heading,
+    color: themeVars.color_text_base,
+    fontSize: themeVars.font_size_heading,
   },
   radioItemContentDisable: {
-    color: variables.color_text_disabled,
+    color: themeVars.color_text_disabled,
   },
 };

@@ -1,6 +1,6 @@
 import { ViewStyle, TextStyle } from 'react-native';
 import {themeStore} from '../../theme-store';
-const { variables } = themeStore;
+const { themeVars } = themeStore;
 
 export interface ITabBarStyle {
   tabbar: ViewStyle;
@@ -24,9 +24,9 @@ export default {
     flex: 1,
   },
   tabs: {
-    height: variables.tab_bar_height,
-    borderTopWidth: variables.border_width_md,
-    borderColor: variables.border_color_base,
+    height: themeVars.tab_bar_height,
+    borderTopWidth: themeVars.border_width_md,
+    borderColor: themeVars.border_color_base,
     borderStyle: 'solid',
     flexDirection: 'row',
   },
@@ -43,7 +43,7 @@ export default {
   barItemSelected: {
   },
   barItemTitle: {
-    fontSize: variables.font_size_icontext,
+    fontSize: themeVars.font_size_icontext,
     marginTop: 2,
   },
   contentItem: {
@@ -62,11 +62,11 @@ export default {
     minWidth: 20,
     height: 20,
     borderRadius: 10,
-    backgroundColor: variables.brand_important,
+    backgroundColor: themeVars.brand_important,
     position: 'absolute',
     top: 0,
     left: 20,
-    paddingHorizontal: variables.h_spacing_sm,
+    paddingHorizontal: themeVars.h_spacing_sm,
   },
   badgeText: {
     textAlign: 'center',

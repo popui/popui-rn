@@ -5,7 +5,7 @@ import { create } from '../style/utils/StyleSheet'
 import variables from '../style/themes/default'
 
 const baseFontSize = 14
-const lineHeight = baseFontSize * variables.baseLineHeight
+const lineHeight = baseFontSize * themeVars.baseLineHeight
 const styles = create({
     h3: {
         lineHeight,

@@ -1,6 +1,6 @@
 import { StyleSheet, TextStyle, ViewStyle } from 'react-native';
 import {themeStore} from '../../theme-store';
-const { variables } = themeStore;
+const { themeVars } = themeStore;
 
 export interface IModalStyle {
   container: ViewStyle;
@@ -25,7 +25,7 @@ export interface IModalStyle {
 
 export default {
   container: {
-    zIndex: variables.modal_zindex,
+    zIndex: themeVars.modal_zindex,
   },
   wrap: {
     justifyContent: 'center',
@@ -40,9 +40,9 @@ export default {
   },
   popupSlideDown: {},
   innerContainer: {
-    borderRadius: variables.radius_md,
+    borderRadius: themeVars.radius_md,
     width: 286,
-    paddingTop: variables.v_spacing_xl,
+    paddingTop: themeVars.v_spacing_xl,
     overflow: 'hidden',
   },
   // fix android borderRadius
@@ -51,19 +51,19 @@ export default {
     bottom: 0,
     left: 0,
     right: 0,
-    borderBottomLeftRadius: variables.radius_md,
-    borderBottomRightRadius: variables.radius_md,
+    borderBottomLeftRadius: themeVars.radius_md,
+    borderBottomRightRadius: themeVars.radius_md,
   },
   header: {
-    fontSize: variables.modal_font_size_heading,
-    color: variables.color_text_base,
+    fontSize: themeVars.modal_font_size_heading,
+    color: themeVars.color_text_base,
     textAlign: 'center',
-    paddingHorizontal: variables.h_spacing_lg,
+    paddingHorizontal: themeVars.h_spacing_lg,
   },
   body: {
     paddingTop: 0,
-    paddingBottom: variables.v_spacing_lg,
-    paddingHorizontal: variables.h_spacing_lg,
+    paddingBottom: themeVars.v_spacing_lg,
+    paddingHorizontal: themeVars.h_spacing_lg,
   },
   maskClosable: {
     position: 'absolute',
@@ -76,7 +76,7 @@ export default {
   closeWrap: {
     position: 'absolute',
     top: 0,
-    left: variables.h_spacing_lg,
+    left: themeVars.h_spacing_lg,
   },
   close: {
     fontSize: 40,
@@ -93,10 +93,10 @@ export default {
     flexDirection: 'column',
   },
   buttonWrapH: {
-    height: variables.modal_button_height,
+    height: themeVars.modal_button_height,
     flexGrow: 1,
     justifyContent: 'center',
-    borderColor: variables.border_color_base,
+    borderColor: themeVars.border_color_base,
     borderTopWidth: StyleSheet.hairlineWidth,
     borderRightWidth: StyleSheet.hairlineWidth,
     paddingVertical: 11,
@@ -104,13 +104,13 @@ export default {
   buttonWrapV: {
     flexGrow: 1,
     borderTopWidth: StyleSheet.hairlineWidth,
-    borderColor: variables.border_color_base,
+    borderColor: themeVars.border_color_base,
     paddingVertical: 11,
   },
   buttonText: {
     textAlign: 'center',
-    color: variables.color_link,
-    fontSize: variables.modal_button_font_size,
+    color: themeVars.color_link,
+    fontSize: themeVars.modal_button_font_size,
     backgroundColor: 'transparent',
   },
   operationContainer: {
@@ -121,7 +121,7 @@ export default {
     paddingHorizontal: 0,
   },
   buttonTextOperation: {
-    color: variables.color_text_base,
+    color: themeVars.color_text_base,
     textAlign: 'left',
     paddingHorizontal: 15,
   },

@@ -8,7 +8,7 @@ import {MediaDescriptionPropsType} from './PropsType';
 const styles = create({
     mediaDesc: {
         fontSize: 13,
-        color: variables.TextColorGray,
+        color: themeVars.TextColorGray,
         lineHeight: 13 * 1.2,
         android: {
             lineHeight: Math.round(13 * 1.2),

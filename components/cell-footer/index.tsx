@@ -16,8 +16,8 @@ const styles = StyleSheet.create({
   },
   cellFooterText: {
     textAlign: "center",
-    color: variables.TextColorGray,
-    fontSize: variables.CellFontSize
+    color: themeVars.TextColorGray,
+    fontSize: themeVars.CellFontSize
   },
   vcode: {
     width: 100,

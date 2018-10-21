@@ -1,6 +1,6 @@
 import { StyleSheet, TextStyle, ViewStyle } from 'react-native';
 import {themeStore} from '../../theme-store';
-const { variables } = themeStore;
+const { themeVars } = themeStore;
 
 export interface IPromptStyle {
   message: TextStyle;
@@ -13,33 +13,33 @@ export interface IPromptStyle {
 
 export default {
   message: {
-    marginTop: variables.v_spacing_lg,
-    color: variables.color_text_caption,
-    fontSize: variables.font_size_base,
+    marginTop: themeVars.v_spacing_lg,
+    color: themeVars.color_text_caption,
+    fontSize: themeVars.font_size_base,
     textAlign: 'center',
   },
   inputGroup: {
-    marginTop: variables.v_spacing_md,
+    marginTop: themeVars.v_spacing_md,
     flexDirection: 'column',
   },
   inputWrapper: {
     borderWidth: StyleSheet.hairlineWidth,
     borderTopWidth: 0,
-    borderColor: variables.border_color_base,
+    borderColor: themeVars.border_color_base,
   },
   input: {
     height: 36,
-    fontSize: variables.font_size_base,
-    paddingHorizontal: variables.h_spacing_sm,
+    fontSize: themeVars.font_size_base,
+    paddingHorizontal: themeVars.h_spacing_sm,
     paddingVertical: 0,
   },
   inputFirst: {
     borderTopWidth: StyleSheet.hairlineWidth,
-    borderTopLeftRadius: variables.radius_sm,
-    borderTopRightRadius: variables.radius_sm,
+    borderTopLeftRadius: themeVars.radius_sm,
+    borderTopRightRadius: themeVars.radius_sm,
   },
   inputLast: {
-    borderBottomLeftRadius: variables.radius_sm,
-    borderBottomRightRadius: variables.radius_sm,
+    borderBottomLeftRadius: themeVars.radius_sm,
+    borderBottomRightRadius: themeVars.radius_sm,
   },
 };

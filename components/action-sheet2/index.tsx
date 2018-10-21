@@ -8,7 +8,7 @@ import TouchableWithFallback from '../touchable-with-fallback'
 
 const styles = StyleSheet.create({
     iosActionsheet: {
-        backgroundColor: variables.BgColorDefault,
+        backgroundColor: themeVars.BgColorDefault,
     },
     androidActionsheetWrapper: {
         flexDirection: 'row',
@@ -17,8 +17,8 @@ const styles = StyleSheet.create({
     },
     androidActionsheet: {
         width: 274,
-        backgroundColor: variables.BgColorDefault,
-        borderRadius: variables.ActionSheetAndroidBorderRadius,
+        backgroundColor: themeVars.BgColorDefault,
+        borderRadius: themeVars.ActionSheetAndroidBorderRadius,
     },
     actionsheetMenu: {
         backgroundColor: '#fff',
@@ -29,7 +29,7 @@ const styles = StyleSheet.create({
     },
     actionsheetCell: {
         borderTopWidth: StyleSheet.hairlineWidth,
-        borderColor: variables.CellBorderColor,
+        borderColor: themeVars.CellBorderColor,
         borderStyle: 'solid',
     },
     iosActionsheetCell: {
@@ -48,8 +48,8 @@ const styles = StyleSheet.create({
     iosActionsheetCellText: {
         textAlign: 'center',
         fontSize: 18,
-        marginTop: ((18 * variables.baseLineHeight) - 18) / 2,
-        marginBottom: ((18 * variables.baseLineHeight) - 18) / 2,
+        marginTop: ((18 * themeVars.baseLineHeight) - 18) / 2,
+        marginBottom: ((18 * themeVars.baseLineHeight) - 18) / 2,
     },
     androidActionsheetCellText: {
         textAlign: 'left',
@@ -64,11 +64,11 @@ const styles = StyleSheet.create({
         color: '#0BB20C',
     },
     warnActionsheetCellText: {
-        color: variables.ColorWarn,
+        color: themeVars.ColorWarn,
     },
 })
 
-const underlayColor = variables.BgColorActive
+const underlayColor = themeVars.BgColorActive
 
 const ActionSheet = ({
                          visible,

@@ -18,8 +18,8 @@ export default {
    flexDirection: 'column',
   },
   uploaderBody: {
-    marginBottom: variables.CellGapH - (variables.CellGapV + variables.UploaderFileSpacing),
-    marginRight: 0 - variables.UploaderFileSpacing,
+    marginBottom: themeVars.CellGapH - (themeVars.CellGapV + themeVars.UploaderFileSpacing),
+    marginRight: 0 - themeVars.UploaderFileSpacing,
     flexDirection: 'row',
     flexWrap: 'wrap',
     overflow: 'hidden',

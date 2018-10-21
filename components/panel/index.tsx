@@ -12,7 +12,7 @@ const styles = StyleSheet.create({
         borderTopWidth: StyleSheet.hairlineWidth,
         borderBottomWidth: StyleSheet.hairlineWidth,
         borderStyle: 'solid',
-        borderColor: variables.LineColorLight,
+        borderColor: themeVars.LineColorLight,
     },
 })
 

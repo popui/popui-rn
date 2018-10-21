@@ -7,7 +7,7 @@ const styles = StyleSheet.create({
     previewFooter: {
         flexDirection: 'row',
         borderTopWidth: StyleSheet.hairlineWidth,
-        borderColor: variables.DialogLineColor,
+        borderColor: themeVars.DialogLineColor,
     },
 })
 

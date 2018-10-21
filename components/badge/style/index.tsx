@@ -1,6 +1,6 @@
 import { Platform, TextStyle, ViewStyle } from 'react-native';
 import {themeStore} from '../../theme-store';
-const { variables } = themeStore;
+const { themeVars } = themeStore;
 
 export interface IBadgeStyle {
   wrap: ViewStyle;
@@ -26,7 +26,7 @@ export default {
     width: 2 * grid,
     height: 2 * grid,
     borderRadius: grid,
-    backgroundColor: variables.brand_important,
+    backgroundColor: themeVars.brand_important,
     position: 'absolute',
     top: -1 * grid,
     right: -1 * grid,
@@ -39,8 +39,8 @@ export default {
   textDom: {
     paddingVertical: 0.5 * grid,
     paddingHorizontal: (Platform.OS === 'ios' ? 1.5 : 2) * grid,
-    backgroundColor: variables.brand_important,
-    borderRadius: 4 * variables.radius_sm,
+    backgroundColor: themeVars.brand_important,
+    borderRadius: 4 * themeVars.radius_sm,
     borderStyle: 'solid',
     position: 'absolute',
     top: -10,
@@ -48,7 +48,7 @@ export default {
   },
   textCorner: {
     width: 18 * grid,
-    backgroundColor: variables.brand_important,
+    backgroundColor: themeVars.brand_important,
     transform: [
       {
         rotate: '45deg',
@@ -62,7 +62,7 @@ export default {
     top: 3 * grid,
   },
   text: {
-    color: variables.color_text_base_inverse,
+    color: themeVars.color_text_base_inverse,
     textAlign: 'center',
   },
 };

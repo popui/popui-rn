@@ -1,5 +1,5 @@
 import {themeStore} from '../../theme-store';
-const { variables } = themeStore;
+const { themeVars } = themeStore;
 
 export default {
   pagination: {
@@ -20,13 +20,13 @@ export default {
     width: 8,
     height: 8,
     borderRadius: 8,
-    backgroundColor: variables.color_icon_base,
+    backgroundColor: themeVars.color_icon_base,
   },
   pointActiveStyle: {
     backgroundColor: '#888',
   },
   spaceStyle: {
-    marginHorizontal: variables.h_spacing_sm / 2,
-    marginVertical: variables.v_spacing_sm / 2,
+    marginHorizontal: themeVars.h_spacing_sm / 2,
+    marginVertical: themeVars.v_spacing_sm / 2,
   },
 };

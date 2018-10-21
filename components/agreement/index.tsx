@@ -22,7 +22,7 @@ const styles = StyleSheet.create({
   },
   agreementText: {
     fontSize: 13,
-    color: variables.TextColorGray,
+    color: themeVars.TextColorGray,
     marginLeft: 5
   },
   checkbox: {

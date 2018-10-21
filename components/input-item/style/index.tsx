@@ -1,48 +1,48 @@
 import { StyleSheet } from 'react-native';
 import {themeStore} from '../../theme-store';
-const { variables } = themeStore;
+const { themeVars } = themeStore;
 
 export default {
   container: {
-    height: variables.list_item_height + variables.border_width_sm,
+    height: themeVars.list_item_height + themeVars.border_width_sm,
     borderBottomWidth: StyleSheet.hairlineWidth,
-    borderBottomColor: variables.border_color_base,
-    marginLeft: variables.h_spacing_lg,
-    paddingRight: variables.h_spacing_lg,
+    borderBottomColor: themeVars.border_color_base,
+    marginLeft: themeVars.h_spacing_lg,
+    paddingRight: themeVars.h_spacing_lg,
     marginTop: 0,
     marginBottom: 0,
     flexDirection: 'row',
     alignItems: 'center',
   },
   text: {
-    marginRight: variables.h_spacing_sm,
+    marginRight: themeVars.h_spacing_sm,
     textAlignVertical: 'center',
-    fontSize: variables.font_size_heading,
-    color: variables.color_text_base,
+    fontSize: themeVars.font_size_heading,
+    color: themeVars.color_text_base,
   },
   input: {
     flex: 1,
-    height: variables.list_item_height,
+    height: themeVars.list_item_height,
     backgroundColor: 'transparent',
-    fontSize: variables.input_font_size,
-    color: variables.color_text_base,
+    fontSize: themeVars.input_font_size,
+    color: themeVars.color_text_base,
   },
   inputErrorColor: {
     color: '#f50',
   },
   clear: {
-    backgroundColor: variables.color_icon_base,
+    backgroundColor: themeVars.color_icon_base,
     borderRadius: 15,
     padding: 2,
   },
   extra: {
-    marginLeft: variables.h_spacing_sm,
-    fontSize: variables.font_size_subhead,
-    color: variables.color_text_caption,
+    marginLeft: themeVars.h_spacing_sm,
+    fontSize: themeVars.font_size_subhead,
+    color: themeVars.color_text_caption,
   },
   errorIcon: {
-    marginLeft: variables.h_spacing_sm,
-    width: variables.icon_size_sm,
-    height: variables.icon_size_sm,
+    marginLeft: themeVars.h_spacing_sm,
+    width: themeVars.icon_size_sm,
+    height: themeVars.icon_size_sm,
   },
 };

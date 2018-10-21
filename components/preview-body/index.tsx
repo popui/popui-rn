@@ -5,10 +5,10 @@ import variables from '../style/themes/default'
 import {PreviewBodyPropsType} from './PropsType';
 const styles = StyleSheet.create({
     previewBody: {
-        paddingTop: variables.CellGapV,
-        paddingBottom: variables.CellGapV,
-        paddingLeft: variables.CellGapH,
-        paddingRight: variables.CellGapH,
+        paddingTop: themeVars.CellGapV,
+        paddingBottom: themeVars.CellGapV,
+        paddingLeft: themeVars.CellGapH,
+        paddingRight: themeVars.CellGapH,
     },
 })
 

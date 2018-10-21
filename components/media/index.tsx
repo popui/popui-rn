@@ -15,7 +15,7 @@ const styles = StyleSheet.create({
         marginLeft: 15,
         borderTopWidth: StyleSheet.hairlineWidth,
         borderStyle: 'solid',
-        borderColor: variables.LineColorLight,
+        borderColor: themeVars.LineColorLight,
     },
 
     // appmsg

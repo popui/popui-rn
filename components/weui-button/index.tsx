@@ -10,7 +10,7 @@ import {ButtonPropsType} from './PropsType'
 const styles = StyleSheet.create({
   // global
   button: {
-    borderRadius: variables.BtnBorderRadius,
+    borderRadius: themeVars.BtnBorderRadius,
     borderWidth: StyleSheet.hairlineWidth,
     paddingLeft: 14,
     paddingRight: 14,
@@ -20,30 +20,30 @@ const styles = StyleSheet.create({
 
   // mini
   mini: {
-    paddingLeft: variables.BtnMiniFontSize * 0.75,
-    paddingRight: variables.BtnMiniFontSize * 0.75
+    paddingLeft: themeVars.BtnMiniFontSize * 0.75,
+    paddingRight: themeVars.BtnMiniFontSize * 0.75
   },
 
   // primary
   primary: {
-    backgroundColor: variables.BtnPrimaryBg
+    backgroundColor: themeVars.BtnPrimaryBg
   },
 
   // warn
   warn: {
-    backgroundColor: variables.BtnWarnBg
+    backgroundColor: themeVars.BtnWarnBg
   },
 
   // default
   default: {
-    backgroundColor: variables.BtnDefaultBg
+    backgroundColor: themeVars.BtnDefaultBg
   },
 
   // primaryPlain
   primaryPlain: {
     borderWidth: 1,
     borderStyle: 'solid',
-    borderColor: variables.BtnPlainPrimaryBorderColor,
+    borderColor: themeVars.BtnPlainPrimaryBorderColor,
     backgroundColor: 'transparent'
   },
 
@@ -51,19 +51,19 @@ const styles = StyleSheet.create({
   defaultPlain: {
     borderWidth: 1,
     borderStyle: 'solid',
-    borderColor: variables.BtnPlainDefaultBorderColor,
+    borderColor: themeVars.BtnPlainDefaultBorderColor,
     backgroundColor: 'transparent'
   },
 
   // disabled
   primaryDisabled: {
-    backgroundColor: variables.BtnPrimaryDisabledBg
+    backgroundColor: themeVars.BtnPrimaryDisabledBg
   },
   warnDisabled: {
-    backgroundColor: variables.BtnWarnDisabledBg
+    backgroundColor: themeVars.BtnWarnDisabledBg
   },
   defaultDisabled: {
-    backgroundColor: variables.BtnDefaultDisabledBg
+    backgroundColor: themeVars.BtnDefaultDisabledBg
   },
   plainDisabled: {
     borderColor: 'rgba(0,0,0,.2)',
@@ -72,9 +72,9 @@ const styles = StyleSheet.create({
 })
 
 const underlayColors = {
-  primaryActive: variables.BtnPrimaryActiveBg,
-  warnActive: variables.BtnWarnActiveBg,
-  defaultActive: variables.BtnDefaultActiveBg,
+  primaryActive: themeVars.BtnPrimaryActiveBg,
+  warnActive: themeVars.BtnWarnActiveBg,
+  defaultActive: themeVars.BtnDefaultActiveBg,
   primaryPlainActive: 'transparent',
   defaultPlainActive: 'transparent'
 }

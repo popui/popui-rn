@@ -11,7 +11,7 @@ import {
 } from 'react-native';
 import CameraRollPicker from 'react-native-camera-roll-picker';
 import {themeStore} from '../theme-store';
-const { variables } = themeStore;
+const { themeVars } = themeStore;
 
 export interface ImageRollProps {
   onCancel: () => void;
@@ -39,7 +39,7 @@ const styles = StyleSheet.create({
   },
   rightBtn: {
     width: 14 * 4,
-    color: variables.brand_primary,
+    color: themeVars.brand_primary,
     fontSize: 16,
   },
 });

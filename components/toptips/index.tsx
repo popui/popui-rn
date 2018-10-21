@@ -23,13 +23,13 @@ const styles = StyleSheet.create({
     zIndex: 5000
   },
   primaryToptips: {
-    backgroundColor: variables.ColorPrimary
+    backgroundColor: themeVars.ColorPrimary
   },
   warnToptips: {
-    backgroundColor: variables.ColorWarn
+    backgroundColor: themeVars.ColorWarn
   },
   infoToptips: {
-    backgroundColor: variables.LinkColorDefault
+    backgroundColor: themeVars.LinkColorDefault
   },
   toptipsText: {
     fontSize: 14,

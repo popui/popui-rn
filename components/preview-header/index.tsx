@@ -6,12 +6,12 @@ import {PreviewHeaderPropsType} from './PropsType';
 
 const styles = StyleSheet.create({
     previewHeader: {
-        paddingTop: variables.CellGapV,
-        paddingBottom: variables.CellGapV,
-        paddingRight: variables.CellGapH,
+        paddingTop: themeVars.CellGapV,
+        paddingBottom: themeVars.CellGapV,
+        paddingRight: themeVars.CellGapH,
         borderBottomWidth: StyleSheet.hairlineWidth,
-        borderColor: variables.CellBorderColor,
-        marginLeft: variables.CellGapH,
+        borderColor: themeVars.CellBorderColor,
+        marginLeft: themeVars.CellGapH,
     },
 })
 

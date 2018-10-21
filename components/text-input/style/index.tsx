@@ -1,5 +1,5 @@
 import {themeStore} from '../../theme-store';
-const { variables } = themeStore;
+const { themeVars } = themeStore;
 
 export default {
   container: {
@@ -11,10 +11,10 @@ export default {
   },
   input: {
     flex: 1,
-    height: variables.textinput_base_height,
+    height: themeVars.textinput_base_height,
     backgroundColor: 'transparent',
-    fontSize: variables.input_font_size,
-    color: variables.color_text_base,
+    fontSize: themeVars.input_font_size,
+    color: themeVars.color_text_base,
   },
   clear:{
 

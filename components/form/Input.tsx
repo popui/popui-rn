@@ -5,8 +5,8 @@ import variables from '../style/themes/default'
 
 const styles = StyleSheet.create({
     input: {
-        fontSize: variables.CellFontSize,
-        height: variables.CellLineHeight,
+        fontSize: themeVars.CellFontSize,
+        height: themeVars.CellLineHeight,
     },
 })
 

@@ -12,10 +12,10 @@ const styles = StyleSheet.create({
         marginLeft: 15,
         borderBottomWidth: StyleSheet.hairlineWidth,
         borderStyle: 'solid',
-        borderColor: variables.LineColorLight,
+        borderColor: themeVars.LineColorLight,
     },
     panelHeaderText: {
-        color: variables.TextColorGray,
+        color: themeVars.TextColorGray,
         fontSize: 13,
     },
 })

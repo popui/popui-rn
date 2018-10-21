@@ -8,8 +8,8 @@ export interface ITextProps {
 }
 const Text = ({ style, children, ...others }: ITextProps) => {
   const styleObj: any = StyleSheet.flatten(style)
-  const fontSize = styleObj.fontSize || variables.baseFontSize
-  const lineHeight = styleObj.lineHeight || fontSize * variables.baseLineHeight
+  const fontSize = styleObj.fontSize || themeVars.baseFontSize
+  const lineHeight = styleObj.lineHeight || fontSize * themeVars.baseLineHeight
 
   return (
     <RNText style={[style, { fontSize, lineHeight }]} {...others}>

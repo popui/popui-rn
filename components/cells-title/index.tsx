@@ -5,12 +5,12 @@ import variables from '../style/themes/default'
 
 const styles = StyleSheet.create({
     cellsTitle: {
-        marginTop: (variables.CellTipsFontSize * 0.77) + (((14 * variables.baseLineHeight) - 14) * 0.5),
-        marginBottom: (variables.CellTipsFontSize * 0.3) + (((14 * variables.baseLineHeight) - 14) * 0.5),
-        paddingLeft: variables.CellGapH,
-        paddingRight: variables.CellGapH,
-        fontSize: variables.CellTipsFontSize,
-        color: variables.TextColorGray,
+        marginTop: (themeVars.CellTipsFontSize * 0.77) + (((14 * themeVars.baseLineHeight) - 14) * 0.5),
+        marginBottom: (themeVars.CellTipsFontSize * 0.3) + (((14 * themeVars.baseLineHeight) - 14) * 0.5),
+        paddingLeft: themeVars.CellGapH,
+        paddingRight: themeVars.CellGapH,
+        fontSize: themeVars.CellTipsFontSize,
+        color: themeVars.TextColorGray,
     },
 })
 

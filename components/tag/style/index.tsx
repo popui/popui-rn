@@ -1,5 +1,5 @@
 import {themeStore} from '../../theme-store';
-const { variables } = themeStore;
+const { themeVars } = themeStore;
 import { TextStyle, ViewStyle } from 'react-native';
 
 export interface ITagStyle {
@@ -23,54 +23,54 @@ export interface ITagStyle {
 
 export default {
   tag: {
-    borderRadius: variables.radius_sm,
+    borderRadius: themeVars.radius_sm,
     backgroundColor: 'transparent',
     flexDirection: 'row',
     overflow: 'visible',
   },
   wrap: {
     overflow: 'hidden',
-    borderRadius: variables.radius_sm,
-    borderWidth: variables.border_width_sm,
+    borderRadius: themeVars.radius_sm,
+    borderWidth: themeVars.border_width_sm,
     borderStyle: 'solid',
-    paddingVertical: variables.v_spacing_sm,
-    paddingHorizontal: variables.h_spacing_lg,
+    paddingVertical: themeVars.v_spacing_sm,
+    paddingHorizontal: themeVars.h_spacing_lg,
   },
   wrapSmall: {
     paddingVertical: 1.5,
-    paddingHorizontal: variables.h_spacing_sm,
+    paddingHorizontal: themeVars.h_spacing_sm,
   },
   text: {
-    fontSize: variables.button_font_size_sm,
+    fontSize: themeVars.button_font_size_sm,
     textAlign: 'center',
   },
   textSmall: {
-    fontSize: variables.font_size_icontext,
+    fontSize: themeVars.font_size_icontext,
   },
   normalWrap: {
-    backgroundColor: variables.fill_base,
-    borderColor: variables.border_color_base,
+    backgroundColor: themeVars.fill_base,
+    borderColor: themeVars.border_color_base,
   },
   normalText: {
-    color: variables.color_text_caption,
+    color: themeVars.color_text_caption,
   },
   activeWrap: {
-    backgroundColor: variables.fill_base,
-    borderColor: variables.brand_primary,
+    backgroundColor: themeVars.fill_base,
+    borderColor: themeVars.brand_primary,
   },
   activeText: {
-    color: variables.color_link,
+    color: themeVars.color_link,
   },
   disabledWrap: {
-    backgroundColor: variables.fill_disabled,
+    backgroundColor: themeVars.fill_disabled,
     borderWidth: 0,
   },
   disabledText: {
-    color: variables.color_text_disabled,
+    color: themeVars.color_text_disabled,
   },
   close: {
     position: 'absolute',
-    backgroundColor: variables.color_text_placeholder,
+    backgroundColor: themeVars.color_text_placeholder,
   },
   closeIOS: {
     borderRadius: 8,
@@ -90,7 +90,7 @@ export default {
     }],
   },
   closeText: {
-    color: variables.color_text_base_inverse,
+    color: themeVars.color_text_base_inverse,
     textAlign: 'center',
     fontSize: 20,
     lineHeight: 18,

@@ -1,6 +1,6 @@
 import { TextStyle, ViewStyle } from 'react-native';
 import {themeStore} from '../../theme-store';
-const { variables } = themeStore;
+const { themeVars } = themeStore;
 
 export interface IPaginationStyle {
   container: ViewStyle;
@@ -24,11 +24,11 @@ export default {
   },
   totalStyle: {
     fontSize: 18,
-    color: variables.color_text_base,
+    color: themeVars.color_text_base,
   },
   activeTextStyle: {
     fontSize: 18,
-    color: variables.color_link,
+    color: themeVars.color_link,
   },
   indicatorStyle: {
     flexDirection: 'row',
@@ -37,13 +37,13 @@ export default {
     width: 8,
     height: 8,
     borderRadius: 8,
-    backgroundColor: variables.input_color_icon,
+    backgroundColor: themeVars.input_color_icon,
   },
   pointActiveStyle: {
     backgroundColor: '#888',
   },
   spaceStyle: {
-    marginHorizontal: variables.h_spacing_sm / 2,
-    marginVertical: variables.v_spacing_sm / 2,
+    marginHorizontal: themeVars.h_spacing_sm / 2,
+    marginVertical: themeVars.v_spacing_sm / 2,
   },
 };

@@ -10,17 +10,17 @@ const styles = StyleSheet.create({
         flex: 1,
         alignSelf: 'center',
         borderLeftWidth: StyleSheet.hairlineWidth,
-        borderColor: variables.DialogLineColor,
+        borderColor: themeVars.DialogLineColor,
     },
 
     previewBtnText: {
         textAlign: 'center',
-        color: variables.DialogLinkColor,
+        color: themeVars.DialogLinkColor,
         lineHeight: 50,
-        fontSize: variables.baseFontSize,
+        fontSize: themeVars.baseFontSize,
     },
     previewBtnDefaultText: {
-        color: variables.TextColorGray,
+        color: themeVars.TextColorGray,
     },
     previewBtnPrimaryText: {
         color: '#0BB20C',
@@ -28,7 +28,7 @@ const styles = StyleSheet.create({
 })
 
 const WeuiButtonPreview = ({ primary, style, textStyle, children, ...others }:WeuiButtonPreviewPropsType) =>
-    <TouchableWithFallback underlayColor={variables.DialogLinkActiveBc} style={[styles.previewBtn, style]}>
+    <TouchableWithFallback underlayColor={themeVars.DialogLinkActiveBc} style={[styles.previewBtn, style]}>
         <Text
             style={[
                 styles.previewBtnText,

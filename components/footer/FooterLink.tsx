@@ -10,7 +10,7 @@ const styles = StyleSheet.create({
         marginRight: 0.64 * TextFontSize,
     },
     footerLinkText: {
-        color: variables.LinkColorDefault,
+        color: themeVars.LinkColorDefault,
         fontSize: TextFontSize,
     },
 })

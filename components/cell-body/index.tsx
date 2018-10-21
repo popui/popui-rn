@@ -13,7 +13,7 @@ const styles = StyleSheet.create({
   },
   error: {
     flex: 1,
-    color: variables.ColorWarn,
+    color: themeVars.ColorWarn,
   },
   errorIcon:{
     marginLeft:5

@@ -8,7 +8,7 @@ import variables from '../style/themes/default'
 const styles = StyleSheet.create({
   checkbox: {
     fontSize: 23,
-    paddingRight: variables.CellInnerGapH
+    paddingRight: themeVars.CellInnerGapH
   },
   disabled: {
     opacity: 0.5

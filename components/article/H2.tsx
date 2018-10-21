@@ -9,9 +9,9 @@ const styles = create({
         fontSize: 16,
         fontWeight: '400',
         marginBottom: 16 * 0.34,
-        lineHeight: 16 * variables.baseLineHeight,
+        lineHeight: 16 * themeVars.baseLineHeight,
         android: {
-            lineHeight: Math.round(16 * variables.baseLineHeight),
+            lineHeight: Math.round(16 * themeVars.baseLineHeight),
         },
     },
 })

@@ -6,50 +6,50 @@ import {WeuiButtonTextPropsType} from './PropsType'
 
 const styles = StyleSheet.create({
     text: {
-        fontSize: variables.BtnFontSize,
+        fontSize: themeVars.BtnFontSize,
         textAlign: 'center',
-        marginTop: (variables.BtnHeight - variables.BtnFontSize) / 2,
-        marginBottom: (variables.BtnHeight - variables.BtnFontSize) / 2,
+        marginTop: (themeVars.BtnHeight - themeVars.BtnFontSize) / 2,
+        marginBottom: (themeVars.BtnHeight - themeVars.BtnFontSize) / 2,
     },
 
     miniText: {
-        fontSize: variables.BtnMiniFontSize,
-        marginTop: ((variables.BtnMiniHeight * variables.BtnMiniFontSize) - variables.BtnMiniFontSize) / 2,
-        marginBottom: ((variables.BtnMiniHeight * variables.BtnMiniFontSize) - variables.BtnMiniFontSize) / 2,
+        fontSize: themeVars.BtnMiniFontSize,
+        marginTop: ((themeVars.BtnMiniHeight * themeVars.BtnMiniFontSize) - themeVars.BtnMiniFontSize) / 2,
+        marginBottom: ((themeVars.BtnMiniHeight * themeVars.BtnMiniFontSize) - themeVars.BtnMiniFontSize) / 2,
     },
 
     // primary
     primaryText: {
-        color: variables.BtnFontColor,
+        color: themeVars.BtnFontColor,
     },
 
     // warn
     warnText: {
-        color: variables.BtnFontColor,
+        color: themeVars.BtnFontColor,
     },
 
     // default
     defaultText: {
-        color: variables.BtnDefaultFontColor,
+        color: themeVars.BtnDefaultFontColor,
     },
 
     // primaryPlain
     primaryPlainText: {
-        color: variables.BtnPlainPrimaryColor,
+        color: themeVars.BtnPlainPrimaryColor,
     },
 
     // defaultPlain
     defaultPlainText: {
-        color: variables.BtnPlainDefaultColor,
+        color: themeVars.BtnPlainDefaultColor,
     },
 
     // disabled
     disabledText: {
-        color: variables.BtnDisabledFontColor,
+        color: themeVars.BtnDisabledFontColor,
     },
 
     defaultDisabledText: {
-        color: variables.BtnDefaultDisabledFontColor,
+        color: themeVars.BtnDefaultDisabledFontColor,
     },
 
     plainDisabledText: {

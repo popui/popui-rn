@@ -8,9 +8,9 @@ const styles = create({
     h3: {
         fontSize: 15,
         fontWeight: '400',
-        lineHeight: 15 * variables.baseLineHeight,
+        lineHeight: 15 * themeVars.baseLineHeight,
         android: {
-            lineHeight: Math.round(15 * variables.baseLineHeight),
+            lineHeight: Math.round(15 * themeVars.baseLineHeight),
         },
     },
 })

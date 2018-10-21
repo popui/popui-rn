@@ -44,7 +44,7 @@ const styles= {
   },
   actionText: {
     color: '#586C94',
-    fontSize: variables.baseFontSize,
+    fontSize: themeVars.baseFontSize,
     textAlign: 'center',
   },
   okText: {},

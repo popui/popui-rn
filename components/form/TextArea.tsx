@@ -6,15 +6,15 @@ import variables from '../style/themes/default'
 
 const styles = create({
     textarea: {
-        fontSize: variables.CellFontSize,// 17
-        height: variables.CellFontSize * variables.baseLineHeight * 3, //81.6
-        lineHeight: variables.CellFontSize * variables.baseLineHeight, //27.2
+        fontSize: themeVars.CellFontSize,// 17
+        height: themeVars.CellFontSize * themeVars.baseLineHeight * 3, //81.6
+        lineHeight: themeVars.CellFontSize * themeVars.baseLineHeight, //27.2
         android: {
-            lineHeight: Math.round(variables.CellFontSize * variables.baseLineHeight),
+            lineHeight: Math.round(themeVars.CellFontSize * themeVars.baseLineHeight),
         },
     },
     textareaCounter: {
-        color: variables.TextColorTips, // B2B2B2
+        color: themeVars.TextColorTips, // B2B2B2
         textAlign: 'right',
     },
 })

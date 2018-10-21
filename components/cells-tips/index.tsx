@@ -6,14 +6,14 @@ import variables from '../style/themes/default'
 
 const styles = create({
   cellsTips: {
-    paddingLeft: variables.CellGapH,
-    paddingRight: variables.CellGapH,
-    fontSize: variables.CellTipsFontSize,
-    color: variables.TextColorGray,
-    marginTop: variables.CellTipsFontSize * 0.3,
-    lineHeight: variables.CellTipsFontSize * variables.baseLineHeight,
+    paddingLeft: themeVars.CellGapH,
+    paddingRight: themeVars.CellGapH,
+    fontSize: themeVars.CellTipsFontSize,
+    color: themeVars.TextColorGray,
+    marginTop: themeVars.CellTipsFontSize * 0.3,
+    lineHeight: themeVars.CellTipsFontSize * themeVars.baseLineHeight,
     android: {
-      lineHeight: Math.round(variables.CellTipsFontSize * variables.baseLineHeight)
+      lineHeight: Math.round(themeVars.CellTipsFontSize * themeVars.baseLineHeight)
     }
   }
 })

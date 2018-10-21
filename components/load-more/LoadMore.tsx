@@ -17,7 +17,7 @@ const styles = create({
     },
     loadMoreLine: {
         borderTopWidth: StyleSheet.hairlineWidth,
-        borderColor: variables.LineColorLight,
+        borderColor: themeVars.LineColorLight,
         marginTop: 14 * 2.4,
     },
     loadMoreTips: {
@@ -33,7 +33,7 @@ const styles = create({
         top: 0 - (14 * 0.9),
         paddingLeft: 14 * 0.55,
         paddingRight: 14 * 0.55,
-        color: variables.TextColorGray,
+        color: themeVars.TextColorGray,
     },
     loadMoreDotTips: {
         paddingLeft: 14 * 0.16,
@@ -43,7 +43,7 @@ const styles = create({
     dot: {
         width: 4,
         height: 4,
-        backgroundColor: variables.LineColorLight,
+        backgroundColor: themeVars.LineColorLight,
         borderRadius: 12,
     },
 })

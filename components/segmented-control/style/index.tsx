@@ -1,6 +1,6 @@
 import { ViewStyle, TextStyle, StyleSheet } from 'react-native';
 import {themeStore} from '../../theme-store';
-const { variables } = themeStore;
+const { themeVars } = themeStore;
 
 export interface ISegmentControlStyle {
   segment: ViewStyle;
@@ -14,12 +14,12 @@ export default {
     flexDirection: 'row',
     overflow: 'hidden',
     borderWidth: StyleSheet.hairlineWidth,
-    borderColor: variables.brand_primary,
-    borderRadius: variables.radius_md,
+    borderColor: themeVars.brand_primary,
+    borderRadius: themeVars.radius_md,
   },
   item: {
     flex: 1,
-    paddingVertical: variables.h_spacing_sm,
+    paddingVertical: themeVars.h_spacing_sm,
     borderLeftWidth: StyleSheet.hairlineWidth,
     borderRightWidth: StyleSheet.hairlineWidth,
     borderStyle: 'solid',
@@ -27,15 +27,15 @@ export default {
     justifyContent: 'center',
   },
   itemLeftRadius: {
-    borderTopLeftRadius: variables.radius_md,
-    borderBottomLeftRadius: variables.radius_md,
+    borderTopLeftRadius: themeVars.radius_md,
+    borderBottomLeftRadius: themeVars.radius_md,
   },
   itemRightRadius: {
-    borderTopRightRadius: variables.radius_md,
-    borderBottomRightRadius: variables.radius_md,
+    borderTopRightRadius: themeVars.radius_md,
+    borderBottomRightRadius: themeVars.radius_md,
   },
   itemText: {
     textAlign: 'center',
-    fontSize: variables.font_size_caption_sm,
+    fontSize: themeVars.font_size_caption_sm,
   },
 };

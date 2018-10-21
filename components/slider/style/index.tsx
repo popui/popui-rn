@@ -1,5 +1,5 @@
 import {themeStore} from '../../theme-store';
-const { variables } = themeStore;
+const { themeVars } = themeStore;
 
 export default {
   sliderWrapper: {
@@ -20,6 +20,6 @@ export default {
     color: '#E9E9E9',
   },
   minimum: {
-    color: variables.brand_primary,
+    color: themeVars.brand_primary,
   },
 };

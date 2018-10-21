@@ -2,7 +2,7 @@ import React from 'react';
 import { observer } from 'mobx-react'
 import { StyleProp, View, ViewStyle } from 'react-native';
 import {themeStore} from '../theme-store';
-const { variables } = themeStore;
+const { themeVars } = themeStore;
 import { GapHPropsType } from './PropsType';
 export interface GapHProps extends GapHPropsType {
   style?: StyleProp<ViewStyle>;

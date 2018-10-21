@@ -4,10 +4,10 @@ import variables from '../style/themes/default'
 import {WeuiButtonAreaPropsType} from './PropsType'
 const styles = StyleSheet.create({
     BtnArea: {
-        marginTop: variables.CellsMarginTop,
-        marginRight: variables.BtnDefaultGap,
+        marginTop: themeVars.CellsMarginTop,
+        marginRight: themeVars.BtnDefaultGap,
         marginBottom: 16 * 0.3,
-        marginLeft: variables.BtnDefaultGap,
+        marginLeft: themeVars.BtnDefaultGap,
     },
     BtnAreaInline: {
         flexDirection: 'row',

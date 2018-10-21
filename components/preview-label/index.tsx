@@ -7,7 +7,7 @@ import {PreviewLabelPropsType} from './PropsType';
 const styles = StyleSheet.create({
     formPreviewLabel: {
         textAlign: 'justify',
-        color: variables.TextColorGray,
+        color: themeVars.TextColorGray,
     },
 })
 

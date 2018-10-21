@@ -4,10 +4,10 @@ import variables from '../style/themes/default'
 
 const styles = StyleSheet.create({
     label: {
-        width: variables.CellLabelWidth,
-        fontSize: variables.CellFontSize,
-        marginTop: (variables.CellLineHeight - variables.CellFontSize) / 2,
-        marginBottom: (variables.CellLineHeight - variables.CellFontSize) / 2,
+        width: themeVars.CellLabelWidth,
+        fontSize: themeVars.CellFontSize,
+        marginTop: (themeVars.CellLineHeight - themeVars.CellFontSize) / 2,
+        marginBottom: (themeVars.CellLineHeight - themeVars.CellFontSize) / 2,
     },
 })
 

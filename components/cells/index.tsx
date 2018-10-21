@@ -5,12 +5,12 @@ import variables from '../style/themes/default'
 
 const styles = StyleSheet.create({
   cells: {
-    marginTop: variables.CellssMarginTop,
-    backgroundColor: variables.CellBg,
+    marginTop: themeVars.CellssMarginTop,
+    backgroundColor: themeVars.CellBg,
     overflow: 'hidden',
     borderTopWidth: StyleSheet.hairlineWidth,
     borderBottomWidth: StyleSheet.hairlineWidth,
-    borderColor: variables.CellBorderColor
+    borderColor: themeVars.CellBorderColor
   }
 })
 

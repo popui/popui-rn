@@ -1,9 +1,9 @@
 import {themeStore} from '../../theme-store';
-const { variables } = themeStore;
+const { themeVars } = themeStore;
 
 export default {
   grayBorderBox: {
-    borderColor: variables.border_color_base,
+    borderColor: themeVars.border_color_base,
   },
   icon: {
     width: 28,
@@ -12,8 +12,8 @@ export default {
   },
   text: {
     textAlign: 'center',
-    fontSize: variables.font_size_base,
-    color: variables.color_text_base,
+    fontSize: themeVars.font_size_base,
+    color: themeVars.color_text_base,
     marginTop: 5,
   },
 };

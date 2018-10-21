@@ -1,6 +1,6 @@
 import { StyleSheet, TextStyle, ViewStyle } from 'react-native';
 import {themeStore} from '../../theme-store';
-const { variables } = themeStore;
+const { themeVars } = themeStore;
 
 export const vars = variables;
 
@@ -33,7 +33,7 @@ export default StyleSheet.create<any>({
     left: 0,
     right: 0,
     bottom: 0,
-    backgroundColor: variables.fill_base,
+    backgroundColor: themeVars.fill_base,
   },
   mask: {
     position: 'absolute',
@@ -41,14 +41,14 @@ export default StyleSheet.create<any>({
     bottom: 0,
     left: 0,
     right: 0,
-    backgroundColor: variables.fill_mask,
+    backgroundColor: themeVars.fill_mask,
   },
   title: {
     flex: 1,
     alignItems: 'center',
     // justifyContent: 'center',
-    marginTop: variables.h_spacing_lg,
-    marginBottom: variables.h_spacing_lg,
+    marginTop: themeVars.h_spacing_lg,
+    marginBottom: themeVars.h_spacing_lg,
   },
   titleText: {
     fontWeight: '500',
@@ -57,35 +57,35 @@ export default StyleSheet.create<any>({
     flex: 1,
     alignItems: 'center',
     // justifyContent: 'center',
-    marginBottom: variables.h_spacing_lg,
+    marginBottom: themeVars.h_spacing_lg,
   },
   btn: {
     flex: 1,
     alignItems: 'center',
     justifyContent: 'center',
-    height: variables.actionsheet_item_height,
+    height: themeVars.actionsheet_item_height,
     borderStyle: 'solid',
     borderTopWidth: 1,
-    borderTopColor: variables.border_color_base,
+    borderTopColor: themeVars.border_color_base,
     backgroundColor: 'white',
   },
   cancelBtn: {
-    marginTop: variables.v_spacing_md,
+    marginTop: themeVars.v_spacing_md,
     position: 'relative',
   },
   cancelBtnMask: {
     position: 'absolute',
-    top: -variables.v_spacing_md,
+    top: -themeVars.v_spacing_md,
     left: 0,
     right: 0,
-    height: variables.v_spacing_md,
-    backgroundColor: variables.fill_grey,
+    height: themeVars.v_spacing_md,
+    backgroundColor: themeVars.fill_grey,
     borderStyle: 'solid',
     borderTopWidth: 1,
-    borderTopColor: variables.border_color_base,
+    borderTopColor: themeVars.border_color_base,
   },
   destructiveBtn: {
-    color: variables.brand_error,
-    fontSize: variables.actionsheet_item_font_size,
+    color: themeVars.brand_error,
+    fontSize: themeVars.actionsheet_item_font_size,
   },
 });

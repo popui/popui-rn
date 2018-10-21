@@ -67,7 +67,7 @@ class ActionSheetAndroid extends React.Component<ActionSheetNativeProps, any> {
       >
         <TouchableHighlight
           style={[styles.btn]}
-          underlayColor={variables.fill_tap}
+          underlayColor={themeVars.fill_tap}
           onPress={() => this.confirm(index)}
         >
           <Text

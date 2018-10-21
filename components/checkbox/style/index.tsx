@@ -1,6 +1,6 @@
 import { ViewStyle } from 'react-native';
 import {themeStore} from '../../theme-store';
-const { variables } = themeStore;
+const { themeVars } = themeStore;
 
 export interface ICheckboxStyle {
   wrapper: ViewStyle;
@@ -17,22 +17,22 @@ export default {
     alignItems: 'center',
   },
   icon: {
-    width: variables.icon_size_sm,
-    height: variables.icon_size_sm,
+    width: themeVars.icon_size_sm,
+    height: themeVars.icon_size_sm,
   },
   iconRight: {
-    marginLeft: variables.h_spacing_md,
+    marginLeft: themeVars.h_spacing_md,
   },
   agreeItem: {
     flexDirection: 'row',
     alignItems: 'center',
   },
   agreeItemCheckbox: {
-    marginLeft: variables.h_spacing_lg,
-    marginRight: variables.h_spacing_md,
+    marginLeft: themeVars.h_spacing_lg,
+    marginRight: themeVars.h_spacing_md,
   },
   checkboxItemCheckbox: {
-    marginRight: variables.h_spacing_md,
+    marginRight: themeVars.h_spacing_md,
     alignSelf: 'center',
   },
 };

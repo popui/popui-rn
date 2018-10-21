@@ -12,7 +12,7 @@ const styles = StyleSheet.create({
     lineHeight: 14,
     paddingTop: 1,
     textAlign: 'center',
-    backgroundColor: variables.ColorWarn,
+    backgroundColor: themeVars.ColorWarn,
     borderWidth: 1.5,
     borderColor: 'transparent',
     borderRadius: 8.5,

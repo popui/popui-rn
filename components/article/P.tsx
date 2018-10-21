@@ -8,9 +8,9 @@ const styles = create({
     p: {
         fontSize: 15,
         marginBottom: 15 * 0.8,
-        lineHeight: 15 * variables.baseLineHeight,
+        lineHeight: 15 * themeVars.baseLineHeight,
         android: {
-            lineHeight: Math.round(15 * variables.baseLineHeight),
+            lineHeight: Math.round(15 * themeVars.baseLineHeight),
         },
     },
 })
