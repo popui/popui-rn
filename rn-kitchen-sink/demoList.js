@@ -180,12 +180,6 @@ module.exports = {
       module: require('../components/input-item/demo/basic'),
     },
     {
-      title: 'Form Input',
-      description: '文本输入',
-      icon: 'https://os.alipayobjects.com/rmsportal/SdSqpihcSBoBrFO.png',
-      module: require('../components/form/demo/input'),
-    },
-    {
       title: 'Picker',
       description: '选择器',
       icon: 'https://os.alipayobjects.com/rmsportal/STBLvEutBwPySbL.png',
