@@ -37,7 +37,7 @@ class ThemeStore {
     this.themeVars = val;
   }
 }
-export const defaultThemeStore = new ThemeStore({
+export const themeStore = new ThemeStore({
   initialTheme: "default",
   initialThemeVars: defaultThemeVariables
 });
