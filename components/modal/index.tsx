@@ -23,8 +23,8 @@ import { noopFunc } from "../_util/noop";
 import TouchableWithFallback from "../touchable-with-fallback";
 
 // debug
-import { createDebug } from "../_util/debug";
-const debug = createDebug("popui:modal/Modal");
+// import { createDebug } from "../_util/debug";
+// const debug = createDebug("popui:modal/Modal");
 
 const maxHeight = StyleSheet.create({
   maxHeight: {
@@ -287,9 +287,9 @@ class AntmModal extends React.Component<IModalNativeProps, any> {
       visible,
       onClose
     } = this.props;
-    debug("render", {
-      props: this.props
-    });
+    // debug("render", {
+    //   props: this.props
+    // });
     const styles = this.props.styles!;
     let animType = this.props.animationType;
     if (popup) {
