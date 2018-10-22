@@ -44,11 +44,19 @@ export default class BasicModalExample extends React.Component<any, any> {
 
   onAlert = () => {
     ModalAlert.alert({
-      title: "标题一",
-      content: "警告内容",
+      content: "弹窗内容，告知当前状态、信息和解决方法，描述文字尽量控制在三行内",
       actions: [
-        { text: "Cancel", onPress: () => console.log("cancel"), type: "warn" },
-        { text: "OK", onPress: () => console.log("ok") }
+        { text: "知道了", onPress: () => console.log("ok") }
+      ]
+    });
+  };
+  onAlert1 = () => {
+    ModalAlert.alert({
+      title: "弹窗标题",
+      content: "弹窗内容，告知当前状态、信息和解决方法，描述文字尽量控制在三行内",
+      actions: [
+        { text: "辅助操作", onPress: () => console.log("cancel"), type: "warn" },
+        { text: "主操作", onPress: () => console.log("ok") }
       ]
     });
   };
@@ -57,7 +65,8 @@ export default class BasicModalExample extends React.Component<any, any> {
     ModalOperation.operation({
       actions: [
         { text: "标为未读", onPress: () => console.log("标为未读被点击了") },
-        { text: "置顶聊天", onPress: () => console.log("置顶聊天被点击了") }
+        { text: "置顶聊天", onPress: () => console.log("置顶聊天被点击了") },
+        { text: "取消", onPress: () => console.log("取消") }
       ]
     });
   };
@@ -132,7 +141,9 @@ export default class BasicModalExample extends React.Component<any, any> {
             popup
           </Button>
           <GapH />
-          <Button onClick={this.onAlert}>alert</Button>
+          <Button onClick={this.onAlert}>alert </Button>
+          <GapH />
+          <Button onClick={this.onAlert1}>alert 2个按钮 </Button>
           <GapH />
           <Button onClick={this.onOpertation}>opertation</Button>
           <GapH />
