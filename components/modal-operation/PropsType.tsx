@@ -5,3 +5,7 @@ export interface OperationContainerProps {
   actions: ActionPropsType<TextStyle>[];
   onAnimationEnd?: (visible: boolean) => void;
 }
+
+export interface OperationArgs {
+  actions?: any[]
+} 

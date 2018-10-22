@@ -2,9 +2,9 @@ import React from 'react';
 // import { observer } from 'mobx-react'
 import topView from 'rn-topview';
 import OperationContainer from './OperationContainer';
-
-export function operation(...args: any[]) {
-  const actions = args[0] || [{ text: '确定' }];
+import {OperationArgs} from './PropsType';
+export function operation({actions}:OperationArgs) {
+  const _actions = actions || [{ text: '确定' }];
 
   const onAnimationEnd = (visible: boolean) => {
     if (!visible) {
@@ -13,7 +13,7 @@ export function operation(...args: any[]) {
   };
 
   topView.set(
-    <OperationContainer actions={actions} onAnimationEnd={onAnimationEnd} />,
+    <OperationContainer actions={_actions} onAnimationEnd={onAnimationEnd} />,
   );
 }
 

@@ -39,6 +39,7 @@ export default class AlertContainer extends React.Component<
         title={title}
         visible={this.state.visible}
         actions={actions}
+        onClose={this.onClose}
         onAnimationEnd={onAnimationEnd}
         bodyStyle={{
           marginTop: 8,

@@ -149,6 +149,7 @@ export default class PropmptContainer extends React.Component<
         transparent
         title={title}
         visible={this.state.visible}
+        onClose={this.onClose}
         actions={this.getActions()}
         onAnimationEnd={onAnimationEnd}
       >

@@ -1,8 +1,17 @@
 /* tslint:disable:no-console */
-import React from 'react';
-import { observer } from 'mobx-react'
-import {  View, ScrollView } from 'react-native';
-import { Button, Modal, GapH, GapV,ModalBodyText,ModalAlert,ModalOperation,ModalPrompt } from 'popui-rn';
+import React from "react";
+import { observer } from "mobx-react";
+import { View, ScrollView } from "react-native";
+import {
+  Button,
+  Modal,
+  GapH,
+  GapV,
+  ModalBodyText,
+  ModalAlert,
+  ModalOperation,
+  ModalPrompt
+} from "popui-rn";
 
 @observer
 export default class BasicModalExample extends React.Component<any, any> {
@@ -11,97 +20,102 @@ export default class BasicModalExample extends React.Component<any, any> {
     this.state = {
       visible: false,
       visible1: false,
-      visible2: false,
+      visible2: false
     };
   }
 
   onClose = () => {
     this.setState({
-      visible: false,
+      visible: false
     });
-  }
+  };
 
   onClose1 = () => {
     this.setState({
-      visible1: false,
+      visible1: false
     });
-  }
+  };
 
   onClose2 = () => {
     this.setState({
-      visible2: false,
+      visible2: false
     });
-  }
+  };
 
   onAlert = () => {
     ModalAlert.alert({
-      title:'标题一',
-      content:'警告内容',
-      actions:[
-        { text: 'Cancel', onPress: () => console.log('cancel'),type:'warn' },
-        { text: 'OK', onPress: () => console.log('ok') },
+      title: "标题一",
+      content: "警告内容",
+      actions: [
+        { text: "Cancel", onPress: () => console.log("cancel"), type: "warn" },
+        { text: "OK", onPress: () => console.log("ok") }
       ]
     });
-  }
+  };
 
   onOpertation = () => {
-    ModalOperation.operation([
-      { text: '标为未读', onPress: () => console.log('标为未读被点击了') },
-      { text: '置顶聊天', onPress: () => console.log('置顶聊天被点击了') },
-    ]);
-  }
+    ModalOperation.operation({
+      actions: [
+        { text: "标为未读", onPress: () => console.log("标为未读被点击了") },
+        { text: "置顶聊天", onPress: () => console.log("置顶聊天被点击了") }
+      ]
+    });
+  };
 
   onPromptLogin = () => {
-    ModalPrompt.prompt(
-      'Login',
-      'Pleas input login information',
-      (login: any, password: any) =>
-        console.log(`login: ${login}, password: ${password}`),
-      'login-password',
-      null,
-      ['Please input name', 'Please input password'],
-    );
-  }
+    const callback = (login: any, password: any) =>
+      console.log(`login: ${login}, password: ${password}`);
+    ModalPrompt.prompt({
+      title: "Login",
+      content: "Pleas input login information",
+      type: "login-password",
+      placeholders: ["Please input name", "Please input password"],
+      callbackOrActions: callback
+    });
+  };
 
   onPromptSecureText = () => {
-    Modal.prompt(
-      'Input password',
-      'password message',
-      (password: any) => console.log(`password: ${password}`),
-      'secure-text',
-      'defaultValue',
-    );
-  }
+    const callback = (password: any) => console.log(`password: ${password}`)
+    ModalPrompt.prompt({
+      title:"Input password",
+      content: "password message",
+      type: "secure-text",
+      placeholders: "defaultValue",
+      callbackOrActions: callback
+    });
+  };
 
   onPrompt = () => {
-    Modal.prompt(
-      'Name',
-      'name message',
-      (password: any) => console.log(`password: ${password}`),
-      'default',
-      null,
-      ['please input name'],
-    );
-  }
-  renderContent =(props:{
-    onClose:Function,style?:any
-  }) =>{
+    const callback = (password: any) => console.log(`password: ${password}`);
+    ModalPrompt.prompt({
+      title:"default",
+      content: "name message",
+      type: "default",
+      placeholders: ["please input name"],
+      callbackOrActions: callback
+    });
+  };
+  renderContent = (props: { onClose: Function; style?: any }) => {
     return (
       <View style={props.style}>
         <View style={{ paddingVertical: 20 }}>
-            <ModalBodyText style={{ textAlign: 'center' }}>Content...</ModalBodyText>
-            <ModalBodyText style={{ textAlign: 'center' }}>Content...</ModalBodyText>
-          </View>
-          <Button type="primary" inline onClick={props.onClose}>
-            close modal
-          </Button>
+          <ModalBodyText style={{ textAlign: "center" }}>
+            Content...
+          </ModalBodyText>
+          <ModalBodyText style={{ textAlign: "center" }}>
+            Content...
+          </ModalBodyText>
+        </View>
+        <Button type="primary" inline onClick={props.onClose}>
+          close modal
+        </Button>
       </View>
-    )
-  }
+    );
+  };
   render() {
     const actionButtons = [
-      { text: 'Cancel', onPress: () => console.log('cancel') },
-      { text: 'Ok', onPress: () => console.log('ok') },
+      { text: "Cancel", onPress: () => console.log("cancel") },
+      { text: "Ok", onPress: () => console.log("ok") }
     ];
     return (
       <ScrollView style={{ marginTop: 20 }}>
@@ -142,7 +156,7 @@ export default class BasicModalExample extends React.Component<any, any> {
           actions={actionButtons}
         >
           {this.renderContent({
-            onClose:this.onClose
+            onClose: this.onClose
           })}
         </Modal>
 
@@ -153,15 +167,14 @@ export default class BasicModalExample extends React.Component<any, any> {
           onClose={this.onClose1}
         >
           {this.renderContent({
-            style:{
-              flexDirection: 'column',
-              justifyContent: 'space-between',
-              paddingTop:100,
+            style: {
+              flexDirection: "column",
+              justifyContent: "space-between",
+              paddingTop: 100
             },
-            onClose:this.onClose1
+            onClose: this.onClose1
           })}
         </Modal>
-
 
         <Modal
           popup
@@ -169,8 +182,8 @@ export default class BasicModalExample extends React.Component<any, any> {
           animationType="slide-up"
           onClose={this.onClose2}
         >
-         {this.renderContent({
-            onClose:this.onClose2
+          {this.renderContent({
+            onClose: this.onClose2
           })}
         </Modal>
       </ScrollView>
