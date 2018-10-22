@@ -5,7 +5,7 @@ import {
   StyleProp,
   StyleSheet,
   Text,
-  TouchableWithoutFeedback,
+  TouchableOpacity,
   View,
   ViewStyle,
 } from 'react-native';
@@ -65,11 +65,11 @@ export default class NoticeBar extends React.Component<NoticeNativeProps, any> {
     let operationDom: any = null;
     if (mode === 'closable') {
       operationDom = (
-        <TouchableWithoutFeedback onPress={this.onClick}>
+        <TouchableOpacity onPress={this.onClick}>
           <View style={styles.actionWrap}>
             {action ? action : <Text style={[styles.close]}>×</Text>}
           </View>
-        </TouchableWithoutFeedback>
+        </TouchableOpacity>
       );
     } else if (mode === 'link') {
       operationDom = (
@@ -92,9 +92,9 @@ export default class NoticeBar extends React.Component<NoticeNativeProps, any> {
       mode === 'closable' ? (
         main
       ) : (
-        <TouchableWithoutFeedback onPress={this.onClick}>
+        <TouchableOpacity onPress={this.onClick}>
           {main}
-        </TouchableWithoutFeedback>
+        </TouchableOpacity>
       )
     ) : null;
   }

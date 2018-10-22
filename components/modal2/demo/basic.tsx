@@ -1,7 +1,7 @@
 import React from 'react'
 import { observer } from 'mobx-react';
 import { Text,ScrollView } from 'react-native'
-import {  WeuiButton as Button,WeuiButtonArea,Dialog, GapV } from 'popui-rn'
+import {  WeuiButton as Button,WeuiButtonArea,Modal2 as Dialog } from 'popui-rn'
 
 
 export interface IProps  {
@@ -61,19 +61,23 @@ export default class DialogScreen extends React.Component<IProps, any> {
     render() {
         return (
             <ScrollView>
-                <WeuiButtonArea>
+                {/* <WeuiButtonArea>
                     <Button
                         type="primary"
                         onPress={this.showDialog1}
                     >点击弹出 Dialog 样式一</Button>
                     <Button type="primary" onPress={this.showDialog2}>点击弹出 Dialog 样式二</Button>
-                </WeuiButtonArea>
+                </WeuiButtonArea> */}
                 <Dialog
                     visible={this.state.visible1}
                     title="标题一"
                     onClose={this.hideDialog1}
                     buttons={[
                         {
+                            type: 'default',
+                            label: '取消',
+                            onPress: this.hideDialog1,
+                        },{
                             type: 'primary',
                             label: '确定',
                             onPress: this.hideDialog1,

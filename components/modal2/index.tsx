@@ -1,8 +1,7 @@
 import PropTypes from 'prop-types'
 import React from 'react'
-import { observer } from 'mobx-react';
 import { Dimensions, Modal, Platform, StyleSheet, Text, View, ViewPropTypes } from 'react-native'
-import  Mask from '../mask'
+// import  Mask from '../mask'
 import { create } from '../style/utils/StyleSheet'
 import { themeStore } from '../theme-store';
 const { themeVars } = themeStore;
@@ -174,13 +173,13 @@ const Dialog = ({
     })
 
     return (
-        <Modal
-            visible={visible}
-            transparent={!false}
-            onShow={onShow}
-            onRequestClose={onClose}
-        >
-            <Mask style={[styles.dialogWrapper, maskStyle]} onPress={onClose}>
+        // <Modal
+        //     visible={visible}
+        //     transparent={!false}
+        //     onShow={onShow}
+        //     onRequestClose={onClose}
+        // >
+        //     <Mask style={[styles.dialogWrapper, maskStyle]} onPress={onClose}>
                 <View style={[styles.dialog, style]}>
                     <View style={[styles.dialogHeader, headerStyle]}>
                         <Text style={[styles.dialogTitle, styles[`${type}DialogTitle`], titleStyle]}>{title}</Text>
@@ -192,8 +191,8 @@ const Dialog = ({
                         {_renderButtons()}
                     </View>
                 </View>
-            </Mask>
-        </Modal>
+        //     </Mask>
+        // </Modal>
     )
 }
 

@@ -5,7 +5,7 @@ import {
   StyleProp,
   StyleSheet,
   Text,
-  TouchableWithoutFeedback,
+  TouchableOpacity,
   View,
   ViewStyle,
 } from 'react-native';
@@ -58,7 +58,7 @@ export default class AgreeItem extends React.Component<
     );
 
     return (
-      <TouchableWithoutFeedback onPress={this.handleClick}>
+      <TouchableOpacity onPress={this.handleClick}>
         <View style={[styles.agreeItem, style]}>
           <Checkbox
             ref={refCheckbox}
@@ -70,7 +70,7 @@ export default class AgreeItem extends React.Component<
           />
           <View style={{ flex: 1 }}>{contentDom}</View>
         </View>
-      </TouchableWithoutFeedback>
+      </TouchableOpacity>
     );
   }
 }

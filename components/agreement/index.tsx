@@ -4,7 +4,7 @@ import { observer } from 'mobx-react';
 import {
   StyleSheet,
   Text,
-  TouchableWithoutFeedback,
+  TouchableOpacity,
   View,
   ViewStyle,
   TextStyle
@@ -93,12 +93,12 @@ export default class AgreementComponent extends React.Component<
       ...others
     } = this.props;
     return (
-      <TouchableWithoutFeedback onPress={this.onChange} {...others}>
+      <TouchableOpacity onPress={this.onChange} {...others}>
         <View style={[styles.agreement, style]}>
           {this.renderCheckBox()}
           <Text style={[styles.agreementText, textStyle]}>{children}</Text>
         </View>
-      </TouchableWithoutFeedback>
+      </TouchableOpacity>
     );
   }
 }

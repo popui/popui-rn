@@ -33,21 +33,25 @@ export default class BasicModalExample extends React.Component<any, any> {
     });
   }
 
-  onButtonClick = () => {
-    Modal.alert('Title', 'alert content', [
-      { text: 'Cancel', onPress: () => console.log('cancel'), style: 'cancel' },
-      { text: 'OK', onPress: () => console.log('ok') },
-    ]);
+  onAlert = () => {
+    Modal.alert({
+      title:'标题一',
+      content:'警告内容',
+      actions:[
+        { text: 'Cancel', onPress: () => console.log('cancel'), style: 'cancel' },
+        { text: 'OK', onPress: () => console.log('ok') },
+      ]
+    });
   }
 
-  onButtonClick2 = () => {
+  onOpertation = () => {
     Modal.operation([
       { text: '标为未读', onPress: () => console.log('标为未读被点击了') },
       { text: '置顶聊天', onPress: () => console.log('置顶聊天被点击了') },
     ]);
   }
 
-  onButtonClick3 = () => {
+  onPromptLogin = () => {
     Modal.prompt(
       'Login',
       'Pleas input login information',
@@ -59,7 +63,7 @@ export default class BasicModalExample extends React.Component<any, any> {
     );
   }
 
-  onButtonClick4 = () => {
+  onPromptSecureText = () => {
     Modal.prompt(
       'Input password',
       'password message',
@@ -69,7 +73,7 @@ export default class BasicModalExample extends React.Component<any, any> {
     );
   }
 
-  onButtonClick5 = () => {
+  onPrompt = () => {
     Modal.prompt(
       'Name',
       'name message',
@@ -78,6 +82,19 @@ export default class BasicModalExample extends React.Component<any, any> {
       null,
       ['please input name'],
     );
+  }
+  renderContent =(onClose:Function) =>{
+    return (
+      <View style={{flex:1,flexDirection:"column"}}>
+        <View style={{ paddingVertical: 20 }}>
+            <Text style={{ textAlign: 'center' }}>Content...</Text>
+            <Text style={{ textAlign: 'center' }}>Content...</Text>
+          </View>
+          <Button type="primary" inline onClick={onClose}>
+            close modal
+          </Button>
+      </View>
+    )
   }
   render() {
     const footerButtons = [
@@ -99,20 +116,21 @@ export default class BasicModalExample extends React.Component<any, any> {
             popup
           </Button>
           <GapH />
-          <Button onClick={this.onButtonClick}>Modal.alert</Button>
+          <Button onClick={this.onAlert}>Modal.alert</Button>
           <GapH />
-          <Button onClick={this.onButtonClick2}>Modal.opertation</Button>
+          <Button onClick={this.onOpertation}>Modal.opertation</Button>
           <GapH />
-          <Button onClick={this.onButtonClick5}>Modal.prompt (default)</Button>
+          <Button onClick={this.onPrompt}>Modal.prompt (default)</Button>
           <GapH />
-          <Button onClick={this.onButtonClick3}>
+          <Button onClick={this.onPromptLogin}>
             Modal.prompt (login-password)
           </Button>
           <GapH />
-          <Button onClick={this.onButtonClick4}>
+          <Button onClick={this.onPromptSecureText}>
             Modal.prompt (secure-text)
           </Button>
         </GapV>
+
         <Modal
           title="Title"
           transparent
@@ -122,41 +140,26 @@ export default class BasicModalExample extends React.Component<any, any> {
           closable
           footer={footerButtons}
         >
-          <View style={{ paddingVertical: 20 }}>
-            <Text style={{ textAlign: 'center' }}>Content...</Text>
-            <Text style={{ textAlign: 'center' }}>Content...</Text>
-          </View>
-          <Button type="primary" inline onClick={this.onClose}>
-            close modal
-          </Button>
+          {this.renderContent(this.onClose)}
         </Modal>
+
         <Modal
           transparent={false}
           visible={this.state.visible1}
           animationType="slide-up"
           onClose={this.onClose1}
         >
-          <View style={{ paddingVertical: 220 }}>
-            <Text style={{ textAlign: 'center' }}>Content...</Text>
-            <Text style={{ textAlign: 'center' }}>Content...</Text>
-          </View>
-          <Button type="primary" inline onClick={this.onClose1}>
-            close modal
-          </Button>
+          {this.renderContent(this.onClose1)}
         </Modal>
+
+
         <Modal
           popup
           visible={this.state.visible2}
           animationType="slide-up"
           onClose={this.onClose2}
         >
-          <View style={{ paddingVertical: 20, paddingHorizontal: 20 }}>
-            <Text style={{ textAlign: 'center' }}>Content...</Text>
-            <Text style={{ textAlign: 'center' }}>Content...</Text>
-          </View>
-          <Button type="primary" inline onClick={this.onClose2}>
-            close modal
-          </Button>
+         {this.renderContent(this.onClose2)}
         </Modal>
       </ScrollView>
     );

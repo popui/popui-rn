@@ -4,7 +4,7 @@ import { observer } from 'mobx-react'
 import { ScrollView, Text, TextStyle } from 'react-native';
 import Modal from './Modal';
 import { Action } from './PropsType';
-
+import {noopFunc} from '../_util/noop';
 export interface AlertContainerProps {
   title: React.ReactNode;
   content: React.ReactNode;
@@ -29,12 +29,11 @@ export default class AlertContainer extends React.Component<
       visible: false,
     });
   }
-
-  render() {
-    const { title, actions, content, onAnimationEnd } = this.props;
+  renderFooter = () =>{
+    const { actions} = this.props;
     const footer = actions.map(button => {
       // tslint:disable-next-line:only-arrow-functions
-      const orginPress = button.onPress || function() {};
+      const orginPress = button.onPress || noopFunc;
       button.onPress = () => {
         const res = orginPress();
         if (res && res.then) {
@@ -47,13 +46,16 @@ export default class AlertContainer extends React.Component<
       };
       return button;
     });
-
+    return footer
+  }
+  render() {
+    const { title, content, onAnimationEnd } = this.props;
     return (
       <Modal
         transparent
         title={title}
         visible={this.state.visible}
-        footer={footer}
+        footer={this.renderFooter()}
         onAnimationEnd={onAnimationEnd}
         bodyStyle={{
           marginTop: 8,
