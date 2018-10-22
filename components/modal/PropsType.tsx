@@ -25,3 +25,6 @@ export interface ActionPropsType<T> {
 
 export type Callback = (valueOrLogin: string, password?: string) => void;
 export type CallbackOrActions<T> = Callback | ActionPropsType<T>[];
+
+
+

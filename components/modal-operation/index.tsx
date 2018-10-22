@@ -3,7 +3,7 @@ import React from 'react';
 import topView from 'rn-topview';
 import OperationContainer from './OperationContainer';
 
-export default function a(...args: any[]) {
+export function operation(...args: any[]) {
   const actions = args[0] || [{ text: '确定' }];
 
   const onAnimationEnd = (visible: boolean) => {
@@ -15,4 +15,9 @@ export default function a(...args: any[]) {
   topView.set(
     <OperationContainer actions={actions} onAnimationEnd={onAnimationEnd} />,
   );
+}
+
+
+export default {
+  operation
 }

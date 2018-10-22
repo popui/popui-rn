@@ -1,18 +1,17 @@
 import React from 'react';
-import { observer } from 'mobx-react'
+// import { observer } from 'mobx-react'
 import topView from 'rn-topview';
 import PromptContainer from './PromptContainer';
-import { CallbackOrActions } from './PropsType';
-import { TextStyle } from 'react-native';
+import { PromotArgs } from './PropsType';
 
-export default function prompt(
-  title: React.ReactNode,
-  message: React.ReactNode,
-  callbackOrActions: CallbackOrActions<TextStyle>,
+export function prompt({
+  title,
+  message,
+  callbackOrActions,
   type = 'default',
   defaultValue = '',
   placeholders = ['', ''],
-) {
+}:PromotArgs) {
   if (!callbackOrActions) {
     // tslint:disable-next-line:no-console
     console.error('Must specify callbackOrActions');
@@ -36,4 +35,9 @@ export default function prompt(
       placeholders={placeholders}
     />,
   );
+}
+
+
+export default {
+  prompt
 }

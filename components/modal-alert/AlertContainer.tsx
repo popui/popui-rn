@@ -2,8 +2,10 @@
 import React from 'react';
 import { observer } from 'mobx-react'
 import { ScrollView, Text, TextStyle } from 'react-native';
-import Modal from './Modal';
-import { ActionPropsType } from './PropsType';
+import Modal from '../modal';
+import ModalBodyText from '../modal-body-text';
+
+import { ActionPropsType } from '../modal/PropsType';
 import {noopFunc} from '../_util/noop';
 export interface AlertContainerProps {
   title: React.ReactNode;
@@ -63,7 +65,7 @@ export default class AlertContainer extends React.Component<
         }}
       >
         <ScrollView>
-          <Text>{content}</Text>
+          <ModalBodyText>{content}</ModalBodyText>
         </ScrollView>
       </Modal>
     );

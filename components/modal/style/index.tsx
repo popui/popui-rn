@@ -157,13 +157,6 @@ export default {
   buttonText_warn: {
       color: themeVars.ColorWarn,
   },
-  operationContainer: {
-    paddingTop: 0
-  },
-  operationBody: {
-    paddingBottom: 0,
-    paddingHorizontal: 0
-  },
   buttonTextOperation: {
     color: themeVars.color_text_base,
     textAlign: "left",

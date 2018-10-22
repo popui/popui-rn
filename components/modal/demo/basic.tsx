@@ -2,7 +2,7 @@
 import React from 'react';
 import { observer } from 'mobx-react'
 import { Text, View, ScrollView } from 'react-native';
-import { Button, Modal, GapH, GapV } from 'popui-rn';
+import { Button, Modal, GapH, GapV,ModalBodyText } from 'popui-rn';
 
 @observer
 export default class BasicModalExample extends React.Component<any, any> {
@@ -89,8 +89,8 @@ export default class BasicModalExample extends React.Component<any, any> {
     return (
       <View style={props.style}>
         <View style={{ paddingVertical: 20 }}>
-            <Text style={{ textAlign: 'center' }}>Content...</Text>
-            <Text style={{ textAlign: 'center' }}>Content...</Text>
+            <ModalBodyText style={{ textAlign: 'center' }}>Content...</ModalBodyText>
+            <ModalBodyText style={{ textAlign: 'center' }}>Content...</ModalBodyText>
           </View>
           <Button type="primary" inline onClick={props.onClose}>
             close modal

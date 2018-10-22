@@ -7,22 +7,12 @@ import {
   Text,
   TextInput,
   View,
-  TextStyle,
+  // TextStyle,
 } from 'react-native';
-import Modal from './Modal';
-import { CallbackOrActions } from './PropsType';
-import promptStyle, { IPromptStyle } from './style/prompt';
+import Modal from '../modal';
+import promptStyle from './style';
+import {PropmptContainerProps} from './PropsType';
 
-export interface PropmptContainerProps {
-  title: React.ReactNode;
-  message?: React.ReactNode;
-  type?: 'default' | 'login-password' | 'secure-text';
-  defaultValue?: string;
-  actions: CallbackOrActions<TextStyle>;
-  onAnimationEnd?: (visible: boolean) => void;
-  styles?: IPromptStyle;
-  placeholders?: string[];
-}
 
 const promptStyles = StyleSheet.create<any>(promptStyle);
 

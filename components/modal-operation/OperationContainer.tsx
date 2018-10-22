@@ -1,14 +1,11 @@
 import React from 'react';
 import { observer } from 'mobx-react'
-import { TextStyle } from 'react-native';
-import Modal from './Modal';
-import modalStyle from './style/index';
-import { ActionPropsType } from './PropsType';
+import { StyleSheet} from 'react-native';
+import Modal from '../modal';
+import operationStyle from './style/index';
+import {OperationContainerProps} from './PropsType';
 
-export interface OperationContainerProps {
-  actions: ActionPropsType<TextStyle>[];
-  onAnimationEnd?: (visible: boolean) => void;
-}
+const operationStyles = StyleSheet.create<any>(operationStyle);
 
 @observer
 export default class OperationContainer extends React.Component<
@@ -53,8 +50,8 @@ export default class OperationContainer extends React.Component<
         visible={this.state.visible}
         onClose={this.onClose}
         onAnimationEnd={onAnimationEnd}
-        style={modalStyle.operationContainer}
-        bodyStyle={modalStyle.operationBody}
+        style={operationStyles.operationContainer}
+        bodyStyle={operationStyles.operationBody}
         footer={footer}
       />
     );
