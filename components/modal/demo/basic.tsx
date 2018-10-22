@@ -38,7 +38,7 @@ export default class BasicModalExample extends React.Component<any, any> {
       title:'标题一',
       content:'警告内容',
       actions:[
-        { text: 'Cancel', onPress: () => console.log('cancel'), style: 'cancel' },
+        { text: 'Cancel', onPress: () => console.log('cancel'),type:'warn' },
         { text: 'OK', onPress: () => console.log('ok') },
       ]
     });

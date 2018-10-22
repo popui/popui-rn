@@ -90,7 +90,7 @@ export default {
   },
   closeWrap: {
     position: "absolute",
-    top: 0,
+    top: themeVars.v_spacing_lg,
     left: themeVars.h_spacing_lg
   },
   close: {

@@ -7,7 +7,7 @@ import {
   StyleProp,
   StyleSheet,
   Text,
-  TouchableHighlight,
+  // TouchableHighlight,
   TouchableOpacity,
   View,
   ViewStyle,
@@ -96,7 +96,7 @@ class AntmModal extends React.Component<IModalNativeProps, any> {
     if (operation) {
       buttonStyle = styles.buttonTextOperation;
     }
-    if (style) {
+    if (style && typeof style !== "string") {
       buttonStyle = style;
       // 如果是字符串, 转换成对象
       // Todo: 去掉
