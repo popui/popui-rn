@@ -7,7 +7,7 @@ import isEqual from 'lodash/isEqual'
 
 import styles from './styles'
 // debug
-import { createDebug } from 'common/utils/debug'
+import { createDebug } from '../_util/debug'
 const debug = createDebug('popui:Swiper/CardSwiper')
 
 const { height, width } = Dimensions.get('window')

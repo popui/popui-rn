@@ -30,9 +30,9 @@
   "main": "node_modules/expo/AppEntry.js",
   "private": true,
   "dependencies": {
+    "@popapps/debug": "^4.1.0",
     "array-tree-filter": "~2.1.0",
     "babel-runtime": "6.x",
-    "debug": "^4.1.0",
     "expo": "^30.0.1",
     "mobx": "^4.5.1",
     "mobx-persist": "^0.4.1",
@@ -114,7 +114,7 @@
   },
   "scripts": {
     "expo-ios": "xcrun simctl openurl booted exp://127.0.0.1:19000",
-    "expo": "DEBUG=metro* EXPO_DEBUG=true REACT_DEBUGGER=\"unset ELECTRON_RUN_AS_NODE && open -g 'rndebugger://set-debugger-loc?host=127.0.0.1&port=19001'\" expo start --max-workers 8 --lan --dev --no-minify",
+    "expo": "DEBUG='metro*,popui*' EXPO_DEBUG=true REACT_DEBUGGER=\"unset ELECTRON_RUN_AS_NODE && open -g 'rndebugger://set-debugger-loc?host=127.0.0.1&port=19001'\" expo start --max-workers 8 --lan --dev --no-minify",
     "expo-clean": "DEBUG='Metro:*' EXPO_DEBUG=true REACT_DEBUGGER=\"unset ELECTRON_RUN_AS_NODE && open -g 'rndebugger://set-debugger-loc?host=127.0.0.1&port=19001'\" expo start --max-workers 8 --lan --dev --no-minify -c",
     "lint": "npm run tslint && npm run srclint && npm run applint",
     "srclint": "eslint site scripts --ext '.js,.jsx'",

@@ -4,7 +4,7 @@ import { observer } from 'mobx-react';
 import { TabBar } from 'react-native-tab-view'
 import { Image, StyleSheet, Text } from 'react-native'
 // debug
-// import { createDebug } from 'common/utils/debug'
+// import { createDebug } from '../_util/debug'
 // const debug = createDebug('popui:TabView:ColorTabBar')
 
 /**

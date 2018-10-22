@@ -4,7 +4,7 @@ import { View, StyleSheet, ensureComponentIsNative, Image } from 'react-native'
 // import Image from 'expo-image-cache/src/Image'
 
 // debug
-import { createDebug } from 'common/utils/debug'
+import { createDebug } from '../_util/debug'
 const debug = createDebug('popui:Image/CacheProgressiveImage/ImageBackground')
 
 @observer

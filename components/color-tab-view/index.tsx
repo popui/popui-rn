@@ -5,7 +5,7 @@ import { Platform, StyleSheet } from 'react-native'
 import ColorTabBar from '../color-tab-view-tab-bar'
 import { TabView } from 'react-native-tab-view'
 // debug
-// import { createDebug } from 'common/utils/debug'
+// import { createDebug } from '../_util/debug'
 // const debug = createDebug('popui:TabView/ColorTabView')
 
 export interface IProps {

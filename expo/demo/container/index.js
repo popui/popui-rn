@@ -8,24 +8,23 @@ import CellBadgeExample from "popui-rn/components/cell-badge/demo/basic";
 // import { ActionSheet2 } from 'popui-rn'
 // import AllComp from 'popui-rn/rn-kitchen-sink/allComponents';
 import ResourceLoader from "../common/ResourceLoader";
-
 export default class App extends React.Component {
-  render() {
-    return (
-      <ResourceLoader>
+    render() {
+        return (<ResourceLoader>
         <SafeAreaView style={styles.container}>
           <ScrollView>
+            
+            
             <BadgeExample />
             <CellBadgeExample />
+            
           </ScrollView>
         </SafeAreaView>
-      </ResourceLoader>
-    );
-  }
+      </ResourceLoader>);
+    }
 }
 const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    // backgroundColor: '#000',
-  },
+    container: {
+        flex: 1,
+    },
 });

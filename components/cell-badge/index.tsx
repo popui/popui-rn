@@ -4,14 +4,19 @@ import { observer } from 'mobx-react';
 import { StyleSheet, Text } from 'react-native'
 import plainStyles from './style'
 const styles = StyleSheet.create((plainStyles as any))
+// debug
+import { createDebug } from '../_util/debug'
+const debug = createDebug('popui:CellBadge')
 
-function CellBadge({
-  dot = false,
-  preset = 'default',
-  style,
-  children,
-  ...others
-}:CellBadgePropsTypes) {
+function CellBadge(props:CellBadgePropsTypes) {
+  debug("render",{props})
+  const {
+    dot = false,
+    preset = 'default',
+    style,
+    children,
+    ...others
+  } = props
   const textStyle = [
     styles.badge,
     styles[preset],
