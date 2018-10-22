@@ -76,8 +76,11 @@ class AntmModal extends React.Component<IModalNativeProps, any> {
     this.root = root;
   };
   renderFooterButton = (action: ActionPropsType<any>, index: number) => {
+    const { onClose, operation,renderFooterButton } = this.props;
+    if(renderFooterButton){
+      return renderFooterButton(action,index)
+    }
     const { text=`按钮${index}`, type, onPress, style } = action;
-    const { onClose, operation } = this.props;
     const footer = this.props.footer!;
     const styles = this.props.styles!;
     // 按钮数量多余1个
@@ -147,7 +150,10 @@ class AntmModal extends React.Component<IModalNativeProps, any> {
     );
   };
   renderFooter = () => {
-    const { footer, operation } = this.props;
+    const { footer, operation,renderFooter } = this.props;
+    if(renderFooter){
+      return renderFooter()
+    }
     const styles = this.props.styles!;
     let btnGroupStyle = styles.buttonGroupV;
     if (footer && footer.length > 1 && !operation) {
@@ -216,7 +222,10 @@ class AntmModal extends React.Component<IModalNativeProps, any> {
     );
   };
   renderCloseButton = () => {
-    const { onClose } = this.props;
+    const { onClose,renderCloseButton } = this.props;
+    if(renderCloseButton){
+      return renderCloseButton()
+    }
     const styles = this.props.styles!;
     return (
       <TouchableOpacity onPress={onClose} style={[styles.closeWrap]}>

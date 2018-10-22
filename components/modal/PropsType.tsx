@@ -14,6 +14,10 @@ export interface ModalPropsType<T> {
   onAnimationEnd?: (visible: boolean) => void;
   animateAppear?: boolean;
   operation?: boolean;
+  renderFooterButton?: (action: ActionPropsType<any>, index: number)=>React.ReactNode
+  renderFooter?: ()=>React.ReactNode
+  renderCloseButton?: ()=>React.ReactNode
+  
 }
 
 export interface ActionPropsType<T> {

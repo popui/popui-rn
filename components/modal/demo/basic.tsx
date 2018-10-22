@@ -1,8 +1,8 @@
 /* tslint:disable:no-console */
 import React from 'react';
 import { observer } from 'mobx-react'
-import { Text, View, ScrollView } from 'react-native';
-import { Button, Modal, GapH, GapV,ModalBodyText } from 'popui-rn';
+import {  View, ScrollView } from 'react-native';
+import { Button, Modal, GapH, GapV,ModalBodyText,ModalAlert,ModalOperation,ModalPrompt } from 'popui-rn';
 
 @observer
 export default class BasicModalExample extends React.Component<any, any> {
@@ -34,7 +34,7 @@ export default class BasicModalExample extends React.Component<any, any> {
   }
 
   onAlert = () => {
-    Modal.alert({
+    ModalAlert.alert({
       title:'标题一',
       content:'警告内容',
       actions:[
@@ -45,14 +45,14 @@ export default class BasicModalExample extends React.Component<any, any> {
   }
 
   onOpertation = () => {
-    Modal.operation([
+    ModalOperation.operation([
       { text: '标为未读', onPress: () => console.log('标为未读被点击了') },
       { text: '置顶聊天', onPress: () => console.log('置顶聊天被点击了') },
     ]);
   }
 
   onPromptLogin = () => {
-    Modal.prompt(
+    ModalPrompt.prompt(
       'Login',
       'Pleas input login information',
       (login: any, password: any) =>
