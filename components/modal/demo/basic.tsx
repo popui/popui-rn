@@ -99,7 +99,7 @@ export default class BasicModalExample extends React.Component<any, any> {
     )
   }
   render() {
-    const footerButtons = [
+    const actionButtons = [
       { text: 'Cancel', onPress: () => console.log('cancel') },
       { text: 'Ok', onPress: () => console.log('ok') },
     ];
@@ -139,7 +139,7 @@ export default class BasicModalExample extends React.Component<any, any> {
           maskClosable
           visible={this.state.visible}
           closable
-          footer={footerButtons}
+          actions={actionButtons}
         >
           {this.renderContent({
             onClose:this.onClose

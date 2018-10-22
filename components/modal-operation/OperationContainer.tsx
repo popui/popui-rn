@@ -37,7 +37,7 @@ export default class OperationContainer extends React.Component<
         onAnimationEnd={onAnimationEnd}
         style={operationStyles.operationContainer}
         bodyStyle={operationStyles.operationBody}
-        footer={actions}
+        actions={actions}
       />
     );
   }

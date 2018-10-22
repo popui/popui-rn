@@ -59,25 +59,18 @@ export default class PropmptContainer extends React.Component<
     }
     return func.apply(this, [text]);
   }
-  render() {
+  getActions =()=>{
     const {
-      title,
-      onAnimationEnd,
-      message,
-      type,
       actions,
-      placeholders,
     } = this.props;
-    const styles = this.props.styles!;
-
-    let footer;
+    let _actions;
     if (typeof actions === 'function') {
-      footer = [
+      _actions = [
         { text: '取消', style: 'cancel', onPress: () => {} },
         { text: '确定', onPress: () => this.getArgs(actions) },
       ];
     } else {
-      footer = actions.map(item => {
+      _actions = actions.map(item => {
         return {
           text: item.text,
           onPress: () => {
@@ -89,6 +82,14 @@ export default class PropmptContainer extends React.Component<
         };
       });
     }
+    return _actions
+  }
+  renderInputs =()=>{
+    const {
+      type,
+      placeholders,
+    } = this.props;
+    const styles = this.props.styles!;
     const firstStyle = [styles.inputWrapper];
     const lastStyle = [styles.inputWrapper];
 
@@ -102,48 +103,58 @@ export default class PropmptContainer extends React.Component<
       firstStyle.push(styles.inputFirst);
       firstStyle.push(styles.inputLast);
     }
-
+    return (
+      <View style={styles.inputGroup}>
+      {type !== 'secure-text' && (
+        <View style={firstStyle}>
+          <TextInput
+            autoFocus
+            onChangeText={value => {
+              this.onChangeText('text', value);
+            }}
+            value={this.state.text}
+            style={styles.input}
+            underlineColorAndroid="transparent"
+            placeholder={placeholders![0]}
+          />
+        </View>
+      )}
+      {(type === 'secure-text' || type === 'login-password') && (
+        <View style={lastStyle}>
+          <TextInput
+            autoFocus
+            secureTextEntry
+            onChangeText={value => {
+              this.onChangeText('password', value);
+            }}
+            value={this.state.password}
+            style={styles.input}
+            underlineColorAndroid="transparent"
+            placeholder={placeholders![1]}
+          />
+        </View>
+      )}
+    </View>
+    )
+  }
+  render() {
+    const {
+      title,
+      onAnimationEnd,
+      message,
+    } = this.props;
+    const styles = this.props.styles!;
     return (
       <Modal
         transparent
         title={title}
         visible={this.state.visible}
-        footer={footer}
+        actions={this.getActions()}
         onAnimationEnd={onAnimationEnd}
       >
         <KeyboardAvoidingView behavior="padding">
           {message && <Text style={styles.message}>{message}</Text>}
-          <View style={styles.inputGroup}>
-            {type !== 'secure-text' && (
-              <View style={firstStyle}>
-                <TextInput
-                  autoFocus
-                  onChangeText={value => {
-                    this.onChangeText('text', value);
-                  }}
-                  value={this.state.text}
-                  style={styles.input}
-                  underlineColorAndroid="transparent"
-                  placeholder={placeholders![0]}
-                />
-              </View>
-            )}
-            {(type === 'secure-text' || type === 'login-password') && (
-              <View style={lastStyle}>
-                <TextInput
-                  autoFocus
-                  secureTextEntry
-                  onChangeText={value => {
-                    this.onChangeText('password', value);
-                  }}
-                  value={this.state.password}
-                  style={styles.input}
-                  underlineColorAndroid="transparent"
-                  placeholder={placeholders![1]}
-                />
-              </View>
-            )}
-          </View>
+          {this.renderInputs()}
         </KeyboardAvoidingView>
       </Modal>
     );

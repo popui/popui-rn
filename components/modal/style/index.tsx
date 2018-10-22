@@ -8,7 +8,7 @@ export interface IModalStyle {
   wrap: ViewStyle;
   popupContainer: ViewStyle;
   innerContainer: ViewStyle;
-  footer: ViewStyle;
+  actions: ViewStyle;
   header: TextStyle;
   body: ViewStyle;
   maskClosable: ViewStyle;
@@ -99,7 +99,7 @@ export default {
     color: "#bcbcbc",
     lineHeight: 30
   },
-  footer: {
+  actions: {
     position: "absolute",
     bottom: 0,
     left: 0,

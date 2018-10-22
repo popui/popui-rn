@@ -27,4 +27,4 @@ subtitle: 对话框
 | popup | 是否弹窗模式 | Boolean | false |
 | animationType | 可选: 'fade' / 'slide' | String | fade |
 | title | 标题 | React.Element | 无 |
-| footer | 底部内容 | Array [{text, onPress}] | [] |
+| actions | 底部内容 | Array [{text, onPress}] | [] |

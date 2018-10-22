@@ -5,7 +5,7 @@ export interface ModalPropsType<T> {
   visible: boolean;
   maskClosable?: boolean;
   closable?: boolean;
-  footer?: ActionPropsType<T>[];
+  actions?: ActionPropsType<T>[];
   onClose?: () => void;
   transparent?: boolean;
   popup?: boolean;
@@ -14,10 +14,9 @@ export interface ModalPropsType<T> {
   onAnimationEnd?: (visible: boolean) => void;
   animateAppear?: boolean;
   operation?: boolean;
-  renderFooterButton?: (action: ActionPropsType<any>, index: number)=>React.ReactNode
-  renderFooter?: ()=>React.ReactNode
+  renderActionButton?: (action: ActionPropsType<any>, index: number)=>React.ReactNode
+  renderActions?: ()=>React.ReactNode
   renderCloseButton?: ()=>React.ReactNode
-  
 }
 
 export interface ActionPropsType<T> {

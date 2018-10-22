@@ -51,7 +51,7 @@ class AntmModal extends React.Component<IModalNativeProps, any> {
     bodyStyle: {},
     animationType: "fade",
     onClose: noopFunc,
-    footer: [],
+    actions: [],
     transparent: true,
     popup: false,
     animateAppear: true,
@@ -75,18 +75,18 @@ class AntmModal extends React.Component<IModalNativeProps, any> {
   saveRoot = (root: any) => {
     this.root = root;
   };
-  renderFooterButton = (action: ActionPropsType<any>, index: number) => {
-    const { onClose, operation,renderFooterButton } = this.props;
-    if(renderFooterButton){
-      return renderFooterButton(action,index)
+  renderActionButton = (action: ActionPropsType<any>, index: number) => {
+    const { onClose, operation,renderActionButton } = this.props;
+    if(renderActionButton){
+      return renderActionButton(action,index)
     }
     const { text=`按钮${index}`, type, onPress, style } = action;
-    const footer = this.props.footer!;
+    const actions = this.props.actions!;
     const styles = this.props.styles!;
     // 按钮数量多余1个
-    const hasMoreThanOneButton = footer.length > 1;
+    const hasMoreThanOneButton = actions.length > 1;
     // 当前渲染的是最后一个
-    const isLastButton = index === footer.length - 1;
+    const isLastButton = index === actions.length - 1;
     // type
     let defaultType = 'default'
     if(isLastButton){
@@ -116,7 +116,7 @@ class AntmModal extends React.Component<IModalNativeProps, any> {
     }
     // 最后一个按钮右边无 border
     const noneBorder =
-      footer && hasMoreThanOneButton && isLastButton
+      actions && hasMoreThanOneButton && isLastButton
         ? { borderRightWidth: 0 }
         : {};
     // 点击
@@ -130,7 +130,7 @@ class AntmModal extends React.Component<IModalNativeProps, any> {
     };
     // 一个按钮使用 buttonWrapV, 多于 1个 水平排列
     const buttonWrapStyle =
-      footer && hasMoreThanOneButton ? styles.buttonWrapH : styles.buttonWrapV;
+      actions && hasMoreThanOneButton ? styles.buttonWrapH : styles.buttonWrapV;
     const textStyle = [
       styles.buttonText,
       styles[`buttonText_${buttonType}`],
@@ -149,31 +149,31 @@ class AntmModal extends React.Component<IModalNativeProps, any> {
       </TouchableWithFallback>
     );
   };
-  renderFooter = () => {
-    const { footer, operation,renderFooter } = this.props;
-    if(renderFooter){
-      return renderFooter()
+  renderActions = () => {
+    const { actions, operation,renderActions } = this.props;
+    if(renderActions){
+      return renderActions()
     }
     const styles = this.props.styles!;
     let btnGroupStyle = styles.buttonGroupV;
-    if (footer && footer.length > 1 && !operation) {
+    if (actions && actions.length > 1 && !operation) {
       btnGroupStyle = styles.buttonGroupH;
       this.horizontalFlex = { flex: 1 };
     } else {
       this.horizontalFlex = {};
     }
-    if (!footer || footer.length === 0) {
+    if (!actions || actions.length === 0) {
       return null;
     }
-    const footerButtons = footer.map((button, i) =>
-      this.renderFooterButton(button, i)
+    const actionButtons = actions.map((button, i) =>
+      this.renderActionButton(button, i)
     );
     return (
       <View
-        style={[btnGroupStyle, styles.footer]}
+        style={[btnGroupStyle, styles.actions]}
         onLayout={this.onFooterLayout}
       >
-        {footerButtons}
+        {actionButtons}
       </View>
     );
   };
@@ -249,7 +249,7 @@ class AntmModal extends React.Component<IModalNativeProps, any> {
     } = this.props;
 
     const styles = this.props.styles!;
-    const footerDom = this.renderFooter();
+    const actionsDom = this.renderActions();
     let animType = this.props.animationType;
     if (animType === "slide") {
       animType = "slide-up";
@@ -269,7 +269,7 @@ class AntmModal extends React.Component<IModalNativeProps, any> {
           <View style={maxHeight} ref={this.saveRoot}>
             {title ? <Text style={[styles.header]}>{title}</Text> : null}
             <View style={[styles.body, bodyStyle]}>{children}</View>
-            {footerDom}
+            {actionsDom}
             {closable && this.renderCloseButton()}
           </View>
         </RCModal>

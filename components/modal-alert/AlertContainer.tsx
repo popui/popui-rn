@@ -38,7 +38,7 @@ export default class AlertContainer extends React.Component<
         transparent
         title={title}
         visible={this.state.visible}
-        footer={actions}
+        actions={actions}
         onAnimationEnd={onAnimationEnd}
         bodyStyle={{
           marginTop: 8,
