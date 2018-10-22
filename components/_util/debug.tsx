@@ -1,1 +1,1 @@
-export const createDebug = require('t-debug/react-native')
+export const createDebug = require('debug/src/browser')

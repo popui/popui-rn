@@ -32,6 +32,7 @@
   "dependencies": {
     "array-tree-filter": "~2.1.0",
     "babel-runtime": "6.x",
+    "debug": "^4.1.0",
     "expo": "^30.0.1",
     "mobx": "^4.5.1",
     "mobx-persist": "^0.4.1",
@@ -50,8 +51,7 @@
     "rmc-input-number": "^1.0.0",
     "rmc-picker": "~5.0.0",
     "rmc-tabs": "~1.2.0",
-    "rn-topview": "^0.1.6",
-    "t-debug": "^2.6.1"
+    "rn-topview": "^0.1.6"
   },
   "devDependencies": {
     "@types/prop-types": "^15.5.2",
@@ -68,7 +68,7 @@
     "babel-plugin-import": "^1.6.2",
     "babel-plugin-transform-runtime": "^6.23.0",
     "babel-preset-react-native": "^1.0.0",
-    "bisheng": "^0.28.0",
+    "bisheng": "^0.29.0",
     "bisheng-plugin-antd": "^0.16.0",
     "bisheng-plugin-description": "^0.1.1",
     "bisheng-plugin-react": "^0.6.0",
@@ -113,7 +113,7 @@
     "typescript": "~2.4.0"
   },
   "scripts": {
-    "expo-ios":"xcrun simctl openurl booted exp://127.0.0.1:19000",
+    "expo-ios": "xcrun simctl openurl booted exp://127.0.0.1:19000",
     "expo": "DEBUG=metro* EXPO_DEBUG=true REACT_DEBUGGER=\"unset ELECTRON_RUN_AS_NODE && open -g 'rndebugger://set-debugger-loc?host=127.0.0.1&port=19001'\" expo start --max-workers 8 --lan --dev --no-minify",
     "expo-clean": "DEBUG='Metro:*' EXPO_DEBUG=true REACT_DEBUGGER=\"unset ELECTRON_RUN_AS_NODE && open -g 'rndebugger://set-debugger-loc?host=127.0.0.1&port=19001'\" expo start --max-workers 8 --lan --dev --no-minify -c",
     "lint": "npm run tslint && npm run srclint && npm run applint",
