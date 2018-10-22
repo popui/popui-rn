@@ -9,7 +9,7 @@ import { createDebug } from '../_util/debug'
 const debug = createDebug('popui:CellBadge')
 
 function CellBadge(props:CellBadgePropsTypes) {
-  debug("render",{props})
+  // debug("render",{props})
   const {
     dot = false,
     preset = 'default',
