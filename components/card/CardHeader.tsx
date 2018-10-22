@@ -1,5 +1,6 @@
 /* tslint:disable:jsx-no-multiline-js */
 import React from 'react';
+import { observer } from 'mobx-react'
 import {
   Image,
   ImageStyle,
@@ -16,6 +17,7 @@ export interface CardHeaderProps extends CardHeaderPropsType {
   thumbStyle?: StyleProp<ImageStyle>;
 }
 
+@observer
 export default class CardHeader extends React.Component<CardHeaderProps, any> {
   static defaultProps = {
     thumbStyle: {},

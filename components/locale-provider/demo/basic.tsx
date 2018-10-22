@@ -1,7 +1,8 @@
 import React from 'react';
+import { observer } from 'mobx-react'
 import { View } from 'react-native';
 import {
-  Pagination, LocaleProvider, List, DatePicker, WhiteSpace, WingBlank,
+  Pagination, LocaleProvider, List, DatePicker, GapH, GapV,
   Picker, SearchBar,
 } from 'popui-rn';
 import enUS from '../en_US';
@@ -36,7 +37,7 @@ const seasons = [
 const Page = () => (
   <View>
     <Pagination total={5} current={1} />
-    <WhiteSpace />
+    <GapH />
     <List style={{ backgroundColor: 'white' }}>
       <DatePicker
         mode="date"
@@ -49,12 +50,13 @@ const Page = () => (
       <Picker data={seasons} cascade={false}>
         <List.Item arrow="horizontal">picker</List.Item>
       </Picker>
-      <WhiteSpace />
+      <GapH />
       <SearchBar placeholder="Search" showCancelButton />
     </List>
   </View>
 );
 
+@observer
 export default class LocaleProviderExample extends React.Component<any, any> {
   constructor(props: any) {
     super(props);
@@ -91,7 +93,7 @@ export default class LocaleProviderExample extends React.Component<any, any> {
     const currentLocale = languages.find(item => item.value === locale).language;
 
     return (
-      <WingBlank>
+      <GapV>
         <Picker
           data={languages}
           onChange={this.onChange}
@@ -100,11 +102,11 @@ export default class LocaleProviderExample extends React.Component<any, any> {
         >
           <List.Item arrow="horizontal">Choose language</List.Item>
         </Picker>
-        <WhiteSpace />
+        <GapH />
         <LocaleProvider locale={currentLocale}>
           <Page />
         </LocaleProvider>
-      </WingBlank>
+      </GapV>
     );
   }
 }

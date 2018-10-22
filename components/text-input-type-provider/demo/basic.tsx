@@ -1,5 +1,6 @@
 /* tslint:disable:jsx-no-multiline-js */
 import React from "react";
+import { observer } from 'mobx-react';
 import {
   ScrollView,
   TextInput as RNTextInput,
@@ -20,6 +21,7 @@ import {
 
 declare var jest: any;
 
+@observer
 export default class BasicTextInputTypeProviderExample extends React.Component<
   any,
   any

@@ -1,4 +1,5 @@
 import React from 'react';
+import { observer } from 'mobx-react'
 import { TextInputTypeProviderType } from './PropsType';
 import { noopFunc } from "../_util/noop";
 import { TextInputProperties } from 'react-native';
@@ -21,6 +22,7 @@ const keyboardTypeArray = [
 export interface TextInputTypeProviderProps extends TextInputTypeProviderType, TextInputProperties {
 }
 
+@observer
 export default class TextInputTypeProvider extends React.Component<TextInputTypeProviderProps, any> {
   static defaultProps = {
     type: 'text',

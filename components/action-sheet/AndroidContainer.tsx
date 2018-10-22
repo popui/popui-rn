@@ -1,5 +1,6 @@
 // tslint:disable:jsx-no-multiline-js
 import React from 'react';
+import { observer } from 'mobx-react'
 import {
   ActionSheetIOSOptions,
   Text,
@@ -9,8 +10,9 @@ import {
 import Modal from 'rmc-dialog/lib/Modal';
 import styles, {
   ActionSheetStyle,
-  vars as variables,
 } from './style/index';
+import {themeStore} from '../theme-store';
+const { themeVars } = themeStore;
 
 export interface ActionSheetNativeProps {
   onAnimationEnd?: (visible: boolean) => void;
@@ -20,6 +22,7 @@ export interface ActionSheetNativeProps {
   styles?: ActionSheetStyle;
 }
 
+@observer
 class ActionSheetAndroid extends React.Component<ActionSheetNativeProps, any> {
   constructor(props: ActionSheetNativeProps) {
     super(props);
@@ -65,7 +68,7 @@ class ActionSheetAndroid extends React.Component<ActionSheetNativeProps, any> {
       >
         <TouchableHighlight
           style={[styles.btn]}
-          underlayColor={variables.fill_tap}
+          underlayColor={themeVars.fill_tap}
           onPress={() => this.confirm(index)}
         >
           <Text

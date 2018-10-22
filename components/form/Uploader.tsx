@@ -1,9 +1,11 @@
-import React from 'react';;
+import React from 'react';
+import { observer } from 'mobx-react';
 import { View, Text, Image, TouchableOpacity, StyleSheet  } from 'react-native';
 // import ImagePicker from 'react-native-image-picker'
 // import concat from 'lodash/concat'
-import IconWeui from '../icon-weui'
-import varibles from '../style/themes/default'
+import WeuiIcon from '../weui-icon'
+import { themeStore } from '../theme-store';
+const { themeVars } = themeStore;
 
 const styles = StyleSheet.create({
   uploader: {},
@@ -15,7 +17,7 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     alignItems: 'center',
     justifyContent: 'space-between',
-    height: 17 * varibles.baseLineHeight,
+    height: 17 * themeVars.baseLineHeight,
   },
   uploaderTitle: {
     fontSize: 17,
@@ -25,22 +27,22 @@ const styles = StyleSheet.create({
     color: '#888',
   },
   uploaderBody: {
-    marginBottom: varibles.CellGapH - (varibles.CellGapV + varibles.UploaderFileSpacing),
-    marginRight: 0 - varibles.UploaderFileSpacing,
+    marginBottom: themeVars.CellGapH - (themeVars.CellGapV + themeVars.UploaderFileSpacing),
+    marginRight: 0 - themeVars.UploaderFileSpacing,
     flexDirection: 'row',
     flexWrap: 'wrap',
     overflow: 'hidden',
   },
   uploaderFile: {
     position: 'relative',
-    width: varibles.UploaderSize,
-    height: varibles.UploaderSize,
-    marginRight: varibles.UploaderFileSpacing,
-    marginBottom: varibles.UploaderFileSpacing,
+    width: themeVars.UploaderSize,
+    height: themeVars.UploaderSize,
+    marginRight: themeVars.UploaderFileSpacing,
+    marginBottom: themeVars.UploaderFileSpacing,
   },
   uploaderFileImage: {
-    width: varibles.UploaderSize,
-    height: varibles.UploaderSize,
+    width: themeVars.UploaderSize,
+    height: themeVars.UploaderSize,
   },
   uploaderStatus: {
     position: 'absolute',
@@ -63,20 +65,20 @@ const styles = StyleSheet.create({
   },
   uploaderAddButton: {
     position: 'relative',
-    marginRight: varibles.UploaderFileSpacing,
-    marginBottom: varibles.UploaderFileSpacing,
-    width: varibles.UploaderSize - (varibles.UploaderBorderWidth * 2),
-    height: varibles.UploaderSize - (varibles.UploaderBorderWidth * 2),
-    borderWidth: varibles.UploaderBorderWidth,
-    borderColor: varibles.UploaderBorderColor,
+    marginRight: themeVars.UploaderFileSpacing,
+    marginBottom: themeVars.UploaderFileSpacing,
+    width: themeVars.UploaderSize - (themeVars.UploaderBorderWidth * 2),
+    height: themeVars.UploaderSize - (themeVars.UploaderBorderWidth * 2),
+    borderWidth: themeVars.UploaderBorderWidth,
+    borderColor: themeVars.UploaderBorderColor,
   },
   uploaderAddButtonRec: {
     position: 'absolute',
-    top: (varibles.UploaderSize / 4) - 4,
-    left: (varibles.UploaderSize / 2) - 4,
-    width: varibles.UploaderBorderWidth + 1,
-    height: varibles.UploaderSize / 2,
-    backgroundColor: varibles.UploaderBorderColor,
+    top: (themeVars.UploaderSize / 4) - 4,
+    left: (themeVars.UploaderSize / 2) - 4,
+    width: themeVars.UploaderBorderWidth + 1,
+    height: themeVars.UploaderSize / 2,
+    backgroundColor: themeVars.UploaderBorderColor,
   }
 })
 
@@ -146,7 +148,7 @@ const Uploader = ({
                 <Image source={source} style={styles.uploaderFileImage} />
                 {error || status ?
                   <View style={styles.uploaderStatus}>
-                    {error ? <IconWeui name="warn" />
+                    {error ? <WeuiIcon name="warn" />
                     : <Text style={styles.uploaderStatusContent}>{status}</Text>}
                   </View> : null}
               </View>

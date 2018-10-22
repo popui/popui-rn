@@ -48,8 +48,8 @@ Array [
   "TextareaItem",
   "Toast",
   "View",
-  "WhiteSpace",
-  "WingBlank",
+  "GapH",
+  "GapV",
   "LocaleProvider",
 ]
 `;

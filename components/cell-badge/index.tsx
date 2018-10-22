@@ -1,7 +1,14 @@
 import React from 'react'
+<<<<<<< HEAD:components/cell-badge/index.tsx
 import { StyleSheet, Text } from 'react-native'
 import varibles from '../style/themes/default'
 import { CellBadgePropsTypes } from "./PropsType";
+=======
+import { observer } from 'mobx-react';
+import { StyleSheet, Text, ViewPropTypes } from 'react-native'
+import { themeStore } from '../theme-store';
+const { themeVars } = themeStore;
+>>>>>>> a49059816e8340e4289dc2e19fac76ed4a60edf2:components/badge2/index.tsx
 
 const styles = StyleSheet.create({
   badge: {
@@ -12,7 +19,7 @@ const styles = StyleSheet.create({
     lineHeight: 14,
     paddingTop: 1,
     textAlign: 'center',
-    backgroundColor: varibles.ColorWarn,
+    backgroundColor: themeVars.ColorWarn,
     borderWidth: 1.5,
     borderColor: 'transparent',
     borderRadius: 8.5,

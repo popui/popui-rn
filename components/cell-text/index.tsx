@@ -1,13 +1,15 @@
 import PropTypes from 'prop-types'
 import React from 'react'
+import { observer } from 'mobx-react';
 import { StyleSheet, Text, ViewPropTypes } from 'react-native'
-import varibles from '../style/themes/default'
+import { themeStore } from '../theme-store';
+const { themeVars } = themeStore;
 
 const styles = StyleSheet.create({
     cellText: {
-        fontSize: varibles.CellFontSize,
-        marginTop: (varibles.CellLineHeight - varibles.CellFontSize) / 2,
-        marginBottom: (varibles.CellLineHeight - varibles.CellFontSize) / 2,
+        fontSize: themeVars.CellFontSize,
+        marginTop: (themeVars.CellLineHeight - themeVars.CellFontSize) / 2,
+        marginBottom: (themeVars.CellLineHeight - themeVars.CellFontSize) / 2,
     },
 })
 
@@ -19,4 +21,4 @@ CellText.propTypes = {
     style: Text.propTypes.style,
 }
 
-export default CellText
+export default observer(CellText)

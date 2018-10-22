@@ -1,19 +1,21 @@
 import PropTypes from 'prop-types'
 import React from 'react'
+import { observer } from 'mobx-react';
 import { Text } from 'react-native'
 import { create } from '../style/utils/StyleSheet'
-import varibles from '../style/themes/default'
+import { themeStore } from '../theme-store';
+const { themeVars } = themeStore;
 
 const styles = create({
   cellsTips: {
-    paddingLeft: varibles.CellGapH,
-    paddingRight: varibles.CellGapH,
-    fontSize: varibles.CellTipsFontSize,
-    color: varibles.TextColorGray,
-    marginTop: varibles.CellTipsFontSize * 0.3,
-    lineHeight: varibles.CellTipsFontSize * varibles.baseLineHeight,
+    paddingLeft: themeVars.CellGapH,
+    paddingRight: themeVars.CellGapH,
+    fontSize: themeVars.CellTipsFontSize,
+    color: themeVars.TextColorGray,
+    marginTop: themeVars.CellTipsFontSize * 0.3,
+    lineHeight: themeVars.CellTipsFontSize * themeVars.baseLineHeight,
     android: {
-      lineHeight: Math.round(varibles.CellTipsFontSize * varibles.baseLineHeight)
+      lineHeight: Math.round(themeVars.CellTipsFontSize * themeVars.baseLineHeight)
     }
   }
 })
@@ -29,4 +31,4 @@ CellsTips.propTypes = {
   style: Text.propTypes.style
 }
 
-export default CellsTips
+export default observer(CellsTips)

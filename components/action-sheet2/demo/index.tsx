@@ -1,13 +1,13 @@
-import { ActionSheet, Button, ButtonArea, WingBlank, Popup, PopupHeader } from 'popui-rn'
+import { ActionSheet, Button, WeuiButtonArea, GapV, Popup, PopupHeader,View,ScrollView } from 'popui-rn'
 import React from 'react'
-import { View } from 'react-native'
-
+import { observer } from 'mobx-react';
 
 export interface IProps  {
 
 }
 
 
+@observer
 export default class ActionSheetScreen extends React.Component<IProps, any> {
     static navigationOptions = {
         title: 'ActionSheet',
@@ -26,25 +26,25 @@ export default class ActionSheetScreen extends React.Component<IProps, any> {
 
     render() {
         return (
-            <WingBlank hasPadddingHorizontal>
-                <ButtonArea>
+            <ScrollView>
+                <WeuiButtonArea>
                     <Button
                         type="primary"
                         onPress={this.showActionSheet}
                     >点击弹出 ActionSheet</Button>
-                </ButtonArea>
-                <ButtonArea>
+                </WeuiButtonArea>
+                <WeuiButtonArea>
                     <Button
                         type="primary"
                         onPress={() => this.setState({ popupVisible: true })}
                     >点击弹出 Popup</Button>
-                </ButtonArea>
-                <ButtonArea>
+                </WeuiButtonArea>
+                <WeuiButtonArea>
                     <Button
                         type="primary"
                         onPress={() => this.setState({ galleryVisible: true })}
                     >点击弹出 Gallery</Button>
-                </ButtonArea>
+                </WeuiButtonArea>
                 <ActionSheet
                     autoDectect={false}
                     type="android"
@@ -86,7 +86,7 @@ export default class ActionSheetScreen extends React.Component<IProps, any> {
                 {/*source={{uri: 'https://facebook.github.io/react/img/logo_og.png'}}*/}
                 {/*onPress={() => this.setState({galleryVisible: false})}*/}
                 {/*><GalleryDelete onPress={() => console.log('1')}/></Gallery>*/}
-            </WingBlank>
+            </ScrollView>
         )
     }
 

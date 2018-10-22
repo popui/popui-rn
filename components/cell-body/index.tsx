@@ -1,7 +1,9 @@
 import  React from 'react'
+import { observer } from 'mobx-react';
 import { StyleSheet, View, ViewStyle } from 'react-native'
-import IconWeui from '../icon-weui'
-import varibles from '../style/themes/default'
+import WeuiIcon from '../weui-icon'
+import { themeStore } from '../theme-store';
+const { themeVars } = themeStore;
 import CellText from '../cell-text'
 
 const styles = StyleSheet.create({
@@ -13,7 +15,7 @@ const styles = StyleSheet.create({
   },
   error: {
     flex: 1,
-    color: varibles.ColorWarn,
+    color: themeVars.ColorWarn,
   },
   errorIcon:{
     marginLeft:5
@@ -30,6 +32,7 @@ export interface CellBodyProps {
 export interface CellBodyState {
 }
 
+@observer
 export default class CellBody extends React.Component<CellBodyProps, CellBodyState> {
 
   private renderChildrenWithProps = () => {
@@ -51,7 +54,7 @@ export default class CellBody extends React.Component<CellBodyProps, CellBodySta
       <View style={[styles.cellBody, style, error ? { flexDirection: 'row' } : null]}
         {...others}>
         {this.renderChildrenWithProps()}
-        {error && <IconWeui name="warn" style={styles.errorIcon}/>}
+        {error && <WeuiIcon name="warn" style={styles.errorIcon}/>}
       </View>
     )
   }

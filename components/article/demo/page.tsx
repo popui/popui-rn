@@ -1,7 +1,8 @@
-import { Article, H1, H2, H3, LoadMore, P, WingBlank, Section } from 'popui-rn'
+import { Article, H1, H2, H3, LoadMore, P, GapV, Section } from 'popui-rn'
 
 import React from 'react'
-
+import { observer } from 'mobx-react';
+import { ScrollView } from 'react-native'
 
 
 export interface IProps  {
@@ -11,6 +12,7 @@ export interface IProps  {
 
 
 
+@observer
 export default class PageScreen extends React.Component<IProps, any> {
     static navigationOptions = {
         title: 'Page',
@@ -26,7 +28,7 @@ export default class PageScreen extends React.Component<IProps, any> {
 
     render() {
         return (
-            <WingBlank hasPadddingHorizontal>
+            <ScrollView>
                 <Article>
                     <H1>大标题</H1>
                     <Section>
@@ -49,7 +51,7 @@ export default class PageScreen extends React.Component<IProps, any> {
                     </Section>
                 </Article>
                 {this.renderFooter()}
-            </WingBlank>
+            </ScrollView>
         )
     }
 

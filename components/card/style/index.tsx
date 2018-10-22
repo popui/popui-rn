@@ -1,5 +1,6 @@
 import { ImageStyle, TextStyle, ViewStyle } from 'react-native';
-import variables from '../../style/themes/default';
+import {themeStore} from '../../theme-store';
+const { themeVars } = themeStore;
 
 export interface ICardStyle {
   card: ViewStyle;
@@ -17,12 +18,12 @@ export interface ICardStyle {
 
 export default {
   card: {
-    borderWidth: variables.border_width_md,
-    borderColor: variables.border_color_base,
-    borderRadius: variables.radius_md,
-    paddingBottom: variables.v_spacing_sm,
+    borderWidth: themeVars.border_width_md,
+    borderColor: themeVars.border_color_base,
+    borderRadius: themeVars.radius_md,
+    paddingBottom: themeVars.v_spacing_sm,
     flexDirection: 'column',
-    backgroundColor: variables.fill_base,
+    backgroundColor: themeVars.fill_base,
   },
   full: {
     borderRadius: 0,
@@ -31,9 +32,9 @@ export default {
   },
   headerWrap: {
     flexDirection: 'row',
-    paddingVertical: variables.v_spacing_sm,
-    paddingRight: variables.h_spacing_lg,
-    marginLeft: variables.h_spacing_lg,
+    paddingVertical: themeVars.v_spacing_sm,
+    paddingRight: themeVars.h_spacing_lg,
+    marginLeft: themeVars.h_spacing_lg,
     alignItems: 'center',
   },
   headerTitle: {
@@ -42,38 +43,38 @@ export default {
     alignItems: 'center',
   },
   headerImage: {
-    marginRight: variables.h_spacing_sm,
+    marginRight: themeVars.h_spacing_sm,
   },
   headerContent: {
-    color: variables.color_text_base,
-    fontSize: variables.font_size_heading,
+    color: themeVars.color_text_base,
+    fontSize: themeVars.font_size_heading,
     flex: 1,
   },
   headerExtra: {
     flex: 1,
-    fontSize: variables.font_size_heading,
-    color: variables.color_text_caption,
+    fontSize: themeVars.font_size_heading,
+    color: themeVars.color_text_caption,
     textAlign: 'right',
   },
   body: {
     flexGrow: 1,
-    paddingVertical: variables.v_spacing_md,
+    paddingVertical: themeVars.v_spacing_md,
     minHeight: 48,
-    borderTopWidth: variables.border_width_md,
-    borderColor: variables.border_color_base,
+    borderTopWidth: themeVars.border_width_md,
+    borderColor: themeVars.border_color_base,
   },
   footerWrap: {
     flexDirection: 'row',
-    paddingHorizontal: variables.h_spacing_lg,
+    paddingHorizontal: themeVars.h_spacing_lg,
   },
   footerContent: {
     flex: 1,
-    fontSize: variables.font_size_base,
-    color: variables.color_text_caption,
+    fontSize: themeVars.font_size_base,
+    color: themeVars.color_text_caption,
   },
   footerExtra: {
     textAlign: 'right',
-    fontSize: variables.font_size_base,
-    color: variables.color_text_caption,
+    fontSize: themeVars.font_size_base,
+    color: themeVars.color_text_caption,
   },
 };

@@ -1,4 +1,5 @@
 import React from "react";
+import { observer } from 'mobx-react';
 import {
   TextInput as RNTextInput,
   View,
@@ -8,12 +9,13 @@ import {
 } from "react-native";
 import { TextInputProps } from "./PropsType";
 import InputItemStyle from "./style/index";
-import IconWeui from "../icon-weui";
+import WeuiIcon from "../weui-icon";
 
 const InputItemStyles = StyleSheet.create<any>(InputItemStyle);
 import { noopFunc } from "../_util/noop";
 import { hitSlop } from "../_util/touch";
 
+@observer
 export default class PopTextInput extends React.Component<TextInputProps, any> {
   displayName: "PopTextInput";
   static defaultProps = {
@@ -83,7 +85,7 @@ export default class PopTextInput extends React.Component<TextInputProps, any> {
           onPress={this.onClearPress}
           hitSlop={hitSlop}
         >
-          <IconWeui name="clear" />
+          <WeuiIcon name="clear" />
         </TouchableOpacity>
       );
     }

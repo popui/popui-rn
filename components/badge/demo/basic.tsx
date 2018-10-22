@@ -1,9 +1,11 @@
 // tslint:disable:jsx-no-multiline-js
 /* tslint:disable:no-console */
 import React from 'react';
+import { observer } from 'mobx-react'
 import { ScrollView, View } from 'react-native';
-import { Badge, WhiteSpace } from 'popui-rn';
+import { Badge, GapH } from 'popui-rn';
 
+@observer
 export default class BasicTagExample extends React.Component<any, any> {
   render() {
     return (
@@ -24,7 +26,7 @@ export default class BasicTagExample extends React.Component<any, any> {
             />
           </Badge>
 
-          <WhiteSpace size="lg" />
+          <GapH size="lg" />
 
           <Badge text={109} overflowCount={100}>
             <View
@@ -36,7 +38,7 @@ export default class BasicTagExample extends React.Component<any, any> {
             />
           </Badge>
 
-          <WhiteSpace size="lg" />
+          <GapH size="lg" />
 
           <Badge text={109}>
             <View
@@ -48,7 +50,7 @@ export default class BasicTagExample extends React.Component<any, any> {
             />
           </Badge>
 
-          <WhiteSpace size="lg" />
+          <GapH size="lg" />
 
           <Badge text="new">
             <View
@@ -60,7 +62,7 @@ export default class BasicTagExample extends React.Component<any, any> {
             />
           </Badge>
 
-          <WhiteSpace size="lg" />
+          <GapH size="lg" />
 
           <Badge text={109} dot>
             <View
@@ -72,7 +74,7 @@ export default class BasicTagExample extends React.Component<any, any> {
             />
           </Badge>
 
-          <WhiteSpace size="lg" />
+          <GapH size="lg" />
 
           <Badge text={33} corner>
             <View

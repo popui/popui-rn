@@ -1,4 +1,5 @@
 import React from 'react';
+import { observer } from 'mobx-react'
 import { TextStyle } from 'react-native';
 import Modal from './Modal';
 import modalStyle from './style/index';
@@ -9,6 +10,7 @@ export interface OperationContainerProps {
   onAnimationEnd?: (visible: boolean) => void;
 }
 
+@observer
 export default class OperationContainer extends React.Component<
   OperationContainerProps,
   any

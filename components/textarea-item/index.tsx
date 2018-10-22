@@ -1,5 +1,6 @@
 /* tslint:disable:jsx-no-multiline-js */
 import React from 'react';
+import { observer } from 'mobx-react'
 import {
   StyleSheet,
   Text,
@@ -8,10 +9,11 @@ import {
   NativeSyntheticEvent,
   TextInputChangeEventData
 } from 'react-native';
-import variables from '../style/themes/default';
+import {themeStore} from '../theme-store';
+const { themeVars } = themeStore;
 import { TextAreaItemPropsType } from './PropsType';
 import TextAreaItemStyle, { ITextareaItemStyle } from './style/index';
-import TextInputControls from '../text-input-controls'
+// import TextInputControls from '../text-input-controls'
 import get from 'lodash/get'
 import TextInput from '../text-input';
 
@@ -25,6 +27,7 @@ export interface TextareaItemNativeProps
 
 const TextAreaItemStyles = StyleSheet.create<any>(TextAreaItemStyle);
 
+@observer
 export default class TextAreaItem extends React.Component<
   TextareaItemNativeProps,
   any
@@ -53,7 +56,7 @@ export default class TextAreaItem extends React.Component<
       height:
         props.rows !== undefined && props.rows > 1
           ? 6 * props.rows * 4
-          : variables.list_item_height,
+          : themeVars.list_item_height,
     };
   }
   // static getDerivedStateFromProps(nextProps:TextareaItemNativeProps, prevState:any){
@@ -105,7 +108,7 @@ export default class TextAreaItem extends React.Component<
     } else if (rows > 1) {
       height = 6 * rows * 4;
     } else {
-      height = variables.list_item_height;
+      height = themeVars.list_item_height;
     }
     this.setState({
       height,
@@ -128,7 +131,7 @@ export default class TextAreaItem extends React.Component<
     }
     return null
   }
-  
+
   renderInputView = () => {
     const {
       rows,
@@ -143,8 +146,8 @@ export default class TextAreaItem extends React.Component<
       ...restProps
     } = this.props;
     const textareaStyle = {
-      color: error ? '#f50' : variables.color_text_base,
-      paddingRight: error ? 2 * variables.h_spacing_lg : 0,
+      color: error ? '#f50' : themeVars.color_text_base,
+      paddingRight: error ? 2 * themeVars.h_spacing_lg : 0,
     };
     const maxLength = count! > 0 ? count : undefined;
     const inputStyle = [
@@ -176,13 +179,13 @@ export default class TextAreaItem extends React.Component<
     } = this.props;
     return (
       <View style={styles!.rightBottom}>
-        <TextInputControls 
+        {/* <TextInputControls
           clear={clear}
           error={error}
           extra={this.renderCountView()}
           onErrorPress={onErrorPress}
           onClearPress={this.onClearPress}
-        />
+        /> */}
       </View>
     )
   }
@@ -202,8 +205,8 @@ export default class TextAreaItem extends React.Component<
     }
     const containerStyle = {
       borderBottomWidth,
-      borderBottomColor:  variables.border_color_base,
-      // borderBottomColor: error ? 'red' : variables.border_color_base,
+      borderBottomColor:  themeVars.border_color_base,
+      // borderBottomColor: error ? 'red' : themeVars.border_color_base,
     };
     return (
       <View

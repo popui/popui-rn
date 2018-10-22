@@ -1,7 +1,9 @@
 import React from 'react';
+import { observer } from 'mobx-react'
 import { Text, View } from 'react-native';
 import { Slider } from 'popui-rn';
 
+@observer
 export default class BasicSliderExample extends React.Component<any, any> {
   constructor(props: any) {
     super(props);

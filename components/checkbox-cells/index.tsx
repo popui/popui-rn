@@ -1,14 +1,16 @@
 import xor from 'lodash/xor'
 import React from 'react'
+import { observer } from 'mobx-react';
 import { StyleSheet } from 'react-native'
 import { Cell, CellBody, CellHeader, Cells, CellText } from 'popui-rn'
-import IconWeui from '../icon-weui'
-import varibles from '../style/themes/default'
+import WeuiIcon from '../weui-icon'
+import { themeStore } from '../theme-store';
+const { themeVars } = themeStore;
 
 const styles = StyleSheet.create({
   checkbox: {
     fontSize: 23,
-    paddingRight: varibles.CellInnerGapH
+    paddingRight: themeVars.CellInnerGapH
   },
   disabled: {
     opacity: 0.5
@@ -34,7 +36,7 @@ const CheckboxCells = ({
           onPress={() => !disabled && onChange(xor(value, [option.value]))}
         >
           <CellHeader>
-            <IconWeui
+            <WeuiIcon
               name={inArray(option.value) ? 'success' : 'circle'}
               style={styles.checkbox}
             />
@@ -54,8 +56,8 @@ const CheckboxCells = ({
 //   onChange: PropTypes.func,
 //   options: PropTypes.array.isRequired,
 //   disabled: PropTypes.bool,
-//   style: IconWeui.propTypes.style,
+//   style: WeuiIcon.propTypes.style,
 //   children: PropTypes.node
 // }
 
-export default CheckboxCells
+export default observer(CheckboxCells)

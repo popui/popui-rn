@@ -1,5 +1,6 @@
 // import PropTypes from 'prop-types'
 import * as React from "react";
+import { observer } from 'mobx-react';
 import {
   StyleSheet,
   Text,
@@ -8,8 +9,9 @@ import {
   ViewStyle,
   TextStyle
 } from "react-native";
-import IconWeui from "../icon-weui";
-import varibles from "../style/themes/default";
+import WeuiIcon from "../weui-icon";
+import { themeStore } from '../theme-store';
+const { themeVars } = themeStore;
 
 const styles = StyleSheet.create({
   agreement: {
@@ -22,7 +24,7 @@ const styles = StyleSheet.create({
   },
   agreementText: {
     fontSize: 13,
-    color: varibles.TextColorGray,
+    color: themeVars.TextColorGray,
     marginLeft: 5
   },
   checkbox: {
@@ -50,6 +52,7 @@ export interface AgreementProps {
 
 export interface AgreementState {}
 
+@observer
 export default class AgreementComponent extends React.Component<
   AgreementProps,
   AgreementState
@@ -68,7 +71,7 @@ export default class AgreementComponent extends React.Component<
     return (
       <View style={[styles.checkbox, disabled ? styles.disabled : null]}>
         {value ? (
-          <IconWeui
+          <WeuiIcon
             name="success_no_circle"
             size={10}
             {...(disabled ? { color: "#ADADAD" } : {})}

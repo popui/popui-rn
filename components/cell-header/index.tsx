@@ -1,7 +1,9 @@
 import PropTypes from 'prop-types'
 import React from 'react'
+import { observer } from 'mobx-react';
 import { StyleSheet, View, ViewPropTypes } from 'react-native'
-import varibles from '../style/themes/default'
+import { themeStore } from '../theme-store';
+const { themeVars } = themeStore;
 
 const styles = StyleSheet.create({
     cellHeader: {
@@ -12,7 +14,7 @@ const styles = StyleSheet.create({
         height: 24,
     },
     error: {
-        color: varibles.ColorWarn,
+        color: themeVars.ColorWarn,
     },
 })
 
@@ -36,4 +38,4 @@ CellHeader.propTypes = {
     style: ViewPropTypes.style,
 }
 
-export default CellHeader
+export default observer(CellHeader)

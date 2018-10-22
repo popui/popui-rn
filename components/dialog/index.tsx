@@ -1,9 +1,11 @@
 import PropTypes from 'prop-types'
 import React from 'react'
+import { observer } from 'mobx-react';
 import { Dimensions, Modal, Platform, StyleSheet, Text, View, ViewPropTypes } from 'react-native'
-import { Mask } from 'popui-rn/components/Mask'
+import  Mask from '../mask'
 import { create } from '../style/utils/StyleSheet'
-import varibles from '../style/themes/default'
+import { themeStore } from '../theme-store';
+const { themeVars } = themeStore;
 import TouchableWithFallback from '../touchable-with-fallback'
 
 const { width } = Dimensions.get('window')
@@ -15,15 +17,15 @@ const styles = create({
     },
     dialog: {
         width: width - 60,
-        backgroundColor: varibles.DialogBackgroundColor,
+        backgroundColor: themeVars.DialogBackgroundColor,
         borderRadius: 3,
         overflow: 'hidden',
     },
     dialogHeader: {
-        paddingTop: 1.3 * varibles.baseFontSize,
-        paddingBottom: 0.5 * varibles.baseFontSize,
-        paddingLeft: varibles.DialogGapWidth,
-        paddingRight: varibles.DialogGapWidth,
+        paddingTop: 1.3 * themeVars.baseFontSize,
+        paddingBottom: 0.5 * themeVars.baseFontSize,
+        paddingLeft: themeVars.DialogGapWidth,
+        paddingRight: themeVars.DialogGapWidth,
     },
     dialogTitle: {
         fontWeight: '400',
@@ -37,8 +39,8 @@ const styles = create({
         textAlign: 'left',
     },
     dialogBody: {
-        paddingLeft: varibles.DialogGapWidth,
-        paddingRight: varibles.DialogGapWidth,
+        paddingLeft: themeVars.DialogGapWidth,
+        paddingRight: themeVars.DialogGapWidth,
     },
     iosDialogBody: {
         paddingBottom: (0.8 * 15) + 20,
@@ -48,7 +50,7 @@ const styles = create({
         paddingBottom: (17 * 2) + 20,
     },
     dialogBodyText: {
-        color: varibles.TextColorGray,
+        color: themeVars.TextColorGray,
         lineHeight: 15 * 1.3,
         android: {
             lineHeight: Math.round(15 * 1.3),
@@ -70,15 +72,15 @@ const styles = create({
         alignItems: 'center',
         justifyContent: 'center',
         borderTopWidth: StyleSheet.hairlineWidth,
-        borderColor: varibles.DialogLineColor,
+        borderColor: themeVars.DialogLineColor,
         borderStyle: 'solid',
     },
     androidDialogFooter: {
         height: 42,
         alignItems: 'flex-end',
         justifyContent: 'flex-end',
-        paddingLeft: varibles.DialogGapWidth,
-        paddingRight: varibles.DialogGapWidth,
+        paddingLeft: themeVars.DialogGapWidth,
+        paddingRight: themeVars.DialogGapWidth,
         paddingBottom: 16 * 0.7,
     },
     dialogFooterOpr: {
@@ -99,7 +101,7 @@ const styles = create({
     },
     dialogFooterOprWithBorder: {
         borderLeftWidth: StyleSheet.hairlineWidth,
-        borderColor: varibles.DialogLineColor,
+        borderColor: themeVars.DialogLineColor,
         borderStyle: 'solid',
     },
     iosDialogFooterOprText: {
@@ -115,11 +117,11 @@ const styles = create({
         color: '#0BB20C',
     },
     warnDialogFooterOprText: {
-        color: varibles.ColorWarn,
+        color: themeVars.ColorWarn,
     },
 })
 
-const underlayColor = varibles.DialogLinkActiveBc
+const underlayColor = themeVars.DialogLinkActiveBc
 
 const Dialog = ({
                     visible = false,

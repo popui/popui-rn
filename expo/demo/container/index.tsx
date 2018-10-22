@@ -9,6 +9,7 @@ import CellBadgeExample from "popui-rn/components/cell-badge/demo/basic";
 // import AllComp from 'popui-rn/rn-kitchen-sink/allComponents';
 import ResourceLoader from "../common/ResourceLoader";
 
+
 export default class App extends React.Component {
   render() {
     return (
@@ -29,7 +30,7 @@ export default class App extends React.Component {
 
 const styles = StyleSheet.create({
   container: {
-    flex: 1
+    flex: 1,
     // backgroundColor: '#000',
-  }
+  },
 });

@@ -1,5 +1,6 @@
 import * as _ from 'lodash'
 import * as React from 'react'
+import { observer } from 'mobx-react';
 import {
   Image as RNImage,
   Animated,
@@ -27,6 +28,7 @@ interface ImageState {
   intensity: Animated.Value
 }
 
+@observer
 export default class Image extends React.Component<ImageProps, ImageState> {
   mounted = true
   static defaultProps = { transitionDuration: 300, tint: 'dark' }

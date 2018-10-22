@@ -1,56 +1,28 @@
-import React from 'react'
-import { StyleSheet, View, ViewPropTypes } from 'react-native'
+import React from 'react';
+import { observer } from 'mobx-react'
+import { StyleProp, View, ViewStyle } from 'react-native';
+import {themeStore} from '../theme-store';
+const { themeVars } = themeStore;
 
-export interface IProps {
-    level?: number // 1-10
-    style?: any
+import { GapVPropsType } from './PropsType';
+export interface GapVProps extends GapVPropsType {
+  style?: StyleProp<ViewStyle>;
+}
+@observer
+class GapV extends React.Component<GapVProps, any> {
+  static defaultProps = {
+    size: 'lg',
+  };
+
+  render() {
+    const { size, style, children } = this.props;
+    const margin = themeVars[`h_spacing_${size}`];
+    return (
+      <View style={[{ marginLeft: margin, marginRight: margin }, style]}>
+        {children}
+      </View>
+    );
+  }
 }
 
-function GapV(props: IProps) {
-    const { level = 5, style, children, ...others } = props
-    return (<View
-        style={[styles[`level${level}`], style]}
-        {...others}
-    >{children}</View>)
-}
-
-const styles = StyleSheet.create({
-    level1: {
-        marginLeft: StyleSheet.hairlineWidth,
-    },
-    level2: {
-        marginLeft: 6,
-    },
-    level3: {
-        marginLeft: 9,
-    },
-    level4: {
-        marginLeft: 12,
-    },
-    level5: {
-        marginLeft: 15,
-    },
-    level6: {
-        marginLeft: 18,
-    },
-    level7: {
-        marginLeft: 25,
-    },
-    level8: {
-        marginLeft: 30,
-    },
-    level9: {
-        marginLeft: 36,
-    },
-    level10: {
-        marginLeft: 42,
-    },
-    level11: {
-        marginLeft: 50,
-    },
-    level12: {
-        marginLeft: 60,
-    },
-})
-
-export default GapV
+export default GapV;

@@ -1,11 +1,12 @@
 import React from "react";
+import { observer } from 'mobx-react';
 import { Text, View } from "react-native";
 import {
   Cell,
   CellBody,
   CellsTitle,
   RadioCells,
-  WhiteSpace
+  GapH
 } from "popui-rn";
 const options = [
   {
@@ -29,6 +30,7 @@ const options = [
     value: 5
   }
 ]
+@observer
 export default class InputScreen extends React.Component<any, any> {
   state = {
     radio: "",
@@ -50,7 +52,7 @@ export default class InputScreen extends React.Component<any, any> {
           </Cell>
         </RadioCells>
 
-        <WhiteSpace />
+        <GapH />
 
         <CellsTitle>单选列表项(禁用)</CellsTitle>
         <RadioCells

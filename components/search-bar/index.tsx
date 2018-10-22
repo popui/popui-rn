@@ -1,6 +1,7 @@
 /* tslint:disable:jsx-no-multiline-js */
 import PropTypes from 'prop-types';
 import React from 'react';
+import { observer } from 'mobx-react'
 import {
   StyleProp,
   StyleSheet,
@@ -13,7 +14,7 @@ import {
 import { getComponentLocale } from '../_util/getLocale';
 import { defaultProps, SearchBarPropsType, SearchBarState } from './PropsType';
 import SearchBarStyle, { ISearchBarStyle } from './style/index';
-import IconWeui from '../icon-weui'
+import WeuiIcon from '../weui-icon'
 
 export interface SearchBarNativeProps extends SearchBarPropsType {
   styles: ISearchBarStyle;
@@ -24,6 +25,7 @@ export interface SearchBarNativeProps extends SearchBarPropsType {
 
 const SearchBarStyles = StyleSheet.create<any>(SearchBarStyle);
 
+@observer
 export default class SearchBar extends React.Component<
   SearchBarNativeProps,
   SearchBarState
@@ -151,7 +153,7 @@ export default class SearchBar extends React.Component<
       <View style={styles.wrapper}>
         <View style={styles.searchOuter}>
           <View style={styles.searchInner}>
-                <IconWeui name="search"/>
+                <WeuiIcon name="search"/>
                 <TextInput
                   clearButtonMode="never"
                   underlineColorAndroid="transparent"
@@ -169,7 +171,7 @@ export default class SearchBar extends React.Component<
                 />
                 {value ? (
                     <Text onPress={this.onClear}>
-                        <IconWeui name="clear"/>
+                        <WeuiIcon name="clear"/>
                     </Text>
                 ) : null}
             </View>

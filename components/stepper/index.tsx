@@ -1,4 +1,5 @@
 import React from 'react';
+import { observer } from 'mobx-react'
 import { Platform, StyleProp, ViewStyle } from 'react-native';
 import RMCInputNumber from 'rmc-input-number/lib/index.ios';
 import styles from 'rmc-input-number/lib/styles';
@@ -9,6 +10,7 @@ export interface StepProps extends StepPropsType {
   style?: StyleProp<ViewStyle>;
 }
 
+@observer
 export default class Stepper extends React.Component<StepProps, any> {
   static defaultProps: StepProps = {
     step: 1,

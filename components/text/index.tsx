@@ -1,6 +1,8 @@
 import React from 'react'
+import { observer } from 'mobx-react';
 import { StyleSheet, Text as RNText } from 'react-native'
-import varibles from '../style/themes/default'
+import { themeStore } from '../theme-store';
+const { themeVars } = themeStore;
 
 export interface ITextProps {
   style?: any
@@ -8,8 +10,8 @@ export interface ITextProps {
 }
 const Text = ({ style, children, ...others }: ITextProps) => {
   const styleObj: any = StyleSheet.flatten(style)
-  const fontSize = styleObj.fontSize || varibles.baseFontSize
-  const lineHeight = styleObj.lineHeight || fontSize * varibles.baseLineHeight
+  const fontSize = styleObj.fontSize || themeVars.baseFontSize
+  const lineHeight = styleObj.lineHeight || fontSize * themeVars.baseLineHeight
 
   return (
     <RNText style={[style, { fontSize, lineHeight }]} {...others}>

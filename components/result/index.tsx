@@ -1,5 +1,6 @@
 /* tslint:disable:jsx-no-multiline-js */
 import React from 'react';
+import { observer } from 'mobx-react'
 import {
   Image,
   ImageURISource,
@@ -9,7 +10,7 @@ import {
   View,
   ViewStyle,
 } from 'react-native';
-import IconWeui from '../icon-weui'
+import WeuiIcon from '../weui-icon'
 import { ResultPropsType } from './PropsType';
 import ResultStyle, { IResultStyle } from './style/index';
 
@@ -20,6 +21,7 @@ export interface ResultNativeProps extends ResultPropsType {
 
 const ResultStyles = StyleSheet.create<any>(ResultStyle);
 
+@observer
 export default class Result extends React.Component<ResultNativeProps, any> {
   static defaultProps = {
     styles: ResultStyles,
@@ -36,7 +38,7 @@ export default class Result extends React.Component<ResultNativeProps, any> {
       iconContent = <View style={styles.iconWrap}>{icon}</View>;
     }else if (iconName) {
       iconContent = <View style={styles.iconWrap}>
-        <IconWeui name={iconName} msg />
+        <WeuiIcon name={iconName} msg />
       </View>;
     }else if (imgUrl) {
       iconContent = (

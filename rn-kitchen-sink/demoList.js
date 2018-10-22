@@ -28,6 +28,12 @@ module.exports = {
       module: require('../components/accordion/demo/basic'),
     },
     {
+      title: 'toptips',
+      description: '提示',
+      icon: 'https://os.alipayobjects.com/rmsportal/gfWmRfZNzMyVUss.png',
+      module: require('../components/toptips/demo/basic'),
+    },
+    {
       title: 'ActionSheet',
       description: '动作面板',
       icon: 'https://zos.alipayobjects.com/rmsportal/cYmaBafYBnAxCqQ.png',
@@ -52,10 +58,10 @@ module.exports = {
       module: require('../components/icon/demo/basic'),
     },
     {
-      title: 'Icon Weui',
+      title: 'Weui Icon',
       description: '图标',
       icon: 'https://os.alipayobjects.com/rmsportal/yhnfleZZoezOjtU.png',
-      module: require('../components/icon-weui/demo/basic'),
+      module: require('../components/weui-icon/demo/basic'),
     },
     {
       title: 'List',
@@ -73,7 +79,7 @@ module.exports = {
       title: 'Preview',
       description: '预览',
       icon: 'https://os.alipayobjects.com/rmsportal/tiapjpdKPQGHhnC.png',
-      module: require('../components/preview/demo/index'),
+      module: require('../components/preview/demo/basic'),
     },
     {
       title: 'Cell',
@@ -114,6 +120,18 @@ module.exports = {
       module: require('../components/activity-indicator/demo/basic'),
     },
     {
+      title: 'agreement',
+      description: '同意',
+      icon: 'https://zos.alipayobjects.com/rmsportal/yVtRfZGoDxXObTK.png',
+      module: require('../components/agreement/demo/basic'),
+    },
+    // {
+    //   title: 'article',
+    //   description: '文章排版',
+    //   icon: 'https://zos.alipayobjects.com/rmsportal/yVtRfZGoDxXObTK.png',
+    //   module: require('../components/article/demo/basic'),
+    // },
+    {
       title: 'Badge',
       description: '徽标数',
       icon: 'https://os.alipayobjects.com/rmsportal/UwUpBYPYnlwVicM.png',
@@ -129,7 +147,7 @@ module.exports = {
       title: 'Button Weui',
       description: '按钮',
       icon: 'https://os.alipayobjects.com/rmsportal/ZRDUYEzfOzKWdzE.png',
-      module: require('../components/button-weui/demo/index'),
+      module: require('../components/weui-button/demo/index'),
     },
     {
       title: 'Carousel', // 必须
@@ -160,12 +178,6 @@ module.exports = {
       description: '文本输入',
       icon: 'https://os.alipayobjects.com/rmsportal/SdSqpihcSBoBrFO.png',
       module: require('../components/input-item/demo/basic'),
-    },
-    {
-      title: 'Form Input',
-      description: '文本输入',
-      icon: 'https://os.alipayobjects.com/rmsportal/SdSqpihcSBoBrFO.png',
-      module: require('../components/form/demo/input'),
     },
     {
       title: 'Picker',
@@ -263,12 +275,12 @@ module.exports = {
       icon: 'https://os.alipayobjects.com/rmsportal/gfstSzAhvXqKyEg.png',
       module: require('../components/tag/demo/basic'),
     },
-    {
-      title: 'TextAreaItem',
-      description: '多行输入',
-      icon: 'https://os.alipayobjects.com/rmsportal/PfzuWlDVfndrQUK.png',
-      module: require('../components/textarea-item/demo/basic'),
-    },
+    // {
+    //   title: 'TextAreaItem',
+    //   description: '多行输入',
+    //   icon: 'https://os.alipayobjects.com/rmsportal/PfzuWlDVfndrQUK.png',
+    //   module: require('../components/textarea-item/demo/basic'),
+    // },
     {
       title: 'Footer',
       description: '版权信息',
@@ -296,16 +308,16 @@ module.exports = {
       module: require('../components/locale-provider/demo/basic'),
     },
     {
-      title: 'WhiteSpace',
+      title: 'GapH',
       description: '上下留白',
       icon: 'https://os.alipayobjects.com/rmsportal/NfomhEsOdhFxEws.png',
-      module: require('../components/white-space/demo/basic'),
+      module: require('../components/gap-h/demo/basic'),
     },
     {
-      title: 'WingBlank',
+      title: 'GapV',
       description: '两翼留白',
       icon: 'https://os.alipayobjects.com/rmsportal/DUkfOYZVcLctGot.png',
-      module: require('../components/wing-blank/demo/basic'),
+      module: require('../components/gap-v/demo/basic'),
     },
   ],
 };

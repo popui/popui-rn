@@ -1,9 +1,11 @@
 /* tslint:disable:jsx-no-multiline-js */
 import React from 'react';
+import { observer } from 'mobx-react'
 import { Text, View } from 'react-native';
-import { List, Radio, WhiteSpace } from 'popui-rn';
+import { List, Radio, GapH } from 'popui-rn';
 const RadioItem = Radio.RadioItem;
 
+@observer
 export default class BasicRadioExample extends React.Component<any, any> {
   state = {
     part1Value: 1,
@@ -25,7 +27,7 @@ export default class BasicRadioExample extends React.Component<any, any> {
           >
             Support
           </Radio>
-          <WhiteSpace />
+          <GapH />
           <Radio
             checked={this.state.part1Value === 2}
             onChange={(event: any) => {
@@ -35,7 +37,7 @@ export default class BasicRadioExample extends React.Component<any, any> {
             }}
             style={{ borderWidth: 1, borderColor: '#999', margin: 10 }}
           />
-          <WhiteSpace />
+          <GapH />
         </View>
 
         <List style={{ marginTop: 12 }}>

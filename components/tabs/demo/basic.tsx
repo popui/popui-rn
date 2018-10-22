@@ -1,5 +1,6 @@
 /* tslint:disable:no-console */
 import React from 'react';
+import { observer } from 'mobx-react'
 import { ScrollView, Text, View } from 'react-native';
 import { Tabs } from 'popui-rn';
 
@@ -23,6 +24,7 @@ const renderContent = (tab: any, index: any) => {
   return <ScrollView style={{ backgroundColor: '#fff' }}>{content}</ScrollView>;
 };
 
+@observer
 export default class BasicTabsExample extends React.Component<any, any> {
   render() {
     const tabs = [

@@ -1,14 +1,16 @@
 import PropTypes from 'prop-types'
 import React from 'react'
+import { observer } from 'mobx-react';
 import { Modal, Platform, StyleSheet, Text, View, ViewPropTypes } from 'react-native'
 import { Mask } from '../mask'
 import { Popup } from 'popui-rn/components/Popup'
-import varibles from '../style/themes/default'
+import { themeStore } from '../theme-store';
+const { themeVars } = themeStore;
 import TouchableWithFallback from '../touchable-with-fallback'
 
 const styles = StyleSheet.create({
     iosActionsheet: {
-        backgroundColor: varibles.BgColorDefault,
+        backgroundColor: themeVars.BgColorDefault,
     },
     androidActionsheetWrapper: {
         flexDirection: 'row',
@@ -17,8 +19,8 @@ const styles = StyleSheet.create({
     },
     androidActionsheet: {
         width: 274,
-        backgroundColor: varibles.BgColorDefault,
-        borderRadius: varibles.ActionSheetAndroidBorderRadius,
+        backgroundColor: themeVars.BgColorDefault,
+        borderRadius: themeVars.ActionSheetAndroidBorderRadius,
     },
     actionsheetMenu: {
         backgroundColor: '#fff',
@@ -29,7 +31,7 @@ const styles = StyleSheet.create({
     },
     actionsheetCell: {
         borderTopWidth: StyleSheet.hairlineWidth,
-        borderColor: varibles.CellBorderColor,
+        borderColor: themeVars.CellBorderColor,
         borderStyle: 'solid',
     },
     iosActionsheetCell: {
@@ -48,8 +50,8 @@ const styles = StyleSheet.create({
     iosActionsheetCellText: {
         textAlign: 'center',
         fontSize: 18,
-        marginTop: ((18 * varibles.baseLineHeight) - 18) / 2,
-        marginBottom: ((18 * varibles.baseLineHeight) - 18) / 2,
+        marginTop: ((18 * themeVars.baseLineHeight) - 18) / 2,
+        marginBottom: ((18 * themeVars.baseLineHeight) - 18) / 2,
     },
     androidActionsheetCellText: {
         textAlign: 'left',
@@ -64,11 +66,11 @@ const styles = StyleSheet.create({
         color: '#0BB20C',
     },
     warnActionsheetCellText: {
-        color: varibles.ColorWarn,
+        color: themeVars.ColorWarn,
     },
 })
 
-const underlayColor = varibles.BgColorActive
+const underlayColor = themeVars.BgColorActive
 
 const ActionSheet = ({
                          visible,

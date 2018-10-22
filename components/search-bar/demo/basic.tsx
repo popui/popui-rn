@@ -1,7 +1,9 @@
 import React from 'react';
-import { Alert, View,ScrollView } from 'react-native';
-import { SearchBar,WhiteSpace } from 'popui-rn';
+import { observer } from 'mobx-react'
+import { Alert } from 'react-native';
+import { SearchBar,GapH,ScrollView } from 'popui-rn';
 import SearchBarWithResult from './SearchBarWithResult'
+@observer
 export default class SearchBarDemo extends React.Component<any, any> {
   state = {
     value: '美食',
@@ -21,7 +23,7 @@ export default class SearchBarDemo extends React.Component<any, any> {
     return (
       <ScrollView keyboardShouldPersistTaps={'always'}>
         <SearchBar defaultValue="初始值" placeholder="搜索" />
-        <WhiteSpace />
+        <GapH />
         <SearchBar
           value={this.state.value}
           placeholder="搜索"
@@ -30,7 +32,7 @@ export default class SearchBarDemo extends React.Component<any, any> {
           onChange={this.onChange}
           showCancelButton
         />
-        <WhiteSpace />
+        <GapH />
         <SearchBarWithResult />
       </ScrollView>
     );

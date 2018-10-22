@@ -1,7 +1,8 @@
 import React from 'react'
+import { observer } from 'mobx-react';
 
-import { Text } from 'react-native'
-import { Footer as FooterComp, WingBlank } from 'popui-rn'
+import { Text,ScrollView } from 'react-native'
+import { Footer as FooterComp, GapV } from 'popui-rn'
 const {Footer, FooterLink, FooterLinks, FooterText} = FooterComp
 
 import stylekit from 'react-native-stylekit'
@@ -14,6 +15,7 @@ export interface IProps  {
 
 }
 
+@observer
 export default class FooterScreen extends React.Component<IProps, any> {
     static navigationOptions = {
         title: 'Footer',
@@ -50,11 +52,11 @@ export default class FooterScreen extends React.Component<IProps, any> {
 
     render() {
         return (
-            <WingBlank hasPadddingHorizontal hasPaddingTop>
+            <ScrollView hasPaddingTop>
                 {this.renderFooter1()}
                 {this.renderFooter2()}
                 {this.renderFooter3()}
-            </WingBlank>
+            </ScrollView>
         )
     }
 

@@ -1,11 +1,13 @@
 import PropTypes from 'prop-types'
 import React from 'react'
+import { observer } from 'mobx-react';
 import { Text } from 'react-native'
 import { create } from '../style/utils/StyleSheet'
-import varibles from '../style/themes/default'
+import { themeStore } from '../theme-store';
+const { themeVars } = themeStore;
 
 const baseFontSize = 14
-const lineHeight = baseFontSize * varibles.baseLineHeight
+const lineHeight = baseFontSize * themeVars.baseLineHeight
 const styles = create({
     h3: {
         lineHeight,
@@ -27,4 +29,4 @@ H3.propTypes = {
     children: PropTypes.node,
 }
 
-export default H3
+export default observer(H3)

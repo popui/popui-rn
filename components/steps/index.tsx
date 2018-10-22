@@ -1,5 +1,6 @@
 /* tslint:disable:jsx-no-multiline-js */
 import React from 'react';
+import { observer } from 'mobx-react'
 import { LayoutChangeEvent, StyleSheet, View } from 'react-native';
 import { StepsPropsType } from './PropsType';
 import RNStepsItem from './StepsItem';
@@ -19,6 +20,7 @@ export interface StepsNativeProps extends StepsProps {
 
 const StepStyles = StyleSheet.create<any>(StepStyle);
 
+@observer
 export default class Steps extends React.Component<StepsNativeProps, any> {
   static Step: any;
 

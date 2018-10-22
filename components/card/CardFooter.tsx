@@ -1,4 +1,5 @@
 import React from 'react';
+import { observer } from 'mobx-react'
 import { StyleProp, Text, View, ViewStyle } from 'react-native';
 import { CardFooterPropsType } from './PropsType';
 
@@ -7,6 +8,7 @@ export interface CardFooterProps extends CardFooterPropsType {
   style?: StyleProp<ViewStyle>;
 }
 
+@observer
 export default class CardFooter extends React.Component<CardFooterProps, any> {
   static defaultProps = {
     style: {},

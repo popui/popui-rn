@@ -1,4 +1,5 @@
 import React from 'react';
+import { observer } from 'mobx-react'
 import {
   StyleProp,
   TouchableWithoutFeedback,
@@ -16,6 +17,7 @@ export interface FlexItemProps extends FlexItemPropsType {
   style?: StyleProp<ViewStyle>;
 }
 
+@observer
 export default class FlexItem extends React.Component<FlexItemProps, any> {
   static defaultProps = {
     flex: 1,

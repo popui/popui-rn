@@ -1,20 +1,22 @@
 // import PropTypes from 'prop-types'
 import React from 'react'
+import { observer } from 'mobx-react';
 import { Text, TextInput, View, ViewPropTypes } from 'react-native'
 import { create } from '../style/utils/StyleSheet'
-import varibles from '../style/themes/default'
+import { themeStore } from '../theme-store';
+const { themeVars } = themeStore;
 
 const styles = create({
     textarea: {
-        fontSize: varibles.CellFontSize,// 17
-        height: varibles.CellFontSize * varibles.baseLineHeight * 3, //81.6
-        lineHeight: varibles.CellFontSize * varibles.baseLineHeight, //27.2
+        fontSize: themeVars.CellFontSize,// 17
+        height: themeVars.CellFontSize * themeVars.baseLineHeight * 3, //81.6
+        lineHeight: themeVars.CellFontSize * themeVars.baseLineHeight, //27.2
         android: {
-            lineHeight: Math.round(varibles.CellFontSize * varibles.baseLineHeight),
+            lineHeight: Math.round(themeVars.CellFontSize * themeVars.baseLineHeight),
         },
     },
     textareaCounter: {
-        color: varibles.TextColorTips, // B2B2B2
+        color: themeVars.TextColorTips, // B2B2B2
         textAlign: 'right',
     },
 })

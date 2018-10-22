@@ -1,12 +1,14 @@
 import * as React from "react";
+import { observer } from 'mobx-react';
 import { View, StyleSheet, Text, TouchableOpacity, Image, ActivityIndicator } from "react-native";
-import IconWeui from "../icon-weui";
+import WeuiIcon from "../weui-icon";
 import plainStyles from "./style";
 const defaultStyles = StyleSheet.create<any>(plainStyles);
 import { ImagePickerItemProps, ImagePickerItemState } from "./PropsType";
 import { ImageItemFuncArgs } from "../image-picker/PropsType";
 import { noopFunc } from "../_util/noop";
 
+@observer
 export default class ImagePickerItem extends React.Component<
   ImagePickerItemProps,
   ImagePickerItemState
@@ -51,7 +53,7 @@ export default class ImagePickerItem extends React.Component<
     const { error, statusText,loading } = options.item;
     let content: any = null;
     if (error) {
-      content = <IconWeui name="warn" />;
+      content = <WeuiIcon name="warn" />;
     }
     if (statusText) {
       content = <Text style={styles.uploaderStatusText}>{statusText}</Text>;
@@ -74,7 +76,7 @@ export default class ImagePickerItem extends React.Component<
         style={styles.uploaderRemoveIcon}
         activeOpacity={0.6}
       >
-        <IconWeui name="clear" size={16}/>
+        <WeuiIcon name="clear" size={16}/>
       </TouchableOpacity>
     );
   };

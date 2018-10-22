@@ -1,4 +1,5 @@
 import React from "react";
+import { observer } from 'mobx-react';
 import {
   Image,
   StyleSheet,
@@ -6,8 +7,10 @@ import {
   View,
   ViewStyle
 } from "react-native";
-import varibles from "../style/themes/default";
-// import IconWeui from '../icon-weui'
+import { themeStore } from '../theme-store';
+const { themeVars } = themeStore;
+
+// import WeuiIcon from '../weui-icon'
 const styles = StyleSheet.create({
   cellFooter: {
     flexDirection: "row",
@@ -16,8 +19,8 @@ const styles = StyleSheet.create({
   },
   cellFooterText: {
     textAlign: "center",
-    color: varibles.TextColorGray,
-    fontSize: varibles.CellFontSize
+    color: themeVars.TextColorGray,
+    fontSize: themeVars.CellFontSize
   },
   vcode: {
     width: 100,
@@ -34,6 +37,7 @@ export interface CellFooterProps {
 
 export interface CellFooterState {}
 
+@observer
 export default class CellFooter extends React.Component<
   CellFooterProps,
   CellFooterState
@@ -74,7 +78,7 @@ export default class CellFooter extends React.Component<
     return (
       <View style={cellFooterStyle}>
         {this.renderChildrenWithProps()}
-        {/* {error && <IconWeui name="warn" />} */}
+        {/* {error && <WeuiIcon name="warn" />} */}
         {access && (
           <Image
             style={{ width: 7.5, height: 12, marginLeft: 5 }}

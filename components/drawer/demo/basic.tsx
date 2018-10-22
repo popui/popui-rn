@@ -1,7 +1,8 @@
 // tslint:disable:jsx-no-multiline-js
 import React from 'react';
+import { observer } from 'mobx-react'
 import { ScrollView, StyleSheet, Text, View } from 'react-native';
-import { Button, Drawer, List, WhiteSpace } from 'popui-rn';
+import { Button, Drawer, List, GapH } from 'popui-rn';
 
 const styles = StyleSheet.create({
   container: {
@@ -9,6 +10,7 @@ const styles = StyleSheet.create({
   },
 });
 
+@observer
 export default class DrawerExample extends React.Component<any, any> {
   drawer: any;
 
@@ -79,7 +81,7 @@ export default class DrawerExample extends React.Component<any, any> {
           <Button onClick={() => this.drawer && this.drawer.openDrawer()}>
             Open drawer
           </Button>
-          <WhiteSpace />
+          <GapH />
         </View>
       </Drawer>
     );

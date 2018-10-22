@@ -1,4 +1,5 @@
 import React from 'react';
+import { observer } from 'mobx-react'
 import {
   Modal,
   StatusBar,
@@ -9,7 +10,8 @@ import {
   SafeAreaView
 } from 'react-native';
 import CameraRollPicker from 'react-native-camera-roll-picker';
-import varibles from '../style/themes/default';
+import {themeStore} from '../theme-store';
+const { themeVars } = themeStore;
 
 export interface ImageRollProps {
   onCancel: () => void;
@@ -37,11 +39,12 @@ const styles = StyleSheet.create({
   },
   rightBtn: {
     width: 14 * 4,
-    color: varibles.brand_primary,
+    color: themeVars.brand_primary,
     fontSize: 16,
   },
 });
 
+@observer
 export default class ImageRoll extends React.Component<ImageRollProps, any> {
   onSelected = (images: any[], _: any) => {
     this.props.onSelected(images[0]);

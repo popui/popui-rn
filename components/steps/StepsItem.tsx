@@ -1,5 +1,6 @@
 /* tslint:disable: jsx-no-multiline-js */
 import React from 'react';
+import { observer } from 'mobx-react'
 import { Image, StyleProp, Text, View, ViewStyle } from 'react-native';
 
 export interface StepsItemProps {
@@ -17,6 +18,7 @@ export interface StepsItemProps {
   styles?: any;
 }
 
+@observer
 export default class StepsItem extends React.Component<StepsItemProps, any> {
   render() {
     const {

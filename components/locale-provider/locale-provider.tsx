@@ -1,5 +1,6 @@
 import PropTypes from 'prop-types';
 import React from 'react';
+import { observer } from 'mobx-react'
 
 export interface LocaleProviderProps {
   locale: {
@@ -11,6 +12,7 @@ export interface LocaleProviderProps {
   children?: React.ReactElement<any>;
 }
 
+@observer
 export default class LocaleProvider extends React.Component<
   LocaleProviderProps,
   any

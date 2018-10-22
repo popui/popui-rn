@@ -1,5 +1,6 @@
 import { ViewStyle, TextStyle } from 'react-native';
-import variables from '../../style/themes/default';
+import {themeStore} from '../../theme-store';
+const { themeVars } = themeStore;
 
 export interface ITextareaItemStyle {
   container: ViewStyle;
@@ -14,21 +15,21 @@ export interface ITextareaItemStyle {
 
 export default {
   container: {
-    borderBottomWidth: variables.border_width_sm,
-    borderBottomColor: variables.border_color_base,
+    borderBottomWidth: themeVars.border_width_sm,
+    borderBottomColor: themeVars.border_color_base,
   },
   input: {
-    paddingHorizontal: variables.h_spacing_md,
-    backgroundColor: variables.fill_base,
-    fontSize: variables.font_size_heading,
-    lineHeight: Math.round(1.6 * variables.font_size_heading),
+    paddingHorizontal: themeVars.h_spacing_md,
+    backgroundColor: themeVars.fill_base,
+    fontSize: themeVars.font_size_heading,
+    lineHeight: Math.round(1.6 * themeVars.font_size_heading),
     textAlignVertical: 'top',
   },
   icon: {
     position: 'absolute',
     top: 8,
-    width: variables.icon_size_xs,
-    height: variables.icon_size_xs,
+    width: themeVars.icon_size_xs,
+    height: themeVars.icon_size_xs,
   },
   errorIcon: {
     position: 'absolute',
@@ -37,8 +38,8 @@ export default {
   },
   rightBottom:{
     position: 'absolute',
-    right: variables.h_spacing_md,
-    bottom: variables.h_spacing_md,
+    right: themeVars.h_spacing_md,
+    bottom: themeVars.h_spacing_md,
   },
   clear:{
 

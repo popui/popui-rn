@@ -1,4 +1,5 @@
 import React from 'react';
+import { observer } from 'mobx-react'
 import {
   Image,
   ImageStyle,
@@ -18,6 +19,7 @@ export interface RadioNativeProps extends RadioPropsType {
 
 const RadioStyles = StyleSheet.create<any>(RadioStyle);
 
+@observer
 export default class Radio extends React.Component<RadioNativeProps, any> {
   static RadioItem: any;
   static defaultProps = {

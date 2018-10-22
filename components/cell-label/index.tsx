@@ -1,13 +1,15 @@
 import React from 'react'
+import { observer } from 'mobx-react';
 import { StyleSheet, Text, ViewPropTypes, ViewStyle } from 'react-native'
-import varibles from '../style/themes/default'
+import { themeStore } from '../theme-store';
+const { themeVars } = themeStore;
 
 const styles = StyleSheet.create({
     label: {
-        width: varibles.CellLabelWidth,
-        fontSize: varibles.CellFontSize,
-        marginTop: (varibles.CellLineHeight - varibles.CellFontSize) / 2,
-        marginBottom: (varibles.CellLineHeight - varibles.CellFontSize) / 2,
+        width: themeVars.CellLabelWidth,
+        fontSize: themeVars.CellFontSize,
+        marginTop: (themeVars.CellLineHeight - themeVars.CellFontSize) / 2,
+        marginBottom: (themeVars.CellLineHeight - themeVars.CellFontSize) / 2,
     },
 })
 
@@ -20,6 +22,7 @@ export interface CellLabelProps {
 export interface CellLabelState {
 }
 
+@observer
 export default class CellLabel extends React.Component<CellLabelProps, CellLabelState> {
   public render() {
     const { style, children, ...others } = this.props

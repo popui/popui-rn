@@ -1,17 +1,19 @@
 import PropTypes from 'prop-types'
 import React from 'react'
+import { observer } from 'mobx-react';
 import { Text } from 'react-native'
 import { create } from '../style/utils/StyleSheet'
-import varibles from '../style/themes/default'
+import { themeStore } from '../theme-store';
+const { themeVars } = themeStore;
 
 const styles = create({
     h1: {
         fontSize: 18,
         fontWeight: '400',
         marginBottom: 18 * 0.9,
-        lineHeight: 18 * varibles.baseLineHeight,
+        lineHeight: 18 * themeVars.baseLineHeight,
         android: {
-            lineHeight: Math.round(18 * varibles.baseLineHeight),
+            lineHeight: Math.round(18 * themeVars.baseLineHeight),
         },
     },
 })
@@ -26,4 +28,4 @@ H1.propTypes = {
     children: PropTypes.node,
 }
 
-export default H1
+export default observer(H1)

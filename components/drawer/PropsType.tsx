@@ -1,4 +1,5 @@
 import React, { CSSProperties } from 'react';
+import { observer } from 'mobx-react';
 
 export interface DrawerProps {
   onOpenChange?: (isOpen: boolean) => void;

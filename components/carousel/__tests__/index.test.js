@@ -1,4 +1,5 @@
 import React from 'react';
+import { observer } from 'mobx-react';
 import { View } from 'react-native';
 import { shallow } from 'enzyme';
 import Carousel from '../index';

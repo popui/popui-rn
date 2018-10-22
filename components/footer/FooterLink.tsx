@@ -1,7 +1,9 @@
 import PropTypes from 'prop-types'
 import React from 'react'
+import { observer } from 'mobx-react';
 import { StyleSheet, Text, TouchableOpacity, ViewPropTypes } from 'react-native'
-import varibles from '../style/themes/default'
+import { themeStore } from '../theme-store';
+const { themeVars } = themeStore;
 
 const TextFontSize = 14
 const styles = StyleSheet.create({
@@ -10,7 +12,7 @@ const styles = StyleSheet.create({
         marginRight: 0.64 * TextFontSize,
     },
     footerLinkText: {
-        color: varibles.LinkColorDefault,
+        color: themeVars.LinkColorDefault,
         fontSize: TextFontSize,
     },
 })
@@ -32,4 +34,4 @@ FooterLink.propTypes = {
     others: PropTypes.object,
 }
 
-export default FooterLink
+export default observer(FooterLink)

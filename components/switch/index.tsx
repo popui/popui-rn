@@ -1,4 +1,5 @@
 import React from 'react';
+import { observer } from 'mobx-react'
 import { StyleProp, Switch, ViewStyle } from 'react-native';
 import { SwitchPropsType } from './PropsType';
 export interface AntmSwitchProps extends SwitchPropsType {

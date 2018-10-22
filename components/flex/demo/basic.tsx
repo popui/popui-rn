@@ -1,7 +1,8 @@
 // tslint:disable:jsx-no-multiline-js
 import React from 'react';
+import { observer } from 'mobx-react'
 import { ScrollView, Text, TouchableWithoutFeedback, View } from 'react-native';
-import { Button, Flex, WhiteSpace, WingBlank } from 'popui-rn';
+import { Button, Flex, GapH, GapV } from 'popui-rn';
 
 const Circle = (props: any) => {
   const size = props.size || 20;
@@ -15,6 +16,7 @@ const Circle = (props: any) => {
   return <View style={style} />;
 };
 
+@observer
 export default class FlexExample extends React.Component<any, any> {
   render() {
     return (
@@ -24,11 +26,11 @@ export default class FlexExample extends React.Component<any, any> {
         showsHorizontalScrollIndicator={false}
         showsVerticalScrollIndicator={false}
       >
-        <WingBlank style={{ marginTop: 20, marginBottom: 5 }}>
+        <GapV style={{ marginTop: 20, marginBottom: 5 }}>
           <Text style={{ marginBottom: 10 }}>项目的排列方向</Text>
           <Text>direction="row":主轴为水平方向，起点在左端</Text>
-        </WingBlank>
-        <WingBlank style={{ marginBottom: 5 }}>
+        </GapV>
+        <GapV style={{ marginBottom: 5 }}>
           <Flex>
             <Flex.Item style={{ paddingLeft: 4, paddingRight: 4 }}>
               <Button size="small">按钮1</Button>
@@ -40,11 +42,11 @@ export default class FlexExample extends React.Component<any, any> {
               <Button size="small">按钮3</Button>
             </Flex.Item>
           </Flex>
-        </WingBlank>
-        <WingBlank style={{ marginTop: 5, marginBottom: 5 }}>
+        </GapV>
+        <GapV style={{ marginTop: 5, marginBottom: 5 }}>
           <Text>direction="column":主轴为垂直方向，起点在上沿</Text>
-        </WingBlank>
-        <WingBlank style={{ marginBottom: 5 }}>
+        </GapV>
+        <GapV style={{ marginBottom: 5 }}>
           <Flex direction="column">
             <Flex.Item style={{ paddingBottom: 4 }}>
               <Button size="small">按钮1</Button>
@@ -56,14 +58,14 @@ export default class FlexExample extends React.Component<any, any> {
               <Button size="small">按钮3</Button>
             </Flex.Item>
           </Flex>
-        </WingBlank>
-        <WingBlank style={{ marginTop: 5, marginBottom: 5 }}>
+        </GapV>
+        <GapV style={{ marginTop: 5, marginBottom: 5 }}>
           <Text style={{ marginTop: 20, marginBottom: 20 }}>
             项目在主轴上的对齐方式
           </Text>
           <Text>justify="start":左对齐</Text>
-        </WingBlank>
-        <WingBlank style={{ marginBottom: 5 }}>
+        </GapV>
+        <GapV style={{ marginBottom: 5 }}>
           <Flex justify="start">
             <Circle />
             <Circle />
@@ -71,11 +73,11 @@ export default class FlexExample extends React.Component<any, any> {
             <Circle />
             <Circle />
           </Flex>
-        </WingBlank>
-        <WingBlank style={{ marginTop: 5, marginBottom: 5 }}>
+        </GapV>
+        <GapV style={{ marginTop: 5, marginBottom: 5 }}>
           <Text>justify="center":居中</Text>
-        </WingBlank>
-        <WingBlank style={{ marginBottom: 5 }}>
+        </GapV>
+        <GapV style={{ marginBottom: 5 }}>
           <Flex justify="center">
             <Circle />
             <Circle />
@@ -83,11 +85,11 @@ export default class FlexExample extends React.Component<any, any> {
             <Circle />
             <Circle />
           </Flex>
-        </WingBlank>
-        <WingBlank style={{ marginTop: 5, marginBottom: 5 }}>
+        </GapV>
+        <GapV style={{ marginTop: 5, marginBottom: 5 }}>
           <Text>justify="end":右对齐</Text>
-        </WingBlank>
-        <WingBlank style={{ marginBottom: 5 }}>
+        </GapV>
+        <GapV style={{ marginBottom: 5 }}>
           <Flex justify="end">
             <Circle />
             <Circle />
@@ -95,11 +97,11 @@ export default class FlexExample extends React.Component<any, any> {
             <Circle />
             <Circle />
           </Flex>
-        </WingBlank>
-        <WingBlank style={{ marginTop: 5, marginBottom: 5 }}>
+        </GapV>
+        <GapV style={{ marginTop: 5, marginBottom: 5 }}>
           <Text>justify="between":两端对齐，项目之间的间隔都相等</Text>
-        </WingBlank>
-        <WingBlank style={{ marginBottom: 5 }}>
+        </GapV>
+        <GapV style={{ marginBottom: 5 }}>
           <Flex justify="between">
             <Circle />
             <Circle />
@@ -107,11 +109,11 @@ export default class FlexExample extends React.Component<any, any> {
             <Circle />
             <Circle />
           </Flex>
-        </WingBlank>
-        <WingBlank style={{ marginTop: 5, marginBottom: 5 }}>
+        </GapV>
+        <GapV style={{ marginTop: 5, marginBottom: 5 }}>
           <Text>justify="around":每个项目两侧的间隔相等</Text>
-        </WingBlank>
-        <WingBlank style={{ marginBottom: 5 }}>
+        </GapV>
+        <GapV style={{ marginBottom: 5 }}>
           <Flex justify="around">
             <Circle />
             <Circle />
@@ -119,14 +121,14 @@ export default class FlexExample extends React.Component<any, any> {
             <Circle />
             <Circle />
           </Flex>
-        </WingBlank>
-        <WingBlank style={{ marginTop: 5, marginBottom: 5 }}>
+        </GapV>
+        <GapV style={{ marginTop: 5, marginBottom: 5 }}>
           <Text style={{ marginTop: 20, marginBottom: 20 }}>
             项目在交叉轴上的对齐方式
           </Text>
           <Text>align="start":交叉轴的起点对齐</Text>
-        </WingBlank>
-        <WingBlank style={{ marginBottom: 5 }}>
+        </GapV>
+        <GapV style={{ marginBottom: 5 }}>
           <Flex align="start" style={{ height: 30 }}>
             <Text
               style={{
@@ -169,11 +171,11 @@ export default class FlexExample extends React.Component<any, any> {
               兜兜
             </Text>
           </Flex>
-        </WingBlank>
-        <WingBlank style={{ marginTop: 5, marginBottom: 5 }}>
+        </GapV>
+        <GapV style={{ marginTop: 5, marginBottom: 5 }}>
           <Text>align="center":交叉轴的中点对齐</Text>
-        </WingBlank>
-        <WingBlank style={{ marginBottom: 5 }}>
+        </GapV>
+        <GapV style={{ marginBottom: 5 }}>
           <Flex align="center" style={{ height: 30 }}>
             <Text
               style={{
@@ -216,11 +218,11 @@ export default class FlexExample extends React.Component<any, any> {
               兜兜
             </Text>
           </Flex>
-        </WingBlank>
-        <WingBlank style={{ marginTop: 5, marginBottom: 5 }}>
+        </GapV>
+        <GapV style={{ marginTop: 5, marginBottom: 5 }}>
           <Text>align="end":交叉轴的终点对齐</Text>
-        </WingBlank>
-        <WingBlank style={{ marginBottom: 5 }}>
+        </GapV>
+        <GapV style={{ marginBottom: 5 }}>
           <Flex align="end" style={{ height: 30 }}>
             <Text
               style={{
@@ -263,14 +265,14 @@ export default class FlexExample extends React.Component<any, any> {
               兜兜
             </Text>
           </Flex>
-        </WingBlank>
-        <WingBlank style={{ marginTop: 5, marginBottom: 5 }}>
+        </GapV>
+        <GapV style={{ marginTop: 5, marginBottom: 5 }}>
           <Text>
             align="stretch":如果项目未设置高度或设为auto，将占满整个容器的高度
           </Text>
-        </WingBlank>
-        <WingBlank style={{ marginBottom: 5 }}>
-          <WingBlank>
+        </GapV>
+        <GapV style={{ marginBottom: 5 }}>
+          <GapV>
             <Flex align="stretch" style={{ height: 70 }}>
               <Text
                 style={{
@@ -313,13 +315,13 @@ export default class FlexExample extends React.Component<any, any> {
                 兜兜
               </Text>
             </Flex>
-          </WingBlank>
-        </WingBlank>
-        <WingBlank style={{ marginTop: 5, marginBottom: 5 }}>
+          </GapV>
+        </GapV>
+        <GapV style={{ marginTop: 5, marginBottom: 5 }}>
           <Text style={{ marginBottom: 10 }}>是否折行</Text>
           <Text>wrap="wrap":换行</Text>
-        </WingBlank>
-        <WingBlank style={{ marginBottom: 5 }}>
+        </GapV>
+        <GapV style={{ marginBottom: 5 }}>
           <TouchableWithoutFeedback onPress={() => ({})}>
             <Flex wrap="wrap">
               {'ooooooooooooooooooooooooooooo'
@@ -327,20 +329,20 @@ export default class FlexExample extends React.Component<any, any> {
                 .map((char, i) => <Circle key={`${i}-${char}`} />)}
             </Flex>
           </TouchableWithoutFeedback>
-        </WingBlank>
-        <WingBlank style={{ marginTop: 5, marginBottom: 5 }}>
+        </GapV>
+        <GapV style={{ marginTop: 5, marginBottom: 5 }}>
           <Text>wrap="nowrap":不换行</Text>
-        </WingBlank>
-        <WingBlank style={{ marginBottom: 5 }}>
+        </GapV>
+        <GapV style={{ marginBottom: 5 }}>
           <Flex wrap="nowrap" onPress={() => ({})}>
             {'ooooooooooooooooooooooooooooo'
               .split('')
               .map((char, i) => <Circle key={`${i}-${char}`} />)}
           </Flex>
-        </WingBlank>
-        <WhiteSpace />
-        <WhiteSpace />
-        <WhiteSpace />
+        </GapV>
+        <GapH />
+        <GapH />
+        <GapH />
       </ScrollView>
     );
   }

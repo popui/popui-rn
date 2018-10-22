@@ -1,6 +1,7 @@
 // tslint:disable:jsx-no-multiline-js
 
 import React from "react";
+import { observer } from 'mobx-react';
 import {
   ActivityIndicator,
   Animated,
@@ -10,7 +11,7 @@ import {
   View
 } from "react-native";
 import ToastContainerStyle, { IToastStyle } from "./style/index";
-import PureIconWeui  from '../icon-weui/PureIconWeui'
+import PureWeuiIcon  from '../weui-icon/PureWeuiIcon'
 export interface ToastProps {
   content: string;
   textStyle?: any;
@@ -24,6 +25,7 @@ export interface ToastProps {
 
 const ToastContainerStyles = StyleSheet.create<any>(ToastContainerStyle);
 
+@observer
 export default class ToastContainer extends React.Component<ToastProps, any> {
   static defaultProps = {
     duration: 3,
@@ -101,19 +103,19 @@ export default class ToastContainer extends React.Component<ToastProps, any> {
           />);
         break;
       case "success":
-        iconDom = <PureIconWeui name={'success_no_circle'} style={[styles.toastIcon]} />;
+        iconDom = <PureWeuiIcon name={'success_no_circle'} style={[styles.toastIcon]} />;
         break;
       case "fail":
-        iconDom = <PureIconWeui name={'cancel'} style={[styles.toastIcon]} />;
+        iconDom = <PureWeuiIcon name={'cancel'} style={[styles.toastIcon]} />;
         break;
       case "offline":
-        iconDom = <PureIconWeui name={'warn'} style={[styles.toastIcon]} />;
+        iconDom = <PureWeuiIcon name={'warn'} style={[styles.toastIcon]} />;
         break;
       case "info":
         iconDom = null;
         break;
       default:
-        iconDom = <PureIconWeui name={type} style={[styles.toastIcon]} />;
+        iconDom = <PureWeuiIcon name={type} style={[styles.toastIcon]} />;
         // iconDom = <Image source={iconType[type]} style={styles.toastImage} />;
         break;
     }

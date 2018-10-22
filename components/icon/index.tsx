@@ -1,4 +1,5 @@
 import React from 'react';
+import { observer } from 'mobx-react'
 import { StyleProp, Text, ViewStyle } from 'react-native';
 import { IconPropsType } from './PropsType';
 
@@ -20,6 +21,7 @@ export interface IconProps extends IconPropsType {
   style?: StyleProp<ViewStyle>;
   size?: 'xxs' | 'xs' | 'sm' | 'md' | 'lg' | number;
 }
+@observer
 export default class Icon extends React.Component<IconProps, any> {
   static defaultProps = {
     size: 'md',

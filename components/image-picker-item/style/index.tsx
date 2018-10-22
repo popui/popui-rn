@@ -1,6 +1,5 @@
-import varibles from '../../style/themes/default';
-import varibles from '../../style/themes/default'
-
+import {themeStore} from '../../theme-store';
+const { themeVars } = themeStore;
 export interface IImagePickerItemStyle {
   [key:string]:any
 }
@@ -8,16 +7,16 @@ export interface IImagePickerItemStyle {
 export default {
   uploaderFile: {
     position: 'relative',
-    width: varibles.UploaderSize,
-    height: varibles.UploaderSize,
-    marginRight: varibles.UploaderFileSpacing,
-    marginBottom: varibles.UploaderFileSpacing,
+    width: themeVars.UploaderSize,
+    height: themeVars.UploaderSize,
+    marginRight: themeVars.UploaderFileSpacing,
+    marginBottom: themeVars.UploaderFileSpacing,
   },
   uploaderFileImage: {
-    width: varibles.UploaderSize,
-    height: varibles.UploaderSize,
+    width: themeVars.UploaderSize,
+    height: themeVars.UploaderSize,
     overflow: 'hidden',
-    borderRadius: varibles.radius_sm,
+    borderRadius: themeVars.radius_sm,
   },
   uploaderStatusContainer: {
     position: 'absolute',

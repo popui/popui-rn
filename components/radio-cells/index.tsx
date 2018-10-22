@@ -1,14 +1,16 @@
 import React from 'react'
+import { observer } from 'mobx-react';
 import { StyleSheet } from 'react-native'
 import { Cell, CellBody, Cells, CellText } from 'popui-rn'
 
-import IconWeui from '../icon-weui'
-import varibles from '../style/themes/default'
+import WeuiIcon from '../weui-icon'
+import { themeStore } from '../theme-store';
+const { themeVars } = themeStore;
 
 const styles = StyleSheet.create({
     radio: {
         fontSize: 16,
-        paddingLeft: varibles.CellInnerGapH,
+        paddingLeft: themeVars.CellInnerGapH,
     },
     disabled: {
         opacity: 0.5,
@@ -23,7 +25,7 @@ const RadioCells = ({ value, options, onChange, disabled, style, children, ...ot
                     <CellText>{option.label || option.value}</CellText>
                 </CellBody>
                 {value === option.value ? (
-                    <IconWeui name="success_no_circle" style={styles.radio}/>
+                    <WeuiIcon name="success_no_circle" style={styles.radio}/>
                 ) : null}
             </Cell>,
         )}
@@ -35,8 +37,8 @@ const RadioCells = ({ value, options, onChange, disabled, style, children, ...ot
 //     options: PropTypes.array.isRequired,
 //     onChange: PropTypes.func,
 //     disabled: PropTypes.bool,
-//     style: IconWeui.propTypes.style,
+//     style: WeuiIcon.propTypes.style,
 //     children: PropTypes.node,
 // }
 
-export default RadioCells
+export default observer(RadioCells)

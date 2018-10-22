@@ -1,7 +1,8 @@
 import React from "react";
-import { Text, View, ViewStyle,StyleSheet,SafeAreaView } from "react-native";
-import { Button, ButtonWeui, Progress, WhiteSpace } from "popui-rn";
-const { Button, ButtonArea } = ButtonWeui;
+import { observer } from 'mobx-react';
+import { Text, View,StyleSheet,SafeAreaView } from "react-native";
+import {  WeuiButton as Button,WeuiButtonArea, Progress, GapH } from "popui-rn";
+
 const styles = StyleSheet.create({
   container:{
     paddingTop:15
@@ -13,6 +14,7 @@ const styles = StyleSheet.create({
   }
 })
 
+@observer
 export default class BasicProgressExample extends React.Component<any, any> {
   timer: any;
   isUploading = false;
@@ -63,7 +65,7 @@ export default class BasicProgressExample extends React.Component<any, any> {
           <Progress percent={this.state.percent} style={{ marginRight: 10, height: 4, flex: 1 }}/>
         <Text>{this.state.percent}%</Text>
       </View>
-      <ButtonArea direction="horizontal" >
+      <WeuiButtonArea direction="horizontal" >
         <Button onPress={this.onAdd10} >
           +10
           </Button>
@@ -73,7 +75,7 @@ export default class BasicProgressExample extends React.Component<any, any> {
         <Button onPress={this.stop} style={{ marginLeft: 10 }}>
           stop
           </Button>
-      </ButtonArea>
+      </WeuiButtonArea>
     </View>
   }
   render() {
@@ -81,12 +83,12 @@ export default class BasicProgressExample extends React.Component<any, any> {
       <View style={styles.container}>
         <Text>{"最上方 percent={80} position=\"fixed\""}</Text>
         <Progress percent={80} position="fixed" />
-        <WhiteSpace size="xl"/>
+        <GapH size="xl"/>
 
         <Text>{"固定 percent={35} unfilled={false}"}</Text>
         <Progress percent={35} unfilled={false}/>
-        <WhiteSpace size="xl"/>
-        
+        <GapH size="xl"/>
+
         {this.renderAdvanced()}
       </View>
     );

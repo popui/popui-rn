@@ -1,12 +1,14 @@
 import React from 'react';
+import { observer } from 'mobx-react'
 import { Text, View } from 'react-native';
-import { Card, WhiteSpace, WingBlank } from 'popui-rn';
+import { Card, GapH, GapV } from 'popui-rn';
 
+@observer
 export default class BasicCardExample extends React.Component<any, any> {
   render() {
     return (
       <View style={{ paddingTop: 30 }}>
-        <WingBlank size="lg">
+        <GapV size="lg">
           <Card>
             <Card.Header
               title="This is title"
@@ -24,8 +26,8 @@ export default class BasicCardExample extends React.Component<any, any> {
               extra="footer extra content"
             />
           </Card>
-        </WingBlank>
-        <WhiteSpace size="lg" />
+        </GapV>
+        <GapH size="lg" />
         <Card full>
           <Card.Header
             title="Full Column"

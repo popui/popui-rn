@@ -1,11 +1,31 @@
-import Panel from './Panel'
-import PanelBody from './PanelBody'
-import PanelFooter from './PanelFooter'
-import PanelHeader from './PanelHeader'
+// import PropTypes from 'prop-types'
+import React from 'react'
+import { observer } from 'mobx-react';
+import { StyleSheet, View } from 'react-native'
+import { themeStore } from '../theme-store';
+const { themeVars } = themeStore;
+import {PanelPropsType} from './PropsType';
 
-export default {
-    Panel,
-    PanelHeader,
-    PanelBody,
-    PanelFooter,
-}
+const styles = StyleSheet.create({
+    panel: {
+        backgroundColor: '#fff',
+        marginTop: 10,
+        overflow: 'hidden',
+        borderTopWidth: StyleSheet.hairlineWidth,
+        borderBottomWidth: StyleSheet.hairlineWidth,
+        borderStyle: 'solid',
+        borderColor: themeVars.LineColorLight,
+    },
+})
+
+const Panel = ({ children, style, ...others }:PanelPropsType) =>
+    <View style={[styles.panel, style]} {...others} >
+        {children}
+    </View>
+
+// Panel.propTypes = {
+//     children: PropTypes.node,
+//     style: ViewPropTypes.style,
+// }
+
+export default observer(Panel)

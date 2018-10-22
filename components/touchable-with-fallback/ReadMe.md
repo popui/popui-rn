@@ -34,9 +34,11 @@ yarn add react-native-platform-touchable
 
 ```javascript
 import React from 'react';
+import { observer } from 'mobx-react'
 import { Text, View } from 'react-native';
 import Touchable from 'react-native-platform-touchable';
 
+@observer
 export default class App extends React.Component {
   render() {
     return (

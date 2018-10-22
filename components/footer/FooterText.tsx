@@ -1,12 +1,14 @@
 import PropTypes from 'prop-types'
 import React from 'react'
+import { observer } from 'mobx-react';
 import { StyleSheet, Text, ViewPropTypes } from 'react-native'
-import varibles from '../style/themes/default'
+import { themeStore } from '../theme-store';
+const { themeVars } = themeStore;
 
 const TextFontSize = 12
 const styles = StyleSheet.create({
     footerText: {
-        color: varibles.TextColorGray,
+        color: themeVars.TextColorGray,
         marginLeft: 0.34 * TextFontSize,
         marginRight: 0.34 * TextFontSize,
         fontSize: TextFontSize,
@@ -28,4 +30,4 @@ FooterText.propTypes = {
     others: PropTypes.object,
 }
 
-export default FooterText
+export default observer(FooterText)

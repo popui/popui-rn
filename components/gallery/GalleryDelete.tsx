@@ -1,6 +1,7 @@
 import React from 'react'
+import { observer } from 'mobx-react';
 import { StyleSheet, TouchableWithoutFeedback, View, ViewPropTypes } from 'react-native'
-import IconWeui from '../icon-weui'
+import WeuiIcon from '../weui-icon'
 
 const styles = StyleSheet.create({
     galleryDelete: {
@@ -13,7 +14,7 @@ const styles = StyleSheet.create({
 
 const GalleryDelete = ({ style, ...others }) =>
     <TouchableWithoutFeedback {...others}>
-        <View style={[styles.galleryDelete, style]}><IconWeui name="delete"/></View>
+        <View style={[styles.galleryDelete, style]}><WeuiIcon name="delete"/></View>
     </TouchableWithoutFeedback>
 
 GalleryDelete.propTypes = {

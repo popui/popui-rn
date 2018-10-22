@@ -1,7 +1,9 @@
 import React from 'react';
+import { observer } from 'mobx-react'
 import { View, Text } from 'react-native';
 import { TabBar, SearchBar } from 'popui-rn';
 
+@observer
 export default class BasicTabBarExample extends React.Component<any, any> {
   constructor(props: any) {
     super(props);

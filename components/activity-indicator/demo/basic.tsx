@@ -1,13 +1,15 @@
 import React from 'react';
+import { observer } from 'mobx-react'
 import { StyleSheet, Text, View } from 'react-native';
 import {
   ActivityIndicator,
   Button,
   Flex,
-  WhiteSpace,
-  WingBlank,
+  GapH,
+  GapV,
 } from 'popui-rn';
 
+@observer
 export default class ActivityIndicatorExample extends React.Component<any, any> {
   closeTimer: any;
   constructor(props: any) {
@@ -32,7 +34,7 @@ export default class ActivityIndicatorExample extends React.Component<any, any> 
   render() {
     return (
       <View style={[styles.demo]}>
-        <WingBlank>
+        <GapV>
           <Flex>
             <Flex.Item>
               <Text>Icon without text</Text>
@@ -41,9 +43,9 @@ export default class ActivityIndicatorExample extends React.Component<any, any> 
               <ActivityIndicator />
             </Flex.Item>
           </Flex>
-        </WingBlank>
-        <WhiteSpace size="xl" style={{ backgroundColor: '#fff' }} />
-        <WingBlank>
+        </GapV>
+        <GapH size="xl" style={{ backgroundColor: '#fff' }} />
+        <GapV>
           <Flex>
             <Flex.Item>
               <Text>Icon with text</Text>
@@ -52,9 +54,9 @@ export default class ActivityIndicatorExample extends React.Component<any, any> 
               <ActivityIndicator text="Loading..." />
             </Flex.Item>
           </Flex>
-        </WingBlank>
-        <WhiteSpace size="xl" style={{ backgroundColor: '#fff' }} />
-        <WingBlank>
+        </GapV>
+        <GapH size="xl" style={{ backgroundColor: '#fff' }} />
+        <GapV>
           <Flex>
             <Flex.Item>
               <Text>Dark Background</Text>
@@ -65,9 +67,9 @@ export default class ActivityIndicatorExample extends React.Component<any, any> 
               </View>
             </Flex.Item>
           </Flex>
-        </WingBlank>
-        <WhiteSpace size="xl" style={{ backgroundColor: '#fff' }} />
-        <WingBlank>
+        </GapV>
+        <GapH size="xl" style={{ backgroundColor: '#fff' }} />
+        <GapV>
           <Flex>
             <Flex.Item>
               <Text>Large Size</Text>
@@ -76,11 +78,11 @@ export default class ActivityIndicatorExample extends React.Component<any, any> 
               <ActivityIndicator size="large" />
             </Flex.Item>
           </Flex>
-        </WingBlank>
-        <WhiteSpace size="xl" style={{ backgroundColor: '#fff' }} />
-        <WingBlank>
+        </GapV>
+        <GapH size="xl" style={{ backgroundColor: '#fff' }} />
+        <GapV>
           <Button onClick={this.loadingToast}>Click to show Toast</Button>
-        </WingBlank>
+        </GapV>
         <ActivityIndicator
           animating={this.state.animating}
           toast

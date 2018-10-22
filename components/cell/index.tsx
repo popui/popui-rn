@@ -1,18 +1,20 @@
 import React from 'react'
+import { observer } from 'mobx-react';
 import { StyleSheet, View, ViewStyle } from 'react-native'
-import varibles from '../style/themes/default'
+import { themeStore } from '../theme-store';
+const { themeVars } = themeStore;
 import TouchableWithFallback from '../touchable-with-fallback'
 
 const styles = StyleSheet.create({
   cell: {
     flexDirection: 'row',
     alignItems: 'center',
-    marginLeft: varibles.CellGapH,
-    paddingTop: varibles.CellGapV,
-    paddingBottom: varibles.CellGapV,
-    paddingRight: varibles.CellGapH,
+    marginLeft: themeVars.CellGapH,
+    paddingTop: themeVars.CellGapV,
+    paddingBottom: themeVars.CellGapV,
+    paddingRight: themeVars.CellGapH,
     borderTopWidth: StyleSheet.hairlineWidth,
-    borderColor: varibles.CellBorderColor,
+    borderColor: themeVars.CellBorderColor,
   },
   firstCell: {
     borderTopWidth: 0,
@@ -40,6 +42,7 @@ export interface CellProps {
 export interface CellState {
 }
 
+@observer
 export default class Cell extends React.Component<CellProps, CellState> {
   private renderChildrenWithProps = () => {
     const { access, error, children} = this.props
@@ -69,7 +72,7 @@ export default class Cell extends React.Component<CellProps, CellState> {
   public render() {
     const { access, vcode, error, first, disabled, children, style, ...others } = this.props
     return (
-      <TouchableWithFallback underlayColor={varibles.BgColorActive} {...others} >
+      <TouchableWithFallback underlayColor={themeVars.BgColorActive} {...others} >
         <View
           style={[
             styles.cell,

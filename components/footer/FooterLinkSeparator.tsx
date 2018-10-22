@@ -1,14 +1,16 @@
 import PropTypes from 'prop-types'
 import React from 'react'
+import { observer } from 'mobx-react';
 import { StyleSheet, View, ViewPropTypes } from 'react-native'
-import varibles from '../style/themes/default'
+import { themeStore } from '../theme-store';
+const { themeVars } = themeStore;
 
 const styles = StyleSheet.create({
     footerlinkseparator: {
-        borderColor: varibles.grayColor,
+        borderColor: themeVars.grayColor,
         width: StyleSheet.hairlineWidth,
         borderRightWidth: StyleSheet.hairlineWidth,
-        height: varibles.globalFontSize,
+        height: themeVars.globalFontSize,
     },
 })
 
@@ -27,4 +29,4 @@ FooterLinkSeparator.propTypes = {
     others: PropTypes.object,
 }
 
-export default FooterLinkSeparator
+export default observer(FooterLinkSeparator)

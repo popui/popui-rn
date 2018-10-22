@@ -1,16 +1,18 @@
 import PropTypes from 'prop-types'
 import React from 'react'
+import { observer } from 'mobx-react';
 import { StyleSheet, View, ViewPropTypes } from 'react-native'
-import varibles from '../style/themes/default'
+import { themeStore } from '../theme-store';
+const { themeVars } = themeStore;
 
 const styles = StyleSheet.create({
   cells: {
-    marginTop: varibles.CellssMarginTop,
-    backgroundColor: varibles.CellBg,
+    marginTop: themeVars.CellssMarginTop,
+    backgroundColor: themeVars.CellBg,
     overflow: 'hidden',
     borderTopWidth: StyleSheet.hairlineWidth,
     borderBottomWidth: StyleSheet.hairlineWidth,
-    borderColor: varibles.CellBorderColor
+    borderColor: themeVars.CellBorderColor
   }
 })
 
@@ -34,4 +36,4 @@ Cells.propTypes = {
   style: ViewPropTypes.style
 }
 
-export default Cells
+export default observer(Cells)

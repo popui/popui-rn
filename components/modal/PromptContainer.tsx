@@ -1,5 +1,6 @@
 /* tslint:disable:jsx-no-multiline-js */
 import React from 'react';
+import { observer } from 'mobx-react'
 import {
   KeyboardAvoidingView,
   StyleSheet,
@@ -25,6 +26,7 @@ export interface PropmptContainerProps {
 
 const promptStyles = StyleSheet.create<any>(promptStyle);
 
+@observer
 export default class PropmptContainer extends React.Component<
   PropmptContainerProps,
   any

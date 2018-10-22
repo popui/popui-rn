@@ -1,4 +1,5 @@
 import React from 'react';
+import { observer } from 'mobx-react'
 import {
   Image,
   ImageRequireSource,
@@ -26,6 +27,7 @@ export interface TabBarItemProps {
   styles?: any;
 }
 
+@observer
 export default class TabBarItem extends React.Component<TabBarItemProps, any> {
   static defaultProps = {
     onPress() {},
