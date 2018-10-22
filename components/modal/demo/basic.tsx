@@ -135,7 +135,6 @@ export default class BasicModalExample extends React.Component<any, any> {
 
         <Modal
           title="Title"
-          transparent
           onClose={this.onClose}
           maskClosable
           visible={this.state.visible}

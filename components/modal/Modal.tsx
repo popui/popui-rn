@@ -13,10 +13,14 @@ import {
   ViewStyle,
   TextStyle
 } from "react-native";
+import { themeStore } from "../theme-store";
+const { themeVars } = themeStore;
+
 import RCModal from "rmc-dialog/lib/Modal";
-import { ModalPropsType } from "./PropsType";
+import { ModalPropsType, ActionPropsType } from "./PropsType";
 import modalStyle, { IModalStyle } from "./style/index";
 import { noopFunc } from "../_util/noop";
+import TouchableWithFallback from "../touchable-with-fallback";
 
 // debug
 import { createDebug } from "../_util/debug";
@@ -38,16 +42,17 @@ const modalStyles = StyleSheet.create<any>(modalStyle);
 
 @observer
 class AntmModal extends React.Component<IModalNativeProps, any> {
+  private horizontalFlex: any;
   static defaultProps = {
     visible: false,
     closable: false,
-    maskClosable: false,
+    maskClosable: true,
     style: {},
     bodyStyle: {},
     animationType: "fade",
     onClose: noopFunc,
     footer: [],
-    transparent: false,
+    transparent: true,
     popup: false,
     animateAppear: true,
     styles: modalStyles,
@@ -70,74 +75,101 @@ class AntmModal extends React.Component<IModalNativeProps, any> {
   saveRoot = (root: any) => {
     this.root = root;
   };
+  renderFooterButton = (action: ActionPropsType<any>, index: number) => {
+    const { text=`按钮${index}`, type, onPress, style } = action;
+    const { onClose, operation } = this.props;
+    const footer = this.props.footer!;
+    const styles = this.props.styles!;
+    // 按钮数量多余1个
+    const hasMoreThanOneButton = footer.length > 1;
+    // 当前渲染的是最后一个
+    const isLastButton = index === footer.length - 1;
+    // type
+    let defaultType = 'default'
+    if(isLastButton){
+      defaultType = 'primary'
+    }
+    const buttonType = type || defaultType
+
+    // 自定义按钮样式
+    let buttonStyle = {};
+    if (operation) {
+      buttonStyle = styles.buttonTextOperation;
+    }
+    if (style) {
+      buttonStyle = style;
+      // 如果是字符串, 转换成对象
+      // Todo: 去掉
+      // if (typeof buttonStyle === "string") {
+      //   const styleMap: {
+      //     [key: string]: object;
+      //   } = {
+      //     cancel: {},
+      //     default: {},
+      //     destructive: { color: "red" }
+      //   };
+      //   buttonStyle = styleMap[buttonStyle] || {};
+      // }
+    }
+    // 最后一个按钮右边无 border
+    const noneBorder =
+      footer && hasMoreThanOneButton && isLastButton
+        ? { borderRightWidth: 0 }
+        : {};
+    // 点击
+    const onPressFn = () => {
+      if (onPress) {
+        onPress();
+      }
+      if (onClose) {
+        onClose();
+      }
+    };
+    // 一个按钮使用 buttonWrapV, 多于 1个 水平排列
+    const buttonWrapStyle =
+      footer && hasMoreThanOneButton ? styles.buttonWrapH : styles.buttonWrapV;
+    const textStyle = [
+      styles.buttonText,
+      styles[`buttonText_${buttonType}`],
+      buttonStyle
+    ];
+    return (
+      <TouchableWithFallback
+        key={index}
+        style={this.horizontalFlex}
+        underlayColor={themeVars.DialogLinkActiveBc}
+        onPress={onPressFn}
+      >
+        <View style={[buttonWrapStyle, noneBorder]}>
+          <Text style={textStyle}>{text}</Text>
+        </View>
+      </TouchableWithFallback>
+    );
+  };
   renderFooter = () => {
-    const { footer, onClose, operation } = this.props;
+    const { footer, operation } = this.props;
     const styles = this.props.styles!;
     let btnGroupStyle = styles.buttonGroupV;
-    let horizontalFlex = {};
-    if (footer && footer.length === 2 && !operation) {
+    if (footer && footer.length > 1 && !operation) {
       btnGroupStyle = styles.buttonGroupH;
-      horizontalFlex = { flex: 1 };
+      this.horizontalFlex = { flex: 1 };
+    } else {
+      this.horizontalFlex = {};
     }
-    const buttonWrapStyle =
-      footer && footer.length === 2 ? styles.buttonWrapH : styles.buttonWrapV;
-    let footerDom;
-    if (footer && footer.length) {
-      const footerButtons = footer.map((button, i) => {
-        let buttonStyle = {};
-        if (operation) {
-          buttonStyle = styles.buttonTextOperation;
-        }
-        if (button.style) {
-          buttonStyle = button.style;
-          if (typeof buttonStyle === "string") {
-            const styleMap: {
-              [key: string]: object;
-            } = {
-              cancel: {},
-              default: {},
-              destructive: { color: "red" }
-            };
-            buttonStyle = styleMap[buttonStyle] || {};
-          }
-        }
-        const noneBorder =
-          footer && footer.length === 2 && i === 1
-            ? { borderRightWidth: 0 }
-            : {};
-        const onPressFn = () => {
-          if (button.onPress) {
-            button.onPress();
-          }
-          if (onClose) {
-            onClose();
-          }
-        };
-        return (
-          <TouchableHighlight
-            key={i}
-            style={horizontalFlex}
-            underlayColor="#ddd"
-            onPress={onPressFn}
-          >
-            <View style={[buttonWrapStyle, noneBorder]}>
-              <Text style={[styles.buttonText, buttonStyle]}>
-                {button.text || `按钮${i}`}
-              </Text>
-            </View>
-          </TouchableHighlight>
-        );
-      });
-      footerDom = (
-        <View
-          style={[btnGroupStyle, styles.footer]}
-          onLayout={this.onFooterLayout}
-        >
-          {footerButtons}
-        </View>
-      );
+    if (!footer || footer.length === 0) {
+      return null;
     }
-    return footerDom;
+    const footerButtons = footer.map((button, i) =>
+      this.renderFooterButton(button, i)
+    );
+    return (
+      <View
+        style={[btnGroupStyle, styles.footer]}
+        onLayout={this.onFooterLayout}
+      >
+        {footerButtons}
+      </View>
+    );
   };
   renderPopup = () => {
     const {
@@ -183,17 +215,15 @@ class AntmModal extends React.Component<IModalNativeProps, any> {
       </View>
     );
   };
-  renderCloseButton = () =>{
-    const {
-      onClose,
-    } = this.props;
+  renderCloseButton = () => {
+    const { onClose } = this.props;
     const styles = this.props.styles!;
     return (
       <TouchableOpacity onPress={onClose} style={[styles.closeWrap]}>
         <Text style={[styles.close]}>×</Text>
       </TouchableOpacity>
-    )
-  }
+    );
+  };
   renderTransparent = () => {
     const {
       title,
@@ -231,7 +261,7 @@ class AntmModal extends React.Component<IModalNativeProps, any> {
             {title ? <Text style={[styles.header]}>{title}</Text> : null}
             <View style={[styles.body, bodyStyle]}>{children}</View>
             {footerDom}
-            {closable  && this.renderCloseButton()}
+            {closable && this.renderCloseButton()}
           </View>
         </RCModal>
       </View>
@@ -251,11 +281,11 @@ class AntmModal extends React.Component<IModalNativeProps, any> {
     });
     const styles = this.props.styles!;
     let animType = this.props.animationType;
-    if (transparent) {
-      return this.renderTransparent();
-    }
     if (popup) {
       return this.renderPopup();
+    }
+    if (transparent) {
+      return this.renderTransparent();
     }
     if (
       animType === "slide-up" ||

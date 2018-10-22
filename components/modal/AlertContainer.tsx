@@ -3,12 +3,12 @@ import React from 'react';
 import { observer } from 'mobx-react'
 import { ScrollView, Text, TextStyle } from 'react-native';
 import Modal from './Modal';
-import { Action } from './PropsType';
+import { ActionPropsType } from './PropsType';
 import {noopFunc} from '../_util/noop';
 export interface AlertContainerProps {
   title: React.ReactNode;
   content: React.ReactNode;
-  actions: Action<TextStyle>[];
+  actions: ActionPropsType<TextStyle>[];
   onAnimationEnd?: (visible: boolean) => void;
 }
 

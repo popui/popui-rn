@@ -1,6 +1,7 @@
-import { StyleSheet, TextStyle, ViewStyle } from 'react-native';
-import {themeStore} from '../../theme-store';
+import { StyleSheet, TextStyle, ViewStyle, Dimensions } from "react-native";
+import { themeStore } from "../../theme-store";
 const { themeVars } = themeStore;
+const { width } = Dimensions.get("window");
 
 export interface IModalStyle {
   container: ViewStyle;
@@ -25,104 +26,147 @@ export interface IModalStyle {
 
 export default {
   container: {
-    zIndex: themeVars.modal_zindex,
+    zIndex: themeVars.modal_zindex
   },
   wrap: {
-    justifyContent: 'center',
-    alignItems: 'center',
+    justifyContent: "center",
+    alignItems: "center"
   },
   popupContainer: {},
   popupSlideUp: {
-    position: 'absolute',
+    position: "absolute",
     left: 0,
     right: 0,
-    bottom: 0,
+    bottom: 0
   },
   popupSlideDown: {},
   innerContainer: {
-    borderRadius: themeVars.radius_md,
-    width: 286,
-    paddingTop: themeVars.v_spacing_xl,
-    overflow: 'hidden',
+    width: width - 60,
+    backgroundColor: themeVars.DialogBackgroundColor,
+    borderRadius: 3,
+    overflow: "hidden"
+    // borderRadius: themeVars.radius_md,
+    // width: 286,
+    // paddingTop: themeVars.v_spacing_xl,
+    // overflow: 'hidden',
   },
   // fix android borderRadius
+
+  header: {
+    paddingTop: 1.3 * themeVars.baseFontSize,
+    paddingBottom: 0.5 * themeVars.baseFontSize,
+    paddingLeft: themeVars.DialogGapWidth,
+    paddingRight: themeVars.DialogGapWidth,
+    fontWeight: "400",
+    color: themeVars.color_text_base,
+    fontSize: themeVars.modal_font_size_heading,
+    textAlign: "center"
+    // paddingHorizontal: themeVars.h_spacing_lg,
+  },
+  body: {
+    paddingLeft: themeVars.DialogGapWidth,
+    paddingRight: themeVars.DialogGapWidth,
+    paddingBottom: 32, // (0.8 * 15) + 20,
+    paddingTop: 0
+    // paddingBottom: themeVars.v_spacing_lg,
+    // paddingHorizontal: themeVars.h_spacing_lg,
+  },
+  bodyText: {
+    color: themeVars.TextColorGray,
+    lineHeight: 19.5, // 15 * 1.3,
+    // android: {
+    //     lineHeight: Math.round(15 * 1.3),
+    // },
+    fontSize: 15,
+    textAlign: "center"
+  },
+  maskClosable: {
+    position: "absolute",
+    top: 0,
+    bottom: 0,
+    left: 0,
+    right: 0,
+    backgroundColor: "transparent"
+  },
+  closeWrap: {
+    position: "absolute",
+    top: 0,
+    left: themeVars.h_spacing_lg
+  },
+  close: {
+    fontSize: 40,
+    fontWeight: "200",
+    color: "#bcbcbc",
+    lineHeight: 30
+  },
   footer: {
-    position: 'absolute',
+    position: "absolute",
     bottom: 0,
     left: 0,
     right: 0,
     borderBottomLeftRadius: themeVars.radius_md,
-    borderBottomRightRadius: themeVars.radius_md,
-  },
-  header: {
-    fontSize: themeVars.modal_font_size_heading,
-    color: themeVars.color_text_base,
-    textAlign: 'center',
-    paddingHorizontal: themeVars.h_spacing_lg,
-  },
-  body: {
-    paddingTop: 0,
-    paddingBottom: themeVars.v_spacing_lg,
-    paddingHorizontal: themeVars.h_spacing_lg,
-  },
-  maskClosable: {
-    position: 'absolute',
-    top: 0,
-    bottom: 0,
-    left: 0,
-    right: 0,
-    backgroundColor: 'transparent',
-  },
-  closeWrap: {
-    position: 'absolute',
-    top: 0,
-    left: themeVars.h_spacing_lg,
-  },
-  close: {
-    fontSize: 40,
-    fontWeight: '200',
-    color: '#bcbcbc',
-    lineHeight: 30,
+    borderBottomRightRadius: themeVars.radius_md
+    // flexDirection: 'row',
+    // height: 48,
+    // alignItems: 'center',
+    // justifyContent: 'center',
+    // borderTopWidth: StyleSheet.hairlineWidth,
+    // borderColor: themeVars.DialogLineColor,
+    // borderStyle: 'solid',
   },
   buttonGroupH: {
     flexGrow: 1,
-    flexDirection: 'row',
+    flexDirection: "row"
   },
   buttonGroupV: {
     flexGrow: 1,
-    flexDirection: 'column',
+    flexDirection: "column"
   },
   buttonWrapH: {
     height: themeVars.modal_button_height,
     flexGrow: 1,
-    justifyContent: 'center',
-    borderColor: themeVars.border_color_base,
+    justifyContent: "center",
+    // borderColor: themeVars.border_color_base,
+    borderColor: themeVars.DialogLineColor,
+    borderStyle: 'solid',
     borderTopWidth: StyleSheet.hairlineWidth,
     borderRightWidth: StyleSheet.hairlineWidth,
-    paddingVertical: 11,
+    paddingVertical: 11
   },
   buttonWrapV: {
     flexGrow: 1,
     borderTopWidth: StyleSheet.hairlineWidth,
-    borderColor: themeVars.border_color_base,
-    paddingVertical: 11,
+    borderStyle: 'solid',
+    // borderColor: themeVars.border_color_base,
+    borderColor: themeVars.DialogLineColor,
+    paddingVertical: 11
   },
   buttonText: {
-    textAlign: 'center',
+    textAlign: "center",
     color: themeVars.color_link,
     fontSize: themeVars.modal_button_font_size,
-    backgroundColor: 'transparent',
+    backgroundColor: "transparent"
+  },
+  buttonText_default: {
+    color: '#353535',
+  },
+  buttonText_primary: {
+      // color: '#0BB20C',
+      color: themeVars.color_link,
+  },
+  buttonText_warn: {
+      color: themeVars.ColorWarn,
   },
   operationContainer: {
-    paddingTop: 0,
+    paddingTop: 0
   },
   operationBody: {
     paddingBottom: 0,
-    paddingHorizontal: 0,
+    paddingHorizontal: 0
   },
   buttonTextOperation: {
     color: themeVars.color_text_base,
-    textAlign: 'left',
-    paddingHorizontal: 15,
-  },
+    textAlign: "left",
+    paddingHorizontal: 15
+  }
 };

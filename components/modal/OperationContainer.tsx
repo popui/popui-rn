@@ -3,10 +3,10 @@ import { observer } from 'mobx-react'
 import { TextStyle } from 'react-native';
 import Modal from './Modal';
 import modalStyle from './style/index';
-import { Action } from './PropsType';
+import { ActionPropsType } from './PropsType';
 
 export interface OperationContainerProps {
-  actions: Action<TextStyle>[];
+  actions: ActionPropsType<TextStyle>[];
   onAnimationEnd?: (visible: boolean) => void;
 }
 

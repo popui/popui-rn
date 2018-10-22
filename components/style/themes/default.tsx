@@ -129,7 +129,7 @@ export default {
   // modal
   modal_font_size_heading: 18,
   modal_button_font_size: 18, // 按钮字号
-  modal_button_height: 50, // 按钮高度
+  modal_button_height: 48, // 按钮高度
 
   // list
   list_title_height: 30,
@@ -262,7 +262,7 @@ export default {
   DialogLineColor: "#D5D5D6",
   DialogLinkColor: "#3CC51F",
   DialogLinkActiveBc: "#EEEEEE",
-  DialogGapWidth: 1.6 * 16,
+  DialogGapWidth: 25.6, //1.6 * 16,
 
   BtnHeight: 46,
   BtnFontSize: 18,
