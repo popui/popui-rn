@@ -1,7 +1,7 @@
-import PropTypes from 'prop-types'
 import React from 'react'
-import { StyleSheet, Text, ViewPropTypes } from 'react-native'
+import { StyleSheet, Text } from 'react-native'
 import varibles from '../style/themes/default'
+import { CellBadgePropsTypes } from "./PropsType";
 
 const styles = StyleSheet.create({
   badge: {
@@ -21,8 +21,8 @@ const styles = StyleSheet.create({
   default: {},
   header: {
     position: 'absolute',
-    top: 0 - 12 * 0.4,
-    right: 0 - 12 * 0.4
+    top: -3, // 0 - 12 * 0.4,
+    right: -3 // 0 - 12 * 0.4
   },
   body: {
     marginLeft: 5
@@ -38,13 +38,13 @@ const styles = StyleSheet.create({
   }
 })
 
-function Badge({
+function CellBadge({
   dot = false,
   preset = 'default',
   style,
   children,
   ...others
-}) {
+}:CellBadgePropsTypes) {
   const textStyle = [
     styles.badge,
     styles[preset],
@@ -58,11 +58,4 @@ function Badge({
   )
 }
 
-Badge.propTypes = {
-  dot: PropTypes.bool,
-  preset: PropTypes.oneOf(['default', 'header', 'body', 'footer']),
-  style: ViewPropTypes.style,
-  children: PropTypes.node
-}
-
-export default Badge
+export default CellBadge

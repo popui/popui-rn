@@ -109,6 +109,7 @@
     "typescript": "~2.4.0"
   },
   "scripts": {
+    "expo-ios":"xcrun simctl openurl booted exp://127.0.0.1:19000",
     "expo": "DEBUG=metro* EXPO_DEBUG=true REACT_DEBUGGER=\"unset ELECTRON_RUN_AS_NODE && open -g 'rndebugger://set-debugger-loc?host=127.0.0.1&port=19001'\" expo start --max-workers 8 --lan --dev --no-minify",
     "expo-clean": "DEBUG='Metro:*' EXPO_DEBUG=true REACT_DEBUGGER=\"unset ELECTRON_RUN_AS_NODE && open -g 'rndebugger://set-debugger-loc?host=127.0.0.1&port=19001'\" expo start --max-workers 8 --lan --dev --no-minify -c",
     "lint": "npm run tslint && npm run srclint && npm run applint",

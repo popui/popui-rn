@@ -25,7 +25,7 @@ export default {
     width: 2 * grid,
     height: 2 * grid,
     borderRadius: grid,
-    backgroundColor: variables.brand_important,
+    backgroundColor: variables.ColorWarn,
     position: 'absolute',
     top: -1 * grid,
     right: -1 * grid,
@@ -38,7 +38,7 @@ export default {
   textDom: {
     paddingVertical: 0.5 * grid,
     paddingHorizontal: (Platform.OS === 'ios' ? 1.5 : 2) * grid,
-    backgroundColor: variables.brand_important,
+    backgroundColor: variables.ColorWarn,
     borderRadius: 4 * variables.radius_sm,
     borderStyle: 'solid',
     position: 'absolute',
@@ -47,7 +47,7 @@ export default {
   },
   textCorner: {
     width: 18 * grid,
-    backgroundColor: variables.brand_important,
+    backgroundColor: variables.ColorWarn,
     transform: [
       {
         rotate: '45deg',
