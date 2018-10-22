@@ -1,6 +1,6 @@
-import { Image, ScrollView,View } from "react-native";
+import { Image, View } from "react-native";
 import {
-  Badge2,
+  CellBadge,
   Media,
   MediaBody,
   MediaDescription,
@@ -40,7 +40,7 @@ export default class PanelScreen extends React.Component<IProps, any> {
                 <Image
                   source={{ uri: "https://weui.io/images/icon_tabbar.png" }}
                 />
-                <Badge2 preset="header">8</Badge2>
+                <CellBadge preset="header">8</CellBadge>
               </MediaHeader>
               <MediaBody>
                 <MediaTitle>标题一</MediaTitle>

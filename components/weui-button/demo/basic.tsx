@@ -1,4 +1,4 @@
-import { WeuiButton as Button, WeuiWeuiButtonArea as WeuiButtonArea, GapV } from 'popui-rn'
+import { WeuiButton as Button, WeuiButtonArea, GapV } from 'popui-rn'
 import React from 'react'
 import { observer } from 'mobx-react';
 import stylekit from 'react-native-stylekit'

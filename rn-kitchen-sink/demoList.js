@@ -147,7 +147,7 @@ module.exports = {
       title: 'Button Weui',
       description: '按钮',
       icon: 'https://os.alipayobjects.com/rmsportal/ZRDUYEzfOzKWdzE.png',
-      module: require('../components/weui-button/demo/index'),
+      module: require('../components/weui-button/demo/basic'),
     },
     {
       title: 'Carousel', // 必须
