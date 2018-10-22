@@ -139,7 +139,11 @@ export default {
     borderStyle: 'solid',
     // borderColor: themeVars.border_color_base,
     borderColor: themeVars.DialogLineColor,
-    paddingVertical: 11
+    // paddingVertical: 13,
+    paddingTop: 13,
+    paddingBottom: 13,
+    paddingLeft: 24,
+    paddingRight: 24,
   },
   buttonText: {
     textAlign: "center",

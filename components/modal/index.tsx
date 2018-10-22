@@ -154,16 +154,18 @@ class AntmModal extends React.Component<IModalNativeProps, any> {
     if(renderActions){
       return renderActions()
     }
+    if (!actions || actions.length === 0) {
+      return null;
+    }
     const styles = this.props.styles!;
+    // 默认垂直排列
     let btnGroupStyle = styles.buttonGroupV;
-    if (actions && actions.length > 1 && !operation) {
+    if (actions.length > 1 && !operation) {
+      // 水平排列
       btnGroupStyle = styles.buttonGroupH;
       this.horizontalFlex = { flex: 1 };
     } else {
       this.horizontalFlex = {};
-    }
-    if (!actions || actions.length === 0) {
-      return null;
     }
     const actionButtons = actions.map((button, i) =>
       this.renderActionButton(button, i)

@@ -132,18 +132,18 @@ export default class BasicModalExample extends React.Component<any, any> {
             popup
           </Button>
           <GapH />
-          <Button onClick={this.onAlert}>Modal.alert</Button>
+          <Button onClick={this.onAlert}>alert</Button>
           <GapH />
-          <Button onClick={this.onOpertation}>Modal.opertation</Button>
+          <Button onClick={this.onOpertation}>opertation</Button>
           <GapH />
-          <Button onClick={this.onPrompt}>Modal.prompt (default)</Button>
+          <Button onClick={this.onPrompt}>prompt (default)</Button>
           <GapH />
           <Button onClick={this.onPromptLogin}>
-            Modal.prompt (login-password)
+          prompt (login-password)
           </Button>
           <GapH />
           <Button onClick={this.onPromptSecureText}>
-            Modal.prompt (secure-text)
+          prompt (secure-text)
           </Button>
         </GapV>
 
