@@ -28,35 +28,3 @@ subtitle: 对话框
 | animationType | 可选: 'fade' / 'slide' | String | fade |
 | title | 标题 | React.Element | 无 |
 | footer | 底部内容 | Array [{text, onPress}] | [] |
-
-### Modal.alert(title, message, actions?, platform?)
-
-属性 | 说明 | 类型 | 默认值
-----|-----|------|------
-| title | 标题  | String 或 React.Element | 无  |
-| message  | 提示信息  | String 或 React.Element  | 无  |
-| actions | 按钮组, [{text, onPress, style}] | Array | 无  |
-
-`Modal.alert(title, message, actions?, platform?).close()` 可以在外部关闭 Alert
-
-### Modal.prompt(title, message, callbackOrActions, type?, defaultValue?, placeholders?, platform?)
-
-属性 | 说明 | 类型 | 默认值
-----|-----|------|------
-| title | 标题  | String 或 React.Element | 无  |
-| message  | 提示信息  | String 或 React.Element  | 无  |
-| callbackOrActions  | 按钮组 [{text, onPress}] 或回调函数  | Array or Function | 无  |
-| type | prompt 的样式 | String (`default`, `secure-text`, `login-password`)|  `default`  |
-| defaultValue | 默认值(input 为 password 类型不支持) | String | -  |
-| placeholders | ['', '']  | String[] | -  |
-
-
-`Modal.prompt(title, message, callbackOrActions, type?, defaultValue?, placeholders?, platform?).close()` 可以在外部关闭 prompt`
-
-### Modal.operation(actions?, platform?)
-
-属性 | 说明 | 类型 | 默认值
-----|-----|------|------
-| actions | 按钮组, [{text, onPress, style}] | Array | 无  |
-
-`Modal.operation(actions?, platform?).close()` 可以在外部关闭 operation`

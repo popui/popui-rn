@@ -12,7 +12,7 @@ import {
 import Modal from '../modal';
 import promptStyle from './style';
 import {PropmptContainerProps} from './PropsType';
-
+// import ModalBodyText from '../modal-body-text';
 
 const promptStyles = StyleSheet.create<any>(promptStyle);
 
@@ -47,7 +47,18 @@ export default class PropmptContainer extends React.Component<
       [type]: value,
     });
   }
-
+  getArgs =(func: (...args: any[]) => void)=>{
+    const {
+      type,
+    } = this.props;
+    const { text, password } = this.state;
+    if (type === 'login-password') {
+      return func.apply(this, [text, password]);
+    } else if (type === 'secure-text') {
+      return func.apply(this, [password]);
+    }
+    return func.apply(this, [text]);
+  }
   render() {
     const {
       title,
@@ -58,51 +69,26 @@ export default class PropmptContainer extends React.Component<
       placeholders,
     } = this.props;
     const styles = this.props.styles!;
-    const { text, password } = this.state;
-    const getArgs = function(func: (...args: any[]) => void) {
-      if (type === 'login-password') {
-        return func.apply(this, [text, password]);
-      } else if (type === 'secure-text') {
-        return func.apply(this, [password]);
-      }
-      return func.apply(this, [text]);
-    };
-    let callbacks;
+
+    let footer;
     if (typeof actions === 'function') {
-      callbacks = [
+      footer = [
         { text: '取消', style: 'cancel', onPress: () => {} },
-        { text: '确定', onPress: () => getArgs(actions) },
+        { text: '确定', onPress: () => this.getArgs(actions) },
       ];
     } else {
-      callbacks = actions.map(item => {
+      footer = actions.map(item => {
         return {
           text: item.text,
           onPress: () => {
             if (item.onPress) {
-              return getArgs(item.onPress);
+              return this.getArgs(item.onPress);
             }
           },
           style: item.style || {},
         };
       });
     }
-
-    const footer = (callbacks as any).map((button: any) => {
-      // tslint:disable-next-line:only-arrow-functions
-      const orginPress = button.onPress || function() {};
-      button.onPress = () => {
-        const res = orginPress();
-        if (res && res.then) {
-          res.then(() => {
-            this.onClose();
-          });
-        } else {
-          this.onClose();
-        }
-      };
-      return button;
-    });
-
     const firstStyle = [styles.inputWrapper];
     const lastStyle = [styles.inputWrapper];
 

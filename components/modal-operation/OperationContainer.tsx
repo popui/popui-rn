@@ -27,21 +27,6 @@ export default class OperationContainer extends React.Component<
 
   render() {
     const { actions, onAnimationEnd } = this.props;
-    const footer = actions.map(button => {
-      // tslint:disable-next-line:only-arrow-functions
-      const orginPress = button.onPress || function() {};
-      button.onPress = () => {
-        const res = orginPress();
-        if (res && (res as any).then) {
-          (res as any).then(() => {
-            this.onClose();
-          });
-        } else {
-          this.onClose();
-        }
-      };
-      return button;
-    });
     return (
       <Modal
         operation
@@ -52,7 +37,7 @@ export default class OperationContainer extends React.Component<
         onAnimationEnd={onAnimationEnd}
         style={operationStyles.operationContainer}
         bodyStyle={operationStyles.operationBody}
-        footer={footer}
+        footer={actions}
       />
     );
   }

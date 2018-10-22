@@ -37,7 +37,6 @@ export function prompt({
   );
 }
 
-
 export default {
   prompt
 }

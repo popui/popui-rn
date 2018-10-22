@@ -6,7 +6,6 @@ import Modal from '../modal';
 import ModalBodyText from '../modal-body-text';
 
 import { ActionPropsType } from '../modal/PropsType';
-import {noopFunc} from '../_util/noop';
 export interface AlertContainerProps {
   title: React.ReactNode;
   content: React.ReactNode;
@@ -31,33 +30,15 @@ export default class AlertContainer extends React.Component<
       visible: false,
     });
   }
-  renderFooter = () =>{
-    const { actions} = this.props;
-    const footer = actions.map(button => {
-      // tslint:disable-next-line:only-arrow-functions
-      const orginPress = button.onPress || noopFunc;
-      button.onPress = () => {
-        const res = orginPress();
-        if (res && res.then) {
-          res.then(() => {
-            this.onClose();
-          });
-        } else {
-          this.onClose();
-        }
-      };
-      return button;
-    });
-    return footer
-  }
+
   render() {
-    const { title, content, onAnimationEnd } = this.props;
+    const { title, content, onAnimationEnd,actions } = this.props;
     return (
       <Modal
         transparent
         title={title}
         visible={this.state.visible}
-        footer={this.renderFooter()}
+        footer={actions}
         onAnimationEnd={onAnimationEnd}
         bodyStyle={{
           marginTop: 8,

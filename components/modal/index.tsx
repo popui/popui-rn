@@ -120,9 +120,9 @@ class AntmModal extends React.Component<IModalNativeProps, any> {
         ? { borderRightWidth: 0 }
         : {};
     // 点击
-    const onPressFn = () => {
+    const onPressFn = async() => {
       if (onPress) {
-        onPress();
+        await onPress();
       }
       if (onClose) {
         onClose();
