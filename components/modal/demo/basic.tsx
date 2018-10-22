@@ -83,14 +83,16 @@ export default class BasicModalExample extends React.Component<any, any> {
       ['please input name'],
     );
   }
-  renderContent =(onClose:Function) =>{
+  renderContent =(props:{
+    onClose:Function,style?:any
+  }) =>{
     return (
-      <View style={{flex:1,flexDirection:"column"}}>
+      <View style={props.style}>
         <View style={{ paddingVertical: 20 }}>
             <Text style={{ textAlign: 'center' }}>Content...</Text>
             <Text style={{ textAlign: 'center' }}>Content...</Text>
           </View>
-          <Button type="primary" inline onClick={onClose}>
+          <Button type="primary" inline onClick={props.onClose}>
             close modal
           </Button>
       </View>
@@ -140,7 +142,9 @@ export default class BasicModalExample extends React.Component<any, any> {
           closable
           footer={footerButtons}
         >
-          {this.renderContent(this.onClose)}
+          {this.renderContent({
+            onClose:this.onClose
+          })}
         </Modal>
 
         <Modal
@@ -149,7 +153,14 @@ export default class BasicModalExample extends React.Component<any, any> {
           animationType="slide-up"
           onClose={this.onClose1}
         >
-          {this.renderContent(this.onClose1)}
+          {this.renderContent({
+            style:{
+              flexDirection: 'column',
+              justifyContent: 'space-between',
+              paddingTop:100,
+            },
+            onClose:this.onClose1
+          })}
         </Modal>
 
 
@@ -159,7 +170,9 @@ export default class BasicModalExample extends React.Component<any, any> {
           animationType="slide-up"
           onClose={this.onClose2}
         >
-         {this.renderContent(this.onClose2)}
+         {this.renderContent({
+            onClose:this.onClose2
+          })}
         </Modal>
       </ScrollView>
     );
