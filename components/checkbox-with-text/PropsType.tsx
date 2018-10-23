@@ -11,8 +11,8 @@ export interface CheckboxPropsType {
   onChange?: (params: OnChangeParams) => void;
 }
 
-export interface CheckboxItemPropsType extends CheckboxPropsType {
-  extra?: React.ReactNode;
-  prefixCls?: string;
-  onClick?: (e?: any) => void;
-}
+// export interface CheckboxItemPropsType extends CheckboxPropsType {
+//   extra?: React.ReactNode;
+//   prefixCls?: string;
+//   onClick?: (e?: any) => void;
+// }
