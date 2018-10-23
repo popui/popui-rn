@@ -8,6 +8,7 @@ export interface IModalStyle {
   wrap: ViewStyle;
   popupContainer: ViewStyle;
   innerContainer: ViewStyle;
+  dialogRoot:ViewStyle;
   actions: ViewStyle;
   header: TextStyle;
   body: ViewStyle;
@@ -51,7 +52,9 @@ export default {
     // overflow: 'hidden',
   },
   // fix android borderRadius
-
+  dialogRoot:{
+    maxHeight: Dimensions.get("window").height -100
+  },
   header: {
     paddingTop: 1.3 * themeVars.baseFontSize,
     paddingBottom: 0.5 * themeVars.baseFontSize,

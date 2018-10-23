@@ -26,12 +26,6 @@ import TouchableWithFallback from "../touchable-with-fallback";
 // import { createDebug } from "../_util/debug";
 // const debug = createDebug("popui:modal/Modal");
 
-const maxHeight = StyleSheet.create({
-  maxHeight: {
-    maxHeight: Dimensions.get("window").height
-  }
-}).maxHeight;
-
 export interface IModalNativeProps extends ModalPropsType<TextStyle> {
   styles?: IModalStyle;
   style?: StyleProp<ViewStyle>;
@@ -65,9 +59,10 @@ class AntmModal extends React.Component<IModalNativeProps, any> {
   root: View | null;
 
   onFooterLayout = (e: LayoutChangeEvent) => {
+    const styles = this.props.styles!;
     if (this.root) {
       this.root.setNativeProps({
-        style: [{ paddingBottom: e.nativeEvent.layout.height }, maxHeight]
+        style: [{ paddingBottom: e.nativeEvent.layout.height }, styles.dialogRoot]
       });
     }
   };
@@ -268,7 +263,7 @@ class AntmModal extends React.Component<IModalNativeProps, any> {
           animateAppear={animateAppear}
           maskClosable={maskClosable}
         >
-          <View style={maxHeight} ref={this.saveRoot}>
+          <View style={styles.dialogRoot} ref={this.saveRoot}>
             {title ? <Text style={[styles.header]}>{title}</Text> : null}
             <View style={[styles.body, bodyStyle]}>{children}</View>
             {actionsDom}
