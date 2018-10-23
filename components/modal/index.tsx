@@ -19,7 +19,7 @@ export default class RCModal extends React.Component<IModalPropTypes, any> {
     wrapStyle: styles.wrap,
     maskStyle: styles.mask,
     animationType: "fade",
-    animateAppear: false,
+    animateAppear: true,
     animationDuration: 300,
     visible: false,
     maskClosable: true,

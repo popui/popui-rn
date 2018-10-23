@@ -13,6 +13,8 @@ import ModalDialog from '../dialog';
 import promptStyle from './style';
 import {PropmptContainerProps} from './PropsType';
 // import DialogBodyText from '../dialog-body-text';
+import RCModal from "../modal";
+import Dialog from "../dialog";
 
 const promptStyles = StyleSheet.create<any>(promptStyle);
 
@@ -144,20 +146,26 @@ export default class PropmptContainer extends React.Component<
       message,
     } = this.props;
     const styles = this.props.styles!;
+    const actions = this.getActions()
     return (
-      <ModalDialog
-        transparent
-        title={title}
+      <RCModal
         visible={this.state.visible}
+        animationType={"fade"}
+        maskClosable={true}
         onClose={this.onClose}
-        actions={this.getActions()}
         onAnimationEnd={onAnimationEnd}
       >
-        <KeyboardAvoidingView behavior="padding">
+        <Dialog
+          title={title}
+          actions={actions}
+          onClose={this.onClose}
+        >
+         <KeyboardAvoidingView behavior="padding">
           {message && <Text style={styles.message}>{message}</Text>}
           {this.renderInputs()}
         </KeyboardAvoidingView>
-      </ModalDialog>
+        </Dialog>
+      </RCModal>
     );
   }
 }
