@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { observer } from 'mobx-react';
 import { View, StyleSheet, Text } from 'react-native';
-import {Agreement} from 'popui-rn';
+import {CheckboxAgreement} from 'popui-rn';
 
 @observer
 export default class AgreementDemoComponent extends React.Component<any, any> {
@@ -14,10 +14,10 @@ export default class AgreementDemoComponent extends React.Component<any, any> {
   public render() {
     return (
       <View>
-         <Agreement
+         <CheckboxAgreement
                     value={this.state.agreement}
                     onChange={value => this.setState({ agreement: value })}
-                >同意该协议</Agreement>
+                >同意该协议</CheckboxAgreement>
       </View>
     );
   }
