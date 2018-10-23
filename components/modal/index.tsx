@@ -1,13 +1,11 @@
 import React from "react";
 import { observer } from "mobx-react";
 import {
-  Dimensions,
   LayoutChangeEvent,
   Modal,
   StyleProp,
   StyleSheet,
   Text,
-  // TouchableHighlight,
   TouchableOpacity,
   View,
   ViewStyle,
@@ -201,7 +199,6 @@ class AntmModal extends React.Component<IModalNativeProps, any> {
       animType = "slide-down";
     }
     return (
-      <View style={styles.container}>
         <RCModal
           onClose={onClose}
           animationType={animType}
@@ -220,7 +217,6 @@ class AntmModal extends React.Component<IModalNativeProps, any> {
             {children}
           </View>
         </RCModal>
-      </View>
     );
   };
   renderCloseButton = () => {
@@ -257,7 +253,6 @@ class AntmModal extends React.Component<IModalNativeProps, any> {
       animType = "slide-up";
     }
     return (
-      <View style={styles.container}>
         <RCModal
           onClose={onClose}
           animationType={animType}
@@ -275,7 +270,6 @@ class AntmModal extends React.Component<IModalNativeProps, any> {
             {closable && this.renderCloseButton()}
           </View>
         </RCModal>
-      </View>
     );
   };
   render() {
@@ -298,6 +292,7 @@ class AntmModal extends React.Component<IModalNativeProps, any> {
     if (transparent) {
       return this.renderTransparent();
     }
+    // 退化到原生 Modal
     if (
       animType === "slide-up" ||
       animType === "slide-down" ||
@@ -306,7 +301,6 @@ class AntmModal extends React.Component<IModalNativeProps, any> {
       animType = "slide";
     }
     return (
-      <View style={styles.container}>
         <Modal
           visible={visible}
           animationType={animType}
@@ -314,7 +308,6 @@ class AntmModal extends React.Component<IModalNativeProps, any> {
         >
           <View style={style}>{children}</View>
         </Modal>
-      </View>
     );
   }
 }
