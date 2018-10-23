@@ -1,17 +1,15 @@
 import React from 'react';
 // import { observer } from 'mobx-react'
+import {ModalProperties} from 'react-native'
+import { MaskPropsType} from '../mask/PropsType'
+
 export interface ModalPropsType<T> {
+  modalProps:ModalProperties;
+  maskProps:MaskPropsType;
   title?: React.ReactNode;
-  visible: boolean;
-  maskClosable?: boolean;
   closable?: boolean;
   actions?: ActionPropsType<T>[];
   onClose?: () => void;
-  transparent?: boolean;
-  animated?: boolean;
-  animationType?: any;
-  onAnimationEnd?: (visible: boolean) => void;
-  animateAppear?: boolean;
   operation?: boolean;
   renderActionButton?: (action: ActionPropsType<any>, index: number)=>React.ReactNode
   renderActions?: ()=>React.ReactNode

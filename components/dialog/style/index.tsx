@@ -44,6 +44,10 @@ export default {
   },
   // fix android borderRadius
   dialogRoot:{
+    width: width - 60,
+    backgroundColor: themeVars.DialogBackgroundColor,
+    borderRadius: 3,
+    overflow: "hidden",
     maxHeight: Dimensions.get("window").height -100
   },
   header: {

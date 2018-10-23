@@ -2,7 +2,6 @@ import React from "react";
 import { observer } from "mobx-react";
 import {
   LayoutChangeEvent,
-  Modal,
   StyleProp,
   StyleSheet,
   Text,
@@ -13,17 +12,16 @@ import {
 } from "react-native";
 import { themeStore } from "../theme-store";
 const { themeVars } = themeStore;
-import RCModal from "rmc-dialog/lib/Modal";
-import { ModalPropsType, ActionPropsType } from "./PropsType";
+// import RCModal from "rmc-dialog/lib/Modal";
+import { DialogPropsType, ActionPropsType } from "./PropsType";
 import modalStyle, { IModalStyle } from "./style/index";
 import { noopFunc } from "../_util/noop";
 import TouchableWithFallback from "../touchable-with-fallback";
-
 // debug
 // import { createDebug } from "../_util/debug";
 // const debug = createDebug("popui:modal/Modal");
 
-export interface IModalNativeProps extends ModalPropsType<TextStyle> {
+export interface IModalNativeProps extends DialogPropsType<TextStyle> {
   styles?: IModalStyle;
   style?: StyleProp<ViewStyle>;
   bodyStyle?: StyleProp<ViewStyle>;
@@ -32,26 +30,18 @@ export interface IModalNativeProps extends ModalPropsType<TextStyle> {
 const modalStyles = StyleSheet.create<any>(modalStyle);
 
 @observer
-class AntmModal extends React.Component<IModalNativeProps, any> {
+class Dialog extends React.Component<IModalNativeProps, any> {
   private horizontalFlex: any;
   static defaultProps = {
-    visible: false,
+    title:'',
     closable: false,
-    maskClosable: true,
     style: {},
     bodyStyle: {},
-    animationType: "slide",
     onClose: noopFunc,
     actions: [],
-    transparent: true,
-    popup: false,
-    animateAppear: true,
     styles: modalStyles,
     operation: false
   };
-  static alert: any;
-  static operation: any;
-  static prompt: any;
 
   root: View | null;
 
@@ -69,7 +59,7 @@ class AntmModal extends React.Component<IModalNativeProps, any> {
     }
   };
 
-  saveRoot = (root: any) => {
+  saveRootRef = (root: any) => {
     this.root = root;
   };
   renderActionButton = (action: ActionPropsType<any>, index: number) => {
@@ -189,77 +179,27 @@ class AntmModal extends React.Component<IModalNativeProps, any> {
       </TouchableOpacity>
     );
   };
-  renderDialog = () => {
+  render(){
     const {
       title,
       closable,
       children,
       style,
-      animateAppear,
-      maskClosable,
-      transparent,
-      visible,
-      onClose,
       bodyStyle,
-      onAnimationEnd
     } = this.props;
 
     const styles = this.props.styles!;
     const actionsDom = this.renderActions();
-    let animType = this.props.animationType;
     return (
-        <RCModal
-          onClose={onClose}
-          animationType={animType}
-          wrapStyle={transparent ? styles.wrap : undefined}
-          style={[styles.innerContainer, style]}
-          visible={visible}
-          onAnimationEnd={onAnimationEnd}
-          animateAppear={animateAppear}
-          maskClosable={maskClosable}
-        >
-          <View style={styles.dialogRoot} ref={this.saveRoot}>
-            {title ? <Text style={[styles.header]}>{title}</Text> : null}
-            <View style={[styles.body, bodyStyle]}>{children}</View>
-            {actionsDom}
-            {closable && this.renderCloseButton()}
-          </View>
-        </RCModal>
+      <View displayName="dialogRoot" style={[styles.dialogRoot,style]} ref={this.saveRootRef}>
+      {title ? <Text style={[styles.header]}>{title}</Text> : null}
+      <View displayName="dialogBody" style={[styles.body, bodyStyle]}>{children}</View>
+      {actionsDom}
+      {closable && this.renderCloseButton()}
+    </View>
     );
   };
-  render() {
-    const {
-      children,
-      style,
-      transparent,
-      visible,
-      onClose
-    } = this.props;
-    // debug("render", {
-    //   props: this.props
-    // });
-    let animType = this.props.animationType;
-    if (transparent) {
-      return this.renderDialog();
-    }
-    // 退化到原生 Modal
-    if (
-      animType === "slide-up" ||
-      animType === "slide-down" ||
-      animType === "slide"
-    ) {
-      animType = "slide";
-    }
-    return (
-        <Modal
-          visible={visible}
-          animationType={animType}
-          onRequestClose={onClose}
-        >
-          <View style={style}>{children}</View>
-        </Modal>
-    );
-  }
+ 
 }
 
-export default AntmModal;
+export default Dialog;

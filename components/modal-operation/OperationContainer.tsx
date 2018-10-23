@@ -1,7 +1,7 @@
 import React from 'react';
 import { observer } from 'mobx-react'
 import { StyleSheet} from 'react-native';
-import Modal from '../modal';
+import ModalDialog from '../modal-dialog';
 import operationStyle from './style/index';
 import {OperationContainerProps} from './PropsType';
 
@@ -28,7 +28,7 @@ export default class OperationContainer extends React.Component<
   render() {
     const { actions, onAnimationEnd } = this.props;
     return (
-      <Modal
+      <ModalDialog
         operation
         transparent
         maskClosable

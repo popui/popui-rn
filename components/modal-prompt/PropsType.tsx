@@ -1,4 +1,4 @@
-import {CallbackOrActions} from '../modal/PropsType';
+import {CallbackOrActions} from '../modal-dialog/PropsType';
 import { IPromptStyle } from './style';
 
 export  interface PromotArgs {

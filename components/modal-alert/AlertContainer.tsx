@@ -2,10 +2,10 @@
 import React from 'react';
 import { observer } from 'mobx-react'
 import { ScrollView, Text, TextStyle } from 'react-native';
-import Modal from '../modal';
-import ModalBodyText from '../modal-body-text';
+import ModalDialog from '../modal-dialog';
+import ModalDialogBodyText from '../modal-dialog-body-text';
 
-import { ActionPropsType } from '../modal/PropsType';
+import { ActionPropsType } from '../modal-dialog/PropsType';
 export interface AlertContainerProps {
   title: React.ReactNode;
   content: React.ReactNode;
@@ -41,7 +41,7 @@ export default class AlertContainer extends React.Component<
       bodyStyle.marginTop = 23 // 15+8
     }
     return (
-      <Modal
+      <ModalDialog
         transparent
         title={title}
         visible={this.state.visible}
@@ -51,9 +51,9 @@ export default class AlertContainer extends React.Component<
         bodyStyle={bodyStyle}
       >
         <ScrollView>
-          <ModalBodyText>{content}</ModalBodyText>
+          <ModalDialogBodyText>{content}</ModalDialogBodyText>
         </ScrollView>
-      </Modal>
+      </ModalDialog>
     );
   }
 }

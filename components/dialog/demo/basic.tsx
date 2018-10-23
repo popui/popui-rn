@@ -4,10 +4,10 @@ import { observer } from "mobx-react";
 import { View, ScrollView } from "react-native";
 import {
   Button,
-  Modal,
+  ModalDialog,
   GapH,
   GapV,
-  ModalBodyText,
+  ModalDialogBodyText,
   ModalAlert,
   ModalOperation,
   ModalPrompt,
@@ -109,12 +109,12 @@ export default class BasicModalExample extends React.Component<any, any> {
     return (
       <View style={props.style}>
         <View style={{ paddingVertical: 20 }}>
-          <ModalBodyText style={{ textAlign: "center" }}>
+          <ModalDialogBodyText style={{ textAlign: "center" }}>
             Content...
-          </ModalBodyText>
-          <ModalBodyText style={{ textAlign: "center" }}>
+          </ModalDialogBodyText>
+          <ModalDialogBodyText style={{ textAlign: "center" }}>
             Content...
-          </ModalBodyText>
+          </ModalDialogBodyText>
         </View>
         <Button type="primary" inline onClick={props.onClose}>
           close modal
@@ -159,24 +159,37 @@ export default class BasicModalExample extends React.Component<any, any> {
           </Button>
         </GapV>
 
-        <Modal
+        <ModalDialog
+          modalProps={{
+            visible:this.state.visible,
+            transparent:true
+          }}
+          maskProps={{
+            onPress:this.onClose
+          }}
           title="Title"
-          onClose={this.onClose}
-          maskClosable
-          visible={this.state.visible}
-          closable
+          // onClose={this.onClose}
+          // maskClosable
+          // visible={this.state.visible}
+          // closable
           actions={actionButtons}
         >
           {this.renderContent({
             onClose: this.onClose
           })}
-        </Modal>
+        </ModalDialog>
 
-        <Modal
-          transparent={false}
+        <ModalDialog
+          // transparent={false}
           visible={this.state.visible1}
-          animationType="slide-up"
-          onClose={this.onClose1}
+          // animationType="slide-up"
+          modalProps={{
+            visible:this.state.visible1
+          }}
+          maskProps={{
+            onPress:this.onClose1
+          }}
+          // onClose={this.onClose1}
         >
           {this.renderContent({
             style: {
@@ -186,7 +199,7 @@ export default class BasicModalExample extends React.Component<any, any> {
             },
             onClose: this.onClose1
           })}
-        </Modal>
+        </ModalDialog>
 
         <ModalPopup
           visible={this.state.visible2}

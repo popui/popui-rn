@@ -9,10 +9,10 @@ import {
   View,
   // TextStyle,
 } from 'react-native';
-import Modal from '../modal';
+import ModalDialog from '../modal-dialog';
 import promptStyle from './style';
 import {PropmptContainerProps} from './PropsType';
-// import ModalBodyText from '../modal-body-text';
+// import ModalDialogBodyText from '../modal-dialog-body-text';
 
 const promptStyles = StyleSheet.create<any>(promptStyle);
 
@@ -145,7 +145,7 @@ export default class PropmptContainer extends React.Component<
     } = this.props;
     const styles = this.props.styles!;
     return (
-      <Modal
+      <ModalDialog
         transparent
         title={title}
         visible={this.state.visible}
@@ -157,7 +157,7 @@ export default class PropmptContainer extends React.Component<
           {message && <Text style={styles.message}>{message}</Text>}
           {this.renderInputs()}
         </KeyboardAvoidingView>
-      </Modal>
+      </ModalDialog>
     );
   }
 }

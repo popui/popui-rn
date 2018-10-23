@@ -4,7 +4,7 @@ import { StyleSheet, SafeAreaView, ScrollView } from "react-native";
 // import PickerExample from 'popui-rn/components/picker/demo/basic';
 // import BadgeExample from "popui-rn/components/badge/demo/basic";
 // import CellBadgeExample from "popui-rn/components/cell-badge/demo/basic";
-import ModalExample from "popui-rn/components/modal/demo/basic";
+import ModalDialogExample from "popui-rn/components/modal-dialog/demo/basic";
 // import Modal2Example from "popui-rn/components/modal2/demo/basic";
 // import Picker2Example from 'popui-rn/components/picker2/demo';
 // import { ActionSheet2 } from 'popui-rn'
@@ -23,7 +23,7 @@ export default class App extends React.Component {
             {/* <BadgeExample />
             <CellBadgeExample /> */}
             {/* <Picker2Example/> */}
-            <ModalExample />
+            <ModalDialogExample />
             {/* <Modal2Example /> */}
           </ScrollView>
         </SafeAreaView>
