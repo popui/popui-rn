@@ -69,8 +69,9 @@ export default {
   body: {
     paddingLeft: themeVars.DialogGapWidth,
     paddingRight: themeVars.DialogGapWidth,
-    paddingBottom: 25.5, // (0.8 * 15) + 20,
-    paddingTop: 0
+    paddingBottom: 24, // 15*1.6,
+    paddingTop: 0,
+    maxHeight: Dimensions.get("window").height -196
     // paddingBottom: themeVars.v_spacing_lg,
     // paddingHorizontal: themeVars.h_spacing_lg,
   },

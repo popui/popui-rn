@@ -34,11 +34,11 @@ export default class AlertContainer extends React.Component<
   render() {
     const { title, content, onAnimationEnd,actions } = this.props;
     const bodyStyle:any = {
-      marginTop: 8,
+      paddingTop: 8,
       alignItems: 'center',
     }
     if(!title){
-      bodyStyle.marginTop = 40.5 // 15*4.5
+      bodyStyle.marginTop = 23 // 15+8
     }
     return (
       <Modal

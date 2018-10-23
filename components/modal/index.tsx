@@ -61,8 +61,13 @@ class AntmModal extends React.Component<IModalNativeProps, any> {
   onFooterLayout = (e: LayoutChangeEvent) => {
     const styles = this.props.styles!;
     if (this.root) {
+      const paddingBottom = e.nativeEvent.layout.height
+      console.log("onFooterLayout",{
+        event:e.nativeEvent,
+        paddingBottom
+      })
       this.root.setNativeProps({
-        style: [{ paddingBottom: e.nativeEvent.layout.height }, styles.dialogRoot]
+        style: [styles.dialogRoot,{ paddingBottom }]
       });
     }
   };
