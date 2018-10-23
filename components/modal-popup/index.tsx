@@ -12,13 +12,8 @@ import { noopFunc } from "../_util/noop";
 @observer
 export default class ModalPopupComponent extends React.Component<ModalPopupProps, ModalPopupState> {
   static defaultProps = {
-    visible: false,
-    maskClosable: true,
-    animationType: "slide-up",
     onClose: noopFunc,
-    animateAppear: true,
     styles: modalPopupStyles,
-    style: {},
   };
   render(){
     const {
@@ -29,20 +24,20 @@ export default class ModalPopupComponent extends React.Component<ModalPopupProps
     } = this.props;
     let animType = animationType;
     const styles = this.props.styles!;
-    let aType = "SlideDown";
-    if (animType === "slide-up") {
+    let aType = "slideUp";
+    if (animType === "slide-down") {
+      aType = "slideDown";
+    }else {
       animType = "slide-up";
-      aType = "SlideUp";
-    } else {
-      animType = "slide-down";
+      aType = "slideUp";
     }
     return (
         <RCModal
-          animationType={animType}
+          // animationType={animType}
           // tslint:disable-next-line:jsx-no-multiline-js
           style={[
             styles.popupContainer,
-            (styles as any)[`popup${aType}`],
+            (styles as any)[`popup_${aType}`],
             style
           ]}
           {...restProps}

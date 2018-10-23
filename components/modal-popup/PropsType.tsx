@@ -1,11 +1,6 @@
-export interface ModalPopupProps {
-  visible: boolean;
-  maskClosable?: boolean;
-  onClose?: () => void;
-  animationType?: any;
-  onAnimationEnd?: (visible: boolean) => void;
-  animateAppear?: boolean;
+import {IModalPropTypes} from "rmc-dialog/lib/Modal";
+
+export interface ModalPopupProps extends IModalPropTypes {
   styles?:any
-  style?:any
   children?:any
 }

@@ -40,7 +40,7 @@ class AntmModal extends React.Component<IModalNativeProps, any> {
     maskClosable: true,
     style: {},
     bodyStyle: {},
-    animationType: "fade",
+    animationType: "slide",
     onClose: noopFunc,
     actions: [],
     transparent: true,
@@ -207,9 +207,6 @@ class AntmModal extends React.Component<IModalNativeProps, any> {
     const styles = this.props.styles!;
     const actionsDom = this.renderActions();
     let animType = this.props.animationType;
-    if (animType === "slide") {
-      animType = "slide-up";
-    }
     return (
         <RCModal
           onClose={onClose}
