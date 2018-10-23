@@ -1,9 +1,10 @@
 export interface DialogPropsType<T> {
   title?: React.ReactNode;
-  closable?: boolean;
+  showCloseButton?: boolean;
   actions?: ActionPropsType<T>[];
   onClose?: () => void;
   operation?: boolean;
+  actionsDirection: 'horizontal' | 'vertical'
   styles?:any
   bodyStyle?:any
   style?:any

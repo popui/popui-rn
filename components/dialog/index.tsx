@@ -34,13 +34,13 @@ class Dialog extends React.Component<IModalNativeProps, any> {
   private horizontalFlex: any;
   static defaultProps = {
     title:'',
-    closable: false,
+    showCloseButton: false,
     style: {},
     bodyStyle: {},
     onClose: noopFunc,
     actions: [],
     styles: modalStyles,
-    operation: false
+    actionsDirection:'horizontal'
   };
 
   root: View | null;
@@ -49,10 +49,6 @@ class Dialog extends React.Component<IModalNativeProps, any> {
     const styles = this.props.styles!;
     if (this.root) {
       const paddingBottom = e.nativeEvent.layout.height
-      console.log("onFooterLayout",{
-        event:e.nativeEvent,
-        paddingBottom
-      })
       this.root.setNativeProps({
         style: [styles.dialogRoot,{ paddingBottom }]
       });
@@ -63,7 +59,7 @@ class Dialog extends React.Component<IModalNativeProps, any> {
     this.root = root;
   };
   renderActionButton = (action: ActionPropsType<any>, index: number) => {
-    const { onClose, operation,renderActionButton } = this.props;
+    const { onClose, renderActionButton } = this.props;
     if(renderActionButton){
       return renderActionButton(action,index)
     }
@@ -83,7 +79,8 @@ class Dialog extends React.Component<IModalNativeProps, any> {
 
     // 自定义按钮样式
     let buttonStyle = {};
-    if (operation) {
+    const isActionsVertical = this.isActionsVertical()
+    if (isActionsVertical) {
       buttonStyle = styles.buttonTextOperation;
     }
     if (style && typeof style !== "string") {
@@ -136,8 +133,12 @@ class Dialog extends React.Component<IModalNativeProps, any> {
       </TouchableWithFallback>
     );
   };
+  isActionsVertical =()=>{
+    return this.props.actionsDirection === 'vertical'
+  }
   renderActions = () => {
-    const { actions, operation,renderActions } = this.props;
+    const { actions, renderActions } = this.props;
+    const isActionsVertical = this.isActionsVertical()
     if(renderActions){
       return renderActions()
     }
@@ -147,7 +148,7 @@ class Dialog extends React.Component<IModalNativeProps, any> {
     const styles = this.props.styles!;
     // 默认垂直排列
     let btnGroupStyle = styles.buttonGroupV;
-    if (actions.length > 1 && !operation) {
+    if (actions.length > 1 && !isActionsVertical) {
       // 水平排列
       btnGroupStyle = styles.buttonGroupH;
       this.horizontalFlex = { flex: 1 };
@@ -182,7 +183,7 @@ class Dialog extends React.Component<IModalNativeProps, any> {
   render(){
     const {
       title,
-      closable,
+      showCloseButton,
       children,
       style,
       bodyStyle,
@@ -195,7 +196,7 @@ class Dialog extends React.Component<IModalNativeProps, any> {
       {title ? <Text style={[styles.header]}>{title}</Text> : null}
       <View displayName="dialogBody" style={[styles.body, bodyStyle]}>{children}</View>
       {actionsDom}
-      {closable && this.renderCloseButton()}
+      {showCloseButton && this.renderCloseButton()}
     </View>
     );
   };

@@ -179,7 +179,7 @@ export default class BasicModalExample extends React.Component<any, any> {
         >
           <Dialog
             title="Title"
-            closable
+            showCloseButton
             onClose={this.onClose}
             actions={actionButtons}
           >
@@ -196,7 +196,7 @@ export default class BasicModalExample extends React.Component<any, any> {
         >
           <Dialog
             title="Title"
-            closable
+            showCloseButton
             onClose={this.onClose1}
             actions={actionButtons}
           >

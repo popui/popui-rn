@@ -1,7 +1,7 @@
 ---
 category: Components
 type: Feedback
-title: Modal
+title: Dialog
 subtitle: 对话框
 ---
 
@@ -13,18 +13,25 @@ subtitle: 对话框
 - 操作按钮最多到 3 个（竖排），一般为 1-2 个（横排）；3 个以上建议使用组件 ActionSheet 来完成。
 - 一般将用户最可能点击的按钮，放在右侧。另外，取消按钮应当始终放在左侧。
 
+### 注意
+
+
 ## API
 
-### Modal
+### Dialog
 
 属性 | 说明 | 类型 | 默认值
 ----|-----|------|------
-| visible | 对话框是否可见 | Boolean | false |
-| closable | 是否显示关闭按钮 | Boolean | false |
-| maskClosable | 点击蒙层是否允许关闭 | Boolean | true |
-| onClose | 点击 x 或 mask 回调 | (): void | 无 |
-| transparent | 是否背景透明,背景不透明时会回退到 RNModal | Boolean | true |
-| popup | 是否弹窗模式 | Boolean | false |
-| animationType | 可选: 'fade' / 'slide' | String | fade |
 | title | 标题 | React.Element | 无 |
+| visible | 对话框是否可见 | Boolean | false |
+| showCloseButton | 是否显示关闭按钮 | Boolean | false |
 | actions | 底部内容 | Array [{text, onPress}] | [] |
+| operation | actions 是否垂直排列 | Boolean | false |
+| actionsDirection | `'horizontal' | 'vertical'` | string | 'horizontal' |
+| onClose | 点击 x 或 mask 回调 | Function | 无 |
+| renderActionButton | 渲染按钮 | Function | 无 |
+| renderActions | 渲染 actions | Function | 无 |
+| renderCloseButton | 渲染关闭按钮 | Function | 无 |
+| styles | 样式 | ViewStyle | 无 |
+| styles | 最外层样式 | ViewStyle | 无 |
+| bodyStyle | body 样式 | ViewStyle | 无 |

@@ -37,7 +37,7 @@ export default class OperationContainer extends React.Component<
         onAnimationEnd={onAnimationEnd}
       >
         <Dialog
-          operation
+          actionsDirection={"vertical"}
           actions={actions}
           onClose={this.onClose}
           style={operationStyles.operationContainer}

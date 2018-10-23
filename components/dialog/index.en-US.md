@@ -19,7 +19,7 @@ Use to show important information for the system, and ask for user feedback. eg:
 Properties | Descrition | Type | Default
 -----------|------------|------|--------
 | visible | Determine whether a modal dialog is visible or not | Boolean | false |
-| closable | Determine whether a close (x) button is visible or not | Boolean | false |
+| showCloseButton | Determine whether a close (x) button is visible or not | Boolean | false |
 | maskClosable | Determine whether to close the modal dialog when clicked mask of it | Boolean | true |
 | onClose | Callback for clicking close icon x or mask | (): void | - |
 | transparent | transparent mode or full screen mode | Boolean | false |
