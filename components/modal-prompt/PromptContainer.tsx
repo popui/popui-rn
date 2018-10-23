@@ -9,10 +9,10 @@ import {
   View,
   // TextStyle,
 } from 'react-native';
-import ModalDialog from '../modal-dialog';
+import ModalDialog from '../dialog';
 import promptStyle from './style';
 import {PropmptContainerProps} from './PropsType';
-// import ModalDialogBodyText from '../modal-dialog-body-text';
+// import DialogBodyText from '../dialog-body-text';
 
 const promptStyles = StyleSheet.create<any>(promptStyle);
 

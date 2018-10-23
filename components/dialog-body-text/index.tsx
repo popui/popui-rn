@@ -16,7 +16,7 @@ const styles = StyleSheet.create({
   }
 });
 
-const ModalDialogBodyText = ({ children, style, ...others }: ModalBodyPropsType) => (
+const DialogBodyText = ({ children, style, ...others }: ModalBodyPropsType) => (
   <Text style={[styles.bodyText, style]} {...others}>
     {children}
   </Text>
@@ -27,4 +27,4 @@ const ModalDialogBodyText = ({ children, style, ...others }: ModalBodyPropsType)
 //     style: Text.propTypes.style,
 // }
 
-export default observer(ModalDialogBodyText);
+export default observer(DialogBodyText);

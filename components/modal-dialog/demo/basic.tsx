@@ -7,7 +7,7 @@ import {
   ModalDialog,
   GapH,
   GapV,
-  ModalDialogBodyText,
+  DialogBodyText,
   ModalAlert,
   ModalOperation,
   ModalPrompt,
@@ -109,12 +109,12 @@ export default class BasicModalExample extends React.Component<any, any> {
     return (
       <View style={props.style}>
         <View style={{ paddingVertical: 20 }}>
-          <ModalDialogBodyText style={{ textAlign: "center" }}>
+          <DialogBodyText style={{ textAlign: "center" }}>
             Content...
-          </ModalDialogBodyText>
-          <ModalDialogBodyText style={{ textAlign: "center" }}>
+          </DialogBodyText>
+          <DialogBodyText style={{ textAlign: "center" }}>
             Content...
-          </ModalDialogBodyText>
+          </DialogBodyText>
         </View>
         <Button type="primary" inline onClick={props.onClose}>
           close modal

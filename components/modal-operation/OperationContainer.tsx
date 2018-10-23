@@ -1,7 +1,7 @@
 import React from 'react';
 import { observer } from 'mobx-react'
 import { StyleSheet} from 'react-native';
-import ModalDialog from '../modal-dialog';
+import ModalDialog from '../dialog';
 import operationStyle from './style/index';
 import {OperationContainerProps} from './PropsType';
 

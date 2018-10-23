@@ -1,4 +1,4 @@
-import { ActionPropsType } from '../modal-dialog/PropsType';
+import { ActionPropsType } from '../dialog/PropsType';
 import { TextStyle } from 'react-native';
 
 export interface OperationContainerProps {
