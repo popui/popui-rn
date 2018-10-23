@@ -53,7 +53,6 @@ export default class AlertContainer extends React.Component<
         onRequestClose={this.onClose}
       >
         <Mask
-          transparent
           onPress={this.onClose}
         >
           <Dialog
