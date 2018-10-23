@@ -10,7 +10,8 @@ import {
   ModalBodyText,
   ModalAlert,
   ModalOperation,
-  ModalPrompt
+  ModalPrompt,
+  ModalPopup
 } from "popui-rn";
 
 @observer
@@ -187,16 +188,14 @@ export default class BasicModalExample extends React.Component<any, any> {
           })}
         </Modal>
 
-        <Modal
-          popup
+        <ModalPopup
           visible={this.state.visible2}
-          animationType="slide-up"
           onClose={this.onClose2}
         >
           {this.renderContent({
             onClose: this.onClose2
           })}
-        </Modal>
+        </ModalPopup>
       </ScrollView>
     );
   }

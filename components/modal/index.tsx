@@ -13,7 +13,6 @@ import {
 } from "react-native";
 import { themeStore } from "../theme-store";
 const { themeVars } = themeStore;
-
 import RCModal from "rmc-dialog/lib/Modal";
 import { ModalPropsType, ActionPropsType } from "./PropsType";
 import modalStyle, { IModalStyle } from "./style/index";
@@ -177,48 +176,7 @@ class AntmModal extends React.Component<IModalNativeProps, any> {
       </View>
     );
   };
-  renderPopup = () => {
-    const {
-      children,
-      style,
-      animateAppear,
-      maskClosable,
-      visible,
-      onClose,
-      bodyStyle,
-      onAnimationEnd,
-      animationType
-    } = this.props;
-    let animType = animationType;
-    const styles = this.props.styles!;
-    let aType = "SlideDown";
-    if (animType === "slide-up") {
-      animType = "slide-up";
-      aType = "SlideUp";
-    } else {
-      animType = "slide-down";
-    }
-    return (
-        <RCModal
-          onClose={onClose}
-          animationType={animType}
-          // tslint:disable-next-line:jsx-no-multiline-js
-          style={[
-            styles.popupContainer,
-            (styles as any)[`popup${aType}`],
-            style
-          ]}
-          visible={visible}
-          onAnimationEnd={onAnimationEnd}
-          animateAppear={animateAppear}
-          maskClosable={maskClosable}
-        >
-          <View ref={this.saveRoot} style={bodyStyle}>
-            {children}
-          </View>
-        </RCModal>
-    );
-  };
+
   renderCloseButton = () => {
     const { onClose,renderCloseButton } = this.props;
     if(renderCloseButton){
@@ -231,7 +189,7 @@ class AntmModal extends React.Component<IModalNativeProps, any> {
       </TouchableOpacity>
     );
   };
-  renderTransparent = () => {
+  renderDialog = () => {
     const {
       title,
       closable,
@@ -276,7 +234,6 @@ class AntmModal extends React.Component<IModalNativeProps, any> {
     const {
       children,
       style,
-      popup,
       transparent,
       visible,
       onClose
@@ -284,13 +241,9 @@ class AntmModal extends React.Component<IModalNativeProps, any> {
     // debug("render", {
     //   props: this.props
     // });
-    const styles = this.props.styles!;
     let animType = this.props.animationType;
-    if (popup) {
-      return this.renderPopup();
-    }
     if (transparent) {
-      return this.renderTransparent();
+      return this.renderDialog();
     }
     // 退化到原生 Modal
     if (

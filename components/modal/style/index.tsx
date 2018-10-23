@@ -6,7 +6,6 @@ const { width } = Dimensions.get("window");
 export interface IModalStyle {
   container: ViewStyle;
   wrap: ViewStyle;
-  popupContainer: ViewStyle;
   innerContainer: ViewStyle;
   dialogRoot:ViewStyle;
   actions: ViewStyle;
@@ -33,14 +32,6 @@ export default {
     justifyContent: "center",
     alignItems: "center"
   },
-  popupContainer: {},
-  popupSlideUp: {
-    position: "absolute",
-    left: 0,
-    right: 0,
-    bottom: 0
-  },
-  popupSlideDown: {},
   innerContainer: {
     width: width - 60,
     backgroundColor: themeVars.DialogBackgroundColor,

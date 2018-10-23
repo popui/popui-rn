@@ -8,7 +8,6 @@ export interface ModalPropsType<T> {
   actions?: ActionPropsType<T>[];
   onClose?: () => void;
   transparent?: boolean;
-  popup?: boolean;
   animated?: boolean;
   animationType?: any;
   onAnimationEnd?: (visible: boolean) => void;
