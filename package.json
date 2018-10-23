@@ -108,14 +108,15 @@
     "react-native-debugger-open": "^0.3.17",
     "react-native-mocker": "^0.0.12",
     "react-native-stylekit": "^1.0.0",
+    "react-native-typescript-transformer": "^1.2.10",
     "react-navigation": "1.0.0-beta.12",
     "react-test-renderer": "^16.4.0",
     "typescript": "~2.4.0"
   },
   "scripts": {
     "expo-ios": "xcrun simctl openurl booted exp://127.0.0.1:19000",
-    "expo": "DEBUG='metro*,popui*' EXPO_DEBUG=true REACT_DEBUGGER=\"unset ELECTRON_RUN_AS_NODE && open -g 'rndebugger://set-debugger-loc?host=127.0.0.1&port=19001'\" expo start --max-workers 8 --lan --dev --no-minify",
-    "expo-clean": "DEBUG='Metro:*' EXPO_DEBUG=true REACT_DEBUGGER=\"unset ELECTRON_RUN_AS_NODE && open -g 'rndebugger://set-debugger-loc?host=127.0.0.1&port=19001'\" expo start --max-workers 8 --lan --dev --no-minify -c",
+    "expo": "DEBUG='popui:*' EXPO_DEBUG=true REACT_DEBUGGER=\"unset ELECTRON_RUN_AS_NODE && open -g 'rndebugger://set-debugger-loc?host=127.0.0.1&port=19001'\" expo start --max-workers 8 --lan --dev --no-minify",
+    "expo-clean": "DEBUG='popui:*' EXPO_DEBUG=true REACT_DEBUGGER=\"unset ELECTRON_RUN_AS_NODE && open -g 'rndebugger://set-debugger-loc?host=127.0.0.1&port=19001'\" expo start --max-workers 8 --lan --dev --no-minify -c",
     "lint": "npm run tslint && npm run srclint && npm run applint",
     "srclint": "eslint site scripts --ext '.js,.jsx'",
     "tslint": "antd-tools run ts-lint && npm run compile && rm -rf lib",
