@@ -18,6 +18,7 @@ export default class RCModal extends React.Component<IModalPropTypes, any> {
   static defaultProps = {
     wrapStyle: styles.wrap,
     maskStyle: styles.mask,
+    contentStyle:{},
     animationType: "fade",
     animateAppear: true,
     animationDuration: 300,
@@ -172,7 +173,7 @@ export default class RCModal extends React.Component<IModalPropTypes, any> {
     );
   };
   renderContent = () => {
-    const { style, animationType } = this.props;
+    const { contentStyle, animationType } = this.props;
     const { opacity } = this.state;
     const animationStyleMap = {
       none: {},
@@ -182,7 +183,7 @@ export default class RCModal extends React.Component<IModalPropTypes, any> {
     };
     return (
       <Animated.View
-        style={[styles.content, style, animationStyleMap[animationType]]}
+        style={[styles.content, contentStyle, animationStyleMap[animationType]]}
       >
         {this.props.children}
       </Animated.View>

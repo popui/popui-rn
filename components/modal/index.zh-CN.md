@@ -5,8 +5,7 @@ title: ModalAlert
 subtitle: 对话框
 ---
 
-Modal
-
+替代 RNModal
 
 ### 规则
 - 尽可能少用。Modal 会打断用户操作，只用在重要的时候。
@@ -16,15 +15,19 @@ Modal
 
 ### 注意
 - feature: 点击 mask 取消
+- feature: 支持多种动画: 'none' | 'fade' | 'slide-up' | 'slide-down';
 
 ## API
 
-### ModalAlert.alert(title, message, actions?, platform?)
-
 属性 | 说明 | 类型 | 默认值
 ----|-----|------|------
-| title | 标题  | String 或 React.Element | 无  |
-| message  | 提示信息  | String 或 React.Element  | 无  |
-| actions | 按钮组, [{text, onPress, style}] | Array | 无  |
-
-`Modal.alert(title, message, actions?, platform?).close()` 可以在外部关闭 Alert
+| wrapStyle | 最外层样式  | ViewStyle | 无  |
+| maskStyle | mask 层样式  | ViewStyle | 无  |
+| contentStyle | 内容层样式  | ViewStyle | 无  |
+| animationType | 动画类型  | `'none' | 'fade' | 'slide-up' | 'slide-down' | 'none'` |
+| animationDuration | 动画时间  | number | 300 |
+| visible | 是否显示  | boolean | false |
+| maskClosable | 点击 mask 是否关闭  | boolean | true |
+| animateAppear | 显示时是否使用动画  | boolean | true |
+| onClose | 关闭回调  | Function | 无 |
+| onAnimationEnd | 动画完成回调  | Function | 无 |

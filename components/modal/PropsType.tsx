@@ -1,7 +1,7 @@
 export interface IModalPropTypes {
   wrapStyle?: any;
   maskStyle?: any;
-  style?: {};
+  contentStyle:any;
   animationType: 'none' | 'fade' | 'slide-up' | 'slide-down';
   animationDuration?: number;
   visible: boolean;
