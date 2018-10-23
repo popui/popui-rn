@@ -23,7 +23,7 @@ subtitle: 对话框
 | closable | 是否显示关闭按钮 | Boolean | false |
 | maskClosable | 点击蒙层是否允许关闭 | Boolean | true |
 | onClose | 点击 x 或 mask 回调 | (): void | 无 |
-| transparent | 是否背景透明 | Boolean | true |
+| transparent | 是否背景透明,背景不透明时会回退到 RNModal | Boolean | true |
 | popup | 是否弹窗模式 | Boolean | false |
 | animationType | 可选: 'fade' / 'slide' | String | fade |
 | title | 标题 | React.Element | 无 |
