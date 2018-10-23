@@ -4,7 +4,8 @@ import { observer } from "mobx-react";
 import { View, ScrollView } from "react-native";
 import {
   Button,
-  ModalDialog,
+  Modal,
+  Dialog,
   GapH,
   GapV,
   DialogBodyText,
@@ -159,47 +160,39 @@ export default class BasicModalExample extends React.Component<any, any> {
           </Button>
         </GapV>
 
-        <ModalDialog
-          modalProps={{
-            visible:this.state.visible,
-            transparent:true
-          }}
-          maskProps={{
-            onPress:this.onClose
-          }}
-          title="Title"
-          // onClose={this.onClose}
-          // maskClosable
-          // visible={this.state.visible}
-          // closable
-          actions={actionButtons}
+        <Modal
+          onClose={this.onClose}
+          maskClosable
+          visible={this.state.visible}
         >
-          {this.renderContent({
-            onClose: this.onClose
-          })}
-        </ModalDialog>
+          <Dialog
+            title="Title"
+            closable
+            onClose={this.onClose}
+            actions={actionButtons}
+          >
+            {this.renderContent({
+              onClose: this.onClose
+            })}
+          </Dialog>
+        </Modal>
 
-        <ModalDialog
-          // transparent={false}
+        <Modal
+          transparent={false}
+          onClose={this.onClose1}
           visible={this.state.visible1}
-          // animationType="slide-up"
-          modalProps={{
-            visible:this.state.visible1
-          }}
-          maskProps={{
-            onPress:this.onClose1
-          }}
-          // onClose={this.onClose1}
         >
-          {this.renderContent({
-            style: {
-              flexDirection: "column",
-              justifyContent: "space-between",
-              paddingTop: 100
-            },
-            onClose: this.onClose1
-          })}
-        </ModalDialog>
+          <Dialog
+            title="Title"
+            closable
+            onClose={this.onClose1}
+            actions={actionButtons}
+          >
+            {this.renderContent({
+              onClose: this.onClose1
+            })}
+          </Dialog>
+        </Modal>
 
         <ModalPopup
           visible={this.state.visible2}

@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { observer } from "mobx-react";
 import {StyleSheet} from 'react-native';
-import RCModal from "rmc-dialog/lib/Modal";
+import RCModal from "../modal";
 import {ModalPopupProps} from './PropsType';
 import modalPopupStyle from './style';
 export interface ModalPopupState {
@@ -33,9 +33,9 @@ export default class ModalPopupComponent extends React.Component<ModalPopupProps
     }
     return (
         <RCModal
-          // animationType={animType}
+          animationType={animType}
           // tslint:disable-next-line:jsx-no-multiline-js
-          style={[
+          contentStyle={[
             styles.popupContainer,
             (styles as any)[`popup_${aType}`],
             style
