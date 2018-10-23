@@ -16,6 +16,7 @@ export interface ICheckboxStyle {
 export default {
   wrapper: {
     flexDirection: "row",
+    justifyContent: 'flex-start',
     alignItems: "center",
     paddingTop: 13 * 0.5,
     paddingBottom: 13 * 0.5,
@@ -23,19 +24,12 @@ export default {
     paddingRight: 15
   },
   checkbox:{
-    marginRight: 5,
+    marginLeft: themeVars.h_spacing_lg,
+    marginRight: themeVars.h_spacing_md,
   },
   disabled: {
     backgroundColor: "#E1E1E1"
   },
-  // agreeItem: {
-  //   flexDirection: 'row',
-  //   alignItems: 'center',
-  // },
-  // agreeItemCheckbox: {
-  //   marginLeft: themeVars.h_spacing_lg,
-  //   marginRight: themeVars.h_spacing_md,
-  // },
   // checkboxItemCheckbox: {
   //   marginRight: themeVars.h_spacing_md,
   //   alignSelf: 'center',

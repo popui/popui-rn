@@ -5,7 +5,7 @@ import {
   StyleProp,
   StyleSheet,
   TouchableWithoutFeedback,
-  TouchableOpacity,
+  // TouchableOpacity,
   View
 } from "react-native";
 import { CheckboxPropsType } from "./PropsType";
@@ -63,7 +63,11 @@ export default class CheckboxWithText extends React.Component<
   renderChildren = () => {
     const { disabled, children, textStyle } = this.props;
     if (typeof children === "string") {
-      return <CheckboxText disabled={disabled} style={textStyle} />;
+      return (
+        <CheckboxText disabled={disabled} style={textStyle}>
+          {children}
+        </CheckboxText>
+      );
     }
     return children;
   };
@@ -71,11 +75,12 @@ export default class CheckboxWithText extends React.Component<
     const { style, disabled } = this.props;
     const styles = this.props.styles!;
     const { checked } = this.state;
-    const TouchableComp = disabled
-      ? TouchableWithoutFeedback
-      : TouchableOpacity;
+    // const TouchableComp = disabled
+    //   ? TouchableWithoutFeedback
+    //   : TouchableOpacity;
+    // const TouchableComp = TouchableWithoutFeedback;
     return (
-      <TouchableComp onPress={this.handleClick}>
+      <TouchableWithoutFeedback onPress={this.handleClick}>
         <View style={[styles.wrapper, style]}>
           <Checkbox
             disabled={disabled}
@@ -85,7 +90,7 @@ export default class CheckboxWithText extends React.Component<
           />
           {this.renderChildren()}
         </View>
-      </TouchableComp>
+      </TouchableWithoutFeedback>
     );
   }
 }

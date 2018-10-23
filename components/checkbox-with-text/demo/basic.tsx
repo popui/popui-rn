@@ -2,7 +2,7 @@
 import React from "react";
 import { observer } from "mobx-react";
 import { Text, View } from "react-native";
-import { CheckboxWithText, List, GapH } from "popui-rn";
+import { CheckboxWithText,Checkbox, List, GapH } from "popui-rn";
 // const CheckboxWithTextItem = CheckboxWithText.CheckboxWithTextItem;
 
 @observer
@@ -18,50 +18,61 @@ export default class BasicCheckboxWithTextExample extends React.Component<
       checkboxItem1: true
     };
   }
-
+  toggleCheckBox1 =()=>{
+    const {checkBox1} = this.state
+    console.log("toggleCheckBox1",{
+      checkBox1
+    })
+    this.setState({ checkBox1: !checkBox1 });
+  }
+  toggleAgreeItem1 =()=>{
+    const {agreeItem1} = this.state
+    console.log("toggleAgreeItem1",{
+      agreeItem1
+    })
+    this.setState({ agreeItem1: !agreeItem1 });
+  }
   render() {
     return (
       <View>
         <View style={{ padding: 10 }}>
-          <Text>受控</Text>
-          <CheckboxWithText
-            checked={this.state.checkBox1}
-            style={{ tintColor: "#f00" }}
-            onChange={(event: any) => {
-              this.setState({ checkBox1: event.target.checked });
-            }}
+          <Text>checked</Text>
+          <Checkbox
+            checked
           />
 
           <GapH />
           <Text>default</Text>
-          <CheckboxWithText>CheckboxWithText</CheckboxWithText>
+          <Checkbox></Checkbox>
 
           <GapH />
           <Text>checked disabled</Text>
-          <CheckboxWithText checked disabled />
+          <Checkbox checked disabled />
 
           <GapH />
           <Text>disabled</Text>
-          <CheckboxWithText disabled />
+          <Checkbox disabled />
         </View>
 
         <GapH />
+        <Text>非受控</Text>
         <CheckboxWithText>
           Agree agreement agreement agreement agreement agreement agreement
           agreement
         </CheckboxWithText>
+
         <GapH />
+        <Text>受控</Text>
         <CheckboxWithText
           checked={this.state.agreeItem1}
-          checkboxStyle={{ tintColor: "#f00" }}
-          onChange={(event: any) => {
-            this.setState({ agreeItem1: event.target.checked });
-          }}
+          onChange={this.toggleAgreeItem1}
         >
           Agree agreement
         </CheckboxWithText>
+
         <GapH />
         <CheckboxWithText disabled>Not selected. Not editable</CheckboxWithText>
+
         <GapH />
         <CheckboxWithText checked disabled>
           Force selected. Not editable

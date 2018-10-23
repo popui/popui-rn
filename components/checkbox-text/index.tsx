@@ -1,4 +1,4 @@
-import React from "react";
+import React, { Children } from "react";
 import { observer } from "mobx-react";
 import { StyleSheet, Text } from "react-native";
 import { CheckboxTextPropsType } from "./PropsType";
@@ -16,11 +16,11 @@ export default class CheckboxText extends React.Component<
     disabled: false
   };
   render(): JSX.Element {
-    const { disabled, styles } = this.props;
+    const { disabled, styles,children } = this.props;
     const checkboxTextStyle = [
       styles.checkboxText,
       disabled ? styles.checkboxTextDisabled : null
     ];
-    return <Text style={checkboxTextStyle} />;
+    return <Text style={checkboxTextStyle} >{children}</Text>;
   }
 }

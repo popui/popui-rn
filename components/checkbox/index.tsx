@@ -24,27 +24,17 @@ export default class Checkbox extends React.Component<
     styles: CheckboxStyles
   };
 
-  handleClick = () => {
-    const { onChange, disabled } = this.props;
-    if (disabled) {
-      return;
-    }
-    if (onChange) {
-      onChange();
-    }
-  };
-
   render(): JSX.Element {
-    const { disabled,  styles,checked } = this.props;
+    const { disabled,  styles,checked,style } = this.props;
     const colorProps: any = {};
     if (disabled) {
       colorProps.color = "#ADADAD";
     }
-    const checkboxStyle = [styles.checkbox, disabled ? styles.disabled : null];
+    const checkboxStyle = [styles.checkbox, disabled ? styles.disabled : null,style];
     return (
       <View style={checkboxStyle}>
         {checked && (
-          <WeuiIcon name="success_no_circle" size={10} {...colorProps} />
+          <WeuiIcon name="success_no_circle" size={13} {...colorProps} />
         )}
       </View>
     );

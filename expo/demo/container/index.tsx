@@ -6,8 +6,6 @@ import { StyleSheet, SafeAreaView, ScrollView } from "react-native";
 // import CellBadgeExample from "popui-rn/components/cell-badge/demo/basic";
 // import ModalDialogExample from "popui-rn/components/dialog/demo/basic";
 import CheckboxWithTextExample from "popui-rn/components/checkbox-with-text/demo/basic";
-import CheckboxAgreeExample from "popui-rn/components/checkbox-agreement/demo/basic";
-
 // import Modal2Example from "popui-rn/components/modal2/demo/basic";
 // import Picker2Example from 'popui-rn/components/picker2/demo';
 // import { ActionSheet2 } from 'popui-rn'
@@ -27,7 +25,6 @@ export default class App extends React.Component {
             <CellBadgeExample /> */}
             {/* <Picker2Example/> */}
             <CheckboxWithTextExample />
-            <CheckboxAgreeExample />
             {/* <Modal2Example /> */}
           </ScrollView>
         </SafeAreaView>
