@@ -1,9 +1,10 @@
 import React from 'react';
 import { observer } from 'mobx-react'
 import { StyleSheet} from 'react-native';
-import ModalDialog from '../dialog';
 import operationStyle from './style/index';
 import {OperationContainerProps} from './PropsType';
+import RCModal from "../modal";
+import Dialog from "../dialog";
 
 const operationStyles = StyleSheet.create<any>(operationStyle);
 
@@ -28,17 +29,22 @@ export default class OperationContainer extends React.Component<
   render() {
     const { actions, onAnimationEnd } = this.props;
     return (
-      <ModalDialog
-        operation
-        transparent
-        maskClosable
+      <RCModal
         visible={this.state.visible}
+        animationType={"fade"}
+        maskClosable={true}
         onClose={this.onClose}
         onAnimationEnd={onAnimationEnd}
-        style={operationStyles.operationContainer}
-        bodyStyle={operationStyles.operationBody}
-        actions={actions}
-      />
+      >
+        <Dialog
+          operation
+          actions={actions}
+          onClose={this.onClose}
+          style={operationStyles.operationContainer}
+          bodyStyle={operationStyles.operationBody}
+        >
+        </Dialog>
+      </RCModal>
     );
   }
 }
