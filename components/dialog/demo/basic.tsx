@@ -52,13 +52,23 @@ export default class BasicModalExample extends React.Component<any, any> {
       ]
     });
   };
-  onAlert1 = () => {
+  onAlertWith2Actions= () => {
+    ModalAlert.alert({
+      title: "弹窗标题",
+      content: "弹窗内容，告知当前状态、信息和解决方法，描述文字尽量控制在三行内",
+      actions: [
+        { text: "辅助操作", onPress: () => console.log("cancel")},
+        { text: "主操作", onPress: () => console.log("ok") }
+      ]
+    });
+  }
+  onAlertLongText = () => {
     ModalAlert.alert({
       title: "弹窗标题",
       content: "超长文本\n超长文本\n超长文本\n超长文本\n超长文本\n超长文本\n超长文本\n超长文本\n超长文本\n超长文本\n超长文本\n超长文本 123 abc\n超长文本\n超长文本超长文本超长文本超长文本\n超长文本\n超长文本\n超长文本\n超长文本\n超长文本\n超长文本\n超长文本\n超长文本\n超长文本\n超长文本\n超长文本\n超长文本\n超长文本\n超长文本\n超长文本\n超长文本\n超长文本\n超长文本\n超长文本\n超长文本\n超长文本\n超长文本\n超长文本\n超长文本\n超长文本\n超长文本\n超长文本\n超长文本\n超长文本\n超长文本\n超长文本\n超长文本\n超长文本\n超长文本\n超长文本\n超长文本\n超长文本\n超长文本\n超长文本\n超长文本\n超长文本\n超长文本\n超长文本\n超长文本\n超长文本\n超长文本\n超长文本\n超长文本\n超长文本\n超长文本\n超长文本\n超长文本\n超长文本\n超长文本\n超长文本\n超长文本\n超长文本\n超长文本\n超长文本\n超长文本\n超长文本\n超长文本\n超长文本\n超长文本\n超长文本\n超长文本\n超长文本\n超长文本\n超长文本\n超长文本\n超长文本\n超长文本\n超长文本\n超长文本\n超长文本\n超长文本\n超长文本\n超长文本\n超长文本\n超长文本\n超长文本\n超长文本\n超长文本\n超长文本\n超长文本\n超长文本\n超长文本\n超长文本\n超长文本\n超长文本\n超长文本\n超长文本\n超长文本\n超长文本\n超长文本\n超长文本\n超长文本\n超长文本\n超长文本\n超长文本\n超长文本\n超长文本\n超长文本\n超长文本\n超长文本\n超长文本\n超长文本\n超长文本\n超长文本\n超长文本\n超长文本\n超长文本\n超长文本\n超长文本\n超长文本\n超长文本\n超长文本\n超长文本\n超长文本\n超长文本\n超长文本\n超长文本\n超长文本\n超长文本\n超长文本\n超长文本\n超长文本\n超长文本\n超长文本\n超长文本\n超长文本\n超长文本\n超长文本\n超长文本\n超长文本\n超长文本\n超长文本\n超长文本\n超长文本\n超长文本\n超长文本\n超长文本\n超长文本\n超长文本\n超长文本\n超长文本\n超长文本\n超长文本\n超长文本\n超长文本\n超长文本\n超长文本\n超长文本\n超长文本\n超长文本\n超长文本\n超长文本\n超长文本\n超长文本\n超长文本\n超长文本\n超长文本\n超长文本\n超长文本\n超长文本\n超长文本\n超长文本\n超长文本\n超长文本\n超长文本\n超长文本\n超长文本\n超长文本\n超长文本\n超长文本\n超长文本\n超长文本\n超长文本\n超长文本\n超长文本\n超长文本\n超长文本\n超长文本\n超长文本\n超长文本\n超长文本\n超长文本\n超长文本\n超长文本\n超长文本\n超长文本\n超长文本\n超长文本\n超长文本\n超长文本\n超长文本",
       actions: [
-        { text: "辅助操作", onPress: () => console.log("cancel"), type: "warn" },
-        { text: "主操作", onPress: () => console.log("ok") }
+        { text: "警告", onPress: () => console.log("cancel"), type: "warn" },
+        { text: "确认", onPress: () => console.log("ok") }
       ]
     });
   };
@@ -145,7 +155,9 @@ export default class BasicModalExample extends React.Component<any, any> {
           <GapH />
           <Button onClick={this.onAlert}>alert </Button>
           <GapH />
-          <Button onClick={this.onAlert1}>alert 2个按钮 </Button>
+          <Button onClick={this.onAlertWith2Actions}>alert 2个按钮 </Button>
+          <GapH />
+          <Button onClick={this.onAlertLongText}> alert 超长文本 </Button>
           <GapH />
           <Button onClick={this.onOpertation}>opertation</Button>
           <GapH />
