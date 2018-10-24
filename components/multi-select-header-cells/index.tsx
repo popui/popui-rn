@@ -1,13 +1,12 @@
 import xor from 'lodash/xor'
 import React from 'react'
 import { StyleSheet } from 'react-native'
-import { Cell, CellBody, CellHeader, Cells, CellText } from 'popui-rn'
-import WeuiIcon from '../weui-icon'
+import { Cell, CellBody, CellHeader, Cells, CellText,Radio } from 'popui-rn'
+// import WeuiIcon from '../weui-icon'
 import themeVars from '../style/themes/default'
-
+import {MultiSelectHeaderCellsPropsType} from './PropsType'
 const styles = StyleSheet.create({
-  checkbox: {
-    fontSize: 23,
+  icon: {
     paddingRight: themeVars.CellInnerGapH,
   },
   disabled: {
@@ -15,28 +14,28 @@ const styles = StyleSheet.create({
   },
 })
 
-const CheckboxCells = ({
-  value,
+const MultiSelectHeaderCells = ({
+  values,
   options,
   onChange,
   disabled,
   style,
   children,
   ...others
-}: any) => {
-  const inArray = (v) => value.filter((a) => a === v).length
+}: MultiSelectHeaderCellsPropsType) => {
+  const isChecked = (item:any) => values.filter((value:any) => value === item).length>0
 
   return (
     <Cells style={[style, disabled ? styles.disabled : null]} {...others}>
       {options.map((option, idx) => (
         <Cell
           key={idx}
-          onPress={() => !disabled && onChange(xor(value, [option.value]))}
+          onPress={() => !disabled && onChange && onChange(xor(values, [option.value]))}
         >
           <CellHeader>
-            <WeuiIcon
-              name={inArray(option.value) ? 'success' : 'circle'}
-              style={styles.checkbox}
+            <Radio
+              checked={isChecked(option.value)}
+              style={styles.icon}
             />
           </CellHeader>
           <CellBody>
@@ -58,4 +57,4 @@ const CheckboxCells = ({
 //   children: PropTypes.node
 // }
 
-export default CheckboxCells
+export default MultiSelectHeaderCells

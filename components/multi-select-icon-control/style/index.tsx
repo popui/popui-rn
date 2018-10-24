@@ -1,7 +1,7 @@
 import themeVars from '../../style/themes/default';
 import { ViewStyle, TextStyle } from 'react-native';
 
-export interface IRadioStyle {
+export interface MultiSelectIconControlStyle {
   wrapper: ViewStyle;
   icon: ViewStyle;
   radioItem: ViewStyle;

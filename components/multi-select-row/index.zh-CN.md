@@ -2,7 +2,7 @@
 category: Components
 type: Data Entry
 title: Radio
-subtitle: 单选框
+subtitle: 多选框
 ---
 
 单选框
@@ -19,7 +19,3 @@ subtitle: 单选框
 | disabled      |  禁用  | Boolean |  false  |
 | onChange    | change 事件触发的回调函数 | (e: Object): void |   无  |
 
-### Radio.RadioItem
-
-基于`List.Item`对`Radio`进行封装,`List.Item`的`extra`属性固定传入`Radio`,其他属性和`List.Item`一致。
-其他 API 和 Radio 相同。

@@ -5,7 +5,7 @@ import {
   Cell,
   CellBody,
   CellsTitle,
-  RadioCells,
+  SelectFooterCells,
   GapH
 } from "popui-rn";
 const options = [
@@ -33,35 +33,35 @@ const options = [
 
 export default class InputScreen extends React.Component<any, any> {
   state = {
-    radio: "",
-    radio2: "",
+    value1: "",
+    value2: "",
   };
   render() {
     return (
       <View>
         <CellsTitle>单选列表项</CellsTitle>
-        <RadioCells
+        <SelectFooterCells
           options={options}
           onChange={this.handleRadioChange}
-          value={this.state.radio}
+          value={this.state.value1}
         >
           <Cell onPress={() => {}}>
             <CellBody>
               <Text style={{ fontSize: 14, color: "#999" }}>more</Text>
             </CellBody>
           </Cell>
-        </RadioCells>
+        </SelectFooterCells>
 
         <GapH />
 
         <CellsTitle>单选列表项(禁用)</CellsTitle>
-        <RadioCells
+        <SelectFooterCells
           options={options}
           onChange={this.handleRadio2Change}
-          value={this.state.radio2}
+          value={this.state.value2}
           disabled
         >
-        </RadioCells>
+        </SelectFooterCells>
       </View>
     );
   }

@@ -1,10 +1,10 @@
 import * as React from 'react'
 import { StyleSheet } from 'react-native'
-import { RadioPropsType } from './PropsType'
+import { MultiSelectIconControlPropsType } from './PropsType'
 import WeuiIcon from '../weui-icon'
 
 const styles = StyleSheet.create({
-  checkbox: {
+  icon: {
     fontSize: 23,
   },
   disabled: {
@@ -12,10 +12,10 @@ const styles = StyleSheet.create({
   },
 })
 
-function Radio({ checked = false, disabled = false, style }: RadioPropsType) {
+function MultiSelectIconControl({ checked = false, disabled = false, style }: MultiSelectIconControlPropsType) {
   const iconName = checked ? 'success' : 'circle'
-  const iconStyle = [styles.checkbox, disabled ? styles.disabled : null, style]
+  const iconStyle = [styles.icon, disabled ? styles.disabled : null, style]
   return <WeuiIcon name={iconName} style={iconStyle} />
 }
 
-export default Radio
+export default MultiSelectIconControl

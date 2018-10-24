@@ -2,8 +2,8 @@
 import React from 'react';
 
 import { Text, View } from 'react-native';
-import { Radio, GapH } from 'popui-rn';
-// const RadioItem = Radio.RadioItem;
+import { MultiSelectIconControl, GapH } from 'popui-rn';
+// const RadioItem = MultiSelectIconControl.RadioItem;
 
 
 export default class BasicRadioExample extends React.Component<any, any> {
@@ -17,26 +17,25 @@ export default class BasicRadioExample extends React.Component<any, any> {
       <View>
         <View style={{ padding: 10,flexDirection:'column',justifyContent:'flex-start',alignItems:'center',backgroundColor:'#fff' }}>
           <Text>default</Text>
-          <Radio
-          >
-          </Radio>
+          <MultiSelectIconControl
+          />
 
           <GapH size='xl'/>
           <Text>checked </Text>
-          <Radio
+          <MultiSelectIconControl
             checked
           />
 
           <GapH size='xl'/>
           <Text>checked disabled</Text>
-          <Radio
+          <MultiSelectIconControl
             checked
             disabled
           />
 
           <GapH size='xl'/>
           <Text>disabled</Text>
-          <Radio
+          <MultiSelectIconControl
             disabled
           />
         </View>

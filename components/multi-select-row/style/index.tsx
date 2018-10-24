@@ -1,15 +1,12 @@
-import { ViewStyle } from 'react-native';
 import themeVars from '../../style/themes/default';
+import { ViewStyle, TextStyle } from 'react-native';
 
-export interface ICheckboxStyle {
+export interface IMultiSelectStyle {
   wrapper: ViewStyle;
-  checkbox: ViewStyle;
-  disabled: ViewStyle;
   icon: ViewStyle;
-  iconRight: ViewStyle;
-  agreeItem: ViewStyle;
-  agreeItemCheckbox: ViewStyle;
-  checkboxItemCheckbox: ViewStyle;
+  disabled: ViewStyle;
+  rowText: TextStyle;
+  rowTextDisabled: TextStyle;
 }
 
 export default {
@@ -22,15 +19,19 @@ export default {
     paddingLeft: 15,
     paddingRight: 15
   },
-  checkbox:{
+  icon:{
     marginLeft: themeVars.h_spacing_lg,
     marginRight: themeVars.h_spacing_md,
   },
   disabled: {
     backgroundColor: "#E1E1E1"
   },
-  // checkboxItemCheckbox: {
-  //   marginRight: themeVars.h_spacing_md,
-  //   alignSelf: 'center',
-  // },
+  rowText: {
+    fontSize: 13,
+    color: themeVars.color_text_base,
+    // marginLeft: 5
+  },
+  rowTextDisabled:{
+    color: themeVars.TextColorGray,
+  }
 };

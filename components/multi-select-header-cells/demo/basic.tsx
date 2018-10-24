@@ -3,7 +3,7 @@ import React from "react";
 import { Text, View } from "react-native";
 import {
   CellsTitle,
-  CheckboxCells,
+  SelectHeaderCells,
 } from "popui-rn";
 
 const options = [
@@ -29,38 +29,38 @@ const options = [
   }
 ]
 
-export default class InputScreen extends React.Component<any, any> {
+export default class Screen extends React.Component<any, any> {
   state = {
-    checkbox1: [1],
-    checkbox2: [1],
+    values1: [1],
+    values2: [1],
   };
-  private handleCheckbox1Change = (value: any) => {
+  private handleCheckbox1Change = (values: any) => {
     console.log("handleCheckbox1Change", {
-      value
+      values
     })
-    this.setState({ checkbox1:value });
+    this.setState({ values1:values });
   };
-  private handleCheckbox2Change = (value: any) => {
+  private handleCheckbox2Change = (values: any) => {
     console.log("handleCheckbox2Change", {
-      value
+      values
     })
-    this.setState({ checkbox2:value });
+    this.setState({ values2:values });
   };
   render() {
     return (
       <View>
         <CellsTitle>复选列表项</CellsTitle>
-        <CheckboxCells
+        <SelectHeaderCells
           options={options}
           onChange={this.handleCheckbox1Change}
-          value={this.state.checkbox1}
+          value={this.state.values1}
         />
 
         <CellsTitle>复选列表项(禁用)</CellsTitle>
-        <CheckboxCells
+        <SelectHeaderCells
           options={options}
           onChange={this.handleCheckbox2Change}
-          value={this.state.checkbox2}
+          value={this.state.values2}
           disabled
         />
       </View>

@@ -1,42 +1,35 @@
 import React from 'react'
-
 import {
-  ImageStyle,
-  StyleProp,
   StyleSheet,
   TouchableWithoutFeedback,
   // TouchableOpacity,
+  Text,
   View,
 } from 'react-native'
-import { RadioPropsType } from './PropsType'
-import RadioStyle, { IRadioStyle } from './style/index'
-import RadioText from '../checkbox-text'
-import Radio from '../checkbox'
-export interface IRadioNativeProps extends RadioPropsType {
-  styles?: IRadioStyle
-  style?: StyleProp<ImageStyle>
-}
+import { MultiSelectPropsType } from './PropsType'
+import RadioStyle from './style/index'
+import MultiSelectIconControl from '../multi-select-icon-control'
 
 const RadioStyles = StyleSheet.create<any>(RadioStyle)
 
-export default class RadioRow extends React.Component<
-  IRadioNativeProps,
-  any
-> {
+export default class MultiSelectRow extends React.Component<MultiSelectPropsType, any> {
   static defaultProps = {
     styles: RadioStyles,
     disabled: false,
   }
 
-  constructor(props: RadioPropsType, context: any) {
+  constructor(props: MultiSelectPropsType, context: any) {
     super(props, context)
-
     this.state = {
       checked: props.checked || props.defaultChecked || false,
     }
   }
-  static getDerivedStateFromProps(nextProps:RadioPropsType, prevState:any) {
-    if (typeof nextProps.checked === 'boolean' && nextProps.checked!==prevState.checked) {
+
+  static getDerivedStateFromProps(nextProps: MultiSelectPropsType, prevState: any) {
+    if (
+      typeof nextProps.checked === 'boolean' &&
+      nextProps.checked !== prevState.checked
+    ) {
       return {
         checked: !!nextProps.checked,
       }
@@ -59,17 +52,25 @@ export default class RadioRow extends React.Component<
       onChange({ target: { checked } })
     }
   }
+
   renderChildren = () => {
     const { disabled, children, textStyle } = this.props
-    if (typeof children === 'string') {
-      return (
-        <RadioText disabled={disabled} style={textStyle}>
-          {children}
-        </RadioText>
-      )
+    if (typeof children !== 'string') {
+      return children
     }
-    return children
+    const styles = this.props.styles!
+    const style = [
+      styles.rowText,
+      disabled ? styles.rowTextDisabled : null,
+      textStyle,
+    ]
+    return (
+      <Text style={style}>
+        {children}
+      </Text>
+    )
   }
+
   render(): JSX.Element {
     const { style, disabled } = this.props
     const styles = this.props.styles!
@@ -81,11 +82,10 @@ export default class RadioRow extends React.Component<
     return (
       <TouchableWithoutFeedback onPress={this.handleClick}>
         <View style={[styles.wrapper, style]}>
-          <Radio
+          <MultiSelectIconControl
             disabled={disabled}
             checked={checked}
-            onChange={this.handleClick}
-            style={styles.checkbox}
+            style={styles.icon}
           />
           {this.renderChildren()}
         </View>

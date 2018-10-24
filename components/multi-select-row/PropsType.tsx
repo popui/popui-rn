@@ -18,10 +18,12 @@ export interface OnChangeParams {
     checked: boolean
   }
 }
-export interface RadioPropsType {
+export interface MultiSelectPropsType {
   defaultChecked?: boolean
   checked?: boolean
   disabled?: boolean
   textStyle?: any
   onChange?: (params: OnChangeParams) => void
+  styles?: any
+  style?: any
 }
