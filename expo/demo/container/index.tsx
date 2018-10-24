@@ -7,8 +7,8 @@ import { StyleSheet, SafeAreaView, ScrollView } from "react-native";
 // import ModalDialogExample from "popui-rn/components/dialog/demo/basic";
 // import CheckboxWithTextExample from "popui-rn/components/checkbox-with-text/demo/basic";
 
-import ToggleRowCheckBoxExample from "popui-rn/components/toggle-row-check-box/demo/basic";
-import ToggleRowCircleExample from "popui-rn/components/toggle-row-circle/demo/basic";
+import CellsWithMultiSelectExample from "popui-rn/components/cells-with-multi-select/demo/basic";
+import CellsWithSingleSelectExample from "popui-rn/components/cells-with-single-select/demo/basic";
 // import Modal2Example from "popui-rn/components/modal2/demo/basic";
 // import Picker2Example from 'popui-rn/components/picker2/demo';
 // import { ActionSheet2 } from 'popui-rn'
@@ -27,8 +27,8 @@ export default class App extends React.Component {
             <CellBadgeExample /> */}
             {/* <Picker2Example/> */}
             {/* <CheckboxWithTextExample /> */}
-            <ToggleRowCheckBoxExample/>
-            <ToggleRowCircleExample />
+            <CellsWithSingleSelectExample />
+            <CellsWithMultiSelectExample/>
             {/* <Modal2Example /> */}
           </ScrollView>
         </SafeAreaView>

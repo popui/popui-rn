@@ -33,8 +33,8 @@ const options = [
 
 export default class InputScreen extends React.Component<any, any> {
   state = {
-    value1: "",
-    value2: "",
+    value1: 1,
+    value2: 2,
   };
   render() {
     return (

@@ -53,14 +53,14 @@ export default class Screen extends React.Component<any, any> {
         <CellsWithMultiSelect
           options={options}
           onChange={this.handleCheckbox1Change}
-          value={this.state.values1}
+          values={this.state.values1}
         />
 
         <CellsTitle>复选列表项(禁用)</CellsTitle>
         <CellsWithMultiSelect
           options={options}
           onChange={this.handleCheckbox2Change}
-          value={this.state.values2}
+          values={this.state.values2}
           disabled
         />
       </View>

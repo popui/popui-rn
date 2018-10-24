@@ -1,7 +1,11 @@
 import React from 'react'
 import { StyleSheet } from 'react-native'
-import { Cell, CellBody, Cells, CellText,ToggleIconCircle } from 'popui-rn'
-import {SelectFooterCellsPropsType,SelectOption} from './PropsType';
+import { Cell, CellBody, Cells, CellText, ToggleIconCircle } from 'popui-rn'
+import {
+  SelectFooterCellsPropsType,
+  SelectOption,
+  SelectFooterCellsItemPropsType,
+} from './PropsType'
 import themeVars from '../style/themes/default'
 
 const styles = StyleSheet.create({
@@ -14,6 +18,28 @@ const styles = StyleSheet.create({
   },
 })
 
+export function CellsWithSingleSelectItem(
+  props: SelectFooterCellsItemPropsType
+) {
+  const { value, onChange, disabled, option, idx } = props
+  console.log('CellsWithSingleSelectItem', {
+    props,
+  })
+  return (
+    <Cell
+      key={idx}
+      onPress={() => !disabled && onChange && onChange(option.value)}
+    >
+      <CellBody>
+        <CellText>{option.label || option.value}</CellText>
+      </CellBody>
+      {value === option.value && (
+        <ToggleIconCircle disabled={disabled} checked />
+      )}
+    </Cell>
+  )
+}
+
 const CellsWithSingleSelect = ({
   value,
   options,
@@ -25,16 +51,16 @@ const CellsWithSingleSelect = ({
 }: SelectFooterCellsPropsType) => {
   return (
     <Cells style={[style, disabled ? styles.disabled : null]} {...others}>
-      {options.map((option:SelectOption, idx:number) => (
-        <Cell key={idx} onPress={() => !disabled && onChange && onChange(option.value)}>
-          <CellBody>
-            <CellText>{option.label || option.value}</CellText>
-          </CellBody>
-          {value === option.value && <ToggleIconCircle
-            disabled={disabled}
-            checked
-          />}
-        </Cell>
+      {options.map((option: SelectOption, idx: number) => (
+        <CellsWithSingleSelectItem
+          {...{
+            option,
+            idx,
+            value,
+            onChange,
+            disabled,
+          }}
+        />
       ))}
       {children}
     </Cells>

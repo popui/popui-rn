@@ -1,5 +1,5 @@
 export interface SelectFooterCellsPropsType {
-  value?:string
+  value:string
   options:SelectOption[]
   onChange?:(event:any)=>void
   disabled?:boolean
@@ -11,4 +11,13 @@ export interface SelectFooterCellsPropsType {
 export interface SelectOption {
   label:string
   value:any
+}
+
+
+export interface SelectFooterCellsItemPropsType {
+  value:string
+  onChange?:(event:any)=>void
+  disabled?:boolean
+  option:SelectOption,
+  idx:number
 }
