@@ -1,14 +1,14 @@
 /* tslint:disable:jsx-no-multiline-js */
 // tslint:disable:no-empty
 import React from 'react';
-import { observer } from 'mobx-react'
+
 import { Image, ScrollView, View } from 'react-native';
 import { List } from 'popui-rn';
 
 const Item = List.Item;
 const Brief = Item.Brief;
 
-@observer
+
 export default class BasicListExample extends React.Component<any, any> {
   render() {
     return (

@@ -1,5 +1,5 @@
 import React from 'react';
-import { observer } from 'mobx-react'
+
 import { StyleProp, StyleSheet, Text, View, ViewStyle } from 'react-native';
 import { BadgePropsTypes } from './PropsType';
 import BadgeStyle, { IBadgeStyle } from './style/index';
@@ -11,7 +11,7 @@ export interface BadgeNativeProps extends BadgePropsTypes {
 
 const BadgeStyles = StyleSheet.create<any>(BadgeStyle);
 
-@observer
+
 export default class Badge extends React.Component<BadgeNativeProps, any> {
   static defaultProps = {
     size: 'small',

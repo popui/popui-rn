@@ -1,6 +1,6 @@
 // tslint:disable:jsx-no-multiline-js
 import React from 'react';
-import { observer } from 'mobx-react'
+
 import {
   ActionSheetIOSOptions,
   Text,
@@ -22,7 +22,7 @@ export interface ActionSheetNativeProps {
   styles?: ActionSheetStyle;
 }
 
-@observer
+
 class ActionSheetAndroid extends React.Component<ActionSheetNativeProps, any> {
   constructor(props: ActionSheetNativeProps) {
     super(props);

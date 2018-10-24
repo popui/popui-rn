@@ -1,5 +1,5 @@
 import * as React from "react";
-import { observer } from 'mobx-react';
+;
 import { TextInputProperties } from "react-native";
 import TextInputTypeProvider from "../text-input-type-provider";
 import { TextInputTypeProviderType } from "../text-input-type-provider/PropsType";

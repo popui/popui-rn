@@ -1,5 +1,5 @@
 import React, { ReactNode } from 'react';
-import { observer } from 'mobx-react';
+;
 // export type ListType = JSX.Element
 export interface ListPropsType {
   renderHeader?: (() => React.ReactType) | string | JSX.Element;

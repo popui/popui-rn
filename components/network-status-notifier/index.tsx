@@ -1,5 +1,5 @@
 import React from 'react'
-import { observer } from 'mobx-react';
+;
 // import { ActivityIndicator, Text } from 'react-native'
 import AutoProgress from 'popui-rn/components/Progress/AutoProgress'
 

@@ -1,11 +1,11 @@
 /* tslint:disable:jsx-no-multiline-js */
 import React from 'react';
-import { observer } from 'mobx-react'
+
 import { ScrollView, Text, View } from 'react-native';
 import { Icon, GapV, Steps } from 'popui-rn';
 const Step = Steps.Step;
 
-@observer
+
 export default class BasicTimelineExample extends React.Component<any, any> {
   constructor(props: any) {
     super(props);

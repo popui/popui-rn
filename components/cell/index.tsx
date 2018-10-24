@@ -1,5 +1,5 @@
 import React from 'react'
-import { observer } from 'mobx-react';
+;
 import { StyleSheet, View, ViewStyle } from 'react-native'
 import { themeStore } from '../theme-store';
 const { themeVars } = themeStore;
@@ -42,7 +42,7 @@ export interface CellProps {
 export interface CellState {
 }
 
-@observer
+
 export default class Cell extends React.Component<CellProps, CellState> {
   private renderChildrenWithProps = () => {
     const { access, error, children} = this.props

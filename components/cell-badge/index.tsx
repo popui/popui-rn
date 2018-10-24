@@ -1,6 +1,6 @@
 import React from 'react'
 import { CellBadgePropsTypes } from "./PropsType";
-import { observer } from 'mobx-react';
+;
 import { StyleSheet, Text } from 'react-native'
 import plainStyles from './style'
 const styles = StyleSheet.create((plainStyles as any))
@@ -30,4 +30,4 @@ function CellBadge(props:CellBadgePropsTypes) {
   )
 }
 
-export default observer(CellBadge)
+export default CellBadge

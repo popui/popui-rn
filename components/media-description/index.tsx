@@ -1,6 +1,6 @@
 // import PropTypes from 'prop-types'
 import React from 'react'
-import { observer } from 'mobx-react';
+;
 import { Text } from 'react-native'
 import { create } from '../style/utils/StyleSheet'
 import { themeStore } from '../theme-store';
@@ -28,4 +28,4 @@ const MediaDescription = ({ style, children, ...others }:MediaDescriptionPropsTy
 //     children: PropTypes.node,
 // }
 
-export default observer(MediaDescription)
+export default MediaDescription

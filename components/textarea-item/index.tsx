@@ -1,6 +1,6 @@
 /* tslint:disable:jsx-no-multiline-js */
 import React from 'react';
-import { observer } from 'mobx-react'
+
 import {
   StyleSheet,
   Text,
@@ -27,7 +27,7 @@ export interface TextareaItemNativeProps
 
 const TextAreaItemStyles = StyleSheet.create<any>(TextAreaItemStyle);
 
-@observer
+
 export default class TextAreaItem extends React.Component<
   TextareaItemNativeProps,
   any

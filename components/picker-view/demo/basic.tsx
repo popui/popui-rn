@@ -1,5 +1,5 @@
 import React from 'react';
-import { observer } from 'mobx-react'
+
 import { PickerView } from 'popui-rn';
 
 const seasons = [
@@ -25,7 +25,7 @@ const seasons = [
   ],
 ];
 
-@observer
+
 export default class PickerViewExample extends React.Component {
   state = {
     value: null,

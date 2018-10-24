@@ -1,5 +1,5 @@
 import React from 'react';
-import { observer } from 'mobx-react'
+
 import {
   DefaultTabBar as RMCDefaultTabBar,
   Tabs as RMCTabs,
@@ -7,7 +7,7 @@ import {
 import TabsProps from './PropsType';
 import Styles from './style/index';
 
-@observer
+
 export default class Tabs extends React.Component<TabsProps, {}> {
   public static DefaultTabBar = RMCDefaultTabBar;
 

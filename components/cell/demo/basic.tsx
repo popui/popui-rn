@@ -1,6 +1,6 @@
 import { Image, View } from 'react-native'
 import React from 'react'
-import { observer } from 'mobx-react';
+;
 import {
   Badge,
   Cell , CellBody, CellFooter,
@@ -12,7 +12,7 @@ export interface IProps  {
 
 }
 
-@observer
+
 export default class CellScreen extends React.Component<IProps, any> {
     static navigationOptions = {
         title: 'Cell',

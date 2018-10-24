@@ -1,5 +1,5 @@
 import React from 'react';
-import { observer } from 'mobx-react'
+
 import {
   ImageStyle,
   StyleProp,
@@ -24,7 +24,7 @@ export interface RadioItemNativeProps extends RadioItemPropsType {
 
 const RadioItemStyles = StyleSheet.create<any>(RadioItemStyle);
 
-@observer
+
 export default class RadioItem extends React.Component<
   RadioItemNativeProps,
   any

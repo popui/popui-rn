@@ -1,5 +1,5 @@
 import React from 'react';
-import { observer } from 'mobx-react'
+
 import { Pagination, GapH, GapV } from 'popui-rn';
 
 const locale = {
@@ -7,7 +7,7 @@ const locale = {
   nextText: '下一步',
 };
 
-@observer
+
 export default class BasicPaginationExample extends React.Component<any, any> {
   render() {
     return (

@@ -1,5 +1,5 @@
 import  React from 'react'
-import { observer } from 'mobx-react';
+;
 import { StyleSheet, View, ViewStyle } from 'react-native'
 import WeuiIcon from '../weui-icon'
 import { themeStore } from '../theme-store';
@@ -32,7 +32,7 @@ export interface CellBodyProps {
 export interface CellBodyState {
 }
 
-@observer
+
 export default class CellBody extends React.Component<CellBodyProps, CellBodyState> {
 
   private renderChildrenWithProps = () => {

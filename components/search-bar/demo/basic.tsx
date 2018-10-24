@@ -1,9 +1,9 @@
 import React from 'react';
-import { observer } from 'mobx-react'
+
 import { Alert } from 'react-native';
 import { SearchBar,GapH,ScrollView } from 'popui-rn';
 import SearchBarWithResult from './SearchBarWithResult'
-@observer
+
 export default class SearchBarDemo extends React.Component<any, any> {
   state = {
     value: '美食',

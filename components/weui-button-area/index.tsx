@@ -1,5 +1,5 @@
 import React from 'react'
-import { observer } from 'mobx-react';
+;
 import { StyleSheet, View } from 'react-native'
 import { themeStore } from '../theme-store';
 const { themeVars } = themeStore;
@@ -27,4 +27,4 @@ const WeuiButtonArea = ({ direction = 'vertical', style, children }: WeuiButtonA
 }
 
 
-export default observer(WeuiButtonArea)
+export default WeuiButtonArea

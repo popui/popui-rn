@@ -1,5 +1,5 @@
 import React from 'react';
-import { observer } from 'mobx-react'
+
 
 export interface DatePickerPropsType {
   value?: Date;

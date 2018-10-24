@@ -1,7 +1,7 @@
 import { View,ScrollView,Text,StyleSheet } from 'react-native'
 import {  WeuiIcon } from 'popui-rn'
 import React from 'react'
-import { observer } from 'mobx-react';
+;
 import stylekit from 'react-native-stylekit'
 
 const SK = stylekit({})
@@ -16,7 +16,7 @@ const styles = StyleSheet.create({
   }
 })
 
-@observer
+
 export default class IconsScreen extends React.Component<IProps, any> {
     static navigationOptions = {
         title: 'Icons',

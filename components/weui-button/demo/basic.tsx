@@ -1,6 +1,6 @@
 import { WeuiButton as Button, WeuiButtonArea, GapV } from 'popui-rn'
 import React from 'react'
-import { observer } from 'mobx-react';
+;
 import stylekit from 'react-native-stylekit'
 const S = stylekit({})
 
@@ -8,7 +8,7 @@ export interface IProps  {
 
 }
 
-@observer
+
 export default class ButtonScreen extends React.Component<IProps, any> {
     static navigationOptions = {
         title: 'Button',

@@ -1,5 +1,5 @@
 import React from 'react';
-import { observer } from 'mobx-react'
+
 import {
   StyleProp,
   StyleSheet,
@@ -20,7 +20,7 @@ export interface SegmentControlNativeProps extends SegmentedControlPropsType {
 
 const AndroidStyles = StyleSheet.create<any>(AndroidStyle);
 
-@observer
+
 export default class SegmentedControl extends React.Component<
   SegmentControlNativeProps,
   any

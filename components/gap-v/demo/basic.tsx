@@ -1,7 +1,7 @@
 // tslint:disable:jsx-no-multiline-js
 
 import React from 'react';
-import { observer } from 'mobx-react'
+
 import { Text, View } from 'react-native';
 import { GapH, GapV } from 'popui-rn';
 
@@ -19,7 +19,7 @@ const PlaceHolder = (props: any) => (
   </View>
 );
 
-@observer
+
 export default class GapVExample extends React.Component<any, any> {
   render() {
     return (

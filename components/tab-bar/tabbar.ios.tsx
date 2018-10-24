@@ -1,9 +1,9 @@
 import React from 'react';
-import { observer } from 'mobx-react'
+
 import { TabBarIOS } from 'react-native';
 import { TabBarProps } from './PropsType';
 
-@observer
+
 class TabBar extends React.Component<TabBarProps, any> {
   static defaultProps = {
     barTintColor: 'white',

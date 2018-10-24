@@ -5,7 +5,7 @@
  * 默认的 fallback 从 TouchableOpacity 改为 TouchableHighlight
  */
 import React from 'react'
-import { observer } from 'mobx-react';
+;
 import {
   Platform,
   TouchableHighlight,
@@ -32,7 +32,7 @@ if (TouchableComponent !== TouchableNativeFeedback) {
   TouchableComponent.canUseNativeForeground = () => false
 }
 
-@observer
+
 export default class TouchableWithFallback extends React.Component<any, any> {
   static SelectableBackground = TouchableComponent.SelectableBackground
   static SelectableBackgroundBorderless =

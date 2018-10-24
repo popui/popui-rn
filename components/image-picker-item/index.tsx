@@ -1,5 +1,5 @@
 import * as React from "react";
-import { observer } from 'mobx-react';
+;
 import { View, StyleSheet, Text, TouchableOpacity, Image, ActivityIndicator } from "react-native";
 import WeuiIcon from "../weui-icon";
 import plainStyles from "./style";
@@ -8,7 +8,7 @@ import { ImagePickerItemProps, ImagePickerItemState } from "./PropsType";
 import { ImageItemFuncArgs } from "../image-picker/PropsType";
 import { noopFunc } from "../_util/noop";
 
-@observer
+
 export default class ImagePickerItem extends React.Component<
   ImagePickerItemProps,
   ImagePickerItemState

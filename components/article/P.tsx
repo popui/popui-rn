@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types'
 import React from 'react'
-import { observer } from 'mobx-react';
+;
 import { Text, ViewPropTypes } from 'react-native'
 import { create } from '../style/utils/StyleSheet'
 import { themeStore } from '../theme-store';
@@ -27,4 +27,4 @@ P.propTypes = {
     children: PropTypes.node,
 }
 
-export default observer(P)
+export default P

@@ -1,5 +1,5 @@
 import React from 'react';
-import { observer } from 'mobx-react'
+
 import { View, Text, TouchableOpacity } from 'react-native';
 import { List, Picker } from 'popui-rn';
 
@@ -16,7 +16,7 @@ const CustomChildren = (props: any) => (
   </TouchableOpacity>
 );
 
-@observer
+
 export default class PopupExample extends React.Component<any, any> {
   constructor(props: any) {
     super(props);

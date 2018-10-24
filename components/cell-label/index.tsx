@@ -1,5 +1,5 @@
 import React from 'react'
-import { observer } from 'mobx-react';
+;
 import { StyleSheet, Text, ViewPropTypes, ViewStyle } from 'react-native'
 import { themeStore } from '../theme-store';
 const { themeVars } = themeStore;
@@ -22,7 +22,7 @@ export interface CellLabelProps {
 export interface CellLabelState {
 }
 
-@observer
+
 export default class CellLabel extends React.Component<CellLabelProps, CellLabelState> {
   public render() {
     const { style, children, ...others } = this.props

@@ -1,5 +1,5 @@
 import React from 'react';
-import { observer } from 'mobx-react'
+
 import { StyleSheet, View } from 'react-native';
 import { TabBarProps } from './PropsType';
 import TabBarStyle, { ITabBarStyle } from './style/index';
@@ -11,7 +11,7 @@ export interface TabBarNativeProps extends TabBarProps {
 
 const TabBarStyles = StyleSheet.create<any>(TabBarStyle);
 
-@observer
+
 class TabBar extends React.Component<TabBarNativeProps, any> {
   static defaultProps = {
     barTintColor: 'white',

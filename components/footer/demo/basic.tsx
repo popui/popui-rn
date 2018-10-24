@@ -1,5 +1,5 @@
 import React from 'react'
-import { observer } from 'mobx-react';
+;
 
 import { Text,ScrollView } from 'react-native'
 import { Footer as FooterComp, GapV } from 'popui-rn'
@@ -15,7 +15,7 @@ export interface IProps  {
 
 }
 
-@observer
+
 export default class FooterScreen extends React.Component<IProps, any> {
     static navigationOptions = {
         title: 'Footer',

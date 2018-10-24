@@ -1,6 +1,6 @@
 // import PropTypes from 'prop-types'
 import React from 'react'
-import { observer } from 'mobx-react';
+;
 import { StyleSheet, View, ViewPropTypes } from 'react-native'
 import { themeStore } from '../theme-store';
 const { themeVars } = themeStore;
@@ -55,4 +55,4 @@ const Media = ({ type, style, children, first, ...others }:MediaPropsType) =>
 //     first: PropTypes.bool,
 // }
 
-export default observer(Media)
+export default Media

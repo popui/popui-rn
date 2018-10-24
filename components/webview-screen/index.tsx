@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { observer } from 'mobx-react';
+;
 import { Platform, View, WebView } from 'react-native'
 import AutoProgress from '../progress-auto'
 import Menu, {
@@ -12,7 +12,7 @@ import Toast from '../toast'
 
 import CONSTANTS from './constants'
 
-@observer
+
 class WebViewScreen extends Component {
   static navigatorButtons = {
     leftButtons: [

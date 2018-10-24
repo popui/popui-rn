@@ -1,6 +1,6 @@
 /* tslint:disable:jsx-no-multiline-js */
 import React from 'react';
-import { observer } from 'mobx-react'
+
 import {
   GestureResponderEvent,
   Image,
@@ -44,7 +44,7 @@ function normalizeValue(value?: string) {
 
 const InputItemStyles = StyleSheet.create<any>(InputItemStyle);
 
-@observer
+
 export default class InputItem extends React.Component<InputItemProps, any> {
   static defaultProps = {
     type: 'text',

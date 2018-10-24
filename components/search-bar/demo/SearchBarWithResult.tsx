@@ -1,5 +1,5 @@
 import React from 'react'
-import { observer } from 'mobx-react';
+;
 import { Image, Text,View } from 'react-native'
 import {
   SearchBar,
@@ -21,7 +21,7 @@ export interface IProps  {}
 
 
 
-@observer
+
 export default class SearchBarWithResult extends React.Component<IProps, any> {
   state = {
     searchText: '',

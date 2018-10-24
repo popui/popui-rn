@@ -1,6 +1,6 @@
 /* tslint:disable:jsx-no-multiline-js */
 import React from 'react';
-import { observer } from 'mobx-react'
+
 import {
   Image,
   ImageURISource,
@@ -21,7 +21,7 @@ export interface ResultNativeProps extends ResultPropsType {
 
 const ResultStyles = StyleSheet.create<any>(ResultStyle);
 
-@observer
+
 export default class Result extends React.Component<ResultNativeProps, any> {
   static defaultProps = {
     styles: ResultStyles,

@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { observer } from 'mobx-react';
+;
 
 import { TabBar } from 'react-native-tab-view'
 import { Image, StyleSheet, Text } from 'react-native'
@@ -10,7 +10,7 @@ import { Image, StyleSheet, Text } from 'react-native'
 /**
  * 每个 Tab 可以有不同的主题色, TabBar 会根据 Tab 的主题色调整颜色
  */
-@observer
+
 export default class TabViewColorTabBar extends Component<
   {
     navigationState: any

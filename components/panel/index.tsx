@@ -1,6 +1,6 @@
 // import PropTypes from 'prop-types'
 import React from 'react'
-import { observer } from 'mobx-react';
+;
 import { StyleSheet, View } from 'react-native'
 import { themeStore } from '../theme-store';
 const { themeVars } = themeStore;
@@ -28,4 +28,4 @@ const Panel = ({ children, style, ...others }:PanelPropsType) =>
 //     style: ViewPropTypes.style,
 // }
 
-export default observer(Panel)
+export default Panel

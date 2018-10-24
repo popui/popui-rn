@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types'
 import React from 'react'
-import { observer } from 'mobx-react';
+;
 import { StyleSheet, Text, TouchableOpacity, ViewPropTypes } from 'react-native'
 import { themeStore } from '../theme-store';
 const { themeVars } = themeStore;
@@ -34,4 +34,4 @@ FooterLink.propTypes = {
     others: PropTypes.object,
 }
 
-export default observer(FooterLink)
+export default FooterLink

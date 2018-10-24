@@ -1,5 +1,5 @@
 import React from 'react';
-import { observer } from 'mobx-react'
+
 import { StyleProp, StyleSheet, Text, View, ViewStyle } from 'react-native';
 import Item from './ListItem';
 import { ListPropsType } from './PropsType';
@@ -12,7 +12,7 @@ export interface ListProps extends ListPropsType {
 
 const listStyles = StyleSheet.create<any>(listStyle);
 
-@observer
+
 export default class List extends React.Component<ListProps, any> {
   static Item = Item;
 

@@ -1,5 +1,5 @@
 import * as React from "react";
-import { observer } from 'mobx-react';
+;
 import { View, StyleSheet, Text } from "react-native";
 import { ImagePickerHeaderProps } from "./PropsType";
 import plainStyles from "./style";
@@ -7,7 +7,7 @@ const defaultStyles = StyleSheet.create<any>(plainStyles)
 
 export interface ImagePickerHeaderState {}
 
-@observer
+
 export default class ImagePickerHeader extends React.Component<
   ImagePickerHeaderProps,
   ImagePickerHeaderState

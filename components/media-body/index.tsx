@@ -1,6 +1,6 @@
 // import PropTypes from 'prop-types'
 import React from 'react'
-import { observer } from 'mobx-react';
+;
 import { StyleSheet, View } from 'react-native'
 import {MediaBodyPropsType} from './PropsType';
 
@@ -20,4 +20,4 @@ const MediaBody = ({ style, children, ...others }:MediaBodyPropsType) =>
 //     children: PropTypes.node,
 // }
 
-export default observer(MediaBody)
+export default MediaBody

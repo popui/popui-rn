@@ -1,9 +1,9 @@
 import React from 'react';
-import { observer } from 'mobx-react'
+
 import { StyleSheet, Text, TextStyle, View, ViewStyle } from 'react-native';
 import { Carousel } from 'popui-rn';
 
-@observer
+
 export default class BasicCarouselExample extends React.Component<any, any> {
   onHorizontalSelectedIndexChange(index: number) {
     /* tslint:disable: no-console */

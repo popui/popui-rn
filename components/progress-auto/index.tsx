@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { observer } from 'mobx-react';
+;
 import Progress from './Progress'
 
 export interface IAutoProgressProps {
@@ -16,7 +16,7 @@ export interface IAutoProgressState {
   isLoading: boolean
 }
 
-@observer
+
 class AutoProgress extends Component<
   IAutoProgressProps,
   IAutoProgressState

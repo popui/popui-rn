@@ -1,6 +1,6 @@
 // tslint:disable:jsx-no-multiline-js
 import React from 'react';
-import { observer } from 'mobx-react'
+
 import { ScrollView, StyleSheet, Text, View } from 'react-native';
 import { Button, Drawer, List, GapH } from 'popui-rn';
 
@@ -10,7 +10,7 @@ const styles = StyleSheet.create({
   },
 });
 
-@observer
+
 export default class DrawerExample extends React.Component<any, any> {
   drawer: any;
 

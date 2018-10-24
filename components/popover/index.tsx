@@ -1,5 +1,5 @@
 import React from 'react';
-import { observer } from 'mobx-react'
+
 import { StyleProp, ViewStyle } from 'react-native';
 import Menu, {
   MenuContext,
@@ -16,7 +16,7 @@ export interface PopoverProps extends PopoverPropsType {
   renderOverlayComponent?: (values: any) => JSX.Element;
   name?: string;
 }
-@observer
+
 export default class Popover extends React.Component<PopoverProps, any> {
   static defaultProps = {
     onSelect: () => {},

@@ -1,9 +1,9 @@
 import React from 'react';
-import { observer } from 'mobx-react'
+
 import { View } from 'react-native';
 import { ImagePicker,ImagePickerHeader, GapH } from 'popui-rn';
 
-@observer
+
 export default class ImagePickerExample extends React.Component<any, any> {
   constructor(props: any) {
     super(props);

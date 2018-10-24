@@ -1,6 +1,6 @@
 /* tslint:disable:jsx-no-multiline-js */
 import React from "react";
-import { observer } from 'mobx-react';
+;
 import { ScrollView, Alert } from "react-native";
 import {
   TextInputWithType,
@@ -16,7 +16,7 @@ import {
 
 declare var jest: any;
 
-@observer
+
 export default class BasicTextInputTypeProviderExample extends React.Component<
   any,
   any

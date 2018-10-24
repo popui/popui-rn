@@ -1,5 +1,5 @@
 import React from 'react';
-import { observer } from 'mobx-react'
+
 import { ActivityIndicator, StyleSheet, Text, View } from 'react-native';
 import { ActivityIndicatorWithTextPropTypes } from './PropsType';
 import indicatorStyle, { IActivityIndicatorStyle } from './style/index';
@@ -12,7 +12,7 @@ export interface ActivityIndicatorNativeProps
 
 const indicatorStyles = StyleSheet.create<any>(indicatorStyle);
 
-@observer
+
 export default class RNActivityIndicatorWithText extends React.Component<
   ActivityIndicatorNativeProps,
   any

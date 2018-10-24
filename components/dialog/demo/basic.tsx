@@ -15,7 +15,7 @@ import {
   ModalPopup
 } from "popui-rn";
 
-@observer
+
 export default class BasicModalExample extends React.Component<any, any> {
   constructor(props: any) {
     super(props);

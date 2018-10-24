@@ -1,7 +1,7 @@
 import React from 'react'
-import { observer } from 'mobx-react';
+;
 import {DelayPropsType  } from "./PropsType";
-@observer
+
 class Delay extends React.Component<DelayPropsType, any> {
   timer: any
 

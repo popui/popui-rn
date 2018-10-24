@@ -1,5 +1,5 @@
 import React from 'react'
-import { observer } from 'mobx-react';
+;
 
 import { Platform, StyleSheet } from 'react-native'
 import ColorTabBar from '../color-tab-view-tab-bar'
@@ -40,7 +40,7 @@ function getCurrentRoute(props: any) {
 }
 
 
-@observer
+
 export class ColorTabView extends React.Component<IProps, any> {
   render() {
     // debug('render')

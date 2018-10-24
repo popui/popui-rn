@@ -1,11 +1,11 @@
 import React from "react";
-import { observer } from 'mobx-react';
+;
 
 import {  WeuiButton as Button,WeuiButtonArea, View, Toptips } from "popui-rn";
 
 export interface IProps {}
 
-@observer
+
 export default class TooltipsScreen extends React.Component<IProps, any> {
   static navigationOptions = {
     title: "Tooltips"

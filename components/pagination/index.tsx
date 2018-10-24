@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types';
 import React from 'react';
-import { observer } from 'mobx-react'
+
 import { StyleProp, StyleSheet, Text, View, ViewStyle } from 'react-native';
 import { getComponentLocale } from '../_util/getLocale';
 import Button from '../button/index';
@@ -17,7 +17,7 @@ export interface PaginationNativeProps extends PaginationPropsType {
 
 const PaginationStyles = StyleSheet.create<any>(PaginationStyle);
 
-@observer
+
 export default class Pagination extends React.Component<
   PaginationNativeProps,
   PaginationState

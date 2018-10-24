@@ -1,6 +1,6 @@
 // import PropTypes from 'prop-types'
 import React from 'react'
-import { observer } from 'mobx-react';
+;
 import { StyleSheet, View } from 'react-native'
 import {MediaInfoPropsType} from './PropsType';
 
@@ -24,4 +24,4 @@ const MediaInfo = ({ style, children, ...others }:MediaInfoPropsType) =>
 //     children: PropTypes.node,
 // }
 
-export default observer(MediaInfo)
+export default MediaInfo

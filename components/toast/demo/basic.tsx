@@ -1,6 +1,6 @@
 /* tslint:disable:no-console */
 import React from 'react';
-import { observer } from 'mobx-react'
+
 import { DeviceEventEmitter,Text } from 'react-native';
 import { Button, Toast, GapH, GapV } from 'popui-rn';
 // import ToastContainer from 'popui-rn/components/toast/ToastContainer';
@@ -37,7 +37,7 @@ function alwaysLoadingToast() {
   Toast.loading(testText, 0);
 }
 
-@observer
+
 export default class ToastExample extends React.Component<any, any> {
   timer: any;
   componentDidMount() {

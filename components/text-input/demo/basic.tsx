@@ -1,6 +1,6 @@
 /* tslint:disable:jsx-no-multiline-js */
 import React from "react";
-import { observer } from 'mobx-react';
+;
 import {
   ScrollView,
   Text,
@@ -25,7 +25,7 @@ import {
 
 declare var jest: any;
 
-@observer
+
 export default class BasicTextInputExample extends React.Component<any, any> {
   inputRef: any;
 

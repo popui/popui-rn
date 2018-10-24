@@ -1,6 +1,6 @@
 import { Button, WeuiButtonArea, GapV } from 'popui-rn'
 import React from 'react'
-import { observer } from 'mobx-react';
+;
 
 import { openUrl } from 'linkUtils'
 
@@ -11,7 +11,7 @@ export interface IProps  {
 
 
 
-@observer
+
 export default class DeepLinkScreen extends React.Component<IProps, any> {
     static navigationOptions = {
         title: 'DeepLink',

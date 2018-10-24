@@ -1,6 +1,6 @@
 // import PropTypes from 'prop-types'
 import React from 'react'
-import { observer } from 'mobx-react';
+;
 import { StyleSheet, Text} from 'react-native'
 import { themeStore } from '../theme-store';
 const { themeVars } = themeStore;
@@ -49,4 +49,4 @@ const WeuiButtonPreview = ({ primary, style, textStyle, children, ...others }:We
 //     children: PropTypes.node,
 // }
 
-export default observer(WeuiButtonPreview)
+export default WeuiButtonPreview

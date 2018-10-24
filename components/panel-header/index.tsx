@@ -1,6 +1,6 @@
 // import PropTypes from 'prop-types'
 import React from 'react'
-import { observer } from 'mobx-react';
+;
 import { StyleSheet, Text, View } from 'react-native'
 import { themeStore } from '../theme-store';
 const { themeVars } = themeStore;
@@ -33,4 +33,4 @@ const PanelHeader = ({ children, style, textStyle, ...others }:PanelHeaderPropsT
 //     textStyle: Text.propTypes.style,
 // }
 
-export default observer(PanelHeader)
+export default PanelHeader

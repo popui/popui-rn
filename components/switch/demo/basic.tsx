@@ -1,9 +1,9 @@
 // tslint:disable:jsx-no-multiline-js
 import React from 'react';
-import { observer } from 'mobx-react'
+
 import { List, Switch } from 'popui-rn';
 
-@observer
+
 export default class SwitchExample extends React.Component<any, any> {
   constructor(props: any) {
     super(props);

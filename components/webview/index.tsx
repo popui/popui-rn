@@ -10,7 +10,7 @@
  */
 
 import React, { Component } from 'react'
-import { observer } from 'mobx-react';
+;
 import PropTypes from 'prop-types'
 
 import { Dimensions, WebView as RNWebView } from 'react-native'
@@ -39,7 +39,7 @@ const injectedScript = function () {
     waitForBridge()
 }
 
-@observer
+
 export default class WebView extends Component {
     static propTypes = {
         children: PropTypes.node,

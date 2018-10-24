@@ -1,5 +1,5 @@
 import React from 'react';
-import { observer } from 'mobx-react'
+
 import {
   Animated,
   Easing,
@@ -21,7 +21,7 @@ export interface MarqueeProps {
   maxWidth?: number;
 }
 
-@observer
+
 class Marquee extends React.Component<MarqueeProps, any> {
   static defaultProps = {
     text: '',

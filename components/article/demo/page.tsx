@@ -1,7 +1,7 @@
 import { Article, H1, H2, H3, LoadMore, P, GapV, Section } from 'popui-rn'
 
 import React from 'react'
-import { observer } from 'mobx-react';
+;
 import { ScrollView } from 'react-native'
 
 
@@ -12,7 +12,7 @@ export interface IProps  {
 
 
 
-@observer
+
 export default class PageScreen extends React.Component<IProps, any> {
     static navigationOptions = {
         title: 'Page',

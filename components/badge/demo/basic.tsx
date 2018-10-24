@@ -1,11 +1,11 @@
 // tslint:disable:jsx-no-multiline-js
 /* tslint:disable:no-console */
 import React from 'react';
-import { observer } from 'mobx-react'
+
 import { ScrollView, View } from 'react-native';
 import { Badge, GapH } from 'popui-rn';
 
-@observer
+
 export default class BasicTagExample extends React.Component<any, any> {
   render() {
     return (

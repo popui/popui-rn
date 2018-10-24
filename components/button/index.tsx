@@ -1,6 +1,6 @@
 // tslint:disable:no-empty
 import React from 'react';
-import { observer } from 'mobx-react'
+
 import {
   ActivityIndicator,
   StyleSheet,
@@ -22,7 +22,7 @@ export interface ButtonProps
 
 const buttonStyles = StyleSheet.create<any>(buttonStyle);
 
-@observer
+
 export default class Button extends React.Component<ButtonProps, any> {
   static defaultProps = {
     pressIn: false,

@@ -1,5 +1,5 @@
 import React from 'react'
-import { observer } from 'mobx-react';
+;
 import RootModalToast from 'popui-rn/components/RootModalViews/RootModalToast'
 
 export const RootModalLoading = (props: {

@@ -1,6 +1,6 @@
 // tslint:disable:jsx-no-multiline-js
 import React from 'react';
-import { observer } from 'mobx-react'
+
 import { Image, StyleProp, Text, View, ViewStyle } from 'react-native';
 import RNAccordion from 'react-native-collapsible/Accordion';
 import { AccordionPropsTypes } from './PropsType';
@@ -20,14 +20,14 @@ export interface AccordionHeader {
   content: React.ReactElement<any>;
   style: StyleProp<ViewStyle>;
 }
-@observer
+
 class AccordionPanel extends React.Component<AccordionPanelProps, any> {
   render() {
     return null;
   }
 }
 
-@observer
+
 class Accordion extends React.Component<AccordionNativeProps, any> {
   static defaultProps = {
     styles: AccordionStyles as any,

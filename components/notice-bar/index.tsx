@@ -1,5 +1,5 @@
 import React from 'react';
-import { observer } from 'mobx-react'
+
 import {
   Image,
   StyleProp,
@@ -21,7 +21,7 @@ export interface NoticeNativeProps extends NoticeBarPropsType {
 
 const NoticeStyles = StyleSheet.create<any>(NoticeStyle);
 
-@observer
+
 export default class NoticeBar extends React.Component<NoticeNativeProps, any> {
   static defaultProps = {
     mode: '',

@@ -1,13 +1,13 @@
 // tslint:disable:jsx-no-multiline-js
 /* tslint:disable:no-console */
 import React from 'react';
-import { observer } from 'mobx-react'
+
 import { View } from 'react-native';
 import { DatePicker, List } from 'popui-rn';
 
 // const now = new Date();
 
-@observer
+
 export default class PopupExample extends React.Component<any, any> {
   constructor(props: any) {
     super(props);

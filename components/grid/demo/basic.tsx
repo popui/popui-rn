@@ -1,5 +1,5 @@
 import React from "react";
-import { observer } from 'mobx-react';
+;
 import { ScrollView, Text, View } from "react-native";
 import { Grid, GapH } from "popui-rn";
 
@@ -8,7 +8,7 @@ const data = Array.from(new Array(9)).map((_val, i) => ({
   text: `Item ${i}`
 }));
 
-@observer
+
 export default class BasicGridExample extends React.Component<any, any> {
   render() {
     return (

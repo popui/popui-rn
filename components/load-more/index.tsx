@@ -1,5 +1,5 @@
 import React from 'react'
-import { observer } from 'mobx-react';
+;
 import { ActivityIndicator, Dimensions, StyleSheet, Text, View } from 'react-native'
 import { create } from '../style/utils/StyleSheet'
 import { themeStore } from '../theme-store';
@@ -84,4 +84,4 @@ const LoadMore = ({ loading, showLine, showDot, style, textStyle, children, ...o
 
 
 
-export default observer(LoadMore)
+export default LoadMore

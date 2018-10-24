@@ -1,5 +1,5 @@
 import React from "react";
-import { observer } from 'mobx-react';
+;
 import { Text, View,StyleSheet,SafeAreaView } from "react-native";
 import {  WeuiButton as Button,WeuiButtonArea, Progress, GapH } from "popui-rn";
 
@@ -14,7 +14,7 @@ const styles = StyleSheet.create({
   }
 })
 
-@observer
+
 export default class BasicProgressExample extends React.Component<any, any> {
   timer: any;
   isUploading = false;

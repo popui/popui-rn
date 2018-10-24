@@ -5,7 +5,7 @@ import { Text, View } from "react-native";
 import { CheckboxWithText,Checkbox, List, GapH } from "popui-rn";
 // const CheckboxWithTextItem = CheckboxWithText.CheckboxWithTextItem;
 
-@observer
+
 export default class BasicCheckboxWithTextExample extends React.Component<
   any,
   any

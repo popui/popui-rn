@@ -27,4 +27,4 @@ const DialogBodyText = ({ children, style, ...others }: ModalBodyPropsType) => (
 //     style: Text.propTypes.style,
 // }
 
-export default observer(DialogBodyText);
+export default DialogBodyText;

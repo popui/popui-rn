@@ -2,7 +2,7 @@
 
 // import PropTypes from 'prop-types'
 import React from 'react'
-import { observer } from 'mobx-react';
+;
 import { StyleSheet, Text } from 'react-native'
 import PureWeuiIcon from './PureWeuiIcon'
 
@@ -131,7 +131,7 @@ const WeuiIcon = ({
 //     style: Text.propTypes.style,
 // }
 
-export default observer(WeuiIcon)
+export default WeuiIcon
 
 export {
   PureWeuiIcon

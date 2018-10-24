@@ -1,5 +1,5 @@
 import React from 'react'
-import { observer } from 'mobx-react';
+;
 import RootModalLoading from 'popui-rn/components/RootModalViews/RootModalLoading'
 import Delay from 'popui-rn/components/Timer/Delay'
 

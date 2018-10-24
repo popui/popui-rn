@@ -1,5 +1,5 @@
 import React from 'react'
-import { observer } from 'mobx-react';
+;
 import { StyleSheet, Text, ViewPropTypes } from 'react-native'
 import wrap from 'lodash/wrap'
 

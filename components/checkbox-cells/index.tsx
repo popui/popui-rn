@@ -1,6 +1,6 @@
 import xor from 'lodash/xor'
 import React from 'react'
-import { observer } from 'mobx-react';
+;
 import { StyleSheet } from 'react-native'
 import { Cell, CellBody, CellHeader, Cells, CellText } from 'popui-rn'
 import WeuiIcon from '../weui-icon'
@@ -60,4 +60,4 @@ const CheckboxCells = ({
 //   children: PropTypes.node
 // }
 
-export default observer(CheckboxCells)
+export default CheckboxCells

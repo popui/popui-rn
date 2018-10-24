@@ -1,5 +1,5 @@
 import React from "react";
-import { observer } from 'mobx-react';
+;
 import { Text, View } from "react-native";
 import {
   Cell,
@@ -30,7 +30,7 @@ const options = [
     value: 5
   }
 ]
-@observer
+
 export default class InputScreen extends React.Component<any, any> {
   state = {
     radio: "",

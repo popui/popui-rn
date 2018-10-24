@@ -1,6 +1,6 @@
 // import PropTypes from 'prop-types'
 import React from 'react'
-import { observer } from 'mobx-react';
+;
 import { StyleSheet, View } from 'react-native'
 import { themeStore } from '../theme-store';
 const { themeVars } = themeStore;
@@ -36,4 +36,4 @@ const MediaHeader = ({ style, children, ...others }:MediaHeaderPropsType) => {
 //     children: PropTypes.node,
 // }
 
-export default observer(MediaHeader)
+export default MediaHeader

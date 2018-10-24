@@ -1,5 +1,5 @@
 import React from 'react';
-import { observer } from 'mobx-react'
+
 import { Grid, Icon } from 'popui-rn';
 
 const list = [
@@ -16,7 +16,7 @@ const list = [
   'ellipsis',
 ];
 
-@observer
+
 export default class IConDemo extends React.Component<any, any> {
   render() {
     const data = list

@@ -9,7 +9,7 @@ export interface ModalPopupState {
 const modalPopupStyles = StyleSheet.create<any>(modalPopupStyle);
 import { noopFunc } from "../_util/noop";
 
-@observer
+
 export default class ModalPopupComponent extends React.Component<ModalPopupProps, ModalPopupState> {
   static defaultProps = {
     onClose: noopFunc,

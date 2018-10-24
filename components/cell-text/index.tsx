@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types'
 import React from 'react'
-import { observer } from 'mobx-react';
+;
 import { StyleSheet, Text, ViewPropTypes } from 'react-native'
 import { themeStore } from '../theme-store';
 const { themeVars } = themeStore;
@@ -21,4 +21,4 @@ CellText.propTypes = {
     style: Text.propTypes.style,
 }
 
-export default observer(CellText)
+export default CellText

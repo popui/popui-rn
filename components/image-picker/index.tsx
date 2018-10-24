@@ -1,6 +1,6 @@
 /* tslint:disable:jsx-no-multiline-js */
 import React from "react";
-import { observer } from 'mobx-react';
+;
 import {
   StyleSheet,
   View
@@ -23,7 +23,7 @@ export interface ImagePickerNativeProps extends ImagePickerPropTypes {
 import { noopFunc } from "../_util/noop";
 const imagePickerStyles = StyleSheet.create<any>(imagePickerStyle);
 
-@observer
+
 export default class ImagePicker extends React.Component<
   ImagePickerNativeProps,
   any

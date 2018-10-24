@@ -14,7 +14,7 @@ export interface AlertContainerProps {
   onAnimationEnd?: (visible: boolean) => void;
 }
 
-@observer
+
 export default class AlertContainer extends React.Component<
   AlertContainerProps,
   any

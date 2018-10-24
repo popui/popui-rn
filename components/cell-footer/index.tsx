@@ -1,5 +1,5 @@
 import React from "react";
-import { observer } from 'mobx-react';
+;
 import {
   Image,
   StyleSheet,
@@ -37,7 +37,7 @@ export interface CellFooterProps {
 
 export interface CellFooterState {}
 
-@observer
+
 export default class CellFooter extends React.Component<
   CellFooterProps,
   CellFooterState

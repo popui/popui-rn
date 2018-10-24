@@ -1,6 +1,6 @@
 /* tslint:disable:jsx-no-multiline-js */
 import React from 'react';
-import { observer } from 'mobx-react'
+
 import {
   Image,
   StyleProp,
@@ -46,7 +46,7 @@ export interface BriefProps extends BriefBasePropsType {
 const listStyles = StyleSheet.create<any>(listItemStyle);
 const listItemStyles: any = StyleSheet.create<any>(listItemStyle);
 
-@observer
+
 export class Brief extends React.Component<BriefProps, any> {
   static defaultProps = {
     styles: listStyles,
@@ -72,7 +72,7 @@ export class Brief extends React.Component<BriefProps, any> {
   }
 }
 
-@observer
+
 export default class Item extends React.Component<ListItemProps, any> {
   static defaultProps: Partial<ListItemProps> = {
     multipleLine: false,

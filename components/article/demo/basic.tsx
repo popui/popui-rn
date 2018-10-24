@@ -1,7 +1,7 @@
 import { Article, H1, H2, H3, P, GapV, Section,ScrollView } from 'popui-rn'
 
 import React from 'react'
-import { observer } from 'mobx-react';
+;
 
 
 export interface IProps  {
@@ -11,7 +11,7 @@ export interface IProps  {
 
 
 
-@observer
+
 export default class ButtonScreen extends React.Component<IProps, any> {
     static navigationOptions = {
         title: 'Article',

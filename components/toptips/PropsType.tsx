@@ -1,5 +1,5 @@
 import React from 'React';
-import { observer } from 'mobx-react';
+;
 import {ViewStyle,TextStyle} from 'react-native';
 export interface ToptipsPropsType {
   type?: 'primary' | 'warn' | 'info'

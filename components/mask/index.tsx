@@ -32,4 +32,4 @@ const Mask = ({
   </TouchableWithoutFeedback>
 );
 
-export default observer(Mask);
+export default Mask;

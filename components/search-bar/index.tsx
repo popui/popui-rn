@@ -1,7 +1,7 @@
 /* tslint:disable:jsx-no-multiline-js */
 import PropTypes from 'prop-types';
 import React from 'react';
-import { observer } from 'mobx-react'
+
 import {
   StyleProp,
   StyleSheet,
@@ -25,7 +25,7 @@ export interface SearchBarNativeProps extends SearchBarPropsType {
 
 const SearchBarStyles = StyleSheet.create<any>(SearchBarStyle);
 
-@observer
+
 export default class SearchBar extends React.Component<
   SearchBarNativeProps,
   SearchBarState

@@ -12,7 +12,7 @@ export interface ICheckboxNativeProps extends CheckboxPropsType {
 
 const CheckboxStyles = StyleSheet.create<any>(CheckboxStyle);
 
-@observer
+
 export default class Checkbox extends React.Component<
   ICheckboxNativeProps,
   any

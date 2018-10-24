@@ -1,6 +1,6 @@
 // import PropTypes from 'prop-types'
 import React from 'react'
-import { observer } from 'mobx-react';
+;
 import { View } from 'react-native'
 import {PanelBodyPropsType} from './PropsType';
 
@@ -24,4 +24,4 @@ const PanelBody = ({ children, style, ...others }:PanelBodyPropsType) => {
 //     style: ViewPropTypes.style,
 // }
 
-export default observer(PanelBody)
+export default PanelBody

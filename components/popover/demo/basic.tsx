@@ -1,11 +1,11 @@
 import React from 'react';
-import { observer } from 'mobx-react'
+
 import { Platform, StyleSheet, Text, View, ViewStyle } from 'react-native';
 import { Popover } from 'popui-rn';
 
 const Item = Popover.Item;
 
-@observer
+
 export default class PopoverExample extends React.Component<any, any> {
   constructor(props: any) {
     super(props);

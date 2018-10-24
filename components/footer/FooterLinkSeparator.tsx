@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types'
 import React from 'react'
-import { observer } from 'mobx-react';
+;
 import { StyleSheet, View, ViewPropTypes } from 'react-native'
 import { themeStore } from '../theme-store';
 const { themeVars } = themeStore;
@@ -29,4 +29,4 @@ FooterLinkSeparator.propTypes = {
     others: PropTypes.object,
 }
 
-export default observer(FooterLinkSeparator)
+export default FooterLinkSeparator

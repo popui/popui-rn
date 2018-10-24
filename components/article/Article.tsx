@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types'
 import React from 'react'
-import { observer } from 'mobx-react';
+;
 import { ScrollView, StyleSheet, ViewPropTypes } from 'react-native'
 
 const styles = StyleSheet.create({

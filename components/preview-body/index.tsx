@@ -1,6 +1,6 @@
 // import PropTypes from 'prop-types'
 import React from 'react'
-import { observer } from 'mobx-react';
+;
 import { StyleSheet, View } from 'react-native'
 import { themeStore } from '../theme-store';
 const { themeVars } = themeStore;
@@ -32,4 +32,4 @@ const PreviewBody = ({ style, children, ...other }:PreviewBodyPropsType) => {
 //     children: PropTypes.node,
 // }
 
-export default observer(PreviewBody)
+export default PreviewBody

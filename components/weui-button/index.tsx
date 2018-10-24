@@ -1,5 +1,5 @@
 import React from 'react'
-import { observer } from 'mobx-react';
+;
 import { StyleSheet, TouchableOpacity, View } from 'react-native'
 import { themeStore } from '../theme-store';
 const { themeVars } = themeStore;
@@ -153,4 +153,4 @@ const Button = (props: ButtonPropsType) => {
   )
 }
 
-export default observer(Button)
+export default Button

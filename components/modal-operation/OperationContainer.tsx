@@ -1,5 +1,5 @@
 import React from 'react';
-import { observer } from 'mobx-react'
+
 import { StyleSheet} from 'react-native';
 import operationStyle from './style/index';
 import {OperationContainerProps} from './PropsType';
@@ -8,7 +8,7 @@ import Dialog from "../dialog";
 
 const operationStyles = StyleSheet.create<any>(operationStyle);
 
-@observer
+
 export default class OperationContainer extends React.Component<
   OperationContainerProps,
   any

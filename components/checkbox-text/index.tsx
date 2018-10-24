@@ -6,7 +6,7 @@ import CheckboxTextStyle from "./style/index";
 
 const CheckboxTextStyles = StyleSheet.create<any>(CheckboxTextStyle);
 
-@observer
+
 export default class CheckboxText extends React.Component<
   CheckboxTextPropsType,
   any

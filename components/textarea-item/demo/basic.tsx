@@ -1,10 +1,10 @@
 /* tslint:disable:no-console */
 import React from 'react';
-import { observer } from 'mobx-react'
+
 import { ScrollView, Alert } from 'react-native';
 import { List, TextareaItem } from 'popui-rn';
 
-@observer
+
 export default class BasicTextAreaItemExample extends React.Component<
   any,
   any

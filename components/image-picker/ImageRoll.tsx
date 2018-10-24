@@ -1,5 +1,5 @@
 import React from 'react';
-import { observer } from 'mobx-react'
+
 import {
   Modal,
   StatusBar,
@@ -44,7 +44,7 @@ const styles = StyleSheet.create({
   },
 });
 
-@observer
+
 export default class ImageRoll extends React.Component<ImageRollProps, any> {
   onSelected = (images: any[], _: any) => {
     this.props.onSelected(images[0]);

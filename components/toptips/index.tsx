@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { observer } from 'mobx-react';
+;
 import {
   Animated,
   Dimensions,
@@ -40,7 +40,7 @@ const styles = StyleSheet.create({
   }
 });
 
-@observer
+
 class Toptips extends Component<ToptipsPropsType, any> {
   state = { visible: false, translateY: new Animated.Value(-height) };
   height:number

@@ -29,7 +29,7 @@ export interface IModalNativeProps extends DialogPropsType<TextStyle> {
 
 const modalStyles = StyleSheet.create<any>(modalStyle);
 
-@observer
+
 class Dialog extends React.Component<IModalNativeProps, any> {
   private horizontalFlex: any;
   static defaultProps = {
