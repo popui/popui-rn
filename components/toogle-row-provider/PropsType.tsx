@@ -18,7 +18,7 @@ export interface OnChangeParams {
     checked: boolean
   }
 }
-export interface SelectRowProviderPropsType {
+export interface ToggleRowProviderPropsType {
   defaultChecked?: boolean
   checked?: boolean
   disabled?: boolean
@@ -26,10 +26,10 @@ export interface SelectRowProviderPropsType {
   onChange?: onChangeFunction
   styles?: any
   style?: any
-  children:(args:SelectRowProviderChildrenParams) => JSX.Element
+  children:(args:ToggleRowProviderChildrenParams) => JSX.Element
 }
 
-export interface SelectRowProviderChildrenParams {
+export interface ToggleRowProviderChildrenParams {
   defaultChecked?: boolean
   checked?: boolean
   disabled?: boolean

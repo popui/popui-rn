@@ -5,11 +5,11 @@ import {
 } from 'react-native'
 import { MultiSelectPropsType } from './PropsType'
 import ToggleIconCircle from '../toggle-icon-circle'
-import SelectRowProvider from '../select-row-provider'
+import ToggleRowProvider from '../toogle-row-provider'
 
 function ToggleRowCircle(props:MultiSelectPropsType): JSX.Element {
   return (
-    <SelectRowProvider
+    <ToggleRowProvider
       {...props}
     >
       {(providerProps) => {
@@ -34,7 +34,7 @@ function ToggleRowCircle(props:MultiSelectPropsType): JSX.Element {
           </TouchableWithoutFeedback>
         )
       }}
-    </SelectRowProvider>
+    </ToggleRowProvider>
   )
 }
 

@@ -5,11 +5,11 @@ import {
 } from 'react-native'
 import { SingleSelectPropsType } from './PropsType'
 import ToggleIconCheckBox from '../toggle-icon-checkbox'
-import SelectRowProvider from '../select-row-provider'
+import ToggleRowProvider from '../toogle-row-provider'
 
 function ToggleRowCheckBox(props:SingleSelectPropsType): JSX.Element {
   return (
-    <SelectRowProvider
+    <ToggleRowProvider
       {...props}
     >
       {(providerProps) => {
@@ -34,7 +34,7 @@ function ToggleRowCheckBox(props:SingleSelectPropsType): JSX.Element {
           </TouchableWithoutFeedback>
         )
       }}
-    </SelectRowProvider>
+    </ToggleRowProvider>
   )
 }
 

@@ -1,7 +1,7 @@
 import themeVars from '../../style/themes/default';
 import { ViewStyle, TextStyle } from 'react-native';
 
-export interface ISelectRowProviderStyle {
+export interface IToggleRowProviderStyle {
   wrapper: ViewStyle;
   icon: ViewStyle;
   disabled: ViewStyle;

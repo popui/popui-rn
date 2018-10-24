@@ -6,26 +6,26 @@ import {
   Text,
   // View,
 } from 'react-native'
-import { SelectRowProviderPropsType } from './PropsType'
-import SelectRowProviderStyle from './style/index'
+import { ToggleRowProviderPropsType } from './PropsType'
+import ToggleRowProviderStyle from './style/index'
 // import MultiSelectIconControl from '../multi-select-icon-control'
 
-const SelectRowProviderStyles = StyleSheet.create<any>(SelectRowProviderStyle)
+const ToggleRowProviderStyles = StyleSheet.create<any>(ToggleRowProviderStyle)
 
-export default class SelectRowProvider extends React.Component<SelectRowProviderPropsType, any> {
+export default class ToggleRowProvider extends React.Component<ToggleRowProviderPropsType, any> {
   static defaultProps = {
-    styles: SelectRowProviderStyles,
+    styles: ToggleRowProviderStyles,
     disabled: false,
   }
 
-  constructor(props: SelectRowProviderPropsType, context: any) {
+  constructor(props: ToggleRowProviderPropsType, context: any) {
     super(props, context)
     this.state = {
       checked: props.checked || props.defaultChecked || false,
     }
   }
 
-  static getDerivedStateFromProps(nextProps: SelectRowProviderPropsType, prevState: any) {
+  static getDerivedStateFromProps(nextProps: ToggleRowProviderPropsType, prevState: any) {
     if (
       typeof nextProps.checked === 'boolean' &&
       nextProps.checked !== prevState.checked
