@@ -1,8 +1,7 @@
 import React from 'react'
 import { StyleSheet } from 'react-native'
-import { Cell, CellBody, Cells, CellText } from 'popui-rn'
+import { Cell, CellBody, Cells, CellText,ToggleIconCircle } from 'popui-rn'
 import {SelectFooterCellsPropsType,SelectOption} from './PropsType';
-import WeuiIcon from '../weui-icon'
 import themeVars from '../style/themes/default'
 
 const styles = StyleSheet.create({
@@ -15,7 +14,7 @@ const styles = StyleSheet.create({
   },
 })
 
-const SelectFooterCells = ({
+const CellsWithSingleSelect = ({
   value,
   options,
   onChange,
@@ -31,9 +30,10 @@ const SelectFooterCells = ({
           <CellBody>
             <CellText>{option.label || option.value}</CellText>
           </CellBody>
-          {value === option.value ? (
-            <WeuiIcon name="success_no_circle" style={styles.icon} />
-          ) : null}
+          {value === option.value && <ToggleIconCircle
+            disabled={disabled}
+            checked
+          />}
         </Cell>
       ))}
       {children}
@@ -50,4 +50,4 @@ const SelectFooterCells = ({
 //     children: PropTypes.node,
 // }
 
-export default SelectFooterCells
+export default CellsWithSingleSelect

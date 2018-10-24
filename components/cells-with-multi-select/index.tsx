@@ -1,7 +1,7 @@
 import xor from 'lodash/xor'
 import React from 'react'
 import { StyleSheet } from 'react-native'
-import { Cell, CellBody, CellHeader, Cells, CellText,Radio } from 'popui-rn'
+import { Cell, CellBody, CellHeader, Cells, CellText,ToggleIconCircle } from 'popui-rn'
 // import WeuiIcon from '../weui-icon'
 import themeVars from '../style/themes/default'
 import {MultiSelectHeaderCellsPropsType} from './PropsType'
@@ -14,7 +14,7 @@ const styles = StyleSheet.create({
   },
 })
 
-const MultiSelectHeaderCells = ({
+const CellsWithMultiSelect = ({
   values,
   options,
   onChange,
@@ -33,7 +33,7 @@ const MultiSelectHeaderCells = ({
           onPress={() => !disabled && onChange && onChange(xor(values, [option.value]))}
         >
           <CellHeader>
-            <Radio
+            <ToggleIconCircle
               checked={isChecked(option.value)}
               style={styles.icon}
             />
@@ -57,4 +57,4 @@ const MultiSelectHeaderCells = ({
 //   children: PropTypes.node
 // }
 
-export default MultiSelectHeaderCells
+export default CellsWithMultiSelect

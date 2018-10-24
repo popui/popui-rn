@@ -3,7 +3,7 @@ import React from "react";
 import { Text, View } from "react-native";
 import {
   CellsTitle,
-  SelectHeaderCells,
+  CellsWithMultiSelect,
 } from "popui-rn";
 
 const options = [
@@ -50,14 +50,14 @@ export default class Screen extends React.Component<any, any> {
     return (
       <View>
         <CellsTitle>复选列表项</CellsTitle>
-        <SelectHeaderCells
+        <CellsWithMultiSelect
           options={options}
           onChange={this.handleCheckbox1Change}
           value={this.state.values1}
         />
 
         <CellsTitle>复选列表项(禁用)</CellsTitle>
-        <SelectHeaderCells
+        <CellsWithMultiSelect
           options={options}
           onChange={this.handleCheckbox2Change}
           value={this.state.values2}
