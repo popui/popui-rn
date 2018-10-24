@@ -88,10 +88,10 @@ module.exports = {
       module: require('../components/cell/demo/basic'),
     },
     {
-      title: 'Modal',
+      title: 'Dialog',
       description: '对话框',
       icon: 'https://os.alipayobjects.com/rmsportal/HzRRcuwtqUCCOBg.png',
-      module: require('../components/modal/demo/basic'),
+      module: require('../components/dialog/demo/basic'),
     },
     {
       title: 'Popover',
@@ -118,12 +118,6 @@ module.exports = {
       description: '活动指示器',
       icon: 'https://zos.alipayobjects.com/rmsportal/yVtRfZGoDxXObTK.png',
       module: require('../components/activity-indicator/demo/basic'),
-    },
-    {
-      title: 'agreement',
-      description: '同意',
-      icon: 'https://zos.alipayobjects.com/rmsportal/yVtRfZGoDxXObTK.png',
-      module: require('../components/agreement/demo/basic'),
     },
     // {
     //   title: 'article',
@@ -210,22 +204,46 @@ module.exports = {
       module: require('../components/load-more/demo/index'),
     },
     {
-      title: 'Radio',
-      description: '单选框',
+      title: 'ToggleIconCheckbox',
+      description: '',
       icon: 'https://os.alipayobjects.com/rmsportal/MJszdVSBKhtGmIP.png',
-      module: require('../components/radio/demo/basic'), // 必须
+      module: require('../components/toggle-icon-check-box/demo/basic'), // 必须
     },
     {
-      title: 'Radio Cells',
-      description: '单选框',
+      title: 'ToggleIconCircle',
+      description: '',
       icon: 'https://os.alipayobjects.com/rmsportal/MJszdVSBKhtGmIP.png',
-      module: require('../components/radio-cells/demo/basic'), // 必须
+      module: require('../components/toggle-icon-circle/demo/basic'), // 必须
     },
     {
-      title: 'Checkbox Cells', // 必须
-      description: '复选框',
+      title: 'ToggleIconSuccess', // 必须
+      description: '',
       icon: 'https://os.alipayobjects.com/rmsportal/dWPGltvdjaanrRd.png',
-      module: require('../components/checkbox-cells/demo/basic'), // 必须
+      module: require('../components/toggle-icon-success/demo/basic'), // 必须
+    },
+    {
+      title: 'ToggleRowCircle', // 必须
+      description: '',
+      icon: 'https://os.alipayobjects.com/rmsportal/dWPGltvdjaanrRd.png',
+      module: require('../components/toggle-row-circle/demo/basic'), // 必须
+    },
+    {
+      title: 'ToggleRowCheckBox', // 必须
+      description: '同意',
+      icon: 'https://os.alipayobjects.com/rmsportal/dWPGltvdjaanrRd.png',
+      module: require('../components/toggle-row-check-box/demo/basic'), // 必须
+    },
+    {
+      title: 'CellsWithSingleSelectExample', // 必须
+      description: '单选Cells',
+      icon: 'https://os.alipayobjects.com/rmsportal/dWPGltvdjaanrRd.png',
+      module: require('../components/cells-with-single-select/demo/basic'), // 必须
+    },
+    {
+      title: 'CellsWithMultiSelectExample', // 必须
+      description: '多选Cells',
+      icon: 'https://os.alipayobjects.com/rmsportal/dWPGltvdjaanrRd.png',
+      module: require('../components/cells-with-multi-select/demo/basic'), // 必须
     },
     {
       title: 'Slider',

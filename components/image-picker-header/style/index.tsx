@@ -1,7 +1,4 @@
 import { ViewStyle } from 'react-native';
-// import { themeStore } from '../../theme-store';
-// const { themeVars } = themeStore;
-
 export interface IImagePickerHeaderStyle {
   uploaderHeader:ViewStyle;
   uploaderTitle:ViewStyle;

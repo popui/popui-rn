@@ -1,6 +1,5 @@
 import { StyleSheet, TextStyle, ViewStyle, Dimensions } from "react-native";
-import { themeStore } from "../../theme-store";
-const { themeVars } = themeStore;
+import themeVars from '../../style/themes/default'
 const { width } = Dimensions.get("window");
 
 export interface IModalStyle {
