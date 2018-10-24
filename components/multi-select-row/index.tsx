@@ -4,7 +4,7 @@ import {
   View,
 } from 'react-native'
 import { MultiSelectPropsType } from './PropsType'
-import MultiSelectIconControl from '../multi-select-icon-control'
+import ToggleIconCircle from '../toggle-icon-circle'
 import SelectRowProvider from '../select-row-provider'
 
 function MultiSelectRow(props:MultiSelectPropsType): JSX.Element {
@@ -24,7 +24,7 @@ function MultiSelectRow(props:MultiSelectPropsType): JSX.Element {
         return (
           <TouchableWithoutFeedback onPress={onPress}>
             <View style={[styles.wrapper, style]}>
-              <MultiSelectIconControl
+              <ToggleIconCircle
                 disabled={disabled}
                 checked={checked}
                 style={styles.icon}

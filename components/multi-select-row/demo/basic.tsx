@@ -5,7 +5,7 @@ import { View } from 'react-native';
 import { MultiSelectRow, GapH } from 'popui-rn';
 
 
-export default class BasicRadioExample extends React.Component<any, any> {
+export default class BasicMultiSelectRowExample extends React.Component<any, any> {
   state = {
     part1Value: 1,
     part2Value: 1,

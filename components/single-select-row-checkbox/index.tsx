@@ -4,7 +4,7 @@ import {
   View,
 } from 'react-native'
 import { SingleSelectPropsType } from './PropsType'
-import CheckBox from '../checkbox'
+import ToggleIconCheckBox from '../toggle-icon-checkbox'
 import SelectRowProvider from '../select-row-provider'
 
 function SingleSelectRowCheckBox(props:SingleSelectPropsType): JSX.Element {
@@ -24,7 +24,7 @@ function SingleSelectRowCheckBox(props:SingleSelectPropsType): JSX.Element {
         return (
           <TouchableWithoutFeedback onPress={onPress}>
             <View style={[styles.wrapper, style]}>
-              <CheckBox
+              <ToggleIconCheckBox
                 disabled={disabled}
                 checked={checked}
                 style={styles.icon}
