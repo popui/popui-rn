@@ -2,8 +2,7 @@
 import React from 'react'
 import { Text } from 'react-native'
 import { create } from '../style/utils/StyleSheet'
-import { themeStore } from '../theme-store'
-const { themeVars } = themeStore
+import themeVars from '../style/themes/default'
 import { MediaDescriptionPropsType } from './PropsType'
 
 const styles = create({

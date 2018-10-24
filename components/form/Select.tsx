@@ -2,8 +2,7 @@
 import React, { Component } from 'react'
 import { StyleSheet, Text, View, ViewPropTypes } from 'react-native'
 import { Picker } from 'popui-rn/components/picker'
-import { themeStore } from '../theme-store'
-const { themeVars } = themeStore
+import themeVars from '../style/themes/default'
 
 const styles = StyleSheet.create({
   text: {

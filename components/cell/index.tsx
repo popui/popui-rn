@@ -1,7 +1,6 @@
 import React from 'react'
 import { StyleSheet, View, ViewStyle } from 'react-native'
-import { themeStore } from '../theme-store'
-const { themeVars } = themeStore
+import themeVars from '../style/themes/default'
 import TouchableWithFallback from '../touchable-with-fallback'
 
 const styles = StyleSheet.create({

@@ -10,8 +10,7 @@ import {
   ViewStyle,
   TextStyle,
 } from 'react-native'
-import { themeStore } from '../theme-store'
-const { themeVars } = themeStore
+import themeVars from '../style/themes/default'
 // import RCModal from "rmc-dialog/lib/Modal";
 import { DialogPropsType, ActionPropsType } from './PropsType'
 import modalStyle, { IModalStyle } from './style/index'

@@ -1,7 +1,6 @@
 import React from 'react'
 import { StyleSheet, View } from 'react-native'
-import { themeStore } from '../theme-store'
-const { themeVars } = themeStore
+import themeVars from '../style/themes/default'
 import { WeuiButtonAreaPropsType } from './PropsType'
 const styles = StyleSheet.create({
   BtnArea: {

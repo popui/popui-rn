@@ -1,7 +1,6 @@
 import React from 'react'
 import { Image, StyleSheet, Text, View, ViewStyle } from 'react-native'
-import { themeStore } from '../theme-store'
-const { themeVars } = themeStore
+import themeVars from '../style/themes/default'
 
 // import WeuiIcon from '../weui-icon'
 const styles = StyleSheet.create({

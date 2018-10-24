@@ -1,8 +1,7 @@
 import PropTypes from 'prop-types'
 import React from 'react'
 import { StyleSheet, Text, TouchableOpacity, ViewPropTypes } from 'react-native'
-import { themeStore } from '../theme-store'
-const { themeVars } = themeStore
+import themeVars from '../style/themes/default'
 
 const TextFontSize = 14
 const styles = StyleSheet.create({

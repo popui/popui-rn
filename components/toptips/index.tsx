@@ -9,8 +9,7 @@ import {
   Text,
   View,
 } from 'react-native'
-import { themeStore } from '../theme-store'
-const { themeVars } = themeStore
+import themeVars from '../style/themes/default'
 
 import { ToptipsPropsType } from './PropsType'
 const { width, height } = Dimensions.get('window')

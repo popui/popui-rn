@@ -1,8 +1,7 @@
 // import PropTypes from 'prop-types'
 import React from 'react'
 import { StyleSheet, Text, View } from 'react-native'
-import { themeStore } from '../theme-store'
-const { themeVars } = themeStore
+import themeVars from '../style/themes/default'
 import { PanelHeaderPropsType } from './PropsType'
 
 const styles = StyleSheet.create({

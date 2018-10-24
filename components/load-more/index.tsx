@@ -7,8 +7,7 @@ import {
   View,
 } from 'react-native'
 import { create } from '../style/utils/StyleSheet'
-import { themeStore } from '../theme-store'
-const { themeVars } = themeStore
+import themeVars from '../style/themes/default'
 
 const { width } = Dimensions.get('window')
 const styles = create({

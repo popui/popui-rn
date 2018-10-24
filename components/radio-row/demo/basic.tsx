@@ -2,8 +2,8 @@
 import React from 'react';
 
 import { Text, View } from 'react-native';
-import { Radio, GapH } from 'popui-rn';
-// const RadioItem = Radio.RadioItem;
+import { List, Radio, GapH } from 'popui-rn';
+const RadioItem = Radio.RadioItem;
 
 
 export default class BasicRadioExample extends React.Component<any, any> {
@@ -15,33 +15,32 @@ export default class BasicRadioExample extends React.Component<any, any> {
   render() {
     return (
       <View>
-        <View style={{ padding: 10,flexDirection:'column',justifyContent:'flex-start',alignItems:'center',backgroundColor:'#fff' }}>
-          <Text>default</Text>
+        <View style={{ padding: 10 }}>
           <Radio
+            checked={this.state.part1Value === 1}
+            onChange={(event: any) => {
+              if (event.target.checked) {
+                this.setState({ part1Value: 1 });
+              }
+            }}
+            style={{ borderWidth: 1, borderColor: '#999', margin: 10 }}
           >
+            Support
           </Radio>
-
-          <GapH size='xl'/>
-          <Text>checked </Text>
+          <GapH />
           <Radio
-            checked
+            checked={this.state.part1Value === 2}
+            onChange={(event: any) => {
+              if (event.target.checked) {
+                this.setState({ part1Value: 2 });
+              }
+            }}
+            style={{ borderWidth: 1, borderColor: '#999', margin: 10 }}
           />
-
-          <GapH size='xl'/>
-          <Text>checked disabled</Text>
-          <Radio
-            checked
-            disabled
-          />
-
-          <GapH size='xl'/>
-          <Text>disabled</Text>
-          <Radio
-            disabled
-          />
+          <GapH />
         </View>
 
-        {/* <List style={{ marginTop: 12 }}>
+        <List style={{ marginTop: 12 }}>
           <Text style={{ marginTop: 12 }}>
             Form radio, radio in general list.
           </Text>
@@ -69,7 +68,7 @@ export default class BasicRadioExample extends React.Component<any, any> {
           <RadioItem disabled checked>
             Set disabled
           </RadioItem>
-        </List> */}
+        </List>
       </View>
     );
   }

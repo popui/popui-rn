@@ -16,9 +16,6 @@ export default class Checkbox extends React.Component<
   ICheckboxNativeProps,
   any
 > {
-  static CheckboxItem: any
-  static AgreeItem: any
-
   static defaultProps = {
     styles: CheckboxStyles,
   }

@@ -3,8 +3,7 @@ import React from 'react'
 import { StyleSheet } from 'react-native'
 import { Cell, CellBody, CellHeader, Cells, CellText } from 'popui-rn'
 import WeuiIcon from '../weui-icon'
-import { themeStore } from '../theme-store'
-const { themeVars } = themeStore
+import themeVars from '../style/themes/default'
 
 const styles = StyleSheet.create({
   checkbox: {
