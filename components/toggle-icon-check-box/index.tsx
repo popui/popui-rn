@@ -7,7 +7,7 @@ import ToggleIconCheckBoxStyle from './style/index'
 const ToggleIconCheckBoxStyles = StyleSheet.create<any>(ToggleIconCheckBoxStyle)
 
  function ToggleIconCheckBox(props: ToggleIconCheckBoxPropsType) {
-  const { disabled, styles = ToggleIconCheckBoxStyles, checked, style,size=20,color } = props
+  const { disabled, styles = ToggleIconCheckBoxStyles, checked, style,size=16,color } = props
   const colorProps: any = {
     color
   }

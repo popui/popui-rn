@@ -4,7 +4,7 @@ import {
   View,
 } from 'react-native'
 import { SingleSelectPropsType } from './PropsType'
-import ToggleIconCheckBox from '../toggle-icon-checkbox'
+import ToggleIconCheckBox from '../toggle-icon-check-box'
 import ToggleRowProvider from '../toogle-row-provider'
 
 function ToggleRowCheckBox(props:SingleSelectPropsType): JSX.Element {
