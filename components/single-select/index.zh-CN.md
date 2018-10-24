@@ -1,15 +1,15 @@
 ---
 category: Components
 type: Data Entry
-title: Checkbox
-subtitle: 复选框
+title: SingleSelect
+subtitle: 单选框
 ---
 
 复选框
 
 ## API
 
-### Checkbox
+### SingleSelect
 
 属性 | 说明 | 类型 | 默认值
 ----|-----|------|------

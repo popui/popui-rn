@@ -1,7 +1,7 @@
 import { StyleSheet } from 'react-native';
 
 export default {
-  checkbox: {
+  wrapper: {
     height: 16,
     width: 16,
     borderRadius: 3,

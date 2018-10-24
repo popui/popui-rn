@@ -1,14 +1,14 @@
 ---
 category: Components
 type: Data Entry
-title: Checkbox
+title: SingleSelect
 ---
 
-Checkbox
+SingleSelect
 
 ## API
 
-### Checkbox
+### SingleSelect
 
 Properties | Descrition | Type | Default
 -----------|------------|------|--------
@@ -17,12 +17,12 @@ Properties | Descrition | Type | Default
 | disabled        |  whether is been disabled       | Boolean |  false  |
 | onChange        | callback when check status is changed | (e: Object): void |     |
 
-### Checkbox.CheckboxItem
+### SingleSelect.SingleSelectItem
 
-The encapsulation about `Checkbox` based on `List.Item`, the property `thumb` of `List.Item` will be passed to `Checkbox`, while other properties remain the same.
+The encapsulation about `SingleSelect` based on `List.Item`, the property `thumb` of `List.Item` will be passed to `SingleSelect`, while other properties remain the same.
 
-Other APIs are identical with `Checkbox`.
+Other APIs are identical with `SingleSelect`.
 
-### Checkbox.AgreeItem
+### SingleSelect.AgreeItem
 
-Almost the same as CheckboxItem and be used for special scenes. See demo for details.
+Almost the same as SingleSelectItem and be used for special scenes. See demo for details.
