@@ -11,6 +11,7 @@ import {
 } from 'react-native'
 import { RadioPropsType } from './PropsType'
 import RadioStyle, { IRadioStyle } from './style/index'
+import Radio from '../radio';
 
 export interface RadioNativeProps extends RadioPropsType {
   styles?: IRadioStyle
@@ -19,7 +20,7 @@ export interface RadioNativeProps extends RadioPropsType {
 
 const RadioStyles = StyleSheet.create<any>(RadioStyle)
 
-export default class Radio extends React.Component<RadioNativeProps, any> {
+class RadioRow extends React.Component<RadioNativeProps, any> {
   static RadioItem: any
   static defaultProps = {
     styles: RadioStyles,
@@ -69,7 +70,7 @@ export default class Radio extends React.Component<RadioNativeProps, any> {
     return (
       <TouchableWithoutFeedback onPress={this.handleClick}>
         <View style={[styles.wrapper]}>
-          <Image source={imgSrc} style={[styles.icon, style]} />
+          <Radio/>
           {typeof children === 'string' ? (
             // tslint:disable-next-line:jsx-no-multiline-js
             <Text>{this.props.children}</Text>
@@ -81,3 +82,6 @@ export default class Radio extends React.Component<RadioNativeProps, any> {
     )
   }
 }
+
+
+export default  RadioRow
