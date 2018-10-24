@@ -1,5 +1,5 @@
 import React from "react";
-import { observer } from "mobx-react";
+
 import { ViewStyle, StyleProp, StyleSheet, View } from "react-native";
 import WeuiIcon from "../weui-icon";
 import { CheckboxPropsType } from "./PropsType";

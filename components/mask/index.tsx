@@ -1,5 +1,5 @@
 import React from "react";
-import { observer } from "mobx-react";
+
 import { StyleSheet, TouchableWithoutFeedback, View } from "react-native";
 import { MaskPropsType } from "./PropsType";
 // import TouchableWithFallBack from '../touchable-with-fallback';

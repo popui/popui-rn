@@ -1,5 +1,5 @@
 import React, { Children } from "react";
-import { observer } from "mobx-react";
+
 import { StyleSheet, Text } from "react-native";
 import { CheckboxTextPropsType } from "./PropsType";
 import CheckboxTextStyle from "./style/index";

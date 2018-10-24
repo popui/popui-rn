@@ -1,6 +1,6 @@
 // tslint:disable:jsx-no-multiline-js
 import React from "react";
-import { observer } from "mobx-react";
+
 import { Text, View } from "react-native";
 import { CheckboxWithText,Checkbox, List, GapH } from "popui-rn";
 // const CheckboxWithTextItem = CheckboxWithText.CheckboxWithTextItem;

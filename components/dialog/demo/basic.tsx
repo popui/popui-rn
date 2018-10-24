@@ -1,6 +1,6 @@
 /* tslint:disable:no-console */
 import React from "react";
-import { observer } from "mobx-react";
+
 import { View, ScrollView } from "react-native";
 import {
   Button,

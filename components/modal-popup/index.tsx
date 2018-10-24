@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { observer } from "mobx-react";
+
 import {StyleSheet} from 'react-native';
 import RCModal from "../modal";
 import {ModalPopupProps} from './PropsType';
