@@ -1,42 +1,50 @@
-/* tslint:disable:jsx-no-multiline-js */
-import React from 'react';
+// tslint:disable:jsx-no-multiline-js
+import React from "react";
 
-import { View } from 'react-native';
-import { ToggleRowCircle, GapH } from 'popui-rn';
+import { Text, View } from "react-native";
+import { ToggleRowCircle, GapH } from "popui-rn";
+// const CheckboxRowItem = ToggleRowCircle.CheckboxRowItem;
 
-
-export default class BasicToggleRowCircleExample extends React.Component<any, any> {
-  state = {
-    part1Value: 1,
-    part2Value: 1,
-  };
-
+export default class BasicToggleRowCheckBoxExample extends React.Component<
+  any,
+  any
+> {
+  constructor(props: any, context: any) {
+    super(props, context);
+    this.state = {
+      value1: true,
+    };
+  }
+  toggleValue1 =()=>{
+    const {agreeItem1} = this.state
+    this.setState({ agreeItem1: !agreeItem1 });
+  }
   render() {
     return (
-      <View>
         <View style={{ padding: 10 }}>
-          <ToggleRowCircle
-            checked={this.state.part1Value === 1}
-            onChange={(event: any) => {
-              if (event.target.checked) {
-                this.setState({ part1Value: 1 });
-              }
-            }}
-          >
-            Support
-          </ToggleRowCircle>
+        <GapH />
+        <Text>非受控</Text>
+        <ToggleRowCircle>
+          Agree agreement agreement agreement agreement agreement agreement
+          agreement
+        </ToggleRowCircle>
 
-          <GapH />
-          <ToggleRowCircle
-            checked={this.state.part1Value === 2}
-            onChange={(event: any) => {
-              if (event.target.checked) {
-                this.setState({ part1Value: 2 });
-              }
-            }}
-          />
-        </View>
+        <GapH />
+        <Text>受控</Text>
+        <ToggleRowCircle
+          checked={this.state.value1}
+          onChange={this.toggleValue1}
+        >
+          Agree agreement
+        </ToggleRowCircle>
 
+        <GapH />
+        <ToggleRowCircle disabled>Not selected. Not editable</ToggleRowCircle>
+
+        <GapH />
+        <ToggleRowCircle checked disabled>
+          Force selected. Not editable
+        </ToggleRowCircle>
       </View>
     );
   }

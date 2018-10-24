@@ -2,7 +2,7 @@
 import React from "react";
 
 import { Text, View } from "react-native";
-import { ToggleRowCheckBox,Checkbox, List, GapH } from "popui-rn";
+import { ToggleRowCheckBox, GapH } from "popui-rn";
 // const CheckboxRowItem = ToggleRowCheckBox.CheckboxRowItem;
 
 export default class BasicToggleRowCheckBoxExample extends React.Component<
@@ -12,14 +12,11 @@ export default class BasicToggleRowCheckBoxExample extends React.Component<
   constructor(props: any, context: any) {
     super(props, context);
     this.state = {
-      agreeItem1: true,
+      value1: true,
     };
   }
-  toggleAgreeItem1 =()=>{
+  toggleValue1 =()=>{
     const {agreeItem1} = this.state
-    console.log("toggleAgreeItem1",{
-      agreeItem1
-    })
     this.setState({ agreeItem1: !agreeItem1 });
   }
   render() {
@@ -35,8 +32,8 @@ export default class BasicToggleRowCheckBoxExample extends React.Component<
         <GapH />
         <Text>受控</Text>
         <ToggleRowCheckBox
-          checked={this.state.agreeItem1}
-          onChange={this.toggleAgreeItem1}
+          checked={this.state.value1}
+          onChange={this.toggleValue1}
         >
           Agree agreement
         </ToggleRowCheckBox>
