@@ -7,7 +7,7 @@ import { SingleSelectPropsType } from './PropsType'
 import CheckBox from '../checkbox'
 import SelectRowProvider from '../select-row-provider'
 
-function SingleSelectRow(props:SingleSelectPropsType): JSX.Element {
+function SingleSelectRowCheckBox(props:SingleSelectPropsType): JSX.Element {
   return (
     <SelectRowProvider
       {...props}
@@ -39,4 +39,4 @@ function SingleSelectRow(props:SingleSelectPropsType): JSX.Element {
 }
 
 
-export default SingleSelectRow
+export default SingleSelectRowCheckBox
