@@ -1,13 +1,13 @@
 import React from 'react'
 import {StyleSheet, View } from 'react-native'
 import WeuiIcon from '../weui-icon'
-import { SingleSelectPropsType } from './PropsType'
-import SingleSelectStyle from './style/index'
+import { CheckBoxPropsType } from './PropsType'
+import CheckBoxStyle from './style/index'
 
-const SingleSelectStyles = StyleSheet.create<any>(SingleSelectStyle)
+const CheckBoxStyles = StyleSheet.create<any>(CheckBoxStyle)
 
-export function SingleSelect(props: SingleSelectPropsType) {
-  const { disabled, styles = SingleSelectStyles, checked, style } = props
+ function CheckBox(props: CheckBoxPropsType) {
+  const { disabled, styles = CheckBoxStyles, checked, style } = props
   const colorProps: any = {}
   if (disabled) {
     colorProps.color = '#ADADAD'
@@ -25,3 +25,5 @@ export function SingleSelect(props: SingleSelectPropsType) {
     </View>
   )
 }
+
+export default CheckBox

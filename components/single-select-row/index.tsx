@@ -3,11 +3,11 @@ import {
   TouchableWithoutFeedback,
   View,
 } from 'react-native'
-import { MultiSelectPropsType } from './PropsType'
-import MultiSelectIconControl from '../multi-select-icon-control'
+import { SingleSelectPropsType } from './PropsType'
+import CheckBox from '../checkbox'
 import SelectRowProvider from '../select-row-provider'
 
-function MultiSelectRow(props:MultiSelectPropsType): JSX.Element {
+function SingleSelectRow(props:SingleSelectPropsType): JSX.Element {
   return (
     <SelectRowProvider
       {...props}
@@ -24,7 +24,7 @@ function MultiSelectRow(props:MultiSelectPropsType): JSX.Element {
         return (
           <TouchableWithoutFeedback onPress={onPress}>
             <View style={[styles.wrapper, style]}>
-              <MultiSelectIconControl
+              <CheckBox
                 disabled={disabled}
                 checked={checked}
                 style={styles.icon}
@@ -39,4 +39,4 @@ function MultiSelectRow(props:MultiSelectPropsType): JSX.Element {
 }
 
 
-export default MultiSelectRow
+export default SingleSelectRow

@@ -2,7 +2,7 @@
 import React from 'react';
 
 import { View } from 'react-native';
-import { MultiSelectRow, GapH } from 'popui-rn';
+import { SingleSelectRow, GapH } from 'popui-rn';
 
 
 export default class BasicRadioExample extends React.Component<any, any> {
@@ -15,7 +15,7 @@ export default class BasicRadioExample extends React.Component<any, any> {
     return (
       <View>
         <View style={{ padding: 10 }}>
-          <MultiSelectRow
+          <SingleSelectRow
             checked={this.state.part1Value === 1}
             onChange={(event: any) => {
               if (event.target.checked) {
@@ -25,10 +25,10 @@ export default class BasicRadioExample extends React.Component<any, any> {
             style={{ borderWidth: 1, borderColor: '#999', margin: 10 }}
           >
             Support
-          </MultiSelectRow>
+          </SingleSelectRow>
 
           <GapH />
-          <MultiSelectRow
+          <SingleSelectRow
             checked={this.state.part1Value === 2}
             onChange={(event: any) => {
               if (event.target.checked) {

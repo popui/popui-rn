@@ -13,7 +13,7 @@
 // }
 import {onChangeFunction} from '../select-row-provider/PropsType';
 
-export interface MultiSelectPropsType {
+export interface SingleSelectPropsType {
   defaultChecked?: boolean
   checked?: boolean
   disabled?: boolean
