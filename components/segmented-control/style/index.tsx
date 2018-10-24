@@ -1,6 +1,5 @@
 import { ViewStyle, TextStyle, StyleSheet } from 'react-native';
-import {themeStore} from '../../theme-store';
-const { themeVars } = themeStore;
+import themeVars from '../../style/themes/default';
 
 export interface ISegmentControlStyle {
   segment: ViewStyle;

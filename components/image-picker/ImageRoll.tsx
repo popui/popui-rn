@@ -10,8 +10,7 @@ import {
   SafeAreaView
 } from 'react-native';
 import CameraRollPicker from 'react-native-camera-roll-picker';
-import {themeStore} from '../theme-store';
-const { themeVars } = themeStore;
+import themeVars from '../style/themes/default';
 
 export interface ImageRollProps {
   onCancel: () => void;

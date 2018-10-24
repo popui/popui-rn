@@ -11,8 +11,7 @@ import Modal from 'rmc-dialog/lib/Modal';
 import styles, {
   ActionSheetStyle,
 } from './style/index';
-import {themeStore} from '../theme-store';
-const { themeVars } = themeStore;
+import themeVars from '../style/themes/default';
 
 export interface ActionSheetNativeProps {
   onAnimationEnd?: (visible: boolean) => void;

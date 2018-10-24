@@ -12,8 +12,7 @@ import {
   Platform,
   TouchableOpacity,
 } from 'react-native';
-import {themeStore} from '../theme-store';
-const { themeVars } = themeStore;
+import themeVars from '../style/themes/default';
 import Input from '../text-input';
 import { InputItemPropsType } from './PropsType';
 import InputItemStyle from './style/index';
