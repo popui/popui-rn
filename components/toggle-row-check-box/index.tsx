@@ -29,7 +29,7 @@ function ToggleRowCheckBox(props:SingleSelectPropsType): JSX.Element {
                 checked={checked}
                 style={styles.icon}
               />
-              {renderChildren()}
+              {renderChildren(props.children)}
             </View>
           </TouchableWithoutFeedback>
         )

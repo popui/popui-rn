@@ -29,7 +29,7 @@ function ToggleRowCircle(props:MultiSelectPropsType): JSX.Element {
                 checked={checked}
                 style={styles.icon}
               />
-              {renderChildren()}
+              {renderChildren(props.children)}
             </View>
           </TouchableWithoutFeedback>
         )

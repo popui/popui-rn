@@ -53,8 +53,9 @@ export default class ToggleRowProvider extends React.Component<ToggleRowProvider
     }
   }
 
-  renderChildren = () => {
-    const { disabled, children, textStyle } = this.props
+  renderChildren = (children:React.ReactNode) => {
+    // 这里的 children 不是 this.props.children,而是实际组件 children
+    const { disabled, textStyle } = this.props
     if (typeof children !== 'string') {
       return children
     }

@@ -11,6 +11,7 @@
 //   radioProps?: object
 //   onClick?: () => any
 // }
+import React from 'react'
 
 export type onChangeFunction = (params: OnChangeParams) => void
 export interface OnChangeParams {
@@ -36,6 +37,6 @@ export interface ToggleRowProviderChildrenParams {
   textStyle?: any
   styles?: any
   style?: any
-  renderChildren:()=>any
+  renderChildren:(children:React.ReactNode)=>React.ReactNode
   onPress:(event:any)=>void
 }
