@@ -1,5 +1,4 @@
 import React, { Component } from 'react'
-;
 import Progress from './Progress'
 
 export interface IAutoProgressProps {
@@ -16,11 +15,7 @@ export interface IAutoProgressState {
   isLoading: boolean
 }
 
-
-class AutoProgress extends Component<
-  IAutoProgressProps,
-  IAutoProgressState
-> {
+class AutoProgress extends Component<IAutoProgressProps, IAutoProgressState> {
   intervalTimer: any
   loadingTimer: any
   static defaultProps = {
@@ -29,7 +24,7 @@ class AutoProgress extends Component<
     maxProgressValue: 90 + Math.random() * 10,
     interval: 10,
     delay: 1000,
-    progressValueIncreaseMultiplier: 0.005
+    progressValueIncreaseMultiplier: 0.005,
   }
 
   constructor(props: any) {
@@ -37,7 +32,7 @@ class AutoProgress extends Component<
     const { beginProgressValue } = props
     this.state = {
       progressValue: beginProgressValue,
-      isLoading: false
+      isLoading: false,
     }
   }
 

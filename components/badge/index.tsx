@@ -1,16 +1,15 @@
-import React from 'react';
+import React from 'react'
 
-import { StyleProp, StyleSheet, Text, View, ViewStyle } from 'react-native';
-import { BadgePropsTypes } from './PropsType';
-import BadgeStyle, { IBadgeStyle } from './style/index';
+import { StyleProp, StyleSheet, Text, View, ViewStyle } from 'react-native'
+import { BadgePropsTypes } from './PropsType'
+import BadgeStyle, { IBadgeStyle } from './style/index'
 
 export interface BadgeNativeProps extends BadgePropsTypes {
-  styles?: IBadgeStyle;
-  style?: StyleProp<ViewStyle>;
+  styles?: IBadgeStyle
+  style?: StyleProp<ViewStyle>
 }
 
-const BadgeStyles = StyleSheet.create<any>(BadgeStyle);
-
+const BadgeStyles = StyleSheet.create<any>(BadgeStyle)
 
 export default class Badge extends React.Component<BadgeNativeProps, any> {
   static defaultProps = {
@@ -19,7 +18,7 @@ export default class Badge extends React.Component<BadgeNativeProps, any> {
     dot: false,
     corner: false,
     styles: BadgeStyles,
-  };
+  }
 
   render() {
     // tslint:disable:prefer-const
@@ -32,21 +31,21 @@ export default class Badge extends React.Component<BadgeNativeProps, any> {
       overflowCount,
       dot,
       corner,
-      ...restProps, // todo: hot
-    } = this.props;
-    styles = styles!;
+      ...restProps // todo: hot
+    } = this.props
+    styles = styles!
     text =
       typeof text === 'number' && text > (overflowCount as number)
         ? `${overflowCount}+`
-        : text;
+        : text
 
     // dot mode don't need text
     if (dot) {
-      text = '';
+      text = ''
     }
     // fake styles
-    const fakeStyles = (styles as any) as { [key: string]: ViewStyle };
-    const badgeCls = corner ? 'textCorner' : 'textDom';
+    const fakeStyles = (styles as any) as { [key: string]: ViewStyle }
+    const badgeCls = corner ? 'textCorner' : 'textDom'
     const contentDom = !dot ? (
       <View
         {...restProps}
@@ -56,7 +55,7 @@ export default class Badge extends React.Component<BadgeNativeProps, any> {
       </View>
     ) : (
       <View {...restProps} style={[styles.dot, fakeStyles[`dotSize${size}`]]} />
-    );
+    )
 
     return (
       <View style={[styles.wrap, style]}>
@@ -65,6 +64,6 @@ export default class Badge extends React.Component<BadgeNativeProps, any> {
           {text || dot ? contentDom : null}
         </View>
       </View>
-    );
+    )
   }
 }

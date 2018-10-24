@@ -1,36 +1,44 @@
 import React from 'react'
-;
 import { StyleSheet } from 'react-native'
 import { Cell, CellBody, Cells, CellText } from 'popui-rn'
 
 import WeuiIcon from '../weui-icon'
-import { themeStore } from '../theme-store';
-const { themeVars } = themeStore;
+import { themeStore } from '../theme-store'
+const { themeVars } = themeStore
 
 const styles = StyleSheet.create({
-    radio: {
-        fontSize: 16,
-        paddingLeft: themeVars.CellInnerGapH,
-    },
-    disabled: {
-        opacity: 0.5,
-    },
+  radio: {
+    fontSize: 16,
+    paddingLeft: themeVars.CellInnerGapH,
+  },
+  disabled: {
+    opacity: 0.5,
+  },
 })
 
-const RadioCells = ({ value, options, onChange, disabled, style, children, ...others }:any) =>
-    <Cells style={[style, disabled ? styles.disabled : null]} {...others}>
-        {options.map((option, idx) =>
-            <Cell key={idx} onPress={() => !disabled && onChange(option.value)}>
-                <CellBody>
-                    <CellText>{option.label || option.value}</CellText>
-                </CellBody>
-                {value === option.value ? (
-                    <WeuiIcon name="success_no_circle" style={styles.radio}/>
-                ) : null}
-            </Cell>,
-        )}
-        {children}
-    </Cells>
+const RadioCells = ({
+  value,
+  options,
+  onChange,
+  disabled,
+  style,
+  children,
+  ...others
+}: any) => (
+  <Cells style={[style, disabled ? styles.disabled : null]} {...others}>
+    {options.map((option, idx) => (
+      <Cell key={idx} onPress={() => !disabled && onChange(option.value)}>
+        <CellBody>
+          <CellText>{option.label || option.value}</CellText>
+        </CellBody>
+        {value === option.value ? (
+          <WeuiIcon name="success_no_circle" style={styles.radio} />
+        ) : null}
+      </Cell>
+    ))}
+    {children}
+  </Cells>
+)
 
 // RadioCells.propTypes = {
 //     value: PropTypes.any,

@@ -1,12 +1,11 @@
 import * as _ from 'lodash'
 import * as React from 'react'
-;
 import {
   Image as RNImage,
   Animated,
   StyleSheet,
   View,
-  Platform
+  Platform,
 } from 'react-native'
 import { BlurView } from 'expo'
 import { ImageStyle } from 'react-native/Libraries/StyleSheet/StyleSheetTypes'
@@ -27,7 +26,6 @@ interface ImageState {
   uri?: string
   intensity: Animated.Value
 }
-
 
 export default class Image extends React.Component<ImageProps, ImageState> {
   mounted = true
@@ -56,7 +54,7 @@ export default class Image extends React.Component<ImageProps, ImageState> {
       Animated.timing(intensity, {
         duration: transitionDuration,
         toValue: 0,
-        useNativeDriver: Platform.OS === 'android'
+        useNativeDriver: Platform.OS === 'android',
       }).start()
     }
   }
@@ -73,7 +71,7 @@ export default class Image extends React.Component<ImageProps, ImageState> {
     const isImageReady = !!uri
     const opacity = intensity.interpolate({
       inputRange: [0, 100],
-      outputRange: [0, 0.5]
+      outputRange: [0, 0.5],
     })
     const computedStyle = [
       StyleSheet.absoluteFill,
@@ -84,9 +82,9 @@ export default class Image extends React.Component<ImageProps, ImageState> {
         ), // $FlowFixMe
         (result, value, key) =>
           Object.assign(result, {
-            [key]: value - (style.borderWidth || 0)
+            [key]: value - (style.borderWidth || 0),
           })
-      )
+      ),
     ]
     return (
       <View {...{ style }}>
@@ -119,7 +117,7 @@ export default class Image extends React.Component<ImageProps, ImageState> {
             <Animated.View
               style={[
                 computedStyle,
-                { backgroundColor: tint === 'dark' ? black : white, opacity }
+                { backgroundColor: tint === 'dark' ? black : white, opacity },
               ]}
             />
           )}
@@ -135,6 +133,6 @@ const propsToCopy = [
   'borderBottomLeftRadius',
   'borderBottomRightRadius',
   'borderTopLeftRadius',
-  'borderTopRightRadius'
+  'borderTopRightRadius',
 ]
 const AnimatedBlurView = Animated.createAnimatedComponent(BlurView)

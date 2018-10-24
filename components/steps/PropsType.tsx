@@ -1,5 +1,5 @@
 export interface StepsPropsType {
-  size?: string;
-  current?: number;
-  children: any[];
+  size?: string
+  current?: number
+  children: any[]
 }

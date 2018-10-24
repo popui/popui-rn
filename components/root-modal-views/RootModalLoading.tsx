@@ -1,5 +1,4 @@
 import React from 'react'
-;
 import RootModalToast from 'popui-rn/components/RootModalViews/RootModalToast'
 
 export const RootModalLoading = (props: {

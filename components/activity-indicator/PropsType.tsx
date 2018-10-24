@@ -1,6 +1,6 @@
 export interface ActivityIndicatorWithTextPropTypes {
-  animating?: boolean;
-  toast?: boolean;
-  size?: 'large' | 'small';
-  text?: string;
+  animating?: boolean
+  toast?: boolean
+  size?: 'large' | 'small'
+  text?: string
 }

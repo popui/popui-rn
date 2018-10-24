@@ -1,5 +1,4 @@
 import React from 'react'
-;
 
 import { Platform, StyleSheet } from 'react-native'
 import ColorTabBar from '../color-tab-view-tab-bar'
@@ -23,11 +22,11 @@ export function defaultRenderTabBar(props: any) {
 
 export const getRenderTabBar = ({
   mainColor,
-  currentRoute
+  currentRoute,
 }: {
-    mainColor: string
-    currentRoute: any
-  }) => {
+  mainColor: string
+  currentRoute: any
+}) => {
   return function renderHeader(props: any) {
     return <ColorTabBar mainColor={mainColor} {...props} />
   }
@@ -39,8 +38,6 @@ function getCurrentRoute(props: any) {
   return routes[index]
 }
 
-
-
 export class ColorTabView extends React.Component<IProps, any> {
   render() {
     // debug('render')
@@ -50,10 +47,10 @@ export class ColorTabView extends React.Component<IProps, any> {
       onIndexChange,
       renderTabBar = defaultRenderTabBar,
       lazy = false,
-      style
+      style,
     } = this.props
     // style
-    let tabViewStyle:any = null
+    let tabViewStyle: any = null
     if (Platform.OS === 'android') {
       tabViewStyle = styles.tabViewAndroid
     }
@@ -85,11 +82,10 @@ export class ColorTabView extends React.Component<IProps, any> {
   }
 }
 
-
 const styles = StyleSheet.create({
   tabViewAndroid: {
-    height: 500
-  }
+    height: 500,
+  },
 })
 
 export default TabViewColor

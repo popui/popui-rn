@@ -1,5 +1,4 @@
 import React, { Component } from 'react'
-;
 
 import { TabBar } from 'react-native-tab-view'
 import { Image, StyleSheet, Text } from 'react-native'
@@ -37,7 +36,7 @@ export default class TabViewColorTabBar extends Component<
     const mainColor = this.getCurrentRouteMainColor()
     const imageStyle = [
       styles.iconImage,
-      focused ? { tintColor: mainColor } : null
+      focused ? { tintColor: mainColor } : null,
     ]
     const uri = focused ? route.icon.activeUrl : route.icon.url
     // debug('_renderTabItemIcon', { focused, uri })
@@ -72,24 +71,24 @@ export default class TabViewColorTabBar extends Component<
 
 const styles = StyleSheet.create({
   container: {
-    flex: 1
+    flex: 1,
   },
   tabbar: {
-    backgroundColor: '#ffffff'
+    backgroundColor: '#ffffff',
   },
   tabItem: {
-    flexDirection: 'row'
+    flexDirection: 'row',
   },
   label: {
     color: '#000000',
     fontWeight: '400',
     backgroundColor: 'transparent',
     marginVertical: 10,
-    marginHorizontal: 5
+    marginHorizontal: 5,
   },
   iconImage: {
     tintColor: '#000000',
     width: 20,
-    height: 20
-  }
+    height: 20,
+  },
 })

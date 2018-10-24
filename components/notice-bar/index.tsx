@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react'
 
 import {
   Image,
@@ -8,19 +8,18 @@ import {
   TouchableOpacity,
   View,
   ViewStyle,
-} from 'react-native';
-import Marquee, { MarqueeProps } from './Marquee';
-import { NoticeBarPropsType } from './PropsType';
-import NoticeStyle, { INoticeBarStyle } from './style/index';
+} from 'react-native'
+import Marquee, { MarqueeProps } from './Marquee'
+import { NoticeBarPropsType } from './PropsType'
+import NoticeStyle, { INoticeBarStyle } from './style/index'
 
 export interface NoticeNativeProps extends NoticeBarPropsType {
-  styles?: INoticeBarStyle;
-  marqueeProps?: MarqueeProps;
-  style?: StyleProp<ViewStyle>;
+  styles?: INoticeBarStyle
+  marqueeProps?: MarqueeProps
+  style?: StyleProp<ViewStyle>
 }
 
-const NoticeStyles = StyleSheet.create<any>(NoticeStyle);
-
+const NoticeStyles = StyleSheet.create<any>(NoticeStyle)
 
 export default class NoticeBar extends React.Component<NoticeNativeProps, any> {
   static defaultProps = {
@@ -37,32 +36,32 @@ export default class NoticeBar extends React.Component<NoticeNativeProps, any> {
       />
     ),
     styles: NoticeStyles,
-  };
+  }
 
   constructor(props: NoticeNativeProps) {
-    super(props);
+    super(props)
     this.state = {
       show: true,
-    };
+    }
   }
 
   onClick = () => {
-    const { mode, onClick } = this.props;
+    const { mode, onClick } = this.props
     if (onClick) {
-      onClick();
+      onClick()
     }
     if (mode === 'closable') {
       this.setState({
         show: false,
-      });
+      })
     }
   }
 
   render() {
-    const { children, mode, icon, style, action, marqueeProps } = this.props;
-    const styles = this.props.styles!;
+    const { children, mode, icon, style, action, marqueeProps } = this.props
+    const styles = this.props.styles!
 
-    let operationDom: any = null;
+    let operationDom: any = null
     if (mode === 'closable') {
       operationDom = (
         <TouchableOpacity onPress={this.onClick}>
@@ -70,13 +69,13 @@ export default class NoticeBar extends React.Component<NoticeNativeProps, any> {
             {action ? action : <Text style={[styles.close]}>×</Text>}
           </View>
         </TouchableOpacity>
-      );
+      )
     } else if (mode === 'link') {
       operationDom = (
         <View style={styles.actionWrap}>
           {action ? action : <Text style={[styles.link]}>∟</Text>}
         </View>
-      );
+      )
     }
 
     const main = (
@@ -87,15 +86,13 @@ export default class NoticeBar extends React.Component<NoticeNativeProps, any> {
         </View>
         {operationDom}
       </View>
-    );
+    )
     return this.state.show ? (
       mode === 'closable' ? (
         main
       ) : (
-        <TouchableOpacity onPress={this.onClick}>
-          {main}
-        </TouchableOpacity>
+        <TouchableOpacity onPress={this.onClick}>{main}</TouchableOpacity>
       )
-    ) : null;
+    ) : null
   }
 }

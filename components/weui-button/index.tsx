@@ -1,11 +1,10 @@
 import React from 'react'
-;
 import { StyleSheet, TouchableOpacity, View } from 'react-native'
-import { themeStore } from '../theme-store';
-const { themeVars } = themeStore;
+import { themeStore } from '../theme-store'
+const { themeVars } = themeStore
 import WeuiButtonText from '../weui-button-text'
 import TouchableWithFallback from '../touchable-with-fallback'
-import {ButtonPropsType} from './PropsType'
+import { ButtonPropsType } from './PropsType'
 
 // const Color = require('color')
 
@@ -17,28 +16,28 @@ const styles = StyleSheet.create({
     paddingLeft: 14,
     paddingRight: 14,
     borderColor: 'rgba(0,0,0,0.2)',
-    overflow: 'hidden'
+    overflow: 'hidden',
   },
 
   // mini
   mini: {
     paddingLeft: themeVars.BtnMiniFontSize * 0.75,
-    paddingRight: themeVars.BtnMiniFontSize * 0.75
+    paddingRight: themeVars.BtnMiniFontSize * 0.75,
   },
 
   // primary
   primary: {
-    backgroundColor: themeVars.BtnPrimaryBg
+    backgroundColor: themeVars.BtnPrimaryBg,
   },
 
   // warn
   warn: {
-    backgroundColor: themeVars.BtnWarnBg
+    backgroundColor: themeVars.BtnWarnBg,
   },
 
   // default
   default: {
-    backgroundColor: themeVars.BtnDefaultBg
+    backgroundColor: themeVars.BtnDefaultBg,
   },
 
   // primaryPlain
@@ -46,7 +45,7 @@ const styles = StyleSheet.create({
     borderWidth: 1,
     borderStyle: 'solid',
     borderColor: themeVars.BtnPlainPrimaryBorderColor,
-    backgroundColor: 'transparent'
+    backgroundColor: 'transparent',
   },
 
   // defaultPlain
@@ -54,23 +53,23 @@ const styles = StyleSheet.create({
     borderWidth: 1,
     borderStyle: 'solid',
     borderColor: themeVars.BtnPlainDefaultBorderColor,
-    backgroundColor: 'transparent'
+    backgroundColor: 'transparent',
   },
 
   // disabled
   primaryDisabled: {
-    backgroundColor: themeVars.BtnPrimaryDisabledBg
+    backgroundColor: themeVars.BtnPrimaryDisabledBg,
   },
   warnDisabled: {
-    backgroundColor: themeVars.BtnWarnDisabledBg
+    backgroundColor: themeVars.BtnWarnDisabledBg,
   },
   defaultDisabled: {
-    backgroundColor: themeVars.BtnDefaultDisabledBg
+    backgroundColor: themeVars.BtnDefaultDisabledBg,
   },
   plainDisabled: {
     borderColor: 'rgba(0,0,0,.2)',
-    backgroundColor: 'transparent'
-  }
+    backgroundColor: 'transparent',
+  },
 })
 
 const underlayColors = {
@@ -78,7 +77,7 @@ const underlayColors = {
   warnActive: themeVars.BtnWarnActiveBg,
   defaultActive: themeVars.BtnDefaultActiveBg,
   primaryPlainActive: 'transparent',
-  defaultPlainActive: 'transparent'
+  defaultPlainActive: 'transparent',
 }
 
 const getButtonStyles = ({ type, plain, size, disabled }) => {
@@ -123,7 +122,7 @@ const Button = (props: ButtonPropsType) => {
   if (mainColor) {
     buttonStyles.push({
       backgroundColor: mainColor,
-      borderColor: mainColor
+      borderColor: mainColor,
     })
   }
 

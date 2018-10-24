@@ -10,7 +10,6 @@ export async function init() {
 
 // init()
 
-
 export class CacheEntry {
   uri: string
   path: string = ''
@@ -29,7 +28,6 @@ export class CacheEntry {
     return path
   }
 }
-
 
 export default class CacheManager {
   static entries: { [uri: string]: CacheEntry } = {}

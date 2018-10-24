@@ -1,9 +1,9 @@
-import {IImagePickerHeaderStyle} from './style'
+import { IImagePickerHeaderStyle } from './style'
 
 export interface ImagePickerHeaderProps {
-    title?:string
-    filesLength?:number
-    showCountInfo?:boolean
-    maxCount?:number
-    styles?: IImagePickerHeaderStyle,
+  title?: string
+  filesLength?: number
+  showCountInfo?: boolean
+  maxCount?: number
+  styles?: IImagePickerHeaderStyle
 }

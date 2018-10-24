@@ -1,5 +1,4 @@
 import React from 'react'
-;
 import { Image as RNImage } from 'react-native'
 import has from 'lodash/has'
 

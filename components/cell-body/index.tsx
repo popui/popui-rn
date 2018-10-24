@@ -1,9 +1,8 @@
-import  React from 'react'
-;
+import React from 'react'
 import { StyleSheet, View, ViewStyle } from 'react-native'
 import WeuiIcon from '../weui-icon'
-import { themeStore } from '../theme-store';
-const { themeVars } = themeStore;
+import { themeStore } from '../theme-store'
+const { themeVars } = themeStore
 import CellText from '../cell-text'
 
 const styles = StyleSheet.create({
@@ -17,46 +16,50 @@ const styles = StyleSheet.create({
     flex: 1,
     color: themeVars.ColorWarn,
   },
-  errorIcon:{
-    marginLeft:5
-  }
+  errorIcon: {
+    marginLeft: 5,
+  },
 })
 
-
 export interface CellBodyProps {
-  error?: boolean;
-  children?: React.ReactNode;
-  style?: ViewStyle;
+  error?: boolean
+  children?: React.ReactNode
+  style?: ViewStyle
 }
 
-export interface CellBodyState {
-}
+export interface CellBodyState {}
 
-
-export default class CellBody extends React.Component<CellBodyProps, CellBodyState> {
-
+export default class CellBody extends React.Component<
+  CellBodyProps,
+  CellBodyState
+> {
   private renderChildrenWithProps = () => {
-    const { error, children } = this.props;
-    const childrenWithProps = React.Children.map(children, (child:any) => {
+    const { error, children } = this.props
+    const childrenWithProps = React.Children.map(children, (child: any) => {
       if (typeof child === 'string') {
         const textStyles = error ? styles.error : null
         return <CellText style={textStyles}>{child}</CellText>
       }
       return React.cloneElement(child, {
-        error
+        error,
       })
     })
     return childrenWithProps
   }
   public render() {
-    const { error, style,...others } = this.props;
+    const { error, style, ...others } = this.props
     return (
-      <View style={[styles.cellBody, style, error ? { flexDirection: 'row' } : null]}
-        {...others}>
+      <View
+        style={[
+          styles.cellBody,
+          style,
+          error ? { flexDirection: 'row' } : null,
+        ]}
+        {...others}
+      >
         {this.renderChildrenWithProps()}
-        {error && <WeuiIcon name="warn" style={styles.errorIcon}/>}
+        {error && <WeuiIcon name="warn" style={styles.errorIcon} />}
       </View>
     )
   }
 }
-

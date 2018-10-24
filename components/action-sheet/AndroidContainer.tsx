@@ -1,64 +1,61 @@
 // tslint:disable:jsx-no-multiline-js
-import React from 'react';
+import React from 'react'
 
 import {
   ActionSheetIOSOptions,
   Text,
   TouchableHighlight,
   View,
-} from 'react-native';
-import Modal from 'rmc-dialog/lib/Modal';
-import styles, {
-  ActionSheetStyle,
-} from './style/index';
-import themeVars from '../style/themes/default';
+} from 'react-native'
+import Modal from 'rmc-dialog/lib/Modal'
+import styles, { ActionSheetStyle } from './style/index'
+import themeVars from '../style/themes/default'
 
 export interface ActionSheetNativeProps {
-  onAnimationEnd?: (visible: boolean) => void;
-  visible?: boolean;
-  config: ActionSheetIOSOptions;
-  callback?: (index: number) => void;
-  styles?: ActionSheetStyle;
+  onAnimationEnd?: (visible: boolean) => void
+  visible?: boolean
+  config: ActionSheetIOSOptions
+  callback?: (index: number) => void
+  styles?: ActionSheetStyle
 }
-
 
 class ActionSheetAndroid extends React.Component<ActionSheetNativeProps, any> {
   constructor(props: ActionSheetNativeProps) {
-    super(props);
+    super(props)
     this.state = {
       visible: this.props.visible || false,
-    };
+    }
   }
 
   confirm(index: number) {
-    const { callback } = this.props;
+    const { callback } = this.props
     if (callback) {
-      callback(index);
+      callback(index)
     }
     this.setState({
       visible: false,
-    });
+    })
   }
   close = () => {
     this.setState({
       visible: false,
-    });
+    })
   }
   render() {
-    const { config, onAnimationEnd } = this.props;
+    const { config, onAnimationEnd } = this.props
     const {
       title,
       message,
       options,
       destructiveButtonIndex,
       cancelButtonIndex,
-    } = config;
+    } = config
 
     const titleMsg = !!title && (
       <View style={styles.title} key="0">
         <Text style={styles.titleText}>{title}</Text>
       </View>
-    );
+    )
 
     const content = (options as string[]).map((item, index) => (
       <View
@@ -84,7 +81,7 @@ class ActionSheetAndroid extends React.Component<ActionSheetNativeProps, any> {
           <View style={styles.cancelBtnMask} />
         ) : null}
       </View>
-    ));
+    ))
     return (
       <View style={styles.container}>
         <Modal
@@ -108,8 +105,8 @@ class ActionSheetAndroid extends React.Component<ActionSheetNativeProps, any> {
           </View>
         </Modal>
       </View>
-    );
+    )
   }
 }
 
-export default ActionSheetAndroid;
+export default ActionSheetAndroid

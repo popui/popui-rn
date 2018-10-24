@@ -1,7 +1,5 @@
 // import React from 'react';
 
-
-
 export interface WeuiButtonAreaPropsType {
   direction: 'horizontal' | 'vertical'
   style: any

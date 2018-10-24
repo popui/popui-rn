@@ -1,17 +1,15 @@
-import PropTypes from 'prop-types';
-import React from 'react';
-
+import PropTypes from 'prop-types'
+import React from 'react'
 
 export interface LocaleProviderProps {
   locale: {
-    Pagination?: object;
-    DatePicker?: object;
-    DatePickerView?: object;
-    InputItem?: object;
-  };
-  children?: React.ReactElement<any>;
+    Pagination?: object
+    DatePicker?: object
+    DatePickerView?: object
+    InputItem?: object
+  }
+  children?: React.ReactElement<any>
 }
-
 
 export default class LocaleProvider extends React.Component<
   LocaleProviderProps,
@@ -19,11 +17,11 @@ export default class LocaleProvider extends React.Component<
 > {
   static propTypes = {
     locale: PropTypes.object,
-  };
+  }
 
   static childContextTypes = {
     antLocale: PropTypes.object,
-  };
+  }
 
   getChildContext() {
     return {
@@ -31,10 +29,10 @@ export default class LocaleProvider extends React.Component<
         ...this.props.locale,
         exist: true,
       },
-    };
+    }
   }
 
   render() {
-    return React.Children.only(this.props.children);
+    return React.Children.only(this.props.children)
   }
 }

@@ -1,42 +1,41 @@
 // tslint:disable:jsx-no-multiline-js
-import React from 'react';
+import React from 'react'
 
-import { Image, StyleProp, Text, View, ViewStyle } from 'react-native';
-import RNAccordion from 'react-native-collapsible/Accordion';
-import { AccordionPropsTypes } from './PropsType';
-import AccordionStyles, { AccordionStyle } from './style/index';
+import { Image, StyleProp, Text, View, ViewStyle } from 'react-native'
+import RNAccordion from 'react-native-collapsible/Accordion'
+import { AccordionPropsTypes } from './PropsType'
+import AccordionStyles, { AccordionStyle } from './style/index'
 
 export interface AccordionPanelProps {
-  key?: string;
-  header: any;
+  key?: string
+  header: any
 }
 
 export interface AccordionNativeProps extends AccordionPropsTypes {
-  styles?: AccordionStyle;
-  style?: StyleProp<ViewStyle>;
+  styles?: AccordionStyle
+  style?: StyleProp<ViewStyle>
 }
 export interface AccordionHeader {
-  title: string;
-  content: React.ReactElement<any>;
-  style: StyleProp<ViewStyle>;
+  title: string
+  content: React.ReactElement<any>
+  style: StyleProp<ViewStyle>
 }
 
 class AccordionPanel extends React.Component<AccordionPanelProps, any> {
   render() {
-    return null;
+    return null
   }
 }
-
 
 class Accordion extends React.Component<AccordionNativeProps, any> {
   static defaultProps = {
     styles: AccordionStyles as any,
-  };
+  }
 
-  static Panel: any;
+  static Panel: any
 
   renderHeader = (section: AccordionHeader, _: number, isActive: boolean) => {
-    const styles = this.props.styles!;
+    const styles = this.props.styles!
     return (
       <View style={[styles.header, section.style]}>
         {React.isValidElement(section.title) ? (
@@ -57,53 +56,53 @@ class Accordion extends React.Component<AccordionNativeProps, any> {
           />
         </View>
       </View>
-    );
+    )
   }
 
   renderContent = (section: AccordionHeader) => {
-    const styles = this.props.styles!;
+    const styles = this.props.styles!
     return React.isValidElement(section.content) ? (
       section.content
     ) : (
       <View style={styles.content}>
         <Text style={styles.contentText}>{section.content}</Text>
       </View>
-    );
+    )
   }
 
   onChange = (idx: number) => {
-    const { onChange, children } = this.props;
-    let key;
+    const { onChange, children } = this.props
+    let key
     React.Children.map(children, (child: any, index) => {
       if (idx === index) {
-        key = child.key || `${index}`;
+        key = child.key || `${index}`
       }
-    });
+    })
     if (onChange) {
-      onChange(key);
+      onChange(key)
     }
   }
 
   render() {
-    const { children, style, defaultActiveKey, activeKey } = this.props;
-    const styles = this.props.styles!;
+    const { children, style, defaultActiveKey, activeKey } = this.props
+    const styles = this.props.styles!
 
-    let defaultActiveSection;
-    let activeSection;
+    let defaultActiveSection
+    let activeSection
     const headers = React.Children.map(children, (child: any, index) => {
-      const key = child.key || `${index}`;
+      const key = child.key || `${index}`
       if (key === defaultActiveKey) {
-        defaultActiveSection = index;
+        defaultActiveSection = index
       }
       if (key === activeKey) {
-        activeSection = index;
+        activeSection = index
       }
       return {
         title: child.props.header,
         content: child.props.children,
         style: child.props.style || {},
-      };
-    });
+      }
+    })
 
     return (
       <View style={[style, styles.container]}>
@@ -118,10 +117,10 @@ class Accordion extends React.Component<AccordionNativeProps, any> {
           onChange={this.onChange}
         />
       </View>
-    );
+    )
   }
 }
 
-Accordion.Panel = AccordionPanel;
+Accordion.Panel = AccordionPanel
 
-export default Accordion;
+export default Accordion

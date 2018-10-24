@@ -1,5 +1,5 @@
 /* tslint:disable:jsx-no-multiline-js */
-import React from 'react';
+import React from 'react'
 
 import {
   GestureResponderEvent,
@@ -11,12 +11,12 @@ import {
   View,
   Platform,
   TouchableOpacity,
-} from 'react-native';
-import themeVars from '../style/themes/default';
-import Input from '../text-input';
-import { InputItemPropsType } from './PropsType';
-import InputItemStyle from './style/index';
-import { Omit } from '../_util/types';
+} from 'react-native'
+import themeVars from '../style/themes/default'
+import Input from '../text-input'
+import { InputItemPropsType } from './PropsType'
+import InputItemStyle from './style/index'
+import { Omit } from '../_util/types'
 
 /**
  * React Native TextInput Props except these props
@@ -24,25 +24,24 @@ import { Omit } from '../_util/types';
 export type TextInputProps = Omit<
   TextInputProperties,
   'onChange' | 'onFocus' | 'onBlur'
->;
+>
 
 export interface InputItemProps extends InputItemPropsType, TextInputProps {
-  last?: boolean;
-  onExtraPress?: (event: GestureResponderEvent) => void;
-  onErrorPress?: (event: GestureResponderEvent) => void;
+  last?: boolean
+  onExtraPress?: (event: GestureResponderEvent) => void
+  onErrorPress?: (event: GestureResponderEvent) => void
 }
 
-const noop = () => {};
+const noop = () => {}
 
 function normalizeValue(value?: string) {
   if (typeof value === 'undefined' || value === null) {
-    return '';
+    return ''
   }
-  return value;
+  return value
 }
 
-const InputItemStyles = StyleSheet.create<any>(InputItemStyle);
-
+const InputItemStyles = StyleSheet.create<any>(InputItemStyle)
 
 export default class InputItem extends React.Component<InputItemProps, any> {
   static defaultProps = {
@@ -61,63 +60,63 @@ export default class InputItem extends React.Component<InputItemProps, any> {
     textAlign: 'left',
     last: false,
     styles: InputItemStyles,
-  };
+  }
 
-  inputRef: Input | null;
+  inputRef: Input | null
 
   onChange = (text: string) => {
-    const { onChange, type } = this.props;
-    const maxLength = this.props.maxLength as number;
+    const { onChange, type } = this.props
+    const maxLength = this.props.maxLength as number
     switch (type) {
       case 'bankCard':
-        text = text.replace(/\D/g, '');
+        text = text.replace(/\D/g, '')
         if (maxLength > 0) {
-          text = text.substring(0, maxLength);
+          text = text.substring(0, maxLength)
         }
-        text = text.replace(/\D/g, '').replace(/(....)(?=.)/g, '$1 ');
-        break;
+        text = text.replace(/\D/g, '').replace(/(....)(?=.)/g, '$1 ')
+        break
       case 'phone':
-        text = text.replace(/\D/g, '').substring(0, 11);
-        const valueLen = text.length;
+        text = text.replace(/\D/g, '').substring(0, 11)
+        const valueLen = text.length
         if (valueLen > 3 && valueLen < 8) {
-          text = `${text.substr(0, 3)} ${text.substr(3)}`;
+          text = `${text.substr(0, 3)} ${text.substr(3)}`
         } else if (valueLen >= 8) {
-          text = `${text.substr(0, 3)} ${text.substr(3, 4)} ${text.substr(7)}`;
+          text = `${text.substr(0, 3)} ${text.substr(3, 4)} ${text.substr(7)}`
         }
-        break;
+        break
       case 'password':
-        break;
+        break
       default:
-        break;
+        break
     }
     if (onChange) {
-      onChange(text);
+      onChange(text)
     }
   }
 
   onInputBlur = () => {
     if (this.props.onBlur) {
-      this.props.onBlur(this.props.value);
+      this.props.onBlur(this.props.value)
     }
   }
 
   onInputFocus = () => {
     if (this.props.onFocus) {
-      this.props.onFocus(this.props.value);
+      this.props.onFocus(this.props.value)
     }
   }
 
   onInputClear = () => {
     if (this.inputRef) {
-      this.inputRef.clear();
+      this.inputRef.clear()
     }
-    this.onChange('');
+    this.onChange('')
   }
 
   // this is instance method for user to use
   focus = () => {
     if (this.inputRef) {
-      this.inputRef.focus();
+      this.inputRef.focus()
     }
   }
 
@@ -134,35 +133,35 @@ export default class InputItem extends React.Component<InputItemProps, any> {
       onExtraPress,
       onErrorPress,
       styles,
-      ...restProps,
-    } = this.props;
-    const { value, defaultValue, style } = restProps;
+      ...restProps
+    } = this.props
+    const { value, defaultValue, style } = restProps
 
-    let valueProps;
+    let valueProps
     if ('value' in this.props) {
       valueProps = {
         value: normalizeValue(value),
-      };
+      }
     } else {
       valueProps = {
         defaultValue,
-      };
+      }
     }
 
     const containerStyle = {
       borderBottomWidth: last ? 0 : StyleSheet.hairlineWidth,
-    };
+    }
 
     const textStyle = {
       width: themeVars.font_size_heading * (labelNumber as number) * 1.05,
-    };
+    }
 
     const extraStyle = {
       width:
         typeof extra === 'string' && (extra as string).length > 0
           ? (extra as string).length * themeVars.font_size_heading
           : 0,
-    };
+    }
 
     const keyboardTypeArray = [
       'default',
@@ -177,18 +176,18 @@ export default class InputItem extends React.Component<InputItemProps, any> {
       'decimal-pad',
       'twitter',
       'web-search',
-    ];
+    ]
 
-    let keyboardType: any = 'default';
+    let keyboardType: any = 'default'
 
     if (type === 'number') {
-      keyboardType = 'numeric';
+      keyboardType = 'numeric'
     } else if (type === 'bankCard') {
-      keyboardType = 'number-pad'; // 不带小数点
+      keyboardType = 'number-pad' // 不带小数点
     } else if (type === 'phone') {
-      keyboardType = 'phone-pad';
+      keyboardType = 'phone-pad'
     } else if (type && keyboardTypeArray.indexOf(type) > -1) {
-      keyboardType = type;
+      keyboardType = type
     }
 
     return (
@@ -203,18 +202,18 @@ export default class InputItem extends React.Component<InputItemProps, any> {
         <Input
           clearButtonMode={clear ? 'while-editing' : 'never'}
           underlineColorAndroid="transparent"
-          ref={el => (this.inputRef = el)}
+          ref={(el) => (this.inputRef = el)}
           {...restProps}
           {...valueProps}
           style={[styles.input, error ? styles.inputErrorColor : null]}
           keyboardType={keyboardType}
-          onChange={event => this.onChange(event.text)}
+          onChange={(event) => this.onChange(event.text)}
           secureTextEntry={type === 'password'}
           onBlur={this.onInputBlur}
           onFocus={this.onInputFocus}
         />
         {/* 只在有 value 的 受控模式 下展示 自定义的 安卓 clear 按钮 */}
-        {(editable && clear && value && Platform.OS === 'android') ? (
+        {editable && clear && value && Platform.OS === 'android' ? (
           <TouchableOpacity
             style={[styles.clear]}
             onPress={this.onInputClear}
@@ -251,6 +250,6 @@ export default class InputItem extends React.Component<InputItemProps, any> {
           </TouchableWithoutFeedback>
         )}
       </View>
-    );
+    )
   }
 }

@@ -1,8 +1,7 @@
 import React from 'react'
-;
 import { StyleSheet, View, ViewStyle } from 'react-native'
-import { themeStore } from '../theme-store';
-const { themeVars } = themeStore;
+import { themeStore } from '../theme-store'
+const { themeVars } = themeStore
 import TouchableWithFallback from '../touchable-with-fallback'
 
 const styles = StyleSheet.create({
@@ -30,26 +29,24 @@ const styles = StyleSheet.create({
 })
 
 export interface CellProps {
-  first?: boolean,
-  access?: boolean,
-  vcode?: boolean,
-  error?: boolean,
-  disabled?: boolean,
-  children?: React.ReactNode,
+  first?: boolean
+  access?: boolean
+  vcode?: boolean
+  error?: boolean
+  disabled?: boolean
+  children?: React.ReactNode
   style?: ViewStyle
 }
 
-export interface CellState {
-}
-
+export interface CellState {}
 
 export default class Cell extends React.Component<CellProps, CellState> {
   private renderChildrenWithProps = () => {
-    const { access, error, children} = this.props
+    const { access, error, children } = this.props
     const childrenWithProps = React.Children.map(children, (child: any) => {
-      if(!child){
-        console.log('renderChildrenWithProps: child is invalid!',{
-          child
+      if (!child) {
+        console.log('renderChildrenWithProps: child is invalid!', {
+          child,
         })
         return child
       }
@@ -70,9 +67,21 @@ export default class Cell extends React.Component<CellProps, CellState> {
     return childrenWithProps
   }
   public render() {
-    const { access, vcode, error, first, disabled, children, style, ...others } = this.props
+    const {
+      access,
+      vcode,
+      error,
+      first,
+      disabled,
+      children,
+      style,
+      ...others
+    } = this.props
     return (
-      <TouchableWithFallback underlayColor={themeVars.BgColorActive} {...others} >
+      <TouchableWithFallback
+        underlayColor={themeVars.BgColorActive}
+        {...others}
+      >
         <View
           style={[
             styles.cell,
@@ -81,9 +90,10 @@ export default class Cell extends React.Component<CellProps, CellState> {
             vcode ? styles.vcodeCell : null,
             disabled ? styles.disabledCell : null,
           ]}
-        >{this.renderChildrenWithProps()}</View>
+        >
+          {this.renderChildrenWithProps()}
+        </View>
       </TouchableWithFallback>
     )
   }
 }
-

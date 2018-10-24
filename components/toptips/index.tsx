@@ -1,5 +1,4 @@
-import React, { Component } from "react";
-;
+import React, { Component } from 'react'
 import {
   Animated,
   Dimensions,
@@ -9,77 +8,76 @@ import {
   StyleSheet,
   Text,
   View,
-} from "react-native";
-import { themeStore } from '../theme-store';
-const { themeVars } = themeStore;
+} from 'react-native'
+import { themeStore } from '../theme-store'
+const { themeVars } = themeStore
 
-import { ToptipsPropsType } from "./PropsType";
-const { width, height } = Dimensions.get("window");
+import { ToptipsPropsType } from './PropsType'
+const { width, height } = Dimensions.get('window')
 const styles = StyleSheet.create({
   toptips: {
     width,
-    position: "absolute",
+    position: 'absolute',
     top: 0,
     left: 0,
     padding: 5,
-    zIndex: 5000
+    zIndex: 5000,
   },
   primaryToptips: {
-    backgroundColor: themeVars.ColorPrimary
+    backgroundColor: themeVars.ColorPrimary,
   },
   warnToptips: {
-    backgroundColor: themeVars.ColorWarn
+    backgroundColor: themeVars.ColorWarn,
   },
   infoToptips: {
-    backgroundColor: themeVars.LinkColorDefault
+    backgroundColor: themeVars.LinkColorDefault,
   },
   toptipsText: {
     fontSize: 14,
-    textAlign: "center",
-    color: "#FFFFFF"
-  }
-});
-
+    textAlign: 'center',
+    color: '#FFFFFF',
+  },
+})
 
 class Toptips extends Component<ToptipsPropsType, any> {
-  state = { visible: false, translateY: new Animated.Value(-height) };
-  height:number
-  toptips:React.ReactNode
+  state = { visible: false, translateY: new Animated.Value(-height) }
+  height: number
+  toptips: React.ReactNode
   public componentWillReceiveProps(nextProp) {
     if (this.props.visible !== nextProp.visible) {
       if (nextProp.visible) {
-        this.setState({ visible: true });
-        return;
+        this.setState({ visible: true })
+        return
       }
       Animated.timing(this.state.translateY, {
         toValue: -this.height,
         duration: 150,
-        easing: Easing.easeInOut
-      }).start(() => this.setState({ visible: false }));
+        easing: Easing.easeInOut,
+      }).start(() => this.setState({ visible: false }))
     }
   }
 
   handleLayout = () => {
     this.toptips.measure((x, y, w, h) => {
-      this.height = h;
-      this.setState({ translateY: new Animated.Value(-h) });
+      this.height = h
+      this.setState({ translateY: new Animated.Value(-h) })
       Animated.timing(this.state.translateY, {
         toValue: 0,
         duration: 150,
-        easing: Easing.easeInOut
-      }).start();
-    });
-  };
+        easing: Easing.easeInOut,
+      }).start()
+    })
+  }
 
   public render() {
     const {
-      type = "primary",
+      type = 'primary',
       onShow,
       onClose,
       style,
       textStyle,
-      children
-    } = this.props;
+      children,
+    } = this.props
 
     return (
       <Modal
@@ -95,13 +93,13 @@ class Toptips extends Component<ToptipsPropsType, any> {
             styles[`${type}Toptips`],
             style,
             {
-              transform: [{ translateY: this.state.translateY }]
-            }
+              transform: [{ translateY: this.state.translateY }],
+            },
           ]}
         >
           <View
-            ref={ref => {
-              this.toptips = ref;
+            ref={(ref) => {
+              this.toptips = ref
             }}
             onLayout={this.handleLayout}
           >
@@ -111,8 +109,8 @@ class Toptips extends Component<ToptipsPropsType, any> {
           </View>
         </Animated.View>
       </Modal>
-    );
+    )
   }
 }
 
-export default Toptips;
+export default Toptips

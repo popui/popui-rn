@@ -1,5 +1,5 @@
 // tslint:disable:no-empty
-import React from 'react';
+import React from 'react'
 
 import {
   ActivityIndicator,
@@ -8,20 +8,19 @@ import {
   TouchableHighlight,
   TouchableHighlightProperties,
   View,
-} from 'react-native';
-import { ButtonPropsType } from './PropsType';
-import buttonStyle from './style/index';
+} from 'react-native'
+import { ButtonPropsType } from './PropsType'
+import buttonStyle from './style/index'
 
 export interface ButtonProps
   extends ButtonPropsType,
     TouchableHighlightProperties {
-  styles?: typeof buttonStyle;
-  activeStyle?: boolean;
-  onClick?: (_?: any) => void;
+  styles?: typeof buttonStyle
+  activeStyle?: boolean
+  onClick?: (_?: any) => void
 }
 
-const buttonStyles = StyleSheet.create<any>(buttonStyle);
-
+const buttonStyles = StyleSheet.create<any>(buttonStyle)
 
 export default class Button extends React.Component<ButtonProps, any> {
   static defaultProps = {
@@ -37,38 +36,38 @@ export default class Button extends React.Component<ButtonProps, any> {
     onHideUnderlay: (_?: any) => {},
 
     styles: buttonStyles,
-  };
+  }
 
   constructor(props: ButtonProps) {
-    super(props);
+    super(props)
     this.state = {
       pressIn: false,
       touchIt: false,
-    };
+    }
   }
 
   onPressIn = (...arg: any[]) => {
-    this.setState({ pressIn: true });
+    this.setState({ pressIn: true })
     if (this.props.onPressIn) {
-      (this.props.onPressIn as any)(...arg);
+      ;(this.props.onPressIn as any)(...arg)
     }
   }
   onPressOut = (...arg: any[]) => {
-    this.setState({ pressIn: false });
+    this.setState({ pressIn: false })
     if (this.props.onPressOut) {
-      (this.props.onPressOut as any)(...arg);
+      ;(this.props.onPressOut as any)(...arg)
     }
   }
   onShowUnderlay = (...arg: any[]) => {
-    this.setState({ touchIt: true });
+    this.setState({ touchIt: true })
     if (this.props.onShowUnderlay) {
-      (this.props.onShowUnderlay as any)(...arg);
+      ;(this.props.onShowUnderlay as any)(...arg)
     }
   }
   onHideUnderlay = (...arg: any[]) => {
-    this.setState({ touchIt: false });
+    this.setState({ touchIt: false })
     if (this.props.onHideUnderlay) {
-      (this.props.onHideUnderlay as any)(...arg);
+      ;(this.props.onHideUnderlay as any)(...arg)
     }
   }
 
@@ -84,17 +83,17 @@ export default class Button extends React.Component<ButtonProps, any> {
       style,
       styles,
       loading,
-      ...restProps,
-    } = this.props;
+      ...restProps
+    } = this.props
     // tslint:disable-next-line:variable-name
-    const _styles: any = styles!;
+    const _styles: any = styles!
 
     const textStyle = [
       _styles[`${size}RawText`],
       _styles[`${type}RawText`],
       disabled && _styles[`${type}DisabledRawText`],
       this.state.pressIn && _styles[`${type}HighlightText`],
-    ];
+    ]
 
     const wrapperStyle = [
       _styles.wrapperStyle,
@@ -104,17 +103,17 @@ export default class Button extends React.Component<ButtonProps, any> {
       this.state.pressIn && activeStyle && _styles[`${type}Highlight`],
       activeStyle && this.state.touchIt && activeStyle,
       style,
-    ];
+    ]
 
     const underlayColor = (StyleSheet.flatten(
-      _styles[activeStyle ? `${type}Highlight` : `${type}Raw`],
-    ) as any).backgroundColor;
+      _styles[activeStyle ? `${type}Highlight` : `${type}Raw`]
+    ) as any).backgroundColor
 
     const indicatorColor = (StyleSheet.flatten(
       this.state.pressIn
         ? _styles[`${type}HighlightText`]
-        : _styles[`${type}RawText`],
-    ) as any).color;
+        : _styles[`${type}RawText`]
+    ) as any).color
 
     return (
       <TouchableHighlight
@@ -131,7 +130,7 @@ export default class Button extends React.Component<ButtonProps, any> {
       >
         <View style={_styles.container}>
           {loading ? (
-          // tslint:disable-next-line:jsx-no-multiline-js
+            // tslint:disable-next-line:jsx-no-multiline-js
             <ActivityIndicator
               style={_styles.indicator}
               animating
@@ -142,6 +141,6 @@ export default class Button extends React.Component<ButtonProps, any> {
           <Text style={textStyle}>{this.props.children}</Text>
         </View>
       </TouchableHighlight>
-    );
+    )
   }
 }

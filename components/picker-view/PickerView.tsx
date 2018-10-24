@@ -1,10 +1,10 @@
 /* tslint:disable:jsx-no-multiline-js */
-import React from 'react';
+import React from 'react'
 
-import RMCCascader from 'rmc-cascader/lib/Cascader';
-import RMCMultiPicker from 'rmc-picker/lib/MultiPicker';
-import RMCPicker from 'rmc-picker/lib/Picker';
-import { PickerData } from '../picker/PropsType';
+import RMCCascader from 'rmc-cascader/lib/Cascader'
+import RMCMultiPicker from 'rmc-picker/lib/MultiPicker'
+import RMCPicker from 'rmc-picker/lib/Picker'
+import { PickerData } from '../picker/PropsType'
 
 function getDefaultProps() {
   return {
@@ -14,29 +14,28 @@ function getDefaultProps() {
     cascade: true,
     value: [],
     onChange() {},
-  };
+  }
 }
 
 export interface IPickerView {
-  prefixCls?: string;
-  pickerPrefixCls?: string;
-  cols?: number;
-  cascade?: boolean;
-  value?: any[];
-  data?: PickerData[] | PickerData[][];
-  styles?: any;
-  onChange?: (value?: any) => void;
-  onScrollChange?: (value?: any) => void;
-  indicatorStyle?: any;
-  itemStyle?: any;
+  prefixCls?: string
+  pickerPrefixCls?: string
+  cols?: number
+  cascade?: boolean
+  value?: any[]
+  data?: PickerData[] | PickerData[][]
+  styles?: any
+  onChange?: (value?: any) => void
+  onScrollChange?: (value?: any) => void
+  indicatorStyle?: any
+  itemStyle?: any
 }
 
-
 export default class PickerView extends React.Component<IPickerView, any> {
-  static defaultProps = getDefaultProps();
+  static defaultProps = getDefaultProps()
 
   getCol = () => {
-    const { data, pickerPrefixCls, indicatorStyle, itemStyle } = this.props;
+    const { data, pickerPrefixCls, indicatorStyle, itemStyle } = this.props
     return (data as PickerData[][]).map((col, index) => {
       return (
         <RMCPicker
@@ -46,21 +45,21 @@ export default class PickerView extends React.Component<IPickerView, any> {
           indicatorStyle={indicatorStyle}
           itemStyle={itemStyle}
         >
-          {col.map(item => {
+          {col.map((item) => {
             return (
               <RMCPicker.Item key={item.value} value={item.value}>
                 {item.label}
               </RMCPicker.Item>
-            );
+            )
           })}
         </RMCPicker>
-      );
-    });
+      )
+    })
   }
   render() {
     // tslint:disable-next-line:no-this-assignment
-    const { props } = this;
-    let picker;
+    const { props } = this
+    let picker
     if (props.cascade) {
       picker = (
         <RMCCascader
@@ -74,7 +73,7 @@ export default class PickerView extends React.Component<IPickerView, any> {
           indicatorStyle={props.indicatorStyle}
           pickerItemStyle={props.itemStyle}
         />
-      );
+      )
     } else {
       picker = (
         <RMCMultiPicker
@@ -86,8 +85,8 @@ export default class PickerView extends React.Component<IPickerView, any> {
         >
           {this.getCol()}
         </RMCMultiPicker>
-      );
+      )
     }
-    return picker;
+    return picker
   }
 }

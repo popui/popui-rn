@@ -1,6 +1,6 @@
-import { IImagePickerAddButtonStyle } from "./style";
+import { IImagePickerAddButtonStyle } from './style'
 
 export interface ImagePickerAddButtonProps {
-  onPress?: () => any;
-  styles?: IImagePickerAddButtonStyle;
+  onPress?: () => any
+  styles?: IImagePickerAddButtonStyle
 }

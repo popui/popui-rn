@@ -1,5 +1,5 @@
 /* tslint:disable:jsx-no-multiline-js */
-import React from 'react';
+import React from 'react'
 
 import {
   StyleSheet,
@@ -7,35 +7,34 @@ import {
   TextInputProperties,
   View,
   NativeSyntheticEvent,
-  TextInputChangeEventData
-} from 'react-native';
-import themeVars from '../style/themes/default';
-import { TextAreaItemPropsType } from './PropsType';
-import TextAreaItemStyle, { ITextareaItemStyle } from './style/index';
+  TextInputChangeEventData,
+} from 'react-native'
+import themeVars from '../style/themes/default'
+import { TextAreaItemPropsType } from './PropsType'
+import TextAreaItemStyle, { ITextareaItemStyle } from './style/index'
 // import TextInputControls from '../text-input-controls'
 import get from 'lodash/get'
-import TextInput from '../text-input';
+import TextInput from '../text-input'
 
 export interface TextareaItemNativeProps
   extends TextAreaItemPropsType,
-  TextInputProperties {
-  last?: boolean;
-  onContentSizeChange?: (e: any) => void;
-  styles?: ITextareaItemStyle;
+    TextInputProperties {
+  last?: boolean
+  onContentSizeChange?: (e: any) => void
+  styles?: ITextareaItemStyle
 }
 
-const TextAreaItemStyles = StyleSheet.create<any>(TextAreaItemStyle);
-
+const TextAreaItemStyles = StyleSheet.create<any>(TextAreaItemStyle)
 
 export default class TextAreaItem extends React.Component<
   TextareaItemNativeProps,
   any
-  > {
+> {
   static defaultProps = {
-    onChange() { },
-    onFocus() { },
-    onBlur() { },
-    onErrorPress() { },
+    onChange() {},
+    onFocus() {},
+    onBlur() {},
+    onErrorPress() {},
     clear: false,
     error: false,
     editable: true,
@@ -45,10 +44,10 @@ export default class TextAreaItem extends React.Component<
     autoHeight: false,
     last: false,
     styles: TextAreaItemStyles,
-  };
-  inputRef: TextInput | null;
+  }
+  inputRef: TextInput | null
   constructor(props: TextareaItemNativeProps) {
-    super(props);
+    super(props)
     this.state = {
       // value:props.defaultValue || props.value,
       inputCount: 0,
@@ -56,7 +55,7 @@ export default class TextAreaItem extends React.Component<
         props.rows !== undefined && props.rows > 1
           ? 6 * props.rows * 4
           : themeVars.list_item_height,
-    };
+    }
   }
   // static getDerivedStateFromProps(nextProps:TextareaItemNativeProps, prevState:any){
   //   if(nextProps.value !== prevState.value){
@@ -66,19 +65,19 @@ export default class TextAreaItem extends React.Component<
   //   }
   //   return null
   // }
-  onChange = (event:NativeSyntheticEvent<TextInputChangeEventData>) => {
+  onChange = (event: NativeSyntheticEvent<TextInputChangeEventData>) => {
     const text = event.nativeEvent.text
-    const { onChange } = this.props;
+    const { onChange } = this.props
     this.setState({
       // value:text,
       inputCount: text.length,
-    });
+    })
 
     if (onChange) {
-      onChange(event);
+      onChange(event)
     }
   }
-  onClearPress = ()=>{
+  onClearPress = () => {
     // if (this.inputRef) {
     //   this.inputRef.clear();
     // }
@@ -86,38 +85,38 @@ export default class TextAreaItem extends React.Component<
     //   value:'',
     //   inputCount:0
     // })
-    const { onClearPress } = this.props;
-    if(onClearPress){
+    const { onClearPress } = this.props
+    if (onClearPress) {
       onClearPress()
     }
   }
   focus = () => {
     if (this.inputRef) {
-      this.inputRef.focus();
+      this.inputRef.focus()
     }
   }
   onContentSizeChange = (event: {
-    nativeEvent: { contentSize: { width: number; height: number } };
+    nativeEvent: { contentSize: { width: number; height: number } }
   }) => {
-    let height;
-    const { autoHeight, onContentSizeChange } = this.props;
-    const rows = this.props.rows as number;
+    let height
+    const { autoHeight, onContentSizeChange } = this.props
+    const rows = this.props.rows as number
     if (autoHeight) {
-      height = get(event,'nativeEvent.contentSize.height');
+      height = get(event, 'nativeEvent.contentSize.height')
     } else if (rows > 1) {
-      height = 6 * rows * 4;
+      height = 6 * rows * 4
     } else {
-      height = themeVars.list_item_height;
+      height = themeVars.list_item_height
     }
     this.setState({
       height,
-    });
+    })
     if (onContentSizeChange) {
-      onContentSizeChange(event);
+      onContentSizeChange(event)
     }
   }
   renderCountView = () => {
-    const { inputCount } = this.state;
+    const { inputCount } = this.state
     const { rows, count, styles } = this.props
     if (rows! > 1 && count! > 0) {
       return (
@@ -143,12 +142,12 @@ export default class TextAreaItem extends React.Component<
       styles,
       style,
       ...restProps
-    } = this.props;
+    } = this.props
     const textareaStyle = {
       color: error ? '#f50' : themeVars.color_text_base,
       paddingRight: error ? 2 * themeVars.h_spacing_lg : 0,
-    };
-    const maxLength = count! > 0 ? count : undefined;
+    }
+    const maxLength = count! > 0 ? count : undefined
     const inputStyle = [
       styles!.input,
       textareaStyle,
@@ -157,7 +156,7 @@ export default class TextAreaItem extends React.Component<
     ]
     return (
       <TextInput
-        ref={el => (this.inputRef = el)}
+        ref={(el) => (this.inputRef = el)}
         {...restProps}
         clearButtonMode={'never'}
         style={inputStyle}
@@ -169,13 +168,8 @@ export default class TextAreaItem extends React.Component<
       />
     )
   }
-  renderRightBottomView =()=>{
-    const {
-      error,
-      clear,
-      styles,
-      onErrorPress
-    } = this.props;
+  renderRightBottomView = () => {
+    const { error, clear, styles, onErrorPress } = this.props
     return (
       <View style={styles!.rightBottom}>
         {/* <TextInputControls
@@ -189,11 +183,7 @@ export default class TextAreaItem extends React.Component<
     )
   }
   render() {
-    const {
-      error,
-      last,
-      styles,
-    } = this.props;
+    const { error, last, styles } = this.props
     let borderBottomWidth = 0
     if (!last) {
       if (error) {
@@ -204,9 +194,9 @@ export default class TextAreaItem extends React.Component<
     }
     const containerStyle = {
       borderBottomWidth,
-      borderBottomColor:  themeVars.border_color_base,
+      borderBottomColor: themeVars.border_color_base,
       // borderBottomColor: error ? 'red' : themeVars.border_color_base,
-    };
+    }
     return (
       <View
         style={[styles!.container, containerStyle, { position: 'relative' }]}
@@ -214,6 +204,6 @@ export default class TextAreaItem extends React.Component<
         {this.renderInputView()}
         {this.renderRightBottomView()}
       </View>
-    );
+    )
   }
 }

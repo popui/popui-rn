@@ -1,5 +1,4 @@
 import React from 'react'
-;
 // import { ActivityIndicator, Text } from 'react-native'
 import AutoProgress from 'popui-rn/components/Progress/AutoProgress'
 

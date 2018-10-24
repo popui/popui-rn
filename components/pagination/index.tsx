@@ -1,22 +1,21 @@
-import PropTypes from 'prop-types';
-import React from 'react';
+import PropTypes from 'prop-types'
+import React from 'react'
 
-import { StyleProp, StyleSheet, Text, View, ViewStyle } from 'react-native';
-import { getComponentLocale } from '../_util/getLocale';
-import Button from '../button/index';
-import Flex from '../flex/index';
-import zh_CN from './locale/zh_CN';
-import { PaginationPropsType, PaginationState } from './PropsType';
-import PaginationStyle, { IPaginationStyle } from './style/index';
+import { StyleProp, StyleSheet, Text, View, ViewStyle } from 'react-native'
+import { getComponentLocale } from '../_util/getLocale'
+import Button from '../button/index'
+import Flex from '../flex/index'
+import zh_CN from './locale/zh_CN'
+import { PaginationPropsType, PaginationState } from './PropsType'
+import PaginationStyle, { IPaginationStyle } from './style/index'
 
 export interface PaginationNativeProps extends PaginationPropsType {
-  styles?: IPaginationStyle;
-  style?: StyleProp<ViewStyle>;
-  indicatorStyle?: StyleProp<ViewStyle>;
+  styles?: IPaginationStyle
+  style?: StyleProp<ViewStyle>
+  indicatorStyle?: StyleProp<ViewStyle>
 }
 
-const PaginationStyles = StyleSheet.create<any>(PaginationStyle);
-
+const PaginationStyles = StyleSheet.create<any>(PaginationStyle)
 
 export default class Pagination extends React.Component<
   PaginationNativeProps,
@@ -30,49 +29,49 @@ export default class Pagination extends React.Component<
     onChange: () => {},
     indicatorStyle: null,
     styles: PaginationStyles,
-  };
+  }
 
   static contextTypes = {
     antLocale: PropTypes.object,
-  };
+  }
 
   constructor(props: PaginationNativeProps) {
-    super(props);
+    super(props)
     this.state = {
       current: props.current,
-    };
+    }
   }
 
   componentWillReceiveProps(nextProps: PaginationNativeProps) {
     if (nextProps.current !== this.state.current) {
       this.setState({
         current: nextProps.current,
-      });
+      })
     }
   }
 
   onChange(p: number) {
     this.setState({
       current: p,
-    });
+    })
     if (this.props.onChange) {
-      this.props.onChange(p);
+      this.props.onChange(p)
     }
   }
 
   render() {
-    const { style, mode, total, simple } = this.props;
-    const styles = this.props.styles!;
+    const { style, mode, total, simple } = this.props
+    const styles = this.props.styles!
 
     const locale = getComponentLocale(
       this.props,
       this.context,
       'Pagination',
-      () => zh_CN,
-    );
-    const { prevText, nextText } = locale;
+      () => zh_CN
+    )
+    const { prevText, nextText } = locale
 
-    const { current } = this.state;
+    const { current } = this.state
     const simpleItem = !simple ? (
       <Flex.Item>
         <View style={[styles.numberStyle]}>
@@ -82,7 +81,7 @@ export default class Pagination extends React.Component<
       </Flex.Item>
     ) : (
       <Flex.Item />
-    );
+    )
     let markup = (
       <Flex>
         <Flex.Item>
@@ -103,16 +102,16 @@ export default class Pagination extends React.Component<
           </Button>
         </Flex.Item>
       </Flex>
-    );
+    )
     if (mode === 'number') {
       markup = (
         <View style={[styles.numberStyle]}>
           <Text style={[styles.activeTextStyle]}>{current}</Text>
           <Text style={[styles.totalStyle]}>/{total}</Text>
         </View>
-      );
+      )
     } else if (mode === 'pointer') {
-      const arr: any = [];
+      const arr: any = []
       for (let i = 0; i < total; i++) {
         arr.push(
           <View
@@ -123,15 +122,15 @@ export default class Pagination extends React.Component<
               styles.spaceStyle,
               i + 1 === current && styles.pointActiveStyle,
             ]}
-          />,
-        );
+          />
+        )
       }
       markup = (
         <View style={[styles.indicatorStyle, this.props.indicatorStyle]}>
           {arr}
         </View>
-      );
+      )
     }
-    return <View style={[styles.container, style]}>{markup}</View>;
+    return <View style={[styles.container, style]}>{markup}</View>
   }
 }

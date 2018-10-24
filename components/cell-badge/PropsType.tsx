@@ -1,7 +1,7 @@
 export interface CellBadgePropsTypes {
-  overflowCount?:number
+  overflowCount?: number
   dot?: boolean
-  preset?: 'default' | 'header' | 'body'| 'footer'
+  preset?: 'default' | 'header' | 'body' | 'footer'
   style?: any
-  children?:any
+  children?: any
 }

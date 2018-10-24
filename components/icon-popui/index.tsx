@@ -2,29 +2,28 @@
 
 import PropTypes from 'prop-types'
 import React from 'react'
-;
 import { StyleSheet } from 'react-native'
 import PureIconPopui from './PureIconPopui'
 
 const styles = StyleSheet.create({
-    icon: {
-        alignSelf: 'center',
-        textAlign: 'center',
-    },
+  icon: {
+    alignSelf: 'center',
+    textAlign: 'center',
+  },
 })
 
 const iconConfigs = {
-    default: {
-        size: 24,
-        color: '#000000',
-    },
+  default: {
+    size: 24,
+    color: '#000000',
+  },
 }
 
 export interface Iprops {
-    name: string,
-    size: number,
-    color: string,
-    style: any,
+  name: string
+  size: number
+  color: string
+  style: any
 }
 
 /**
@@ -39,35 +38,30 @@ export interface Iprops {
  */
 
 function IconPopui(props: Iprops) {
-    const {
-        name = 'question',
-        size,
-        color,
-        style,
-        ...others,
-    } = props
-    // 默认配置
-    const iconConfig = iconConfigs[name] ? iconConfigs[name] : iconConfigs['default']
-    const iconStyles = [styles.icon, style]
-    return (<PureIconPopui
-        name={name}
-        size={iconConfig.size}
-        color={iconConfig.color}
-        style={iconStyles}
-        {...others}
-    />)
+  const { name = 'question', size, color, style, ...others } = props
+  // 默认配置
+  const iconConfig = iconConfigs[name]
+    ? iconConfigs[name]
+    : iconConfigs['default']
+  const iconStyles = [styles.icon, style]
+  return (
+    <PureIconPopui
+      name={name}
+      size={iconConfig.size}
+      color={iconConfig.color}
+      style={iconStyles}
+      {...others}
+    />
+  )
 }
 
-
 IconPopui.propTypes = {
-    name: PropTypes.string,
-    size: PropTypes.number,
-    color: PropTypes.string,
-    style: PropTypes.any,
+  name: PropTypes.string,
+  size: PropTypes.number,
+  color: PropTypes.string,
+  style: PropTypes.any,
 }
 
 export default IconPopui
 
-export {
-  PureIconPopui
-}
+export { PureIconPopui }

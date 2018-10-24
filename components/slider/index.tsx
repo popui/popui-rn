@@ -1,36 +1,31 @@
-import React from 'react';
+import React from 'react'
 
-import { Slider as RNSlider, View, Text } from 'react-native';
-import { SliderPropsType } from './PropsType';
-import SliderStyle from './style/index';
+import { Slider as RNSlider, View, Text } from 'react-native'
+import { SliderPropsType } from './PropsType'
+import SliderStyle from './style/index'
 
 export interface SliderProps extends SliderPropsType {
-  maximumTrackTintColor?: string;
-  minimumTrackTintColor?: string;
+  maximumTrackTintColor?: string
+  minimumTrackTintColor?: string
 }
-
 
 export default class SliderAntm extends React.Component<SliderProps, any> {
   static defaultProps = {
-    onChange() { },
-    value:0,
+    onChange() {},
+    value: 0,
     showValue: true,
-    onAfterChange() { },
+    onAfterChange() {},
     defaultValue: 0,
     disabled: false,
     maximumTrackTintColor: SliderStyle.maximum.color,
     minimumTrackTintColor: SliderStyle.minimum.color,
     style: undefined,
     sliderStyle: undefined,
-    textStyle: undefined
-  };
-  renderValue =()=>{
-    const {
-      value,
-      textStyle,
-    } = this.props;
-    return (<Text style={[SliderStyle.sliderText, textStyle]}>
-      {value}</Text>)
+    textStyle: undefined,
+  }
+  renderValue = () => {
+    const { value, textStyle } = this.props
+    return <Text style={[SliderStyle.sliderText, textStyle]}>{value}</Text>
   }
   render() {
     const {
@@ -49,10 +44,8 @@ export default class SliderAntm extends React.Component<SliderProps, any> {
       sliderStyle,
       textStyle,
       ...others
-    } = this.props;
-    console.log('SliderAntm render',{
-      
-    })
+    } = this.props
+    console.log('SliderAntm render', {})
     return (
       <View style={[SliderStyle.sliderWrapper, style]}>
         <RNSlider
@@ -70,6 +63,6 @@ export default class SliderAntm extends React.Component<SliderProps, any> {
         />
         {showValue && this.renderValue()}
       </View>
-    );
+    )
   }
 }

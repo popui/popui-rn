@@ -3,13 +3,13 @@ export default function closest(el: Element, selector: string) {
     el.matches ||
     el.webkitMatchesSelector ||
     (el as any).mozMatchesSelector ||
-    el.msMatchesSelector;
-  let p: Element | null = el;
+    el.msMatchesSelector
+  let p: Element | null = el
   while (p) {
     if (matchesSelector.call(p, selector)) {
-      return p;
+      return p
     }
-    p = p.parentElement;
+    p = p.parentElement
   }
-  return null;
+  return null
 }

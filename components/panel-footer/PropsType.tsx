@@ -1,9 +1,7 @@
-import React from "React";
-;
-
+import React from 'React'
 export interface PanelFooterPropsType {
-  style?: any;
-  children?: React.ReactNode;
-  access?: boolean;
-  textStyle?: any;
+  style?: any
+  children?: React.ReactNode
+  access?: boolean
+  textStyle?: any
 }

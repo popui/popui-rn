@@ -1,6 +1,6 @@
-import {IModalPropTypes} from "rmc-dialog/lib/Modal";
+import { IModalPropTypes } from 'rmc-dialog/lib/Modal'
 
 export interface ModalPopupProps extends IModalPropTypes {
-  styles?:any
-  children?:any
+  styles?: any
+  children?: any
 }

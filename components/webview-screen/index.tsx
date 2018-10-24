@@ -1,17 +1,15 @@
 import React, { Component } from 'react'
-;
 import { Platform, View, WebView } from 'react-native'
 import AutoProgress from '../progress-auto'
 import Menu, {
   MenuContext,
   MenuOption,
   MenuOptions,
-  MenuTrigger
+  MenuTrigger,
 } from 'react-native-popup-menu'
 import Toast from '../toast'
 
 import CONSTANTS from './constants'
-
 
 class WebViewScreen extends Component {
   static navigatorButtons = {
@@ -21,15 +19,15 @@ class WebViewScreen extends Component {
         title: 'Back',
         disabled: false,
         showAsAction: 'ifRoom',
-        testID: 'test_back'
+        testID: 'test_back',
       },
       {
         id: CONSTANTS.MENUS.CLOSE,
         title: 'Close',
         disabled: false,
         showAsAction: 'ifRoom',
-        testID: 'test_close'
-      }
+        testID: 'test_close',
+      },
     ],
     rightButtons: [
       {
@@ -37,33 +35,33 @@ class WebViewScreen extends Component {
         title: 'More',
         disabled: false,
         showAsAction: 'ifRoom',
-        testID: 'test_more'
-      }
-    ]
+        testID: 'test_more',
+      },
+    ],
   }
   componentWillUnmount = () => {
     if (this.state.timer) {
       clearInterval(this.state.timer)
     }
   }
-  onError = e => {
+  onError = (e) => {
     console.log('onError e:', e)
   }
   onLoadEnd = () => {
     if (this.state.loading) {
       this.setState({
-        loading: false
+        loading: false,
       })
     }
   }
   onLoadStart = () => {
     if (!this.state.loading) {
       this.setState({
-        loading: true
+        loading: true,
       })
     }
   }
-  onNavigatorEvent = event => {
+  onNavigatorEvent = (event) => {
     if (event.type === 'DeepLink') {
     } else {
       switch (event.id) {
@@ -88,7 +86,7 @@ class WebViewScreen extends Component {
       }
     }
   }
-  onShouldStartLoadWithRequest = event => {
+  onShouldStartLoadWithRequest = (event) => {
     return true
   }
   goBack = () => {
@@ -113,7 +111,7 @@ class WebViewScreen extends Component {
       url: this.state.url,
       message: 'message to go with the shared url',
       subject: null,
-      androidActionSheetName: CONSTANTS.ACTIONSHEETS.SHARE
+      androidActionSheetName: CONSTANTS.ACTIONSHEETS.SHARE,
     }
     if (Platform.OS === 'ios') {
       options.subject = 'a subject to go in the email heading'
@@ -135,7 +133,7 @@ class WebViewScreen extends Component {
   closeMoreMenu = () => {
     this.refs[CONSTANTS.REFS.MOREMENU].closeMenu(CONSTANTS.MENUS.MORE)
   }
-  onMoreMenuOptionSelect = value => {
+  onMoreMenuOptionSelect = (value) => {
     switch (value) {
       case CONSTANTS.MENUS.GOBACK:
         this.goBack()
@@ -157,7 +155,7 @@ class WebViewScreen extends Component {
     }
     this.closeMoreMenu()
   }
-  onNavigationStateChange = navState => {
+  onNavigationStateChange = (navState) => {
     // Todo:
     // navState.canGoBack,navState.canGoForward 在 SPA 页面中不会改变
     this.setState(
@@ -166,7 +164,7 @@ class WebViewScreen extends Component {
         canGoForward: navState.canGoForward,
         url: navState.url,
         title: navState.title,
-        loading: navState.loading
+        loading: navState.loading,
       },
       () => {}
     )
@@ -178,15 +176,15 @@ class WebViewScreen extends Component {
     //  this.refs[CONSTANTS.REFS.MOREMENU].toggleMenu(CONSTANTS.MENUS.MORE);
     // }, 2000);
   }
-  showSuccessToast = title => {
+  showSuccessToast = (title) => {
     this.setState({
       successToastVisible: true,
-      successToastTitle: title
+      successToastTitle: title,
     })
     this.state.toastTimer = setTimeout(() => {
       this.setState({
         successToastVisible: false,
-        successToastTitle: ''
+        successToastTitle: '',
       })
     }, 2000)
   }
@@ -201,7 +199,7 @@ class WebViewScreen extends Component {
       moreMenuSelected: '',
       moreMenuVisible: true,
       successToastVisible: false,
-      successToastTitle: ''
+      successToastTitle: '',
     }
     const { navigatorStyle, navigatorButtons } = this.props
 
@@ -218,7 +216,7 @@ class WebViewScreen extends Component {
     const { source, ...other } = this.props
     // 设置 nav 标题
     this.setTitle({
-      title: this.state.title
+      title: this.state.title,
     })
     const moreMenu = (
       <Menu
@@ -307,41 +305,41 @@ class WebViewScreen extends Component {
 const styles = {
   scrollViewContentContainer: {
     flex: 1,
-    backgroundColor: '#f8f8f8'
+    backgroundColor: '#f8f8f8',
   },
   webView: {
     backgroundColor: 'rgba(255,255,255,0.8)',
-    height: 1000
+    height: 1000,
   },
   moreMenuContext: {
-    height: 1000
+    height: 1000,
   },
   moreMenuContainer: {
     flexDirection: 'row',
-    justifyContent: 'flex-end'
+    justifyContent: 'flex-end',
   },
   moreMenuOptions: {
     optionsContainer: {},
     optionsWrapper: {
       paddingTop: 5,
-      paddingBottom: 5
+      paddingBottom: 5,
     },
     optionWrapper: {
       paddingTop: 15,
       paddingBottom: 15,
       paddingLeft: 15,
       borderTopColor: '#eeeeee',
-      borderTopWidth: 1
+      borderTopWidth: 1,
     },
     optionTouchable: {
       underlayColor: '#eeeeee',
-      activeOpacity: 40
+      activeOpacity: 40,
     },
     optionText: {
-      color: 'black'
-    }
+      color: 'black',
+    },
   },
-  moreMenuOption: {}
+  moreMenuOption: {},
 }
 
 export default WebViewScreen

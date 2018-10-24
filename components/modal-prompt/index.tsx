@@ -1,8 +1,8 @@
-import React from 'react';
-// 
-import topView from 'rn-topview';
-import PromptContainer from './PromptContainer';
-import { PromotArgs } from './PropsType';
+import React from 'react'
+//
+import topView from 'rn-topview'
+import PromptContainer from './PromptContainer'
+import { PromotArgs } from './PropsType'
 
 export function prompt({
   title,
@@ -11,18 +11,18 @@ export function prompt({
   type = 'default',
   defaultValue = '',
   placeholders = ['', ''],
-}:PromotArgs) {
+}: PromotArgs) {
   if (!callbackOrActions) {
     // tslint:disable-next-line:no-console
-    console.error('Must specify callbackOrActions');
-    return;
+    console.error('Must specify callbackOrActions')
+    return
   }
 
   const onAnimationEnd = (visible: boolean) => {
     if (!visible) {
-      topView.remove();
+      topView.remove()
     }
-  };
+  }
 
   topView.set(
     <PromptContainer
@@ -33,10 +33,10 @@ export function prompt({
       defaultValue={defaultValue}
       onAnimationEnd={onAnimationEnd}
       placeholders={placeholders}
-    />,
-  );
+    />
+  )
 }
 
 export default {
-  prompt
+  prompt,
 }

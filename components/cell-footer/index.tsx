@@ -1,80 +1,72 @@
-import React from "react";
-;
-import {
-  Image,
-  StyleSheet,
-  Text,
-  View,
-  ViewStyle
-} from "react-native";
-import { themeStore } from '../theme-store';
-const { themeVars } = themeStore;
+import React from 'react'
+import { Image, StyleSheet, Text, View, ViewStyle } from 'react-native'
+import { themeStore } from '../theme-store'
+const { themeVars } = themeStore
 
 // import WeuiIcon from '../weui-icon'
 const styles = StyleSheet.create({
   cellFooter: {
-    flexDirection: "row",
-    alignItems: "center",
-    marginLeft: 5
+    flexDirection: 'row',
+    alignItems: 'center',
+    marginLeft: 5,
   },
   cellFooterText: {
-    textAlign: "center",
+    textAlign: 'center',
     color: themeVars.TextColorGray,
-    fontSize: themeVars.CellFontSize
+    fontSize: themeVars.CellFontSize,
   },
   vcode: {
     width: 100,
-    height: 44
-  }
-});
+    height: 44,
+  },
+})
 
 export interface CellFooterProps {
-  error?:boolean;
-  access?: boolean;
-  children?: React.ReactNode;
-  style?: ViewStyle;
+  error?: boolean
+  access?: boolean
+  children?: React.ReactNode
+  style?: ViewStyle
 }
 
 export interface CellFooterState {}
-
 
 export default class CellFooter extends React.Component<
   CellFooterProps,
   CellFooterState
 > {
   constructor(props: CellFooterProps) {
-    super(props);
+    super(props)
 
-    this.state = {};
+    this.state = {}
   }
   private renderChildrenWithProps = () => {
-    const { children, style, access, ...others } = this.props;
+    const { children, style, access, ...others } = this.props
     const childrenWithProps = React.Children.map(children, (child: any) => {
       if (!child.type) {
         return (
           <Text style={[styles.cellFooterText, style]} {...others}>
             {child}
           </Text>
-        );
+        )
       }
       if (
         child.type &&
-        child.type.displayName === "Image" &&
+        child.type.displayName === 'Image' &&
         !child.props.style
       ) {
         return React.cloneElement(child, {
-          style: [styles.vcode, child.props.style]
-        });
+          style: [styles.vcode, child.props.style],
+        })
       }
-      return child;
-    });
-    return childrenWithProps;
-  };
+      return child
+    })
+    return childrenWithProps
+  }
   public render() {
-    const {style, access } = this.props;
+    const { style, access } = this.props
     const cellFooterStyle = style
       ? [styles.cellFooter, style]
-      : styles.cellFooter;
+      : styles.cellFooter
     return (
       <View style={cellFooterStyle}>
         {this.renderChildrenWithProps()}
@@ -82,10 +74,10 @@ export default class CellFooter extends React.Component<
         {access && (
           <Image
             style={{ width: 7.5, height: 12, marginLeft: 5 }}
-            source={require("assets/images/back_arrow.png")}
+            source={require('assets/images/back_arrow.png')}
           />
         )}
       </View>
-    );
+    )
   }
 }

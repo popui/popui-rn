@@ -1,24 +1,23 @@
-import React from 'react';
+import React from 'react'
 
-import { StyleProp, StyleSheet, Text, View, ViewStyle } from 'react-native';
-import Item from './ListItem';
-import { ListPropsType } from './PropsType';
-import listStyle from './style/index';
+import { StyleProp, StyleSheet, Text, View, ViewStyle } from 'react-native'
+import Item from './ListItem'
+import { ListPropsType } from './PropsType'
+import listStyle from './style/index'
 
 export interface ListProps extends ListPropsType {
-  styles?: typeof listStyle;
-  style?: StyleProp<ViewStyle>;
+  styles?: typeof listStyle
+  style?: StyleProp<ViewStyle>
 }
 
-const listStyles = StyleSheet.create<any>(listStyle);
-
+const listStyles = StyleSheet.create<any>(listStyle)
 
 export default class List extends React.Component<ListProps, any> {
-  static Item = Item;
+  static Item = Item
 
   static defaultProps = {
     styles: listStyles,
-  };
+  }
 
   render() {
     const {
@@ -29,29 +28,29 @@ export default class List extends React.Component<ListProps, any> {
       renderFooter,
       styles,
       ...restProps
-    } = this.props;
+    } = this.props
 
     // tslint:disable-next-line:variable-name
-    const _styles = styles!;
+    const _styles = styles!
 
-    let headerDom: React.ReactElement<any> | null = null;
-    let footerDom: React.ReactElement<any> | null = null;
+    let headerDom: React.ReactElement<any> | null = null
+    let footerDom: React.ReactElement<any> | null = null
 
     if (renderHeader) {
       let content =
-        typeof renderHeader === 'function' ? renderHeader() : renderHeader;
+        typeof renderHeader === 'function' ? renderHeader() : renderHeader
       if (typeof content === 'string') {
-        content = <Text style={_styles.Header}>{content}</Text>;
+        content = <Text style={_styles.Header}>{content}</Text>
       }
-      headerDom = <View>{content}</View>;
+      headerDom = <View>{content}</View>
     }
     if (renderFooter) {
       let content =
-        typeof renderFooter === 'function' ? renderFooter() : renderFooter;
+        typeof renderFooter === 'function' ? renderFooter() : renderFooter
       if (typeof content === 'string') {
-        content = <Text style={_styles.Footer}>{content}</Text>;
+        content = <Text style={_styles.Footer}>{content}</Text>
       }
-      footerDom = <View>{content}</View>;
+      footerDom = <View>{content}</View>
     }
 
     return (
@@ -63,6 +62,6 @@ export default class List extends React.Component<ListProps, any> {
         </View>
         {footerDom}
       </View>
-    );
+    )
   }
 }

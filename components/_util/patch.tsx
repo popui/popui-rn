@@ -1,20 +1,16 @@
 import React from 'react'
-;
 import { StyleSheet, Text, ViewPropTypes } from 'react-native'
 import wrap from 'lodash/wrap'
 
 const styles = StyleSheet.create({
-    defaultFont: {
-        fontFamily: '',
-    },
+  defaultFont: {
+    fontFamily: '',
+  },
 })
 
 Text.prototype.render = wrap(Text.prototype.render, (func, ...args) => {
-    const originText = func.apply(this, args)
-    return React.cloneElement(originText, {
-        style: [
-            originText.props.style,
-            styles.defaultFont,
-        ],
-    })
+  const originText = func.apply(this, args)
+  return React.cloneElement(originText, {
+    style: [originText.props.style, styles.defaultFont],
+  })
 })

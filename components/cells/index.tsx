@@ -1,9 +1,8 @@
 import PropTypes from 'prop-types'
 import React from 'react'
-;
 import { StyleSheet, View, ViewPropTypes } from 'react-native'
-import { themeStore } from '../theme-store';
-const { themeVars } = themeStore;
+import { themeStore } from '../theme-store'
+const { themeVars } = themeStore
 
 const styles = StyleSheet.create({
   cells: {
@@ -12,8 +11,8 @@ const styles = StyleSheet.create({
     overflow: 'hidden',
     borderTopWidth: StyleSheet.hairlineWidth,
     borderBottomWidth: StyleSheet.hairlineWidth,
-    borderColor: themeVars.CellBorderColor
-  }
+    borderColor: themeVars.CellBorderColor,
+  },
 })
 
 const Cells = ({ children, style, ...others }: any) => {
@@ -33,7 +32,7 @@ const Cells = ({ children, style, ...others }: any) => {
 
 Cells.propTypes = {
   children: PropTypes.node,
-  style: ViewPropTypes.style
+  style: ViewPropTypes.style,
 }
 
 export default Cells

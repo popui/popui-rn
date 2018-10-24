@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react'
 
 import {
   Modal,
@@ -7,14 +7,14 @@ import {
   Text,
   TouchableOpacity,
   View,
-  SafeAreaView
-} from 'react-native';
-import CameraRollPicker from 'react-native-camera-roll-picker';
-import themeVars from '../style/themes/default';
+  SafeAreaView,
+} from 'react-native'
+import CameraRollPicker from 'react-native-camera-roll-picker'
+import themeVars from '../style/themes/default'
 
 export interface ImageRollProps {
-  onCancel: () => void;
-  onSelected: (imgObj: {}) => void;
+  onCancel: () => void
+  onSelected: (imgObj: {}) => void
 }
 
 const styles = StyleSheet.create({
@@ -41,13 +41,12 @@ const styles = StyleSheet.create({
     color: themeVars.brand_primary,
     fontSize: 16,
   },
-});
-
+})
 
 export default class ImageRoll extends React.Component<ImageRollProps, any> {
   onSelected = (images: any[], _: any) => {
-    this.props.onSelected(images[0]);
-    this.props.onCancel();
+    this.props.onSelected(images[0])
+    this.props.onCancel()
   }
 
   render() {
@@ -68,12 +67,9 @@ export default class ImageRoll extends React.Component<ImageRollProps, any> {
               <Text style={styles.rightBtn}>Cancel</Text>
             </TouchableOpacity>
           </View>
-          <CameraRollPicker
-            selected={[]}
-            callback={this.onSelected}
-          />
+          <CameraRollPicker selected={[]} callback={this.onSelected} />
         </SafeAreaView>
       </Modal>
-    );
+    )
   }
 }

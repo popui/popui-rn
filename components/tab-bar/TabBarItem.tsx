@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react'
 
 import {
   Image,
@@ -9,29 +9,28 @@ import {
   Text,
   TouchableWithoutFeedback,
   View,
-} from 'react-native';
+} from 'react-native'
 
 export interface TabBarItemProps {
-  badge?: string | number;
-  onPress?: () => void;
-  selected?: boolean;
-  icon?: ImageURISource | ImageURISource[] | ImageRequireSource;
-  selectedIcon?: ImageURISource | ImageURISource[] | ImageRequireSource;
-  title: string;
-  tintColor?: string;
-  unselectedTintColor?: string;
+  badge?: string | number
+  onPress?: () => void
+  selected?: boolean
+  icon?: ImageURISource | ImageURISource[] | ImageRequireSource
+  selectedIcon?: ImageURISource | ImageURISource[] | ImageRequireSource
+  title: string
+  tintColor?: string
+  unselectedTintColor?: string
   /*react-native android only*/
-  iconStyle?: StyleProp<ImageStyle>;
-  renderAsOriginal?: boolean;
+  iconStyle?: StyleProp<ImageStyle>
+  renderAsOriginal?: boolean
   /* react-native only */
-  styles?: any;
+  styles?: any
 }
-
 
 export default class TabBarItem extends React.Component<TabBarItemProps, any> {
   static defaultProps = {
     onPress() {},
-  };
+  }
   render() {
     const {
       title,
@@ -44,24 +43,26 @@ export default class TabBarItem extends React.Component<TabBarItemProps, any> {
       badge,
       styles,
       iconStyle,
-    } = this.props;
-    const itemSelectedStyle = selected ? styles.barItemSelected : null;
+    } = this.props
+    const itemSelectedStyle = selected ? styles.barItemSelected : null
     const badgeDom = badge ? (
       <View style={[styles.badge]}>
         <Text style={[styles.badgeText]}>{badge}</Text>
       </View>
-    ) : null;
+    ) : null
     // icon
     const source =
       selected && selectedIcon !== undefined
         ? selectedIcon
-        : icon !== undefined ? icon : null;
+        : icon !== undefined
+          ? icon
+          : null
     return (
       <TouchableWithoutFeedback onPress={onPress}>
         <View style={[styles.barItem, itemSelectedStyle]}>
           <View>
             {source === null ? null : (
-            // tslint:disable-next-line:jsx-no-multiline-js
+              // tslint:disable-next-line:jsx-no-multiline-js
               <Image source={source} style={[styles.barIcon, iconStyle]} />
             )}
             {badgeDom}
@@ -77,6 +78,6 @@ export default class TabBarItem extends React.Component<TabBarItemProps, any> {
           </Text>
         </View>
       </TouchableWithoutFeedback>
-    );
+    )
   }
 }

@@ -1,18 +1,17 @@
-import React from 'react';
-
+import React from 'react'
 
 export interface CardPropsType {
-  full?: boolean;
+  full?: boolean
 }
 
 export interface CardHeaderPropsType {
-  title?: React.ReactNode;
+  title?: React.ReactNode
   /** need url of img, if this is string. */
-  thumb?: React.ReactNode;
-  extra?: React.ReactNode;
+  thumb?: React.ReactNode
+  extra?: React.ReactNode
 }
 
 export interface CardFooterPropsType {
-  content?: React.ReactNode;
-  extra?: React.ReactNode;
+  content?: React.ReactNode
+  extra?: React.ReactNode
 }

@@ -4,8 +4,8 @@ import Select from './Select'
 import Uploader from './Uploader'
 
 export default {
-    // TextArea,
-    // Input,
-    Uploader,
-    Select,
+  // TextArea,
+  // Input,
+  Uploader,
+  Select,
 }

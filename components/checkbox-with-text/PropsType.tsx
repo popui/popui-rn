@@ -1,14 +1,14 @@
 export interface OnChangeParams {
   target: {
-    checked: boolean;
-  };
+    checked: boolean
+  }
 }
 export interface CheckboxPropsType {
-  defaultChecked?: boolean;
-  checked?: boolean;
-  disabled?: boolean;
-  textStyle?:any
-  onChange?: (params: OnChangeParams) => void;
+  defaultChecked?: boolean
+  checked?: boolean
+  disabled?: boolean
+  textStyle?: any
+  onChange?: (params: OnChangeParams) => void
 }
 
 // export interface CheckboxItemPropsType extends CheckboxPropsType {

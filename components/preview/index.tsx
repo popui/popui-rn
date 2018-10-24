@@ -1,21 +1,23 @@
 // import PropTypes from 'prop-types'
 import React from 'react'
-;
 import { StyleSheet, View } from 'react-native'
-import { themeStore } from '../theme-store';
-const { themeVars } = themeStore;
-import {PreviewPropsType} from './PropsType';
+import { themeStore } from '../theme-store'
+const { themeVars } = themeStore
+import { PreviewPropsType } from './PropsType'
 const styles = StyleSheet.create({
-    preview: {
-        backgroundColor: '#FFFFFF',
-        borderTopWidth: StyleSheet.hairlineWidth,
-        borderBottomWidth: StyleSheet.hairlineWidth,
-        borderColor: themeVars.CellBorderColor,
-    },
+  preview: {
+    backgroundColor: '#FFFFFF',
+    borderTopWidth: StyleSheet.hairlineWidth,
+    borderBottomWidth: StyleSheet.hairlineWidth,
+    borderColor: themeVars.CellBorderColor,
+  },
 })
 
-const Preview = ({ style, children, ...other }:PreviewPropsType) =>
-    <View style={[styles.preview, style]} {...other}>{children}</View>
+const Preview = ({ style, children, ...other }: PreviewPropsType) => (
+  <View style={[styles.preview, style]} {...other}>
+    {children}
+  </View>
+)
 
 // Preview.propTypes = {
 //     style: ViewPropTypes.style,

@@ -2,95 +2,94 @@
 
 // import PropTypes from 'prop-types'
 import React from 'react'
-;
 import { StyleSheet, Text } from 'react-native'
 import PureWeuiIcon from './PureWeuiIcon'
 
 const styles = StyleSheet.create({
-    icon: {
-        alignSelf: 'center',
-        textAlign: 'center',
-    },
+  icon: {
+    alignSelf: 'center',
+    textAlign: 'center',
+  },
 })
 
 const glyphMap = {
-    success: {
-        color: '#09BB07',
-        size: 23,
-    },
-    waiting: {
-        size: 23,
-        color: '#10AEFF',
-    },
+  success: {
+    color: '#09BB07',
+    size: 23,
+  },
+  waiting: {
+    size: 23,
+    color: '#10AEFF',
+  },
+  warn: {
+    size: 23,
+    color: '#F43530',
+  },
+  info: {
+    size: 23,
+    color: '#10AEFF',
+  },
+  success_circle: {
+    size: 23,
+    color: '#09BB07',
+  },
+  success_no_circle: {
+    size: 23,
+    color: '#09BB07',
+  },
+  waiting_circle: {
+    size: 23,
+    color: '#10AEFF',
+  },
+  circle: {
+    size: 23,
+    color: '#C9C9C9',
+  },
+  download: {
+    size: 23,
+    color: '#09BB07',
+  },
+
+  info_circle: {
+    size: 23,
+    color: '#09BB07',
+  },
+  safe_success: {
+    color: '#09BB07',
+  },
+  safe_warn: {
+    color: '#FFBE00',
+  },
+  cancel: {
+    size: 22,
+    color: '#F43530',
+  },
+  back: {
+    size: 22,
+    color: '#fff',
+  },
+  delete: {
+    size: 22,
+    color: '#fff',
+  },
+  search: {
+    size: 14,
+    color: '#B2B2B2',
+  },
+
+  clear: {
+    size: 14,
+    color: '#B2B2B2',
+  },
+  msg: {
+    size: 93,
     warn: {
-        size: 23,
-        color: '#F43530',
+      color: '#F76260',
     },
-    info: {
-        size: 23,
-        color: '#10AEFF',
-    },
-    success_circle: {
-        size: 23,
-        color: '#09BB07',
-    },
-    success_no_circle: {
-        size: 23,
-        color: '#09BB07',
-    },
-    waiting_circle: {
-        size: 23,
-        color: '#10AEFF',
-    },
-    circle: {
-        size: 23,
-        color: '#C9C9C9',
-    },
-    download: {
-        size: 23,
-        color: '#09BB07',
-    },
-
-    info_circle: {
-        size: 23,
-        color: '#09BB07',
-    },
-    safe_success: {
-        color: '#09BB07',
-    },
-    safe_warn: {
-        color: '#FFBE00',
-    },
-    cancel: {
-        size: 22,
-        color: '#F43530',
-    },
-    back: {
-        size: 22,
-        color: '#fff',
-    },
-    delete: {
-        size: 22,
-        color: '#fff',
-    },
-    search: {
-        size: 14,
-        color: '#B2B2B2',
-    },
-
-    clear: {
-        size: 14,
-        color: '#B2B2B2',
-    },
-    msg: {
-        size: 93,
-        warn: {
-            color: '#F76260',
-        },
-    },
-    safe: {
-        size: 93,
-    },
+  },
+  safe: {
+    size: 93,
+  },
 }
 
 /**
@@ -104,20 +103,21 @@ const glyphMap = {
  * @constructor
  */
 const WeuiIcon = ({
-                      name = 'success',
-                      msg = false,
-                      size = msg ? glyphMap.msg.size : glyphMap[name].size,
-                      color = glyphMap[name].color,
-                      style,
-                      ...others
-                  }:any) =>
-    <PureWeuiIcon
-        name={name}
-        size={size}
-        color={color}
-        style={[styles.icon, style]}
-        {...others}
-    />
+  name = 'success',
+  msg = false,
+  size = msg ? glyphMap.msg.size : glyphMap[name].size,
+  color = glyphMap[name].color,
+  style,
+  ...others
+}: any) => (
+  <PureWeuiIcon
+    name={name}
+    size={size}
+    color={color}
+    style={[styles.icon, style]}
+    {...others}
+  />
+)
 
 // WeuiIcon.propTypes = {
 //     msg: PropTypes.bool,
@@ -133,6 +133,4 @@ const WeuiIcon = ({
 
 export default WeuiIcon
 
-export {
-  PureWeuiIcon
-}
+export { PureWeuiIcon }

@@ -1,20 +1,19 @@
 import xor from 'lodash/xor'
 import React from 'react'
-;
 import { StyleSheet } from 'react-native'
 import { Cell, CellBody, CellHeader, Cells, CellText } from 'popui-rn'
 import WeuiIcon from '../weui-icon'
-import { themeStore } from '../theme-store';
-const { themeVars } = themeStore;
+import { themeStore } from '../theme-store'
+const { themeVars } = themeStore
 
 const styles = StyleSheet.create({
   checkbox: {
     fontSize: 23,
-    paddingRight: themeVars.CellInnerGapH
+    paddingRight: themeVars.CellInnerGapH,
   },
   disabled: {
-    opacity: 0.5
-  }
+    opacity: 0.5,
+  },
 })
 
 const CheckboxCells = ({
@@ -25,8 +24,8 @@ const CheckboxCells = ({
   style,
   children,
   ...others
-}:any) => {
-  const inArray = v => value.filter(a => a === v).length
+}: any) => {
+  const inArray = (v) => value.filter((a) => a === v).length
 
   return (
     <Cells style={[style, disabled ? styles.disabled : null]} {...others}>

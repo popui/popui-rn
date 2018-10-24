@@ -1,7 +1,5 @@
-import React from 'React';
-;
-
+import React from 'React'
 export interface MediaDescriptionPropsType {
-    style?: any,
-    children?: React.ReactNode
+  style?: any
+  children?: React.ReactNode
 }

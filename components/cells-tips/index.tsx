@@ -1,10 +1,9 @@
 import PropTypes from 'prop-types'
 import React from 'react'
-;
 import { Text } from 'react-native'
 import { create } from '../style/utils/StyleSheet'
-import { themeStore } from '../theme-store';
-const { themeVars } = themeStore;
+import { themeStore } from '../theme-store'
+const { themeVars } = themeStore
 
 const styles = create({
   cellsTips: {
@@ -15,9 +14,11 @@ const styles = create({
     marginTop: themeVars.CellTipsFontSize * 0.3,
     lineHeight: themeVars.CellTipsFontSize * themeVars.baseLineHeight,
     android: {
-      lineHeight: Math.round(themeVars.CellTipsFontSize * themeVars.baseLineHeight)
-    }
-  }
+      lineHeight: Math.round(
+        themeVars.CellTipsFontSize * themeVars.baseLineHeight
+      ),
+    },
+  },
 })
 
 const CellsTips = ({ children, style, ...others }) => (
@@ -28,7 +29,7 @@ const CellsTips = ({ children, style, ...others }) => (
 
 CellsTips.propTypes = {
   children: PropTypes.node,
-  style: Text.propTypes.style
+  style: Text.propTypes.style,
 }
 
 export default CellsTips

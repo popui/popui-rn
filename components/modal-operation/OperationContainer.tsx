@@ -1,50 +1,48 @@
-import React from 'react';
+import React from 'react'
 
-import { StyleSheet} from 'react-native';
-import operationStyle from './style/index';
-import {OperationContainerProps} from './PropsType';
-import RCModal from "../modal";
-import Dialog from "../dialog";
+import { StyleSheet } from 'react-native'
+import operationStyle from './style/index'
+import { OperationContainerProps } from './PropsType'
+import RCModal from '../modal'
+import Dialog from '../dialog'
 
-const operationStyles = StyleSheet.create<any>(operationStyle);
-
+const operationStyles = StyleSheet.create<any>(operationStyle)
 
 export default class OperationContainer extends React.Component<
   OperationContainerProps,
   any
 > {
   constructor(props: OperationContainerProps) {
-    super(props);
+    super(props)
     this.state = {
       visible: true,
-    };
+    }
   }
 
   onClose = () => {
     this.setState({
       visible: false,
-    });
+    })
   }
 
   render() {
-    const { actions, onAnimationEnd } = this.props;
+    const { actions, onAnimationEnd } = this.props
     return (
       <RCModal
         visible={this.state.visible}
-        animationType={"fade"}
+        animationType={'fade'}
         maskClosable={true}
         onClose={this.onClose}
         onAnimationEnd={onAnimationEnd}
       >
         <Dialog
-          actionsDirection={"vertical"}
+          actionsDirection={'vertical'}
           actions={actions}
           onClose={this.onClose}
           style={operationStyles.operationContainer}
           bodyStyle={operationStyles.operationBody}
-        >
-        </Dialog>
+        />
       </RCModal>
-    );
+    )
   }
 }

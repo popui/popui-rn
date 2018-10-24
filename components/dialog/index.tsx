@@ -1,4 +1,4 @@
-import React from "react";
+import React from 'react'
 
 import {
   LayoutChangeEvent,
@@ -8,83 +8,82 @@ import {
   TouchableOpacity,
   View,
   ViewStyle,
-  TextStyle
-} from "react-native";
-import { themeStore } from "../theme-store";
-const { themeVars } = themeStore;
+  TextStyle,
+} from 'react-native'
+import { themeStore } from '../theme-store'
+const { themeVars } = themeStore
 // import RCModal from "rmc-dialog/lib/Modal";
-import { DialogPropsType, ActionPropsType } from "./PropsType";
-import modalStyle, { IModalStyle } from "./style/index";
-import { noopFunc } from "../_util/noop";
-import TouchableWithFallback from "../touchable-with-fallback";
+import { DialogPropsType, ActionPropsType } from './PropsType'
+import modalStyle, { IModalStyle } from './style/index'
+import { noopFunc } from '../_util/noop'
+import TouchableWithFallback from '../touchable-with-fallback'
 // debug
 // import { createDebug } from "../_util/debug";
 // const debug = createDebug("popui:modal/Modal");
 
 export interface IModalNativeProps extends DialogPropsType<TextStyle> {
-  styles?: IModalStyle;
-  style?: StyleProp<ViewStyle>;
-  bodyStyle?: StyleProp<ViewStyle>;
+  styles?: IModalStyle
+  style?: StyleProp<ViewStyle>
+  bodyStyle?: StyleProp<ViewStyle>
 }
 
-const modalStyles = StyleSheet.create<any>(modalStyle);
-
+const modalStyles = StyleSheet.create<any>(modalStyle)
 
 class Dialog extends React.Component<IModalNativeProps, any> {
-  private horizontalFlex: any;
+  private horizontalFlex: any
   static defaultProps = {
-    title:'',
+    title: '',
     showCloseButton: false,
     style: {},
     bodyStyle: {},
     onClose: noopFunc,
     actions: [],
     styles: modalStyles,
-    actionsDirection:'horizontal'
-  };
+    actionsDirection: 'horizontal',
+  }
 
-  root: View | null;
+  root: View | null
 
   onFooterLayout = (e: LayoutChangeEvent) => {
-    const styles = this.props.styles!;
+    const styles = this.props.styles!
     if (this.root) {
       const paddingBottom = e.nativeEvent.layout.height
       this.root.setNativeProps({
-        style: [styles.dialogRoot,{ paddingBottom }]
-      });
+        style: [styles.dialogRoot, { paddingBottom }],
+      })
     }
-  };
+  }
 
   saveRootRef = (root: any) => {
-    this.root = root;
-  };
+    this.root = root
+  }
   renderActionButton = (action: ActionPropsType<any>, index: number) => {
-    const { onClose, renderActionButton } = this.props;
-    if(renderActionButton){
-      return renderActionButton(action,index)
+    const { onClose, renderActionButton } = this.props
+    if (renderActionButton) {
+      return renderActionButton(action, index)
     }
-    const { text=`按钮${index}`, type, onPress, style } = action;
-    const actions = this.props.actions!;
-    const styles = this.props.styles!;
+    const { text = `按钮${index}`, type, onPress, style } = action
+    const actions = this.props.actions!
+    const styles = this.props.styles!
     // 按钮数量多余1个
-    const hasMoreThanOneButton = actions.length > 1;
+    const hasMoreThanOneButton = actions.length > 1
     // 当前渲染的是最后一个
-    const isLastButton = index === actions.length - 1;
+    const isLastButton = index === actions.length - 1
     // type
     let defaultType = 'default'
-    if(isLastButton){
+    if (isLastButton) {
       defaultType = 'primary'
     }
     const buttonType = type || defaultType
 
     // 自定义按钮样式
-    let buttonStyle = {};
+    let buttonStyle = {}
     const isActionsVertical = this.isActionsVertical()
     if (isActionsVertical) {
-      buttonStyle = styles.buttonTextOperation;
+      buttonStyle = styles.buttonTextOperation
     }
-    if (style && typeof style !== "string") {
-      buttonStyle = style;
+    if (style && typeof style !== 'string') {
+      buttonStyle = style
       // 如果是字符串, 转换成对象
       // Todo: 去掉
       // if (typeof buttonStyle === "string") {
@@ -102,24 +101,24 @@ class Dialog extends React.Component<IModalNativeProps, any> {
     const noneBorder =
       actions && hasMoreThanOneButton && isLastButton
         ? { borderRightWidth: 0 }
-        : {};
+        : {}
     // 点击
-    const onPressFn = async() => {
+    const onPressFn = async () => {
       if (onPress) {
-        await onPress();
+        await onPress()
       }
       if (onClose) {
-        onClose();
+        onClose()
       }
-    };
+    }
     // 一个按钮使用 buttonWrapV, 多于 1个 水平排列
     const buttonWrapStyle =
-      actions && hasMoreThanOneButton ? styles.buttonWrapH : styles.buttonWrapV;
+      actions && hasMoreThanOneButton ? styles.buttonWrapH : styles.buttonWrapV
     const textStyle = [
       styles.buttonText,
       styles[`buttonText_${buttonType}`],
-      buttonStyle
-    ];
+      buttonStyle,
+    ]
     return (
       <TouchableWithFallback
         key={index}
@@ -131,33 +130,33 @@ class Dialog extends React.Component<IModalNativeProps, any> {
           <Text style={textStyle}>{text}</Text>
         </View>
       </TouchableWithFallback>
-    );
-  };
-  isActionsVertical =()=>{
+    )
+  }
+  isActionsVertical = () => {
     return this.props.actionsDirection === 'vertical'
   }
   renderActions = () => {
-    const { actions, renderActions } = this.props;
+    const { actions, renderActions } = this.props
     const isActionsVertical = this.isActionsVertical()
-    if(renderActions){
+    if (renderActions) {
       return renderActions()
     }
     if (!actions || actions.length === 0) {
-      return null;
+      return null
     }
-    const styles = this.props.styles!;
+    const styles = this.props.styles!
     // 默认垂直排列
-    let btnGroupStyle = styles.buttonGroupV;
+    let btnGroupStyle = styles.buttonGroupV
     if (actions.length > 1 && !isActionsVertical) {
       // 水平排列
-      btnGroupStyle = styles.buttonGroupH;
-      this.horizontalFlex = { flex: 1 };
+      btnGroupStyle = styles.buttonGroupH
+      this.horizontalFlex = { flex: 1 }
     } else {
-      this.horizontalFlex = {};
+      this.horizontalFlex = {}
     }
     const actionButtons = actions.map((button, i) =>
       this.renderActionButton(button, i)
-    );
+    )
     return (
       <View
         style={[btnGroupStyle, styles.actions]}
@@ -165,42 +164,41 @@ class Dialog extends React.Component<IModalNativeProps, any> {
       >
         {actionButtons}
       </View>
-    );
-  };
+    )
+  }
 
   renderCloseButton = () => {
-    const { onClose,renderCloseButton } = this.props;
-    if(renderCloseButton){
+    const { onClose, renderCloseButton } = this.props
+    if (renderCloseButton) {
       return renderCloseButton()
     }
-    const styles = this.props.styles!;
+    const styles = this.props.styles!
     return (
       <TouchableOpacity onPress={onClose} style={[styles.closeWrap]}>
         <Text style={[styles.close]}>×</Text>
       </TouchableOpacity>
-    );
-  };
-  render(){
-    const {
-      title,
-      showCloseButton,
-      children,
-      style,
-      bodyStyle,
-    } = this.props;
+    )
+  }
+  render() {
+    const { title, showCloseButton, children, style, bodyStyle } = this.props
 
-    const styles = this.props.styles!;
-    const actionsDom = this.renderActions();
+    const styles = this.props.styles!
+    const actionsDom = this.renderActions()
     return (
-      <View displayName="dialogRoot" style={[styles.dialogRoot,style]} ref={this.saveRootRef}>
-      {title ? <Text style={[styles.header]}>{title}</Text> : null}
-      <View displayName="dialogBody" style={[styles.body, bodyStyle]}>{children}</View>
-      {actionsDom}
-      {showCloseButton && this.renderCloseButton()}
-    </View>
-    );
-  };
- 
+      <View
+        displayName="dialogRoot"
+        style={[styles.dialogRoot, style]}
+        ref={this.saveRootRef}
+      >
+        {title ? <Text style={[styles.header]}>{title}</Text> : null}
+        <View displayName="dialogBody" style={[styles.body, bodyStyle]}>
+          {children}
+        </View>
+        {actionsDom}
+        {showCloseButton && this.renderCloseButton()}
+      </View>
+    )
+  }
 }
 
-export default Dialog;
+export default Dialog

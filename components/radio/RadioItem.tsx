@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react'
 
 import {
   ImageStyle,
@@ -7,23 +7,22 @@ import {
   Text,
   View,
   ViewStyle,
-} from 'react-native';
-import List from '../list/index';
-import { RadioItemPropsType } from './PropsType';
-import Radio from './Radio';
-import RadioItemStyle, { IRadioStyle } from './style/index';
+} from 'react-native'
+import List from '../list/index'
+import { RadioItemPropsType } from './PropsType'
+import Radio from './Radio'
+import RadioItemStyle, { IRadioStyle } from './style/index'
 
-const ListItem = List.Item;
-const refRadio = 'radio';
+const ListItem = List.Item
+const refRadio = 'radio'
 
 export interface RadioItemNativeProps extends RadioItemPropsType {
-  styles?: IRadioStyle;
-  style?: StyleProp<ViewStyle>;
-  radioStyle?: StyleProp<ImageStyle>;
+  styles?: IRadioStyle
+  style?: StyleProp<ViewStyle>
+  radioStyle?: StyleProp<ImageStyle>
 }
 
-const RadioItemStyles = StyleSheet.create<any>(RadioItemStyle);
-
+const RadioItemStyles = StyleSheet.create<any>(RadioItemStyle)
 
 export default class RadioItem extends React.Component<
   RadioItemNativeProps,
@@ -31,11 +30,11 @@ export default class RadioItem extends React.Component<
 > {
   static defaultProps = {
     styles: RadioItemStyles,
-  };
+  }
 
   handleClick = () => {
-    const radio: Radio = this.refs[refRadio] as Radio;
-    radio.handleClick();
+    const radio: Radio = this.refs[refRadio] as Radio
+    radio.handleClick()
   }
 
   render() {
@@ -47,22 +46,22 @@ export default class RadioItem extends React.Component<
       disabled,
       children,
       onChange,
-    } = this.props;
-    const styles = this.props.styles!;
+    } = this.props
+    const styles = this.props.styles!
 
-    let contentDom: React.ReactElement<any> | null = null;
+    let contentDom: React.ReactElement<any> | null = null
     if (children && React.isValidElement(children)) {
-      contentDom = <View style={{ flex: 1 }}>{children}</View>;
+      contentDom = <View style={{ flex: 1 }}>{children}</View>
     } else {
       const contentStyle = [
         styles.radioItemContent,
         disabled ? styles.radioItemContentDisable : {},
-      ];
+      ]
       contentDom = (
         <Text style={contentStyle} numberOfLines={1}>
           {this.props.children}
         </Text>
-      );
+      )
     }
 
     const radioEl = (
@@ -74,7 +73,7 @@ export default class RadioItem extends React.Component<
         onChange={onChange}
         disabled={disabled}
       />
-    );
+    )
 
     return (
       <ListItem
@@ -84,6 +83,6 @@ export default class RadioItem extends React.Component<
       >
         {contentDom}
       </ListItem>
-    );
+    )
   }
 }

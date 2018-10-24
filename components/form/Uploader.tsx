@@ -1,11 +1,10 @@
-import React from 'react';
-;
-import { View, Text, Image, TouchableOpacity, StyleSheet  } from 'react-native';
+import React from 'react'
+import { View, Text, Image, TouchableOpacity, StyleSheet } from 'react-native'
 // import ImagePicker from 'react-native-image-picker'
 // import concat from 'lodash/concat'
 import WeuiIcon from '../weui-icon'
-import { themeStore } from '../theme-store';
-const { themeVars } = themeStore;
+import { themeStore } from '../theme-store'
+const { themeVars } = themeStore
 
 const styles = StyleSheet.create({
   uploader: {},
@@ -27,7 +26,8 @@ const styles = StyleSheet.create({
     color: '#888',
   },
   uploaderBody: {
-    marginBottom: themeVars.CellGapH - (themeVars.CellGapV + themeVars.UploaderFileSpacing),
+    marginBottom:
+      themeVars.CellGapH - (themeVars.CellGapV + themeVars.UploaderFileSpacing),
     marginRight: 0 - themeVars.UploaderFileSpacing,
     flexDirection: 'row',
     flexWrap: 'wrap',
@@ -67,19 +67,19 @@ const styles = StyleSheet.create({
     position: 'relative',
     marginRight: themeVars.UploaderFileSpacing,
     marginBottom: themeVars.UploaderFileSpacing,
-    width: themeVars.UploaderSize - (themeVars.UploaderBorderWidth * 2),
-    height: themeVars.UploaderSize - (themeVars.UploaderBorderWidth * 2),
+    width: themeVars.UploaderSize - themeVars.UploaderBorderWidth * 2,
+    height: themeVars.UploaderSize - themeVars.UploaderBorderWidth * 2,
     borderWidth: themeVars.UploaderBorderWidth,
     borderColor: themeVars.UploaderBorderColor,
   },
   uploaderAddButtonRec: {
     position: 'absolute',
-    top: (themeVars.UploaderSize / 4) - 4,
-    left: (themeVars.UploaderSize / 2) - 4,
+    top: themeVars.UploaderSize / 4 - 4,
+    left: themeVars.UploaderSize / 2 - 4,
     width: themeVars.UploaderBorderWidth + 1,
     height: themeVars.UploaderSize / 2,
     backgroundColor: themeVars.UploaderBorderColor,
-  }
+  },
 })
 
 const Uploader = ({
@@ -91,7 +91,7 @@ const Uploader = ({
   disabled = false,
   style,
   ...others
-}:any) => {
+}: any) => {
   const options = {
     title,
     cancelButtonTitle: '取消',
@@ -132,7 +132,9 @@ const Uploader = ({
     <View style={[styles.uploader, style]} {...others}>
       <View style={styles.uploaderHeader}>
         <Text style={styles.uploaderTitle}>{title}</Text>
-        <Text style={styles.uploaderCounter}>{files.length} / {maxCount}</Text>
+        <Text style={styles.uploaderCounter}>
+          {files.length} / {maxCount}
+        </Text>
       </View>
       <View style={styles.uploaderBody}>
         {files.map((file, idx) => {
@@ -146,25 +148,34 @@ const Uploader = ({
             >
               <View style={styles.uploaderFile}>
                 <Image source={source} style={styles.uploaderFileImage} />
-                {error || status ?
+                {error || status ? (
                   <View style={styles.uploaderStatus}>
-                    {error ? <WeuiIcon name="warn" />
-                    : <Text style={styles.uploaderStatusContent}>{status}</Text>}
-                  </View> : null}
+                    {error ? (
+                      <WeuiIcon name="warn" />
+                    ) : (
+                      <Text style={styles.uploaderStatusContent}>{status}</Text>
+                    )}
+                  </View>
+                ) : null}
               </View>
             </TouchableOpacity>
           )
         })}
-        {files.length < maxCount ?
+        {files.length < maxCount ? (
           <TouchableOpacity
             activeOpacity={0.6}
             style={styles.uploaderAddButton}
             onPress={!disabled ? showImagePicker : null}
           >
             <View style={styles.uploaderAddButtonRec} />
-            <View style={[styles.uploaderAddButtonRec, { transform: [{ rotate: '90deg' }] }]} />
+            <View
+              style={[
+                styles.uploaderAddButtonRec,
+                { transform: [{ rotate: '90deg' }] },
+              ]}
+            />
           </TouchableOpacity>
-        : null}
+        ) : null}
       </View>
     </View>
   )

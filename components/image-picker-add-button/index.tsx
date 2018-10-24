@@ -1,12 +1,10 @@
-import * as React from "react";
-;
-import { View, StyleSheet, Text, TouchableOpacity } from "react-native";
-import { ImagePickerAddButtonProps } from "./PropsType";
-import plainStyles from "./style";
-const defaultStyles = StyleSheet.create<any>(plainStyles);
-import { noopFunc } from "../_util/noop";
+import * as React from 'react'
+import { View, StyleSheet, Text, TouchableOpacity } from 'react-native'
+import { ImagePickerAddButtonProps } from './PropsType'
+import plainStyles from './style'
+const defaultStyles = StyleSheet.create<any>(plainStyles)
+import { noopFunc } from '../_util/noop'
 export interface ImagePickerAddButtonState {}
-
 
 export default class ImagePickerAddButton extends React.Component<
   ImagePickerAddButtonProps,
@@ -14,10 +12,10 @@ export default class ImagePickerAddButton extends React.Component<
 > {
   static defaultProps = {
     styles: defaultStyles,
-    onPress: noopFunc
-  };
+    onPress: noopFunc,
+  }
   render() {
-    const styles = this.props.styles!;
+    const styles = this.props.styles!
 
     return (
       <TouchableOpacity
@@ -29,10 +27,10 @@ export default class ImagePickerAddButton extends React.Component<
         <View
           style={[
             styles.uploaderAddButtonRec,
-            { transform: [{ rotate: "90deg" }] }
+            { transform: [{ rotate: '90deg' }] },
           ]}
         />
       </TouchableOpacity>
-    );
+    )
   }
 }

@@ -1,5 +1,5 @@
 /* tslint:disable:jsx-no-multiline-js */
-import React from 'react';
+import React from 'react'
 
 import {
   Image,
@@ -8,21 +8,20 @@ import {
   Text,
   View,
   ViewStyle,
-} from 'react-native';
-import { CardHeaderPropsType } from './PropsType';
+} from 'react-native'
+import { CardHeaderPropsType } from './PropsType'
 
 export interface CardHeaderProps extends CardHeaderPropsType {
-  styles?: any;
-  style?: StyleProp<ViewStyle>;
-  thumbStyle?: StyleProp<ImageStyle>;
+  styles?: any
+  style?: StyleProp<ViewStyle>
+  thumbStyle?: StyleProp<ImageStyle>
 }
-
 
 export default class CardHeader extends React.Component<CardHeaderProps, any> {
   static defaultProps = {
     thumbStyle: {},
     style: {},
-  };
+  }
 
   render() {
     const {
@@ -32,22 +31,22 @@ export default class CardHeader extends React.Component<CardHeaderProps, any> {
       extra,
       style,
       styles,
-      ...restProps,
-    } = this.props;
+      ...restProps
+    } = this.props
 
     const titleDom =
       title === undefined ? null : React.isValidElement(title) ? (
         <View style={{ flex: 1 }}>{title}</View>
       ) : (
         <Text style={styles.headerContent}>{title}</Text>
-      );
+      )
 
     const extraDom =
       extra === undefined ? null : React.isValidElement(extra) ? (
         <View style={{ flex: 1 }}>{extra}</View>
       ) : (
         <Text style={[styles.headerExtra]}>{extra}</Text>
-      );
+      )
 
     return (
       <View style={[styles.headerWrap, style]} {...restProps}>
@@ -64,6 +63,6 @@ export default class CardHeader extends React.Component<CardHeaderProps, any> {
         </View>
         {extra ? extraDom : null}
       </View>
-    );
+    )
   }
 }

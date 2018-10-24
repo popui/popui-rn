@@ -1,10 +1,8 @@
 // import React from 'react';
 
-
-
 export interface WeuiButtonPreviewPropsType {
   style: any
   children: any
-  primary?:boolean
+  primary?: boolean
   textStyle: any
 }

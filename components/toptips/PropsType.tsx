@@ -1,6 +1,5 @@
-import React from 'React';
-;
-import {ViewStyle,TextStyle} from 'react-native';
+import React from 'React'
+import { ViewStyle, TextStyle } from 'react-native'
 export interface ToptipsPropsType {
   type?: 'primary' | 'warn' | 'info'
   visible?: boolean
@@ -10,4 +9,3 @@ export interface ToptipsPropsType {
   textStyle?: TextStyle
   children?: React.ReactNode
 }
-

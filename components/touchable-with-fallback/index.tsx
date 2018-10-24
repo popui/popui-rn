@@ -5,13 +5,12 @@
  * 默认的 fallback 从 TouchableOpacity 改为 TouchableHighlight
  */
 import React from 'react'
-;
 import {
   Platform,
   TouchableHighlight,
   TouchableNativeFeedback,
   TouchableWithoutFeedback,
-  View
+  View,
 } from 'react-native'
 
 let TouchableComponent: any
@@ -31,7 +30,6 @@ if (TouchableComponent !== TouchableNativeFeedback) {
   TouchableComponent.Ripple = () => ({})
   TouchableComponent.canUseNativeForeground = () => false
 }
-
 
 export default class TouchableWithFallback extends React.Component<any, any> {
   static SelectableBackground = TouchableComponent.SelectableBackground

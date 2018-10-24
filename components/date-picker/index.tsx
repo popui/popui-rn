@@ -1,22 +1,21 @@
 /* tslint:disable:jsx-no-multiline-js */
-import PropTypes from 'prop-types';
-import React from 'react';
+import PropTypes from 'prop-types'
+import React from 'react'
 
-import { StyleSheet } from 'react-native';
-import RCDatePicker from 'rmc-date-picker/lib/DatePicker';
-import PopupDatePicker from 'rmc-date-picker/lib/Popup';
-import { getComponentLocale } from '../_util/getLocale';
-import PickerStyle, { IPickerStyle } from '../picker/style/index';
-import { DatePickerPropsType } from './PropsType';
-import { formatFn } from './utils';
+import { StyleSheet } from 'react-native'
+import RCDatePicker from 'rmc-date-picker/lib/DatePicker'
+import PopupDatePicker from 'rmc-date-picker/lib/Popup'
+import { getComponentLocale } from '../_util/getLocale'
+import PickerStyle, { IPickerStyle } from '../picker/style/index'
+import { DatePickerPropsType } from './PropsType'
+import { formatFn } from './utils'
 
 export interface DatePickerNativeProps extends DatePickerPropsType {
-  styles?: IPickerStyle;
-  triggerTypes?: string;
+  styles?: IPickerStyle
+  triggerTypes?: string
 }
 
-const PickerStyles = StyleSheet.create<any>(PickerStyle);
-
+const PickerStyles = StyleSheet.create<any>(PickerStyle)
 
 export default class DatePicker extends React.Component<
   DatePickerNativeProps,
@@ -27,20 +26,20 @@ export default class DatePicker extends React.Component<
     triggerType: 'onClick',
     styles: PickerStyles,
     minuteStep: 1,
-  };
+  }
 
   static contextTypes = {
     antLocale: PropTypes.object,
-  };
+  }
 
   render() {
     // tslint:disable-next-line:no-this-assignment
-    const { props, context } = this;
-    const { children, value, styles } = props;
+    const { props, context } = this
+    const { children, value, styles } = props
     const locale = getComponentLocale(props, context, 'DatePicker', () =>
-      require('./locale/zh_CN'),
-    );
-    const { okText, dismissText, extra, DatePickerLocale } = locale;
+      require('./locale/zh_CN')
+    )
+    const { okText, dismissText, extra, DatePickerLocale } = locale
 
     const dataPicker = (
       <RCDatePicker
@@ -52,7 +51,7 @@ export default class DatePicker extends React.Component<
         defaultDate={value}
         onValueChange={props.onValueChange}
       />
-    );
+    )
 
     return (
       <PopupDatePicker
@@ -69,6 +68,6 @@ export default class DatePicker extends React.Component<
             extra: value ? formatFn(this, value) : this.props.extra || extra,
           })}
       </PopupDatePicker>
-    );
+    )
   }
 }

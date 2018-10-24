@@ -4,6 +4,6 @@ memStorage.setDebug('popui:*')
 // export const createDebug = require('@popapps/debug/src/browser')
 export const createDebug = mockCreateDebug
 
-function mockCreateDebug(names:string[]){
-    return console.log
+function mockCreateDebug(names: string[]) {
+  return console.log
 }

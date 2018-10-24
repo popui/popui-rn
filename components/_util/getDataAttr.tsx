@@ -5,8 +5,8 @@ export default (props: { [key: string]: any }) => {
       key.substr(0, 5) === 'data-' ||
       key === 'role'
     ) {
-      prev[key] = props[key];
+      prev[key] = props[key]
     }
-    return prev;
-  }, {});
-};
+    return prev
+  }, {})
+}

@@ -1,12 +1,10 @@
 import * as React from 'react'
-;
 import { View, StyleSheet, ensureComponentIsNative, Image } from 'react-native'
 // import Image from 'expo-image-cache/src/Image'
 
 // debug
 import { createDebug } from '../_util/debug'
 const debug = createDebug('popui:Image/CacheProgressiveImage/ImageBackground')
-
 
 class ImageBackground extends React.Component {
   setNativeProps(props: any) {
@@ -29,9 +27,9 @@ class ImageBackground extends React.Component {
       StyleSheet.absoluteFill,
       {
         width: style.width,
-        height: style.height
+        height: style.height,
       },
-      imageStyle
+      imageStyle,
     ]
     debug('render', { style, _imageStyle })
     return (

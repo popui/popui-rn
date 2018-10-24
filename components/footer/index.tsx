@@ -5,9 +5,9 @@ import FooterLinkSeparator from './FooterLinkSeparator'
 import FooterText from './FooterText'
 
 export default {
-    Footer,
-    FooterText,
-    FooterLinks,
-    FooterLink,
-    FooterLinkSeparator,
+  Footer,
+  FooterText,
+  FooterLinks,
+  FooterLink,
+  FooterLinkSeparator,
 }

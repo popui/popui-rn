@@ -1,5 +1,4 @@
-
-export interface ModalBodyPropsType  {
-  style?:any
-  children?:any
+export interface ModalBodyPropsType {
+  style?: any
+  children?: any
 }

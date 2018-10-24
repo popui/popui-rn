@@ -1,5 +1,5 @@
 // tslint:disable:jsx-no-multiline-js
-import React from 'react';
+import React from 'react'
 
 import {
   Platform,
@@ -9,17 +9,16 @@ import {
   TouchableWithoutFeedback,
   View,
   ViewStyle,
-} from 'react-native';
-import { TagPropsType } from './PropsType';
-import TagStyle, { ITagStyle } from './style/index';
+} from 'react-native'
+import { TagPropsType } from './PropsType'
+import TagStyle, { ITagStyle } from './style/index'
 
 export interface TagNativeProps extends TagPropsType {
-  styles?: ITagStyle;
-  style?: StyleProp<ViewStyle>;
+  styles?: ITagStyle
+  style?: StyleProp<ViewStyle>
 }
 
-const TagStyles = StyleSheet.create<any>(TagStyle);
-
+const TagStyles = StyleSheet.create<any>(TagStyle)
 
 export default class Tag extends React.Component<TagNativeProps, any> {
   static defaultProps = {
@@ -32,69 +31,69 @@ export default class Tag extends React.Component<TagNativeProps, any> {
     onChange() {},
     onLongPress() {},
     styles: TagStyles,
-  };
+  }
 
-  closeDom: View | null;
+  closeDom: View | null
 
   constructor(props: TagNativeProps) {
-    super(props);
+    super(props)
 
     this.state = {
       selected: props.selected,
       closed: false,
-    };
+    }
   }
 
   componentWillReceiveProps(nextProps: TagNativeProps) {
     if (this.props.selected !== nextProps.selected) {
       this.setState({
         selected: nextProps.selected,
-      });
+      })
     }
   }
 
   onClick = () => {
-    const { disabled, onChange } = this.props;
+    const { disabled, onChange } = this.props
     if (disabled) {
-      return;
+      return
     }
-    const isSelect: boolean = this.state.selected;
+    const isSelect: boolean = this.state.selected
     this.setState(
       {
         selected: !isSelect,
       },
       () => {
         if (onChange) {
-          onChange(!isSelect);
+          onChange(!isSelect)
         }
-      },
-    );
+      }
+    )
   }
 
   handleLongPress = () => {
-    const { disabled, onLongPress } = this.props;
+    const { disabled, onLongPress } = this.props
     if (disabled) {
-      return;
+      return
     }
     if (onLongPress) {
-      onLongPress();
+      onLongPress()
     }
   }
 
   onTagClose = () => {
     if (this.props.onClose) {
-      this.props.onClose();
+      this.props.onClose()
     }
     this.setState(
       {
         closed: true,
       },
-      this.props.afterClose,
-    );
+      this.props.afterClose
+    )
   }
 
   onPressIn = () => {
-    const styles = this.props.styles!;
+    const styles = this.props.styles!
     if (this.closeDom) {
       this.closeDom.setNativeProps({
         style: [
@@ -104,44 +103,44 @@ export default class Tag extends React.Component<TagNativeProps, any> {
             backgroundColor: '#888',
           },
         ],
-      });
+      })
     }
   }
 
   onPressOut = () => {
-    const styles = this.props.styles!;
+    const styles = this.props.styles!
     if (this.closeDom) {
       this.closeDom.setNativeProps({
         style: [
           styles.close,
           Platform.OS === 'ios' ? styles.closeIOS : styles.closeAndroid,
         ],
-      });
+      })
     }
   }
 
   render() {
-    const { children, disabled, small, closable, style } = this.props;
-    const styles = this.props.styles!;
-    const selected = this.state.selected;
+    const { children, disabled, small, closable, style } = this.props
+    const styles = this.props.styles!
+    const selected = this.state.selected
 
-    let wrapStyle;
-    let textStyle;
+    let wrapStyle
+    let textStyle
     if (!selected && !disabled) {
-      wrapStyle = styles.normalWrap;
-      textStyle = styles.normalText;
+      wrapStyle = styles.normalWrap
+      textStyle = styles.normalText
     }
     if (selected && !disabled) {
-      wrapStyle = styles.activeWrap;
-      textStyle = styles.activeText;
+      wrapStyle = styles.activeWrap
+      textStyle = styles.activeText
     }
     if (disabled) {
-      wrapStyle = styles.disabledWrap;
-      textStyle = styles.disabledText;
+      wrapStyle = styles.disabledWrap
+      textStyle = styles.disabledText
     }
 
-    const sizeWrapStyle = small ? styles.wrapSmall : {};
-    const sizeTextStyle = small ? styles.textSmall : {};
+    const sizeWrapStyle = small ? styles.wrapSmall : {}
+    const sizeTextStyle = small ? styles.textSmall : {}
 
     const closableDom =
       closable && !small && !disabled ? (
@@ -151,7 +150,7 @@ export default class Tag extends React.Component<TagNativeProps, any> {
           onPress={this.onTagClose}
         >
           <View
-            ref={component => ((this.closeDom as any) = component)}
+            ref={(component) => ((this.closeDom as any) = component)}
             style={[
               styles.close,
               Platform.OS === 'ios' ? styles.closeIOS : styles.closeAndroid,
@@ -167,11 +166,14 @@ export default class Tag extends React.Component<TagNativeProps, any> {
             </Text>
           </View>
         </TouchableWithoutFeedback>
-      ) : null;
+      ) : null
 
     return !this.state.closed ? (
       <View style={[styles.tag, style]}>
-        <TouchableWithoutFeedback onPress={this.onClick} onLongPress={this.handleLongPress}>
+        <TouchableWithoutFeedback
+          onPress={this.onClick}
+          onLongPress={this.handleLongPress}
+        >
           <View style={[styles.wrap, sizeWrapStyle, wrapStyle]}>
             <Text style={[styles.text, sizeTextStyle, textStyle]}>
               {children}{' '}
@@ -180,6 +182,6 @@ export default class Tag extends React.Component<TagNativeProps, any> {
         </TouchableWithoutFeedback>
         {closableDom}
       </View>
-    ) : null;
+    ) : null
   }
 }

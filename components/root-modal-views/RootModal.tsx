@@ -1,5 +1,4 @@
 import React from 'react'
-;
 import ResponsiveModal from 'react-native-responsive-app-modal'
 
 export const RootModal = (props: {

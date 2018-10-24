@@ -1,7 +1,5 @@
 // import React from 'react';
 
-
-
 export interface ButtonPropsType {
   style: any
   children: any

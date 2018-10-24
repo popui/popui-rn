@@ -5,5 +5,5 @@ import ImageBackground from './ImageBackground'
 export default {
   Image,
   CacheManager,
-  ImageBackground
+  ImageBackground,
 }

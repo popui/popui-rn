@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react'
 
 import {
   Animated,
@@ -8,19 +8,18 @@ import {
   Text,
   TextStyle,
   View,
-} from 'react-native';
+} from 'react-native'
 
 export interface MarqueeProps {
-  text: React.ReactNode;
-  loop?: boolean;
-  leading?: number;
-  trailing?: number;
-  className?: string;
-  fps?: number;
-  style?: StyleProp<TextStyle>;
-  maxWidth?: number;
+  text: React.ReactNode
+  loop?: boolean
+  leading?: number
+  trailing?: number
+  className?: string
+  fps?: number
+  style?: StyleProp<TextStyle>
+  maxWidth?: number
 }
-
 
 class Marquee extends React.Component<MarqueeProps, any> {
   static defaultProps = {
@@ -30,56 +29,56 @@ class Marquee extends React.Component<MarqueeProps, any> {
     trailing: 800,
     fps: 40,
     maxWidth: 1000,
-  };
+  }
 
-  texts: any;
-  twidth = 0;
-  width = 0;
+  texts: any
+  twidth = 0
+  width = 0
 
   constructor(props: MarqueeProps) {
-    super(props);
+    super(props)
 
-    this.texts = {};
+    this.texts = {}
     this.state = {
       left: new Animated.Value(0),
-    };
+    }
   }
 
   onLayout = (e: LayoutChangeEvent) => {
     if (this.twidth) {
-      return;
+      return
     }
 
-    this.twidth = e.nativeEvent.layout.width;
+    this.twidth = e.nativeEvent.layout.width
     // onLayout may be earlier than onLayoutContainer on android, can not be sure width < twidth at that time.
-    this.tryStart();
+    this.tryStart()
   }
 
   tryStart() {
     if (this.twidth > this.width && this.width) {
-      this.startMove();
+      this.startMove()
     }
   }
 
   onLayoutContainer = (e: LayoutChangeEvent) => {
     if (!this.width) {
-      this.width = e.nativeEvent.layout.width;
+      this.width = e.nativeEvent.layout.width
       this.setState(
         {
           left: new Animated.Value(0),
         },
         () => {
-          this.tryStart();
-        },
-      );
+          this.tryStart()
+        }
+      )
     }
   }
 
   startMove = () => {
-    const { fps = 40, loop } = this.props;
-    const SPPED = 1 / fps * 1000;
+    const { fps = 40, loop } = this.props
+    const SPPED = (1 / fps) * 1000
     // tslint:disable-next-line:no-this-assignment
-    const { width, twidth, props } = this;
+    const { width, twidth, props } = this
     Animated.timing(this.state.left, {
       toValue: -twidth + width,
       duration: twidth * SPPED,
@@ -88,9 +87,9 @@ class Marquee extends React.Component<MarqueeProps, any> {
       isInteraction: false,
     }).start(() => {
       if (loop) {
-        this.moveToHeader();
+        this.moveToHeader()
       }
-    });
+    })
   }
 
   moveToHeader = () => {
@@ -100,12 +99,12 @@ class Marquee extends React.Component<MarqueeProps, any> {
       delay: this.props.trailing,
       isInteraction: false,
     }).start(() => {
-      this.startMove();
-    });
+      this.startMove()
+    })
   }
 
   render() {
-    const { style, text, maxWidth } = this.props;
+    const { style, text, maxWidth } = this.props
 
     const textChildren = (
       <Text
@@ -116,7 +115,7 @@ class Marquee extends React.Component<MarqueeProps, any> {
       >
         {text}
       </Text>
-    );
+    )
 
     return (
       <View
@@ -134,8 +133,8 @@ class Marquee extends React.Component<MarqueeProps, any> {
           {textChildren}
         </Animated.View>
       </View>
-    );
+    )
   }
 }
 
-export default Marquee;
+export default Marquee
