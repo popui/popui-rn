@@ -7,8 +7,10 @@ import ToggleIconCheckBoxStyle from './style/index'
 const ToggleIconCheckBoxStyles = StyleSheet.create<any>(ToggleIconCheckBoxStyle)
 
  function ToggleIconCheckBox(props: ToggleIconCheckBoxPropsType) {
-  const { disabled, styles = ToggleIconCheckBoxStyles, checked, style } = props
-  const colorProps: any = {}
+  const { disabled, styles = ToggleIconCheckBoxStyles, checked, style,size=20,color } = props
+  const colorProps: any = {
+    color
+  }
   if (disabled) {
     colorProps.color = '#ADADAD'
   }
@@ -20,7 +22,7 @@ const ToggleIconCheckBoxStyles = StyleSheet.create<any>(ToggleIconCheckBoxStyle)
   return (
     <View style={wrapperStyle}>
       {checked && (
-        <WeuiIcon name="success_no_circle" size={13} {...colorProps} />
+        <WeuiIcon name="success_no_circle" size={size} {...colorProps} />
       )}
     </View>
   )

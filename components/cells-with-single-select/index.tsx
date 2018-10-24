@@ -1,6 +1,6 @@
 import React from 'react'
 import { StyleSheet } from 'react-native'
-import { Cell, CellBody, Cells, CellText, ToggleIconCircle } from 'popui-rn'
+import { Cell, CellBody, Cells, CellText, ToggleIconSuccess } from 'popui-rn'
 import {
   SelectFooterCellsPropsType,
   SelectOption,
@@ -34,7 +34,7 @@ export function CellsWithSingleSelectItem(
         <CellText>{option.label || option.value}</CellText>
       </CellBody>
       {value === option.value && (
-        <ToggleIconCircle disabled={disabled} checked />
+        <ToggleIconSuccess disabled={disabled} checked />
       )}
     </Cell>
   )
@@ -53,6 +53,7 @@ const CellsWithSingleSelect = ({
     <Cells style={[style, disabled ? styles.disabled : null]} {...others}>
       {options.map((option: SelectOption, idx: number) => (
         <CellsWithSingleSelectItem
+          key={idx}
           {...{
             option,
             idx,

@@ -3,4 +3,6 @@ export interface ToggleIconCheckBoxPropsType {
   style?: any
   checked?: boolean
   disabled?: boolean
+  size?:number
+  color?:string
 }

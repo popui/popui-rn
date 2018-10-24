@@ -2,8 +2,8 @@ import { StyleSheet } from 'react-native';
 
 export default {
   wrapper: {
-    height: 16,
-    width: 16,
+    height: 23,
+    width: 23,
     borderRadius: 3,
     borderWidth: StyleSheet.hairlineWidth,
     borderColor: "#D1D1D1",
