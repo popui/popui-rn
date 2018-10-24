@@ -17,5 +17,5 @@ subtitle: 多选框
 | defaultChecked |   初始是否选中   | Boolean  | 无  |
 | checked    |   指定当前是否选中  | Boolean  | 无  |
 | disabled      |  禁用  | Boolean |  false  |
-| textStyle      |  文本样式  | any |  无  |
 | onChange    | change 事件触发的回调函数 | (e: Object): void |   无  |
+

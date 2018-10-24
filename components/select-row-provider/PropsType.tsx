@@ -11,9 +11,14 @@
 //   radioProps?: object
 //   onClick?: () => any
 // }
-import {onChangeFunction} from '../select-row-provider/PropsType';
 
-export interface MultiSelectPropsType {
+export type onChangeFunction = (params: OnChangeParams) => void
+export interface OnChangeParams {
+  target: {
+    checked: boolean
+  }
+}
+export interface SelectRowProviderPropsType {
   defaultChecked?: boolean
   checked?: boolean
   disabled?: boolean
@@ -21,6 +26,16 @@ export interface MultiSelectPropsType {
   onChange?: onChangeFunction
   styles?: any
   style?: any
-  children?:React.ReactNode
+  children:(args:SelectRowProviderChildrenParams) => JSX.Element
 }
 
+export interface SelectRowProviderChildrenParams {
+  defaultChecked?: boolean
+  checked?: boolean
+  disabled?: boolean
+  textStyle?: any
+  styles?: any
+  style?: any
+  renderChildren:()=>any
+  onPress:(event:any)=>void
+}
