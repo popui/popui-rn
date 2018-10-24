@@ -34,7 +34,7 @@ const options = [
 export default class InputScreen extends React.Component<any, any> {
   state = {
     value1: 1,
-    value2: 2,
+    value2: 4,
   };
   render() {
     return (
@@ -42,7 +42,7 @@ export default class InputScreen extends React.Component<any, any> {
         <CellsTitle>单选列表项</CellsTitle>
         <CellsWithSingleSelect
           options={options}
-          onChange={this.handleRadioChange}
+          onChange={this.handleChange1}
           value={this.state.value1}
         >
           <Cell onPress={() => {}}>
@@ -57,7 +57,7 @@ export default class InputScreen extends React.Component<any, any> {
         <CellsTitle>单选列表项(禁用)</CellsTitle>
         <CellsWithSingleSelect
           options={options}
-          onChange={this.handleRadio2Change}
+          onChange={this.handleChange2}
           value={this.state.value2}
           disabled
         >
@@ -66,16 +66,10 @@ export default class InputScreen extends React.Component<any, any> {
     );
   }
 
-  private handleRadioChange = (value: any) => {
-    console.log('handleRadioChange',{
-      value
-    })
-    this.setState({ radio:value });
+  private handleChange1 = (value: any) => {
+    this.setState({ value1:value });
   };
-  private handleRadio2Change = (value: any) => {
-    console.log('handleRadioChange',{
-      value
-    })
-    this.setState({ radio2:value });
+  private handleChange2 = (value: any) => {
+    this.setState({ value2:value });
   };
 }
