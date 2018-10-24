@@ -3,11 +3,11 @@ import {
   TouchableWithoutFeedback,
   View,
 } from 'react-native'
-import { SingleSelectPropsType } from './PropsType'
-import ToggleIconCheckBox from '../toggle-icon-checkbox'
+import { MultiSelectPropsType } from './PropsType'
+import ToggleIconCircle from '../toggle-icon-circle'
 import SelectRowProvider from '../select-row-provider'
 
-function SingleSelectRowCheckBox(props:SingleSelectPropsType): JSX.Element {
+function ToggleRowCircle(props:MultiSelectPropsType): JSX.Element {
   return (
     <SelectRowProvider
       {...props}
@@ -24,7 +24,7 @@ function SingleSelectRowCheckBox(props:SingleSelectPropsType): JSX.Element {
         return (
           <TouchableWithoutFeedback onPress={onPress}>
             <View style={[styles.wrapper, style]}>
-              <ToggleIconCheckBox
+              <ToggleIconCircle
                 disabled={disabled}
                 checked={checked}
                 style={styles.icon}
@@ -39,4 +39,4 @@ function SingleSelectRowCheckBox(props:SingleSelectPropsType): JSX.Element {
 }
 
 
-export default SingleSelectRowCheckBox
+export default ToggleRowCircle

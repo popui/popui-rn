@@ -2,10 +2,10 @@
 import React from "react";
 
 import { Text, View } from "react-native";
-import { SingleSelectRowCheckBox,Checkbox, List, GapH } from "popui-rn";
-// const CheckboxRowItem = SingleSelectRowCheckBox.CheckboxRowItem;
+import { ToggleRowCheckBox,Checkbox, List, GapH } from "popui-rn";
+// const CheckboxRowItem = ToggleRowCheckBox.CheckboxRowItem;
 
-export default class BasicSingleSelectRowCheckBoxExample extends React.Component<
+export default class BasicToggleRowCheckBoxExample extends React.Component<
   any,
   any
 > {
@@ -27,27 +27,27 @@ export default class BasicSingleSelectRowCheckBoxExample extends React.Component
         <View style={{ padding: 10 }}>
         <GapH />
         <Text>非受控</Text>
-        <SingleSelectRowCheckBox>
+        <ToggleRowCheckBox>
           Agree agreement agreement agreement agreement agreement agreement
           agreement
-        </SingleSelectRowCheckBox>
+        </ToggleRowCheckBox>
 
         <GapH />
         <Text>受控</Text>
-        <SingleSelectRowCheckBox
+        <ToggleRowCheckBox
           checked={this.state.agreeItem1}
           onChange={this.toggleAgreeItem1}
         >
           Agree agreement
-        </SingleSelectRowCheckBox>
+        </ToggleRowCheckBox>
 
         <GapH />
-        <SingleSelectRowCheckBox disabled>Not selected. Not editable</SingleSelectRowCheckBox>
+        <ToggleRowCheckBox disabled>Not selected. Not editable</ToggleRowCheckBox>
 
         <GapH />
-        <SingleSelectRowCheckBox checked disabled>
+        <ToggleRowCheckBox checked disabled>
           Force selected. Not editable
-        </SingleSelectRowCheckBox>
+        </ToggleRowCheckBox>
       </View>
     );
   }
