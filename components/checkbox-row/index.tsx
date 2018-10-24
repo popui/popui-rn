@@ -36,12 +36,13 @@ export default class CheckboxRow extends React.Component<
     }
   }
 
-  componentWillReceiveProps(nextProps: CheckboxPropsType): void {
-    if (typeof nextProps.checked === 'boolean') {
-      this.setState({
+  static getDerivedStateFromProps(nextProps:ICheckboxNativeProps, prevState:any) {
+    if (typeof nextProps.checked === 'boolean' && nextProps.checked!==prevState.checked) {
+      return {
         checked: !!nextProps.checked,
-      })
+      }
     }
+    return null
   }
 
   handleClick = () => {
