@@ -1,4 +1,4 @@
-export interface CheckBoxPropsType {
+export interface ToggleIconCheckBoxPropsType {
   styles?: any
   style?: any
   checked?: boolean

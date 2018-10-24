@@ -1,7 +1,7 @@
 ---
 category: Components
 type: Data Entry
-title: CheckBox
+title: ToggleIconCheckBox
 subtitle: 单选框
 ---
 
@@ -9,7 +9,7 @@ subtitle: 单选框
 
 ## API
 
-### CheckBox
+### ToggleIconCheckBox
 
 属性 | 说明 | 类型 | 默认值
 ----|-----|------|------

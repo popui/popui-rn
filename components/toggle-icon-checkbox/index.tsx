@@ -1,13 +1,13 @@
 import React from 'react'
 import {StyleSheet, View } from 'react-native'
 import WeuiIcon from '../weui-icon'
-import { CheckBoxPropsType } from './PropsType'
-import CheckBoxStyle from './style/index'
+import { ToggleIconCheckBoxPropsType } from './PropsType'
+import ToggleIconCheckBoxStyle from './style/index'
 
-const CheckBoxStyles = StyleSheet.create<any>(CheckBoxStyle)
+const ToggleIconCheckBoxStyles = StyleSheet.create<any>(ToggleIconCheckBoxStyle)
 
- function CheckBox(props: CheckBoxPropsType) {
-  const { disabled, styles = CheckBoxStyles, checked, style } = props
+ function ToggleIconCheckBox(props: ToggleIconCheckBoxPropsType) {
+  const { disabled, styles = ToggleIconCheckBoxStyles, checked, style } = props
   const colorProps: any = {}
   if (disabled) {
     colorProps.color = '#ADADAD'
@@ -26,4 +26,4 @@ const CheckBoxStyles = StyleSheet.create<any>(CheckBoxStyle)
   )
 }
 
-export default CheckBox
+export default ToggleIconCheckBox

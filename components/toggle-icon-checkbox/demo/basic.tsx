@@ -1,7 +1,7 @@
 // tslint:disable:jsx-no-multiline-js
 import React from "react";
 import { Text, View } from "react-native";
-import { Checkbox,  GapH } from "popui-rn";
+import { ToggleIconCheckBox,  GapH } from "popui-rn";
 
 export default class BasicCheckboxRowExample extends React.Component<
   any,
@@ -12,21 +12,21 @@ export default class BasicCheckboxRowExample extends React.Component<
       <View>
         <View style={{ padding: 10 }}>
           <Text>checked</Text>
-          <Checkbox
+          <ToggleIconCheckBox
             checked
           />
 
           <GapH />
           <Text>default</Text>
-          <Checkbox></Checkbox>
+          <ToggleIconCheckBox></ToggleIconCheckBox>
 
           <GapH />
           <Text>checked disabled</Text>
-          <Checkbox checked disabled />
+          <ToggleIconCheckBox checked disabled />
 
           <GapH />
           <Text>disabled</Text>
-          <Checkbox disabled />
+          <ToggleIconCheckBox disabled />
         </View>
       </View>
     );

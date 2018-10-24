@@ -1,6 +1,6 @@
 import * as React from 'react'
 import { StyleSheet } from 'react-native'
-import { MultiSelectIconControlPropsType } from './PropsType'
+import { ToggleIconCirclePropsType } from './PropsType'
 import WeuiIcon from '../weui-icon'
 
 const styles = StyleSheet.create({
@@ -12,10 +12,10 @@ const styles = StyleSheet.create({
   },
 })
 
-function MultiSelectIconControl({ checked = false, disabled = false, style }: MultiSelectIconControlPropsType) {
+function ToggleIconCircle({ checked = false, disabled = false, style }: ToggleIconCirclePropsType) {
   const iconName = checked ? 'success' : 'circle'
   const iconStyle = [styles.icon, disabled ? styles.disabled : null, style]
   return <WeuiIcon name={iconName} style={iconStyle} />
 }
 
-export default MultiSelectIconControl
+export default ToggleIconCircle
