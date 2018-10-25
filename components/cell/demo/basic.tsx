@@ -2,7 +2,7 @@ import { Image, View } from 'react-native'
 import React from 'react'
 ;
 import {
-  Badge,
+  CellBadge,
   Cell , CellBody, CellFooter,
   CellHeader, Cells, CellsTitle,
   CellText } from 'popui-rn';
@@ -45,12 +45,13 @@ export default class CellScreen extends React.Component<IProps, any> {
                         </CellHeader>
                         <CellBody>
                             <View style={{ flexDirection: 'row', alignItems: 'center' }}>
-                                <CellText>标题文字</CellText><Badge preset="body">News</Badge>
+                                <CellText>标题文字</CellText>
+                                <CellBadge preset="body">News</CellBadge>
                             </View>
                         </CellBody>
                         <CellFooter>
                             说明文字
-                            <Badge preset="footer">8</Badge>
+                            <CellBadge preset="footer">8</CellBadge>
                         </CellFooter>
                     </Cell>
                 </Cells>

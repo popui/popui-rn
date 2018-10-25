@@ -8,15 +8,8 @@ import { StyleSheet, SafeAreaView, ScrollView,Text } from "react-native";
 // import CheckboxWithTextExample from "popui-rn/components/checkbox-with-text/demo/basic";
 import {GapH} from 'popui-rn'
 
-import CellsWithMultiSelectExample from "popui-rn/components/cells-with-multi-select/demo/basic";
-import CellsWithSingleSelectExample from "popui-rn/components/cells-with-single-select/demo/basic";
 
-import CheckBoxExample from
-"popui-rn/components/toggle-icon-check-box/demo/basic";
-import CircleExample from "popui-rn/components/toggle-icon-circle/demo/basic";
-import SuccessExample from "popui-rn/components/toggle-icon-success/demo/basic";
-
-import ToggleRowExample from "popui-rn/components/toggle-row/demo/basic";
+import CellExample from "popui-rn/components/cell/demo/basic";
 // import Modal2Example from "popui-rn/components/modal2/demo/basic";
 // import Picker2Example from 'popui-rn/components/picker2/demo';
 // import { ActionSheet2 } from 'popui-rn'
@@ -37,25 +30,7 @@ export default class App extends React.Component {
             {/* <CheckboxWithTextExample /> */}
 
             <GapH size="xl"/>
-            <CheckBoxExample/>
-
-            <GapH size="xl"/>
-            <CircleExample/>
-
-            <GapH size="xl"/>
-            <SuccessExample/>
-
-            <GapH size="xl"/>
-            <Text>ToggleRowExample:</Text>
-            <ToggleRowExample/>
-
-            <GapH size="xl"/>
-            <Text>CellsWithSingleSelectExample:</Text>
-            <CellsWithSingleSelectExample />
-
-            <GapH size="xl"/>
-            <Text>CellsWithMultiSelectExample:</Text>
-            <CellsWithMultiSelectExample/>
+            <CellExample />
             {/* <Modal2Example /> */}
           </ScrollView>
         </SafeAreaView>
