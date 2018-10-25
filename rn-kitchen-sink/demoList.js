@@ -222,25 +222,19 @@ module.exports = {
       module: require('../components/toggle-icon-success/demo/basic'), // 必须
     },
     {
-      title: 'ToggleRowCircle', // 必须
-      description: '',
+      title: 'ToggleRow', // 必须
+      description: '用于切换的行',
       icon: 'https://os.alipayobjects.com/rmsportal/dWPGltvdjaanrRd.png',
-      module: require('../components/toggle-row-circle/demo/basic'), // 必须
+      module: require('../components/toggle-row/demo/basic'), // 必须
     },
     {
-      title: 'ToggleRowCheckBox', // 必须
-      description: '同意',
-      icon: 'https://os.alipayobjects.com/rmsportal/dWPGltvdjaanrRd.png',
-      module: require('../components/toggle-row-check-box/demo/basic'), // 必须
-    },
-    {
-      title: 'CellsWithSingleSelectExample', // 必须
+      title: 'CellsWithSingleSelect', // 必须
       description: '单选Cells',
       icon: 'https://os.alipayobjects.com/rmsportal/dWPGltvdjaanrRd.png',
       module: require('../components/cells-with-single-select/demo/basic'), // 必须
     },
     {
-      title: 'CellsWithMultiSelectExample', // 必须
+      title: 'CellsWithMultiSelect', // 必须
       description: '多选Cells',
       icon: 'https://os.alipayobjects.com/rmsportal/dWPGltvdjaanrRd.png',
       module: require('../components/cells-with-multi-select/demo/basic'), // 必须

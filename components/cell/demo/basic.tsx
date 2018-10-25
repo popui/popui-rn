@@ -1,4 +1,4 @@
-import { Image, View } from 'react-native'
+import { Image, View,ScrollView } from 'react-native'
 import React from 'react'
 ;
 import {
@@ -7,20 +7,14 @@ import {
   CellHeader, Cells, CellsTitle,
   CellText } from 'popui-rn';
 
-
 export interface IProps  {
 
 }
 
-
 export default class CellScreen extends React.Component<IProps, any> {
-    static navigationOptions = {
-        title: 'Cell',
-    }
-
     render() {
         return (
-            <View>
+            <ScrollView>
                 <CellsTitle>带说明的列表项</CellsTitle>
                 <Cells>
                     <Cell>
@@ -100,7 +94,7 @@ export default class CellScreen extends React.Component<IProps, any> {
                         <CellFooter>说明文字</CellFooter>
                     </Cell>
                 </Cells>
-            </View>
+            </ScrollView>
         )
     }
 }
