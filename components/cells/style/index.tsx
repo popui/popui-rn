@@ -6,18 +6,14 @@ export default {
     backgroundColor: themeVars.fill_tap,
   },
   container: {
-    marginTop: themeVars.CellsMarginTop,
+    // marginTop:15,
+  },
+  body: {
+    // marginTop: themeVars.CellsMarginTop,
     backgroundColor: themeVars.CellBg,
     overflow: 'hidden',
     borderTopWidth: StyleSheet.hairlineWidth,
     borderBottomWidth: StyleSheet.hairlineWidth,
     borderColor: themeVars.CellBorderColor,
-  },
-  body: {
-    backgroundColor: themeVars.fill_base,
-    borderTopWidth: StyleSheet.hairlineWidth,
-    borderTopColor: themeVars.border_color_base,
-    borderBottomWidth: StyleSheet.hairlineWidth,
-    borderBottomColor: themeVars.border_color_base,
   }
 };

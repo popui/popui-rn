@@ -74,8 +74,12 @@ export default class Cells extends React.Component<CellsProps, any> {
       renderBody,
       ...restProps
     } = this.props
+    // const containerStyle = [
+    //   styles!.container,
+    //   style,
+    // ]
     return (
-      <View {...restProps} style={[styles!.container as ViewStyle, style]}>
+      <View name="CellsContianer" {...restProps} style={style}>
         {this.renderHeader()}
         {this.renderBody()}
         {this.renderFooter()}

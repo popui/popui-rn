@@ -15,7 +15,7 @@ const defaultStyles = create({
         themeVars.CellTipsFontSize * themeVars.baseLineHeight
       ),
     },
-    backgroundColor: themeVars.CellBg,
+    // backgroundColor: themeVars.CellBg,
   }
 })
 

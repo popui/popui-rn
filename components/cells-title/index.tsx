@@ -14,7 +14,6 @@ const defaultStyles = StyleSheet.create({
     paddingHorizontal: themeVars.CellGapH,
     fontSize: themeVars.CellTipsFontSize,
     color: themeVars.TextColorGray,
-    backgroundColor: themeVars.CellBg,
   } as TextStyle
 })
 
