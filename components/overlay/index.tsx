@@ -2,20 +2,10 @@
 
 'use strict';
 
-import React, {Component} from "react";
+import React from "react";
 import TopView from 'rn-topview'
-import OverlayView from './OverlayView';
-import OverlayPullView from './OverlayPullView';
-import OverlayPopView from './OverlayPopView';
-import OverlayPopoverView from './OverlayPopoverView';
 
 export default class Overlay {
-
-  static View = OverlayView;
-  static PullView = OverlayPullView;
-  static PopView = OverlayPopView;
-  static PopoverView = OverlayPopoverView;
-
   // base props
   //   style: ViewPropTypes.style,
   //   modal: PropTypes.bool,

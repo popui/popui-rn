@@ -12,7 +12,7 @@ const Brief = Item.Brief;
 export default class BasicListExample extends React.Component<any, any> {
   render() {
     return (
-      <ScrollView
+      <View
         style={{ flex: 1, backgroundColor: '#f5f5f9' }}
         automaticallyAdjustContentInsets={false}
         showsHorizontalScrollIndicator={false}
@@ -100,7 +100,7 @@ export default class BasicListExample extends React.Component<any, any> {
             extra为Image
           </Item>
         </List>
-      </ScrollView>
+      </View>
     );
   }
 }
