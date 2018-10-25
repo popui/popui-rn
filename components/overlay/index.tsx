@@ -3,9 +3,7 @@
 'use strict';
 
 import React, {Component} from "react";
-import {View} from 'react-native';
-
-import TopView from './TopView';
+import TopView from 'rn-topview'
 import OverlayView from './OverlayView';
 import OverlayPullView from './OverlayPullView';
 import OverlayPopView from './OverlayPopView';

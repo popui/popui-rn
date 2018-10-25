@@ -91,37 +91,6 @@ export default class BasicOverlayExample extends React.Component {
     Overlay.show(overlayView);
   }
 
-  showPopover(view, direction, align) {
-    let {black, shadow, showArrow} = this.state;
-    let blackStyle = {
-      backgroundColor: 'rgba(0, 0, 0, 0.8)',
-      paddingTop: 8,
-      paddingBottom: 8,
-      paddingLeft: 12,
-      paddingRight: 12,
-    };
-    let whiteStyle = {
-      ...blackStyle,
-      backgroundColor: '#fff',
-    };
-    let shadowStyle = {
-      shadowColor: '#777',
-      shadowOffset: {width: 1, height: 1},
-      shadowOpacity: 0.5,
-      shadowRadius: 2,
-    };
-    let popoverStyle = [].concat(black ? blackStyle : whiteStyle).concat(shadow ? shadowStyle : null);
-
-    view.measure((x, y, width, height, pageX, pageY) => {
-      let fromBounds = {x: pageX, y: pageY, width, height};
-      let overlayView = (
-        <Overlay.PopoverView popoverStyle={popoverStyle} fromBounds={fromBounds} direction={direction} align={align} directionInsets={4} showArrow={showArrow}>
-          <CellLabel style={{color: black ? '#fff' : '#000'}} size='lg' text={direction + ' ' + align} />
-        </Overlay.PopoverView>
-      );
-      Overlay.show(overlayView);
-    });
-  }
 
   showMulti() {
     let overlayView = (
@@ -171,29 +140,6 @@ export default class BasicOverlayExample extends React.Component {
                 <ToggleIconCheckbox title='Black' ref='black' checked={this.state.black} onChange={value => this.setState({black: value})} />
                 <ToggleIconCheckbox title='Shadow' ref='shadow' checked={this.state.shadow} onChange={value => this.setState({shadow: value})} />
                 <ToggleIconCheckbox title='Show arrow' ref='showArrow' checked={this.state.showArrow} onChange={value => this.setState({showArrow: value})} />
-              </View>
-
-              <View style={{paddingTop: 8, flexDirection: 'row', justifyContent: 'space-between'}}>
-                <WeuiButton title='down start' ref='downstart' onPress={() => this.showPopover(this.refs['downstart'], 'down', 'start')} />
-                <WeuiButton title='down center' ref='downcenter' onPress={() => this.showPopover(this.refs['downcenter'], 'down', 'center')} />
-                <WeuiButton title='down end' ref='downend' onPress={() => this.showPopover(this.refs['downend'], 'down', 'end')} />
-              </View>
-              <View style={{paddingTop: 8, flexDirection: 'row', justifyContent: 'space-between'}}>
-                <WeuiButton title='right start' ref='rightstart' onPress={() => this.showPopover(this.refs['rightstart'], 'right', 'start')} />
-                <WeuiButton title='left start' ref='leftstart' onPress={() => this.showPopover(this.refs['leftstart'], 'left', 'start')} />
-              </View>
-              <View style={{paddingTop: 8, flexDirection: 'row', justifyContent: 'space-between'}}>
-                <WeuiButton title='right center' ref='rightcenter' onPress={() => this.showPopover(this.refs['rightcenter'], 'right', 'center')} />
-                <WeuiButton title='left center' ref='leftcenter' onPress={() => this.showPopover(this.refs['leftcenter'], 'left', 'center')} />
-              </View>
-              <View style={{paddingTop: 8, flexDirection: 'row', justifyContent: 'space-between'}}>
-                <WeuiButton title='right end' ref='rightend' onPress={() => this.showPopover(this.refs['rightend'], 'right', 'end')} />
-                <WeuiButton title='left end' ref='leftend' onPress={() => this.showPopover(this.refs['leftend'], 'left', 'end')} />
-              </View>
-              <View style={{paddingTop: 8, flexDirection: 'row', justifyContent: 'space-between'}}>
-                <WeuiButton title='up start' ref='upstart' onPress={() => this.showPopover(this.refs['upstart'], 'up', 'start')} />
-                <WeuiButton title='up center' ref='upcenter' onPress={() => this.showPopover(this.refs['upcenter'], 'up', 'center')} />
-                <WeuiButton title='up end' ref='upend' onPress={() => this.showPopover(this.refs['upend'], 'up', 'end')} />
               </View>
             </View>
           }
