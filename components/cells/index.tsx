@@ -1,49 +1,85 @@
 import React from 'react'
-import { StyleSheet, View, ViewPropTypes } from 'react-native'
-import themeVars from '../style/themes/default'
+
+import { StyleProp, StyleSheet, Text, View, ViewStyle } from 'react-native'
+import { ListPropsType } from './PropsType'
+import cellStyle from './style/index'
 import CellsTitle from '../cells-title'
-const styles = StyleSheet.create({
-  container: {
-    marginTop: themeVars.CellssMarginTop,
-    backgroundColor: themeVars.CellBg,
-    overflow: 'hidden',
-  },
-  cells: {
-    borderTopWidth: StyleSheet.hairlineWidth,
-    borderBottomWidth: StyleSheet.hairlineWidth,
-    borderColor: themeVars.CellBorderColor,
-  },
-})
-function renderCellsTitle(title?:string){
-  if(!title){
+import CellsTips from '../cells-tips'
+
+export interface CellsProps extends ListPropsType {
+  styles?: typeof cellStyle
+  style?: StyleProp<ViewStyle>
+}
+
+const cellsStyles: any = StyleSheet.create<any>(cellStyle)
+
+export default class Cells extends React.Component<CellsProps, any> {
+  static defaultProps = {
+    styles: cellsStyles,
+  }
+  renderHeader = () => {
+    const { header } = this.props
+    if (typeof header === 'function') {
+      return header()
+    }
+    if (typeof header === 'string') {
+      return <CellsTitle>{header}</CellsTitle>
+    }
     return null
   }
-  return (
-    <CellsTitle>{title}</CellsTitle>
-  )
-}
-const Cells = ({ children, style,title, ...others }: any) => {
-  const childrenWithProps = React.Children.map(
-    children,
-    (child: any, idx: number) => {
-      if (idx === 0) {
-        return React.cloneElement(child, { first: true })
-      }
-      return child
+  renderFooter = () => {
+    const { footer } = this.props
+    if (typeof footer === 'function') {
+      return footer()
     }
-  )
-
-  return (
-    <View style={[styles.cells, style]} {...others}>
-       {renderCellsTitle(title)}
-      <View style={[styles.cells]}>{childrenWithProps}</View>
-    </View>
-  )
+    if (typeof footer === 'string') {
+      return <CellsTips>{footer}</CellsTips>
+    }
+    return null
+  }
+  renderChildrenItems = () => {
+    const { children } = this.props
+    if (!children) {
+      return null
+    }
+    const childrenWithProps = React.Children.map(
+      children,
+      (child: any, idx: number) => {
+        if (idx === 0) {
+          return React.cloneElement(child, { isFirst: true })
+        }
+        return child
+      }
+    )
+    return childrenWithProps
+  }
+  renderBody = () => {
+    const { styles, bodyStyles, renderBody } = this.props
+    if (renderBody) {
+      return renderBody()
+    }
+    return (
+      <View style={[styles!.body, bodyStyles]}>
+        {this.renderChildrenItems()}
+      </View>
+    )
+  }
+  render() {
+    const {
+      children,
+      style,
+      styles,
+      header,
+      footer,
+      renderBody,
+      ...restProps
+    } = this.props
+    return (
+      <View {...restProps} style={[styles!.container as ViewStyle, style]}>
+        {this.renderHeader()}
+        {this.renderBody()}
+        {this.renderFooter()}
+      </View>
+    )
+  }
 }
-
-// Cells.propTypes = {
-//   children: PropTypes.node,
-//   style: ViewPropTypes.style,
-// }
-
-export default Cells

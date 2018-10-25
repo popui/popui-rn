@@ -1,9 +1,9 @@
 // import PropTypes from 'prop-types'
 import React from 'react'
-import { StyleSheet, Text, ViewPropTypes } from 'react-native'
+import { StyleSheet, Text,TextStyle } from 'react-native'
 import themeVars from '../style/themes/default'
 
-const styles = StyleSheet.create({
+const defaultStyles = StyleSheet.create({
   cellsTitle: {
     marginTop:
       themeVars.CellTipsFontSize * 0.77 +
@@ -11,22 +11,30 @@ const styles = StyleSheet.create({
     marginBottom:
       themeVars.CellTipsFontSize * 0.3 +
       (14 * themeVars.baseLineHeight - 14) * 0.5,
-    paddingLeft: themeVars.CellGapH,
-    paddingRight: themeVars.CellGapH,
+    paddingHorizontal: themeVars.CellGapH,
     fontSize: themeVars.CellTipsFontSize,
     color: themeVars.TextColorGray,
-  },
+    backgroundColor: themeVars.CellBg,
+  } as TextStyle
 })
 
-const CellsTitle = ({ children, style, ...others }:any) => (
-  <Text style={[styles.cellsTitle, style]} {...others}>
-    {children}
-  </Text>
-)
-
-// CellsTitle.propTypes = {
-//   children: PropTypes.node,
-//   style: Text.propTypes.style,
-// }
+const CellsTitle = ({
+  children,
+  style,
+  styles: stylesInProps,
+  ...others
+}: CellsTitlePropsType) => {
+  const styles = stylesInProps || defaultStyles
+  return (
+    <Text style={[styles.cellsTitle, style]} {...others}>
+      {children}
+    </Text>
+  )
+}
+export interface CellsTitlePropsType {
+  children?: any
+  styles?: any
+  style?: any
+}
 
 export default CellsTitle
