@@ -1,7 +1,7 @@
 import themeVars from '../../style/themes/default';
 import { ViewStyle, TextStyle } from 'react-native';
 
-export interface IToggleRowProviderStyle {
+export interface IToggleRowStyle {
   wrapper: ViewStyle;
   icon: ViewStyle;
   disabled: ViewStyle;
@@ -16,11 +16,10 @@ export default {
     alignItems: "center",
     paddingTop: 13 * 0.5,
     paddingBottom: 13 * 0.5,
-    paddingLeft: 15,
-    paddingRight: 15
+    paddingLeft: themeVars.h_spacing_lg,
+    paddingRight: themeVars.h_spacing_lg,
   },
   icon:{
-    marginLeft: themeVars.h_spacing_lg,
     marginRight: themeVars.h_spacing_md,
   },
   disabled: {

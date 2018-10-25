@@ -30,7 +30,8 @@ const CellsWithMultiSelect = ({
       {options.map((option, idx) => (
         <Cell
           key={idx}
-          onPress={() => !disabled && onChange && onChange(xor(values, [option.value]))}
+          disabled={disabled}
+          onPress={() => onChange && onChange(xor(values, [option.value]))}
         >
           <CellHeader>
             <ToggleIconCircle

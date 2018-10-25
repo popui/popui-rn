@@ -76,8 +76,10 @@ export default class Cell extends React.Component<CellProps, CellState> {
       style,
       ...others
     } = this.props
+
     return (
       <TouchableWithFallback
+        disabled={disabled}
         underlayColor={themeVars.BgColorActive}
         {...others}
       >

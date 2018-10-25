@@ -18,4 +18,5 @@ subtitle: 多选框
 | checked    |   指定当前是否选中  | Boolean  | 无  |
 | disabled      |  禁用  | Boolean |  false  |
 | onChange    | change 事件触发的回调函数 | (e: Object): void |   无  |
-
+| renderIcon    | 渲染Icon | (renderIconParams:RenderIconParams)=>React.ReactNode |  ToggleIconCheckBox  |
+| textStyle    |   文本样式  | any |   无  |

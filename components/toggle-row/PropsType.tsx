@@ -19,7 +19,7 @@ export interface OnChangeParams {
     checked: boolean
   }
 }
-export interface ToggleRowProviderPropsType {
+export interface ToggleRowPropsType {
   defaultChecked?: boolean
   checked?: boolean
   disabled?: boolean
@@ -27,10 +27,11 @@ export interface ToggleRowProviderPropsType {
   onChange?: onChangeFunction
   styles?: any
   style?: any
-  children:(args:ToggleRowProviderChildrenParams) => JSX.Element
+  children:(args:ToggleRowChildrenParams) => JSX.Element
+  renderIcon?:(renderIconParams:RenderIconParams)=>React.ReactNode
 }
 
-export interface ToggleRowProviderChildrenParams {
+export interface ToggleRowChildrenParams {
   defaultChecked?: boolean
   checked?: boolean
   disabled?: boolean
@@ -39,4 +40,11 @@ export interface ToggleRowProviderChildrenParams {
   style?: any
   renderChildren:(children:React.ReactNode)=>React.ReactNode
   onPress:(event:any)=>void
+}
+
+
+export interface RenderIconParams{
+  checked?: boolean
+  disabled?: boolean
+  style?: any
 }

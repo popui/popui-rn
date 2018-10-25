@@ -1,4 +1,13 @@
-# `<Touchable>`
+---
+category: Components
+type: Data Entry
+title: TouchableWithFallback
+subtitle:
+---
+
+# `<TouchableWithFallback>`
+- 修改自 `https://github.com/react-community/react-native-platform-touchable`
+- 默认的 fallback 从 `TouchableOpacity` 改为 `TouchableHighlight`
 
 A wrapper around the various `Touchable*` components built into React Native core in order to use `TouchableNativeFeedback` whenever possible, provide an easier interface to using it, and flatten out API differences between the Touchable components.
 
@@ -52,7 +61,7 @@ export default class App extends React.Component {
           }}
           background={Touchable.Ripple('blue')}>
           <Text>Hello there!</Text>
-        </Touchable>
+        </TouchableWithFallback>
       </View>
     );
   }

@@ -9,8 +9,10 @@ export default class BasicCheckboxRowExample extends React.Component<
 > {
   render() {
     return (
-      <View>
-        <View style={{ padding: 10 }}>
+        <View >
+          <Text>ToggleIconCheckBox 固定值 Example:</Text>
+
+          <GapH size={"xl"} />
           <Text>checked</Text>
           <ToggleIconCheckBox
             checked
@@ -28,7 +30,6 @@ export default class BasicCheckboxRowExample extends React.Component<
           <Text>disabled</Text>
           <ToggleIconCheckBox disabled />
         </View>
-      </View>
     );
   }
 }

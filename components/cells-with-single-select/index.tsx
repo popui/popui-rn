@@ -28,7 +28,8 @@ export function CellsWithSingleSelectItem(
   return (
     <Cell
       key={idx}
-      onPress={() => !disabled && onChange && onChange(option.value)}
+      disabled={disabled}
+      onPress={() => onChange && onChange(option.value)}
     >
       <CellBody>
         <CellText>{option.label || option.value}</CellText>

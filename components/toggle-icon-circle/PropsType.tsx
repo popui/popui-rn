@@ -1,6 +1,5 @@
-export interface ToggleIconCirclePropsType {
-  checked?: boolean
-  disabled?: boolean
-  style?:any
-  size?:number
+import { ToggleIconPropsType } from '../toggle-icon/PropsType'
+
+
+export interface ToggleIconCirclePropsType extends ToggleIconPropsType {
 }
