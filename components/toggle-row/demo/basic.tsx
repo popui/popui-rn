@@ -27,35 +27,36 @@ export default class BasicToggleRowExample extends React.Component<any, any> {
   render() {
     return (
       <View >
-        <GapH size="xl" />
+        <Text>ToggleRow CheckBox:</Text>
         <Text>自控</Text>
         <ToggleRow>
           Agree agreement agreement agreement agreement agreement agreement
           agreement
         </ToggleRow>
 
-        <GapH size="xl" />
+        <GapH  />
         <Text>受控</Text>
         <ToggleRow checked={this.state.value1} onChange={this.toggleValue1}>
           Agree agreement
         </ToggleRow>
 
-        <GapH size="xl" />
+        <GapH  />
         <ToggleRow disabled>Not selected. Not editable</ToggleRow>
 
-        <GapH size="xl" />
+        <GapH  />
         <ToggleRow checked disabled>
           Force selected. Not editable
         </ToggleRow>
+        <GapH size="xl" />
 
-        <GapH size="xxl" />
+        <Text>ToggleRow Circle:</Text>
         <Text>自控</Text>
         <ToggleRow renderIcon={this.renderCircleIcon}>
           Agree agreement agreement agreement agreement agreement agreement
           agreement
         </ToggleRow>
 
-        <GapH size="xl" />
+        <GapH  />
         <Text>受控</Text>
         <ToggleRow
           checked={this.state.value2}
@@ -65,12 +66,12 @@ export default class BasicToggleRowExample extends React.Component<any, any> {
           Agree agreement
         </ToggleRow>
 
-        <GapH size="xl" />
+        <GapH  />
         <ToggleRow disabled renderIcon={this.renderCircleIcon}>
           Not selected. Not editable
         </ToggleRow>
 
-        <GapH size="xl" />
+        <GapH  />
         <ToggleRow checked disabled renderIcon={this.renderCircleIcon}>
           Force selected. Not editable
         </ToggleRow>

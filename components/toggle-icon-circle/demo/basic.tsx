@@ -16,22 +16,22 @@ export default class BasicToggleIconCircleExample extends React.Component<
 
   render() {
     return (
-        <View >
+        <View style={{flexDirection:'column',justifyContent:'center',alignItems:'center'}}>
           <Text>ToggleIconCircle 固定值 Example:</Text>
 
-          <GapH size={'xl'} />
+          <GapH  />
           <Text>default</Text>
           <ToggleIconCircle />
 
-          <GapH size="xl" />
+          <GapH />
           <Text>checked </Text>
           <ToggleIconCircle checked />
 
-          <GapH size="xl" />
+          <GapH/>
           <Text>checked disabled</Text>
           <ToggleIconCircle checked disabled />
 
-          <GapH size="xl" />
+          <GapH  />
           <Text>disabled</Text>
           <ToggleIconCircle disabled />
         </View>

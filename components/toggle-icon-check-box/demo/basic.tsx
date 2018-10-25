@@ -9,7 +9,7 @@ export default class BasicCheckboxRowExample extends React.Component<
 > {
   render() {
     return (
-        <View >
+        <View style={{flexDirection:'column',justifyContent:'center',alignItems:'center'}}>
           <Text>ToggleIconCheckBox 固定值 Example:</Text>
 
           <GapH size={"xl"} />
