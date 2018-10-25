@@ -1,4 +1,4 @@
-import PropTypes from 'prop-types'
+// import PropTypes from 'prop-types'
 import React from 'react'
 import { StyleSheet, Text, ViewPropTypes } from 'react-native'
 import themeVars from '../style/themes/default'
@@ -18,15 +18,15 @@ const styles = StyleSheet.create({
   },
 })
 
-const CellsTitle = ({ children, style, ...others }) => (
+const CellsTitle = ({ children, style, ...others }:any) => (
   <Text style={[styles.cellsTitle, style]} {...others}>
     {children}
   </Text>
 )
 
-CellsTitle.propTypes = {
-  children: PropTypes.node,
-  style: Text.propTypes.style,
-}
+// CellsTitle.propTypes = {
+//   children: PropTypes.node,
+//   style: Text.propTypes.style,
+// }
 
 export default CellsTitle

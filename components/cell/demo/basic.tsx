@@ -18,8 +18,8 @@ export default class CellScreen extends React.Component<IProps, any> {
                 <CellsTitle>带说明的列表项</CellsTitle>
                 <Cells>
                     <Cell>
-                        <CellBody>标题文字</CellBody>
-                        <CellFooter>说明文字</CellFooter>
+                        <CellBody>标题文字标题文字标题文字标题文字标题文字标题文字标题文字标题文字标题文字标题文字标题文字标题文字标题文字标题文字标题文字标题文字标题文字标题文字标题文字</CellBody>
+                        <CellFooter>说明文字说明文字说明文字说明文字说明文字说明文字说明文字说明文字说明文字说明文字说明文字</CellFooter>
                     </Cell>
                 </Cells>
 
