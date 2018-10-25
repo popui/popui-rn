@@ -14,7 +14,7 @@ const styles = StyleSheet.create({
     borderTopWidth: StyleSheet.hairlineWidth,
     borderColor: themeVars.CellBorderColor,
   },
-  firstCell: {
+  isFirstCell: {
     borderTopWidth: 0,
   },
   vcodeCell: {
@@ -28,7 +28,7 @@ const styles = StyleSheet.create({
 })
 
 export interface CellProps {
-  first?: boolean
+  isFirst?: boolean
   access?: boolean
   vcode?: boolean
   error?: boolean
@@ -70,7 +70,7 @@ export default class Cell extends React.Component<CellProps, CellState> {
       access,
       vcode,
       error,
-      first,
+      isFirst,
       disabled,
       children,
       style,
@@ -87,7 +87,7 @@ export default class Cell extends React.Component<CellProps, CellState> {
           style={[
             styles.cell,
             style,
-            first ? styles.firstCell : null,
+            isFirst ? styles.isFirstCell : null,
             vcode ? styles.vcodeCell : null,
             disabled ? styles.disabledCell : null,
           ]}
