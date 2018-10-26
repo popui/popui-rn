@@ -6,15 +6,12 @@ import {
   StyleProp,
   StyleSheet,
   Text,
-  TouchableHighlight,
   View,
   ViewStyle,
 } from 'react-native'
-import {
-  BriefProps as BriefBasePropsType,
-  CellListItemPropsType,
-} from './PropsType'
+import { CellListItemPropsType } from './PropsType'
 import listItemStyle from './style/index'
+import TouchableWithFallback from '../touchable-with-fallback'
 
 export interface ListItemProps extends CellListItemPropsType {
   styles?: {
@@ -36,34 +33,7 @@ export interface ListItemProps extends CellListItemPropsType {
   style?: StyleProp<ViewStyle>
 }
 
-export interface BriefProps extends BriefBasePropsType {
-  styles?: {
-    Brief: {}
-    BriefText: {}
-  }
-}
-
-const listStyles = StyleSheet.create<any>(listItemStyle)
 const listItemStyles: any = StyleSheet.create<any>(listItemStyle)
-
-export function CellItemBrief(props: BriefProps) {
-  const { children, style, styles = listStyles, wrap } = this.props
-
-  let numberOfLines = {}
-
-  if (wrap === false) {
-    numberOfLines = {
-      numberOfLines: 1,
-    }
-  }
-  return (
-    <View style={[styles!.Brief]}>
-      <Text style={[styles!.BriefText, style]} {...this.numberOfLines}>
-        {children}
-      </Text>
-    </View>
-  )
-}
 
 export default class CellItem extends React.Component<ListItemProps, any> {
   static defaultProps: Partial<ListItemProps> = {
@@ -244,9 +214,11 @@ export default class CellItem extends React.Component<ListItemProps, any> {
     const { styles, onClick, onPressIn, onPressOut, disabled } = this.props
     const itemStyles = styles! // assert none-null none-undefined
     this.setnumberOfLines()
+
     let underlayColor = {}
 
     if (!disabled && onClick) {
+      // 可以点击
       underlayColor = {
         underlayColor: StyleSheet.flatten(itemStyles.underlayColor)
           .backgroundColor,
@@ -258,14 +230,15 @@ export default class CellItem extends React.Component<ListItemProps, any> {
       }
     }
     return (
-      <TouchableHighlight
+      <TouchableWithFallback
+        disabled={disabled}
         {...underlayColor}
         onPress={onClick ? onClick : undefined}
         onPressIn={onPressIn}
         onPressOut={onPressOut}
       >
         {this.renderItemView()}
-      </TouchableHighlight>
+      </TouchableWithFallback>
     )
   }
 }

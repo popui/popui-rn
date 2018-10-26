@@ -3,7 +3,7 @@ import themeVars from '../../style/themes/default';
 
 export default {
   underlayColor: {
-    backgroundColor: themeVars.fill_tap,
+    backgroundColor: themeVars.BgColorActive,
   },
   Header: {
     fontSize: themeVars.font_size_base,
