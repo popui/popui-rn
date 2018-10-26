@@ -15,7 +15,7 @@ export default class BasicCellListExample extends React.Component<any, any> {
         // showsHorizontalScrollIndicator={false}
         // showsVerticalScrollIndicator={false}
       >
-        <CellList header="单个 Item" arrow="horizontal">
+        <CellList header="单个 Item" arrow="horizontal" footer="提示文字">
           <CellItem extra="extra 说明文字">标题文字</CellItem>
         </CellList>
 
@@ -65,18 +65,18 @@ export default class BasicCellListExample extends React.Component<any, any> {
             extra={
               <View>
                 extra 内容内容
-                <CellItemBrief>
+                <CellItemBrief style={{ textAlign: 'right' }}>
                 Brief 辅助文字内容
                 </CellItemBrief>
               </View>
             }
             multipleLine
           >
-            body 垂直居中对齐
+            垂直居中对齐
           </CellItem>
           <CellItem extra="内容内容" multipleLine>
-            body 垂直居中对齐
-            <CellItemBrief>Brief 辅助文字内容</CellItemBrief>
+            垂直居中对齐
+            <CellItemBrief >Brief 辅助文字内容</CellItemBrief>
           </CellItem>
           <CellItem
             wrap
@@ -91,7 +91,7 @@ export default class BasicCellListExample extends React.Component<any, any> {
             multipleLine
             arrow="horizontal"
           >
-            body 垂直居中对齐
+            垂直居中对齐
             <CellItemBrief>
               Brief辅助文字内容辅助文字内容辅助文字内容辅助文字内容
             </CellItemBrief>
@@ -105,7 +105,7 @@ export default class BasicCellListExample extends React.Component<any, any> {
             align="top"
             arrow="horizontal"
           >
-            body 顶部对齐
+            顶部对齐
             <CellItemBrief>
               Brief辅助文字内容辅助文字内容辅助文字内容辅助文字内容
             </CellItemBrief>
@@ -125,7 +125,7 @@ export default class BasicCellListExample extends React.Component<any, any> {
             multipleLine
             align="bottom"
           >
-            body 底部对齐
+            底部对齐
           </CellItem>
         </CellList>
 
