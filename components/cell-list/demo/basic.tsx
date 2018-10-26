@@ -96,7 +96,7 @@ export default class BasicCellListExample extends React.Component<any, any> {
             extra为Image
           </CellItem>
         </CellList>
-      </View>
+      </ScrollView>
     );
   }
 }

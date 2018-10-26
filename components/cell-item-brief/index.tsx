@@ -14,7 +14,7 @@ export interface BriefProps extends BriefBasePropsType {
 
 const listStyles = StyleSheet.create<any>(listItemStyle)
 
-export function CellItemBrief(props: BriefProps) {
+ function CellItemBrief(props: BriefProps) {
   const { children, style, styles = listStyles, wrap=false } = props
 
   let numberOfLines = {}
@@ -32,3 +32,5 @@ export function CellItemBrief(props: BriefProps) {
     // </View>
   )
 }
+
+export default CellItemBrief

@@ -1,6 +1,6 @@
 import React from 'react'
 
-import { StyleProp, StyleSheet, Text, View, ViewStyle } from 'react-native'
+import { StyleProp, StyleSheet,  View, ViewStyle } from 'react-native'
 import { CellListPropsType } from './PropsType'
 import cellStyle from './style/index'
 import CellsTitle from '../cells-title'
