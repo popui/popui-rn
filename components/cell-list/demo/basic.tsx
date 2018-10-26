@@ -9,7 +9,8 @@ export default class BasicCellListExample extends React.Component<any, any> {
   render() {
     return (
       <ScrollView
-        style={{ flex: 1, backgroundColor: '#f5f5f9' }}
+        // style={{ flex: 1, backgroundColor: '#f5f5f9' }}
+        style={{backgroundColor:"#eee"}}
         automaticallyAdjustContentInsets={false}
         showsHorizontalScrollIndicator={false}
         showsVerticalScrollIndicator={false}

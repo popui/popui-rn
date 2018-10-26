@@ -12,13 +12,15 @@ import {
 import { CellListItemPropsType } from './PropsType'
 import listItemStyle from './style/index'
 import TouchableWithFallback from '../touchable-with-fallback'
-
+import CellBodyText from '../cell-body-text'
 export interface ListItemProps extends CellListItemPropsType {
   styles?: {
     underlayColor: {}
-    Content: {}
+    body: {}
+    bodyText: {}
     column: {}
-    Extra: {}
+    extra: {}
+    extraText: {}
     Arrow: {}
     ArrowV: {}
     Item: {}
@@ -42,7 +44,7 @@ export default class CellItem extends React.Component<ListItemProps, any> {
     styles: listItemStyles,
   }
   private numberOfLines: any
-  renderBodyContent = () => {
+  renderBody = () => {
     const { styles, children } = this.props
     const itemStyles = styles! // assert none-null none-undefined
 
@@ -54,40 +56,46 @@ export default class CellItem extends React.Component<ListItemProps, any> {
           tempContentDom.push(el)
         } else {
           tempContentDom.push(
-            <Text
-              style={[itemStyles.Content]}
+            <CellBodyText
+              style={[itemStyles.bodyText]}
               {...this.numberOfLines}
               key={`${index}-children`}
             >
               {el}
-            </Text>
+            </CellBodyText>
           )
         }
       })
-      contentDom = <View style={[itemStyles.column]}>{tempContentDom}</View>
+      contentDom = (
+        <View style={[itemStyles.body, itemStyles.column]}>
+          {tempContentDom}
+        </View>
+      )
     } else {
       if (children && React.isValidElement(children)) {
-        contentDom = <View style={[itemStyles.column]}>{children}</View>
+        contentDom = (
+          <View style={[itemStyles.body, itemStyles.column]}>{children}</View>
+        )
       } else {
         contentDom = (
-          <View style={[itemStyles.column]}>
-            <Text style={[itemStyles.Content]} {...this.numberOfLines}>
+          <View style={[itemStyles.body, itemStyles.column]}>
+            <CellBodyText style={[itemStyles.bodyText]} {...this.numberOfLines}>
               {children}
-            </Text>
+            </CellBodyText>
           </View>
         )
       }
     }
     return contentDom
   }
-  renderBodyExtra = () => {
+  renderExtra = () => {
     const { styles, extra } = this.props
     const itemStyles = styles! // assert none-null none-undefined
     let extraDom
     if (extra) {
       extraDom = (
-        <View style={[itemStyles.column]}>
-          <Text style={[itemStyles.Extra]} {...this.numberOfLines}>
+        <View style={[itemStyles.extra, itemStyles.column]}>
+          <Text style={[itemStyles.extraText]} {...this.numberOfLines}>
             {extra}
           </Text>
         </View>
@@ -101,7 +109,7 @@ export default class CellItem extends React.Component<ListItemProps, any> {
               tempExtraDom.push(
                 <Text
                   {...this.numberOfLines}
-                  style={[itemStyles.Extra]}
+                  style={[itemStyles.extraText]}
                   key={`${index}-children`}
                 >
                   {el}
@@ -111,7 +119,11 @@ export default class CellItem extends React.Component<ListItemProps, any> {
               tempExtraDom.push(el)
             }
           })
-          extraDom = <View style={[itemStyles.column]}>{tempExtraDom}</View>
+          extraDom = (
+            <View style={[itemStyles.extra, itemStyles.column]}>
+              {tempExtraDom}
+            </View>
+          )
         } else {
           extraDom = extra
         }
@@ -163,8 +175,8 @@ export default class CellItem extends React.Component<ListItemProps, any> {
   renderItemFooter = () => {
     return null
   }
-  renderItemBody = () => {
-    const { styles, multipleLine, align ,bodyStyle} = this.props
+  renderItemLine = () => {
+    const { styles, multipleLine, align, bodyStyle } = this.props
     const itemStyles = styles! // assert none-null none-undefined
 
     let alignStyle = {}
@@ -185,12 +197,12 @@ export default class CellItem extends React.Component<ListItemProps, any> {
           itemStyles.Line,
           multipleLine && itemStyles.multipleLine,
           multipleLine && alignStyle,
-          bodyStyle
         ]}
       >
-        {this.renderBodyContent()}
-        {this.renderBodyExtra()}
+        {this.renderBody()}
+        {this.renderExtra()}
         {this.renderArrowView()}
+        {this.renderItemFooter()}
       </View>
     )
   }
@@ -249,8 +261,7 @@ export default class CellItem extends React.Component<ListItemProps, any> {
       >
         <View {...restProps} style={[itemStyles.Item, style]}>
           {this.renderItemHeader()}
-          {this.renderItemBody()}
-          {this.renderItemFooter()}
+          {this.renderItemLine()}
         </View>
       </TouchableWithFallback>
     )

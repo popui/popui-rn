@@ -57,7 +57,7 @@ function CellItemContentRow(props: CellContentProps) {
   return childrenWithProps
 }
 
-function CellItem(props: CellProps) {
+function Cell(props: CellProps) {
   const {
     access,
     vcode,
@@ -93,4 +93,4 @@ function CellItem(props: CellProps) {
     </TouchableWithFallback>
   )
 }
-export default CellItem
+export default Cell

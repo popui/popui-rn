@@ -26,14 +26,6 @@ export default class CellScreen extends React.Component<IProps, any> {
         </Cells>
 
         <GapH />
-        <Cells>
-          <Cell>
-            <CellBody>标题文字234</CellBody>
-            <CellFooter>说明文字</CellFooter>
-          </Cell>
-        </Cells>
-
-        <GapH />
         <Cells header="带图标、说明的列表项">
           <Cell>
             <CellHeader>

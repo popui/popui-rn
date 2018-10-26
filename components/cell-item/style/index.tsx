@@ -1,81 +1,74 @@
-import { StyleSheet } from 'react-native';
-import themeVars from '../../style/themes/default';
+import { StyleSheet } from 'react-native'
+import themeVars from '../../style/themes/default'
 
 export default {
   underlayColor: {
     backgroundColor: themeVars.BgColorActive,
   },
-  Header: {
-    fontSize: themeVars.font_size_base,
-    color: themeVars.color_text_caption,
-    paddingHorizontal: themeVars.h_spacing_lg,
-    paddingTop: themeVars.v_spacing_lg,
-    paddingBottom: themeVars.v_spacing_md,
-    backgroundColor: themeVars.fill_body,
+  isFirstCell: {
+    borderTopWidth: 0,
   },
-  Footer: {
-    fontSize: themeVars.font_size_base,
-    color: themeVars.color_text_caption,
-    paddingHorizontal: themeVars.h_spacing_lg,
-    paddingVertical: themeVars.v_spacing_md,
-    backgroundColor: themeVars.fill_body,
+  vcodeCell: {
+    paddingTop: 0,
+    paddingBottom: 0,
+    paddingRight: 0,
   },
-  Body: {
-    backgroundColor: themeVars.fill_base,
-    borderTopWidth: StyleSheet.hairlineWidth,
-    borderTopColor: themeVars.border_color_base,
-  },
-  BodyBottomLine: {
-    position: 'absolute',
-    bottom: 0,
-    left: 0,
-    right: 0,
-    height: 1,
-    backgroundColor: themeVars.fill_base,
-    borderBottomWidth: StyleSheet.hairlineWidth,
-    borderBottomColor: themeVars.border_color_base,
+  disabledCell: {
+    opacity: 0.5,
   },
   Item: {
     flexGrow: 1,
-    alignItems: 'center',
     flexDirection: 'row',
-    paddingLeft: themeVars.h_spacing_lg,
+    alignItems: 'center',
+    // marginLeft: themeVars.CellGapH, // 以避免左边出现 border
+    paddingLeft: themeVars.CellGapH,
+    paddingRight: themeVars.CellGapH,
+    // borderTopWidth: StyleSheet.hairlineWidth, // 每个 Cell 都有 borderTop
+    // borderColor: themeVars.CellBorderColor,
     backgroundColor: themeVars.fill_base,
   },
   Line: {
     flex: 1,
     flexDirection: 'row',
     alignItems: 'center',
-    paddingRight: themeVars.h_spacing_lg,
-    paddingVertical: themeVars.v_spacing_sm,
+    paddingTop: themeVars.CellGapV,
+    paddingBottom: themeVars.CellGapV,
+    // marginLeft: themeVars.CellGapH, // 以避免左边出现 border
+    // paddingRight: themeVars.h_spacing_lg,
+    // paddingVertical: themeVars.v_spacing_sm,
     minHeight: themeVars.list_item_height,
     borderBottomWidth: StyleSheet.hairlineWidth,
-    borderBottomColor: themeVars.border_color_base,
+    borderBottomColor: themeVars.CellBorderColor,
+    // borderBottomColor: themeVars.border_color_base,
   },
   Thumb: {
     width: themeVars.icon_size_md,
     height: themeVars.icon_size_md,
     marginRight: themeVars.h_spacing_lg,
   },
-  Content: {
-    color: themeVars.color_text_base,
-    fontSize: themeVars.font_size_heading,
-    textAlignVertical: 'center',
+  body:{
+    flex: 1,
+    flexDirection: 'column',
+    justifyContent: 'center',
+    alignItems: 'flex-start',
   },
-  Extra: {
+  bodyText: {
+    color: themeVars.color_text_base,
+    textAlignVertical: 'center',
+    fontSize: themeVars.CellFontSize,
+    marginTop: (themeVars.CellLineHeight - themeVars.CellFontSize) / 2,
+    marginBottom: (themeVars.CellLineHeight - themeVars.CellFontSize) / 2,
+  },
+  extra:{
+
+  },
+  extraText: {
     color: themeVars.color_text_caption,
-    fontSize: themeVars.font_size_heading,
+    fontSize: themeVars.CellFontSize,
     textAlign: 'right',
     textAlignVertical: 'center',
-  },
-  Brief: {
-    minHeight: themeVars.font_size_icontext,
-  },
-  BriefText: {
-    color: themeVars.color_text_caption,
-    fontSize: themeVars.font_size_subhead,
-    paddingTop: themeVars.v_spacing_xs,
-    textAlignVertical: 'center',
+    marginTop: (themeVars.CellLineHeight - themeVars.CellFontSize) / 2,
+    marginBottom: (themeVars.CellLineHeight - themeVars.CellFontSize) / 2,
   },
   Arrow: {
     width: 8,
@@ -99,4 +92,4 @@ export default {
     flex: 1,
     flexDirection: 'column',
   },
-};
+}

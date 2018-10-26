@@ -5,6 +5,7 @@ import CellExample from 'popui-rn/components/cell/demo/basic'
 import CellListExample from 'popui-rn/components/cell-list/demo/basic'
 // import { ActionSheet2 } from 'popui-rn'
 import ResourceLoader from '../common/ResourceLoader'
+import {GapH} from 'popui-rn'
 
 export default class App extends React.Component {
   render() {
@@ -14,6 +15,7 @@ export default class App extends React.Component {
           <ScrollView>
             <CellExample />
             {/* <ListExample /> */}
+            <GapH size="xxl"/>
             <CellListExample />
           </ScrollView>
         </SafeAreaView>

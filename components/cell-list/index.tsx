@@ -3,8 +3,8 @@ import React from 'react'
 import { StyleProp, StyleSheet,  View, ViewStyle } from 'react-native'
 import { CellListPropsType } from './PropsType'
 import cellStyle from './style/index'
-import CellsTitle from '../cells-title'
-import CellsTips from '../cells-tips'
+import CellsListTitle from '../cell-list-title'
+import CellsListTips from '../cells-list-tips'
 
 export interface CellsProps extends CellListPropsType {
   styles?: typeof cellStyle
@@ -23,7 +23,7 @@ export default class CellList extends React.Component<CellsProps, any> {
       return header()
     }
     if (typeof header === 'string') {
-      return <CellsTitle>{header}</CellsTitle>
+      return <CellsListTitle>{header}</CellsListTitle>
     }
     return null
   }
@@ -33,7 +33,7 @@ export default class CellList extends React.Component<CellsProps, any> {
       return footer()
     }
     if (typeof footer === 'string') {
-      return <CellsTips>{footer}</CellsTips>
+      return <CellsListTips>{footer}</CellsListTips>
     }
     return null
   }
