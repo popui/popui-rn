@@ -1,5 +1,5 @@
 import React from 'react'
-import { StyleSheet, Text, ViewPropTypes, ViewStyle } from 'react-native'
+import { StyleSheet, Text, TextProps, ViewStyle } from 'react-native'
 import themeVars from '../style/themes/default'
 
 const styles = StyleSheet.create({
@@ -11,25 +11,21 @@ const styles = StyleSheet.create({
   },
 })
 
-export interface CellLabelProps {
+export interface CellLabelProps extends TextProps {
   style?: ViewStyle
   children?: string
 }
 
 export interface CellLabelState {}
 
-export default class CellLabel extends React.Component<
-  CellLabelProps,
-  CellLabelState
-> {
-  public render() {
-    const { style, children, ...others } = this.props
-    // 最小是4
-    // const textLength = children!.length > 4 ?children!.length:4
-    return (
-      <Text style={[styles.label, style]} numberOfLines={1} {...others}>
-        {children}
-      </Text>
-    )
-  }
+function CellLabel({ style, children, ...others }: CellLabelProps) {
+  // 最大是4
+  // const textLength = children!.length > 4 ?children!.length:4
+  return (
+    <Text style={[styles.label, style]} numberOfLines={1} {...others}>
+      {children}
+    </Text>
+  )
 }
+
+export default CellLabel

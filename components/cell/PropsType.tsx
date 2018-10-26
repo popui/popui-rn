@@ -1,6 +1,6 @@
-import { ViewStyle } from 'react-native'
+import { ViewStyle,TouchableWithoutFeedbackProps } from 'react-native'
 
-export interface CellProps {
+export interface CellProps extends TouchableWithoutFeedbackProps {
   isFirst?: boolean
   access?: boolean
   vcode?: boolean

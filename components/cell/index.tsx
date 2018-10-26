@@ -6,13 +6,14 @@ import { CellProps, CellContentProps } from './PropsType'
 
 const styles = StyleSheet.create({
   cell: {
+    flexGrow: 1,
     flexDirection: 'row',
     alignItems: 'center',
-    marginLeft: themeVars.CellGapH,
+    marginLeft: themeVars.CellGapH, // 以避免左边出现 border
     paddingTop: themeVars.CellGapV,
     paddingBottom: themeVars.CellGapV,
     paddingRight: themeVars.CellGapH,
-    borderTopWidth: StyleSheet.hairlineWidth,
+    borderTopWidth: StyleSheet.hairlineWidth,// 每个 Cell 都有 borderTop
     borderColor: themeVars.CellBorderColor,
   },
   isFirstCell: {
@@ -56,7 +57,7 @@ function CellContent(props: CellContentProps) {
   return childrenWithProps
 }
 
-function Cell(props: CellProps) {
+function CellItem(props: CellProps) {
   const {
     access,
     vcode,
@@ -92,4 +93,4 @@ function Cell(props: CellProps) {
     </TouchableWithFallback>
   )
 }
-export default Cell
+export default CellItem
