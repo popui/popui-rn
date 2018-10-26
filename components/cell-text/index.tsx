@@ -1,8 +1,7 @@
 // import PropTypes from 'prop-types'
 import React from 'react'
-import { StyleSheet,TextProps } from 'react-native'
+import { StyleSheet,TextProps,Text } from 'react-native'
 import themeVars from '../style/themes/default'
-import Text from '../text'
 
 export interface CellTextPropsType extends TextProps {
   children?: any
