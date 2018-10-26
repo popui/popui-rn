@@ -11,7 +11,7 @@ export interface CellListItemPropsType {
   disabled?: boolean
   multipleLine?: boolean
   children?: ReactNode
-  thumb?: ReactNode | null
+  header?: ReactNode | null
   extra?: ReactNode
   arrow?: 'horizontal' | 'down' | 'up' | 'empty' | ''
   wrap?: boolean

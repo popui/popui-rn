@@ -1558,7 +1558,7 @@ exports[`renders ./components/list/demo/basic.tsx correctly 1`] = `
                     ]
                   }
                 >
-                  thumb
+                  header
                 </Text>
               </View>
             </View>
@@ -1666,7 +1666,7 @@ exports[`renders ./components/list/demo/basic.tsx correctly 1`] = `
                     ]
                   }
                 >
-                  thumb
+                  header
                 </Text>
               </View>
               <Image

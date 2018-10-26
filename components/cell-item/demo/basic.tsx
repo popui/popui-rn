@@ -76,14 +76,14 @@ export default class BasicListExample extends React.Component<any, any> {
           </Item>
         </List>
         <List renderHeader={() => '带缩略图'}>
-          <Item thumb="https://os.alipayobjects.com/rmsportal/mOoPurdIfmcuqtr.png">
-            thumb
+          <Item header="https://os.alipayobjects.com/rmsportal/mOoPurdIfmcuqtr.png">
+            header
           </Item>
           <Item
-            thumb="https://os.alipayobjects.com/rmsportal/mOoPurdIfmcuqtr.png"
+            header="https://os.alipayobjects.com/rmsportal/mOoPurdIfmcuqtr.png"
             arrow="horizontal"
           >
-            thumb
+            header
           </Item>
           <Item
             extra={

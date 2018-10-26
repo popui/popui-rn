@@ -80,7 +80,7 @@ export default class CellItem extends React.Component<ListItemProps, any> {
     }
     return contentDom
   }
-  renderFooter = () => {
+  renderExtra = () => {
     const { styles, extra } = this.props
     const itemStyles = styles! // assert none-null none-undefined
     let extraDom
@@ -147,24 +147,25 @@ export default class CellItem extends React.Component<ListItemProps, any> {
     }
     return (arrEnum as any)[arrow] || <View style={itemStyles.Arrow} />
   }
-  renderItemView = () => {
-    const {
-      styles,
-      children,
-      multipleLine,
-      thumb,
-      extra,
-      arrow,
-      style,
-      onClick,
-      onPressIn,
-      onPressOut,
-      wrap,
-      disabled,
-      align,
-      ...restProps
-    } = this.props
+  renderItemHeader = () => {
+    const { header, styles, multipleLine } = this.props
     const itemStyles = styles! // assert none-null none-undefined
+
+    if (typeof header === 'string') {
+      return (
+        <Image
+          source={{ uri: header }}
+          style={[itemStyles.Thumb, multipleLine && itemStyles.multipleThumb]}
+        />
+      )
+    }
+    return header
+  }
+  renderItemFooter = () => {}
+  renderItemBody = () => {
+    const { styles, multipleLine, align } = this.props
+    const itemStyles = styles! // assert none-null none-undefined
+
     let alignStyle = {}
 
     if (align === 'top') {
@@ -176,31 +177,22 @@ export default class CellItem extends React.Component<ListItemProps, any> {
         alignItems: 'flex-end',
       }
     }
-    const itemView = (
-      <View {...restProps} style={[itemStyles.Item, style]}>
-        {typeof thumb === 'string' ? (
-          <Image
-            source={{ uri: thumb }}
-            style={[itemStyles.Thumb, multipleLine && itemStyles.multipleThumb]}
-          />
-        ) : (
-          thumb
-        )}
-        <View
-          style={[
-            itemStyles.Line,
-            multipleLine && itemStyles.multipleLine,
-            multipleLine && alignStyle,
-          ]}
-        >
-          {this.renderContent()}
-          {this.renderFooter()}
-          {this.renderArrowView()}
-        </View>
+
+    return (
+      <View
+        style={[
+          itemStyles.Line,
+          multipleLine && itemStyles.multipleLine,
+          multipleLine && alignStyle,
+        ]}
+      >
+        {this.renderContent()}
+        {this.renderExtra()}
+        {this.renderArrowView()}
       </View>
     )
-    return itemView
   }
+
   setnumberOfLines = () => {
     let numberOfLines = {}
     if (this.props.wrap === false) {
@@ -211,7 +203,22 @@ export default class CellItem extends React.Component<ListItemProps, any> {
     this.numberOfLines = numberOfLines
   }
   render() {
-    const { styles, onClick, onPressIn, onPressOut, disabled } = this.props
+    const {
+      styles,
+      children,
+      multipleLine,
+      header,
+      extra,
+      arrow,
+      style,
+      onClick,
+      onPressIn,
+      onPressOut,
+      wrap,
+      disabled,
+      align,
+      ...restProps
+    } = this.props
     const itemStyles = styles! // assert none-null none-undefined
     this.setnumberOfLines()
 
@@ -229,6 +236,7 @@ export default class CellItem extends React.Component<ListItemProps, any> {
         activeOpacity: 1,
       }
     }
+
     return (
       <TouchableWithFallback
         disabled={disabled}
@@ -237,7 +245,11 @@ export default class CellItem extends React.Component<ListItemProps, any> {
         onPressIn={onPressIn}
         onPressOut={onPressOut}
       >
-        {this.renderItemView()}
+        <View {...restProps} style={[itemStyles.Item, style]}>
+          {this.renderItemHeader()}
+          {this.renderItemBody()}
+          {this.renderItemFooter()}
+        </View>
       </TouchableWithFallback>
     )
   }
