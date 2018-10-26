@@ -1,6 +1,6 @@
-import PropTypes from 'prop-types'
+// import PropTypes from 'prop-types'
 import React from 'react'
-import { StyleSheet, View, ViewPropTypes } from 'react-native'
+import { StyleSheet, View } from 'react-native'
 import themeVars from '../style/themes/default'
 
 const styles = StyleSheet.create({
@@ -17,13 +17,13 @@ const styles = StyleSheet.create({
 })
 
 const CellHeader = ({ error, children, style, ...others }) => {
-  const childrenWithProps = React.Children.map(children, (child) => {
-    if (child.type.displayName === 'Image' && !child.props.style) {
-      return React.cloneElement(child, {
-        style: [styles.image, child.props.style],
-      })
-    }
-    if (error && child.type.name === 'Label') {
+  const childrenWithProps = React.Children.map(children, (child: any) => {
+    // if (child.type.displayName === 'Image' && !child.props.style) {
+    //   return React.cloneElement(child, {
+    //     style: [styles.image, child.props.style],
+    //   })
+    // }
+    if (error && child.type.name === 'CellLabel') {
       return React.cloneElement(child, {
         style: [child.props.style, styles.error],
       })
@@ -38,10 +38,10 @@ const CellHeader = ({ error, children, style, ...others }) => {
   )
 }
 
-CellHeader.propTypes = {
-  error: PropTypes.bool,
-  children: PropTypes.node,
-  style: ViewPropTypes.style,
-}
+// CellHeader.propTypes = {
+//   error: PropTypes.bool,
+//   children: PropTypes.node,
+//   style: ViewPropTypes.style,
+// }
 
 export default CellHeader

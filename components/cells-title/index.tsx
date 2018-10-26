@@ -1,6 +1,6 @@
 // import PropTypes from 'prop-types'
 import React from 'react'
-import { StyleSheet, Text,TextStyle } from 'react-native'
+import { StyleSheet, Text, TextStyle } from 'react-native'
 import themeVars from '../style/themes/default'
 
 const defaultStyles = StyleSheet.create({
@@ -14,18 +14,23 @@ const defaultStyles = StyleSheet.create({
     paddingHorizontal: themeVars.CellGapH,
     fontSize: themeVars.CellTipsFontSize,
     color: themeVars.TextColorGray,
-  } as TextStyle
+  } as TextStyle,
 })
 
 const CellsTitle = ({
   children,
   style,
   styles: stylesInProps,
+  numberOfLines = 1, // 默认单行
   ...others
 }: CellsTitlePropsType) => {
   const styles = stylesInProps || defaultStyles
   return (
-    <Text style={[styles.cellsTitle, style]} {...others}>
+    <Text
+      style={[styles.cellsTitle, style]}
+      numberOfLines={numberOfLines}
+      {...others}
+    >
       {children}
     </Text>
   )
@@ -34,6 +39,7 @@ export interface CellsTitlePropsType {
   children?: any
   styles?: any
   style?: any
+  numberOfLines?: number
 }
 
 export default CellsTitle

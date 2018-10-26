@@ -16,20 +16,25 @@ const defaultStyles = create({
       ),
     },
     // backgroundColor: themeVars.CellBg,
-  }
+  },
 })
 
 const CellsTips = ({
   children,
   style,
   styles: stylesInProps,
+  numberOfLines = 1, // 默认单行
   ...others
 }: CellsTipsPropsType) => {
-  const styles = stylesInProps || defaultStyles;
+  const styles = stylesInProps || defaultStyles
   return (
-    <Text style={[styles.cellsTips, style]} {...others}>
-    {children}
-  </Text>
+    <Text
+      style={[styles.cellsTips, style]}
+      numberOfLines={numberOfLines}
+      {...others}
+    >
+      {children}
+    </Text>
   )
 }
 
@@ -37,7 +42,7 @@ export interface CellsTipsPropsType {
   children?: any
   styles?: any
   style?: any
+  numberOfLines?: number
 }
-
 
 export default CellsTips

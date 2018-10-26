@@ -33,11 +33,6 @@ export default class CellFooter extends React.Component<
   CellFooterProps,
   CellFooterState
 > {
-  constructor(props: CellFooterProps) {
-    super(props)
-
-    this.state = {}
-  }
   private renderChildrenWithProps = () => {
     const { children, style, access, ...others } = this.props
     const childrenWithProps = React.Children.map(children, (child: any) => {
@@ -61,6 +56,7 @@ export default class CellFooter extends React.Component<
     })
     return childrenWithProps
   }
+
   public render() {
     const { style, access } = this.props
     const cellFooterStyle = style

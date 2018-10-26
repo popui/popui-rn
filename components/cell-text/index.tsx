@@ -33,9 +33,4 @@ const CellText = ({
   </Text>
 )
 
-// CellText.propTypes = {
-//   children: PropTypes.node,
-//   style: Text.propTypes.style,
-// }
-
 export default CellText

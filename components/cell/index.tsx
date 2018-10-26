@@ -31,7 +31,7 @@ const styles = StyleSheet.create({
 
 export interface CellState {}
 
-function CellContent(props: CellContentProps) {
+function CellItemContentRow(props: CellContentProps) {
   const { access, error, children } = props
   const childrenWithProps = React.Children.map(children, (child: any) => {
     if (!child) {
@@ -84,7 +84,7 @@ function CellItem(props: CellProps) {
           disabled ? styles.disabledCell : null,
         ]}
       >
-        {CellContent({
+        {CellItemContentRow({
           access,
           error,
           children,
