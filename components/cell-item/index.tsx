@@ -1,18 +1,12 @@
 /* tslint:disable:jsx-no-multiline-js */
 import React from 'react'
 
-import {
-  Image,
-  StyleProp,
-  StyleSheet,
-  View,
-  ViewStyle,
-} from 'react-native'
+import { Image, StyleProp, StyleSheet, View, ViewStyle } from 'react-native'
 import { CellListItemPropsType } from './PropsType'
 import listItemStyle from './style/index'
 import TouchableWithFallback from '../touchable-with-fallback'
 import CellItemText from '../cell-item-text'
-import CellItemFooter from '../cell-item-footer';
+import CellItemFooter from '../cell-item-footer'
 export interface ListItemProps extends CellListItemPropsType {
   styles?: {
     underlayColor: {}
@@ -22,7 +16,7 @@ export interface ListItemProps extends CellListItemPropsType {
     extra: {}
     extraText: {}
     Arrow: {}
-    arrowContainer:{},
+    arrowContainer: {}
     ArrowV: {}
     Item: {}
     Thumb: {}
@@ -45,7 +39,7 @@ export default class CellItem extends React.Component<ListItemProps, any> {
     styles: listItemStyles,
   }
   private numberOfLinesProp: any
-  private underlayColorProp:any
+  private underlayColorProp: any
   renderBody = () => {
     const { styles, children } = this.props
     const itemStyles = styles! // assert none-null none-undefined
@@ -58,10 +52,7 @@ export default class CellItem extends React.Component<ListItemProps, any> {
           tempContentDom.push(el)
         } else {
           tempContentDom.push(
-            <CellItemText
-              {...this.numberOfLinesProp}
-              key={`${index}-children`}
-            >
+            <CellItemText {...this.numberOfLinesProp} key={`${index}-children`}>
               {el}
             </CellItemText>
           )
@@ -80,9 +71,7 @@ export default class CellItem extends React.Component<ListItemProps, any> {
       } else {
         contentDom = (
           <View style={[itemStyles.body, itemStyles.column]}>
-            <CellItemText {...this.numberOfLinesProp}>
-              {children}
-            </CellItemText>
+            <CellItemText {...this.numberOfLinesProp}>{children}</CellItemText>
           </View>
         )
       }
@@ -96,7 +85,10 @@ export default class CellItem extends React.Component<ListItemProps, any> {
     if (extra) {
       extraDom = (
         <View style={[itemStyles.extra, itemStyles.column]}>
-          <CellItemText style={[itemStyles.extraText]} {...this.numberOfLinesProp}>
+          <CellItemText
+            style={[itemStyles.extraText]}
+            {...this.numberOfLinesProp}
+          >
             {extra}
           </CellItemText>
         </View>
@@ -109,7 +101,8 @@ export default class CellItem extends React.Component<ListItemProps, any> {
             if (typeof el === 'string') {
               tempExtraDom.push(
                 <CellItemText
-                style={[itemStyles.extraText]}ƒ
+                  style={[itemStyles.extraText]}
+                  ƒ
                   {...this.numberOfLinesProp}
                   key={`${index}-children`}
                 >
@@ -158,7 +151,7 @@ export default class CellItem extends React.Component<ListItemProps, any> {
         />
       ),
     }
-    return <View style={itemStyles.arrowContainer} >{arrEnum[arrow]}</View>
+    return <View style={itemStyles.arrowContainer}>{arrEnum[arrow]}</View>
   }
   renderItemHeader = () => {
     const { header, styles, multipleLine } = this.props
@@ -174,11 +167,11 @@ export default class CellItem extends React.Component<ListItemProps, any> {
     return header
   }
   renderItemFooter = () => {
-    const {footer} = this.props
-    return <CellItemFooter >{footer}</CellItemFooter>
+    const { footer } = this.props
+    return <CellItemFooter>{footer}</CellItemFooter>
   }
   renderItemLineView = () => {
-    const { styles, multipleLine, align, isLast,bodyStyle } = this.props
+    const { styles, multipleLine, align, isLast, bodyStyle } = this.props
     const itemStyles = styles! // assert none-null none-undefined
 
     let alignStyle = {}
@@ -199,7 +192,7 @@ export default class CellItem extends React.Component<ListItemProps, any> {
           itemStyles.Line,
           multipleLine && itemStyles.multipleLine,
           multipleLine && alignStyle,
-          isLast?{borderBottomWidth:0}:null
+          isLast ? { borderBottomWidth: 0 } : null,
         ]}
       >
         {this.renderBody()}
@@ -211,10 +204,10 @@ export default class CellItem extends React.Component<ListItemProps, any> {
   }
 
   buildProps = () => {
-    const { disabled,onClick,styles} = this.props
+    const { disabled, arrow, styles } = this.props
     const itemStyles = styles! // assert none-null none-undefined
 
-    let numberOfLinesProps = {}      // 默认不设置 numberOfLines
+    let numberOfLinesProps = {} // 默认不设置 numberOfLines
     if (!this.props.wrap) {
       numberOfLinesProps = {
         numberOfLines: 1,
@@ -222,21 +215,21 @@ export default class CellItem extends React.Component<ListItemProps, any> {
     }
     this.numberOfLinesProp = numberOfLinesProps
 
-    let underlayColorProp = {}
+    // let underlayColorProp = {}
 
-    if (!disabled && onClick) {
-      // 可以点击
-      underlayColorProp = {
-        underlayColor: StyleSheet.flatten(itemStyles.underlayColor)
-          .backgroundColor,
-        activeOpacity: 0.5,
-      }
-    } else {
-      underlayColorProp = {
-        activeOpacity: 1,
-      }
-    }
-    this.underlayColorProp = underlayColorProp
+    // if (!disabled && arrow) {
+    //   // 可以点击
+    //   underlayColorProp = {
+    //     underlayColor: StyleSheet.flatten(itemStyles.underlayColor)
+    //       .backgroundColor,
+    //     activeOpacity: 0.5,
+    //   }
+    // } else {
+    //   underlayColorProp = {
+    //     activeOpacity: 1,
+    //   }
+    // }
+    // this.underlayColorProp = underlayColorProp
   }
   render() {
     const {
@@ -257,10 +250,16 @@ export default class CellItem extends React.Component<ListItemProps, any> {
     } = this.props
     const itemStyles = styles! // assert none-null none-undefined
     this.buildProps()
+    console.log("render",{
+      extra,
+      disabled,
+      arrow,
+      onClick
+    })
     return (
       <TouchableWithFallback
         disabled={disabled}
-        {...this.underlayColorProp}
+        // {...this.underlayColorProp}
         onPress={onClick}
         onPressIn={onPressIn}
         onPressOut={onPressOut}

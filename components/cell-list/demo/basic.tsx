@@ -42,7 +42,6 @@ export default class BasicCellListExample extends React.Component<any, any> {
 
         <CellList header="带说明的列表项">
           <CellItem
-            disabled
             extra="箭头向右"
             arrow="horizontal"
             onClick={() => {}}
