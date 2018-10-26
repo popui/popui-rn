@@ -42,7 +42,7 @@ export default class CellItem extends React.Component<ListItemProps, any> {
     styles: listItemStyles,
   }
   private numberOfLines: any
-  renderContent = () => {
+  renderBodyContent = () => {
     const { styles, children } = this.props
     const itemStyles = styles! // assert none-null none-undefined
 
@@ -80,7 +80,7 @@ export default class CellItem extends React.Component<ListItemProps, any> {
     }
     return contentDom
   }
-  renderExtra = () => {
+  renderBodyExtra = () => {
     const { styles, extra } = this.props
     const itemStyles = styles! // assert none-null none-undefined
     let extraDom
@@ -150,7 +150,6 @@ export default class CellItem extends React.Component<ListItemProps, any> {
   renderItemHeader = () => {
     const { header, styles, multipleLine } = this.props
     const itemStyles = styles! // assert none-null none-undefined
-
     if (typeof header === 'string') {
       return (
         <Image
@@ -161,9 +160,11 @@ export default class CellItem extends React.Component<ListItemProps, any> {
     }
     return header
   }
-  renderItemFooter = () => {}
+  renderItemFooter = () => {
+    return null
+  }
   renderItemBody = () => {
-    const { styles, multipleLine, align } = this.props
+    const { styles, multipleLine, align ,bodyStyle} = this.props
     const itemStyles = styles! // assert none-null none-undefined
 
     let alignStyle = {}
@@ -184,10 +185,11 @@ export default class CellItem extends React.Component<ListItemProps, any> {
           itemStyles.Line,
           multipleLine && itemStyles.multipleLine,
           multipleLine && alignStyle,
+          bodyStyle
         ]}
       >
-        {this.renderContent()}
-        {this.renderExtra()}
+        {this.renderBodyContent()}
+        {this.renderBodyExtra()}
         {this.renderArrowView()}
       </View>
     )
@@ -241,7 +243,7 @@ export default class CellItem extends React.Component<ListItemProps, any> {
       <TouchableWithFallback
         disabled={disabled}
         {...underlayColor}
-        onPress={onClick ? onClick : undefined}
+        onPress={onClick}
         onPressIn={onPressIn}
         onPressOut={onPressOut}
       >
