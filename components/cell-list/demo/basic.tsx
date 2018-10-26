@@ -65,7 +65,7 @@ export default class BasicCellListExample extends React.Component<any, any> {
             extra={
               <View>
                 extra 内容内容
-                <CellItemBrief style={{ textAlign: 'right' }}>
+                <CellItemBrief>
                 Brief 辅助文字内容
                 </CellItemBrief>
               </View>
@@ -78,6 +78,26 @@ export default class BasicCellListExample extends React.Component<any, any> {
             body 垂直居中对齐
             <CellItemBrief>Brief 辅助文字内容</CellItemBrief>
           </CellItem>
+          <CellItem
+            wrap
+            extra={
+              <View>
+                extra 内容内容文字超长折行文字超长折行文字超长折行文字超长折行文字超长折行文字超长折行文字超长折行
+                <CellItemBrief style={{ textAlign: 'right' }}>
+                Brief 辅助文字内容
+                </CellItemBrief>
+              </View>
+            }
+            multipleLine
+            arrow="horizontal"
+          >
+            body 垂直居中对齐
+            <CellItemBrief>
+              Brief辅助文字内容辅助文字内容辅助文字内容辅助文字内容
+            </CellItemBrief>
+            <CellItemBrief>Brief 辅助文字内容</CellItemBrief>
+          </CellItem>
+
           <CellItem
             wrap
             extra="文字超长折行文字超长折行文字超长折行文字超长折行文字超长折行文字超长折行文字超长折行"
