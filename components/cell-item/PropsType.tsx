@@ -13,4 +13,6 @@ export interface CellListItemPropsType {
   error?: boolean
   platform?: 'android' | 'ios'
   bodyStyle?:any
+  isLast?:boolean
+  footer?:any
 }

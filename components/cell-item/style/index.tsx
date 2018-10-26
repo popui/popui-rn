@@ -52,23 +52,17 @@ export default {
     justifyContent: 'center',
     alignItems: 'flex-start',
   },
-  bodyText: {
-    color: themeVars.color_text_base,
-    textAlignVertical: 'center',
-    fontSize: themeVars.CellFontSize,
-    marginTop: (themeVars.CellLineHeight - themeVars.CellFontSize) / 2,
-    marginBottom: (themeVars.CellLineHeight - themeVars.CellFontSize) / 2,
-  },
   extra:{
 
   },
   extraText: {
     color: themeVars.color_text_caption,
-    fontSize: themeVars.CellFontSize,
     textAlign: 'right',
-    textAlignVertical: 'center',
-    marginTop: (themeVars.CellLineHeight - themeVars.CellFontSize) / 2,
-    marginBottom: (themeVars.CellLineHeight - themeVars.CellFontSize) / 2,
+  },
+  arrowContainer:{
+    flexDirection: 'column',
+    justifyContent: 'center',
+    alignItems: 'center',
   },
   Arrow: {
     width: 8,

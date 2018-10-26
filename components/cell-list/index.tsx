@@ -19,6 +19,9 @@ export default class CellList extends React.Component<CellsProps, any> {
   }
   renderHeader = () => {
     const { header } = this.props
+    console.log("CellList renderHeader",{
+      header
+    })
     if (typeof header === 'function') {
       return header()
     }
@@ -42,11 +45,13 @@ export default class CellList extends React.Component<CellsProps, any> {
     if (!children) {
       return null
     }
+    const childrenLen = React.Children.count(children)
+    const lastIndex = childrenLen-1
     const childrenWithProps = React.Children.map(
       children,
       (child: any, idx: number) => {
-        if (idx === 0) {
-          return React.cloneElement(child, { isFirst: true })
+        if (idx === lastIndex) {
+          return React.cloneElement(child, { isLast: true })
         }
         return child
       }
@@ -59,7 +64,7 @@ export default class CellList extends React.Component<CellsProps, any> {
       return renderBody()
     }
     return (
-      <View style={[styles!.body, bodyStyles]}>
+      <View name="CellListBody" style={[styles!.body, bodyStyles]}>
         {this.renderChildrenItems()}
       </View>
     )

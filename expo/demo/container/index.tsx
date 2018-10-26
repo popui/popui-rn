@@ -14,8 +14,10 @@ export default class App extends React.Component {
         <SafeAreaView style={styles.container}>
           <ScrollView>
             <CellExample />
+
             {/* <ListExample /> */}
-            <GapH size="xxl"/>
+            <GapH size="xxl" />
+
             <CellListExample />
           </ScrollView>
         </SafeAreaView>
