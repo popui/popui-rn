@@ -7,6 +7,8 @@ import listItemStyle from './style/index'
 import TouchableWithFallback from '../touchable-with-fallback'
 import CellItemText from '../cell-item-text'
 import CellItemFooter from '../cell-item-footer'
+import {noopFunc} from '../_util/noop'
+
 export interface ListItemProps extends CellListItemPropsType {
   styles?: {
     underlayColor: {}
@@ -37,6 +39,7 @@ export default class CellItem extends React.Component<ListItemProps, any> {
     multipleLine: false,
     wrap: false,
     styles: listItemStyles,
+    onClick:noopFunc
   }
   private numberOfLinesProp: any
   private underlayColorProp: any
@@ -204,9 +207,6 @@ export default class CellItem extends React.Component<ListItemProps, any> {
   }
 
   buildProps = () => {
-    const { disabled, arrow, styles } = this.props
-    const itemStyles = styles! // assert none-null none-undefined
-
     let numberOfLinesProps = {} // 默认不设置 numberOfLines
     if (!this.props.wrap) {
       numberOfLinesProps = {
@@ -214,22 +214,6 @@ export default class CellItem extends React.Component<ListItemProps, any> {
       }
     }
     this.numberOfLinesProp = numberOfLinesProps
-
-    // let underlayColorProp = {}
-
-    // if (!disabled && arrow) {
-    //   // 可以点击
-    //   underlayColorProp = {
-    //     underlayColor: StyleSheet.flatten(itemStyles.underlayColor)
-    //       .backgroundColor,
-    //     activeOpacity: 0.5,
-    //   }
-    // } else {
-    //   underlayColorProp = {
-    //     activeOpacity: 1,
-    //   }
-    // }
-    // this.underlayColorProp = underlayColorProp
   }
   render() {
     const {
@@ -250,16 +234,13 @@ export default class CellItem extends React.Component<ListItemProps, any> {
     } = this.props
     const itemStyles = styles! // assert none-null none-undefined
     this.buildProps()
-    console.log("render",{
-      extra,
-      disabled,
-      arrow,
-      onClick
-    })
+    let _disabled = disabled
+    if(!arrow){
+      _disabled = true // 不显示箭头就不响应点击
+    }
     return (
       <TouchableWithFallback
-        disabled={disabled}
-        // {...this.underlayColorProp}
+        disabled={_disabled}
         onPress={onClick}
         onPressIn={onPressIn}
         onPressOut={onPressOut}

@@ -15,8 +15,9 @@ export default class BasicCellListExample extends React.Component<any, any> {
         // showsHorizontalScrollIndicator={false}
         // showsVerticalScrollIndicator={false}
       >
-        <CellList header="单个 Item" arrow="horizontal" footer="提示文字">
-          <CellItem extra="extra 说明文字">标题文字</CellItem>
+        <CellList header="单个 Item" footer="提示文字">
+          <CellItem extra="extra 说明文字"  arrow="horizontal"
+          >标题文字</CellItem>
         </CellList>
 
         <CellList header="折行">

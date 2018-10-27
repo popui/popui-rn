@@ -25,7 +25,7 @@ export default {
     paddingRight: themeVars.CellGapH,
     // borderTopWidth: StyleSheet.hairlineWidth, // 每个 Cell 都有 borderTop
     // borderColor: themeVars.CellBorderColor,
-    backgroundColor: themeVars.fill_base,
+    // backgroundColor: themeVars.fill_base,
   },
   Line: {
     flex: 1,

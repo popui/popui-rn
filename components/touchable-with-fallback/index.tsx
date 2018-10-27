@@ -8,10 +8,11 @@ import React from 'react'
 import {
   Platform,
   TouchableHighlight,
+  TouchableOpacity,
   TouchableNativeFeedback,
   TouchableWithoutFeedback,
-  View,
 } from 'react-native'
+import themeVars from '../style/themes/default'
 
 let TouchableComponent: any
 
@@ -37,22 +38,44 @@ export default class TouchableWithFallback extends React.Component<any, any> {
     TouchableComponent.SelectableBackgroundBorderless
   static Ripple = TouchableComponent.Ripple
   static canUseNativeForeground = TouchableComponent.canUseNativeForeground
-
-  render() {
+  renderTouchableWithoutFeedback = () => {
     let {
+      disabled,
       children,
-      style,
       foreground,
       background,
       useForeground,
-      ...props
+      activeOpacity = 0.5,
+      underlayColor = themeVars.BgColorActive,
+      ...restProps
     } = this.props
-
+    return (
+      <TouchableWithoutFeedback {...restProps}>
+        {children}
+      </TouchableWithoutFeedback>
+    )
+  }
+  render() {
+    let {
+      disabled,
+      children,
+      foreground,
+      background,
+      useForeground,
+      activeOpacity = 0.5,
+      underlayColor = themeVars.BgColorActive,
+      ...restProps
+    } = this.props
+    // 如果 disabled, 则不可点击
+    if (disabled) {
+      return this.renderTouchableWithoutFeedback()
+    }
     // Even though it works for TouchableWithoutFeedback and
     // TouchableNativeFeedback with this component, we want
     // the API to be the same for all components so we require
     // exactly one direct child for every touchable type.
     children = React.Children.only(children)
+
     // Android 高版本,TouchableNativeFeedback
     if (TouchableComponent === TouchableNativeFeedback) {
       useForeground =
@@ -65,28 +88,49 @@ export default class TouchableWithFallback extends React.Component<any, any> {
       }
 
       return (
-        <TouchableComponent
-          {...props}
+        <TouchableNativeFeedback
+          {...restProps}
           useForeground={useForeground}
           background={(useForeground && foreground) || background}
         >
-          <View style={style}>{children}</View>
-        </TouchableComponent>
+          {children}
+        </TouchableNativeFeedback>
       )
     }
+
+    if (TouchableComponent === TouchableHighlight) {
+      return (
+        <TouchableHighlight
+          {...restProps}
+          underlayColor={underlayColor}
+          activeOpacity={activeOpacity}
+        >
+          {children}
+        </TouchableHighlight>
+      )
+    }
+
+    if (TouchableComponent === TouchableOpacity) {
+      return (
+        <TouchableOpacity {...restProps} activeOpacity={activeOpacity}>
+          {children}
+        </TouchableOpacity>
+      )
+    }
+
     // 低版本 TouchableWithoutFeedback
     if (TouchableComponent === TouchableWithoutFeedback) {
-      return (
-        <TouchableWithoutFeedback {...props}>
-          <View style={style}>{children}</View>
-        </TouchableWithoutFeedback>
-      )
+      return this.renderTouchableWithoutFeedback()
     }
 
     // 其他其情况, FallBack
     const TouchableFallback = this.props.fallback || TouchableComponent
     return (
-      <TouchableFallback {...props} style={style}>
+      <TouchableFallback
+        {...restProps}
+        underlayColor={underlayColor}
+        activeOpacity={activeOpacity}
+      >
         {children}
       </TouchableFallback>
     )
