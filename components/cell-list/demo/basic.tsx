@@ -11,6 +11,7 @@ import {
   Badge,
   CellBadge,
   CellItemBody,
+  CellItemText
 } from 'popui-rn'
 
 export default class BasicCellListExample extends React.Component<any, any> {
@@ -43,12 +44,13 @@ export default class BasicCellListExample extends React.Component<any, any> {
                 <CellBadge preset="footer">8</CellBadge>
               </CellItemExtra>
             }
-          >
-            <CellItemBody>
-              带图标、说明、Badge
-              <CellBadge preset="body">new</CellBadge>
-            </CellItemBody>
-          </CellItem>
+            renderBody={() => (
+              <CellItemBody>
+                带图标、说明、Badge
+                <CellBadge preset="body">new</CellBadge>
+              </CellItemBody>
+            )}
+          />
 
           <CellItem
             extra="说明文字"
@@ -58,12 +60,19 @@ export default class BasicCellListExample extends React.Component<any, any> {
             带图标、说明、跳转
           </CellItem>
 
-          <CellItem arrow="right">
-            <CellItemBody direction="row">
-              带说明、跳转、Badge
-              <CellBadge preset="header">99+</CellBadge>
-            </CellItemBody>
-          </CellItem>
+          <CellItem
+            error
+            arrow="right"
+            renderBody={() => (
+              <CellItemBody direction="row">
+                <Badge text={198}>
+                  <CellItemText error>
+                  带说明、跳转、Badge
+                  </CellItemText>
+                </Badge>
+              </CellItemBody>
+            )}
+          />
         </CellList>
 
         <CellList header="常用">
@@ -148,16 +157,29 @@ export default class BasicCellListExample extends React.Component<any, any> {
             垂直居中对齐
           </CellItem>
 
-          <CellItem extra="extra 内容内容" multipleLine>
-            <CellItemBody direction="column">
-              垂直居中对齐
-              <CellItemBrief>Brief 辅助文字内容</CellItemBrief>
-            </CellItemBody>
-          </CellItem>
+          <CellItem
+            extra="extra 内容内容"
+            multipleLine
+            renderBody={() => (
+              <CellItemBody direction="column">
+                垂直居中对齐
+                <CellItemBrief>Brief 辅助文字内容</CellItemBrief>
+              </CellItemBody>
+            )}
+          />
 
           <CellItem
             wrap
             error
+            renderBody={() => (
+              <CellItemBody direction="column">
+                垂直居中对齐
+                <CellItemBrief>
+                  Brief辅助文字内容辅助文字内容辅助文字内容辅助文字内容
+                </CellItemBrief>
+                <CellItemBrief>Brief 辅助文字内容</CellItemBrief>
+              </CellItemBody>
+            )}
             extra={
               <CellItemExtra error direction="column">
                 extra 是 CellItemExtra组件.
@@ -169,31 +191,24 @@ export default class BasicCellListExample extends React.Component<any, any> {
             }
             multipleLine
             arrow="right"
-          >
-            <CellItemBody direction="column">
-              垂直居中对齐
-              <CellItemBrief>
-                Brief辅助文字内容辅助文字内容辅助文字内容辅助文字内容
-              </CellItemBrief>
-              <CellItemBrief>Brief 辅助文字内容</CellItemBrief>
-            </CellItemBody>
-          </CellItem>
+          />
 
           <CellItem
             wrap
+            renderBody={() => (
+              <CellItemBody direction="column">
+                顶部对齐
+                <CellItemBrief>
+                  Brief辅助文字内容辅助文字内容辅助文字内容辅助文字内容
+                </CellItemBrief>
+                <CellItemBrief>Brief 辅助文字内容</CellItemBrief>
+              </CellItemBody>
+            )}
             extra="文字超长折行文字超长折行文字超长折行文字超长折行文字超长折行文字超长折行文字超长折行"
             multipleLine
             align="top"
             arrow="right"
-          >
-            <CellItemBody direction="column">
-              顶部对齐
-              <CellItemBrief>
-                Brief辅助文字内容辅助文字内容辅助文字内容辅助文字内容
-              </CellItemBrief>
-              <CellItemBrief>Brief 辅助文字内容</CellItemBrief>
-            </CellItemBody>
-          </CellItem>
+          />
 
           <CellItem
             header="https://os.alipayobjects.com/rmsportal/mOoPurdIfmcuqtr.png"
