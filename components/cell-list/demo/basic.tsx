@@ -38,13 +38,13 @@ export default class BasicCellListExample extends React.Component<any, any> {
           <CellItem
             header="https://weui.io/images/icon_tabbar.png"
             extra={
-              <CellItemExtra direction="row">
+              <CellItemExtra>
                 说明文字
                 <CellBadge preset="footer">8</CellBadge>
               </CellItemExtra>
             }
           >
-            <CellItemBody direction="row">
+            <CellItemBody>
               带图标、说明、Badge
               <CellBadge preset="body">new</CellBadge>
             </CellItemBody>
@@ -132,29 +132,34 @@ export default class BasicCellListExample extends React.Component<any, any> {
           </CellItem>
         </CellList>
 
-        <CellList header="对齐">
+        <CellList header="多行,对齐">
           <CellItem
-            extra={[
-              'extra 是数组',
-              <CellItemBrief style={{ textAlign: 'right' }}>
-                Brief 辅助文字内容
-              </CellItemBrief>,
-            ]}
+            extra={
+              <CellItemExtra direction="column">
+                extra 是数组
+                <CellItemBrief style={{ textAlign: 'right' }}>
+                  Brief 辅助文字内容
+                </CellItemBrief>
+                ,
+              </CellItemExtra>
+            }
             multipleLine
           >
             垂直居中对齐
           </CellItem>
 
           <CellItem extra="extra 内容内容" multipleLine>
-            垂直居中对齐
-            <CellItemBrief>Brief 辅助文字内容</CellItemBrief>
+            <CellItemBody direction="column">
+              垂直居中对齐
+              <CellItemBrief>Brief 辅助文字内容</CellItemBrief>
+            </CellItemBody>
           </CellItem>
 
           <CellItem
             wrap
             error
             extra={
-              <CellItemExtra direction="column">
+              <CellItemExtra error direction="column">
                 extra 是 CellItemExtra组件.
                 内容内容文字超长折行文字超长折行文字超长折行文字超长折行文字超长折行文字超长折行文字超长折行
                 <CellItemBrief style={{ textAlign: 'right' }}>
@@ -165,11 +170,13 @@ export default class BasicCellListExample extends React.Component<any, any> {
             multipleLine
             arrow="right"
           >
-            垂直居中对齐
-            <CellItemBrief>
-              Brief辅助文字内容辅助文字内容辅助文字内容辅助文字内容
-            </CellItemBrief>
-            <CellItemBrief>Brief 辅助文字内容</CellItemBrief>
+            <CellItemBody direction="column">
+              垂直居中对齐
+              <CellItemBrief>
+                Brief辅助文字内容辅助文字内容辅助文字内容辅助文字内容
+              </CellItemBrief>
+              <CellItemBrief>Brief 辅助文字内容</CellItemBrief>
+            </CellItemBody>
           </CellItem>
 
           <CellItem
@@ -179,18 +186,20 @@ export default class BasicCellListExample extends React.Component<any, any> {
             align="top"
             arrow="right"
           >
-            顶部对齐
-            <CellItemBrief>
-              Brief辅助文字内容辅助文字内容辅助文字内容辅助文字内容
-            </CellItemBrief>
-            <CellItemBrief>Brief 辅助文字内容</CellItemBrief>
+            <CellItemBody direction="column">
+              顶部对齐
+              <CellItemBrief>
+                Brief辅助文字内容辅助文字内容辅助文字内容辅助文字内容
+              </CellItemBrief>
+              <CellItemBrief>Brief 辅助文字内容</CellItemBrief>
+            </CellItemBody>
           </CellItem>
 
           <CellItem
             header="https://os.alipayobjects.com/rmsportal/mOoPurdIfmcuqtr.png"
             extra={
-              <CellItemExtra>
-                extra 是 CellItemExtra组件.
+              <CellItemExtra direction="column">
+                extra: CellItemExtra
                 <CellItemBrief style={{ textAlign: 'right' }}>
                   Brief 辅助文字内容
                 </CellItemBrief>

@@ -13,7 +13,7 @@ const CellItemExtra: React.SFC<CellItemExtraProps> = (
     style,
     error,
     numberOfLinesProp,
-    direction = 'column',
+    direction = 'row',
   } = props
 
   if (!children) {

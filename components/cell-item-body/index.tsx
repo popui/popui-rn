@@ -13,7 +13,7 @@ const CellItemBody: React.SFC<CellItemBodyProps> = (
     style,
     error,
     numberOfLinesProp,
-    direction = 'column',
+    direction = 'row',
   } = props
   if (!children) {
     return null
