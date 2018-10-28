@@ -1,4 +1,4 @@
-export interface CellBadgePropsTypes {
+export interface BadgeContentPropsType {
   overflowCount?: number
   dot?: boolean
   header?: boolean
