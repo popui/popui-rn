@@ -6,7 +6,10 @@ export interface CellProps extends TouchableWithoutFeedbackProps {
   vcode?: boolean
   error?: boolean
   disabled?: boolean
-  children?: React.ReactNode
+  // children?: React.ReactNode
+  header?:React.ReactNode
+  body?:React.ReactNode
+  footer?:React.ReactNode
   style?: ViewStyle
 }
 

@@ -16,4 +16,8 @@ export interface CellListItemPropsType {
   bodyStyle?: any
   isLast?: boolean
   footer?: any
+  renderLineView?: () => React.ReactNode
+  renderIcons?: () => React.ReactNode
+  lineViewStyle?: React.CSSProperties
 }
+export interface renderBodyParams {}

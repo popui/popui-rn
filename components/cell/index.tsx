@@ -3,6 +3,7 @@ import { StyleSheet, View, ViewStyle } from 'react-native'
 import themeVars from '../style/themes/default'
 import TouchableWithFallback from '../touchable-with-fallback'
 import { CellProps, CellContentProps } from './PropsType'
+import renderElement from '../_util/slot';
 
 const styles = StyleSheet.create({
   cell: {
@@ -64,7 +65,10 @@ function Cell(props: CellProps) {
     error,
     isFirst,
     disabled,
-    children,
+    // children,
+    header,
+    body,
+    footer,
     style,
     ...others
   } = props
@@ -84,11 +88,14 @@ function Cell(props: CellProps) {
           disabled ? styles.disabledCell : null,
         ]}
       >
-        {CellItemContentRow({
+        {/* {CellItemContentRow({
           access,
           error,
           children,
-        })}
+        })} */}
+        {renderElement(header)}
+        {renderElement(body)}
+        {renderElement(footer)}
       </View>
     </TouchableWithFallback>
   )

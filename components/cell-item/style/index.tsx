@@ -2,21 +2,10 @@ import { StyleSheet } from 'react-native'
 import themeVars from '../../style/themes/default'
 
 export default {
-  underlayColor: {
-    backgroundColor: themeVars.BgColorActive,
-  },
   isFirstCell: {
     borderTopWidth: 0,
   },
-  vcodeCell: {
-    paddingTop: 0,
-    paddingBottom: 0,
-    paddingRight: 0,
-  },
-  disabledCell: {
-    opacity: 0.5,
-  },
-  Item: {
+  cellItem: {
     flexGrow: 1,
     flexDirection: 'row',
     alignItems: 'center',
@@ -27,7 +16,7 @@ export default {
     // borderColor: themeVars.CellBorderColor,
     // backgroundColor: themeVars.fill_base,
   },
-  Line: {
+  cellLineView: {
     flex: 1,
     flexDirection: 'row',
     alignItems: 'center',
@@ -41,49 +30,7 @@ export default {
     borderBottomColor: themeVars.CellBorderColor,
     // borderBottomColor: themeVars.border_color_base,
   },
-  Thumb: {
-    width: themeVars.icon_size_md,
-    height: themeVars.icon_size_md,
-    marginRight: themeVars.h_spacing_lg,
-  },
-  body:{
-    flex: 1,
-    flexDirection: 'column',
-    justifyContent: 'center',
-    alignItems: 'flex-start',
-  },
-  extra:{
-
-  },
-  extraText: {
-    color: themeVars.color_text_caption,
-    textAlign: 'right',
-  },
-  arrowContainer:{
-    flexDirection: 'column',
-    justifyContent: 'center',
-    alignItems: 'center',
-  },
-  Arrow: {
-    width: 8,
-    height: 13,
-    marginLeft: themeVars.h_spacing_md,
-    marginTop: themeVars.v_spacing_xs,
-  },
-  ArrowV: {
-    width: 13,
-    height: 8,
-    marginLeft: themeVars.h_spacing_md,
-  },
   multipleLine: {
     paddingVertical: themeVars.v_spacing_sm,
-  },
-  multipleThumb: {
-    width: themeVars.icon_size_lg,
-    height: themeVars.icon_size_lg,
-  },
-  column: {
-    flex: 1,
-    flexDirection: 'column',
-  },
+  }
 }

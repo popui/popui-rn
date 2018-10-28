@@ -1,11 +1,11 @@
 import * as React from 'react'
-import {View } from 'react-native'
+import { View } from 'react-native'
 import CellItemText from '../cell-item-text'
-import { CellItemBodyProps } from './PropsType'
-import defautlStyles from './style';
+import { CellItemExtraProps } from './PropsType'
+import defautlStyles from './style'
 
-const CellItemBody: React.SFC<CellItemBodyProps> = (
-  props: CellItemBodyProps
+const CellItemExtra: React.SFC<CellItemExtraProps> = (
+  props: CellItemExtraProps
 ) => {
   const {
     children,
@@ -31,6 +31,7 @@ const CellItemBody: React.SFC<CellItemBodyProps> = (
     if (typeof item === 'string') {
       return (
         <CellItemText
+          style={[styles.extraText]}
           key={`${index}-children`}
           error={error}
           {...numberOfLinesProp}
@@ -53,10 +54,10 @@ const CellItemBody: React.SFC<CellItemBodyProps> = (
     })
   }
   return (
-    <View displayName="CellItemBody" style={[styles.body, style]}>
+    <View displayName="CellItemExtra" style={[styles.extra, style]}>
       {content}
     </View>
   )
 }
 
-export default CellItemBody
+export default CellItemExtra

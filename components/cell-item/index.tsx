@@ -5,30 +5,17 @@ import { Image, StyleProp, StyleSheet, View, ViewStyle } from 'react-native'
 import { CellListItemPropsType } from './PropsType'
 import listItemStyle from './style/index'
 import TouchableWithFallback from '../touchable-with-fallback'
-import CellItemText from '../cell-item-text'
+// import CellItemText from '../cell-item-text'
+import CellItemHeader from '../cell-item-header'
+import CellItemBody from '../cell-item-body'
+import CellItemExtra from '../cell-item-extra'
 import CellItemFooter from '../cell-item-footer'
-import {noopFunc} from '../_util/noop'
+import CellItemIcons from '../cell-item-icons'
+import { noopFunc } from '../_util/noop'
 
 export interface ListItemProps extends CellListItemPropsType {
-  styles?: {
-    underlayColor: {}
-    body: {}
-    bodyText: {}
-    column: {}
-    extra: {}
-    extraText: {}
-    Arrow: {}
-    arrowContainer: {}
-    ArrowV: {}
-    Item: {}
-    Thumb: {}
-    multipleThumb: {}
-    Line: {}
-    multipleLine: {}
-  }
+  styles?: any
   onClick?: () => void
-  onPressIn?: () => void
-  onPressOut?: () => void
   style?: StyleProp<ViewStyle>
 }
 
@@ -39,144 +26,91 @@ export default class CellItem extends React.Component<ListItemProps, any> {
     multipleLine: false,
     wrap: false,
     styles: listItemStyles,
-    onClick:noopFunc
+    onClick: noopFunc,
   }
   private numberOfLinesProp: any
   // private underlayColorProp: any
-  renderBody = () => {
-    const { styles, children } = this.props
-    const itemStyles = styles! // assert none-null none-undefined
 
-    let contentDom
-    if (Array.isArray(children)) {
-      const tempContentDom: any[] = []
-      children.forEach((el, index) => {
-        if (React.isValidElement(el)) {
-          tempContentDom.push(el)
-        } else {
-          tempContentDom.push(
-            <CellItemText {...this.numberOfLinesProp} key={`${index}-children`}>
-              {el}
-            </CellItemText>
-          )
-        }
-      })
-      contentDom = (
-        <View style={[itemStyles.body, itemStyles.column]}>
-          {tempContentDom}
-        </View>
-      )
-    } else {
-      if (children && React.isValidElement(children)) {
-        contentDom = (
-          <View style={[itemStyles.body, itemStyles.column]}>{children}</View>
-        )
-      } else {
-        contentDom = (
-          <View style={[itemStyles.body, itemStyles.column]}>
-            <CellItemText {...this.numberOfLinesProp}>{children}</CellItemText>
-          </View>
-        )
-      }
-    }
-    return contentDom
-  }
-  renderExtra = () => {
-    const { styles, extra } = this.props
-    const itemStyles = styles! // assert none-null none-undefined
-    let extraDom
-    if (extra) {
-      extraDom = (
-        <View style={[itemStyles.extra, itemStyles.column]}>
-          <CellItemText
-            style={[itemStyles.extraText]}
-            {...this.numberOfLinesProp}
-          >
-            {extra}
-          </CellItemText>
-        </View>
-      )
-      if (React.isValidElement(extra)) {
-        const extraChildren = (extra.props as any).children
-        if (Array.isArray(extraChildren)) {
-          const tempExtraDom: any[] = []
-          extraChildren.forEach((el, index) => {
-            if (typeof el === 'string') {
-              tempExtraDom.push(
-                <CellItemText
-                  style={[itemStyles.extraText]}
-                  ƒ
-                  {...this.numberOfLinesProp}
-                  key={`${index}-children`}
-                >
-                  {el}
-                </CellItemText>
-              )
-            } else {
-              tempExtraDom.push(el)
-            }
-          })
-          extraDom = (
-            <View style={[itemStyles.extra, itemStyles.column]}>
-              {tempExtraDom}
-            </View>
-          )
-        } else {
-          extraDom = extra
-        }
-      }
-    }
-    return extraDom
-  }
-  renderArrowView = () => {
-    const { arrow } = this.props
-    if (!arrow) {
+  renderHeader = () => {
+    const { header, error, multipleLine } = this.props
+    if (!header) {
       return null
     }
-    const itemStyles = this.props.styles! // assert none-null none-undefined
-    const arrEnum = {
-      horizontal: (
-        <Image
-          source={require('../style/images/arrow.png')}
-          style={itemStyles.Arrow}
-        />
-      ),
-      down: (
-        <Image
-          source={require('../style/images/arrow-down.png')}
-          style={itemStyles.ArrowV}
-        />
-      ),
-      up: (
-        <Image
-          source={require('../style/images/arrow-up.png')}
-          style={itemStyles.ArrowV}
-        />
-      ),
+    if (typeof header === 'function') {
+      return header()
     }
-    return <View style={itemStyles.arrowContainer}>{arrEnum[arrow]}</View>
+    return (
+      <CellItemHeader multipleLine={multipleLine} error={error}>
+        {header}
+      </CellItemHeader>
+    )
   }
-  renderItemHeader = () => {
-    const { header, styles, multipleLine } = this.props
-    const itemStyles = styles! // assert none-null none-undefined
-    if (typeof header === 'string') {
-      return (
-        <Image
-          source={{ uri: header }}
-          style={[itemStyles.Thumb, multipleLine && itemStyles.multipleThumb]}
-        />
-      )
+  renderBody = () => {
+    const { error, body } = this.props
+    if (!body) {
+      return null
     }
-    return header
+    if (typeof body === 'function') {
+      return body()
+    }
+    return (
+      <CellItemBody error={error} numberOfLinesProp={this.numberOfLinesProp}>
+        {body}
+      </CellItemBody>
+    )
   }
-  renderItemFooter = () => {
-    const { footer } = this.props
-    return <CellItemFooter>{footer}</CellItemFooter>
+  renderExtra = () => {
+    const { error, extra } = this.props
+    if (!extra) {
+      return null
+    }
+    if (typeof extra === 'function') {
+      return extra()
+    }
+    return (
+      <CellItemExtra error={error} numberOfLinesProp={this.numberOfLinesProp}>
+        {extra}
+      </CellItemExtra>
+    )
   }
-  renderItemLineView = () => {
-    const { styles, multipleLine, align, isLast, bodyStyle } = this.props
+  renderIcons = () => {
+    const { arrow, error, renderIcons } = this.props
+    if (renderIcons) {
+      return renderIcons()
+    }
+    const props = {
+      arrow,
+      error,
+    }
+    return <CellItemIcons {...props} />
+  }
+  renderFooter = () => {
+    const { footer, error } = this.props
+    if (!footer) {
+      return null
+    }
+    if (typeof footer === 'function') {
+      return footer()
+    }
+    return (
+      <CellItemFooter error={error} numberOfLinesProp={this.numberOfLinesProp}>
+        {footer}
+      </CellItemFooter>
+    )
+  }
+  renderLineView = () => {
+    const {
+      styles,
+      multipleLine,
+      align,
+      isLast,
+      renderLineView,
+      lineViewStyle,
+    } = this.props
+    if (renderLineView) {
+      return renderLineView()
+    }
     const itemStyles = styles! // assert none-null none-undefined
-
     let alignStyle = {}
 
     if (align === 'top') {
@@ -188,20 +122,20 @@ export default class CellItem extends React.Component<ListItemProps, any> {
         alignItems: 'flex-end',
       }
     }
-
     return (
       <View
         style={[
-          itemStyles.Line,
+          itemStyles.cellLineView,
           multipleLine && itemStyles.multipleLine,
           multipleLine && alignStyle,
           isLast ? { borderBottomWidth: 0 } : null,
+          lineViewStyle,
         ]}
       >
         {this.renderBody()}
         {this.renderExtra()}
-        {this.renderArrowView()}
-        {this.renderItemFooter()}
+        {this.renderIcons()}
+        {this.renderFooter()}
       </View>
     )
   }
@@ -225,8 +159,6 @@ export default class CellItem extends React.Component<ListItemProps, any> {
       arrow,
       style,
       onClick,
-      onPressIn,
-      onPressOut,
       wrap,
       disabled,
       align,
@@ -235,19 +167,18 @@ export default class CellItem extends React.Component<ListItemProps, any> {
     const itemStyles = styles! // assert none-null none-undefined
     this.buildProps()
     let _disabled = disabled
-    if(!arrow){
+    if (!arrow) {
       _disabled = true // 不显示箭头就不响应点击
     }
     return (
       <TouchableWithFallback
         disabled={_disabled}
         onPress={onClick}
-        onPressIn={onPressIn}
-        onPressOut={onPressOut}
+        {...restProps}
       >
-        <View {...restProps} style={[itemStyles.Item, style]}>
-          {this.renderItemHeader()}
-          {this.renderItemLineView()}
+        <View style={[itemStyles.cellItem, style]}>
+          {this.renderHeader()}
+          {this.renderLineView()}
         </View>
       </TouchableWithFallback>
     )
