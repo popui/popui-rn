@@ -13,6 +13,7 @@ const CellItemBody: React.SFC<CellItemBodyProps> = (
     style,
     error,
     numberOfLinesProp,
+    direction = 'column',
   } = props
   if (!children) {
     return null
@@ -52,8 +53,12 @@ const CellItemBody: React.SFC<CellItemBodyProps> = (
       index: 0,
     })
   }
+  const containerStyle = [
+    direction == 'row' ? styles.containerRow : styles.containerColumn,
+    style,
+  ]
   return (
-    <View displayName="CellItemBody" style={[styles.body, style]}>
+    <View displayName="CellItemBody" style={containerStyle}>
       {content}
     </View>
   )

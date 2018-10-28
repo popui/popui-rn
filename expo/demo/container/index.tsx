@@ -1,6 +1,6 @@
 import React from 'react'
 import { StyleSheet, SafeAreaView, ScrollView } from 'react-native'
-import CellExample from 'popui-rn/components/cell/demo/basic'
+// import CellExample from 'popui-rn/components/cell/demo/basic'
 // import ListExample from 'popui-rn/components/list/demo/basic'
 import CellListExample from 'popui-rn/components/cell-list/demo/basic'
 // import { ActionSheet2 } from 'popui-rn'
@@ -13,7 +13,7 @@ export default class App extends React.Component {
       <ResourceLoader>
         <SafeAreaView style={styles.container}>
           <ScrollView>
-            <CellExample />
+            {/* <CellExample /> */}
 
             {/* <ListExample /> */}
             <GapH size="xxl" />

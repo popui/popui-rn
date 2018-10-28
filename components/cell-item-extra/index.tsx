@@ -13,7 +13,9 @@ const CellItemExtra: React.SFC<CellItemExtraProps> = (
     style,
     error,
     numberOfLinesProp,
+    direction = 'column',
   } = props
+
   if (!children) {
     return null
   }
@@ -25,9 +27,6 @@ const CellItemExtra: React.SFC<CellItemExtraProps> = (
     item: any
     index?: number
   }) => {
-    if (React.isValidElement(item)) {
-      return item
-    }
     if (typeof item === 'string') {
       return (
         <CellItemText
@@ -40,11 +39,17 @@ const CellItemExtra: React.SFC<CellItemExtraProps> = (
         </CellItemText>
       )
     }
+    // const itemIsValid = React.isValidElement(item)
+    // if(itemIsValid){
+    //   return item
+    // }
+    return item
   }
 
   let content: any
-  if (Array.isArray(children)) {
-    content = children.forEach((el, index) =>
+  const childrenIsArray = Array.isArray(children)
+  if (childrenIsArray) {
+    content = children.map((el, index) =>
       renderChildrenItem({ item: el, index })
     )
   } else {
@@ -53,8 +58,12 @@ const CellItemExtra: React.SFC<CellItemExtraProps> = (
       index: 0,
     })
   }
+  const containerStyle = [
+    direction == 'row' ? styles.containerRow : styles.containerColumn,
+    style,
+  ]
   return (
-    <View displayName="CellItemExtra" style={[styles.extra, style]}>
+    <View displayName="CellItemExtra" style={containerStyle}>
       {content}
     </View>
   )

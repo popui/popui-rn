@@ -5,9 +5,9 @@ export interface CellListItemPropsType {
   disabled?: boolean
   multipleLine?: boolean
   children?: ReactNode
-  header?: ReactNode
-  body?: ReactNode
-  extra?: ReactNode
+  header?: any
+  body?: any
+  extra?: any
   arrow?: 'horizontal' | 'down' | 'up' | 'empty' | ''
   wrap?: boolean
   activeStyle?: React.CSSProperties
