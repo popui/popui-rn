@@ -46,8 +46,8 @@ export default class CellItem extends React.Component<ListItemProps, any> {
     )
   }
   renderBody = () => {
-    const { error, children,renderBody } = this.props
-    if(renderBody){
+    const { error, children, renderBody } = this.props
+    if (renderBody) {
       return renderBody()
     }
     if (!children) {
@@ -170,13 +170,19 @@ export default class CellItem extends React.Component<ListItemProps, any> {
     if (!arrow) {
       _disabled = true // 不显示箭头就不响应点击
     }
+
+    const cellItemStyle = [
+      itemStyles.cellItem,
+      disabled && itemStyles.cellItemDisabled,
+      style,
+    ]
     return (
       <TouchableWithFallback
         disabled={_disabled}
         onPress={onClick}
         {...restProps}
       >
-        <View style={[itemStyles.cellItem, style]}>
+        <View style={cellItemStyle}>
           {this.renderHeader()}
           {this.renderLineView()}
         </View>

@@ -14,7 +14,7 @@ const defautlStyles = StyleSheet.create({
     width: 8,
     height: 13,
     marginLeft: themeVars.h_spacing_md,
-    marginTop: themeVars.v_spacing_xs,
+    // marginTop: themeVars.v_spacing_xs,
   },
   arrowV: {
     width: 13,

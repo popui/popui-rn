@@ -45,10 +45,10 @@ const Page = () => (
         minDate={minDate}
         maxDate={maxDate}
       >
-        <List.Item arrow="horizontal">DatePicker</List.Item>
+        <List.Item arrow="right">DatePicker</List.Item>
       </DatePicker>
       <Picker data={seasons} cascade={false}>
-        <List.Item arrow="horizontal">picker</List.Item>
+        <List.Item arrow="right">picker</List.Item>
       </Picker>
       <GapH />
       <SearchBar placeholder="Search" showCancelButton />
@@ -100,7 +100,7 @@ export default class LocaleProviderExample extends React.Component<any, any> {
           cols={1}
           value={[locale]}
         >
-          <List.Item arrow="horizontal">Choose language</List.Item>
+          <List.Item arrow="right">Choose language</List.Item>
         </Picker>
         <GapH />
         <LocaleProvider locale={currentLocale}>

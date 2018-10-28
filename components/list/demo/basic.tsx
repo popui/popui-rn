@@ -25,7 +25,7 @@ export default class BasicListExample extends React.Component<any, any> {
           <Item wrap>
             文字超长折行文字超长折行文字超长折行文字超长折行文字超长折行
           </Item>
-          <Item disabled extra="箭头向右" arrow="horizontal" onClick={() => {}}>
+          <Item disabled extra="箭头向右" arrow="right" onClick={() => {}}>
             标题文字
           </Item>
           <Item extra="箭头向下" arrow="down" onClick={() => {}}>
@@ -56,7 +56,7 @@ export default class BasicListExample extends React.Component<any, any> {
             extra="文字超长折行文字超长折行文字超长折行文字超长折行文字超长折行文字超长折行文字超长折行"
             multipleLine
             align="top"
-            arrow="horizontal"
+            arrow="right"
           >
             顶部对齐
             <Brief>辅助文字内容辅助文字内容辅助文字内容辅助文字内容</Brief>
@@ -81,7 +81,7 @@ export default class BasicListExample extends React.Component<any, any> {
           </Item>
           <Item
             thumb="https://os.alipayobjects.com/rmsportal/mOoPurdIfmcuqtr.png"
-            arrow="horizontal"
+            arrow="right"
           >
             thumb
           </Item>
@@ -95,7 +95,7 @@ export default class BasicListExample extends React.Component<any, any> {
                 style={{ width: 29, height: 29 }}
               />
             }
-            arrow="horizontal"
+            arrow="right"
           >
             extra为Image
           </Item>

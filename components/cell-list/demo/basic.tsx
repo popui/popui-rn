@@ -3,7 +3,13 @@
 import React from 'react'
 
 import { Image, ScrollView, View } from 'react-native'
-import { CellList, CellItem, CellItemBrief,CellItemExtra } from 'popui-rn'
+import {
+  CellList,
+  CellItem,
+  CellItemBrief,
+  CellItemExtra,
+  Badge,
+} from 'popui-rn'
 
 export default class BasicCellListExample extends React.Component<any, any> {
   render() {
@@ -15,12 +21,41 @@ export default class BasicCellListExample extends React.Component<any, any> {
         // showsHorizontalScrollIndicator={false}
         // showsVerticalScrollIndicator={false}
       >
-        <CellList header="单个 Item" footer="提示文字">
-          <CellItem extra="extra 说明文字"  arrow="horizontal"
-          >标题文字</CellItem>
+        <CellList header="带说明的列表项">
+          <CellItem extra="说明文字">标题文字</CellItem>
         </CellList>
 
-        <CellList header="折行">
+        <CellList header="图标、说明、跳转、Badge">
+          <CellItem
+            extra="说明文字"
+            header="https://weui.io/images/icon_tabbar.png"
+          >
+            带图标、说明
+          </CellItem>
+
+          <CellItem
+            header="https://weui.io/images/icon_tabbar.png"
+            extra={['说明文字', <Badge text="8" />]}
+          >
+            带图标、说明、Badge
+            <Badge text="new" />
+          </CellItem>
+
+          <CellItem
+            extra="说明文字"
+            header="https://weui.io/images/icon_tabbar.png"
+            arrow="right"
+          >
+            带图标、说明、跳转
+          </CellItem>
+
+          <CellItem arrow="right">
+            带说明、跳转、Badge
+            <Badge text="new" />
+          </CellItem>
+        </CellList>
+
+        <CellList header="常用">
           <CellItem data-seed="logId">
             标题文字点击无反馈，文字超长则隐藏，文字超长则隐藏
           </CellItem>
@@ -29,53 +64,79 @@ export default class BasicCellListExample extends React.Component<any, any> {
             body 文字超长折行文字超长折行文字超长折行文字超长折行文字超长折行
           </CellItem>
 
-          <CellItem wrap extra="extra">
-            body
+          <CellItem error extra="extra">
+            error
           </CellItem>
 
           <CellItem
             wrap
             header="https://os.alipayobjects.com/rmsportal/mOoPurdIfmcuqtr.png"
-            extra="extra"
-            arrow="horizontal"
-            footer="footer"
+            extra="有需要可自定义 body"
+            arrow="right"
           >
-            body
-          </CellItem>
-
-        </CellList>
-
-        <CellList header="带说明的列表项">
-        <CellItem extra="没有箭头" arrow="empty">
-            标题文字
+            header 下无虚线
           </CellItem>
 
           <CellItem
-            extra="箭头向右"
-            arrow="horizontal"
-            onClick={() => {}}
+            wrap
+            disabled
+            extra="extra"
+            arrow="right"
+            footer="footer"
           >
-            标题文字
+            disabled
+          </CellItem>
+        </CellList>
+
+        <CellList header="箭头">
+          <CellItem extra={'arrow="empty"'} arrow="empty">
+            没有箭头
           </CellItem>
 
-          <CellItem extra="箭头向下" arrow="down" onClick={() => {}}>
-            标题文字
+          <CellItem extra={'arrow="right"'} arrow="right" onClick={() => {}}>
+          箭头向右
           </CellItem>
 
-          <CellItem extra="箭头向上" arrow="up" onClick={() => {}}>
-            标题文字
+          <CellItem extra={'arrow="up"'} arrow="up" onClick={() => {}}>
+          箭头向上
           </CellItem>
 
+          <CellItem extra={'arrow="down"'} arrow="down" onClick={() => {}}>
+          箭头向下
+          </CellItem>
+
+
+        </CellList>
+
+        <CellList header="各组件位置(这里是 list title)" footer="list tips">
+          <CellItem
+            header="https://weui.io/images/icon_tabbar.png"
+            error
+            extra="extra"
+            arrow="right"
+            footer="footer"
+          >
+            item body
+          </CellItem>
+
+          <CellItem
+            header="https://weui.io/images/icon_tabbar.png"
+            extra="extra"
+            arrow="right"
+            footer="footer"
+          >
+            左边图标处是 header
+          </CellItem>
         </CellList>
 
         <CellList header="对齐">
           <CellItem
-            extra={
-              [ "extra 是数组",
+            extra={[
+              'extra 是数组',
               <CellItemBrief style={{ textAlign: 'right' }}>
-              Brief 辅助文字内容
-              </CellItemBrief>]
-            }
+                Brief 辅助文字内容
+              </CellItemBrief>,
+            ]}
             multipleLine
           >
             垂直居中对齐
@@ -83,21 +144,23 @@ export default class BasicCellListExample extends React.Component<any, any> {
 
           <CellItem extra="extra 内容内容" multipleLine>
             垂直居中对齐
-            <CellItemBrief >Brief 辅助文字内容</CellItemBrief>
+            <CellItemBrief>Brief 辅助文字内容</CellItemBrief>
           </CellItem>
 
           <CellItem
             wrap
+            error
             extra={
-              <CellItemExtra direction='column'>
-                extra 是 CellItemExtra组件. 内容内容文字超长折行文字超长折行文字超长折行文字超长折行文字超长折行文字超长折行文字超长折行
+              <CellItemExtra direction="column">
+                extra 是 CellItemExtra组件.
+                内容内容文字超长折行文字超长折行文字超长折行文字超长折行文字超长折行文字超长折行文字超长折行
                 <CellItemBrief style={{ textAlign: 'right' }}>
-                Brief 辅助文字内容
+                  Brief 辅助文字内容
                 </CellItemBrief>
               </CellItemExtra>
             }
             multipleLine
-            arrow="horizontal"
+            arrow="right"
           >
             垂直居中对齐
             <CellItemBrief>
@@ -111,7 +174,7 @@ export default class BasicCellListExample extends React.Component<any, any> {
             extra="文字超长折行文字超长折行文字超长折行文字超长折行文字超长折行文字超长折行文字超长折行"
             multipleLine
             align="top"
-            arrow="horizontal"
+            arrow="right"
           >
             顶部对齐
             <CellItemBrief>
@@ -140,13 +203,20 @@ export default class BasicCellListExample extends React.Component<any, any> {
 
         <CellList header="带缩略图">
           <CellItem header="https://os.alipayobjects.com/rmsportal/mOoPurdIfmcuqtr.png">
-            thumb
+            带缩略图
           </CellItem>
           <CellItem
             header="https://os.alipayobjects.com/rmsportal/mOoPurdIfmcuqtr.png"
-            arrow="horizontal"
+            extra="说明文字"
           >
-            thumb
+            带缩略图,说明
+          </CellItem>
+          <CellItem
+            header="https://os.alipayobjects.com/rmsportal/mOoPurdIfmcuqtr.png"
+            extra="说明文字"
+            arrow="right"
+          >
+            带缩略图,说明,跳转
           </CellItem>
           <CellItem
             extra={
@@ -158,9 +228,9 @@ export default class BasicCellListExample extends React.Component<any, any> {
                 style={{ width: 29, height: 29 }}
               />
             }
-            arrow="horizontal"
+            arrow="right"
           >
-            extra为Image
+            extra 为 Image
           </CellItem>
         </CellList>
       </View>

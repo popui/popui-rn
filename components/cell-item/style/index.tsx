@@ -16,6 +16,9 @@ export default {
     // borderColor: themeVars.CellBorderColor,
     // backgroundColor: themeVars.fill_base,
   },
+  cellItemDisabled: {
+    opacity: 0.5,
+  },
   cellLineView: {
     flex: 1,
     flexDirection: 'row',

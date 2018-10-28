@@ -8,7 +8,7 @@ export interface CellListItemPropsType {
   header?: any
   body?: any
   extra?: any
-  arrow?: 'horizontal' | 'down' | 'up' | 'empty' | ''
+  arrow?: 'right' | 'down' | 'up' | 'empty' | ''
   wrap?: boolean
   activeStyle?: React.CSSProperties
   error?: boolean

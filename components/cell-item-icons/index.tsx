@@ -23,7 +23,7 @@ const ArrowIcon = ({ arrow, styles }: any) => {
         />
       )
       break
-    case 'horizontal':
+    case 'right':
       arrowView = (
         <Image
           source={require('../style/images/arrow.png')}
@@ -36,11 +36,10 @@ const ArrowIcon = ({ arrow, styles }: any) => {
   return arrowView
 }
 
-const CellItemHeader: React.SFC<CellItemBodyProps> = (
+const CellItemIcons: React.SFC<CellItemBodyProps> = (
   props: CellItemBodyProps
 ) => {
   const { arrow, styles = defautlStyles, style, error } = props
-  let content
   if (!arrow && !error) {
     return null
   }
@@ -55,4 +54,4 @@ const CellItemHeader: React.SFC<CellItemBodyProps> = (
   )
 }
 
-export default CellItemHeader
+export default CellItemIcons

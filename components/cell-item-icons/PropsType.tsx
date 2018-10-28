@@ -3,5 +3,5 @@ export interface CellItemBodyProps {
   styles?: any
   children?: any
   error?: boolean
-  arrow?: 'horizontal' | 'down' | 'up' | 'empty' | ''
+  arrow?: 'right' | 'down' | 'up' | 'empty' | ''
 }

@@ -32,7 +32,7 @@ export default class PopupExample extends React.Component<any, any> {
             onChange={this.onChange}
             format="YYYY-MM-DD"
           >
-            <List.Item arrow="horizontal">Select Date</List.Item>
+            <List.Item arrow="right">Select Date</List.Item>
           </DatePicker>
         </List>
       </View>

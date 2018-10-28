@@ -65,7 +65,7 @@ function Cell(props: CellProps) {
     error,
     isFirst,
     disabled,
-    // children,
+    children,
     header,
     body,
     footer,
@@ -88,11 +88,11 @@ function Cell(props: CellProps) {
           disabled ? styles.disabledCell : null,
         ]}
       >
-        {/* {CellItemContentRow({
+        {CellItemContentRow({
           access,
           error,
           children,
-        })} */}
+        })}
         {renderElement(header)}
         {renderElement(body)}
         {renderElement(footer)}
