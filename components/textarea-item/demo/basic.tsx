@@ -2,7 +2,7 @@
 import React from 'react';
 
 import { ScrollView, Alert } from 'react-native';
-import { List, TextareaItem } from 'popui-rn';
+import { List, TextareaItem } from "@popui/popui-rn";
 
 
 export default class BasicTextAreaItemExample extends React.Component<

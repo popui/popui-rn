@@ -17,7 +17,7 @@ import {
   Cells,
   CellsTitle,
   CellText
-} from "popui-rn";
+} from "@popui/popui-rn";
 
 declare var jest: any;
 

@@ -1,6 +1,6 @@
 import React from 'react';
 import { StyleSheet, Text, SafeAreaView,ScrollView } from 'react-native';
-// import {Button} from 'popui-rn';
+// import {Button} from "@popui/popui-rn";
 // import Button from 'popui-rn/components/button/index';
 import CellExample from 'popui-rn/components/cell/demo/basic';
 import BadgeExample from 'popui-rn/components/badge/demo/basic';

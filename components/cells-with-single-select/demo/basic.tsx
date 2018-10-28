@@ -7,7 +7,7 @@ import {
   CellsTitle,
   CellsWithSingleSelect,
   GapH
-} from "popui-rn";
+} from "@popui/popui-rn";
 const options = [
   {
     label: "选项一",

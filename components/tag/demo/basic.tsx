@@ -3,7 +3,7 @@
 import React from 'react';
 
 import { View } from 'react-native';
-import { Tag, GapH } from 'popui-rn';
+import { Tag, GapH } from "@popui/popui-rn";
 
 function onChange(selected: any) {
   console.log(`tag selected: ${selected}`);

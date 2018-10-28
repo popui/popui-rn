@@ -6,7 +6,7 @@ import { StyleSheet, SafeAreaView, ScrollView,Text } from "react-native";
 // import CellBadgeExample from "popui-rn/components/cell-badge/demo/basic";
 // import ModalDialogExample from "popui-rn/components/dialog/demo/basic";
 // import CheckboxWithTextExample from "popui-rn/components/checkbox-with-text/demo/basic";
-import {GapH} from 'popui-rn'
+import {GapH} from "@popui/popui-rn"
 
 import CellsWithMultiSelectExample from "popui-rn/components/cells-with-multi-select/demo/basic";
 import CellsWithSingleSelectExample from "popui-rn/components/cells-with-single-select/demo/basic";
@@ -19,7 +19,7 @@ import SuccessExample from "popui-rn/components/toggle-icon-success/demo/basic";
 import ToggleRowExample from "popui-rn/components/toggle-row/demo/basic";
 // import Modal2Example from "popui-rn/components/modal2/demo/basic";
 // import Picker2Example from 'popui-rn/components/picker2/demo';
-// import { ActionSheet2 } from 'popui-rn'
+// import { ActionSheet2 } from "@popui/popui-rn"
 // import AllComp from 'popui-rn/rn-kitchen-sink/allComponents';
 import ResourceLoader from "../common/ResourceLoader";
 

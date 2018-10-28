@@ -1,4 +1,4 @@
-import { WeuiButton as Button, WeuiButtonArea, GapV } from 'popui-rn'
+import { WeuiButton as Button, WeuiButtonArea, GapV } from "@popui/popui-rn"
 import React from 'react'
 ;
 import stylekit from 'react-native-stylekit'

@@ -1,4 +1,4 @@
-import { Article, H1, H2, H3, P, GapV, Section,ScrollView } from 'popui-rn'
+import { Article, H1, H2, H3, P, GapV, Section,ScrollView } from "@popui/popui-rn"
 
 import React from 'react'
 ;

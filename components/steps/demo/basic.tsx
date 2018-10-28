@@ -2,7 +2,7 @@
 import React from 'react';
 
 import { ScrollView, Text, View } from 'react-native';
-import { Icon, GapV, Steps } from 'popui-rn';
+import { Icon, GapV, Steps } from "@popui/popui-rn";
 const Step = Steps.Step;
 
 

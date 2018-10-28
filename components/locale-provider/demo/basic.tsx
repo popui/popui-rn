@@ -4,7 +4,7 @@ import { View } from 'react-native';
 import {
   Pagination, LocaleProvider, List, DatePicker, GapH, GapV,
   Picker, SearchBar,
-} from 'popui-rn';
+} from "@popui/popui-rn";
 import enUS from '../en_US';
 import ruRU from '../ru_RU';
 

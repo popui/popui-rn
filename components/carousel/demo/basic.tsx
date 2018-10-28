@@ -1,7 +1,7 @@
 import React from 'react';
 
 import { StyleSheet, Text, TextStyle, View, ViewStyle } from 'react-native';
-import { Carousel } from 'popui-rn';
+import { Carousel } from "@popui/popui-rn";
 
 
 export default class BasicCarouselExample extends React.Component<any, any> {

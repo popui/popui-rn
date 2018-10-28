@@ -5,7 +5,7 @@ import {
   View,
   ScrollView,
 } from 'react-native';
-import { List, SearchBar } from 'popui-rn';
+import { List, SearchBar } from "@popui/popui-rn";
 import { UIVIEWS, UICONTROLS, OTHERS, UIBARS } from '../demoList';
 
 const styles = StyleSheet.create({

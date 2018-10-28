@@ -2,7 +2,7 @@
 import React from 'react';
 
 import { ScrollView, StyleSheet, Text, View } from 'react-native';
-import { Button, Drawer, List, GapH } from 'popui-rn';
+import { Button, Drawer, List, GapH } from "@popui/popui-rn";
 
 const styles = StyleSheet.create({
   container: {

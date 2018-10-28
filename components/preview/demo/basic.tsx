@@ -2,7 +2,7 @@ import React from 'react'
 ;
 import {View} from 'react-native'
 import { WeuiButtonPreview,  Preview, PreviewBody, PreviewFooter, PreviewHeader,
-  PreviewItem, PreviewLabel, PreviewValue } from 'popui-rn'
+  PreviewItem, PreviewLabel, PreviewValue } from "@popui/popui-rn"
 export interface IProps  {
 
 }

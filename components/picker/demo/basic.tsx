@@ -1,7 +1,7 @@
 import React from 'react';
 
 import { View, Text, TouchableOpacity } from 'react-native';
-import { List, Picker } from 'popui-rn';
+import { List, Picker } from "@popui/popui-rn";
 
 import { district } from 'antd-mobile-demo-data';
 

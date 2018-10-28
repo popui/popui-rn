@@ -17,7 +17,7 @@ import {
   CellFooter,
   CellHeader,
   CellText
-} from "popui-rn";
+} from "@popui/popui-rn";
 import React from "react";
 ;
 

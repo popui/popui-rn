@@ -2,7 +2,7 @@
 import React from 'react';
 
 import { Text, View } from 'react-native';
-import { GapH } from 'popui-rn';
+import { GapH } from "@popui/popui-rn";
 
 const PlaceHolder = (props: any) => (
   <View

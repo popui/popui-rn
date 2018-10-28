@@ -12,7 +12,7 @@ import {
   BadgeContent,
   CellItemBody,
   CellItemText,
-} from 'popui-rn'
+} from "@popui/popui-rn"
 
 export default class BasicCellListExample extends React.Component<any, any> {
   render() {

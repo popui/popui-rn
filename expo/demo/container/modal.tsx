@@ -7,7 +7,7 @@ import { StyleSheet, SafeAreaView, ScrollView } from "react-native";
 import ModalExample from "popui-rn/components/modal/demo/basic";
 // import Modal2Example from "popui-rn/components/modal2/demo/basic";
 // import Picker2Example from 'popui-rn/components/picker2/demo';
-// import { ActionSheet2 } from 'popui-rn'
+// import { ActionSheet2 } from "@popui/popui-rn"
 // import AllComp from 'popui-rn/rn-kitchen-sink/allComponents';
 import ResourceLoader from "../common/ResourceLoader";
 

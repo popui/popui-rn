@@ -2,7 +2,7 @@
 import React from 'react';
 
 import { ScrollView, Text,View } from 'react-native';
-import { Button, InputItem, List } from 'popui-rn';
+import { Button, InputItem, List } from "@popui/popui-rn";
 
 declare var jest: any;
 

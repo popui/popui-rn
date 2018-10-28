@@ -1,6 +1,6 @@
 import React from 'react'
 ;
-import { LoadMore, ScrollView } from 'popui-rn'
+import { LoadMore, ScrollView } from "@popui/popui-rn"
 
 export interface IProps  {
 

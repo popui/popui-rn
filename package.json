@@ -1,5 +1,5 @@
 {
-  "name": "popui-rn",
+  "name": "@popui/popui-rn",
   "version": "0.0.1",
   "description": "基于蚂蚁金服移动设计规范的 React Native 组件库",
   "keywords": [

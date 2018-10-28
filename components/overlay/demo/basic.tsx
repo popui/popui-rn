@@ -5,7 +5,7 @@
 import React  from 'react';
 import {View, Image, ScrollView, TouchableWithoutFeedback} from 'react-native';
 
-import {ListRow, Overlay, CellLabel, WeuiButton, ToggleIconCheckbox} from 'popui-rn';
+import {ListRow, Overlay, CellLabel, WeuiButton, ToggleIconCheckbox} from "@popui/popui-rn";
 
 const defaultColor = '#fff';
 

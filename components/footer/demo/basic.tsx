@@ -2,7 +2,7 @@ import React from 'react'
 ;
 
 import { Text,ScrollView } from 'react-native'
-import { Footer as FooterComp, GapV } from 'popui-rn'
+import { Footer as FooterComp, GapV } from "@popui/popui-rn"
 const {Footer, FooterLink, FooterLinks, FooterText} = FooterComp
 
 import stylekit from 'react-native-stylekit'

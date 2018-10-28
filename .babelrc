@@ -7,7 +7,7 @@
         [
           "import",
           {
-            "libraryName": "popui-rn",
+            "libraryName": "@popui/popui-rn",
             "libraryDirectory": "components"
           }
         ]
@@ -18,7 +18,7 @@
         [
           "import",
           {
-            "libraryName": "popui-rn",
+            "libraryName": "@popui/popui-rn",
             "libraryDirectory": "components"
           }
         ]
@@ -29,7 +29,7 @@
         [
           "import",
           {
-            "libraryName": "popui-rn",
+            "libraryName": "@popui/popui-rn",
             "libraryDirectory": "components"
           }
         ]

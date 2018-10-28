@@ -1,7 +1,7 @@
 import React from 'react';
 
 import { Platform, StyleSheet, Text, View, ViewStyle } from 'react-native';
-import { Popover } from 'popui-rn';
+import { Popover } from "@popui/popui-rn";
 
 const Item = Popover.Item;
 

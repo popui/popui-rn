@@ -89,7 +89,7 @@ The following two ways used to load the **only components you used**, select one
    // .babelrc or babel-loader option
    {
      "plugins": [
-       ["import", { libraryName: "popui-rn" }] // The difference with the Web platform is that you do not need to set the style
+       ["import", { libraryName: "@popui/popui-rn" }] // The difference with the Web platform is that you do not need to set the style
      ]
    }
    ```
@@ -97,7 +97,7 @@ The following two ways used to load the **only components you used**, select one
    Then just change the way of import modules from popui-rn.
 
    ```jsx
-   import { Button } from 'popui-rn';
+   import { Button } from "@popui/popui-rn";
    ```
 
    > Note: Some people reflected that it would be [unable to resolve module `react-dom`](https://github.com/ant-design/ant-design-mobile/issues/2054) in a project created with `react-native init`. If you encounter the same problem, you might try to install [babel-plugin-module-resolver](https://www.npmjs.com/package/babel-plugin-module-resolver).

@@ -3,7 +3,7 @@
 import React from 'react';
 
 import { View } from 'react-native';
-import { List, Stepper } from 'popui-rn';
+import { List, Stepper } from "@popui/popui-rn";
 
 function onChange(value: any) {
   console.log('changed', value);

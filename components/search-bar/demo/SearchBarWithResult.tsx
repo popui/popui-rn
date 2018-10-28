@@ -5,7 +5,7 @@ import {
   SearchBar,
   Media as MediaComps,
   Panel as PanelComps,
-} from 'popui-rn'
+} from "@popui/popui-rn"
 const {Media, MediaBody, MediaDescription, 
 MediaHeader,MediaTitle} = MediaComps
 const {Panel, PanelBody, PanelFooter, PanelHeader, } = PanelComps

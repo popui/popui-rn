@@ -1,7 +1,7 @@
 import React from 'react';
 
 import { View, Text } from 'react-native';
-import { TabBar, SearchBar } from 'popui-rn';
+import { TabBar, SearchBar } from "@popui/popui-rn";
 
 
 export default class BasicTabBarExample extends React.Component<any, any> {

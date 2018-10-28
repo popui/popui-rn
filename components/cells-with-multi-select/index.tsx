@@ -1,7 +1,7 @@
 import xor from 'lodash/xor'
 import React from 'react'
 import { StyleSheet } from 'react-native'
-import { Cell, CellBody, CellHeader, Cells, CellText,ToggleIconCircle } from 'popui-rn'
+import { Cell, CellBody, CellHeader, Cells, CellText,ToggleIconCircle } from "@popui/popui-rn"
 // import WeuiIcon from '../weui-icon'
 import themeVars from '../style/themes/default'
 import {MultiSelectHeaderCellsPropsType} from './PropsType'

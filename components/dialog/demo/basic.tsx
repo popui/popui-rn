@@ -13,7 +13,7 @@ import {
   ModalOperation,
   ModalPrompt,
   ModalPopup
-} from "popui-rn";
+} from "@popui/popui-rn";
 
 
 export default class BasicModalExample extends React.Component<any, any> {

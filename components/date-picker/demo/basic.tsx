@@ -3,7 +3,7 @@
 import React from 'react';
 
 import { View } from 'react-native';
-import { DatePicker, List } from 'popui-rn';
+import { DatePicker, List } from "@popui/popui-rn";
 
 // const now = new Date();
 

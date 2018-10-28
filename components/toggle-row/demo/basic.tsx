@@ -2,7 +2,7 @@
 import React from 'react'
 
 import { Text, View } from 'react-native'
-import { ToggleRow, GapH, ToggleIconCircle } from 'popui-rn'
+import { ToggleRow, GapH, ToggleIconCircle } from "@popui/popui-rn"
 // const CheckboxRowItem = ToggleRow.CheckboxRowItem;
 
 export default class BasicToggleRowExample extends React.Component<any, any> {

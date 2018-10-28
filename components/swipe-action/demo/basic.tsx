@@ -2,7 +2,7 @@
 import React from 'react';
 
 import { View } from 'react-native';
-import { List, SwipeAction } from 'popui-rn';
+import { List, SwipeAction } from "@popui/popui-rn";
 
 
 export default class BasicSwipeActionExample extends React.Component<any, any> {

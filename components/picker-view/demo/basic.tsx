@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { PickerView } from 'popui-rn';
+import { PickerView } from "@popui/popui-rn";
 
 const seasons = [
   [

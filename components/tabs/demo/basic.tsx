@@ -2,7 +2,7 @@
 import React from 'react';
 
 import { ScrollView, Text, View } from 'react-native';
-import { Tabs } from 'popui-rn';
+import { Tabs } from "@popui/popui-rn";
 
 const renderContent = (tab: any, index: any) => {
   const style = {

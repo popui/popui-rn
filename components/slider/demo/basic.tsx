@@ -1,7 +1,7 @@
 import React from 'react';
 
 import { Text, View } from 'react-native';
-import { Slider } from 'popui-rn';
+import { Slider } from "@popui/popui-rn";
 
 
 export default class BasicSliderExample extends React.Component<any, any> {

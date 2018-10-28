@@ -1,7 +1,7 @@
 import React from "react";
 ;
 import { ScrollView, Text, View } from "react-native";
-import { Grid, GapH } from "popui-rn";
+import { Grid, GapH } from "@popui/popui-rn";
 
 const data = Array.from(new Array(9)).map((_val, i) => ({
   icon: "https://weui.io/images/icon_tabbar.png",

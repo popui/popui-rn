@@ -3,9 +3,9 @@ import { StyleSheet, SafeAreaView, ScrollView } from 'react-native'
 // import CellExample from 'popui-rn/components/cell/demo/basic'
 // import ListExample from 'popui-rn/components/list/demo/basic'
 import CellListExample from 'popui-rn/components/cell-list/demo/basic'
-// import { ActionSheet2 } from 'popui-rn'
+// import { ActionSheet2 } from "@popui/popui-rn"
 import ResourceLoader from '../common/ResourceLoader'
-import {GapH} from 'popui-rn'
+import {GapH} from "@popui/popui-rn"
 
 export default class App extends React.Component {
   render() {

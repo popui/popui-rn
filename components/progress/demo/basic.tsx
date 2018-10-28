@@ -1,7 +1,7 @@
 import React from "react";
 ;
 import { Text, View,StyleSheet,SafeAreaView } from "react-native";
-import {  WeuiButton as Button,WeuiButtonArea, Progress, GapH } from "popui-rn";
+import {  WeuiButton as Button,WeuiButtonArea, Progress, GapH } from "@popui/popui-rn";
 
 const styles = StyleSheet.create({
   container:{

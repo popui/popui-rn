@@ -10,7 +10,7 @@ import {
   CellsTitle,
   CellText,
   GapH,
-} from 'popui-rn'
+} from "@popui/popui-rn"
 
 export interface IProps {}
 

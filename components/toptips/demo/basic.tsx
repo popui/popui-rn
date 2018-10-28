@@ -1,7 +1,7 @@
 import React from "react";
 ;
 
-import {  WeuiButton as Button,WeuiButtonArea, View, Toptips } from "popui-rn";
+import {  WeuiButton as Button,WeuiButtonArea, View, Toptips } from "@popui/popui-rn";
 
 export interface IProps {}
 

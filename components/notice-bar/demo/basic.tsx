@@ -3,7 +3,7 @@
 import React from 'react';
 
 import { Image, Text, View } from 'react-native';
-import { NoticeBar, GapH } from 'popui-rn';
+import { NoticeBar, GapH } from "@popui/popui-rn";
 
 
 export default class NoticeBarExample extends React.Component<any, any> {

@@ -1,5 +1,5 @@
 import React from 'react'
-import { CellBadge ,Badge, Cell, CellBody, CellFooter, CellHeader, Cells, CellsTitle, CellText } from 'popui-rn'
+import { CellBadge ,Badge, Cell, CellBody, CellFooter, CellHeader, Cells, CellsTitle, CellText } from "@popui/popui-rn"
 
 import { Image, View } from 'react-native'
 

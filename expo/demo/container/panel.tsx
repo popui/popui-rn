@@ -8,7 +8,7 @@ import PreviewExample from "popui-rn/components/preview/demo/basic";
 // import ToptipsExample from 'popui-rn/components/toptips/demo/basic';
 // import PickerExample from 'popui-rn/components/picker/demo/basic';
 // import Picker2Example from 'popui-rn/components/picker2/demo';
-// import { ActionSheet2 } from 'popui-rn'
+// import { ActionSheet2 } from "@popui/popui-rn"
 // import AllComp from 'popui-rn/rn-kitchen-sink/allComponents';
 import ResourceLoader from "../common/ResourceLoader";
 

@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { Grid, Icon } from 'popui-rn';
+import { Grid, Icon } from "@popui/popui-rn";
 
 const list = [
   'check-circle',

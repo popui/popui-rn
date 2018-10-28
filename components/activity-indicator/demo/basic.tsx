@@ -7,7 +7,7 @@ import {
   Flex,
   GapH,
   GapV,
-} from 'popui-rn';
+} from "@popui/popui-rn";
 
 
 export default class ActivityIndicatorExample extends React.Component<any, any> {

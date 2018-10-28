@@ -2,7 +2,7 @@
 import React from "react";
 ;
 import { Image, ScrollView, Text, Alert } from "react-native";
-import { Result,  WeuiButton as Button,WeuiButtonArea, Flex } from "popui-rn";
+import { Result,  WeuiButton as Button,WeuiButtonArea, Flex } from "@popui/popui-rn";
 
 
 export default class ResultExample extends React.Component<any, any> {

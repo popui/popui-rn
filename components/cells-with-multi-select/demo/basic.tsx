@@ -4,7 +4,7 @@ import { View } from "react-native";
 import {
   CellsTitle,
   CellsWithMultiSelect,
-} from "popui-rn";
+} from "@popui/popui-rn";
 
 const options = [
   {

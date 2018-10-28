@@ -89,7 +89,7 @@ AppRegistry.registerComponent('HelloWorldApp', () => HelloWorldApp);
    // .babelrc or babel-loader option
    {
      "plugins": [
-       ["import", { libraryName: "popui-rn" }] // 与 Web 平台的区别是不需要设置 style
+       ["import", { libraryName: "@popui/popui-rn" }] // 与 Web 平台的区别是不需要设置 style
      ]
    }
    ```
@@ -97,7 +97,7 @@ AppRegistry.registerComponent('HelloWorldApp', () => HelloWorldApp);
    然后改变从 popui-rn 引入模块方式即可。
 
    ```jsx
-   import { Button } from 'popui-rn';
+   import { Button } from "@popui/popui-rn";
    ```
 
    > 说明：有人反映通过 `react-native init` 创建的项目在使用时可能会报 [Unable to resolve module `react-dom`](https://github.com/ant-design/ant-design-mobile/issues/2054) 的错误 ，此时不妨安装 [babel-plugin-module-resolver](https://www.npmjs.com/package/babel-plugin-module-resolver) 试试~

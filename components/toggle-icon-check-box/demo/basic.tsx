@@ -1,7 +1,7 @@
 // tslint:disable:jsx-no-multiline-js
 import React from "react";
 import { Text, View } from "react-native";
-import { ToggleIconCheckBox,  GapH } from "popui-rn";
+import { ToggleIconCheckBox,  GapH } from "@popui/popui-rn";
 
 export default class BasicCheckboxRowExample extends React.Component<
   any,

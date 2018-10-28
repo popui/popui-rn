@@ -1,7 +1,7 @@
 // tslint:disable:jsx-no-multiline-js
 import React from 'react'
 import { Text, View } from 'react-native'
-import { ToggleIconSuccess, GapH } from 'popui-rn'
+import { ToggleIconSuccess, GapH } from "@popui/popui-rn"
 
 export default class BasicToggleIconSuccessExample extends React.Component<
   any,

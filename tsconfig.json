@@ -16,7 +16,7 @@
     ],
     "baseUrl": ".",
     "paths": {
-      "popui-rn":["."]
+      "@popui/popui-rn":["."]
     }
   },
   "exclude": [

@@ -2,7 +2,7 @@
 import React from 'react';
 
 import { Text, View } from 'react-native';
-import { DatePickerView } from 'popui-rn';
+import { DatePickerView } from "@popui/popui-rn";
 
 
 export default class DatePickerViewExample extends React.Component {

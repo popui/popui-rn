@@ -1,11 +1,2 @@
 lib/**/demo/*.*
 es/**/demo/*.*
-components/**/demo/*.*
-**/*/demo/
-**/**/demo/
-demo
-**/**/__tests__/
-**/*/__tests__/*
-__tests__
-*.test.js
-*.test.jsx

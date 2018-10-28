@@ -2,7 +2,7 @@
 import React from 'react';
 
 import { Text, View } from 'react-native';
-import { SegmentedControl, GapH } from 'popui-rn';
+import { SegmentedControl, GapH } from "@popui/popui-rn";
 
 
 export default class BasicTagExample extends React.Component<any, any> {

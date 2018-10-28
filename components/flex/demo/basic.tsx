@@ -2,7 +2,7 @@
 import React from 'react';
 
 import { ScrollView, Text, TouchableWithoutFeedback, View } from 'react-native';
-import { Button, Flex, GapH, GapV } from 'popui-rn';
+import { Button, Flex, GapH, GapV } from "@popui/popui-rn";
 
 const Circle = (props: any) => {
   const size = props.size || 20;

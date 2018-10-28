@@ -2,7 +2,7 @@
 import React from 'react'
 
 import { Text, View } from 'react-native'
-import { ToggleIconCircle, GapH } from 'popui-rn'
+import { ToggleIconCircle, GapH } from "@popui/popui-rn"
 // const RadioItem = ToggleIconCircle.RadioItem;
 
 export default class BasicToggleIconCircleExample extends React.Component<

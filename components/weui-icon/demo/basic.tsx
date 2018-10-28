@@ -1,5 +1,5 @@
 import { View,ScrollView,Text,StyleSheet } from 'react-native'
-import {  WeuiIcon } from 'popui-rn'
+import {  WeuiIcon } from "@popui/popui-rn"
 import React from 'react'
 ;
 import stylekit from 'react-native-stylekit'

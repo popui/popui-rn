@@ -2,7 +2,7 @@
 import React from 'react';
 
 import { View } from 'react-native';
-import { Accordion, List } from 'popui-rn';
+import { Accordion, List } from "@popui/popui-rn";
 
 
 export default class AccordionExmple extends React.Component<any, any> {

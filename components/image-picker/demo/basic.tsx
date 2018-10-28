@@ -1,7 +1,7 @@
 import React from 'react';
 
 import { View } from 'react-native';
-import { ImagePicker,ImagePickerHeader, GapH } from 'popui-rn';
+import { ImagePicker,ImagePickerHeader, GapH } from "@popui/popui-rn";
 
 
 export default class ImagePickerExample extends React.Component<any, any> {
