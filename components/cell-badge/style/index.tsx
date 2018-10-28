@@ -18,8 +18,8 @@ export default {
     default: {},
     header: {
       position: 'absolute',
-      top: -3, // 0 - 12 * 0.4,
-      right: -3 // 0 - 12 * 0.4
+      top: -10, // 0 - 12 * 0.4,
+      right: -15 // 0 - 12 * 0.4
     },
     body: {
       marginLeft: 5

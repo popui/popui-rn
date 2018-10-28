@@ -9,6 +9,8 @@ import {
   CellItemBrief,
   CellItemExtra,
   Badge,
+  CellBadge,
+  CellItemBody,
 } from 'popui-rn'
 
 export default class BasicCellListExample extends React.Component<any, any> {
@@ -35,10 +37,17 @@ export default class BasicCellListExample extends React.Component<any, any> {
 
           <CellItem
             header="https://weui.io/images/icon_tabbar.png"
-            extra={['说明文字', <Badge text="8" />]}
+            extra={
+              <CellItemExtra direction="row">
+                说明文字
+                <CellBadge preset="footer">8</CellBadge>
+              </CellItemExtra>
+            }
           >
-            带图标、说明、Badge
-            <Badge text="new" />
+            <CellItemBody direction="row">
+              带图标、说明、Badge
+              <CellBadge preset="body">new</CellBadge>
+            </CellItemBody>
           </CellItem>
 
           <CellItem
@@ -50,8 +59,10 @@ export default class BasicCellListExample extends React.Component<any, any> {
           </CellItem>
 
           <CellItem arrow="right">
-            带说明、跳转、Badge
-            <Badge text="new" />
+            <CellItemBody direction="row">
+              带说明、跳转、Badge
+              <CellBadge preset="header">99+</CellBadge>
+            </CellItemBody>
           </CellItem>
         </CellList>
 
@@ -77,13 +88,7 @@ export default class BasicCellListExample extends React.Component<any, any> {
             header 下无虚线
           </CellItem>
 
-          <CellItem
-            wrap
-            disabled
-            extra="extra"
-            arrow="right"
-            footer="footer"
-          >
+          <CellItem wrap disabled extra="extra" arrow="right" footer="footer">
             disabled
           </CellItem>
         </CellList>
@@ -94,18 +99,16 @@ export default class BasicCellListExample extends React.Component<any, any> {
           </CellItem>
 
           <CellItem extra={'arrow="right"'} arrow="right" onClick={() => {}}>
-          箭头向右
+            箭头向右
           </CellItem>
 
           <CellItem extra={'arrow="up"'} arrow="up" onClick={() => {}}>
-          箭头向上
+            箭头向上
           </CellItem>
 
           <CellItem extra={'arrow="down"'} arrow="down" onClick={() => {}}>
-          箭头向下
+            箭头向下
           </CellItem>
-
-
         </CellList>
 
         <CellList header="各组件位置(这里是 list title)" footer="list tips">
