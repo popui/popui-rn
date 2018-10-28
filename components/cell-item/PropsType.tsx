@@ -18,6 +18,7 @@ export interface CellListItemPropsType {
   footer?: any
   renderLineView?: () => React.ReactNode
   renderIcons?: () => React.ReactNode
+  renderBody?: () => React.ReactNode
   lineViewStyle?: React.CSSProperties
 }
 export interface renderBodyParams {}

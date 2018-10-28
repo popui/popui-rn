@@ -46,16 +46,16 @@ export default class CellItem extends React.Component<ListItemProps, any> {
     )
   }
   renderBody = () => {
-    const { error, body } = this.props
-    if (!body) {
-      return null
+    const { error, children,renderBody } = this.props
+    if(renderBody){
+      return renderBody()
     }
-    if (typeof body === 'function') {
-      return body()
+    if (!children) {
+      return null
     }
     return (
       <CellItemBody error={error} numberOfLinesProp={this.numberOfLinesProp}>
-        {body}
+        {children}
       </CellItemBody>
     )
   }
