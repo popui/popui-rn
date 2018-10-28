@@ -45,6 +45,11 @@ export default class BasicCellListExample extends React.Component<any, any> {
             }
             body={(props) => (
               <CellItemBody {...props}>
+                {/* <Badge text="new">
+                  <CellItemText>
+                  带图标、说明、Badge
+                  </CellItemText>
+                </Badge> */}
                 带图标、说明、Badge
                 <CellBadge preset="body">new</CellBadge>
               </CellItemBody>
