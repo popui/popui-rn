@@ -3,7 +3,8 @@ import themeVars from '../../style/themes/default'
 
 const defautlStyles = StyleSheet.create({
   footer: {
-    flex: 1,
+    // flex: 1,
+    marginLeft:5,
     flexDirection: 'row',
     justifyContent: 'flex-start',
     alignItems: 'center',

@@ -5,7 +5,7 @@ const defautlStyles = StyleSheet.create({
   extra: {
     flex: 1,
     flexDirection: 'row',
-    justifyContent: 'flex-start',
+    justifyContent: 'flex-end',
     alignItems: 'center',
   },
   extraText: {

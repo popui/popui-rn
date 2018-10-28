@@ -31,7 +31,7 @@ const CellItemExtra: React.SFC<CellItemExtraProps> = (
     if (typeof item === 'string') {
       return (
         <CellItemText
-          style={[styles.extraText]}
+          style={styles.extraText}
           key={`${index}-children`}
           error={error}
           {...numberOfLinesProp}

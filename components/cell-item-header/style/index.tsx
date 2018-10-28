@@ -3,9 +3,8 @@ import themeVars from '../../style/themes/default'
 
 const defautlStyles = StyleSheet.create({
   header: {
-    flex: 1,
     flexDirection: 'row',
-    justifyContent: 'flex-start',
+    justifyContent: 'center',
     alignItems: 'center',
   },
   thumb: {

@@ -16,103 +16,111 @@ export default class BasicCellListExample extends React.Component<any, any> {
         // showsVerticalScrollIndicator={false}
       >
         <CellList header="单个 Item" footer="提示文字">
-          <CellItem extra="extra 说明文字"  arrow="horizontal"
-          >标题文字</CellItem>
+          <CellItem body="标题文字" extra="extra 说明文字" arrow="horizontal" />
         </CellList>
 
         <CellList header="折行">
-          <CellItem data-seed="logId">
-            标题文字点击无反馈，文字超长则隐藏，文字超长则隐藏
-          </CellItem>
-          <CellItem wrap>
-            body 文字超长折行文字超长折行文字超长折行文字超长折行文字超长折行
-          </CellItem>
-          <CellItem wrap extra="extra">
-            body
-          </CellItem>
+          <CellItem
+            body="标题文字点击无反馈，文字超长则隐藏，文字超长则隐藏"
+            data-seed="logId"
+          />
+          <CellItem
+            body="body 文字超长折行文字超长折行文字超长折行文字超长折行文字超长折行"
+            wrap
+          />
+          <CellItem wrap body="body" extra="extra" />
           <CellItem
             wrap
             header="https://os.alipayobjects.com/rmsportal/mOoPurdIfmcuqtr.png"
+            body="body"
             extra="extra"
             arrow="horizontal"
             footer="footer"
-          >
-            body
-          </CellItem>
+          />
         </CellList>
 
         <CellList header="带说明的列表项">
           <CellItem
+            body="标题文字"
             extra="箭头向右"
             arrow="horizontal"
             onClick={() => {}}
-          >
-            标题文字
-          </CellItem>
-          <CellItem extra="箭头向下" arrow="down" onClick={() => {}}>
-            标题文字
-          </CellItem>
-          <CellItem extra="箭头向上" arrow="up" onClick={() => {}}>
-            标题文字
-          </CellItem>
-          <CellItem extra="没有箭头" arrow="empty">
-            标题文字
-          </CellItem>
+          />
+          <CellItem
+            body="标题文字"
+            extra="箭头向下"
+            arrow="down"
+            onClick={() => {}}
+          />
+          <CellItem
+            body="标题文字"
+            extra="箭头向上"
+            arrow="up"
+            onClick={() => {}}
+          />
+          <CellItem body="标题文字" extra="没有箭头" arrow="empty" />
         </CellList>
 
         <CellList header="对齐">
           <CellItem
+            body="垂直居中对齐"
             extra={
               <View>
                 extra 内容内容
                 <CellItemBrief style={{ textAlign: 'right' }}>
-                Brief 辅助文字内容
+                  Brief 辅助文字内容
                 </CellItemBrief>
               </View>
             }
             multipleLine
-          >
-            垂直居中对齐
-          </CellItem>
-          <CellItem extra="内容内容" multipleLine>
-            垂直居中对齐
-            <CellItemBrief >Brief 辅助文字内容</CellItemBrief>
-          </CellItem>
+          />
+          <CellItem
+            body={[
+              '垂直居中对齐',
+              <CellItemBrief>Brief 辅助文字内容</CellItemBrief>,
+            ]}
+            extra="内容内容"
+            multipleLine
+          />
           <CellItem
             wrap
+            body={[
+              '垂直居中对齐',
+              <CellItemBrief>
+                Brief辅助文字内容辅助文字内容辅助文字内容辅助文字内容
+              </CellItemBrief>,
+              <CellItemBrief>Brief 辅助文字内容</CellItemBrief>,
+            ]}
             extra={
               <View>
-                extra 内容内容文字超长折行文字超长折行文字超长折行文字超长折行文字超长折行文字超长折行文字超长折行
+                extra
+                内容内容文字超长折行文字超长折行文字超长折行文字超长折行文字超长折行文字超长折行文字超长折行
                 <CellItemBrief style={{ textAlign: 'right' }}>
-                Brief 辅助文字内容
+                  Brief 辅助文字内容
                 </CellItemBrief>
               </View>
             }
             multipleLine
             arrow="horizontal"
-          >
-            垂直居中对齐
-            <CellItemBrief>
-              Brief辅助文字内容辅助文字内容辅助文字内容辅助文字内容
-            </CellItemBrief>
-            <CellItemBrief>Brief 辅助文字内容</CellItemBrief>
-          </CellItem>
+          />
 
           <CellItem
             wrap
+            body={[
+              '顶部对齐',
+              <CellItemBrief>
+                Brief辅助文字内容辅助文字内容辅助文字内容辅助文字内容
+              </CellItemBrief>,
+              <CellItemBrief>Brief 辅助文字内容</CellItemBrief>,
+            ]}
             extra="文字超长折行文字超长折行文字超长折行文字超长折行文字超长折行文字超长折行文字超长折行"
             multipleLine
             align="top"
             arrow="horizontal"
-          >
-            顶部对齐
-            <CellItemBrief>
-              Brief辅助文字内容辅助文字内容辅助文字内容辅助文字内容
-            </CellItemBrief>
-            <CellItemBrief>Brief 辅助文字内容</CellItemBrief>
-          </CellItem>
+          />
           <CellItem
             header="https://os.alipayobjects.com/rmsportal/mOoPurdIfmcuqtr.png"
+            body="底部对齐"
             extra={
               <View>
                 extra 内容内容
@@ -124,22 +132,21 @@ export default class BasicCellListExample extends React.Component<any, any> {
             arrow="down"
             multipleLine
             align="bottom"
-          >
-            底部对齐
-          </CellItem>
+          />
         </CellList>
 
         <CellList header="带缩略图">
-          <CellItem header="https://os.alipayobjects.com/rmsportal/mOoPurdIfmcuqtr.png">
-            thumb
-          </CellItem>
           <CellItem
             header="https://os.alipayobjects.com/rmsportal/mOoPurdIfmcuqtr.png"
-            arrow="horizontal"
-          >
-            thumb
-          </CellItem>
+            body="thumb"
+          />
           <CellItem
+            header="https://os.alipayobjects.com/rmsportal/mOoPurdIfmcuqtr.png"
+            body="thumb"
+            arrow="horizontal"
+          />
+          <CellItem
+            body="extra为Image"
             extra={
               <Image
                 source={{
@@ -150,9 +157,7 @@ export default class BasicCellListExample extends React.Component<any, any> {
               />
             }
             arrow="horizontal"
-          >
-            extra为Image
-          </CellItem>
+          />
         </CellList>
       </View>
     )
