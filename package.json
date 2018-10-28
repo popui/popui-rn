@@ -1,6 +1,6 @@
 {
   "name": "popui-rn",
-  "version": "2.2.1",
+  "version": "0.0.1",
   "description": "基于蚂蚁金服移动设计规范的 React Native 组件库",
   "keywords": [
     "ant",
@@ -23,12 +23,12 @@
     "url": "http://github.com/ant-design/ant-design-mobile-rn/issues"
   },
   "files": [
-    "lib",
-    "es"
+    "components/**/*/*.jsx",
+    "components/**/*/*.png",
+    "components/**/*/*.jpg"
   ],
   "license": "MIT",
   "main": "node_modules/expo/AppEntry.js",
-  "private": true,
   "dependencies": {
     "@popapps/debug": "^4.1.0",
     "array-tree-filter": "~2.1.0",
@@ -123,9 +123,9 @@
     "tslint-fix": "antd-tools run ts-lint-fix && npm run compile && rm -rf lib",
     "applint": "eslint rn-kitchen-sink --ext '.js'",
     "pre-publish": "npm run test:all",
-    "prepublish": "antd-tools run guard",
-    "prepare": "antd-tools run guard",
-    "prepublishOnly": "antd-tools run guard",
+    "prepublish1": "antd-tools run guard",
+    "prepare1": "antd-tools run guard",
+    "prepublishOnly1": "antd-tools run guard",
     "test": "jest --config .jest.js",
     "test:all": "./scripts/test-all.sh",
     "compile": "cross-env BABEL_ENV=dist antd-tools run compile",
