@@ -9,7 +9,7 @@ import {
   CellItemBrief,
   CellItemExtra,
   Badge,
-  CellBadge,
+  BadgeContent,
   CellItemBody,
   CellItemText,
 } from 'popui-rn'
@@ -40,7 +40,9 @@ export default class BasicCellListExample extends React.Component<any, any> {
             extra={
               <CellItemExtra>
                 说明文字
-                <CellBadge preset="footer">8</CellBadge>
+                <BadgeContent ml mr>
+                  8
+                </BadgeContent>
               </CellItemExtra>
             }
             body={(props) => (
@@ -51,7 +53,7 @@ export default class BasicCellListExample extends React.Component<any, any> {
                   </CellItemText>
                 </Badge> */}
                 带图标、说明、Badge
-                <CellBadge preset="body">new</CellBadge>
+                <BadgeContent ml>new</BadgeContent>
               </CellItemBody>
             )}
           />
