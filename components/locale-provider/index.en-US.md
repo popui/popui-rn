@@ -12,7 +12,7 @@ type: Other
 
 
 ```jsx
-import enUS from 'popui-rn/lib/locale-provider/en_US';
+import enUS from '@popui/popui-rn/lib/locale-provider/en_US';
 
 ...
 
@@ -33,4 +33,4 @@ This component aims for localization of the built-in text, if you want to suppor
 
 | Property    | Description           | Type              | Default        |
 |--------|----------------|------------------|--------------|
-| locale | anguage package setting, you can find the packages in this path: `popui-rn/lib/locale-provider/` | object | - |
+| locale | anguage package setting, you can find the packages in this path: `@popui/popui-rn/lib/locale-provider/` | object | - |

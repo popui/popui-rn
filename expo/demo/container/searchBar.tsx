@@ -1,6 +1,6 @@
 import React from 'react';
 import { StyleSheet,  SafeAreaView,Text } from 'react-native';
-import SearchBarExample from 'popui-rn/components/search-bar/demo/basic';
+import SearchBarExample from '@popui/popui-rn/components/search-bar/demo/basic';
 import ResourceLoader from '../common/ResourceLoader';
 
 export default class App extends React.Component {

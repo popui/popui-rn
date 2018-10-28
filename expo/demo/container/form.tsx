@@ -1,11 +1,11 @@
 import React from 'react';
 import { StyleSheet,  SafeAreaView,Text } from 'react-native';
 import ResourceLoader from '../common/ResourceLoader';
-// import SearchBarExample from 'popui-rn/components/search-bar/demo/basic';
-// import ListExample from 'popui-rn/components/list/demo/basic';
+// import SearchBarExample from '@popui/popui-rn/components/search-bar/demo/basic';
+// import ListExample from '@popui/popui-rn/components/list/demo/basic';
 // import TextInputSingleLineExample from 
-// 'popui-rn/components/text-input-single-line/demo/basic';
-import FormInputExample from 'popui-rn/components/form/demo/input';
+// '@popui/popui-rn/components/text-input-single-line/demo/basic';
+import FormInputExample from '@popui/popui-rn/components/form/demo/input';
 
 export default class App extends React.Component {
   render() {

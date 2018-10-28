@@ -1,7 +1,7 @@
 // import PropTypes from 'prop-types'
 import React, { Component } from 'react'
 import { StyleSheet, Text, View, ViewPropTypes } from 'react-native'
-import { Picker } from 'popui-rn/components/picker'
+import { Picker } from '@popui/popui-rn/components/picker'
 import themeVars from '../style/themes/default'
 
 const styles = StyleSheet.create({

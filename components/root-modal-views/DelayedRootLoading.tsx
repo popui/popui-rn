@@ -1,6 +1,6 @@
 import React from 'react'
-import RootModalLoading from 'popui-rn/components/RootModalViews/RootModalLoading'
-import Delay from 'popui-rn/components/Timer/Delay'
+import RootModalLoading from '@popui/popui-rn/components/RootModalViews/RootModalLoading'
+import Delay from '@popui/popui-rn/components/Timer/Delay'
 
 function DelayedRootLoading(props: {
   isOpen?: boolean

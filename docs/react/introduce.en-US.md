@@ -68,7 +68,7 @@ Example of usage:
 ```jsx
 import React, { Component } from 'react';
 import { AppRegistry } from 'react-native';
-import Button from 'popui-rn/lib/button';
+import Button from '@popui/popui-rn/lib/button';
 
 class HelloWorldApp extends Component {
   render() {
@@ -105,7 +105,7 @@ The following two ways used to load the **only components you used**, select one
 - Manually import
 
    ```jsx
-   import Button from 'popui-rn/lib/button';
+   import Button from '@popui/popui-rn/lib/button';
    ```
 
 ##### More enhanced (optional):
@@ -116,7 +116,7 @@ The following two ways used to load the **only components you used**, select one
 ## Version
 
 - Stable: [![npm package](http://img.shields.io/npm/v/popui-rn.svg?style=flat-square)](http://npmjs.com/package/popui-rn)
-- Next: [![npm package](https://img.shields.io/npm/v/popui-rn/next.svg)](http://npmjs.com/package/popui-rn)
+- Next: [![npm package](https://img.shields.io/npm/v/@popui/popui-rn/next.svg)](http://npmjs.com/package/popui-rn)
 
 ## Links
 

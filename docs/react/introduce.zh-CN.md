@@ -68,7 +68,7 @@ $ npm install popui-rn --save
 ```jsx
 import React, { Component } from 'react';
 import { AppRegistry } from 'react-native';
-import Button from 'popui-rn/lib/button';
+import Button from '@popui/popui-rn/lib/button';
 
 class HelloWorldApp extends Component {
   render() {
@@ -105,7 +105,7 @@ AppRegistry.registerComponent('HelloWorldApp', () => HelloWorldApp);
 - 手动引入
 
    ```jsx
-   import Button from 'popui-rn/lib/button';
+   import Button from '@popui/popui-rn/lib/button';
    ```
 
 ##### 更多增强 (非必须):
@@ -116,7 +116,7 @@ AppRegistry.registerComponent('HelloWorldApp', () => HelloWorldApp);
 ## 版本
 
 - 稳定版：[![npm package](http://img.shields.io/npm/v/popui-rn.svg?style=flat-square)](http://npmjs.com/package/popui-rn)
-- 开发版：[![npm package](https://img.shields.io/npm/v/popui-rn/next.svg)](http://npmjs.com/package/popui-rn)
+- 开发版：[![npm package](https://img.shields.io/npm/v/@popui/popui-rn/next.svg)](http://npmjs.com/package/popui-rn)
 
 ## 链接
 
