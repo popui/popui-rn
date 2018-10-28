@@ -64,10 +64,10 @@ module.exports = {
       module: require('../components/weui-icon/demo/basic'),
     },
     {
-      title: 'List',
+      title: 'CellList',
       description: '列表',
       icon: 'https://os.alipayobjects.com/rmsportal/tiapjpdKPQGHhnC.png',
-      module: require('../components/list/demo/basic'),
+      module: require('../components/cell-list/demo/basic'),
     },
     {
       title: 'Panel',

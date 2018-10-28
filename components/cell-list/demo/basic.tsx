@@ -17,12 +17,11 @@ import {
 export default class BasicCellListExample extends React.Component<any, any> {
   render() {
     return (
-      <View
-        // style={{ flex: 1, backgroundColor: '#f5f5f9' }}
-        style={{ backgroundColor: '#eee' }}
-        // automaticallyAdjustContentInsets={false}
-        // showsHorizontalScrollIndicator={false}
-        // showsVerticalScrollIndicator={false}
+      <ScrollView
+        style={{ flex: 1, backgroundColor: '#eee' }}
+        automaticallyAdjustContentInsets={false}
+        showsHorizontalScrollIndicator={false}
+        showsVerticalScrollIndicator={false}
       >
         <CellList header="带说明的列表项">
           <CellItem body="标题文字" extra="说明文字" />
@@ -268,7 +267,7 @@ export default class BasicCellListExample extends React.Component<any, any> {
             arrow="right"
           />
         </CellList>
-      </View>
+      </ScrollView>
     )
   }
 }
