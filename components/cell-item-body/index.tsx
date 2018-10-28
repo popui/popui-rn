@@ -1,8 +1,6 @@
-import React from 'react'
+import * as React from 'react';
 import { StyleSheet, View, ViewStyle } from 'react-native'
-import WeuiIcon from '../weui-icon'
 import themeVars from '../style/themes/default'
-import CellText from '../cell-text'
 
 const styles = StyleSheet.create({
   cellBody: {
@@ -19,46 +17,24 @@ const styles = StyleSheet.create({
     marginLeft: 5,
   },
 })
-
-export interface CellBodyProps {
-  error?: boolean
-  children?: React.ReactNode
-  style?: ViewStyle
+interface CellItemBodyProps {
+  style?:any
+  direction?:'row' | 'column'
 }
 
-export interface CellBodyState {}
+const CellItemBody: React.SFC<CellItemBodyProps> = (props:CellItemBodyProps) => {
+  const { style, ...others } =  props
+  return (
+    <View
+      style={[
+        styles.cellBody,
+        style,
+      ]}
+      {...others}
+    >
+      {this.renderChildrenWithProps()}
+    </View>
+  )
+};
 
-export default class CellBody extends React.Component<
-  CellBodyProps,
-  CellBodyState
-> {
-  private renderChildrenWithProps = () => {
-    const { error, children } = this.props
-    const childrenWithProps = React.Children.map(children, (child: any) => {
-      if (typeof child === 'string') {
-        const textStyles = error ? styles.error : null
-        return <CellText style={textStyles}>{child}</CellText>
-      }
-      return React.cloneElement(child, {
-        error,
-      })
-    })
-    return childrenWithProps
-  }
-  public render() {
-    const { error, style, ...others } = this.props
-    return (
-      <View
-        style={[
-          styles.cellBody,
-          style,
-          error ? { flexDirection: 'row' } : null,
-        ]}
-        {...others}
-      >
-        {this.renderChildrenWithProps()}
-        {error && <WeuiIcon name="warn" style={styles.errorIcon} />}
-      </View>
-    )
-  }
-}
+export default CellItemBody;

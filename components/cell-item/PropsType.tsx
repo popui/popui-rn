@@ -5,14 +5,15 @@ export interface CellListItemPropsType {
   disabled?: boolean
   multipleLine?: boolean
   children?: ReactNode
-  header?: ReactNode | null
+  header?: ReactNode
+  body?: ReactNode
   extra?: ReactNode
   arrow?: 'horizontal' | 'down' | 'up' | 'empty' | ''
   wrap?: boolean
   activeStyle?: React.CSSProperties
   error?: boolean
   platform?: 'android' | 'ios'
-  bodyStyle?:any
-  isLast?:boolean
-  footer?:any
+  bodyStyle?: any
+  isLast?: boolean
+  footer?: any
 }

@@ -42,7 +42,7 @@ export default class CellItem extends React.Component<ListItemProps, any> {
     onClick:noopFunc
   }
   private numberOfLinesProp: any
-  private underlayColorProp: any
+  // private underlayColorProp: any
   renderBody = () => {
     const { styles, children } = this.props
     const itemStyles = styles! // assert none-null none-undefined
