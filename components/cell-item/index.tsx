@@ -36,67 +36,67 @@ export default class CellItem extends React.Component<ListItemProps, any> {
     if (!header) {
       return null
     }
-    if (typeof header === 'function') {
-      return header()
+    const renderParmas = {
+      error,
+      multipleLine,
     }
-    return (
-      <CellItemHeader multipleLine={multipleLine} error={error}>
-        {header}
-      </CellItemHeader>
-    )
+    if (typeof header === 'function') {
+      return header(renderParmas)
+    }
+    return <CellItemHeader {...renderParmas}>{header}</CellItemHeader>
   }
   renderBody = () => {
-    const { error, children, renderBody } = this.props
-    if (renderBody) {
-      return renderBody()
-    }
-    if (!children) {
+    const { error, body } = this.props
+    if (!body) {
       return null
     }
-    return (
-      <CellItemBody error={error} numberOfLinesProp={this.numberOfLinesProp}>
-        {children}
-      </CellItemBody>
-    )
+    const renderParmas = {
+      error,
+      numberOfLinesProp: this.numberOfLinesProp,
+    }
+    if (typeof body === 'function') {
+      return body(renderParmas)
+    }
+    return <CellItemBody {...renderParmas}>{body}</CellItemBody>
   }
   renderExtra = () => {
     const { error, extra } = this.props
     if (!extra) {
       return null
     }
-    if (typeof extra === 'function') {
-      return extra()
+    const renderParmas = {
+      error,
+      numberOfLinesProp: this.numberOfLinesProp,
     }
-    return (
-      <CellItemExtra error={error} numberOfLinesProp={this.numberOfLinesProp}>
-        {extra}
-      </CellItemExtra>
-    )
+    if (typeof extra === 'function') {
+      return extra(renderParmas)
+    }
+    return <CellItemExtra {...renderParmas}>{extra}</CellItemExtra>
   }
   renderIcons = () => {
     const { arrow, error, renderIcons } = this.props
-    if (renderIcons) {
-      return renderIcons()
-    }
-    const props = {
+    const renderParmas = {
       arrow,
       error,
     }
-    return <CellItemIcons {...props} />
+    if (renderIcons) {
+      return renderIcons(renderParmas)
+    }
+    return <CellItemIcons {...renderParmas} />
   }
   renderFooter = () => {
     const { footer, error } = this.props
     if (!footer) {
       return null
     }
+    const renderParmas = {
+      numberOfLinesProp: this.numberOfLinesProp,
+      error,
+    }
     if (typeof footer === 'function') {
       return footer()
     }
-    return (
-      <CellItemFooter error={error} numberOfLinesProp={this.numberOfLinesProp}>
-        {footer}
-      </CellItemFooter>
-    )
+    return <CellItemFooter {...renderParmas}>{footer}</CellItemFooter>
   }
   renderLineView = () => {
     const {

@@ -8,6 +8,7 @@ export interface CellListItemPropsType {
   header?: any
   body?: any
   extra?: any
+  footer?: any
   arrow?: 'right' | 'down' | 'up' | 'empty' | ''
   wrap?: boolean
   activeStyle?: React.CSSProperties
@@ -15,10 +16,8 @@ export interface CellListItemPropsType {
   platform?: 'android' | 'ios'
   bodyStyle?: any
   isLast?: boolean
-  footer?: any
   renderLineView?: () => React.ReactNode
-  renderIcons?: () => React.ReactNode
-  renderBody?: () => React.ReactNode
+  renderIcons?: (params:any) => React.ReactNode
   lineViewStyle?: React.CSSProperties
 }
 export interface renderBodyParams {}
