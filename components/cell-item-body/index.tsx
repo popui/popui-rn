@@ -44,7 +44,7 @@ const CellItemBody: React.SFC<CellItemBodyProps> = (
 
   let content: any
   if (Array.isArray(children)) {
-    content = children.forEach((el, index) =>
+    content = children.map((el, index) =>
       renderChildrenItem({ item: el, index })
     )
   } else {

@@ -3,7 +3,7 @@
 import React from 'react'
 
 import { Image, ScrollView, View } from 'react-native'
-import { CellList, CellItem, CellItemBrief } from 'popui-rn'
+import { CellList, CellItem, CellItemBrief,CellItemExtra } from 'popui-rn'
 
 export default class BasicCellListExample extends React.Component<any, any> {
   render() {
@@ -15,7 +15,7 @@ export default class BasicCellListExample extends React.Component<any, any> {
         // showsHorizontalScrollIndicator={false}
         // showsVerticalScrollIndicator={false}
       >
-        {/* <CellList header="单个 Item" footer="提示文字">
+        <CellList header="单个 Item" footer="提示文字">
           <CellItem extra="extra 说明文字"  arrow="horizontal"
           >标题文字</CellItem>
         </CellList>
@@ -24,12 +24,15 @@ export default class BasicCellListExample extends React.Component<any, any> {
           <CellItem data-seed="logId">
             标题文字点击无反馈，文字超长则隐藏，文字超长则隐藏
           </CellItem>
+
           <CellItem wrap>
             body 文字超长折行文字超长折行文字超长折行文字超长折行文字超长折行
           </CellItem>
+
           <CellItem wrap extra="extra">
             body
           </CellItem>
+
           <CellItem
             wrap
             header="https://os.alipayobjects.com/rmsportal/mOoPurdIfmcuqtr.png"
@@ -39,9 +42,14 @@ export default class BasicCellListExample extends React.Component<any, any> {
           >
             body
           </CellItem>
+
         </CellList>
 
         <CellList header="带说明的列表项">
+        <CellItem extra="没有箭头" arrow="empty">
+            标题文字
+          </CellItem>
+
           <CellItem
             extra="箭头向右"
             arrow="horizontal"
@@ -49,21 +57,21 @@ export default class BasicCellListExample extends React.Component<any, any> {
           >
             标题文字
           </CellItem>
+
           <CellItem extra="箭头向下" arrow="down" onClick={() => {}}>
             标题文字
           </CellItem>
+
           <CellItem extra="箭头向上" arrow="up" onClick={() => {}}>
             标题文字
           </CellItem>
-          <CellItem extra="没有箭头" arrow="empty">
-            标题文字
-          </CellItem>
-        </CellList> */}
+
+        </CellList>
 
         <CellList header="对齐">
           <CellItem
             extra={
-              [ "extra 内容内容",
+              [ "extra 是数组",
               <CellItemBrief style={{ textAlign: 'right' }}>
               Brief 辅助文字内容
               </CellItemBrief>]
@@ -72,19 +80,21 @@ export default class BasicCellListExample extends React.Component<any, any> {
           >
             垂直居中对齐
           </CellItem>
-          <CellItem extra="内容内容" multipleLine>
+
+          <CellItem extra="extra 内容内容" multipleLine>
             垂直居中对齐
             <CellItemBrief >Brief 辅助文字内容</CellItemBrief>
           </CellItem>
+
           <CellItem
             wrap
             extra={
-              <View>
-                extra 内容内容文字超长折行文字超长折行文字超长折行文字超长折行文字超长折行文字超长折行文字超长折行
+              <CellItemExtra direction='column'>
+                extra 是 CellItemExtra组件. 内容内容文字超长折行文字超长折行文字超长折行文字超长折行文字超长折行文字超长折行文字超长折行
                 <CellItemBrief style={{ textAlign: 'right' }}>
                 Brief 辅助文字内容
                 </CellItemBrief>
-              </View>
+              </CellItemExtra>
             }
             multipleLine
             arrow="horizontal"
@@ -109,15 +119,16 @@ export default class BasicCellListExample extends React.Component<any, any> {
             </CellItemBrief>
             <CellItemBrief>Brief 辅助文字内容</CellItemBrief>
           </CellItem>
+
           <CellItem
             header="https://os.alipayobjects.com/rmsportal/mOoPurdIfmcuqtr.png"
             extra={
-              <View>
-                extra 内容内容
+              <CellItemExtra>
+                extra 是 CellItemExtra组件.
                 <CellItemBrief style={{ textAlign: 'right' }}>
                   Brief 辅助文字内容
                 </CellItemBrief>
-              </View>
+              </CellItemExtra>
             }
             arrow="down"
             multipleLine
@@ -127,7 +138,7 @@ export default class BasicCellListExample extends React.Component<any, any> {
           </CellItem>
         </CellList>
 
-        {/* <CellList header="带缩略图">
+        <CellList header="带缩略图">
           <CellItem header="https://os.alipayobjects.com/rmsportal/mOoPurdIfmcuqtr.png">
             thumb
           </CellItem>
@@ -151,7 +162,7 @@ export default class BasicCellListExample extends React.Component<any, any> {
           >
             extra为Image
           </CellItem>
-        </CellList> */}
+        </CellList>
       </View>
     )
   }
