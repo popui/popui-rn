@@ -17,7 +17,7 @@ export interface IProps {}
 export default class CellScreen extends React.Component<IProps, any> {
   render() {
     return (
-      <View style={{backgroundColor:"#eee"}}>
+      <ScrollView style={{backgroundColor:"#eee"}}>
         <Cells header="带说明的列表项">
           <Cell>
             <CellBody>标题文字</CellBody>
@@ -101,7 +101,7 @@ export default class CellScreen extends React.Component<IProps, any> {
             <CellFooter>说明文字</CellFooter>
           </Cell>
         </Cells>
-      </View>
+      </ScrollView>
     )
   }
 }

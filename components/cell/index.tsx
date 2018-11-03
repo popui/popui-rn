@@ -3,18 +3,18 @@ import { StyleSheet, View, ViewStyle } from 'react-native'
 import themeVars from '../style/themes/default'
 import TouchableWithFallback from '../touchable-with-fallback'
 import { CellProps, CellContentProps } from './PropsType'
-import renderElement from '../_util/slot';
+import renderElement from '../_util/slot'
 
 const styles = StyleSheet.create({
   cell: {
     flexGrow: 1,
     flexDirection: 'row',
     alignItems: 'center',
-    marginLeft: themeVars.CellGapH, // 以避免左边出现 border
+    paddingLeft: themeVars.CellGapH,
     paddingTop: themeVars.CellGapV,
     paddingBottom: themeVars.CellGapV,
     paddingRight: themeVars.CellGapH,
-    borderTopWidth: StyleSheet.hairlineWidth,// 每个 Cell 都有 borderTop
+    borderTopWidth: StyleSheet.hairlineWidth, // 每个 Cell 都有 borderTop
     borderColor: themeVars.CellBorderColor,
   },
   isFirstCell: {
