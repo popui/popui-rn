@@ -1,6 +1,6 @@
 {
   "name": "@popui/popui-rn",
-  "version": "0.0.4",
+  "version": "0.0.6",
   "description": "popui react native",
   "keywords": [
     "ant",
@@ -17,7 +17,7 @@
     "popui"
   ],
   "files": [
-    "components/**/*/*.jsx",
+    "components/**/*/*.js",
     "components/**/*/*.png",
     "components/**/*/*.jpg"
   ],
