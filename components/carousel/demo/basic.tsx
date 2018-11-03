@@ -1,17 +1,16 @@
-import React from 'react';
+import React from 'react'
 
-import { StyleSheet, Text, TextStyle, View, ViewStyle } from 'react-native';
-import { Carousel } from "@popui/popui-rn";
-
+import { StyleSheet, Text, TextStyle, View, ViewStyle } from 'react-native'
+import { Carousel } from '@popui/popui-rn'
 
 export default class BasicCarouselExample extends React.Component<any, any> {
   onHorizontalSelectedIndexChange(index: number) {
     /* tslint:disable: no-console */
-    console.log('horizontal change to', index);
+    console.log('horizontal change to', index)
   }
   onVerticalSelectedIndexChange(index: number) {
     /* tslint:disable: no-console */
-    console.log('vertical change to', index);
+    console.log('vertical change to', index)
   }
   render() {
     return (
@@ -25,19 +24,35 @@ export default class BasicCarouselExample extends React.Component<any, any> {
             infinite
             afterChange={this.onHorizontalSelectedIndexChange}
           >
-            <View style={[styles.containerHorizontal, { backgroundColor: 'red' }]}>
+            <View
+              style={[styles.containerHorizontal, { backgroundColor: 'red' }]}
+            >
               <Text>Carousel 1</Text>
             </View>
-            <View style={[styles.containerHorizontal, { backgroundColor: 'blue' }]}>
+            <View
+              style={[styles.containerHorizontal, { backgroundColor: 'blue' }]}
+            >
               <Text>Carousel 2</Text>
             </View>
-            <View style={[styles.containerHorizontal, { backgroundColor: 'yellow' }]}>
+            <View
+              style={[
+                styles.containerHorizontal,
+                { backgroundColor: 'yellow' },
+              ]}
+            >
               <Text>Carousel 3</Text>
             </View>
-            <View style={[styles.containerHorizontal, { backgroundColor: 'aqua' }]}>
+            <View
+              style={[styles.containerHorizontal, { backgroundColor: 'aqua' }]}
+            >
               <Text>Carousel 4</Text>
             </View>
-            <View style={[styles.containerHorizontal, { backgroundColor: 'fuchsia' }]}>
+            <View
+              style={[
+                styles.containerHorizontal,
+                { backgroundColor: 'fuchsia' },
+              ]}
+            >
               <Text>Carousel 5</Text>
             </View>
           </Carousel>
@@ -54,35 +69,47 @@ export default class BasicCarouselExample extends React.Component<any, any> {
             afterChange={this.onVerticalSelectedIndexChange}
             vertical
           >
-            <View style={[styles.containerVertical, { backgroundColor: 'red' }]}>
+            <View
+              style={[styles.containerVertical, { backgroundColor: 'red' }]}
+            >
               <Text>Carousel 1</Text>
             </View>
-            <View style={[styles.containerVertical, { backgroundColor: 'blue' }]}>
+            <View
+              style={[styles.containerVertical, { backgroundColor: 'blue' }]}
+            >
               <Text>Carousel 2</Text>
             </View>
-            <View style={[styles.containerVertical, { backgroundColor: 'yellow' }]}>
+            <View
+              style={[styles.containerVertical, { backgroundColor: 'yellow' }]}
+            >
               <Text>Carousel 3</Text>
             </View>
-            <View style={[styles.containerVertical, { backgroundColor: 'aqua' }]}>
+            <View
+              style={[styles.containerVertical, { backgroundColor: 'aqua' }]}
+            >
               <Text>Carousel 4</Text>
             </View>
-            <View style={[styles.containerVertical, { backgroundColor: 'fuchsia' }]}>
+            <View
+              style={[styles.containerVertical, { backgroundColor: 'fuchsia' }]}
+            >
               <Text>Carousel 5</Text>
             </View>
           </Carousel>
-          <Text>Use the height of the first child as the height of the Carousel</Text>
+          <Text>
+            Use the height of the first child as the height of the Carousel
+          </Text>
           <Text>{React.Children.count(this.props.children)}</Text>
         </View>
       </View>
-    );
+    )
   }
 }
 
 const styles = StyleSheet.create<{
-  wrapper: ViewStyle;
-  containerHorizontal: ViewStyle;
-  containerVertical: ViewStyle;
-  text: TextStyle;
+  wrapper: ViewStyle
+  containerHorizontal: ViewStyle
+  containerVertical: ViewStyle
+  text: TextStyle
 }>({
   wrapper: {
     backgroundColor: '#fff',
@@ -103,4 +130,4 @@ const styles = StyleSheet.create<{
     color: '#fff',
     fontSize: 36,
   },
-});
+})

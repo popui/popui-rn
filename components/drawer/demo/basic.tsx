@@ -1,28 +1,27 @@
 // tslint:disable:jsx-no-multiline-js
-import React from 'react';
+import React from 'react'
 
-import { ScrollView, StyleSheet, Text, View } from 'react-native';
-import { Button, Drawer, List, GapH } from "@popui/popui-rn";
+import { ScrollView, StyleSheet, Text, View } from 'react-native'
+import { Button, Drawer, List, GapH } from '@popui/popui-rn'
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
   },
-});
-
+})
 
 export default class DrawerExample extends React.Component<any, any> {
-  drawer: any;
+  drawer: any
 
   onOpenChange = (isOpen: any) => {
     /* tslint:disable: no-console */
-    console.log('是否打开了 Drawer', isOpen.toString());
+    console.log('是否打开了 Drawer', isOpen.toString())
   }
 
   render() {
     const itemArr = Array.apply(null, Array(20))
       .map(function(_: any, i: any) {
-        return i;
+        return i
       })
       .map((_i: any, index: any) => {
         if (index === 0) {
@@ -49,7 +48,7 @@ export default class DrawerExample extends React.Component<any, any> {
                 </Button>
               </View>
             </List.Item>
-          );
+          )
         }
         return (
           <List.Item
@@ -58,15 +57,15 @@ export default class DrawerExample extends React.Component<any, any> {
           >
             <Text>Categories - {index}</Text>
           </List.Item>
-        );
-      });
+        )
+      })
 
     // Todo: https://github.com/DefinitelyTyped/DefinitelyTyped
     const sidebar = (
       <ScrollView style={[styles.container as any]}>
         <List>{itemArr}</List>
       </ScrollView>
-    );
+    )
 
     return (
       <Drawer
@@ -84,6 +83,6 @@ export default class DrawerExample extends React.Component<any, any> {
           <GapH />
         </View>
       </Drawer>
-    );
+    )
   }
 }

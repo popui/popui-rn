@@ -1,18 +1,18 @@
-import { ViewStyle, TextStyle } from 'react-native';
-import themeVars from '../../style/themes/default';
+import { ViewStyle, TextStyle } from 'react-native'
+import themeVars from '../../style/themes/default'
 
 export interface ITabBarStyle {
-  tabbar: ViewStyle;
-  content: ViewStyle;
-  tabs: ViewStyle;
-  barItem: ViewStyle;
-  barIcon: ViewStyle;
-  barItemSelected: ViewStyle;
-  barItemTitle: TextStyle;
-  contentItem: ViewStyle;
-  contentItemSelected: ViewStyle;
-  badge: ViewStyle;
-  badgeText: TextStyle;
+  tabbar: ViewStyle
+  content: ViewStyle
+  tabs: ViewStyle
+  barItem: ViewStyle
+  barIcon: ViewStyle
+  barItemSelected: ViewStyle
+  barItemTitle: TextStyle
+  contentItem: ViewStyle
+  contentItemSelected: ViewStyle
+  badge: ViewStyle
+  badgeText: TextStyle
 }
 
 export default {
@@ -39,8 +39,7 @@ export default {
     height: 28,
     marginTop: 2,
   },
-  barItemSelected: {
-  },
+  barItemSelected: {},
   barItemTitle: {
     fontSize: themeVars.font_size_icontext,
     marginTop: 2,
@@ -71,4 +70,4 @@ export default {
     textAlign: 'center',
     color: 'white',
   },
-};
+}

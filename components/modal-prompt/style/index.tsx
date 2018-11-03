@@ -1,13 +1,13 @@
-import { StyleSheet, TextStyle, ViewStyle } from 'react-native';
-import themeVars from '../../style/themes/default';
+import { StyleSheet, TextStyle, ViewStyle } from 'react-native'
+import themeVars from '../../style/themes/default'
 
 export interface IPromptStyle {
-  message: TextStyle;
-  inputGroup: ViewStyle;
-  inputWrapper: ViewStyle;
-  input: TextStyle;
-  inputFirst: ViewStyle;
-  inputLast: ViewStyle;
+  message: TextStyle
+  inputGroup: ViewStyle
+  inputWrapper: ViewStyle
+  input: TextStyle
+  inputFirst: ViewStyle
+  inputLast: ViewStyle
 }
 
 export default {
@@ -41,4 +41,4 @@ export default {
     borderBottomLeftRadius: themeVars.radius_sm,
     borderBottomRightRadius: themeVars.radius_sm,
   },
-};
+}

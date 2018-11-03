@@ -28,7 +28,7 @@ export default class Card extends React.Component<CardNativeProps, any> {
   render() {
     const { style, styles, full, children, ...restProps } = this.props
     const cardStyle = full ? styles!.full : {}
-    const childDom = React.Children.map(children, (child) =>
+    const childDom = React.Children.map(children, child =>
       React.cloneElement(child as React.ReactElement<any>, { styles })
     )
     return (

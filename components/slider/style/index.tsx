@@ -1,4 +1,4 @@
-import themeVars from '../../style/themes/default';
+import themeVars from '../../style/themes/default'
 
 export default {
   sliderWrapper: {
@@ -21,4 +21,4 @@ export default {
   minimum: {
     color: themeVars.brand_primary,
   },
-};
+}

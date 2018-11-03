@@ -28,7 +28,7 @@ export default {
       topView.set(
         <ActionSheetAndroidContainer
           visible
-          ref={(ref) => (instance = ref)}
+          ref={ref => (instance = ref)}
           onAnimationEnd={onAnimationEnd}
           config={config}
           callback={callback}
@@ -73,7 +73,7 @@ export default {
           }
         }
       })
-      .catch((error) => {
+      .catch(error => {
         if (failureCallback) {
           failureCallback(error)
         }

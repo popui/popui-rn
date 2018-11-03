@@ -1,4 +1,4 @@
-import { ViewStyle,TouchableWithoutFeedbackProps } from 'react-native'
+import { ViewStyle, TouchableWithoutFeedbackProps } from 'react-native'
 
 export interface CellProps extends TouchableWithoutFeedbackProps {
   isFirst?: boolean
@@ -7,9 +7,9 @@ export interface CellProps extends TouchableWithoutFeedbackProps {
   error?: boolean
   disabled?: boolean
   // children?: React.ReactNode
-  header?:React.ReactNode
-  body?:React.ReactNode
-  footer?:React.ReactNode
+  header?: React.ReactNode
+  body?: React.ReactNode
+  footer?: React.ReactNode
   style?: ViewStyle
 }
 

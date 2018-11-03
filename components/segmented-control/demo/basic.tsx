@@ -1,17 +1,16 @@
 /* tslint:disable:no-console */
-import React from 'react';
+import React from 'react'
 
-import { Text, View } from 'react-native';
-import { SegmentedControl, GapH } from "@popui/popui-rn";
-
+import { Text, View } from 'react-native'
+import { SegmentedControl, GapH } from '@popui/popui-rn'
 
 export default class BasicTagExample extends React.Component<any, any> {
   onChange = (e: any) => {
-    console.log(`selectedIndex:${eEvent.selectedSegmentIndex}`);
+    console.log(`selectedIndex:${eEvent.selectedSegmentIndex}`)
   }
 
   onValueChange = (value: any) => {
-    console.log(value);
+    console.log(value)
   }
 
   render() {
@@ -40,6 +39,6 @@ export default class BasicTagExample extends React.Component<any, any> {
           onValueChange={this.onValueChange}
         />
       </View>
-    );
+    )
   }
 }

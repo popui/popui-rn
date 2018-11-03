@@ -1,18 +1,18 @@
-import { Platform, TextStyle, ViewStyle } from 'react-native';
-import themeVars from '../../style/themes/default';
+import { Platform, TextStyle, ViewStyle } from 'react-native'
+import themeVars from '../../style/themes/default'
 
 export interface IBadgeStyle {
-  wrap: ViewStyle;
-  textCornerWrap: ViewStyle;
-  dot: ViewStyle;
-  dotSizelarge: ViewStyle;
-  textDom: ViewStyle;
-  textCorner: ViewStyle;
-  textCornerlarge: ViewStyle;
-  text: TextStyle;
+  wrap: ViewStyle
+  textCornerWrap: ViewStyle
+  dot: ViewStyle
+  dotSizelarge: ViewStyle
+  textDom: ViewStyle
+  textCorner: ViewStyle
+  textCornerlarge: ViewStyle
+  text: TextStyle
 }
 
-const grid = 4;
+const grid = 4
 
 export default {
   wrap: {
@@ -64,4 +64,4 @@ export default {
     color: themeVars.color_text_base_inverse,
     textAlign: 'center',
   },
-};
+}

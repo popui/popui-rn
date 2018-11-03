@@ -1,23 +1,22 @@
 // tslint:disable:jsx-no-multiline-js
 /* tslint:disable:no-console */
-import React from 'react';
+import React from 'react'
 
-import { View } from 'react-native';
-import { DatePicker, List } from "@popui/popui-rn";
+import { View } from 'react-native'
+import { DatePicker, List } from '@popui/popui-rn'
 
 // const now = new Date();
 
-
 export default class PopupExample extends React.Component<any, any> {
   constructor(props: any) {
-    super(props);
+    super(props)
     this.state = {
       value: undefined,
-    };
+    }
   }
 
   onChange = (value: any) => {
-    this.setState({ value });
+    this.setState({ value })
   }
 
   render() {
@@ -36,6 +35,6 @@ export default class PopupExample extends React.Component<any, any> {
           </DatePicker>
         </List>
       </View>
-    );
+    )
   }
 }

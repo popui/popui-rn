@@ -1,14 +1,14 @@
-import { StyleSheet, TextStyle, ViewStyle } from 'react-native';
-import themeVars from '../../style/themes/default';
+import { StyleSheet, TextStyle, ViewStyle } from 'react-native'
+import themeVars from '../../style/themes/default'
 
 export interface AccordionStyle {
-  container: ViewStyle;
-  header: ViewStyle;
-  arrow: ViewStyle;
-  headerWrap: ViewStyle;
-  headerText: TextStyle;
-  content: ViewStyle;
-  contentText: TextStyle;
+  container: ViewStyle
+  header: ViewStyle
+  arrow: ViewStyle
+  headerWrap: ViewStyle
+  headerText: TextStyle
+  content: ViewStyle
+  contentText: TextStyle
 }
 
 // wait for https://github.com/DefinitelyTyped/DefinitelyTyped/pull/18278
@@ -50,4 +50,4 @@ export default StyleSheet.create<any>({
     fontSize: themeVars.font_size_subhead,
     color: themeVars.color_text_paragraph,
   },
-});
+})

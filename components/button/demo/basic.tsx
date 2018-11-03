@@ -1,8 +1,8 @@
 /* tslint:disable:no-unused-variable */
 // tslint:disable:jsx-no-multiline-js
-import React from 'react';
+import React from 'react'
 
-import { Button, GapH, GapV } from "@popui/popui-rn";
+import { Button, GapH, GapV } from '@popui/popui-rn'
 
 /* tslint:disable:no-console */
 export default () => (
@@ -29,8 +29,12 @@ export default () => (
 
     <Button loading>loading button</Button>
 
-    <Button activeStyle={false}>无点击反馈</Button><GapH />
-    <Button activeStyle={{ backgroundColor: 'red' }}>custom feedback style</Button><GapH />
+    <Button activeStyle={false}>无点击反馈</Button>
+    <GapH />
+    <Button activeStyle={{ backgroundColor: 'red' }}>
+      custom feedback style
+    </Button>
+    <GapH />
 
     <GapV
       style={{
@@ -49,4 +53,4 @@ export default () => (
       </Button>
     </GapV>
   </GapV>
-);
+)

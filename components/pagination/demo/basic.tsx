@@ -1,12 +1,11 @@
-import React from 'react';
+import React from 'react'
 
-import { Pagination, GapH, GapV } from "@popui/popui-rn";
+import { Pagination, GapH, GapV } from '@popui/popui-rn'
 
 const locale = {
   prevText: '上一步',
   nextText: '下一步',
-};
-
+}
 
 export default class BasicPaginationExample extends React.Component<any, any> {
   render() {
@@ -24,6 +23,6 @@ export default class BasicPaginationExample extends React.Component<any, any> {
         <GapH size="lg" />
         <Pagination mode="pointer" total={5} current={2} />
       </GapV>
-    );
+    )
   }
 }

@@ -11,7 +11,7 @@ export function getRenderElement({
   renderText?: Function
 }) {
   function renderElement(el: any) {
-    if(!el){
+    if (!el) {
       return null
     }
     if (typeof el === 'string') {

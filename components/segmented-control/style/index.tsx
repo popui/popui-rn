@@ -1,12 +1,12 @@
-import { ViewStyle, TextStyle, StyleSheet } from 'react-native';
-import themeVars from '../../style/themes/default';
+import { ViewStyle, TextStyle, StyleSheet } from 'react-native'
+import themeVars from '../../style/themes/default'
 
 export interface ISegmentControlStyle {
-  segment: ViewStyle;
-  item: ViewStyle;
-  itemLeftRadius: ViewStyle;
-  itemRightRadius: ViewStyle;
-  itemText: TextStyle;
+  segment: ViewStyle
+  item: ViewStyle
+  itemLeftRadius: ViewStyle
+  itemRightRadius: ViewStyle
+  itemText: TextStyle
 }
 export default {
   segment: {
@@ -37,4 +37,4 @@ export default {
     textAlign: 'center',
     fontSize: themeVars.font_size_caption_sm,
   },
-};
+}

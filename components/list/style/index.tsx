@@ -1,5 +1,5 @@
-import { StyleSheet } from 'react-native';
-import themeVars from '../../style/themes/default';
+import { StyleSheet } from 'react-native'
+import themeVars from '../../style/themes/default'
 
 export default {
   underlayColor: {
@@ -99,4 +99,4 @@ export default {
     flex: 1,
     flexDirection: 'column',
   },
-};
+}

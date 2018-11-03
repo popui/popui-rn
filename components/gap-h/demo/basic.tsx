@@ -1,8 +1,8 @@
 // tslint:disable:jsx-no-multiline-js
-import React from 'react';
+import React from 'react'
 
-import { Text, View } from 'react-native';
-import { GapH } from "@popui/popui-rn";
+import { Text, View } from 'react-native'
+import { GapH } from '@popui/popui-rn'
 
 const PlaceHolder = (props: any) => (
   <View
@@ -16,8 +16,7 @@ const PlaceHolder = (props: any) => (
   >
     <Text style={{ color: '#bbb' }}>Block</Text>
   </View>
-);
-
+)
 
 export default class GapHExample extends React.Component<any, any> {
   render() {
@@ -38,6 +37,6 @@ export default class GapHExample extends React.Component<any, any> {
         <GapH size="xl" />
         <PlaceHolder />
       </View>
-    );
+    )
   }
 }

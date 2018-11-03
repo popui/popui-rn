@@ -1,17 +1,16 @@
 /* tslint:disable:jsx-no-multiline-js */
-import React from 'react';
+import React from 'react'
 
-import { ScrollView, Text,View } from 'react-native';
-import { Button, InputItem, List } from "@popui/popui-rn";
+import { ScrollView, Text, View } from 'react-native'
+import { Button, InputItem, List } from '@popui/popui-rn'
 
-declare var jest: any;
-
+declare var jest: any
 
 export default class BasicInputItemExample extends React.Component<any, any> {
-  inputRef: any;
+  inputRef: any
 
   constructor(props: any) {
-    super(props);
+    super(props)
     this.state = {
       value: '',
       value1: '',
@@ -26,19 +25,19 @@ export default class BasicInputItemExample extends React.Component<any, any> {
       phone: '',
       password: '',
       number: '',
-    };
+    }
   }
 
   render() {
     return (
       <ScrollView
-        style={{ flex: 1,backgroundColor:'#eee' }}
+        style={{ flex: 1, backgroundColor: '#eee' }}
         automaticallyAdjustContentInsets={false}
         showsHorizontalScrollIndicator={false}
         showsVerticalScrollIndicator={false}
       >
-      <Text>测试: </Text>
-       <View>
+        <Text>测试: </Text>
+        <View>
           <InputItem
             clear
             onErrorPress={() => alert('clicked me')}
@@ -46,7 +45,7 @@ export default class BasicInputItemExample extends React.Component<any, any> {
             onChange={(value: any) => {
               this.setState({
                 value,
-              });
+              })
             }}
             extra="取消"
             placeholder="有标签"
@@ -63,7 +62,7 @@ export default class BasicInputItemExample extends React.Component<any, any> {
             onChange={(value: any) => {
               this.setState({
                 value,
-              });
+              })
             }}
             extra="元"
             placeholder="有标签"
@@ -73,13 +72,13 @@ export default class BasicInputItemExample extends React.Component<any, any> {
           <InputItem
             clear
             onErrorPress={() => {
-              alert(1);
+              alert(1)
             }}
             value="不可编辑"
             onChange={(value: any) => {
               this.setState({
                 value,
-              });
+              })
             }}
             extra={<Text>元</Text>}
             placeholder="不可编辑"
@@ -93,7 +92,7 @@ export default class BasicInputItemExample extends React.Component<any, any> {
             onChange={(value: any) => {
               this.setState({
                 value1: value,
-              });
+              })
             }}
             placeholder="无标签"
           />
@@ -118,7 +117,7 @@ export default class BasicInputItemExample extends React.Component<any, any> {
           <List.Item>
             <Button
               onClick={() => {
-                this.inputRef.focus();
+                this.inputRef.focus()
               }}
               type="primary"
             >
@@ -133,7 +132,7 @@ export default class BasicInputItemExample extends React.Component<any, any> {
             onChange={(value: any) => {
               this.setState({
                 labelnum1: value,
-              });
+              })
             }}
             labelNumber={2}
             placeholder="两个字标签"
@@ -146,7 +145,7 @@ export default class BasicInputItemExample extends React.Component<any, any> {
             onChange={(value: any) => {
               this.setState({
                 labelnum2: value,
-              });
+              })
             }}
             labelNumber={3}
             placeholder="三个字标签"
@@ -159,7 +158,7 @@ export default class BasicInputItemExample extends React.Component<any, any> {
             onChange={(value: any) => {
               this.setState({
                 labelnum3: value,
-              });
+              })
             }}
             labelNumber={4}
             placeholder="四个字标签（默认）"
@@ -175,7 +174,7 @@ export default class BasicInputItemExample extends React.Component<any, any> {
             onChange={(value: any) => {
               this.setState({
                 text: value,
-              });
+              })
             }}
             placeholder="text"
           >
@@ -188,7 +187,7 @@ export default class BasicInputItemExample extends React.Component<any, any> {
             onChange={(value: any) => {
               this.setState({
                 bankcard: value,
-              });
+              })
             }}
             placeholder="bankCard"
           >
@@ -201,7 +200,7 @@ export default class BasicInputItemExample extends React.Component<any, any> {
             onChange={(value: any) => {
               this.setState({
                 phone: value,
-              });
+              })
             }}
             placeholder="phone"
           >
@@ -214,7 +213,7 @@ export default class BasicInputItemExample extends React.Component<any, any> {
             onChange={(value: any) => {
               this.setState({
                 password: value,
-              });
+              })
             }}
             placeholder="password"
           >
@@ -227,7 +226,7 @@ export default class BasicInputItemExample extends React.Component<any, any> {
             onChange={(value: any) => {
               this.setState({
                 number: value,
-              });
+              })
             }}
             placeholder="number"
           >
@@ -235,6 +234,6 @@ export default class BasicInputItemExample extends React.Component<any, any> {
           </InputItem>
         </List>
       </ScrollView>
-    );
+    )
   }
 }

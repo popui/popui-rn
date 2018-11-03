@@ -1,9 +1,12 @@
 // tslint:disable:jsx-no-multiline-js
-import React from "react";
-;
-import { Image, ScrollView, Text, Alert } from "react-native";
-import { Result,  WeuiButton as Button,WeuiButtonArea, Flex } from "@popui/popui-rn";
-
+import React from 'react'
+import { Image, ScrollView, Text, Alert } from 'react-native'
+import {
+  Result,
+  WeuiButton as Button,
+  WeuiButtonArea,
+  Flex,
+} from '@popui/popui-rn'
 
 export default class ResultExample extends React.Component<any, any> {
   renderButtons = () => {
@@ -12,10 +15,10 @@ export default class ResultExample extends React.Component<any, any> {
         <Flex.Item>
           <Button
             onPress={() => {
-              Alert.alert("cancel");
+              Alert.alert('cancel')
             }}
             style={{
-              marginRight: 15
+              marginRight: 15,
             }}
           >
             Cancel
@@ -26,19 +29,19 @@ export default class ResultExample extends React.Component<any, any> {
           <Button
             type="primary"
             onPress={() => {
-              Alert.alert("ok");
+              Alert.alert('ok')
             }}
           >
             OK
           </Button>
         </Flex.Item>
       </Flex>
-    );
-  };
+    )
+  }
   render() {
     return (
-      <ScrollView style={{ backgroundColor: "#F5F5F9", flex: 1 }}>
-        <Text style={{ margin: 10, color: "#999" }}>iconName success</Text>
+      <ScrollView style={{ backgroundColor: '#F5F5F9', flex: 1 }}>
+        <Text style={{ margin: 10, color: '#999' }}>iconName success</Text>
         <Result
           iconName="success"
           title="验证成功"
@@ -46,7 +49,7 @@ export default class ResultExample extends React.Component<any, any> {
           renderButtons={this.renderButtons}
         />
 
-        <Text style={{ margin: 10, color: "#999" }}>iconName info</Text>
+        <Text style={{ margin: 10, color: '#999' }}>iconName info</Text>
         <Result
           iconName="info"
           title="Info"
@@ -54,7 +57,7 @@ export default class ResultExample extends React.Component<any, any> {
           extra="extra 所提交内容已成功完成验证"
         />
 
-        <Text style={{ margin: 10, color: "#999" }}>iconName warn</Text>
+        <Text style={{ margin: 10, color: '#999' }}>iconName warn</Text>
         <Result
           iconName="warn"
           title="Warn"
@@ -62,7 +65,7 @@ export default class ResultExample extends React.Component<any, any> {
           extra="extra 所提交内容已成功完成验证"
         />
 
-        <Text style={{ margin: 10, color: "#999" }}>iconName cancel</Text>
+        <Text style={{ margin: 10, color: '#999' }}>iconName cancel</Text>
         <Result
           iconName="cancel"
           title="Error"
@@ -70,28 +73,28 @@ export default class ResultExample extends React.Component<any, any> {
           extra="extra 所提交内容已成功完成验证"
         />
 
-        <Text style={{ margin: 10, color: "#999" }}>URI 图片</Text>
+        <Text style={{ margin: 10, color: '#999' }}>URI 图片</Text>
         <Result
           imgUrl={{
             uri:
-              "https://zos.alipayobjects.com/rmsportal/GcBguhrOdlYvGfnsXgrE.png"
+              'https://zos.alipayobjects.com/rmsportal/GcBguhrOdlYvGfnsXgrE.png',
           }}
           title="验证成功"
           message="所提交内容已成功完成验证"
         />
 
-        <Text style={{ margin: 10, color: "#999" }}>Image source</Text>
+        <Text style={{ margin: 10, color: '#999' }}>Image source</Text>
         <Result
-          imgUrl={require("./alipay.png")}
+          imgUrl={require('./alipay.png')}
           title="验证成功"
           message="所提交内容已成功完成验证"
         />
 
-        <Text style={{ margin: 10, color: "#999" }}>Image element</Text>
+        <Text style={{ margin: 10, color: '#999' }}>Image element</Text>
         <Result
           icon={
             <Image
-              source={require("./alipay.png")}
+              source={require('./alipay.png')}
               style={{ width: 60, height: 60 }}
             />
           }
@@ -99,11 +102,11 @@ export default class ResultExample extends React.Component<any, any> {
           message={<Text>所提交内容已成功完成验证</Text>}
         />
 
-        <Text style={{ margin: 10, color: "#999" }}>含 button 操作</Text>
+        <Text style={{ margin: 10, color: '#999' }}>含 button 操作</Text>
         <Result
           icon={
             <Image
-              source={require("./alipay.png")}
+              source={require('./alipay.png')}
               style={{ width: 60, height: 60 }}
             />
           }
@@ -112,6 +115,6 @@ export default class ResultExample extends React.Component<any, any> {
           renderButtons={this.renderButtons}
         />
       </ScrollView>
-    );
+    )
   }
 }

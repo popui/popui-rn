@@ -1,14 +1,13 @@
 /* tslint:disable:jsx-no-multiline-js */
-import React from 'react';
+import React from 'react'
 
-import { ScrollView, Text, View } from 'react-native';
-import { Icon, GapV, Steps } from "@popui/popui-rn";
-const Step = Steps.Step;
-
+import { ScrollView, Text, View } from 'react-native'
+import { Icon, GapV, Steps } from '@popui/popui-rn'
+const Step = Steps.Step
 
 export default class BasicTimelineExample extends React.Component<any, any> {
   constructor(props: any) {
-    super(props);
+    super(props)
     this.state = {
       steps1: [
         { title: 'Finished', description: 'This is description' },
@@ -37,7 +36,7 @@ export default class BasicTimelineExample extends React.Component<any, any> {
           status: 'wait',
         },
       ],
-    };
+    }
   }
   render() {
     return (
@@ -55,7 +54,10 @@ export default class BasicTimelineExample extends React.Component<any, any> {
                   key={index}
                   title={
                     <View>
-                      <Text>title:{item.title}</Text>
+                      <Text>
+                        title:
+                        {item.title}
+                      </Text>
                     </View>
                   }
                   status={item.status}
@@ -72,12 +74,18 @@ export default class BasicTimelineExample extends React.Component<any, any> {
                   key={index}
                   title={
                     <View>
-                      <Text>title:{item.title}</Text>
+                      <Text>
+                        title:
+                        {item.title}
+                      </Text>
                     </View>
                   }
                   description={
                     <View>
-                      <Text>desc:{item.description}</Text>
+                      <Text>
+                        desc:
+                        {item.description}
+                      </Text>
                     </View>
                   }
                   status={item.status}
@@ -154,6 +162,6 @@ export default class BasicTimelineExample extends React.Component<any, any> {
           </GapV>
         </View>
       </ScrollView>
-    );
+    )
   }
 }

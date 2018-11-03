@@ -1,5 +1,5 @@
-import { StyleSheet } from 'react-native';
-import themeVars from '../../style/themes/default';
+import { StyleSheet } from 'react-native'
+import themeVars from '../../style/themes/default'
 
 export default {
   container: {
@@ -44,4 +44,4 @@ export default {
     width: themeVars.icon_size_sm,
     height: themeVars.icon_size_sm,
   },
-};
+}

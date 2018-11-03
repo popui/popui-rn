@@ -1,15 +1,15 @@
-import { ViewStyle, TextStyle } from 'react-native';
-import themeVars from '../../style/themes/default';
+import { ViewStyle, TextStyle } from 'react-native'
+import themeVars from '../../style/themes/default'
 
 export interface ITextareaItemStyle {
-  container: ViewStyle;
-  input: TextStyle;
-  icon: ViewStyle;
-  errorIcon: ViewStyle;
-  count: ViewStyle;
-  clear: ViewStyle;
-  countText:TextStyle;
-  rightBottom:ViewStyle;
+  container: ViewStyle
+  input: TextStyle
+  icon: ViewStyle
+  errorIcon: ViewStyle
+  count: ViewStyle
+  clear: ViewStyle
+  countText: TextStyle
+  rightBottom: ViewStyle
 }
 
 export default {
@@ -35,18 +35,16 @@ export default {
     right: 18,
     top: 12,
   },
-  rightBottom:{
+  rightBottom: {
     position: 'absolute',
     right: themeVars.h_spacing_md,
     bottom: themeVars.h_spacing_md,
   },
-  clear:{
-
-  },
-  count:{
+  clear: {},
+  count: {
     paddingLeft: 5,
   },
-  countText:{
-    color:"#B2B2B2",
-  }
-};
+  countText: {
+    color: '#B2B2B2',
+  },
+}

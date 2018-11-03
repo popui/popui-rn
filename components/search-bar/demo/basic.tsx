@@ -1,24 +1,22 @@
-import React from 'react';
+import React from 'react'
 
-import { Alert } from 'react-native';
-import { SearchBar,GapH,ScrollView } from "@popui/popui-rn";
+import { Alert } from 'react-native'
+import { SearchBar, GapH, ScrollView } from '@popui/popui-rn'
 import SearchBarWithResult from './SearchBarWithResult'
 
 export default class SearchBarDemo extends React.Component<any, any> {
   state = {
     value: '美食',
-  };
+  }
 
   onChange = (value: any) => {
-    this.setState({ value });
+    this.setState({ value })
   }
 
   clear = () => {
-    this.setState({ value: '' });
+    this.setState({ value: '' })
   }
-  renderSearchWithResult =() =>{
-
-  }
+  renderSearchWithResult = () => {}
   render() {
     return (
       <ScrollView keyboardShouldPersistTaps={'always'}>
@@ -35,6 +33,6 @@ export default class SearchBarDemo extends React.Component<any, any> {
         <GapH />
         <SearchBarWithResult />
       </ScrollView>
-    );
+    )
   }
 }

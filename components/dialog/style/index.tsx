@@ -1,63 +1,63 @@
-import { StyleSheet, TextStyle, ViewStyle, Dimensions } from "react-native";
+import { StyleSheet, TextStyle, ViewStyle, Dimensions } from 'react-native'
 import themeVars from '../../style/themes/default'
-const { width } = Dimensions.get("window");
+const { width } = Dimensions.get('window')
 
 export interface IModalStyle {
-  container: ViewStyle;
-  wrap: ViewStyle;
-  innerContainer: ViewStyle;
-  dialogRoot:ViewStyle;
-  actions: ViewStyle;
-  header: TextStyle;
-  body: ViewStyle;
-  maskClosable: ViewStyle;
-  closeWrap: ViewStyle;
-  close: TextStyle;
-  buttonGroupH: ViewStyle;
-  buttonGroupV: ViewStyle;
-  buttonWrapH: ViewStyle;
-  buttonWrapV: ViewStyle;
-  buttonText: TextStyle;
-  operationContainer: ViewStyle;
-  operationBody: ViewStyle;
-  buttonTextOperation: TextStyle;
+  container: ViewStyle
+  wrap: ViewStyle
+  innerContainer: ViewStyle
+  dialogRoot: ViewStyle
+  actions: ViewStyle
+  header: TextStyle
+  body: ViewStyle
+  maskClosable: ViewStyle
+  closeWrap: ViewStyle
+  close: TextStyle
+  buttonGroupH: ViewStyle
+  buttonGroupV: ViewStyle
+  buttonWrapH: ViewStyle
+  buttonWrapV: ViewStyle
+  buttonText: TextStyle
+  operationContainer: ViewStyle
+  operationBody: ViewStyle
+  buttonTextOperation: TextStyle
 }
 
 export default {
   container: {
-    zIndex: themeVars.modal_zindex
+    zIndex: themeVars.modal_zindex,
   },
   wrap: {
-    justifyContent: "center",
-    alignItems: "center"
+    justifyContent: 'center',
+    alignItems: 'center',
   },
   innerContainer: {
     width: width - 60,
     backgroundColor: themeVars.DialogBackgroundColor,
     borderRadius: 3,
-    overflow: "hidden"
+    overflow: 'hidden',
     // borderRadius: themeVars.radius_md,
     // width: 286,
     // paddingTop: themeVars.v_spacing_xl,
     // overflow: 'hidden',
   },
   // fix android borderRadius
-  dialogRoot:{
+  dialogRoot: {
     width: width - 60,
     backgroundColor: themeVars.DialogBackgroundColor,
     borderRadius: 3,
-    overflow: "hidden",
-    maxHeight: Dimensions.get("window").height -100
+    overflow: 'hidden',
+    maxHeight: Dimensions.get('window').height - 100,
   },
   header: {
     paddingTop: 1.3 * themeVars.baseFontSize,
     paddingBottom: 0.5 * themeVars.baseFontSize,
     paddingLeft: themeVars.DialogGapWidth,
     paddingRight: themeVars.DialogGapWidth,
-    fontWeight: "400",
+    fontWeight: '400',
     color: themeVars.color_text_base,
     fontSize: themeVars.modal_font_size_heading,
-    textAlign: "center"
+    textAlign: 'center',
     // paddingHorizontal: themeVars.h_spacing_lg,
   },
   body: {
@@ -65,7 +65,7 @@ export default {
     paddingRight: themeVars.DialogGapWidth,
     paddingBottom: 24, // 15*1.6,
     paddingTop: 0,
-    maxHeight: Dimensions.get("window").height -196
+    maxHeight: Dimensions.get('window').height - 196,
     // paddingBottom: themeVars.v_spacing_lg,
     // paddingHorizontal: themeVars.h_spacing_lg,
   },
@@ -76,34 +76,34 @@ export default {
     //     lineHeight: Math.round(15 * 1.3),
     // },
     fontSize: 15,
-    textAlign: "center"
+    textAlign: 'center',
   },
   maskClosable: {
-    position: "absolute",
+    position: 'absolute',
     top: 0,
     bottom: 0,
     left: 0,
     right: 0,
-    backgroundColor: "transparent"
+    backgroundColor: 'transparent',
   },
   closeWrap: {
-    position: "absolute",
+    position: 'absolute',
     top: themeVars.v_spacing_lg,
-    left: themeVars.h_spacing_lg
+    left: themeVars.h_spacing_lg,
   },
   close: {
     fontSize: 40,
-    fontWeight: "200",
-    color: "#bcbcbc",
-    lineHeight: 30
+    fontWeight: '200',
+    color: '#bcbcbc',
+    lineHeight: 30,
   },
   actions: {
-    position: "absolute",
+    position: 'absolute',
     bottom: 0,
     left: 0,
     right: 0,
     borderBottomLeftRadius: themeVars.radius_md,
-    borderBottomRightRadius: themeVars.radius_md
+    borderBottomRightRadius: themeVars.radius_md,
     // flexDirection: 'row',
     // height: 48,
     // alignItems: 'center',
@@ -114,22 +114,22 @@ export default {
   },
   buttonGroupH: {
     flexGrow: 1,
-    flexDirection: "row"
+    flexDirection: 'row',
   },
   buttonGroupV: {
     flexGrow: 1,
-    flexDirection: "column"
+    flexDirection: 'column',
   },
   buttonWrapH: {
     height: themeVars.modal_button_height,
     flexGrow: 1,
-    justifyContent: "center",
+    justifyContent: 'center',
     // borderColor: themeVars.border_color_base,
     borderColor: themeVars.DialogLineColor,
     borderStyle: 'solid',
     borderTopWidth: StyleSheet.hairlineWidth,
     borderRightWidth: StyleSheet.hairlineWidth,
-    paddingVertical: 11
+    paddingVertical: 11,
   },
   buttonWrapV: {
     flexGrow: 1,
@@ -144,24 +144,24 @@ export default {
     paddingRight: 24,
   },
   buttonText: {
-    textAlign: "center",
+    textAlign: 'center',
     color: themeVars.color_link,
     fontSize: themeVars.modal_button_font_size,
-    backgroundColor: "transparent"
+    backgroundColor: 'transparent',
   },
   buttonText_default: {
     color: '#353535',
   },
   buttonText_primary: {
-      // color: '#0BB20C',
-      color: themeVars.color_link,
+    // color: '#0BB20C',
+    color: themeVars.color_link,
   },
   buttonText_warn: {
-      color: themeVars.ColorWarn,
+    color: themeVars.ColorWarn,
   },
   buttonTextOperation: {
     color: themeVars.color_text_base,
-    textAlign: "left",
-    paddingHorizontal: 15
-  }
-};
+    textAlign: 'left',
+    paddingHorizontal: 15,
+  },
+}

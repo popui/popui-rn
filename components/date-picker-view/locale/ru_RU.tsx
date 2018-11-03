@@ -1,3 +1,3 @@
-import DatePickerLocale from 'rmc-date-picker/lib/locale/ru_RU';
+import DatePickerLocale from 'rmc-date-picker/lib/locale/ru_RU'
 
-export default DatePickerLocale;
+export default DatePickerLocale

@@ -1,4 +1,4 @@
-import themeVars from '../../style/themes/default';
+import themeVars from '../../style/themes/default'
 
 export default {
   progressOuter: {
@@ -12,5 +12,5 @@ export default {
     borderBottomWidth: themeVars.ProgressHeight,
     borderStyle: 'solid',
     borderColor: themeVars.ProgressColor,
-  }
-};
+  },
+}

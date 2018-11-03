@@ -1,8 +1,8 @@
 import * as React from 'react'
-import {View } from 'react-native'
+import { View } from 'react-native'
 import CellItemText from '../cell-item-text'
 import { CellItemBodyProps } from './PropsType'
-import defautlStyles from './style';
+import defautlStyles from './style'
 
 const CellItemBody: React.SFC<CellItemBodyProps> = (
   props: CellItemBodyProps

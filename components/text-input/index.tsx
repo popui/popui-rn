@@ -97,7 +97,7 @@ export default class PopTextInput extends React.Component<TextInputProps, any> {
       <View style={[styles!.container, style]}>
         <RNTextInput
           style={[styles!.input, inputStyle]}
-          ref={(el) => ((this.inputRef as any) = el)}
+          ref={el => ((this.inputRef as any) = el)}
           clearButtonMode={'none'}
           underlineColorAndroid="transparent"
           {...restProps}

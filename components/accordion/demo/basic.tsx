@@ -1,13 +1,12 @@
 /* tslint:disable:no-console */
-import React from 'react';
+import React from 'react'
 
-import { View } from 'react-native';
-import { Accordion, List } from "@popui/popui-rn";
-
+import { View } from 'react-native'
+import { Accordion, List } from '@popui/popui-rn'
 
 export default class AccordionExmple extends React.Component<any, any> {
   onChange = (key: string) => {
-    console.log(key);
+    console.log(key)
   }
   render() {
     return (
@@ -29,6 +28,6 @@ export default class AccordionExmple extends React.Component<any, any> {
           </Accordion.Panel>
         </Accordion>
       </View>
-    );
+    )
   }
 }

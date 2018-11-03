@@ -2,7 +2,7 @@
 import React from 'react'
 
 import { Text, View } from 'react-native'
-import { ToggleRow, GapH, ToggleIconCircle } from "@popui/popui-rn"
+import { ToggleRow, GapH, ToggleIconCircle } from '@popui/popui-rn'
 // const CheckboxRowItem = ToggleRow.CheckboxRowItem;
 
 export default class BasicToggleRowExample extends React.Component<any, any> {
@@ -26,7 +26,7 @@ export default class BasicToggleRowExample extends React.Component<any, any> {
   }
   render() {
     return (
-      <View >
+      <View>
         <Text>ToggleRow CheckBox:</Text>
         <Text>自控</Text>
         <ToggleRow>
@@ -34,16 +34,16 @@ export default class BasicToggleRowExample extends React.Component<any, any> {
           agreement
         </ToggleRow>
 
-        <GapH  />
+        <GapH />
         <Text>受控</Text>
         <ToggleRow checked={this.state.value1} onChange={this.toggleValue1}>
           Agree agreement
         </ToggleRow>
 
-        <GapH  />
+        <GapH />
         <ToggleRow disabled>Not selected. Not editable</ToggleRow>
 
-        <GapH  />
+        <GapH />
         <ToggleRow checked disabled>
           Force selected. Not editable
         </ToggleRow>
@@ -56,7 +56,7 @@ export default class BasicToggleRowExample extends React.Component<any, any> {
           agreement
         </ToggleRow>
 
-        <GapH  />
+        <GapH />
         <Text>受控</Text>
         <ToggleRow
           checked={this.state.value2}
@@ -66,12 +66,12 @@ export default class BasicToggleRowExample extends React.Component<any, any> {
           Agree agreement
         </ToggleRow>
 
-        <GapH  />
+        <GapH />
         <ToggleRow disabled renderIcon={this.renderCircleIcon}>
           Not selected. Not editable
         </ToggleRow>
 
-        <GapH  />
+        <GapH />
         <ToggleRow checked disabled renderIcon={this.renderCircleIcon}>
           Force selected. Not editable
         </ToggleRow>

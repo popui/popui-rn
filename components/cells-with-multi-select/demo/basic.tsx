@@ -1,51 +1,47 @@
-import React from "react";
-;
-import { View } from "react-native";
-import {
-  CellsTitle,
-  CellsWithMultiSelect,
-} from "@popui/popui-rn";
+import React from 'react'
+import { View } from 'react-native'
+import { CellsTitle, CellsWithMultiSelect } from '@popui/popui-rn'
 
 const options = [
   {
-    label: "选项一",
-    value: 1
+    label: '选项一',
+    value: 1,
   },
   {
-    label: "选项二",
-    value: 2
+    label: '选项二',
+    value: 2,
   },
   {
-    label: "选项三",
-    value: 3
+    label: '选项三',
+    value: 3,
   },
   {
-    label: "选项四",
-    value: 4
+    label: '选项四',
+    value: 4,
   },
   {
-    label: "选项五",
-    value: 5
-  }
+    label: '选项五',
+    value: 5,
+  },
 ]
 
 export default class Screen extends React.Component<any, any> {
   state = {
     values1: [1],
     values2: [1],
-  };
+  }
   private handleCheckbox1Change = (values: any) => {
-    console.log("handleCheckbox1Change", {
-      values
+    console.log('handleCheckbox1Change', {
+      values,
     })
-    this.setState({ values1:values });
-  };
+    this.setState({ values1: values })
+  }
   private handleCheckbox2Change = (values: any) => {
-    console.log("handleCheckbox2Change", {
-      values
+    console.log('handleCheckbox2Change', {
+      values,
     })
-    this.setState({ values2:values });
-  };
+    this.setState({ values2: values })
+  }
   render() {
     return (
       <View>
@@ -64,6 +60,6 @@ export default class Screen extends React.Component<any, any> {
           disabled
         />
       </View>
-    );
+    )
   }
 }

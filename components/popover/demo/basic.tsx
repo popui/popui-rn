@@ -1,18 +1,17 @@
-import React from 'react';
+import React from 'react'
 
-import { Platform, StyleSheet, Text, View, ViewStyle } from 'react-native';
-import { Popover } from "@popui/popui-rn";
+import { Platform, StyleSheet, Text, View, ViewStyle } from 'react-native'
+import { Popover } from '@popui/popui-rn'
 
-const Item = Popover.Item;
-
+const Item = Popover.Item
 
 export default class PopoverExample extends React.Component<any, any> {
   constructor(props: any) {
-    super(props);
+    super(props)
     this.state = {
       // visible: false,
       selected: '',
-    };
+    }
   }
   // componentDidMount() {
   //   setInterval(() => {
@@ -23,7 +22,7 @@ export default class PopoverExample extends React.Component<any, any> {
     this.setState({
       // visible: false,
       selected: value,
-    });
+    })
   }
   // handleVisibleChange = (_visible) => {
   //   this.setState({
@@ -35,7 +34,7 @@ export default class PopoverExample extends React.Component<any, any> {
       <Item key={index} value={`option ${i}`}>
         <Text>option {i}</Text>
       </Item>
-    ));
+    ))
     overlay = overlay.concat([
       <Item key="4" value="disabled" disabled>
         <Text style={{ color: '#ddd' }}>disabled opt</Text>
@@ -43,12 +42,13 @@ export default class PopoverExample extends React.Component<any, any> {
       <Item key="6" value="button ct" style={{ backgroundColor: '#efeff4' }}>
         <Text>关闭</Text>
       </Item>,
-    ]);
+    ])
     return (
       <View>
         <View>
           <Text style={{ marginTop: 30, marginLeft: 100 }}>
-            选择了：{this.state.selected}
+            选择了：
+            {this.state.selected}
           </Text>
         </View>
         <View style={styles.menuContainer}>
@@ -69,7 +69,7 @@ export default class PopoverExample extends React.Component<any, any> {
           </Popover>
         </View>
       </View>
-    );
+    )
   }
 }
 
@@ -99,7 +99,7 @@ const styles = StyleSheet.create({
     borderWidth: 1,
     borderColor: '#ccc',
   },
-});
+})
 
-export const title = 'Popover';
-export const description = 'Popover example';
+export const title = 'Popover'
+export const description = 'Popover example'

@@ -13,7 +13,7 @@ const styles = StyleSheet.create({
   },
 })
 
-const FooterText = (props) => {
+const FooterText = props => {
   const { children, style, ...others } = props
   return (
     <Text style={[styles.footerText, style]} {...others}>

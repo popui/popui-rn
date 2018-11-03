@@ -12,7 +12,7 @@ const styles = StyleSheet.create({
   },
 })
 
-const FooterLinkSeparator = (props) => {
+const FooterLinkSeparator = props => {
   const { children, style, ...others } = props
   return (
     <View style={[styles.footerlinkseparator, style]} {...others}>

@@ -351,7 +351,7 @@ class Carousel extends React.Component<CarouselProps, CarouselState> {
     }
     return (
       <ScrollView
-        ref={(el) => (this.scrollviewRef = el)}
+        ref={el => (this.scrollviewRef = el)}
         {...this.props}
         horizontal={!this.props.vertical}
         pagingEnabled

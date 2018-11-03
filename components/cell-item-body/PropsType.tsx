@@ -4,5 +4,5 @@ export interface CellItemBodyProps {
   children?: any
   numberOfLinesProp?: any
   error?: boolean
-  direction?:'row' |'column'
+  direction?: 'row' | 'column'
 }

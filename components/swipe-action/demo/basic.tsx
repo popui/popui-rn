@@ -1,9 +1,8 @@
 /* tslint:disable:no-console */
-import React from 'react';
+import React from 'react'
 
-import { View } from 'react-native';
-import { List, SwipeAction } from "@popui/popui-rn";
-
+import { View } from 'react-native'
+import { List, SwipeAction } from '@popui/popui-rn'
 
 export default class BasicSwipeActionExample extends React.Component<any, any> {
   render() {
@@ -18,7 +17,7 @@ export default class BasicSwipeActionExample extends React.Component<any, any> {
         onPress: () => console.log('delete'),
         style: { backgroundColor: 'red', color: 'white' },
       },
-    ];
+    ]
     const left = [
       {
         text: 'Read',
@@ -30,7 +29,7 @@ export default class BasicSwipeActionExample extends React.Component<any, any> {
         onPress: () => console.log('reply'),
         style: { backgroundColor: 'green', color: 'white' },
       },
-    ];
+    ]
 
     return (
       <View style={{ paddingTop: 30 }}>
@@ -49,6 +48,6 @@ export default class BasicSwipeActionExample extends React.Component<any, any> {
           </SwipeAction>
         </List>
       </View>
-    );
+    )
   }
 }

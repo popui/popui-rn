@@ -1,15 +1,15 @@
-import { TextStyle, ViewStyle } from 'react-native';
-import themeVars from '../../style/themes/default';
+import { TextStyle, ViewStyle } from 'react-native'
+import themeVars from '../../style/themes/default'
 
 export interface INoticeBarStyle {
-  notice: ViewStyle;
-  container: ViewStyle;
-  content: TextStyle;
-  left6: ViewStyle;
-  left15: ViewStyle;
-  actionWrap: ViewStyle;
-  close: TextStyle;
-  link: TextStyle;
+  notice: ViewStyle
+  container: ViewStyle
+  content: TextStyle
+  left6: ViewStyle
+  left15: ViewStyle
+  actionWrap: ViewStyle
+  close: TextStyle
+  link: TextStyle
 }
 
 export default {
@@ -52,4 +52,4 @@ export default {
     fontWeight: '500',
     textAlign: 'left',
   },
-};
+}

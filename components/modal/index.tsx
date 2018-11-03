@@ -70,7 +70,7 @@ export default class RCModal extends React.Component<IModalPropTypes, any> {
       this.animateDialog(props.visible)
     }
   }
-  animateMask = (visible) => {
+  animateMask = visible => {
     this.stopMaskAnim()
     this.state.opacity.setValue(this.getOpacity(!visible))
     this.animMask = Animated.timing(this.state.opacity, {
@@ -93,7 +93,7 @@ export default class RCModal extends React.Component<IModalPropTypes, any> {
       this.animDialog = null
     }
   }
-  animateDialog = (visible) => {
+  animateDialog = visible => {
     this.stopDialogAnim()
     this.animateMask(visible)
 
@@ -147,7 +147,7 @@ export default class RCModal extends React.Component<IModalPropTypes, any> {
       this.props.onClose()
     }
   }
-  getPosition = (visible) => {
+  getPosition = visible => {
     if (visible) {
       return 0
     }
@@ -155,10 +155,10 @@ export default class RCModal extends React.Component<IModalPropTypes, any> {
       ? -screen.height
       : screen.height
   }
-  getScale = (visible) => {
+  getScale = visible => {
     return visible ? 1 : 1.05
   }
-  getOpacity = (visible) => {
+  getOpacity = visible => {
     return visible ? 1 : 0
   }
   renderMask = () => {

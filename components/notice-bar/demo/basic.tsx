@@ -1,10 +1,9 @@
 // tslint:disable:jsx-no-multiline-js
 /* tslint:disable:no-console */
-import React from 'react';
+import React from 'react'
 
-import { Image, Text, View } from 'react-native';
-import { NoticeBar, GapH } from "@popui/popui-rn";
-
+import { Image, Text, View } from 'react-native'
+import { NoticeBar, GapH } from '@popui/popui-rn'
 
 export default class NoticeBarExample extends React.Component<any, any> {
   render() {
@@ -16,7 +15,7 @@ export default class NoticeBarExample extends React.Component<any, any> {
         }}
         style={{ width: 12, height: 12 }}
       />
-    );
+    )
 
     return (
       <View style={{ marginTop: 10 }}>
@@ -64,6 +63,6 @@ export default class NoticeBarExample extends React.Component<any, any> {
           Link demo for `actionText`.
         </NoticeBar>
       </View>
-    );
+    )
   }
 }

@@ -5,7 +5,7 @@ export interface CellListPropsType {
   footer?: (() => React.ReactType) | string | JSX.Element
   renderBody?: (() => React.ReactType)
   children?: false | JSX.Element | JSX.Element[]
-  styles?:any
-  bodyStyles?:any
-  style?:any
+  styles?: any
+  bodyStyles?: any
+  style?: any
 }

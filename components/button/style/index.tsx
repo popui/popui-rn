@@ -1,5 +1,5 @@
-import themeVars from '../../style/themes/default';
-import { ViewStyle } from 'react-native';
+import themeVars from '../../style/themes/default'
+import { ViewStyle } from 'react-native'
 
 export default {
   container: {
@@ -111,4 +111,4 @@ export default {
   indicator: {
     marginRight: themeVars.h_spacing_md,
   },
-};
+}

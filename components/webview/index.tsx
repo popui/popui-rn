@@ -52,7 +52,7 @@ export default class WebView extends Component {
     width: Dimensions.get('window').width,
     scrollEnabled: false,
   }
-  _onMessage = (e) => {
+  _onMessage = e => {
     try {
       const data = JSON.parse(e.nativeEvent.data)
       if (data && data.webClientHeight) {

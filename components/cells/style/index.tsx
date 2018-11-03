@@ -1,5 +1,5 @@
-import { StyleSheet } from 'react-native';
-import themeVars from '../../style/themes/default';
+import { StyleSheet } from 'react-native'
+import themeVars from '../../style/themes/default'
 
 export default {
   underlayColor: {
@@ -15,5 +15,5 @@ export default {
     borderTopWidth: StyleSheet.hairlineWidth,
     borderBottomWidth: StyleSheet.hairlineWidth,
     borderColor: themeVars.CellBorderColor,
-  }
-};
+  },
+}

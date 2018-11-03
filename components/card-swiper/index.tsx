@@ -72,7 +72,7 @@ class Swiper extends Component {
     return stackPositionsAndScales
   }
 
-  componentWillReceiveProps = (newProps) => {
+  componentWillReceiveProps = newProps => {
     debug('componentWillReceiveProps', { newProps, state: this.state })
     this.setState({
       ...this.calculateCardIndexes(newProps.cardIndex, newProps.cards),
@@ -103,12 +103,8 @@ class Swiper extends Component {
     this._animatedValueX = 0
     this._animatedValueY = 0
 
-    this.state.pan.x.addListener(
-      (value) => (this._animatedValueX = value.value)
-    )
-    this.state.pan.y.addListener(
-      (value) => (this._animatedValueY = value.value)
-    )
+    this.state.pan.x.addListener(value => (this._animatedValueX = value.value))
+    this.state.pan.y.addListener(value => (this._animatedValueY = value.value))
 
     this.initializeCardStyle()
     this.initializePanResponder()
@@ -371,7 +367,7 @@ class Swiper extends Component {
     return { isSwipingLeft, isSwipingRight, isSwipingTop, isSwipingBottom }
   }
 
-  resetTopCard = (cb) => {
+  resetTopCard = cb => {
     Animated.spring(this.state.pan, {
       toValue: 0,
     }).start(cb)
@@ -384,7 +380,7 @@ class Swiper extends Component {
     this.props.onSwipedAborted()
   }
 
-  swipeBack = (cb) => {
+  swipeBack = cb => {
     Animated.spring(this.state.previousCardY, {
       toValue: 0,
       friction: this.props.swipeBackFriction,
@@ -494,7 +490,7 @@ class Swiper extends Component {
     }
   }
 
-  incrementCardIndex = (onSwiped) => {
+  incrementCardIndex = onSwiped => {
     const { firstCardIndex } = this.state
     let newCardIndex = firstCardIndex + 1
     let swipedAllCards = false
@@ -508,7 +504,7 @@ class Swiper extends Component {
     this.setCardIndex(newCardIndex, swipedAllCards)
   }
 
-  decrementCardIndex = (cb) => {
+  decrementCardIndex = cb => {
     const { firstCardIndex } = this.state
     const lastCardIndex = this.state.cards.length - 1
     const previousCardIndex = firstCardIndex - 1
@@ -932,13 +928,13 @@ Swiper.defaultProps = {
   marginTop: 0,
   onSwiping: () => {},
   onSwipedAborted: () => {},
-  onSwiped: (cardIndex) => {},
-  onSwipedLeft: (cardIndex) => {},
-  onSwipedRight: (cardIndex) => {},
-  onSwipedTop: (cardIndex) => {},
-  onSwipedBottom: (cardIndex) => {},
+  onSwiped: cardIndex => {},
+  onSwipedLeft: cardIndex => {},
+  onSwipedRight: cardIndex => {},
+  onSwipedTop: cardIndex => {},
+  onSwipedBottom: cardIndex => {},
   onSwipedAll: () => {},
-  onTapCard: (cardIndex) => {},
+  onTapCard: cardIndex => {},
   onTapCardDeadZone: 5,
   outputCardOpacityRangeX: [0.8, 1, 1, 1, 0.8],
   outputCardOpacityRangeY: [0.8, 1, 1, 1, 0.8],

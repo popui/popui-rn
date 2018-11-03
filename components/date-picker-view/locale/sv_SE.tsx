@@ -1,3 +1,3 @@
-import DatePickerLocale from 'rmc-date-picker/lib/locale/sv_SE';
+import DatePickerLocale from 'rmc-date-picker/lib/locale/sv_SE'
 
-export default DatePickerLocale;
+export default DatePickerLocale

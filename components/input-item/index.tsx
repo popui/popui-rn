@@ -202,12 +202,12 @@ export default class InputItem extends React.Component<InputItemProps, any> {
         <Input
           clearButtonMode={clear ? 'while-editing' : 'never'}
           underlineColorAndroid="transparent"
-          ref={(el) => (this.inputRef = el)}
+          ref={el => (this.inputRef = el)}
           {...restProps}
           {...valueProps}
           style={[styles.input, error ? styles.inputErrorColor : null]}
           keyboardType={keyboardType}
-          onChange={(event) => this.onChange(event.text)}
+          onChange={event => this.onChange(event.text)}
           secureTextEntry={type === 'password'}
           onBlur={this.onInputBlur}
           onFocus={this.onInputFocus}

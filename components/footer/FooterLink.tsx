@@ -15,7 +15,7 @@ const styles = StyleSheet.create({
   },
 })
 
-const FooterLink = (props) => {
+const FooterLink = props => {
   const { children, style, ...others } = props
   return (
     <TouchableOpacity

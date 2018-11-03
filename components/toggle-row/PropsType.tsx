@@ -27,8 +27,8 @@ export interface ToggleRowPropsType {
   onChange?: onChangeFunction
   styles?: any
   style?: any
-  children:(args:ToggleRowChildrenParams) => JSX.Element
-  renderIcon?:(renderIconParams:RenderIconParams)=>React.ReactNode
+  children: (args: ToggleRowChildrenParams) => JSX.Element
+  renderIcon?: (renderIconParams: RenderIconParams) => React.ReactNode
 }
 
 export interface ToggleRowChildrenParams {
@@ -38,12 +38,11 @@ export interface ToggleRowChildrenParams {
   textStyle?: any
   styles?: any
   style?: any
-  renderChildren:(children:React.ReactNode)=>React.ReactNode
-  onPress:(event:any)=>void
+  renderChildren: (children: React.ReactNode) => React.ReactNode
+  onPress: (event: any) => void
 }
 
-
-export interface RenderIconParams{
+export interface RenderIconParams {
   checked?: boolean
   disabled?: boolean
   style?: any

@@ -1,4 +1,4 @@
-import { Image, View,ScrollView } from "react-native";
+import { Image, View, ScrollView } from 'react-native'
 import {
   CellBadge,
   Media,
@@ -16,29 +16,26 @@ import {
   CellBody,
   CellFooter,
   CellHeader,
-  CellText
-} from "@popui/popui-rn";
-import React from "react";
-;
-
+  CellText,
+} from '@popui/popui-rn'
+import React from 'react'
 export interface IProps {}
-
 
 export default class PanelScreen extends React.Component<IProps, any> {
   static navigationOptions = {
-    title: "Panel"
-  };
+    title: 'Panel',
+  }
 
   render() {
     return (
-      <ScrollView style={{backgroundColor:'#ddd',paddingBottom:50}}>
+      <ScrollView style={{ backgroundColor: '#ddd', paddingBottom: 50 }}>
         <Panel>
           <PanelHeader>图文组合列表</PanelHeader>
           <PanelBody>
             <Media type="appmsg">
               <MediaHeader>
                 <Image
-                  source={{ uri: "https://weui.io/images/icon_tabbar.png" }}
+                  source={{ uri: 'https://weui.io/images/icon_tabbar.png' }}
                 />
                 <CellBadge preset="header">8</CellBadge>
               </MediaHeader>
@@ -52,7 +49,7 @@ export default class PanelScreen extends React.Component<IProps, any> {
             <Media type="appmsg">
               <MediaHeader>
                 <Image
-                  source={{ uri: "https://weui.io/images/icon_tabbar.png" }}
+                  source={{ uri: 'https://weui.io/images/icon_tabbar.png' }}
                 />
               </MediaHeader>
               <MediaBody>
@@ -96,7 +93,7 @@ export default class PanelScreen extends React.Component<IProps, any> {
               <CellHeader>
                 <Image
                   style={{ width: 24, height: 24, marginRight: 5 }}
-                  source={{ uri: "https://weui.io/images/icon_tabbar.png" }}
+                  source={{ uri: 'https://weui.io/images/icon_tabbar.png' }}
                 />
               </CellHeader>
               <CellBody>
@@ -108,7 +105,7 @@ export default class PanelScreen extends React.Component<IProps, any> {
               <CellHeader>
                 <Image
                   style={{ width: 24, height: 24, marginRight: 5 }}
-                  source={{ uri: "https://weui.io/images/icon_tabbar.png" }}
+                  source={{ uri: 'https://weui.io/images/icon_tabbar.png' }}
                 />
               </CellHeader>
               <CellBody>
@@ -136,6 +133,6 @@ export default class PanelScreen extends React.Component<IProps, any> {
           </PanelBody>
         </Panel>
       </ScrollView>
-    );
+    )
   }
 }

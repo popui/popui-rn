@@ -1,19 +1,18 @@
-import { StyleSheet, TextStyle, ViewStyle } from 'react-native';
-import themeVars from '../../style/themes/default';
-
+import { StyleSheet, TextStyle, ViewStyle } from 'react-native'
+import themeVars from '../../style/themes/default'
 
 export interface ActionSheetStyle {
-  container: ViewStyle;
-  wrap: ViewStyle;
-  content: ViewStyle;
-  mask: ViewStyle;
-  title: ViewStyle;
-  titleText: TextStyle;
-  message: ViewStyle;
-  btn: ViewStyle;
-  cancelBtn: ViewStyle;
-  cancelBtnMask: ViewStyle;
-  destructiveBtn: TextStyle;
+  container: ViewStyle
+  wrap: ViewStyle
+  content: ViewStyle
+  mask: ViewStyle
+  title: ViewStyle
+  titleText: TextStyle
+  message: ViewStyle
+  btn: ViewStyle
+  cancelBtn: ViewStyle
+  cancelBtnMask: ViewStyle
+  destructiveBtn: TextStyle
 }
 
 export default StyleSheet.create<any>({
@@ -86,4 +85,4 @@ export default StyleSheet.create<any>({
     color: themeVars.brand_error,
     fontSize: themeVars.actionsheet_item_font_size,
   },
-});
+})

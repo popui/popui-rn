@@ -35,5 +35,5 @@ export default {
   },
   multipleLine: {
     paddingVertical: themeVars.v_spacing_sm,
-  }
+  },
 }

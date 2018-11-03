@@ -1,23 +1,25 @@
-import React from "react";
-;
-
-import {  WeuiButton as Button,WeuiButtonArea, View, Toptips } from "@popui/popui-rn";
+import React from 'react'
+import {
+  WeuiButton as Button,
+  WeuiButtonArea,
+  View,
+  Toptips,
+} from '@popui/popui-rn'
 
 export interface IProps {}
 
-
 export default class TooltipsScreen extends React.Component<IProps, any> {
   static navigationOptions = {
-    title: "Tooltips"
-  };
+    title: 'Tooltips',
+  }
 
   state = {
-    toptipsVisible: false
-  };
+    toptipsVisible: false,
+  }
 
   render() {
     return (
-      <View style={{marginTop: 50,}}>
+      <View style={{ marginTop: 50 }}>
         <WeuiButtonArea>
           <Button type="primary" onPress={this.onToptipsShow}>
             Toptips
@@ -25,11 +27,11 @@ export default class TooltipsScreen extends React.Component<IProps, any> {
         </WeuiButtonArea>
         <Toptips visible={this.state.toptipsVisible}>Test Toptips!</Toptips>
       </View>
-    );
+    )
   }
 
   private onToptipsShow = () => {
-    this.setState({ toptipsVisible: true });
-    setTimeout(() => this.setState({ toptipsVisible: false }), 3000);
-  };
+    this.setState({ toptipsVisible: true })
+    setTimeout(() => this.setState({ toptipsVisible: false }), 3000)
+  }
 }

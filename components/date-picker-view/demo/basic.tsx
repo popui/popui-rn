@@ -1,20 +1,19 @@
 /* tslint:disable:no-console */
-import React from 'react';
+import React from 'react'
 
-import { Text, View } from 'react-native';
-import { DatePickerView } from "@popui/popui-rn";
-
+import { Text, View } from 'react-native'
+import { DatePickerView } from '@popui/popui-rn'
 
 export default class DatePickerViewExample extends React.Component {
   state = {
     value: null,
-  };
+  }
   onChange = (value: any) => {
-    console.log(value);
-    this.setState({ value });
+    console.log(value)
+    this.setState({ value })
   }
   onValueChange = (...args: any[]) => {
-    console.log(args);
+    console.log(args)
   }
   render() {
     return (
@@ -32,6 +31,6 @@ export default class DatePickerViewExample extends React.Component {
           onValueChange={this.onValueChange}
         />
       </View>
-    );
+    )
   }
 }

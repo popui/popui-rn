@@ -17,7 +17,7 @@ export interface CellListItemPropsType {
   bodyStyle?: any
   isLast?: boolean
   renderLineView?: () => React.ReactNode
-  renderIcons?: (params:any) => React.ReactNode
+  renderIcons?: (params: any) => React.ReactNode
   lineViewStyle?: React.CSSProperties
 }
 export interface renderBodyParams {}

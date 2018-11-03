@@ -67,7 +67,7 @@ export default class PropmptContainer extends React.Component<
         { text: '确定', onPress: () => this.getArgs(actions) },
       ]
     } else {
-      _actions = actions.map((item) => {
+      _actions = actions.map(item => {
         return {
           text: item.text,
           onPress: () => {
@@ -103,7 +103,7 @@ export default class PropmptContainer extends React.Component<
           <View style={firstStyle}>
             <TextInput
               autoFocus
-              onChangeText={(value) => {
+              onChangeText={value => {
                 this.onChangeText('text', value)
               }}
               value={this.state.text}
@@ -118,7 +118,7 @@ export default class PropmptContainer extends React.Component<
             <TextInput
               autoFocus
               secureTextEntry
-              onChangeText={(value) => {
+              onChangeText={value => {
                 this.onChangeText('password', value)
               }}
               value={this.state.password}

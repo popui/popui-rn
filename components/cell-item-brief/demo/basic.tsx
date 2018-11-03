@@ -1,13 +1,12 @@
 /* tslint:disable:jsx-no-multiline-js */
 // tslint:disable:no-empty
-import React from 'react';
+import React from 'react'
 
-import { Image, ScrollView, View } from 'react-native';
-import { List } from "@popui/popui-rn";
+import { Image, ScrollView, View } from 'react-native'
+import { List } from '@popui/popui-rn'
 
-const Item = List.Item;
-const Brief = Item.Brief;
-
+const Item = List.Item
+const Brief = Item.Brief
 
 export default class BasicListExample extends React.Component<any, any> {
   render() {
@@ -49,7 +48,8 @@ export default class BasicListExample extends React.Component<any, any> {
             垂直居中对齐
           </Item>
           <Item extra="内容内容" multipleLine>
-            垂直居中对齐<Brief>辅助文字内容</Brief>
+            垂直居中对齐
+            <Brief>辅助文字内容</Brief>
           </Item>
           <Item
             wrap
@@ -101,9 +101,9 @@ export default class BasicListExample extends React.Component<any, any> {
           </Item>
         </List>
       </View>
-    );
+    )
   }
 }
 
-export const title = 'List';
-export const description = 'List Example';
+export const title = 'List'
+export const description = 'List Example'

@@ -3,6 +3,6 @@ export interface ToggleIconPropsType {
   style?: any
   checked?: boolean
   disabled?: boolean
-  size?:number
-  color?:string
+  size?: number
+  color?: string
 }

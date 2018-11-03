@@ -97,7 +97,7 @@ class Toptips extends Component<ToptipsPropsType, any> {
           ]}
         >
           <View
-            ref={(ref) => {
+            ref={ref => {
               this.toptips = ref
             }}
             onLayout={this.handleLayout}

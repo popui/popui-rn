@@ -51,7 +51,7 @@ export default class Drawer extends React.Component<DrawerNativeProps, any> {
       'onDrawerClose',
       'drawerPosition',
       'renderNavigationView',
-    ].forEach((prop) => {
+    ].forEach(prop => {
       if (restProps.hasOwnProperty(prop)) {
         delete (restProps as any)[prop]
       }
@@ -63,7 +63,7 @@ export default class Drawer extends React.Component<DrawerNativeProps, any> {
     }
     return (
       <DrawerLayout
-        ref={(el) => {
+        ref={el => {
           if (drawerRef) {
             drawerRef(el)
           }

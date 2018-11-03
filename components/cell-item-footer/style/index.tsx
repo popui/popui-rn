@@ -9,9 +9,7 @@ const defautlStyles = StyleSheet.create({
     justifyContent: 'flex-start',
     alignItems: 'center',
   },
-  footerText:{
-
-  }
+  footerText: {},
 })
 
 export default defautlStyles

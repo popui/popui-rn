@@ -1,34 +1,34 @@
 import React from 'react'
-;
-import { Image, Text,View } from 'react-native'
+import { Image, Text, View } from 'react-native'
 import {
   SearchBar,
   Media as MediaComps,
   Panel as PanelComps,
-} from "@popui/popui-rn"
-const {Media, MediaBody, MediaDescription, 
-MediaHeader,MediaTitle} = MediaComps
-const {Panel, PanelBody, PanelFooter, PanelHeader, } = PanelComps
+} from '@popui/popui-rn'
+const {
+  Media,
+  MediaBody,
+  MediaDescription,
+  MediaHeader,
+  MediaTitle,
+} = MediaComps
+const { Panel, PanelBody, PanelFooter, PanelHeader } = PanelComps
 
 import SampleData from './nameDB'
-
 
 const appMsgIcon = (
   <Image source={{ uri: 'https://weui.io/images/icon_tabbar.png' }} />
 )
 
-export interface IProps  {}
-
-
-
+export interface IProps {}
 
 export default class SearchBarWithResult extends React.Component<IProps, any> {
   state = {
     searchText: '',
-    results: []
+    results: [],
   }
-  
-  handleChange = (text) => {
+
+  handleChange = text => {
     const keywords = [text]
     let results = SampleData.filter(
       /./.test.bind(new RegExp(keywords.join('|'), 'i'))
@@ -37,7 +37,7 @@ export default class SearchBarWithResult extends React.Component<IProps, any> {
     if (results.length > 3) results = results.slice(0, 3)
     this.setState({
       results,
-      searchText: text
+      searchText: text,
     })
   }
 

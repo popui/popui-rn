@@ -1,5 +1,5 @@
-import themeVars from '../../style/themes/default';
-import * as RN from 'react-native';
+import themeVars from '../../style/themes/default'
+import * as RN from 'react-native'
 
 export default {
   Tabs: {
@@ -16,8 +16,7 @@ export default {
     } as RN.ViewStyle,
   },
   TabBar: {
-    container: {
-    },
+    container: {},
     tabs: {
       flex: 1,
       flexDirection: 'row',
@@ -44,4 +43,4 @@ export default {
     activeTextColor: themeVars.tabs_color,
     inactiveTextColor: themeVars.color_text_base,
   },
-};
+}

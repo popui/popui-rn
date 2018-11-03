@@ -1,6 +1,6 @@
-import React from 'react';
+import React from 'react'
 
-import { Grid, Icon } from "@popui/popui-rn";
+import { Grid, Icon } from '@popui/popui-rn'
 
 const list = [
   'check-circle',
@@ -14,8 +14,7 @@ const list = [
   'left',
   'right',
   'ellipsis',
-];
-
+]
 
 export default class IConDemo extends React.Component<any, any> {
   render() {
@@ -29,10 +28,10 @@ export default class IConDemo extends React.Component<any, any> {
           icon: <Icon type={'\ue601'} size={55} color="red" />,
           text: 'Customized',
         },
-      ]);
-    return <Grid data={data} columnNum={3} hasLine={false} />;
+      ])
+    return <Grid data={data} columnNum={3} hasLine={false} />
   }
 }
 
-export const title = 'Icon';
-export const description = 'Icon Example';
+export const title = 'Icon'
+export const description = 'Icon Example'

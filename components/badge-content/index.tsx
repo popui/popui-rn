@@ -9,13 +9,13 @@ const styles = StyleSheet.create(plainStyles as any)
 
 function BadgeContent(props: BadgeContentPropsType) {
   // debug("render",{props})
-  const { dot = false, header,ml,mr, style, children, ...others } = props
+  const { dot = false, header, ml, mr, style, children, ...others } = props
   const textStyle = [
     styles.badge,
     dot && styles.dot,
-    header&& styles.header,
-    ml&& styles.ml,
-    mr&& styles.mr,
+    header && styles.header,
+    ml && styles.ml,
+    mr && styles.mr,
     style,
   ]
   return (

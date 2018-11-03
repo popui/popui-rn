@@ -1,15 +1,15 @@
-import { TextStyle, ViewStyle } from 'react-native';
-import themeVars from '../../style/themes/default';
+import { TextStyle, ViewStyle } from 'react-native'
+import themeVars from '../../style/themes/default'
 
 export interface IPaginationStyle {
-  container: ViewStyle;
-  numberStyle: ViewStyle;
-  totalStyle: TextStyle;
-  activeTextStyle: TextStyle;
-  indicatorStyle: ViewStyle;
-  pointStyle: ViewStyle;
-  pointActiveStyle: ViewStyle;
-  spaceStyle: ViewStyle;
+  container: ViewStyle
+  numberStyle: ViewStyle
+  totalStyle: TextStyle
+  activeTextStyle: TextStyle
+  indicatorStyle: ViewStyle
+  pointStyle: ViewStyle
+  pointActiveStyle: ViewStyle
+  spaceStyle: ViewStyle
 }
 
 export default {
@@ -45,4 +45,4 @@ export default {
     marginHorizontal: themeVars.h_spacing_sm / 2,
     marginVertical: themeVars.v_spacing_sm / 2,
   },
-};
+}

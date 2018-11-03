@@ -1,39 +1,38 @@
-import React from 'react';
+import React from 'react'
 
-import { Text, View } from 'react-native';
-import { Slider } from "@popui/popui-rn";
-
+import { Text, View } from 'react-native'
+import { Slider } from '@popui/popui-rn'
 
 export default class BasicSliderExample extends React.Component<any, any> {
   constructor(props: any) {
-    super(props);
+    super(props)
     this.state = {
-      initialValue:0,
+      initialValue: 0,
       stepValue: 0.25,
       changingValue: 0.25,
       changedValue: 0.15,
       customColorValue: 0.15,
       minMaxValue: 0,
       slideCompletionCount: 0,
-    };
+    }
   }
 
   handleChange = (value: any) => {
     this.setState({
       changingValue: value,
-    });
+    })
   }
 
   onAfterChange = (value: any) => {
     this.setState({
       changedValue: value,
-    });
+    })
   }
 
   minMaxChange = (value: any) => {
     this.setState({
       minMaxValue: value,
-    });
+    })
   }
 
   render() {
@@ -41,12 +40,14 @@ export default class BasicSliderExample extends React.Component<any, any> {
       <View>
         <View style={{ marginTop: 20 }}>
           <Text>Initial value: 0.5</Text>
-          <Slider 
-            value={this.state.initialValue} 
-            onAfterChange={(value: any) => this.setState({
-              initialValue: value
-            })}
-            />
+          <Slider
+            value={this.state.initialValue}
+            onAfterChange={(value: any) =>
+              this.setState({
+                initialValue: value,
+              })
+            }
+          />
         </View>
 
         <View style={{ marginTop: 20 }}>
@@ -61,12 +62,14 @@ export default class BasicSliderExample extends React.Component<any, any> {
 
         <View style={{ marginTop: 20 }}>
           <Text>step: 0.25</Text>
-          <Slider 
-            step={0.25} 
+          <Slider
+            step={0.25}
             value={this.state.stepValue}
-            onAfterChange={(value: any) => this.setState({
-              stepValue: value,
-            })}
+            onAfterChange={(value: any) =>
+              this.setState({
+                stepValue: value,
+              })
+            }
           />
         </View>
 
@@ -95,12 +98,14 @@ export default class BasicSliderExample extends React.Component<any, any> {
             value={this.state.customColorValue}
             minimumTrackTintColor="red"
             maximumTrackTintColor="blue"
-            onAfterChange={(value: any) => this.setState({
-              customColorValue: value,
-            })}
+            onAfterChange={(value: any) =>
+              this.setState({
+                customColorValue: value,
+              })
+            }
           />
         </View>
       </View>
-    );
+    )
   }
 }

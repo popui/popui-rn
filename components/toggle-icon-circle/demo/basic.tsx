@@ -2,7 +2,7 @@
 import React from 'react'
 
 import { Text, View } from 'react-native'
-import { ToggleIconCircle, GapH } from "@popui/popui-rn"
+import { ToggleIconCircle, GapH } from '@popui/popui-rn'
 // const RadioItem = ToggleIconCircle.RadioItem;
 
 export default class BasicToggleIconCircleExample extends React.Component<
@@ -16,25 +16,31 @@ export default class BasicToggleIconCircleExample extends React.Component<
 
   render() {
     return (
-        <View style={{flexDirection:'column',justifyContent:'center',alignItems:'center'}}>
-          <Text>ToggleIconCircle 固定值 Example:</Text>
+      <View
+        style={{
+          flexDirection: 'column',
+          justifyContent: 'center',
+          alignItems: 'center',
+        }}
+      >
+        <Text>ToggleIconCircle 固定值 Example:</Text>
 
-          <GapH  />
-          <Text>default</Text>
-          <ToggleIconCircle />
+        <GapH />
+        <Text>default</Text>
+        <ToggleIconCircle />
 
-          <GapH />
-          <Text>checked </Text>
-          <ToggleIconCircle checked />
+        <GapH />
+        <Text>checked </Text>
+        <ToggleIconCircle checked />
 
-          <GapH/>
-          <Text>checked disabled</Text>
-          <ToggleIconCircle checked disabled />
+        <GapH />
+        <Text>checked disabled</Text>
+        <ToggleIconCircle checked disabled />
 
-          <GapH  />
-          <Text>disabled</Text>
-          <ToggleIconCircle disabled />
-        </View>
+        <GapH />
+        <Text>disabled</Text>
+        <ToggleIconCircle disabled />
+      </View>
     )
   }
 }

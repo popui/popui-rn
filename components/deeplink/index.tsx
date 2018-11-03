@@ -1,4 +1,4 @@
-import { Button, WeuiButtonArea, GapV } from "@popui/popui-rn"
+import { Button, WeuiButtonArea, GapV } from '@popui/popui-rn'
 import React from 'react'
 
 import { openUrl } from 'linkUtils'

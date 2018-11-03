@@ -12,7 +12,7 @@ import {
   BadgeContent,
   CellItemBody,
   CellItemText,
-} from "@popui/popui-rn"
+} from '@popui/popui-rn'
 
 export default class BasicCellListExample extends React.Component<any, any> {
   render() {
@@ -44,7 +44,7 @@ export default class BasicCellListExample extends React.Component<any, any> {
                 </BadgeContent>
               </CellItemExtra>
             }
-            body={(props) => (
+            body={props => (
               <CellItemBody {...props}>
                 {/* <Badge text="new">
                   <CellItemText>
@@ -67,7 +67,7 @@ export default class BasicCellListExample extends React.Component<any, any> {
           <CellItem
             error
             arrow="right"
-            body={(props) => (
+            body={props => (
               <CellItemBody {...props} direction="row">
                 <Badge text={198}>
                   <CellItemText error>带说明、跳转、Badge</CellItemText>
@@ -170,7 +170,7 @@ export default class BasicCellListExample extends React.Component<any, any> {
           <CellItem
             extra="extra 内容内容"
             multipleLine
-            body={(props) => (
+            body={props => (
               <CellItemBody {...props} direction="column">
                 垂直居中对齐
                 <CellItemBrief>Brief 辅助文字内容</CellItemBrief>
@@ -181,7 +181,7 @@ export default class BasicCellListExample extends React.Component<any, any> {
           <CellItem
             wrap
             error
-            body={(props) => (
+            body={props => (
               <CellItemBody {...props} direction="column">
                 垂直居中对齐
                 <CellItemBrief>
@@ -205,7 +205,7 @@ export default class BasicCellListExample extends React.Component<any, any> {
 
           <CellItem
             wrap
-            body={(props) => (
+            body={props => (
               <CellItemBody {...props} direction="column">
                 顶部对齐
                 <CellItemBrief>

@@ -12,10 +12,15 @@ const styles = StyleSheet.create({
   },
 })
 
-function ToggleIconCircle({ checked = false, disabled = false, style,size=23 }: ToggleIconCirclePropsType) {
+function ToggleIconCircle({
+  checked = false,
+  disabled = false,
+  style,
+  size = 23,
+}: ToggleIconCirclePropsType) {
   const iconName = checked ? 'success' : 'circle'
   const iconStyle = [disabled ? styles.disabled : null, style]
-  return <WeuiIcon name={iconName} style={iconStyle} size={size}/>
+  return <WeuiIcon name={iconName} style={iconStyle} size={size} />
 }
 
 export default ToggleIconCircle

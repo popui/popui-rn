@@ -1,14 +1,13 @@
 // tslint:disable:jsx-no-multiline-js
 /* tslint:disable:no-console */
-import React from 'react';
+import React from 'react'
 
-import { View } from 'react-native';
-import { List, Stepper } from "@popui/popui-rn";
+import { View } from 'react-native'
+import { List, Stepper } from '@popui/popui-rn'
 
 function onChange(value: any) {
-  console.log('changed', value);
+  console.log('changed', value)
 }
-
 
 export default class StepperExample extends React.Component<any, any> {
   render() {
@@ -22,7 +21,7 @@ export default class StepperExample extends React.Component<any, any> {
         defaultValue={1}
         onChange={onChange}
       />
-    );
+    )
     return (
       <View style={{ marginTop: 20 }}>
         <List>
@@ -56,6 +55,6 @@ export default class StepperExample extends React.Component<any, any> {
           </List.Item>
         </List>
       </View>
-    );
+    )
   }
 }

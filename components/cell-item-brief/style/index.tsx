@@ -1,4 +1,4 @@
-import themeVars from '../../style/themes/default';
+import themeVars from '../../style/themes/default'
 
 export default {
   Brief: {
@@ -10,4 +10,4 @@ export default {
     paddingTop: themeVars.v_spacing_xs,
     textAlignVertical: 'center',
   },
-};
+}

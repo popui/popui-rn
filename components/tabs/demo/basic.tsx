@@ -1,8 +1,8 @@
 /* tslint:disable:no-console */
-import React from 'react';
+import React from 'react'
 
-import { ScrollView, Text, View } from 'react-native';
-import { Tabs } from "@popui/popui-rn";
+import { ScrollView, Text, View } from 'react-native'
+import { Tabs } from '@popui/popui-rn'
 
 const renderContent = (tab: any, index: any) => {
   const style = {
@@ -11,7 +11,7 @@ const renderContent = (tab: any, index: any) => {
     alignItems: 'center',
     margin: 10,
     backgroundColor: '#ddd',
-  } as any;
+  } as any
   const content = [1, 2, 3, 4, 5, 6, 7, 8].map(i => {
     return (
       <View key={`${index}_${i}`} style={style}>
@@ -19,11 +19,10 @@ const renderContent = (tab: any, index: any) => {
           {tab.title} - {i}
         </Text>
       </View>
-    );
-  });
-  return <ScrollView style={{ backgroundColor: '#fff' }}>{content}</ScrollView>;
-};
-
+    )
+  })
+  return <ScrollView style={{ backgroundColor: '#fff' }}>{content}</ScrollView>
+}
 
 export default class BasicTabsExample extends React.Component<any, any> {
   render() {
@@ -31,7 +30,7 @@ export default class BasicTabsExample extends React.Component<any, any> {
       { title: 'First Tab' },
       { title: 'Second Tab' },
       { title: 'Third Tab' },
-    ];
+    ]
     const tabs2 = [
       { title: '1st Tab' },
       { title: '2nd Tab' },
@@ -42,13 +41,13 @@ export default class BasicTabsExample extends React.Component<any, any> {
       { title: '7th Tab' },
       { title: '8th Tab' },
       { title: '9th Tab' },
-    ];
+    ]
     const style = {
       alignItems: 'center',
       justifyContent: 'center',
       height: 150,
       backgroundColor: '#fff',
-    } as any;
+    } as any
     return (
       <View style={{ flex: 1 }}>
         <Tabs tabs={tabs} initialPage={1}>
@@ -68,9 +67,9 @@ export default class BasicTabsExample extends React.Component<any, any> {
           </Tabs>
         </View>
       </View>
-    );
+    )
   }
 }
 
-export const title = 'Tabs';
-export const description = 'Tabs example';
+export const title = 'Tabs'
+export const description = 'Tabs example'

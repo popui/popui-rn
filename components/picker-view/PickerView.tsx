@@ -45,7 +45,7 @@ export default class PickerView extends React.Component<IPickerView, any> {
           indicatorStyle={indicatorStyle}
           itemStyle={itemStyle}
         >
-          {col.map((item) => {
+          {col.map(item => {
             return (
               <RMCPicker.Item key={item.value} value={item.value}>
                 {item.label}

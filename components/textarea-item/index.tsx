@@ -156,7 +156,7 @@ export default class TextAreaItem extends React.Component<
     ]
     return (
       <TextInput
-        ref={(el) => (this.inputRef = el)}
+        ref={el => (this.inputRef = el)}
         {...restProps}
         clearButtonMode={'never'}
         style={inputStyle}

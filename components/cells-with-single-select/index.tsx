@@ -1,6 +1,12 @@
 import React from 'react'
 import { StyleSheet } from 'react-native'
-import { Cell, CellBody, Cells, CellText, ToggleIconSuccess } from "@popui/popui-rn"
+import {
+  Cell,
+  CellBody,
+  Cells,
+  CellText,
+  ToggleIconSuccess,
+} from '@popui/popui-rn'
 import {
   SelectFooterCellsPropsType,
   SelectOption,

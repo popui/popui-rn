@@ -1,21 +1,20 @@
 // tslint:disable:jsx-no-multiline-js
-import React from 'react';
+import React from 'react'
 
-import { List, Switch } from "@popui/popui-rn";
-
+import { List, Switch } from '@popui/popui-rn'
 
 export default class SwitchExample extends React.Component<any, any> {
   constructor(props: any) {
-    super(props);
+    super(props)
     this.state = {
       checked: false,
-    };
+    }
   }
 
   onSwitchChange = (value: any) => {
     this.setState({
       checked: value,
-    });
+    })
   }
   render() {
     return (
@@ -35,6 +34,6 @@ export default class SwitchExample extends React.Component<any, any> {
         <List.Item extra={<Switch disabled />}>disabled</List.Item>
         <List.Item extra={<Switch color="red" checked />}>color</List.Item>
       </List>
-    );
+    )
   }
 }

@@ -1,34 +1,30 @@
-import React from 'react';
+import React from 'react'
 
-import { StyleSheet, Text, View } from 'react-native';
-import {
-  ActivityIndicator,
-  Button,
-  Flex,
-  GapH,
-  GapV,
-} from "@popui/popui-rn";
+import { StyleSheet, Text, View } from 'react-native'
+import { ActivityIndicator, Button, Flex, GapH, GapV } from '@popui/popui-rn'
 
-
-export default class ActivityIndicatorExample extends React.Component<any, any> {
-  closeTimer: any;
+export default class ActivityIndicatorExample extends React.Component<
+  any,
+  any
+> {
+  closeTimer: any
   constructor(props: any) {
-    super(props);
+    super(props)
     this.state = {
       animating: false,
-    };
-    this.loadingToast = this.loadingToast.bind(this);
+    }
+    this.loadingToast = this.loadingToast.bind(this)
   }
 
   componentWillUnmount() {
-    clearTimeout(this.closeTimer);
+    clearTimeout(this.closeTimer)
   }
 
   loadingToast() {
-    this.setState({ animating: !this.state.animating });
+    this.setState({ animating: !this.state.animating })
     this.closeTimer = setTimeout(() => {
-      this.setState({ animating: !this.state.animating });
-    }, 2000);
+      this.setState({ animating: !this.state.animating })
+    }, 2000)
   }
 
   render() {
@@ -90,7 +86,7 @@ export default class ActivityIndicatorExample extends React.Component<any, any> 
           text="Loading..."
         />
       </View>
-    );
+    )
   }
 }
 
@@ -113,4 +109,4 @@ const styles = StyleSheet.create({
     justifyContent: 'space-around',
     padding: 8,
   },
-});
+})

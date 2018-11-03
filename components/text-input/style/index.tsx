@@ -1,4 +1,4 @@
-import themeVars from '../../style/themes/default';
+import themeVars from '../../style/themes/default'
 
 export default {
   container: {
@@ -15,7 +15,5 @@ export default {
     fontSize: themeVars.input_font_size,
     color: themeVars.color_text_base,
   },
-  clear:{
-
-  }
-};
+  clear: {},
+}

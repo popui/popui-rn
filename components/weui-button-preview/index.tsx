@@ -1,6 +1,6 @@
 // import PropTypes from 'prop-types'
 import React from 'react'
-import { StyleSheet, Text,View } from 'react-native'
+import { StyleSheet, Text, View } from 'react-native'
 import themeVars from '../style/themes/default'
 import TouchableWithFallback from '../touchable-with-fallback'
 import { WeuiButtonPreviewPropsType } from './PropsType'

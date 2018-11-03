@@ -1,18 +1,18 @@
-import { ImageStyle, TextStyle, ViewStyle } from 'react-native';
-import themeVars from '../../style/themes/default';
+import { ImageStyle, TextStyle, ViewStyle } from 'react-native'
+import themeVars from '../../style/themes/default'
 
 export interface ICardStyle {
-  card: ViewStyle;
-  full: ViewStyle;
-  headerWrap: ViewStyle;
-  headerTitle: ViewStyle;
-  headerImage: ImageStyle;
-  headerContent: TextStyle;
-  headerExtra: TextStyle;
-  body: ViewStyle;
-  footerWrap: ViewStyle;
-  footerContent: TextStyle;
-  footerExtra: TextStyle;
+  card: ViewStyle
+  full: ViewStyle
+  headerWrap: ViewStyle
+  headerTitle: ViewStyle
+  headerImage: ImageStyle
+  headerContent: TextStyle
+  headerExtra: TextStyle
+  body: ViewStyle
+  footerWrap: ViewStyle
+  footerContent: TextStyle
+  footerExtra: TextStyle
 }
 
 export default {
@@ -76,4 +76,4 @@ export default {
     fontSize: themeVars.font_size_base,
     color: themeVars.color_text_caption,
   },
-};
+}

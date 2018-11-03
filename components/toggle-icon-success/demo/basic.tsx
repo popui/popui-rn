@@ -1,7 +1,7 @@
 // tslint:disable:jsx-no-multiline-js
 import React from 'react'
 import { Text, View } from 'react-native'
-import { ToggleIconSuccess, GapH } from "@popui/popui-rn"
+import { ToggleIconSuccess, GapH } from '@popui/popui-rn'
 
 export default class BasicToggleIconSuccessExample extends React.Component<
   any,
@@ -9,22 +9,28 @@ export default class BasicToggleIconSuccessExample extends React.Component<
 > {
   render() {
     return (
-        <View style={{flexDirection:'column',justifyContent:'center',alignItems:'center'}}>
-          <Text>ToggleIconSuccess 固定值 Example:</Text>
+      <View
+        style={{
+          flexDirection: 'column',
+          justifyContent: 'center',
+          alignItems: 'center',
+        }}
+      >
+        <Text>ToggleIconSuccess 固定值 Example:</Text>
 
-          <GapH size={'xl'} />
+        <GapH size={'xl'} />
 
-          <Text>checked</Text>
-          <ToggleIconSuccess checked />
+        <Text>checked</Text>
+        <ToggleIconSuccess checked />
 
-          <GapH />
-          <Text>default (空)</Text>
-          <ToggleIconSuccess />
+        <GapH />
+        <Text>default (空)</Text>
+        <ToggleIconSuccess />
 
-          <GapH />
-          <Text>checked disabled</Text>
-          <ToggleIconSuccess checked disabled />
-        </View>
+        <GapH />
+        <Text>checked disabled</Text>
+        <ToggleIconSuccess checked disabled />
+      </View>
     )
   }
 }

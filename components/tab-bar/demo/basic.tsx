@@ -1,15 +1,14 @@
-import React from 'react';
+import React from 'react'
 
-import { View, Text } from 'react-native';
-import { TabBar, SearchBar } from "@popui/popui-rn";
-
+import { View, Text } from 'react-native'
+import { TabBar, SearchBar } from '@popui/popui-rn'
 
 export default class BasicTabBarExample extends React.Component<any, any> {
   constructor(props: any) {
-    super(props);
+    super(props)
     this.state = {
       selectedTab: 'redTab',
-    };
+    }
   }
 
   renderContent(pageText: any) {
@@ -18,13 +17,13 @@ export default class BasicTabBarExample extends React.Component<any, any> {
         <SearchBar placeholder="Search" showCancelButton />
         <Text style={{ margin: 50 }}>{pageText}</Text>
       </View>
-    );
+    )
   }
 
   onChangeTab(tabName: any) {
     this.setState({
       selectedTab: tabName,
-    });
+    })
   }
 
   render() {
@@ -72,6 +71,6 @@ export default class BasicTabBarExample extends React.Component<any, any> {
           {this.renderContent('My Tab')}
         </TabBar.Item>
       </TabBar>
-    );
+    )
   }
 }

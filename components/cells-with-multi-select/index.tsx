@@ -1,10 +1,17 @@
 import xor from 'lodash/xor'
 import React from 'react'
 import { StyleSheet } from 'react-native'
-import { Cell, CellBody, CellHeader, Cells, CellText,ToggleIconCircle } from "@popui/popui-rn"
+import {
+  Cell,
+  CellBody,
+  CellHeader,
+  Cells,
+  CellText,
+  ToggleIconCircle,
+} from '@popui/popui-rn'
 // import WeuiIcon from '../weui-icon'
 import themeVars from '../style/themes/default'
-import {MultiSelectHeaderCellsPropsType} from './PropsType'
+import { MultiSelectHeaderCellsPropsType } from './PropsType'
 const styles = StyleSheet.create({
   icon: {
     paddingRight: themeVars.CellInnerGapH,
@@ -23,7 +30,8 @@ const CellsWithMultiSelect = ({
   children,
   ...others
 }: MultiSelectHeaderCellsPropsType) => {
-  const isChecked = (item:any) => values.filter((value:any) => value === item).length>0
+  const isChecked = (item: any) =>
+    values.filter((value: any) => value === item).length > 0
 
   return (
     <Cells style={[style, disabled ? styles.disabled : null]} {...others}>

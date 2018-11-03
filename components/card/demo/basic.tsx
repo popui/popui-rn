@@ -1,8 +1,7 @@
-import React from 'react';
+import React from 'react'
 
-import { Text, View } from 'react-native';
-import { Card, GapH, GapV } from "@popui/popui-rn";
-
+import { Text, View } from 'react-native'
+import { Card, GapH, GapV } from '@popui/popui-rn'
 
 export default class BasicCardExample extends React.Component<any, any> {
   render() {
@@ -43,6 +42,6 @@ export default class BasicCardExample extends React.Component<any, any> {
           <Card.Footer content="footer content" extra="footer extra content" />
         </Card>
       </View>
-    );
+    )
   }
 }

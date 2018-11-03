@@ -22,39 +22,35 @@ const valueToOptions = (value, options) => {
       return options
     }
     tmp =
-      (
-        tmp.filter((option) => option.value === value[idx - 1])[0] ||
-        tmp[0] ||
-        {}
-      ).children || []
+      (tmp.filter(option => option.value === value[idx - 1])[0] || tmp[0] || {})
+        .children || []
     return tmp
   })
 }
 
 const getLabel = (value, options) => {
-  const cascade = options.filter((item) => item.children).length
+  const cascade = options.filter(item => item.children).length
   const _options = cascade ? valueToOptions(value, options) : options
 
   if (cascade) {
     return value
       .map(
         (val, idx) =>
-          (_options[idx].filter((option) => option.value === val)[0] || {})
-            .label
+          (_options[idx].filter(option => option.value === val)[0] || {}).label
       )
       .join(' ')
   }
   return value.join(' ')
 }
 
-const initLabel = (arg) => {
+const initLabel = arg => {
   let _value = arg.value
 
   if (!Array.isArray(arg.value)) {
     _value = [arg.value]
   }
 
-  if (_value.length && _value.every((item) => item)) {
+  if (_value.length && _value.every(item => item)) {
     return getLabel(_value, arg.options)
   }
 

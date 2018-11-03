@@ -75,7 +75,7 @@ export default class ToggleRow extends React.Component<
   }
   renderIcon = () => {
     const { disabled, styles, renderIcon } = this.props
-    const {checked} = this.state
+    const { checked } = this.state
     const props = {
       checked,
       disabled,
@@ -90,10 +90,7 @@ export default class ToggleRow extends React.Component<
     const { styles, disabled, style } = this.props
     // const TouchableComp = TouchableWithFallback
     return (
-      <TouchableWithoutFeedback
-        onPress={this.onPress}
-        disabled={disabled}
-      >
+      <TouchableWithoutFeedback onPress={this.onPress} disabled={disabled}>
         <View style={[styles.wrapper, style]}>
           {this.renderIcon()}
           {this.renderChildren()}

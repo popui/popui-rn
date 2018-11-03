@@ -3,9 +3,9 @@ import WeuiIcon from '../weui-icon'
 import { ToggleIconSuccessPropsType } from './PropsType'
 
 function ToggleIconSuccess(props: ToggleIconSuccessPropsType) {
-  const { disabled, checked, style,color,size=23 } = props
+  const { disabled, checked, style, color, size = 23 } = props
   const colorProps: any = {
-    color
+    color,
   }
   if (disabled) {
     colorProps.color = '#ADADAD'

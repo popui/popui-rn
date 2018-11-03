@@ -1,16 +1,15 @@
-import React from 'react';
+import React from 'react'
 
-import { View, Text, Platform } from 'react-native';
-import { ActionSheet, Button } from "@popui/popui-rn";
-
+import { View, Text, Platform } from 'react-native'
+import { ActionSheet, Button } from '@popui/popui-rn'
 
 export default class Test extends React.Component<any, any> {
   constructor(props: any) {
-    super(props);
+    super(props)
     this.state = {
       clicked: 'none',
       text: '',
-    };
+    }
   }
   render() {
     return (
@@ -28,7 +27,7 @@ export default class Test extends React.Component<any, any> {
         </View>
         <Text style={[{ padding: 8 }]}>{this.state.text}</Text>
       </View>
-    );
+    )
   }
   showActionSheet = () => {
     const BUTTONS = [
@@ -37,7 +36,7 @@ export default class Test extends React.Component<any, any> {
       'Operation3',
       'Delete',
       'Cancel',
-    ];
+    ]
     ActionSheet.showActionSheetWithOptions(
       {
         title: 'Title',
@@ -47,37 +46,37 @@ export default class Test extends React.Component<any, any> {
         destructiveButtonIndex: 3,
       },
       (buttonIndex: any) => {
-        this.setState({ clicked: BUTTONS[buttonIndex] });
-      },
-    );
+        this.setState({ clicked: BUTTONS[buttonIndex] })
+      }
+    )
   }
   showShareActionSheet = () => {
     const opts: any = {
       message: 'Message to go with the shared url',
       title: 'Share Actionsheet',
-    };
+    }
 
     if (Platform.OS === 'ios') {
-      opts.url = 'https://www.alipay.com/';
-      opts.tintColor = '#ff0000';
-      opts.excludedActivityTypes = ['com.apple.UIKit.activity.PostToTwitter'];
+      opts.url = 'https://www.alipay.com/'
+      opts.tintColor = '#ff0000'
+      opts.excludedActivityTypes = ['com.apple.UIKit.activity.PostToTwitter']
     }
 
     ActionSheet.showShareActionSheetWithOptions(
       opts,
       (error: any) => alert(error),
       (success: any, method: any) => {
-        let text;
+        let text
         if (success) {
-          text = `Shared with ${method}`;
+          text = `Shared with ${method}`
         } else {
-          text = 'Did not share';
+          text = 'Did not share'
         }
-        this.setState({ text });
-      },
-    );
+        this.setState({ text })
+      }
+    )
   }
 }
 
-export const title = 'ActionSheet';
-export const description = 'ActionSheet example';
+export const title = 'ActionSheet'
+export const description = 'ActionSheet example'

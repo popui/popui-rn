@@ -1,1 +1,1 @@
-import '../../picker/style/';
+import '../../picker/style/'

@@ -1,15 +1,21 @@
-import React from 'react';
+import React from 'react'
 
-import { View } from 'react-native';
+import { View } from 'react-native'
 import {
-  Pagination, LocaleProvider, List, DatePicker, GapH, GapV,
-  Picker, SearchBar,
-} from "@popui/popui-rn";
-import enUS from '../en_US';
-import ruRU from '../ru_RU';
+  Pagination,
+  LocaleProvider,
+  List,
+  DatePicker,
+  GapH,
+  GapV,
+  Picker,
+  SearchBar,
+} from '@popui/popui-rn'
+import enUS from '../en_US'
+import ruRU from '../ru_RU'
 
-const maxDate = new Date(2018, 11, 3, 22, 0);
-const minDate = new Date(2015, 7, 6, 8, 30);
+const maxDate = new Date(2018, 11, 3, 22, 0)
+const minDate = new Date(2015, 7, 6, 8, 30)
 
 const seasons = [
   [
@@ -32,7 +38,7 @@ const seasons = [
       value: '夏',
     },
   ],
-];
+]
 
 const Page = () => (
   <View>
@@ -54,25 +60,24 @@ const Page = () => (
       <SearchBar placeholder="Search" showCancelButton />
     </List>
   </View>
-);
-
+)
 
 export default class LocaleProviderExample extends React.Component<any, any> {
   constructor(props: any) {
-    super(props);
+    super(props)
     this.state = {
       locale: 'English',
-    };
+    }
   }
 
   onChange = (value: any) => {
     this.setState({
       locale: value[0],
-    });
+    })
   }
 
   render() {
-    const { locale } = this.state;
+    const { locale } = this.state
     const languages: Array<any> = [
       {
         value: '中国',
@@ -89,8 +94,8 @@ export default class LocaleProviderExample extends React.Component<any, any> {
         label: 'Русский',
         language: ruRU,
       },
-    ];
-    const currentLocale = languages.find(item => item.value === locale).language;
+    ]
+    const currentLocale = languages.find(item => item.value === locale).language
 
     return (
       <GapV>
@@ -107,6 +112,6 @@ export default class LocaleProviderExample extends React.Component<any, any> {
           <Page />
         </LocaleProvider>
       </GapV>
-    );
+    )
   }
 }

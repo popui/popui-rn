@@ -14,9 +14,7 @@ const defautlStyles = StyleSheet.create({
     justifyContent: 'flex-start',
     alignItems: 'flex-start',
   },
-  bodyText:{
-
-  }
+  bodyText: {},
 })
 
 export default defautlStyles

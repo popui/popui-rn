@@ -37,7 +37,7 @@ export default class Flex extends React.Component<FlexProps, any> {
       ...restProps
     } = this.props
     const transferConst = [justify, align]
-    const transferConstStyle = transferConst.map((el) => {
+    const transferConstStyle = transferConst.map(el => {
       let tempTxt
       switch (el) {
         case 'start':

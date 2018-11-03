@@ -1,47 +1,53 @@
-import React from 'react';
+import React from 'react'
 
-import { View, Text, TouchableOpacity } from 'react-native';
-import { List, Picker } from "@popui/popui-rn";
+import { View, Text, TouchableOpacity } from 'react-native'
+import { List, Picker } from '@popui/popui-rn'
 
-import { district } from 'antd-mobile-demo-data';
+import { district } from 'antd-mobile-demo-data'
 
 const CustomChildren = (props: any) => (
   <TouchableOpacity onPress={props.onClick}>
     <View
-      style={{ height: 36, paddingLeft: 15, flexDirection: 'row', alignItems: 'center' }}
+      style={{
+        height: 36,
+        paddingLeft: 15,
+        flexDirection: 'row',
+        alignItems: 'center',
+      }}
     >
       <Text style={{ flex: 1 }}>{props.children}</Text>
-      <Text style={{ textAlign: 'right', color: '#888', marginRight: 15 }}>{props.extra}</Text>
+      <Text style={{ textAlign: 'right', color: '#888', marginRight: 15 }}>
+        {props.extra}
+      </Text>
     </View>
   </TouchableOpacity>
-);
-
+)
 
 export default class PopupExample extends React.Component<any, any> {
   constructor(props: any) {
-    super(props);
+    super(props)
     this.state = {
       data: [],
       value: [],
       pickerValue: [],
-      loading:false
-    };
+      loading: false,
+    }
   }
   onClick = () => {
     // console.log('start loading data');
     this.setState({
-      loading:true
+      loading: true,
     })
     setTimeout(() => {
       this.setState({
         data: district,
-        loading:false
-      });
-    }, 3000);
+        loading: false,
+      })
+    }, 3000)
   }
   onChange = (value: any) => {
     // console.log(value);
-    this.setState({ value });
+    this.setState({ value })
   }
   render() {
     return (
@@ -71,6 +77,6 @@ export default class PopupExample extends React.Component<any, any> {
           </Picker>
         </List>
       </View>
-    );
+    )
   }
 }

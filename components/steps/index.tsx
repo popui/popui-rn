@@ -48,7 +48,7 @@ export default class Steps extends React.Component<StepsNativeProps, any> {
     return (
       <View
         style={{ flexDirection: direction }}
-        onLayout={(e) => {
+        onLayout={e => {
           this.onLayout(e)
         }}
       >

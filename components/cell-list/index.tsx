@@ -1,6 +1,6 @@
 import React from 'react'
 
-import { StyleProp, StyleSheet,  View, ViewStyle } from 'react-native'
+import { StyleProp, StyleSheet, View, ViewStyle } from 'react-native'
 import { CellListPropsType } from './PropsType'
 import cellStyle from './style/index'
 import CellsListTitle from '../cell-list-title'
@@ -19,8 +19,8 @@ export default class CellList extends React.Component<CellsProps, any> {
   }
   renderHeader = () => {
     const { header } = this.props
-    console.log("CellList renderHeader",{
-      header
+    console.log('CellList renderHeader', {
+      header,
     })
     if (typeof header === 'function') {
       return header()
@@ -46,7 +46,7 @@ export default class CellList extends React.Component<CellsProps, any> {
       return null
     }
     const childrenLen = React.Children.count(children)
-    const lastIndex = childrenLen-1
+    const lastIndex = childrenLen - 1
     const childrenWithProps = React.Children.map(
       children,
       (child: any, idx: number) => {

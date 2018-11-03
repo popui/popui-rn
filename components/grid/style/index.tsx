@@ -1,4 +1,4 @@
-import themeVars from '../../style/themes/default';
+import themeVars from '../../style/themes/default'
 
 export default {
   grayBorderBox: {
@@ -15,4 +15,4 @@ export default {
     color: themeVars.color_text_base,
     marginTop: 5,
   },
-};
+}

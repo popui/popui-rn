@@ -1,21 +1,20 @@
 // tslint:disable:jsx-no-multiline-js
-import React from 'react';
+import React from 'react'
 
-import { ScrollView, Text, TouchableWithoutFeedback, View } from 'react-native';
-import { Button, Flex, GapH, GapV } from "@popui/popui-rn";
+import { ScrollView, Text, TouchableWithoutFeedback, View } from 'react-native'
+import { Button, Flex, GapH, GapV } from '@popui/popui-rn'
 
 const Circle = (props: any) => {
-  const size = props.size || 20;
+  const size = props.size || 20
   const style = {
     borderRadius: size / 2,
     backgroundColor: '#527fe4',
     width: size,
     height: size,
     margin: 1,
-  };
-  return <View style={style} />;
-};
-
+  }
+  return <View style={style} />
+}
 
 export default class FlexExample extends React.Component<any, any> {
   render() {
@@ -324,9 +323,9 @@ export default class FlexExample extends React.Component<any, any> {
         <GapV style={{ marginBottom: 5 }}>
           <TouchableWithoutFeedback onPress={() => ({})}>
             <Flex wrap="wrap">
-              {'ooooooooooooooooooooooooooooo'
-                .split('')
-                .map((char, i) => <Circle key={`${i}-${char}`} />)}
+              {'ooooooooooooooooooooooooooooo'.split('').map((char, i) => (
+                <Circle key={`${i}-${char}`} />
+              ))}
             </Flex>
           </TouchableWithoutFeedback>
         </GapV>
@@ -335,15 +334,15 @@ export default class FlexExample extends React.Component<any, any> {
         </GapV>
         <GapV style={{ marginBottom: 5 }}>
           <Flex wrap="nowrap" onPress={() => ({})}>
-            {'ooooooooooooooooooooooooooooo'
-              .split('')
-              .map((char, i) => <Circle key={`${i}-${char}`} />)}
+            {'ooooooooooooooooooooooooooooo'.split('').map((char, i) => (
+              <Circle key={`${i}-${char}`} />
+            ))}
           </Flex>
         </GapV>
         <GapH />
         <GapH />
         <GapH />
       </ScrollView>
-    );
+    )
   }
 }

@@ -1,7 +1,6 @@
 /* tslint:disable:jsx-no-multiline-js */
-import React from "react";
-;
-import { ScrollView, Alert } from "react-native";
+import React from 'react'
+import { ScrollView, Alert } from 'react-native'
 import {
   TextInputWithType,
   CellLabel,
@@ -11,31 +10,30 @@ import {
   CellHeader,
   Cells,
   CellsTitle,
-  CellText
-} from "@popui/popui-rn";
+  CellText,
+} from '@popui/popui-rn'
 
-declare var jest: any;
-
+declare var jest: any
 
 export default class BasicTextInputTypeProviderExample extends React.Component<
   any,
   any
-  > {
-  inputRef: any;
+> {
+  inputRef: any
 
   constructor(props: any) {
-    super(props);
+    super(props)
     this.state = {
-      text: "text",
-      bankCard: "11112222333344445555",
-      phone: "18866660000",
-      password: "abcd1234",
-      number: "1234567890"
-    };
+      text: 'text',
+      bankCard: '11112222333344445555',
+      phone: '18866660000',
+      password: 'abcd1234',
+      number: '1234567890',
+    }
   }
   onClearPress = () => {
-    Alert.alert("Clear Pressed!");
-  };
+    Alert.alert('Clear Pressed!')
+  }
   renderText = () => {
     return (
       <Cell>
@@ -50,15 +48,15 @@ export default class BasicTextInputTypeProviderExample extends React.Component<
             placeholder="default (text)"
             onChangeText={(value: any) => {
               this.setState({
-                text: value
-              });
+                text: value,
+              })
             }}
           />
         </CellBody>
         <CellFooter />
       </Cell>
-    );
-  };
+    )
+  }
   renderBankCard = () => {
     return (
       <Cell access>
@@ -74,15 +72,15 @@ export default class BasicTextInputTypeProviderExample extends React.Component<
             placeholder="bankCard"
             onChangeText={(value: any) => {
               this.setState({
-                bankCard: value
-              });
+                bankCard: value,
+              })
             }}
           />
         </CellBody>
         <CellFooter />
       </Cell>
-    );
-  };
+    )
+  }
   renderPhone = () => {
     return (
       <Cell>
@@ -98,15 +96,15 @@ export default class BasicTextInputTypeProviderExample extends React.Component<
             placeholder="phone"
             onChangeText={(value: any) => {
               this.setState({
-                phone: value
-              });
+                phone: value,
+              })
             }}
           />
         </CellBody>
         <CellFooter />
       </Cell>
-    );
-  };
+    )
+  }
   renderPassword = () => {
     return (
       <Cell>
@@ -122,15 +120,15 @@ export default class BasicTextInputTypeProviderExample extends React.Component<
             placeholder="password"
             onChangeText={(value: any) => {
               this.setState({
-                password: value
-              });
+                password: value,
+              })
             }}
           />
         </CellBody>
         <CellFooter />
       </Cell>
-    );
-  };
+    )
+  }
   renderNumber = () => {
     return (
       <Cell access error>
@@ -146,20 +144,20 @@ export default class BasicTextInputTypeProviderExample extends React.Component<
             placeholder="number"
             onChangeText={(value: any) => {
               this.setState({
-                number: value
-              });
+                number: value,
+              })
             }}
           />
           <CellText style={{ marginLeft: 5 }}>元</CellText>
         </CellBody>
         <CellFooter />
       </Cell>
-    );
-  };
+    )
+  }
   render() {
     return (
       <ScrollView
-        style={{ flex: 1, backgroundColor: "#eee" }}
+        style={{ flex: 1, backgroundColor: '#eee' }}
         automaticallyAdjustContentInsets={false}
         showsHorizontalScrollIndicator={false}
         showsVerticalScrollIndicator={false}
@@ -173,6 +171,6 @@ export default class BasicTextInputTypeProviderExample extends React.Component<
           {this.renderNumber()}
         </Cells>
       </ScrollView>
-    );
+    )
   }
 }

@@ -1,18 +1,18 @@
-import themeVars from '../../style/themes/default';
-import { Platform, ViewStyle, ImageStyle, TextStyle } from 'react-native';
+import themeVars from '../../style/themes/default'
+import { Platform, ViewStyle, ImageStyle, TextStyle } from 'react-native'
 
 export interface IToastStyle {
-  container: ViewStyle;
-  innerContainer: ViewStyle;
-  innerWrap: ViewStyle;
-  iconToast: ViewStyle;
-  textToast: ViewStyle;
-  content: TextStyle;
-  toastContent:TextStyle;
-  toastImage: ImageStyle;
-  centering: ViewStyle;
-  toastLoading:ViewStyle
-  toastIcon:ViewStyle
+  container: ViewStyle
+  innerContainer: ViewStyle
+  innerWrap: ViewStyle
+  iconToast: ViewStyle
+  textToast: ViewStyle
+  content: TextStyle
+  toastContent: TextStyle
+  toastImage: ImageStyle
+  centering: ViewStyle
+  toastLoading: ViewStyle
+  toastIcon: ViewStyle
 }
 
 export default {
@@ -38,7 +38,7 @@ export default {
     borderRadius: themeVars.radius_md,
     padding: themeVars.v_spacing_lg,
     minWidth: 121.6,
-    minHeight:121.6
+    minHeight: 121.6,
   },
   textToast: {
     borderRadius: themeVars.radius_sm,
@@ -54,7 +54,7 @@ export default {
     marginTop: 7,
     color: themeVars.color_text_base_inverse,
     fontSize: 55,
-    textAlign: 'center'
+    textAlign: 'center',
   },
   toastImage: {
     marginTop: 15,
@@ -65,10 +65,10 @@ export default {
   toastContent: {
     color: themeVars.color_text_base_inverse,
     fontSize: themeVars.font_size_base,
-    textAlign: 'center'
+    textAlign: 'center',
   },
   toastLoading: {
     marginTop: 15,
-    marginBottom: 15
-  }
-};
+    marginBottom: 15,
+  },
+}

@@ -1,6 +1,6 @@
-import React from 'react';
+import React from 'react'
 
-import { PickerView } from "@popui/popui-rn";
+import { PickerView } from '@popui/popui-rn'
 
 const seasons = [
   [
@@ -23,17 +23,16 @@ const seasons = [
       value: '夏',
     },
   ],
-];
-
+]
 
 export default class PickerViewExample extends React.Component {
   state = {
     value: null,
-  };
+  }
   onChange = (value: any) => {
     this.setState({
       value,
-    });
+    })
   }
   render() {
     return (
@@ -43,6 +42,6 @@ export default class PickerViewExample extends React.Component {
         data={seasons}
         cascade={false}
       />
-    );
+    )
   }
 }

@@ -1,65 +1,64 @@
 /* tslint:disable:no-console */
-import React from 'react';
+import React from 'react'
 
-import { DeviceEventEmitter,Text } from 'react-native';
-import { Button, Toast, GapH, GapV } from "@popui/popui-rn";
+import { DeviceEventEmitter, Text } from 'react-native'
+import { Button, Toast, GapH, GapV } from '@popui/popui-rn'
 // import ToastContainer from '@popui/popui-rn/components/toast/ToastContainer';
 // const testText = "This is a toast tips !!! This is a toast tips !!! This is a toast tips !!! This is a toast tips !!! This is a toast tips !!!"
-const testText = "testText..."
+const testText = 'testText...'
 
 function showToast() {
-  Toast.info('This is a toast tips !!!');
+  Toast.info('This is a toast tips !!!')
 }
 
 function successToast() {
-  Toast.success('Load success !!!', 1);
+  Toast.success('Load success !!!', 1)
 }
 
 function showToastNoMask() {
-  Toast.info('Toast without mask !!!', 1, null, false);
+  Toast.info('Toast without mask !!!', 1, null, false)
 }
 
 function failToast() {
-  Toast.fail('Load failed !!!');
+  Toast.fail('Load failed !!!')
 }
 
 function offline() {
-  Toast.offline('Network connection failed !!!');
+  Toast.offline('Network connection failed !!!')
 }
 
 function loadingToast() {
   Toast.loading('Loading...', 1, () => {
-    console.log('Load complete !!!');
-  });
+    console.log('Load complete !!!')
+  })
 }
 
 function alwaysLoadingToast() {
-  Toast.loading(testText, 0);
+  Toast.loading(testText, 0)
 }
 
-
 export default class ToastExample extends React.Component<any, any> {
-  timer: any;
+  timer: any
   componentDidMount() {
     DeviceEventEmitter.addListener('navigatorBack', () => {
-      Toast.hide();
-    });
+      Toast.hide()
+    })
     // alwaysLoadingToast()
   }
 
   componentWillUnmount() {
-    (DeviceEventEmitter as any).removeAllListeners('navigatorBack');
+    ;(DeviceEventEmitter as any).removeAllListeners('navigatorBack')
     if (this.timer) {
-      clearTimeout(this.timer);
-      this.timer = null;
+      clearTimeout(this.timer)
+      this.timer = null
     }
   }
 
   alwaysShowToast = () => {
-    Toast.info('A toast width duration = 0 !!!', 0);
+    Toast.info('A toast width duration = 0 !!!', 0)
     this.timer = setTimeout(() => {
-      Toast.hide();
-    }, 5000);
+      Toast.hide()
+    }, 5000)
   }
 
   render() {
@@ -81,6 +80,6 @@ export default class ToastExample extends React.Component<any, any> {
         <Button onClick={this.alwaysShowToast}>Toast width duration = 0</Button>
         <GapH />
       </GapV>
-    );
+    )
   }
 }

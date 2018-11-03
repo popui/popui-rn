@@ -1,23 +1,23 @@
-import themeVars from '../../style/themes/default';
-import { TextStyle, ViewStyle } from 'react-native';
+import themeVars from '../../style/themes/default'
+import { TextStyle, ViewStyle } from 'react-native'
 
 export interface ITagStyle {
-  tag: ViewStyle;
-  wrap: ViewStyle;
-  wrapSmall: ViewStyle;
-  text: TextStyle;
-  textSmall: TextStyle;
-  normalWrap: ViewStyle;
-  normalText: TextStyle;
-  activeWrap: ViewStyle;
-  activeText: TextStyle;
-  disabledWrap: ViewStyle;
-  disabledText: TextStyle;
-  close: ViewStyle;
-  closeIOS: ViewStyle;
-  closeAndroid: ViewStyle;
-  closeText: TextStyle;
-  closeTransform: ViewStyle;
+  tag: ViewStyle
+  wrap: ViewStyle
+  wrapSmall: ViewStyle
+  text: TextStyle
+  textSmall: TextStyle
+  normalWrap: ViewStyle
+  normalText: TextStyle
+  activeWrap: ViewStyle
+  activeText: TextStyle
+  disabledWrap: ViewStyle
+  disabledText: TextStyle
+  close: ViewStyle
+  closeIOS: ViewStyle
+  closeAndroid: ViewStyle
+  closeText: TextStyle
+  closeTransform: ViewStyle
 }
 
 export default {
@@ -84,9 +84,11 @@ export default {
     height: 32,
     left: -2,
     top: -10,
-    transform: [{
-      rotate: '45deg',
-    }],
+    transform: [
+      {
+        rotate: '45deg',
+      },
+    ],
   },
   closeText: {
     color: themeVars.color_text_base_inverse,
@@ -95,8 +97,10 @@ export default {
     lineHeight: 18,
   },
   closeTransform: {
-    transform: [{
-      rotate: '-45deg',
-    }],
+    transform: [
+      {
+        rotate: '-45deg',
+      },
+    ],
   },
-};
+}

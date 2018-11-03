@@ -10,14 +10,14 @@ import {
   CellsTitle,
   CellText,
   GapH,
-} from "@popui/popui-rn"
+} from '@popui/popui-rn'
 
 export interface IProps {}
 
 export default class CellScreen extends React.Component<IProps, any> {
   render() {
     return (
-      <ScrollView style={{backgroundColor:"#eee"}}>
+      <ScrollView style={{ backgroundColor: '#eee' }}>
         <Cells header="带说明的列表项">
           <Cell>
             <CellBody>标题文字</CellBody>

@@ -1,14 +1,13 @@
 // tslint:disable:jsx-no-multiline-js
 /* tslint:disable:no-console */
-import React from 'react';
+import React from 'react'
 
-import { View } from 'react-native';
-import { Tag, GapH } from "@popui/popui-rn";
+import { View } from 'react-native'
+import { Tag, GapH } from '@popui/popui-rn'
 
 function onChange(selected: any) {
-  console.log(`tag selected: ${selected}`);
+  console.log(`tag selected: ${selected}`)
 }
-
 
 export default class BasicTagExample extends React.Component<any, any> {
   render() {
@@ -25,10 +24,10 @@ export default class BasicTagExample extends React.Component<any, any> {
         <Tag
           closable
           onClose={() => {
-            console.log('onClose');
+            console.log('onClose')
           }}
           afterClose={() => {
-            console.log('afterClose');
+            console.log('afterClose')
           }}
         >
           Closable
@@ -38,12 +37,12 @@ export default class BasicTagExample extends React.Component<any, any> {
         <GapH />
         <Tag
           onLongPress={() => {
-            console.log('onLongPress');
+            console.log('onLongPress')
           }}
         >
           LongPress
         </Tag>
       </View>
-    );
+    )
   }
 }

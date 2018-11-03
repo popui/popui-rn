@@ -1,10 +1,9 @@
 // tslint:disable:jsx-no-multiline-js
 /* tslint:disable:no-console */
-import React from 'react';
+import React from 'react'
 
-import { ScrollView, View } from 'react-native';
-import { Badge, GapH } from "@popui/popui-rn";
-
+import { ScrollView, View } from 'react-native'
+import { Badge, GapH } from '@popui/popui-rn'
 
 export default class BasicTagExample extends React.Component<any, any> {
   render() {
@@ -87,6 +86,6 @@ export default class BasicTagExample extends React.Component<any, any> {
           </Badge>
         </View>
       </ScrollView>
-    );
+    )
   }
 }

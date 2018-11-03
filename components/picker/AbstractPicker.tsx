@@ -50,13 +50,13 @@ export default abstract class AbstractPicker extends React.Component<
       })
     } else {
       treeChildren = value.map((v, i) => {
-        return (data as PickerData[][])[i].filter((d) => d.value === v)[0]
+        return (data as PickerData[][])[i].filter(d => d.value === v)[0]
       })
     }
     return (
       this.props.format &&
       this.props.format(
-        treeChildren.map((v) => {
+        treeChildren.map(v => {
           return v.label
         })
       )
@@ -74,7 +74,7 @@ export default abstract class AbstractPicker extends React.Component<
           itemStyle={itemStyle}
           indicatorStyle={indicatorStyle}
         >
-          {col.map((item) => {
+          {col.map(item => {
             return (
               <RMCPicker.Item key={item.value} value={item.value}>
                 {item.label}

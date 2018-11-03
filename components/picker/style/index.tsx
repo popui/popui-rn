@@ -1,30 +1,30 @@
-import { TextStyle, ViewStyle,StyleSheet } from 'react-native';
+import { TextStyle, ViewStyle, StyleSheet } from 'react-native'
 import themeVars from '../../style/themes/default'
 
 export interface IPickerStyle {
-  modal: ViewStyle;
-  header: ViewStyle;
-  headerItem: ViewStyle;
-  actionText: TextStyle;
-  title: TextStyle;
+  modal: ViewStyle
+  header: ViewStyle
+  headerItem: ViewStyle
+  actionText: TextStyle
+  title: TextStyle
 }
 
-const styles= {
+const styles = {
   modal: {
     flex: 1,
     flexDirection: 'column',
     justifyContent: 'flex-end',
   },
-  cascade:{
+  cascade: {
     backgroundColor: '#EFEFF4',
-    flexDirection: 'row', 
-    alignItems: 'center'
-  },
-  cascadeLoading:{
-    flexDirection: 'column',
-    justifyContent:'center',
+    flexDirection: 'row',
     alignItems: 'center',
-    height:200
+  },
+  cascadeLoading: {
+    flexDirection: 'column',
+    justifyContent: 'center',
+    alignItems: 'center',
+    height: 200,
   },
   header: {
     flexDirection: 'row',
@@ -54,7 +54,6 @@ const styles= {
     fontSize: 18,
     textAlign: 'center',
   },
-};
-
+}
 
 export default styles

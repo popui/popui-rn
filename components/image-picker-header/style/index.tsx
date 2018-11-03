@@ -1,9 +1,8 @@
-import { ViewStyle } from 'react-native';
+import { ViewStyle } from 'react-native'
 export interface IImagePickerHeaderStyle {
-  uploaderHeader:ViewStyle;
-  uploaderTitle:ViewStyle;
-  uploaderCounter:ViewStyle;
-
+  uploaderHeader: ViewStyle
+  uploaderTitle: ViewStyle
+  uploaderCounter: ViewStyle
 }
 export default {
   uploaderHeader: {
@@ -23,4 +22,4 @@ export default {
     fontSize: 17,
     color: '#888',
   },
-};
+}

@@ -11,7 +11,7 @@ const styles = StyleSheet.create({
   },
 })
 
-const FooterLinks = (props) => {
+const FooterLinks = props => {
   const { children, style, ...others } = props
   return (
     <View style={[styles.footerlinks, style]} {...others}>

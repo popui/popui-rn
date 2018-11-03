@@ -159,7 +159,7 @@ export default class SearchBar extends React.Component<
               editable={!disabled}
               {...restProps}
               style={[styles.searchInput, style]}
-              ref={(el) => ((this.inputRef as any) = el)}
+              ref={el => ((this.inputRef as any) = el)}
               value={value}
               onChangeText={this.onChangeText}
               onSubmitEditing={this.onSubmit}

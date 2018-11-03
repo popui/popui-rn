@@ -44,7 +44,7 @@ class WebViewScreen extends Component {
       clearInterval(this.state.timer)
     }
   }
-  onError = (e) => {
+  onError = e => {
     console.log('onError e:', e)
   }
   onLoadEnd = () => {
@@ -61,7 +61,7 @@ class WebViewScreen extends Component {
       })
     }
   }
-  onNavigatorEvent = (event) => {
+  onNavigatorEvent = event => {
     if (event.type === 'DeepLink') {
     } else {
       switch (event.id) {
@@ -86,7 +86,7 @@ class WebViewScreen extends Component {
       }
     }
   }
-  onShouldStartLoadWithRequest = (event) => {
+  onShouldStartLoadWithRequest = event => {
     return true
   }
   goBack = () => {
@@ -133,7 +133,7 @@ class WebViewScreen extends Component {
   closeMoreMenu = () => {
     this.refs[CONSTANTS.REFS.MOREMENU].closeMenu(CONSTANTS.MENUS.MORE)
   }
-  onMoreMenuOptionSelect = (value) => {
+  onMoreMenuOptionSelect = value => {
     switch (value) {
       case CONSTANTS.MENUS.GOBACK:
         this.goBack()
@@ -155,7 +155,7 @@ class WebViewScreen extends Component {
     }
     this.closeMoreMenu()
   }
-  onNavigationStateChange = (navState) => {
+  onNavigationStateChange = navState => {
     // Todo:
     // navState.canGoBack,navState.canGoForward 在 SPA 页面中不会改变
     this.setState(
@@ -176,7 +176,7 @@ class WebViewScreen extends Component {
     //  this.refs[CONSTANTS.REFS.MOREMENU].toggleMenu(CONSTANTS.MENUS.MORE);
     // }, 2000);
   }
-  showSuccessToast = (title) => {
+  showSuccessToast = title => {
     this.setState({
       successToastVisible: true,
       successToastTitle: title,

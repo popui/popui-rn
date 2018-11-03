@@ -1,18 +1,18 @@
-import themeVars from '../../style/themes/default';
-import { ViewStyle, TextStyle, ImageStyle } from 'react-native';
+import themeVars from '../../style/themes/default'
+import { ViewStyle, TextStyle, ImageStyle } from 'react-native'
 
 export interface IResultStyle {
-  result: ViewStyle;
-  iconWrap: ViewStyle;
-  img: ImageStyle;
-  title: ViewStyle;
-  titleText: TextStyle;
-  message: ViewStyle;
-  messageText: TextStyle;
-  extra:ViewStyle;
-  extraText:TextStyle;
-  buttonWrap: ViewStyle;
-  button: ViewStyle;
+  result: ViewStyle
+  iconWrap: ViewStyle
+  img: ImageStyle
+  title: ViewStyle
+  titleText: TextStyle
+  message: ViewStyle
+  messageText: TextStyle
+  extra: ViewStyle
+  extraText: TextStyle
+  buttonWrap: ViewStyle
+  button: ViewStyle
 }
 
 export default {
@@ -74,4 +74,4 @@ export default {
     //   lineHeight: 22
     // }
   },
-};
+}

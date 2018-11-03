@@ -1,7 +1,7 @@
 {
   "name": "@popui/popui-rn",
   "version": "0.0.2",
-  "description": "基于蚂蚁金服移动设计规范的 React Native 组件库",
+  "description": "popui react native",
   "keywords": [
     "ant",
     "design",
@@ -13,20 +13,19 @@
     "framework",
     "frontend",
     "mobile",
-    "react native"
+    "react native",
+    "popui"
   ],
-  "repository": {
-    "type": "git",
-    "url": "http://github.com/ant-design/ant-design-mobile-rn"
-  },
-  "bugs": {
-    "url": "http://github.com/ant-design/ant-design-mobile-rn/issues"
-  },
   "files": [
     "components/**/*/*.jsx",
     "components/**/*/*.png",
     "components/**/*/*.jpg"
   ],
+  "husky": {
+    "hooks": {
+      "pre-commit": "pretty-quick --staged"
+    }
+  },
   "license": "MIT",
   "main": "node_modules/expo/AppEntry.js",
   "dependencies": {
@@ -95,7 +94,7 @@
     "lint-staged": "^7.0.0",
     "mockdate": "^2.0.1",
     "pre-commit": "1.x",
-    "prettier": "1.14.3",
+    "prettier": "^1.14.3",
     "qrcode.react": "^0.7.1",
     "raf": "^3.4.0",
     "rc-form": "1.x",
@@ -146,7 +145,8 @@
     "lint-staged": "lint-staged",
     "lint-staged:ts": "npm run tsc && node node_modules/tslint/bin/tslint -c node_modules/antd-tools/lib/tslint.json components/**/*.tsx",
     "lint-staged:es": "eslint ./.eslintrc.js",
-    "tsc": "antd-tools run tsc"
+    "tsc": "antd-tools run tsc",
+    "prettier": "npx prettier --config .prettierrc --write \"components/**/*/*.ts\" \"components/**/*/*.tsx\""
   },
   "lint-staged": {
     "components/**/*.tsx": [

@@ -1,14 +1,14 @@
-import themeVars from '../../style/themes/default';
-import { ViewStyle, TextStyle, StyleSheet } from 'react-native';
+import themeVars from '../../style/themes/default'
+import { ViewStyle, TextStyle, StyleSheet } from 'react-native'
 
 export interface ISearchBarStyle {
-  wrapper: ViewStyle;
-  searchOuter: ViewStyle;
-  searchInner: ViewStyle;
-  searchInput: ViewStyle;
-  clearIcon:ViewStyle;
-  cancelTextBtn: ViewStyle;
-  cancelText: TextStyle;
+  wrapper: ViewStyle
+  searchOuter: ViewStyle
+  searchInner: ViewStyle
+  searchInput: ViewStyle
+  clearIcon: ViewStyle
+  cancelTextBtn: ViewStyle
+  cancelText: TextStyle
 }
 const wrapperPaddingLeft = themeVars.h_spacing_md
 const searchInnerPaddingLeft = 15 - themeVars.h_spacing_md
@@ -45,9 +45,7 @@ export default {
     fontSize: 14,
     flex: 1,
   },
-  clearIcon: {
-
-  },
+  clearIcon: {},
   cancelTextBtn: {
     height: themeVars.search_bar_input_height,
     justifyContent: 'center',
@@ -57,5 +55,5 @@ export default {
     fontSize: themeVars.font_size_base,
     color: themeVars.color_link,
     paddingLeft: 10,
-  }
-};
+  },
+}

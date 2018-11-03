@@ -1,6 +1,6 @@
-import themeVars from '../../style/themes/default';
+import themeVars from '../../style/themes/default'
 export interface IImagePickerItemStyle {
-  [key:string]:any
+  [key: string]: any
 }
 
 export default {
@@ -35,5 +35,5 @@ export default {
     position: 'absolute',
     top: 2,
     right: 2,
-  }
-};
+  },
+}

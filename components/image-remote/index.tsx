@@ -64,7 +64,7 @@ export default class RemoteImage extends React.Component {
     if (renderImageElement) {
       const image = renderImageElement({ ...props, source })
       return cloneReferencedElement(image, {
-        ref: (component) => {
+        ref: component => {
           this._image = component
         },
       })
@@ -73,7 +73,7 @@ export default class RemoteImage extends React.Component {
     return (
       <Image
         {...props}
-        ref={(component) => {
+        ref={component => {
           this._image = component
         }}
         source={source}
