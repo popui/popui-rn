@@ -4,10 +4,12 @@ import themeVars from '../style/themes/default'
 
 // import WeuiIcon from '../weui-icon'
 const styles = StyleSheet.create({
+  container: {
+    paddingLeft: 5,
+  },
   cellFooter: {
     flexDirection: 'row',
     alignItems: 'center',
-    marginLeft: 5,
   },
   cellFooterText: {
     textAlign: 'center',
@@ -63,15 +65,17 @@ export default class CellFooter extends React.Component<
       ? [styles.cellFooter, style]
       : styles.cellFooter
     return (
-      <View style={cellFooterStyle}>
-        {this.renderChildrenWithProps()}
-        {/* {error && <WeuiIcon name="warn" />} */}
-        {access && (
-          <Image
-            style={{ width: 7.5, height: 12, marginLeft: 5 }}
-            source={require('assets/images/back_arrow.png')}
-          />
-        )}
+      <View style={[styles.container]}>
+        <View style={cellFooterStyle}>
+          {this.renderChildrenWithProps()}
+          {/* {error && <WeuiIcon name="warn" />} */}
+          {access && (
+            <Image
+              style={{ width: 7.5, height: 12, marginLeft: 5 }}
+              source={require('assets/images/back_arrow.png')}
+            />
+          )}
+        </View>
       </View>
     )
   }

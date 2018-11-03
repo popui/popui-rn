@@ -1,6 +1,6 @@
 import React from 'react'
 ;
-import {View} from 'react-native'
+import {View,ScrollView} from 'react-native'
 import { WeuiButtonPreview,  Preview, PreviewBody, PreviewFooter, PreviewHeader,
   PreviewItem, PreviewLabel, PreviewValue } from "@popui/popui-rn"
 export interface IProps  {
@@ -15,7 +15,7 @@ export default class PreviewScreen extends React.Component<IProps, any> {
 
     render() {
         return (
-            <View>
+            <ScrollView style={{backgroundColor:'#ddd',paddingBottom:50}}>
                 <Preview>
                     <PreviewHeader>
                         <PreviewItem>
@@ -40,7 +40,7 @@ export default class PreviewScreen extends React.Component<IProps, any> {
                         </PreviewItem>
                     </PreviewBody>
                     <PreviewFooter>
-                        <WeuiButtonPreview primary={!false}>Action</WeuiButtonPreview>
+                        <WeuiButtonPreview primary={!false}>OK</WeuiButtonPreview>
                     </PreviewFooter>
                 </Preview>
                 <Preview style={{ marginTop: 20 }}>
@@ -67,11 +67,11 @@ export default class PreviewScreen extends React.Component<IProps, any> {
                         </PreviewItem>
                     </PreviewBody>
                     <PreviewFooter>
-                        <WeuiButtonPreview>Action</WeuiButtonPreview>
-                        <WeuiButtonPreview primary={!false}>Action</WeuiButtonPreview>
+                        <WeuiButtonPreview>辅助操作</WeuiButtonPreview>
+                        <WeuiButtonPreview primary={!false}>主操作</WeuiButtonPreview>
                     </PreviewFooter>
                 </Preview>
-            </View>
+            </ScrollView>
         )
     }
 }

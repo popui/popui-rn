@@ -1,4 +1,4 @@
-import { Image, View } from "react-native";
+import { Image, View,ScrollView } from "react-native";
 import {
   CellBadge,
   Media,
@@ -31,7 +31,7 @@ export default class PanelScreen extends React.Component<IProps, any> {
 
   render() {
     return (
-      <View>
+      <ScrollView style={{backgroundColor:'#ddd',paddingBottom:50}}>
         <Panel>
           <PanelHeader>图文组合列表</PanelHeader>
           <PanelBody>
@@ -135,7 +135,7 @@ export default class PanelScreen extends React.Component<IProps, any> {
             </Media>
           </PanelBody>
         </Panel>
-      </View>
+      </ScrollView>
     );
   }
 }

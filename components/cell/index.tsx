@@ -6,11 +6,14 @@ import { CellProps, CellContentProps } from './PropsType'
 import renderElement from '../_util/slot'
 
 const styles = StyleSheet.create({
+  container: {
+    paddingLeft: themeVars.CellGapH,
+  },
   cell: {
     flexGrow: 1,
     flexDirection: 'row',
     alignItems: 'center',
-    paddingLeft: themeVars.CellGapH,
+    // paddingLeft: themeVars.CellGapH,
     paddingTop: themeVars.CellGapV,
     paddingBottom: themeVars.CellGapV,
     paddingRight: themeVars.CellGapH,
@@ -79,23 +82,24 @@ function Cell(props: CellProps) {
       underlayColor={themeVars.BgColorActive}
       {...others}
     >
-      <View
-        style={[
-          styles.cell,
-          style,
-          isFirst ? styles.isFirstCell : null,
-          vcode ? styles.vcodeCell : null,
-          disabled ? styles.disabledCell : null,
-        ]}
-      >
-        {CellItemContentRow({
-          access,
-          error,
-          children,
-        })}
-        {renderElement(header)}
-        {renderElement(body)}
-        {renderElement(footer)}
+      <View style={[styles.container, style]}>
+        <View
+          style={[
+            styles.cell,
+            isFirst ? styles.isFirstCell : null,
+            vcode ? styles.vcodeCell : null,
+            disabled ? styles.disabledCell : null,
+          ]}
+        >
+          {CellItemContentRow({
+            access,
+            error,
+            children,
+          })}
+          {renderElement(header)}
+          {renderElement(body)}
+          {renderElement(footer)}
+        </View>
       </View>
     </TouchableWithFallback>
   )
