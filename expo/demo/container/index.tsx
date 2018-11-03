@@ -1,5 +1,5 @@
 import React from 'react';
-import { StyleSheet,  SafeAreaView } from 'react-native';
+import { StyleSheet } from 'react-native';
 // import ActionSheetExample from '@popui/popui-rn/components/action-sheet/demo/basic';
 // import { ActionSheet2 } from "@popui/popui-rn"
 import AllComp from '@popui/popui-rn/rn-kitchen-sink/allComponents';
@@ -9,9 +9,9 @@ export default class App extends React.Component {
   render() {
     return (
       <ResourceLoader >
-        <SafeAreaView style={styles.container}>
+        {/* <SafeAreaView style={styles.container}> */}
           <AllComp />
-        </SafeAreaView>
+        {/* </SafeAreaView> */}
       </ResourceLoader>
     );
   }

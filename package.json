@@ -109,7 +109,7 @@
     "react-native-mocker": "^0.0.12",
     "react-native-stylekit": "^1.0.0",
     "react-native-typescript-transformer": "^1.2.10",
-    "react-navigation": "1.0.0-beta.12",
+    "react-navigation": "^3.0.0-rc.1",
     "react-test-renderer": "^16.4.0",
     "typescript": "~2.4.0"
   },

@@ -1,8 +1,19 @@
-import { StackNavigator } from 'react-navigation';
+// import { StackNavigator } from 'react-navigation';
+import {
+  createStackNavigator,
+  createAppContainer
+} from 'react-navigation';
+
+
 // import Home from './components/Home';
 import RnIndex from './components/RnIndex';
 // import WebIndex from './components/WebIndex';
-import { UIVIEWS, UICONTROLS, OTHERS, UIBARS } from './demoList';
+import {
+  UIVIEWS,
+  UICONTROLS,
+  OTHERS,
+  UIBARS
+} from './demoList';
 
 const getOptions = title => ({
   title,
@@ -23,7 +34,7 @@ const scenes = {
   // },
   native: {
     screen: RnIndex,
-    navigationOptions: getOptions('Antm React Native'),
+    navigationOptions: getOptions('popui'),
   },
 };
 
@@ -35,6 +46,8 @@ const scenes = {
   };
 });
 
-const App = StackNavigator(scenes);
+const MainNavigator = createStackNavigator(scenes);
+const App = createAppContainer(MainNavigator);
+// const App = StackNavigator(scenes);
 
-export default App
+export default App;
