@@ -37,7 +37,7 @@
     "normalize-css-color": "^1.0.2",
     "pretty-quick": "^1.8.0",
     "rc-swipeout": "~2.0.0",
-    "react": "^16.7.0-alpha.0",
+    "react": "^16.5.0",
     "react-native": "https://github.com/expo/react-native/archive/sdk-31.0.1.tar.gz",
     "react-native-camera-roll-picker": "^1.2.1",
     "react-native-collapsible": "^0.9.0",
