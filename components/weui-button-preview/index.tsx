@@ -1,6 +1,6 @@
 // import PropTypes from 'prop-types'
 import React from 'react'
-import { StyleSheet, Text } from 'react-native'
+import { StyleSheet, Text,View } from 'react-native'
 import themeVars from '../style/themes/default'
 import TouchableWithFallback from '../touchable-with-fallback'
 import { WeuiButtonPreviewPropsType } from './PropsType'
@@ -34,20 +34,19 @@ const WeuiButtonPreview = ({
   children,
   ...others
 }: WeuiButtonPreviewPropsType) => (
-  <TouchableWithFallback
-    underlayColor={themeVars.DialogLinkActiveBc}
-    style={[styles.previewBtn, style]}
-  >
-    <Text
-      style={[
-        styles.previewBtnText,
-        primary ? styles.previewBtnPrimaryText : styles.previewBtnDefaultText,
-        textStyle,
-      ]}
-      {...others}
-    >
-      {children}
-    </Text>
+  <TouchableWithFallback underlayColor={themeVars.DialogLinkActiveBc}>
+    <View style={[styles.previewBtn, style]}>
+      <Text
+        style={[
+          styles.previewBtnText,
+          primary ? styles.previewBtnPrimaryText : styles.previewBtnDefaultText,
+          textStyle,
+        ]}
+        {...others}
+      >
+        {children}
+      </Text>
+    </View>
   </TouchableWithFallback>
 )
 

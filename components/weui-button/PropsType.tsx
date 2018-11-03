@@ -3,7 +3,6 @@
 export interface ButtonPropsType {
   style: any
   children: any
-
   type?: string
   size?: string
   plain?: boolean
@@ -14,5 +13,5 @@ export interface ButtonPropsType {
   onLongPress?: (any) => any
   mainColor?: string
   activeOpacity?: number
-  renderWeuiButtonText?: (any) => any
+  renderWeuiButtonText?: () => any
 }

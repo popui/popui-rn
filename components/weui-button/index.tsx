@@ -139,11 +139,12 @@ const Button = (props: ButtonPropsType) => {
     <TouchableWithFallback
       activeOpacity={activeOpacity}
       fallback={TouchableOpacity}
-      style={TouchableWrapperStyle}
       {...touchableProps}
     >
-      <View>
-        {renderWeuiButtonText || (
+      <View style={TouchableWrapperStyle}>
+        {renderWeuiButtonText ? (
+          renderWeuiButtonText()
+        ) : (
           <WeuiButtonText {...buttonTextProps}>{children}</WeuiButtonText>
         )}
       </View>
