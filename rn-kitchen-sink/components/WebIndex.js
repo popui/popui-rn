@@ -1,11 +1,11 @@
-import React from 'react';
+import React from 'react'
 import {
   StyleSheet,
   View,
   WebView,
   Modal,
   ActivityIndicator,
-} from 'react-native';
+} from 'react-native'
 
 const styles = StyleSheet.create({
   container: {
@@ -20,21 +20,21 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
   },
-});
+})
 
 export default class WebIndex extends React.Component {
   constructor(props) {
-    super(props);
+    super(props)
     this.state = {
       visible: true,
       error: false,
-    };
+    }
   }
 
   onLoadEnd = () => {
     this.setState({
       visible: false,
-    });
+    })
   }
 
   render() {
@@ -55,13 +55,10 @@ export default class WebIndex extends React.Component {
           visible={this.state.visible}
         >
           <View style={styles.loading}>
-            <ActivityIndicator
-              animating
-              size="large"
-            />
+            <ActivityIndicator animating size="large" />
           </View>
         </Modal>
       </View>
-    );
+    )
   }
 }

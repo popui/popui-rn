@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react'
 import {
   StyleSheet,
   View,
@@ -10,10 +10,10 @@ import {
   Linking,
   ActivityIndicator,
   StatusBar,
-} from 'react-native';
-import { List } from "@popui/popui-rn";
+} from 'react-native'
+import { List } from '@popui/popui-rn'
 // import codePush from 'react-native-code-push';
-import AppInfo from './appInfo.js';
+import AppInfo from './appInfo.js'
 
 // const codePushOptions = { checkFrequency: codePush.CheckFrequency.MANUAL };
 
@@ -66,74 +66,78 @@ const styles = StyleSheet.create({
     textAlign: 'center',
     marginRight: 2,
   },
-});
+})
 
 class Home extends React.Component {
   constructor(props) {
-    super(props);
+    super(props)
     this.state = {
       animating: false,
-    };
+    }
   }
 
   componentWillMount() {
-    StatusBar.setBarStyle('light-content');
+    StatusBar.setBarStyle('light-content')
   }
 
   onCheckUpdate = () => {
     this.setState({
       animating: true,
-    });
-    const appVersion = AppInfo.getInfoShortVersion();
-    fetch('https://raw.githubusercontent.com/ant-design/ant-design-mobile/master/rn-kitchen-sink/appInfo.json')
+    })
+    const appVersion = AppInfo.getInfoShortVersion()
+    fetch(
+      'https://raw.githubusercontent.com/ant-design/ant-design-mobile/master/rn-kitchen-sink/appInfo.json'
+    )
       .then(response => response.json())
-      .then((responseJson) => {
-        const os = Platform.OS;
+      .then(responseJson => {
+        const os = Platform.OS
         if (responseJson[os]) {
-          const newestVersion = responseJson[os].appversion;
-          const appUrl = responseJson[os].appurl;
+          const newestVersion = responseJson[os].appversion
+          const appUrl = responseJson[os].appurl
           if (appVersion.localeCompare(newestVersion) < 0) {
             this.setState({
               animating: false,
-            });
-            Alert.alert(
-              '',
-              '检测到 APP 有新版本，是否前往下载',
-              [
-                { text: '取消', style: 'cancel' },
-                { text: '下载', onPress: () => Linking.openURL(appUrl) },
-              ],
-            );
+            })
+            Alert.alert('', '检测到 APP 有新版本，是否前往下载', [
+              { text: '取消', style: 'cancel' },
+              { text: '下载', onPress: () => Linking.openURL(appUrl) },
+            ])
           } else {
-            this.updateDemo();
+            this.updateDemo()
           }
         } else {
-          this.updateDemo();
+          this.updateDemo()
         }
-      }).catch(() => {
-        this.updateDemo();
-      });
+      })
+      .catch(() => {
+        this.updateDemo()
+      })
   }
 
   updateDemo() {
-    const onSyncStatusChange = (syncStatus) => {
+    const onSyncStatusChange = syncStatus => {
       if (syncStatus !== 5) {
         this.setState({
           animating: false,
-        });
+        })
       }
       switch (syncStatus) {
-        case 0: Alert.alert(null, '最新版本'); break;
-        case 3: Alert.alert(null, '发生错误'); break;
-        default: break;
+        case 0:
+          Alert.alert(null, '最新版本')
+          break
+        case 3:
+          Alert.alert(null, '发生错误')
+          break
+        default:
+          break
       }
-    };
-    const onError = function (error) {
+    }
+    const onError = function(error) {
       this.setState({
         animating: false,
-      });
-      Alert.alert(null, `发生错误: ${error}`);
-    };
+      })
+      Alert.alert(null, `发生错误: ${error}`)
+    }
     // codePush.sync({
     //   updateDialog: {
     //     updateTitle: '检测有更新',
@@ -146,11 +150,13 @@ class Home extends React.Component {
   }
 
   render() {
-    const { navigate } = this.props.navigation;
+    const { navigate } = this.props.navigation
     return (
       <View style={styles.container}>
         <Image
-          source={{ uri: 'https://zos.alipayobjects.com/rmsportal/qyucQHYfzZlVaQo.png' }}
+          source={{
+            uri: 'https://zos.alipayobjects.com/rmsportal/qyucQHYfzZlVaQo.png',
+          }}
           style={styles.logo}
         />
         <Text style={styles.logoText}>Ant Design Mobile</Text>
@@ -160,12 +166,16 @@ class Home extends React.Component {
             thumb="https://zos.alipayobjects.com/rmsportal/UIqwcqpVsIjvyYZ.png"
             arrow="horizontal"
             onClick={() => navigate('web')}
-          >H5 组件</List.Item>
+          >
+            H5 组件
+          </List.Item>
           <List.Item
             thumb="https://zos.alipayobjects.com/rmsportal/lSsJiCJnOzSnBJG.png"
             onClick={() => navigate('native')}
             arrow="horizontal"
-          >React Native 组件</List.Item>
+          >
+            React Native 组件
+          </List.Item>
         </List>
         <View style={styles.footer}>
           <Text style={styles.version}>App 版本: 2.0.0 / Demo 版本: 2.0.0</Text>
@@ -177,7 +187,7 @@ class Home extends React.Component {
           </View>
         </View>
       </View>
-    );
+    )
   }
 }
 

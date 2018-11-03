@@ -1,23 +1,23 @@
-import { NativeModules } from 'react-native';
+import { NativeModules } from 'react-native'
 
-const RNAppInfo = NativeModules.RNAppInfo;
+const RNAppInfo = NativeModules.RNAppInfo
 
 const AppInfo = {
   getInfoVersion() {
-    return RNAppInfo.version;
+    return RNAppInfo.version
   },
   getInfoShortVersion() {
-    return RNAppInfo.shortVersion;
+    return RNAppInfo.shortVersion
   },
   getInfoBundleIdentifier() {
-    return RNAppInfo.bundleIdentifier;
+    return RNAppInfo.bundleIdentifier
   },
   getInfoName() {
-    return RNAppInfo.name;
+    return RNAppInfo.name
   },
   getInfoDisplayName() {
-    return RNAppInfo.displayName;
+    return RNAppInfo.displayName
   },
-};
+}
 
-export default AppInfo;
+export default AppInfo
