@@ -114,6 +114,18 @@ module.exports = {
   ],
   UICONTROLS: [
     {
+      title: 'Button',
+      description: '按钮',
+      icon: 'https://os.alipayobjects.com/rmsportal/ZRDUYEzfOzKWdzE.png',
+      module: require('../components/button/demo/basic'),
+    },
+    {
+      title: 'Weui Button',
+      description: '按钮',
+      icon: 'https://os.alipayobjects.com/rmsportal/ZRDUYEzfOzKWdzE.png',
+      module: require('../components/weui-button/demo/basic'),
+    },
+    {
       title: 'ActivityIndicator',
       description: '活动指示器',
       icon: 'https://zos.alipayobjects.com/rmsportal/yVtRfZGoDxXObTK.png',
@@ -130,18 +142,6 @@ module.exports = {
       description: '徽标数',
       icon: 'https://os.alipayobjects.com/rmsportal/UwUpBYPYnlwVicM.png',
       module: require('../components/badge/demo/basic'),
-    },
-    {
-      title: 'Button',
-      description: '按钮',
-      icon: 'https://os.alipayobjects.com/rmsportal/ZRDUYEzfOzKWdzE.png',
-      module: require('../components/button/demo/basic'),
-    },
-    {
-      title: 'Button Weui',
-      description: '按钮',
-      icon: 'https://os.alipayobjects.com/rmsportal/ZRDUYEzfOzKWdzE.png',
-      module: require('../components/weui-button/demo/basic'),
     },
     {
       title: 'Carousel', // 必须
