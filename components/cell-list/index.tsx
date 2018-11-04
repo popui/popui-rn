@@ -19,9 +19,9 @@ export default class CellList extends React.Component<CellsProps, any> {
   }
   renderHeader = () => {
     const { header } = this.props
-    console.log('CellList renderHeader', {
-      header,
-    })
+    // console.log('CellList renderHeader', {
+    //   header,
+    // })
     if (typeof header === 'function') {
       return header()
     }

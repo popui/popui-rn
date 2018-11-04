@@ -45,7 +45,7 @@ export default class SliderAntm extends React.Component<SliderProps, any> {
       textStyle,
       ...others
     } = this.props
-    console.log('SliderAntm render', {})
+    // console.log('SliderAntm render', {})
     return (
       <View style={[SliderStyle.sliderWrapper, style]}>
         <RNSlider
