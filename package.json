@@ -27,8 +27,8 @@
     }
   },
   "license": "MIT",
-  "main": "node_modules/expo/AppEntry.js",
-
+  "main": "lib/index.native.js",
+  "module": "es/index.native.js",
   "dependencies": {
     "@popapps/debug": "^4.1.0",
     "array-tree-filter": "~2.1.0",
@@ -44,10 +44,10 @@
     "rmc-dialog": "^1.0.1",
     "rmc-input-number": "^1.0.0",
     "rmc-picker": "~5.0.0",
-    "rmc-tabs": "~1.2.0"
+    "rmc-tabs": "~1.2.0",
+    "utility-types": "^2.1.0"
   },
   "devDependencies": {
-    "utility-types": "^2.1.0",
     "@types/prop-types": "^15.5.6",
     "@types/react": "~16.4.18",
     "@types/react-i18next": "^7.3.2",
