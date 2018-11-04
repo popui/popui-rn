@@ -1,7 +1,9 @@
 {
-  "presets": ["babel-preset-expo"],
   "env": {
     "development": {
+      "presets": [
+        "react-native"
+      ],
       "plugins": [
         [
           "import",
@@ -13,6 +15,9 @@
       ]
     },
     "production": {
+      "presets": [
+        "react-native"
+      ],
       "plugins": [
         [
           "import",
@@ -24,6 +29,9 @@
       ]
     },
     "test": {
+      "presets": [
+        "react-native"
+      ],
       "plugins": [
         [
           "import",
