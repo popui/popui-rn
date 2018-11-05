@@ -38,6 +38,7 @@ rn-kitchen-sink/app/*.ipa
 rn-kitchen-sink/app/*.apk
 xcuserdata
 components/**/*.jsx
+components/**/*.d.ts
 components/**/*.js
 popui/**/*.jsx
 popui/**/*.js
