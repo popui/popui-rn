@@ -1,12 +1,10 @@
-English | [简体中文](./README.zh-CN.md)
-
 <p align="center">
-  <a href="http://rn.mobile.ant.design">
-    <img width="320" src="https://zos.alipayobjects.com/rmsportal/wIjMDnsrDoPPcIV.png">
+  <a href="#">
+    <img width="80" src="https://en.gravatar.com/userimage/142653667/8ca38e8d70b0e4f61621331a4e750aed.png">
   </a>
 </p>
 
-# Ant Design Mobile RN
+# Popui React Native
 [![](https://img.shields.io/travis/ant-design/ant-design-mobile-rn.svg?style=flat-square)](https://travis-ci.org/ant-design/ant-design-mobile-rn)
 [![Codecov](https://img.shields.io/codecov/c/github/ant-design/ant-design-mobile-rn.svg?style=flat-square)](https://codecov.io/gh/ant-design/ant-design-mobile-rn)
 [![npm package](https://img.shields.io/npm/v/popui-rn.svg?style=flat-square)](https://www.npmjs.org/package/popui-rn)
@@ -15,36 +13,21 @@ English | [简体中文](./README.zh-CN.md)
 [![Percentage of issues still open](http://isitmaintained.com/badge/open/ant-design/ant-design-mobile-rn.svg)](http://isitmaintained.com/project/ant-design/ant-design-mobile-rn "Percentage of issues still open")
 [![Join the chat at https://gitter.im/ant-design/ant-design](https://img.shields.io/gitter/room/ant-design/ant-design.svg?style=flat-square)](https://gitter.im/ant-design/ant-design?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 
-A configurable Mobile UI specification and React-based implementation.
+`popui-rn` 是移动规范的 React Native 实现,融合了 Weui,Ant Design 等其他 UI。
 
-## Announcement
 
-Thank you all for trusting us and using popui-rn. Due to limited application secnarios and development resouces, we regret to annouce popui-rn will not be officially mainained and updated. If anyone in the community is interested to continue to maintain this project, please contact us in private.
+## 特性
 
-## Features
+- 规则化的视觉样式配置，适应各类产品风格。
+- 基于 React Native 的多平台支持。
+- 使用 TypeScript 开发，提供类型定义文件。
 
-- Follow Ant Design Mobile UI specification.
-- Configurable UI style for different products.
-- Support web and native usages based on React Native.
-- Develop in TypeScript.
+## 演示
+[https://expo.io/@popapps/popui](https://expo.io/@popapps/popui)
 
-## Demo
+请先安装 [expo app](https://expo.io/tools), 再扫描上述页面的二维码.
 
-<img width="250" src="https://user-images.githubusercontent.com/1698185/27175806-f0a8a7f0-51f2-11e7-85fb-4b7ea9f89e5b.png" />
+## 安装 & 使用
 
-install expo app: https://expo.io/tools
+[介绍](docs/react/introduce.zh-CN.md#安装)
 
-## Install & Usage
-
-[introduce](docs/react/introduce.en-US.md#安装)
-
-## Links
-
-- [Home Page](http://rn.mobile.ant.design)
-- [Developer Instruction](development.en-US.md)
-- [React components](http://github.com/react-component/)
-- [Demos](https://github.com/ant-design/antd-mobile-samples)
-
-## Contributing
-
-We welcome all contributions, please read our [CONTRIBUTING.md](https://github.com/ant-design/ant-design-mobile-rn/blob/master/.github/CONTRIBUTING.md) first. You can submit any ideas as [pull requests](https://github.com/ant-design/ant-design-mobile-rn/pulls) or as a [GitHub issue](https://github.com/ant-design/ant-design-mobile-rn/issues). If you'd like to improve code, check out the [Development Instruction](https://github.com/ant-design/ant-design-mobile-rn/blob/master/development.en-US.md) and have a good time! :)
