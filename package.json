@@ -1,6 +1,6 @@
 {
   "name": "@popui/popui-rn",
-  "version": "0.0.8",
+  "version": "0.0.9",
   "description": "popui react native",
   "keywords": [
     "ant",
@@ -17,9 +17,11 @@
     "popui"
   ],
   "files": [
+    "components/**/*/*.d.ts",
     "components/**/*/*.js",
+    "components/**/*/*.jsx",
     "components/**/*/*.png",
-    "components/**/*/*.jpg"
+    "components/**/*/*.svg"
   ],
   "husky": {
     "hooks": {
