@@ -108,15 +108,14 @@
   },
   "scripts": {
     "clean":"rm -rf 'components/**/*/*.js' 'components/**/*/*.jsx'",
+    "prebuild":"npm run clean",
+    "build":"npx tsc",
     "lint": "npm run tslint && npm run srclint && npm run applint",
     "srclint": "eslint site scripts --ext '.js,.jsx'",
     "tslint": "antd-tools run ts-lint && npm run compile && rm -rf lib",
     "tslint-fix": "antd-tools run ts-lint-fix && npm run compile && rm -rf lib",
     "applint": "eslint rn-kitchen-sink --ext '.js'",
     "pre-publish1": "npm run test:all",
-    "prepublish1": "antd-tools run guard",
-    "prepare1": "antd-tools run guard",
-    "prepublishOnly1": "antd-tools run guard",
     "test1": "jest --config .jest.js",
     "test:all1": "./scripts/test-all.sh",
     "compile": "cross-env BABEL_ENV=dist antd-tools run compile",
@@ -137,7 +136,7 @@
     "lint-staged:ts": "npm run tsc && node node_modules/tslint/bin/tslint -c node_modules/antd-tools/lib/tslint.json components/**/*.tsx",
     "lint-staged:es": "eslint ./.eslintrc.js",
     "tsc": "antd-tools run tsc",
-    "prettier": "npx prettier --config .prettierrc --write \"components/**/*/*.ts\" \"components/**/*/*.tsx\" \"rn-kitchen-sink/**/*/*.js\" \"rn-kitchen-sink/**/*/*.jsx\""
+    "prettier": "npx prettier --config .prettierrc --write \"components/**/*.ts\" \"components/**/*.tsx\"  \"components/**/*/*.ts\" \"components/**/*/*.tsx\" \"rn-kitchen-sink/**/*/*.js\" \"rn-kitchen-sink/**/*/*.jsx\""
   },
   "lint-staged": {
     "components/**/*.tsx": [

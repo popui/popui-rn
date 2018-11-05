@@ -1,9 +1,9 @@
 // import { StackNavigator } from 'react-navigation';
-import {
-  createStackNavigator,
-  createAppContainer
-} from 'react-navigation';
-
+// import {
+//   createStackNavigator,
+//   createAppContainer
+// } from 'react-navigation';
+import { createStackNavigator } from 'react-navigation'
 
 // import Home from './components/Home';
 import RnIndex from './components/RnIndex';
@@ -46,8 +46,8 @@ const scenes = {
   };
 });
 
-const MainNavigator = createStackNavigator(scenes);
-const App = createAppContainer(MainNavigator);
-// const App = StackNavigator(scenes);
+// const MainNavigator = createStackNavigator(scenes);
+// const App = createAppContainer(MainNavigator);
+const App = createStackNavigator(scenes);
 
 export default App;

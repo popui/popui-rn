@@ -2,17 +2,13 @@ import React from 'react'
 import { Image, Text, View } from 'react-native'
 import {
   SearchBar,
-  Media as MediaComps,
-  Panel as PanelComps,
-} from '@popui/popui-rn'
-const {
   Media,
   MediaBody,
   MediaDescription,
   MediaHeader,
   MediaTitle,
-} = MediaComps
-const { Panel, PanelBody, PanelFooter, PanelHeader } = PanelComps
+  Panel, PanelBody, PanelFooter, PanelHeader
+} from '@popui/popui-rn'
 
 import SampleData from './nameDB'
 
