@@ -3,7 +3,6 @@
   "env": {
     "development": {
       "plugins": [
-        "transform-react-jsx-source",
         [
           "import",
           {

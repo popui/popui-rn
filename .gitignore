@@ -39,6 +39,7 @@ rn-kitchen-sink/app/*.apk
 xcuserdata
 components/**/*.jsx
 components/**/*.js
+components/**/*.d.ts
 popui/**/*.jsx
 popui/**/*.js
 expo/**/*.jsx
