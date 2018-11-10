@@ -33,6 +33,8 @@
     "@popapps/debug": "^4.1.0",
     "array-tree-filter": "~2.1.0",
     "babel-runtime": "6.x",
+    "expo": "31.0.4",
+    "husky": "^1.1.2",
     "normalize-css-color": "^1.0.2",
     "rc-swipeout": "~2.0.0",
     "react-native-collapsible": "^0.9.0",
@@ -104,6 +106,7 @@
     "react-native-mocker": "^0.0.12",
     "react-native-stylekit": "^1.0.0",
     "react-test-renderer": "^16.4.0",
+    "schedule": "^0.4.0",
     "typescript": "^3.1.3"
   },
   "scripts": {

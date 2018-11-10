@@ -40,6 +40,7 @@ xcuserdata
 components/**/*.jsx
 components/**/*.d.ts
 components/**/*.js
+components/**/*.d.ts
 popui/**/*.jsx
 popui/**/*.js
 expo/**/*.jsx
