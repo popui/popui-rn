@@ -1,6 +1,6 @@
 {
   "name": "@popui/popui-rn",
-  "version": "0.0.10",
+  "version": "0.0.11",
   "description": "popui react native",
   "keywords": [
     "ant",
@@ -30,7 +30,6 @@
   },
   "license": "MIT",
   "dependencies": {
-    "@popapps/debug": "^4.1.0",
     "array-tree-filter": "~2.1.0",
     "normalize-css-color": "^1.0.2",
     "rc-swipeout": "~2.0.0",
