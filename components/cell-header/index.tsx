@@ -1,7 +1,7 @@
 // import PropTypes from 'prop-types'
 import React from 'react'
 import { StyleSheet, View } from 'react-native'
-import themeVars from '../style/themes/default'
+import theme from '../style/themes/default'
 
 const styles = StyleSheet.create({
   cellHeader: {
@@ -12,7 +12,7 @@ const styles = StyleSheet.create({
     height: 24,
   },
   error: {
-    color: themeVars.ColorWarn,
+    color: theme.ColorWarn,
   },
 })
 

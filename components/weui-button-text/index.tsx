@@ -1,61 +1,61 @@
 // import PropTypes from 'prop-types'
 import React from 'react'
 import { StyleSheet, Text } from 'react-native'
-import themeVars from '../style/themes/default'
+import theme from '../style/themes/default'
 import { WeuiButtonTextPropsType } from './PropsType'
 
 const styles = StyleSheet.create({
   text: {
-    fontSize: themeVars.BtnFontSize,
+    fontSize: theme.BtnFontSize,
     textAlign: 'center',
-    marginTop: (themeVars.BtnHeight - themeVars.BtnFontSize) / 2,
-    marginBottom: (themeVars.BtnHeight - themeVars.BtnFontSize) / 2,
+    marginTop: (theme.BtnHeight - theme.BtnFontSize) / 2,
+    marginBottom: (theme.BtnHeight - theme.BtnFontSize) / 2,
   },
 
   miniText: {
-    fontSize: themeVars.BtnMiniFontSize,
+    fontSize: theme.BtnMiniFontSize,
     marginTop:
-      (themeVars.BtnMiniHeight * themeVars.BtnMiniFontSize -
-        themeVars.BtnMiniFontSize) /
+      (theme.BtnMiniHeight * theme.BtnMiniFontSize -
+        theme.BtnMiniFontSize) /
       2,
     marginBottom:
-      (themeVars.BtnMiniHeight * themeVars.BtnMiniFontSize -
-        themeVars.BtnMiniFontSize) /
+      (theme.BtnMiniHeight * theme.BtnMiniFontSize -
+        theme.BtnMiniFontSize) /
       2,
   },
 
   // primary
   primaryText: {
-    color: themeVars.BtnFontColor,
+    color: theme.BtnFontColor,
   },
 
   // warn
   warnText: {
-    color: themeVars.BtnFontColor,
+    color: theme.BtnFontColor,
   },
 
   // default
   defaultText: {
-    color: themeVars.BtnDefaultFontColor,
+    color: theme.BtnDefaultFontColor,
   },
 
   // primaryPlain
   primaryPlainText: {
-    color: themeVars.BtnPlainPrimaryColor,
+    color: theme.BtnPlainPrimaryColor,
   },
 
   // defaultPlain
   defaultPlainText: {
-    color: themeVars.BtnPlainDefaultColor,
+    color: theme.BtnPlainDefaultColor,
   },
 
   // disabled
   disabledText: {
-    color: themeVars.BtnDisabledFontColor,
+    color: theme.BtnDisabledFontColor,
   },
 
   defaultDisabledText: {
-    color: themeVars.BtnDefaultDisabledFontColor,
+    color: theme.BtnDefaultDisabledFontColor,
   },
 
   plainDisabledText: {

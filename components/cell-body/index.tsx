@@ -1,7 +1,7 @@
 import React from 'react'
 import { StyleSheet, View, ViewStyle } from 'react-native'
 import WeuiIcon from '../weui-icon'
-import themeVars from '../style/themes/default'
+import theme from '../style/themes/default'
 import CellText from '../cell-text'
 
 const styles = StyleSheet.create({
@@ -13,7 +13,7 @@ const styles = StyleSheet.create({
   },
   error: {
     flex: 1,
-    color: themeVars.ColorWarn,
+    color: theme.ColorWarn,
   },
   errorIcon: {
     marginLeft: 5,

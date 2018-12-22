@@ -8,9 +8,7 @@ exports[`renders ./components/picker/demo/basic.tsx correctly 1`] = `
     }
   }
 >
-  <View
-    style={undefined}
-  >
+  <View>
     <View
       style={
         Object {
@@ -20,38 +18,19 @@ exports[`renders ./components/picker/demo/basic.tsx correctly 1`] = `
         }
       }
     >
-      <View
-        style={undefined}
-      >
+      <View>
         <View
-          accessibilityComponentType={undefined}
-          accessibilityLabel={undefined}
-          accessibilityTraits={undefined}
           accessible={true}
-          hasTVPreferredFocus={undefined}
-          hitSlop={undefined}
           isTVSelectable={true}
-          nativeID={undefined}
-          onLayout={undefined}
           onResponderGrant={[Function]}
           onResponderMove={[Function]}
           onResponderRelease={[Function]}
           onResponderTerminate={[Function]}
           onResponderTerminationRequest={[Function]}
           onStartShouldSetResponder={[Function]}
-          style={
-            Array [
-              Object {
-                "backgroundColor": "transparent",
-              },
-              undefined,
-            ]
-          }
-          testID={undefined}
-          tvParallaxProperties={undefined}
+          style={null}
         >
           <View
-            last={true}
             style={
               Array [
                 Object {
@@ -94,10 +73,124 @@ exports[`renders ./components/picker/demo/basic.tsx correctly 1`] = `
                 }
               >
                 <Text
-                  accessible={true}
-                  allowFontScaling={true}
-                  disabled={false}
-                  ellipsizeMode="tail"
+                  numberOfLines={1}
+                  style={
+                    Array [
+                      Object {
+                        "color": "#000000",
+                        "fontSize": 17,
+                        "textAlignVertical": "center",
+                      },
+                    ]
+                  }
+                >
+                  省市选择
+                </Text>
+              </View>
+              <View
+                style={
+                  Array [
+                    Object {
+                      "flex": 1,
+                      "flexDirection": "column",
+                    },
+                  ]
+                }
+              >
+                <Text
+                  numberOfLines={1}
+                  style={
+                    Array [
+                      Object {
+                        "color": "#888888",
+                        "fontSize": 17,
+                        "textAlign": "right",
+                        "textAlignVertical": "center",
+                      },
+                    ]
+                  }
+                >
+                  请选择
+                </Text>
+              </View>
+              <Text
+                style={
+                  Array [
+                    Object {
+                      "color": "#cccccc",
+                      "fontFamily": "antoutline",
+                      "fontSize": 22,
+                      "fontStyle": "normal",
+                      "fontWeight": "normal",
+                    },
+                    Object {
+                      "marginLeft": 8,
+                      "marginTop": 3,
+                    },
+                  ]
+                }
+              >
+                
+              </Text>
+            </View>
+          </View>
+        </View>
+      </View>
+      <View>
+        <View
+          accessible={true}
+          isTVSelectable={true}
+          onResponderGrant={[Function]}
+          onResponderMove={[Function]}
+          onResponderRelease={[Function]}
+          onResponderTerminate={[Function]}
+          onResponderTerminationRequest={[Function]}
+          onStartShouldSetResponder={[Function]}
+          style={null}
+        >
+          <View
+            style={
+              Array [
+                Object {
+                  "alignItems": "center",
+                  "backgroundColor": "#ffffff",
+                  "flexDirection": "row",
+                  "flexGrow": 1,
+                  "paddingLeft": 15,
+                },
+                undefined,
+              ]
+            }
+          >
+            <View
+              style={
+                Array [
+                  Object {
+                    "alignItems": "center",
+                    "borderBottomColor": "#dddddd",
+                    "borderBottomWidth": 0.5,
+                    "flex": 1,
+                    "flexDirection": "row",
+                    "minHeight": 44,
+                    "paddingRight": 15,
+                    "paddingVertical": 6,
+                  },
+                  false,
+                  false,
+                ]
+              }
+            >
+              <View
+                style={
+                  Array [
+                    Object {
+                      "flex": 1,
+                      "flexDirection": "column",
+                    },
+                  ]
+                }
+              >
+                <Text
                   numberOfLines={1}
                   style={
                     Array [
@@ -123,10 +216,6 @@ exports[`renders ./components/picker/demo/basic.tsx correctly 1`] = `
                 }
               >
                 <Text
-                  accessible={true}
-                  allowFontScaling={true}
-                  disabled={false}
-                  ellipsizeMode="tail"
                   numberOfLines={1}
                   style={
                     Array [
@@ -142,34 +231,33 @@ exports[`renders ./components/picker/demo/basic.tsx correctly 1`] = `
                   请选择
                 </Text>
               </View>
-              <Image
-                source={1}
+              <Text
                 style={
-                  Object {
-                    "height": 13,
-                    "marginLeft": 8,
-                    "marginTop": 3,
-                    "width": 8,
-                  }
+                  Array [
+                    Object {
+                      "color": "#cccccc",
+                      "fontFamily": "antoutline",
+                      "fontSize": 22,
+                      "fontStyle": "normal",
+                      "fontWeight": "normal",
+                    },
+                    Object {
+                      "marginLeft": 8,
+                      "marginTop": 3,
+                    },
+                  ]
                 }
-              />
+              >
+                
+              </Text>
             </View>
           </View>
         </View>
       </View>
-      <View
-        style={undefined}
-      >
+      <View>
         <View
-          accessibilityComponentType={undefined}
-          accessibilityLabel={undefined}
-          accessibilityTraits={undefined}
           accessible={true}
-          collapsable={undefined}
-          hitSlop={undefined}
           isTVSelectable={true}
-          nativeID={undefined}
-          onLayout={undefined}
           onResponderGrant={[Function]}
           onResponderMove={[Function]}
           onResponderRelease={[Function]}
@@ -181,8 +269,6 @@ exports[`renders ./components/picker/demo/basic.tsx correctly 1`] = `
               "opacity": 1,
             }
           }
-          testID={undefined}
-          tvParallaxProperties={undefined}
         >
           <View
             style={
@@ -195,10 +281,6 @@ exports[`renders ./components/picker/demo/basic.tsx correctly 1`] = `
             }
           >
             <Text
-              accessible={true}
-              allowFontScaling={true}
-              disabled={false}
-              ellipsizeMode="tail"
               style={
                 Object {
                   "flex": 1,
@@ -208,10 +290,6 @@ exports[`renders ./components/picker/demo/basic.tsx correctly 1`] = `
               Customized children
             </Text>
             <Text
-              accessible={true}
-              allowFontScaling={true}
-              disabled={false}
-              ellipsizeMode="tail"
               style={
                 Object {
                   "color": "#888",

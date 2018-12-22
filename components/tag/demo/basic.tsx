@@ -1,9 +1,9 @@
-// tslint:disable:jsx-no-multiline-js
-/* tslint:disable:no-console */
-import React from 'react'
 
-import { View } from 'react-native'
-import { Tag, GapH } from '@popui/popui-rn'
+/* tslint:disable:no-console */
+import { GapH, Tag } from '@popui/popui-rn';
+import React from 'react';
+import { View } from 'react-native';
+
 
 function onChange(selected: any) {
   console.log(`tag selected: ${selected}`)

@@ -1,6 +1,5 @@
-import React from 'react'
-
-import { Pagination, GapH, GapV } from '@popui/popui-rn'
+import { GapH, GapV, Pagination } from '@popui/popui-rn';
+import React from 'react';
 
 const locale = {
   prevText: '上一步',

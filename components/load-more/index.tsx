@@ -7,7 +7,7 @@ import {
   View,
 } from 'react-native'
 import { create } from '../style/utils/StyleSheet'
-import themeVars from '../style/themes/default'
+import theme from '../style/themes/default'
 
 const { width } = Dimensions.get('window')
 const styles = create({
@@ -23,7 +23,7 @@ const styles = create({
   },
   loadMoreLine: {
     borderTopWidth: StyleSheet.hairlineWidth,
-    borderColor: themeVars.LineColorLight,
+    borderColor: theme.LineColorLight,
     marginTop: 14 * 2.4,
   },
   loadMoreTips: {
@@ -39,7 +39,7 @@ const styles = create({
     top: 0 - 14 * 0.9,
     paddingLeft: 14 * 0.55,
     paddingRight: 14 * 0.55,
-    color: themeVars.TextColorGray,
+    color: theme.TextColorGray,
   },
   loadMoreDotTips: {
     paddingLeft: 14 * 0.16,
@@ -49,7 +49,7 @@ const styles = create({
   dot: {
     width: 4,
     height: 4,
-    backgroundColor: themeVars.LineColorLight,
+    backgroundColor: theme.LineColorLight,
     borderRadius: 12,
   },
 })

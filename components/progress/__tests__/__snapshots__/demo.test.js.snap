@@ -14,7 +14,7 @@ exports[`renders ./components/progress/demo/basic.tsx correctly 1`] = `
           "position": "absolute",
           "top": 0,
         },
-        null,
+        Object {},
         undefined,
       ]
     }
@@ -65,8 +65,8 @@ exports[`renders ./components/progress/demo/basic.tsx correctly 1`] = `
               "backgroundColor": "#dddddd",
               "flex": 1,
             },
-            null,
-            null,
+            Object {},
+            Object {},
             undefined,
           ]
         }
@@ -89,26 +89,14 @@ exports[`renders ./components/progress/demo/basic.tsx correctly 1`] = `
         />
       </View>
     </View>
-    <Text
-      accessible={true}
-      allowFontScaling={true}
-      disabled={false}
-      ellipsizeMode="tail"
-    >
+    <Text>
       40
       %
     </Text>
   </View>
   <View
-    accessibilityComponentType={undefined}
-    accessibilityLabel={undefined}
-    accessibilityTraits={undefined}
     accessible={true}
-    hasTVPreferredFocus={undefined}
-    hitSlop={undefined}
     isTVSelectable={true}
-    nativeID={undefined}
-    onLayout={undefined}
     onResponderGrant={[Function]}
     onResponderMove={[Function]}
     onResponderRelease={[Function]}
@@ -118,36 +106,29 @@ exports[`renders ./components/progress/demo/basic.tsx correctly 1`] = `
     style={
       Array [
         Object {
-          "backgroundColor": "transparent",
+          "alignItems": "center",
+          "borderRadius": 5,
+          "borderWidth": 1,
+          "justifyContent": "center",
         },
-        Array [
-          Object {
-            "alignItems": "center",
-            "borderRadius": 5,
-            "borderWidth": 1,
-            "justifyContent": "center",
-          },
-          Object {
-            "height": 23,
-            "paddingLeft": 5,
-            "paddingRight": 5,
-          },
-          Object {
-            "backgroundColor": "transparent",
-            "borderColor": "#108ee9",
-          },
-          false,
-          false,
-          false,
-          Object {
-            "marginLeft": 10,
-            "width": 50,
-          },
-        ],
+        Object {
+          "height": 23,
+          "paddingLeft": 5,
+          "paddingRight": 5,
+        },
+        Object {
+          "backgroundColor": "transparent",
+          "borderColor": "#108ee9",
+        },
+        false,
+        false,
+        undefined,
+        Object {
+          "marginLeft": 10,
+          "width": 50,
+        },
       ]
     }
-    testID={undefined}
-    tvParallaxProperties={undefined}
   >
     <View
       style={
@@ -157,10 +138,6 @@ exports[`renders ./components/progress/demo/basic.tsx correctly 1`] = `
       }
     >
       <Text
-        accessible={true}
-        allowFontScaling={true}
-        disabled={false}
-        ellipsizeMode="tail"
         style={
           Array [
             Object {
@@ -196,8 +173,8 @@ exports[`renders ./components/progress/demo/basic.tsx correctly 1`] = `
           "backgroundColor": "#dddddd",
           "flex": 1,
         },
-        null,
-        null,
+        Object {},
+        Object {},
         undefined,
       ]
     }

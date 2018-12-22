@@ -1,29 +1,25 @@
-import React from 'react'
-
-import topView from 'rn-topview'
-import ToastContainer from './ToastContainer'
+import React from 'react';
+import Portal from '../portal';
+import ToastContainer from './ToastContainer';
 
 function notice(
   content: string,
   type: string,
-  duration = 3,
+  duration = 2,
   onClose: (() => void) | undefined,
   mask = true
 ) {
-  topView.remove()
-  function animationEnd() {
-    topView.remove()
-  }
-  topView.set(
+  const key = Portal.add(
     <ToastContainer
       content={content}
       duration={duration}
       onClose={onClose}
       type={type}
       mask={mask}
-      onAnimationEnd={animationEnd}
-    />
-  )
+      onAnimationEnd={() => Portal.remove(key)}
+    />,
+  );
+  return key;
 }
 
 export default {
@@ -72,7 +68,4 @@ export default {
   ) {
     return notice(content, 'loading', duration, onClose, mask)
   },
-  hide() {
-    topView.remove()
-  },
-}
+};

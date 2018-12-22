@@ -1,19 +1,19 @@
 // import PropTypes from 'prop-types'
 import React from 'react'
 import { StyleSheet, Text, TextStyle } from 'react-native'
-import themeVars from '../style/themes/default'
+import theme from '../style/themes/default'
 
 const defaultStyles = StyleSheet.create({
   cellsTitle: {
     marginTop:
-      themeVars.CellTipsFontSize * 0.77 +
-      (14 * themeVars.baseLineHeight - 14) * 0.5,
+      theme.CellTipsFontSize * 0.77 +
+      (14 * theme.baseLineHeight - 14) * 0.5,
     marginBottom:
-      themeVars.CellTipsFontSize * 0.3 +
-      (14 * themeVars.baseLineHeight - 14) * 0.5,
-    paddingHorizontal: themeVars.CellGapH,
-    fontSize: themeVars.CellTipsFontSize,
-    color: themeVars.TextColorGray,
+      theme.CellTipsFontSize * 0.3 +
+      (14 * theme.baseLineHeight - 14) * 0.5,
+    paddingHorizontal: theme.CellGapH,
+    fontSize: theme.CellTipsFontSize,
+    color: theme.TextColorGray,
   } as TextStyle,
 })
 

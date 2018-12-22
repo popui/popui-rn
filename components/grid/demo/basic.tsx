@@ -1,44 +1,41 @@
-import React from 'react'
-import { ScrollView, Text, View } from 'react-native'
-import { Grid, GapH } from '@popui/popui-rn'
+import React from 'react';
+import { ScrollView, Text, View } from 'react-native';
+import { Grid } from '../../';
 
 const data = Array.from(new Array(9)).map((_val, i) => ({
-  icon: 'https://weui.io/images/icon_tabbar.png',
-  text: `Item ${i}`,
-}))
+  icon: 'https://os.alipayobjects.com/rmsportal/IptWdCkrtkAUfjE.png',
+  text: `Name${i}`,
+}));
 
 export default class BasicGridExample extends React.Component<any, any> {
   render() {
     return (
       <ScrollView>
-        <View style={[{ padding: 10, backgroundColor: '#eee' }]}>
+        <View style={[{ margin: 10 }]}>
           <Text>Simple</Text>
         </View>
-        <Grid data={data} hasLine={false} />
-        <GapH size="xl" />
-
-        <View style={[{ padding: 10, backgroundColor: '#eee' }]}>
-          <Text>Custom GridCell Style</Text>
+        <View style={[{ padding: 10 }]}>
+          <Grid data={data} hasLine={false} />
         </View>
-        <Grid
-          data={data}
-          columnNum={3}
-          containerStyle={{ backgroundColor: '#fbf9fe' }}
-          itemStyle={{ height: 150 }}
-        />
-        <GapH size="xl" />
 
-        <View style={[{ padding: 10, backgroundColor: '#eee' }]}>
+        <View style={[{ margin: 10 }]}>
           <Text>Carousel</Text>
         </View>
         <Grid
           data={data}
           columnNum={3}
           isCarousel
-          onClick={(_el: any, index: any) => alert(index)}
+          onPress={(_el: any, index: any) => alert(index)}
         />
-        <GapH size="xl" />
+        <View style={[{ margin: 10 }]}>
+          <Text>Custom GridCell Style</Text>
+        </View>
+        <Grid
+          data={data}
+          columnNum={3}
+          itemStyle={{ height: 150, backgroundColor: '#ffff00' }}
+        />
       </ScrollView>
-    )
+    );
   }
 }

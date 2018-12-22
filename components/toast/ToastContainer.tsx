@@ -1,17 +1,10 @@
-// tslint:disable:jsx-no-multiline-js
+import React from 'react';
+import { ActivityIndicator, Animated, Text, View } from 'react-native';
+import Icon, { IconNames } from '../icon';
+import { WithTheme, WithThemeStyles } from '../style';
+import ToastStyles, { ToastStyle } from './style/index';
 
-import React from 'react'
-import {
-  ActivityIndicator,
-  Animated,
-  // Image,
-  StyleSheet,
-  Text,
-  View,
-} from 'react-native'
-import ToastContainerStyle, { IToastStyle } from './style/index'
-import PureWeuiIcon from '../weui-icon/PureWeuiIcon'
-export interface ToastProps {
+export interface ToastProps extends WithThemeStyles<ToastStyle> {
   content: string
   textStyle?: any
   duration?: number
@@ -22,131 +15,125 @@ export interface ToastProps {
   styles?: IToastStyle
 }
 
-const ToastContainerStyles = StyleSheet.create<any>(ToastContainerStyle)
-
 export default class ToastContainer extends React.Component<ToastProps, any> {
   static defaultProps = {
     duration: 3,
     mask: true,
     onClose() {},
-    styles: ToastContainerStyles,
-  }
+  };
 
-  anim: Animated.CompositeAnimation | null
+  anim: Animated.CompositeAnimation | null;
 
   constructor(props: ToastProps) {
-    super(props)
+    super(props);
     this.state = {
       fadeAnim: new Animated.Value(0),
-    }
+    };
   }
 
   componentDidMount() {
-    const { onClose, onAnimationEnd } = this.props
-    const duration = this.props.duration as number
-    const timing = Animated.timing
+    const { onClose, onAnimationEnd } = this.props;
+    const duration = this.props.duration as number;
+    const timing = Animated.timing;
     if (this.anim) {
-      this.anim = null
+      this.anim = null;
     }
     const animArr = [
-      timing(this.state.fadeAnim, { toValue: 1, duration: 200 }),
+      timing(this.state.fadeAnim, {
+        toValue: 1,
+        duration: 200,
+        useNativeDriver: true,
+      }),
       Animated.delay(duration * 1000),
-    ]
+    ];
     if (duration > 0) {
-      animArr.push(timing(this.state.fadeAnim, { toValue: 0, duration: 200 }))
+      animArr.push(
+        timing(this.state.fadeAnim, {
+          toValue: 0,
+          duration: 200,
+          useNativeDriver: true,
+        }),
+      );
     }
-    this.anim = Animated.sequence(animArr)
+    this.anim = Animated.sequence(animArr);
     this.anim.start(() => {
       if (duration > 0) {
-        this.anim = null
+        this.anim = null;
         if (onClose) {
-          onClose()
+          onClose();
         }
         if (onAnimationEnd) {
-          onAnimationEnd()
+          onAnimationEnd();
         }
       }
-    })
+    });
   }
 
   componentWillUnmount() {
     if (this.anim) {
-      this.anim.stop()
-      this.anim = null
+      this.anim.stop();
+      this.anim = null;
     }
   }
-  renderContent = () => {
-    const { content, textStyle } = this.props
-    const styles = this.props.styles!
-    // content
-    const textViewStyle = textStyle
-      ? [styles.toastContent, textStyle]
-      : styles.toastContent
-    if (content) {
-      return <Text style={textViewStyle}>{content}</Text>
-    }
-    return null
-  }
-  renderIcon = () => {
-    const { type = '' } = this.props
-    const styles = this.props.styles!
-    let iconDom: React.ReactElement<any> | null = null
-    switch (type) {
-      case 'loading':
-        iconDom = (
-          <ActivityIndicator
-            animating
-            style={styles.toastLoading}
-            color="#fff"
-            size="large"
-          />
-        )
-        break
-      case 'success':
-        iconDom = (
-          <PureWeuiIcon name={'success_no_circle'} style={[styles.toastIcon]} />
-        )
-        break
-      case 'fail':
-        iconDom = <PureWeuiIcon name={'cancel'} style={[styles.toastIcon]} />
-        break
-      case 'offline':
-        iconDom = <PureWeuiIcon name={'warn'} style={[styles.toastIcon]} />
-        break
-      case 'info':
-        iconDom = null
-        break
-      default:
-        iconDom = <PureWeuiIcon name={type} style={[styles.toastIcon]} />
-        // iconDom = <Image source={iconType[type]} style={styles.toastImage} />;
-        break
-    }
-    return iconDom
-  }
+
   render() {
-    const { type = '', mask, children } = this.props
-    const styles = this.props.styles!
-    const hasIcon = type !== 'info'
+    const { type = '', content, mask } = this.props;
     return (
-      <View
-        style={[styles.container]}
-        pointerEvents={mask ? undefined : 'box-none'}
-      >
-        <View style={[styles.innerContainer]}>
-          <Animated.View style={{ opacity: this.state.fadeAnim }}>
+      <WithTheme styles={this.props.styles} themeStyles={ToastStyles}>
+        {styles => {
+          const iconType: {
+            [key: string]: IconNames;
+          } = {
+            success: 'check-circle',
+            fail: 'close-circle',
+            offline: 'frown',
+          };
+
+          let iconDom: React.ReactElement<any> | null = null;
+          if (type === 'loading') {
+            iconDom = (
+              <ActivityIndicator
+                animating
+                style={[styles.centering]}
+                color="white"
+                size="large"
+              />
+            );
+          } else if (type === 'info') {
+            iconDom = null;
+          } else {
+            iconDom = (
+              <Icon
+                name={iconType[type]}
+                style={styles.image}
+                color="white"
+                size={36}
+              />
+            );
+          }
+
+          return (
             <View
-              style={[
-                styles.innerWrap,
-                hasIcon ? styles.iconToast : styles.textToast,
-              ]}
+              style={[styles.container]}
+              pointerEvents={mask ? undefined : 'box-none'}
             >
-              {this.renderIcon()}
-              {this.renderContent()}
-              {children}
+              <View style={[styles.innerContainer]}>
+                <Animated.View style={{ opacity: this.state.fadeAnim }}>
+                  <View
+                    style={[
+                      styles.innerWrap,
+                      iconDom ? styles.iconToast : styles.textToast,
+                    ]}
+                  >
+                    {iconDom}
+                    <Text style={styles.content}>{content}</Text>
+                  </View>
+                </Animated.View>
+              </View>
             </View>
-          </Animated.View>
-        </View>
-      </View>
-    )
+          );
+        }}
+      </WithTheme>
+    );
   }
 }

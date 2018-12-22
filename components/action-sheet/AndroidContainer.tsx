@@ -9,7 +9,7 @@ import {
 } from 'react-native'
 import Modal from 'rmc-dialog/lib/Modal'
 import styles, { ActionSheetStyle } from './style/index'
-import themeVars from '../style/themes/default'
+import theme from '../style/themes/default'
 
 export interface ActionSheetNativeProps {
   onAnimationEnd?: (visible: boolean) => void
@@ -64,7 +64,7 @@ class ActionSheetAndroid extends React.Component<ActionSheetNativeProps, any> {
       >
         <TouchableHighlight
           style={[styles.btn]}
-          underlayColor={themeVars.fill_tap}
+          underlayColor={theme.fill_tap}
           onPress={() => this.confirm(index)}
         >
           <Text

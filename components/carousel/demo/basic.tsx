@@ -1,7 +1,6 @@
-import React from 'react'
-
-import { StyleSheet, Text, TextStyle, View, ViewStyle } from 'react-native'
-import { Carousel } from '@popui/popui-rn'
+import { Carousel } from '@popui/popui-rn';
+import React from 'react';
+import { StyleSheet, Text, TextStyle, View, ViewStyle } from 'react-native';
 
 export default class BasicCarouselExample extends React.Component<any, any> {
   onHorizontalSelectedIndexChange(index: number) {
@@ -109,7 +108,7 @@ const styles = StyleSheet.create<{
   wrapper: ViewStyle
   containerHorizontal: ViewStyle
   containerVertical: ViewStyle
-  text: TextStyle
+  text: TextStyle,
 }>({
   wrapper: {
     backgroundColor: '#fff',

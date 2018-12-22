@@ -1,4 +1,4 @@
-import themeVars from '../../style/themes/default'
+import theme from '../../style/themes/default'
 
 export default {
   pagination: {
@@ -19,13 +19,13 @@ export default {
     width: 8,
     height: 8,
     borderRadius: 8,
-    backgroundColor: themeVars.color_icon_base,
+    backgroundColor: theme.color_icon_base,
   },
   pointActiveStyle: {
     backgroundColor: '#888',
   },
   spaceStyle: {
-    marginHorizontal: themeVars.h_spacing_sm / 2,
-    marginVertical: themeVars.v_spacing_sm / 2,
+    marginHorizontal: theme.h_spacing_sm / 2,
+    marginVertical: theme.v_spacing_sm / 2,
   },
 }

@@ -1,7 +1,8 @@
-import React from 'react'
+import React from 'react';
+import { ImagePropertiesSourceOptions } from 'react-native';
 
 export interface ResultPropsType {
-  imgUrl?: string
+  imgUrl?: ImagePropertiesSourceOptions;
   iconName?: string
   icon?: React.ReactNode
   title?: React.ReactNode

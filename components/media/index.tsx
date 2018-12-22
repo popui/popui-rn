@@ -1,7 +1,7 @@
 // import PropTypes from 'prop-types'
 import React from 'react'
 import { StyleSheet, View, ViewPropTypes } from 'react-native'
-import themeVars from '../style/themes/default'
+import theme from '../style/themes/default'
 import TouchableWithFallback from '../touchable-with-fallback'
 import { MediaPropsType } from './PropsType'
 
@@ -18,7 +18,7 @@ const styles = StyleSheet.create({
     // marginLeft: 15,
     borderTopWidth: StyleSheet.hairlineWidth,
     borderStyle: 'solid',
-    borderColor: themeVars.LineColorLight,
+    borderColor: theme.LineColorLight,
   },
 
   // appmsg

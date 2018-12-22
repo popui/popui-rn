@@ -1,24 +1,24 @@
 import React from 'react'
 import { StyleSheet, View, ViewStyle } from 'react-native'
-import themeVars from '../style/themes/default'
+import theme from '../style/themes/default'
 import TouchableWithFallback from '../touchable-with-fallback'
 import { CellProps, CellContentProps } from './PropsType'
 import renderElement from '../_util/slot'
 
 const styles = StyleSheet.create({
   container: {
-    paddingLeft: themeVars.CellGapH,
+    paddingLeft: theme.CellGapH,
   },
   cell: {
     flexGrow: 1,
     flexDirection: 'row',
     alignItems: 'center',
-    // paddingLeft: themeVars.CellGapH,
-    paddingTop: themeVars.CellGapV,
-    paddingBottom: themeVars.CellGapV,
-    paddingRight: themeVars.CellGapH,
+    // paddingLeft: theme.CellGapH,
+    paddingTop: theme.CellGapV,
+    paddingBottom: theme.CellGapV,
+    paddingRight: theme.CellGapH,
     borderTopWidth: StyleSheet.hairlineWidth, // 每个 Cell 都有 borderTop
-    borderColor: themeVars.CellBorderColor,
+    borderColor: theme.CellBorderColor,
   },
   isFirstCell: {
     borderTopWidth: 0,
@@ -79,7 +79,7 @@ function Cell(props: CellProps) {
   return (
     <TouchableWithFallback
       disabled={disabled}
-      underlayColor={themeVars.BgColorActive}
+      underlayColor={theme.BgColorActive}
       {...others}
     >
       <View style={[styles.container, style]}>

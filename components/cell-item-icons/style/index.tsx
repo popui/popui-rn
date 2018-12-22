@@ -1,5 +1,5 @@
 import { StyleSheet, View } from 'react-native'
-import themeVars from '../../style/themes/default'
+import theme from '../../style/themes/default'
 
 const defautlStyles = StyleSheet.create({
   iconsContainer: {
@@ -13,13 +13,13 @@ const defautlStyles = StyleSheet.create({
   arrow: {
     width: 8,
     height: 13,
-    marginLeft: themeVars.h_spacing_md,
-    // marginTop: themeVars.v_spacing_xs,
+    marginLeft: theme.h_spacing_md,
+    // marginTop: theme.v_spacing_xs,
   },
   arrowV: {
     width: 13,
     height: 8,
-    marginLeft: themeVars.h_spacing_md,
+    marginLeft: theme.h_spacing_md,
   },
 })
 

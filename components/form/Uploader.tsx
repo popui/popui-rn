@@ -3,7 +3,7 @@ import { View, Text, Image, TouchableOpacity, StyleSheet } from 'react-native'
 // import ImagePicker from 'react-native-image-picker'
 // import concat from 'lodash/concat'
 import WeuiIcon from '../weui-icon'
-import themeVars from '../style/themes/default'
+import theme from '../style/themes/default'
 
 const styles = StyleSheet.create({
   uploader: {},
@@ -15,7 +15,7 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     alignItems: 'center',
     justifyContent: 'space-between',
-    height: 17 * themeVars.baseLineHeight,
+    height: 17 * theme.baseLineHeight,
   },
   uploaderTitle: {
     fontSize: 17,
@@ -26,22 +26,22 @@ const styles = StyleSheet.create({
   },
   uploaderBody: {
     marginBottom:
-      themeVars.CellGapH - (themeVars.CellGapV + themeVars.UploaderFileSpacing),
-    marginRight: 0 - themeVars.UploaderFileSpacing,
+      theme.CellGapH - (theme.CellGapV + theme.UploaderFileSpacing),
+    marginRight: 0 - theme.UploaderFileSpacing,
     flexDirection: 'row',
     flexWrap: 'wrap',
     overflow: 'hidden',
   },
   uploaderFile: {
     position: 'relative',
-    width: themeVars.UploaderSize,
-    height: themeVars.UploaderSize,
-    marginRight: themeVars.UploaderFileSpacing,
-    marginBottom: themeVars.UploaderFileSpacing,
+    width: theme.UploaderSize,
+    height: theme.UploaderSize,
+    marginRight: theme.UploaderFileSpacing,
+    marginBottom: theme.UploaderFileSpacing,
   },
   uploaderFileImage: {
-    width: themeVars.UploaderSize,
-    height: themeVars.UploaderSize,
+    width: theme.UploaderSize,
+    height: theme.UploaderSize,
   },
   uploaderStatus: {
     position: 'absolute',
@@ -64,20 +64,20 @@ const styles = StyleSheet.create({
   },
   uploaderAddButton: {
     position: 'relative',
-    marginRight: themeVars.UploaderFileSpacing,
-    marginBottom: themeVars.UploaderFileSpacing,
-    width: themeVars.UploaderSize - themeVars.UploaderBorderWidth * 2,
-    height: themeVars.UploaderSize - themeVars.UploaderBorderWidth * 2,
-    borderWidth: themeVars.UploaderBorderWidth,
-    borderColor: themeVars.UploaderBorderColor,
+    marginRight: theme.UploaderFileSpacing,
+    marginBottom: theme.UploaderFileSpacing,
+    width: theme.UploaderSize - theme.UploaderBorderWidth * 2,
+    height: theme.UploaderSize - theme.UploaderBorderWidth * 2,
+    borderWidth: theme.UploaderBorderWidth,
+    borderColor: theme.UploaderBorderColor,
   },
   uploaderAddButtonRec: {
     position: 'absolute',
-    top: themeVars.UploaderSize / 4 - 4,
-    left: themeVars.UploaderSize / 2 - 4,
-    width: themeVars.UploaderBorderWidth + 1,
-    height: themeVars.UploaderSize / 2,
-    backgroundColor: themeVars.UploaderBorderColor,
+    top: theme.UploaderSize / 4 - 4,
+    left: theme.UploaderSize / 2 - 4,
+    width: theme.UploaderBorderWidth + 1,
+    height: theme.UploaderSize / 2,
+    backgroundColor: theme.UploaderBorderColor,
   },
 })
 

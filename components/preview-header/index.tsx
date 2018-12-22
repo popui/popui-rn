@@ -1,17 +1,17 @@
 // import PropTypes from 'prop-types'
 import React from 'react'
 import { StyleSheet, View } from 'react-native'
-import themeVars from '../style/themes/default'
+import theme from '../style/themes/default'
 import { PreviewHeaderPropsType } from './PropsType'
 
 const styles = StyleSheet.create({
   previewHeader: {
-    paddingTop: themeVars.CellGapV,
-    paddingBottom: themeVars.CellGapV,
-    paddingRight: themeVars.CellGapH,
+    paddingTop: theme.CellGapV,
+    paddingBottom: theme.CellGapV,
+    paddingRight: theme.CellGapH,
     borderBottomWidth: StyleSheet.hairlineWidth,
-    borderColor: themeVars.CellBorderColor,
-    marginLeft: themeVars.CellGapH,
+    borderColor: theme.CellBorderColor,
+    marginLeft: theme.CellGapH,
   },
 })
 

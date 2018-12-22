@@ -1,7 +1,7 @@
-import React from 'react'
-
-import { StyleSheet, Text, View } from 'react-native'
-import { ActivityIndicator, Button, Flex, GapH, GapV } from '@popui/popui-rn'
+import { GapH, GapV } from '@popui/popui-rn';
+import React from 'react';
+import { StyleSheet, Text, View } from 'react-native';
+import { ActivityIndicator, Button, Flex } from '../../';
 
 export default class ActivityIndicatorExample extends React.Component<
   any,

@@ -1,9 +1,8 @@
-// tslint:disable:jsx-no-multiline-js
-/* tslint:disable:no-console */
-import React from 'react'
 
-import { View } from 'react-native'
-import { DatePicker, List } from '@popui/popui-rn'
+/* tslint:disable:no-console */
+import React from 'react';
+import { View } from 'react-native';
+import { DatePicker, List } from '../../';
 
 // const now = new Date();
 

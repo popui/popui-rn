@@ -1,46 +1,39 @@
-import React from 'react'
-
-import {
-  ActionSheetIOS,
-  ActionSheetIOSOptions,
-  Platform,
-  Share,
-} from 'react-native'
-import topView from 'rn-topview'
-import ActionSheetAndroidContainer from './AndroidContainer'
+import React from 'react';
+import { ActionSheetIOS, ActionSheetIOSOptions, Platform, Share } from 'react-native';
+import Portal from '../portal';
+import ActionSheetAndroidContainer from './AndroidContainer';
 
 let instance: ActionSheetAndroidContainer | null
-
-const onAnimationEnd = (visible: boolean) => {
-  if (!visible) {
-    topView.remove()
-  }
-}
 
 export default {
   showActionSheetWithOptions(
     config: ActionSheetIOSOptions,
-    callback: ((index: number) => void)
+    callback: ((index: number) => void),
   ) {
     if (Platform.OS === 'ios') {
-      ActionSheetIOS.showActionSheetWithOptions(config, callback)
-    } else {
-      topView.set(
-        <ActionSheetAndroidContainer
-          visible
-          ref={ref => (instance = ref)}
-          onAnimationEnd={onAnimationEnd}
-          config={config}
-          callback={callback}
-        />
-      )
+      ActionSheetIOS.showActionSheetWithOptions(config, callback);
+      return;
     }
+
+    const key = Portal.add(
+      <ActionSheetAndroidContainer
+        visible
+        ref={ref => (instance = ref)}
+        onAnimationEnd={(visible: boolean) => {
+          if (!visible) {
+            Portal.remove(key);
+          }
+        }}
+        config={config}
+        callback={callback}
+      />,
+    );
   },
 
   showShareActionSheetWithOptions(
     config: any,
     failureCallback?: (arg0: any) => void,
-    successCallback?: (arg0: boolean, activityType?: string) => void
+    successCallback?: (arg0: boolean, activityType?: string) => void,
   ) {
     const content: any = {}
     const options: any = {}

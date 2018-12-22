@@ -1,9 +1,8 @@
-// tslint:disable:jsx-no-multiline-js
-/* tslint:disable:no-console */
-import React from 'react'
 
-import { Image, Text, View } from 'react-native'
-import { NoticeBar, GapH } from '@popui/popui-rn'
+/* tslint:disable:no-console */
+import { GapH, NoticeBar } from '@popui/popui-rn';
+import React from 'react';
+import { Image, Text, View } from 'react-native';
 
 export default class NoticeBarExample extends React.Component<any, any> {
   render() {
@@ -22,7 +21,7 @@ export default class NoticeBarExample extends React.Component<any, any> {
         <GapH size="lg" />
         {/* marqueeProps.style only support text style props*/}
         <NoticeBar
-          onClick={() => alert('click')}
+          onPress={() => alert('click')}
           marqueeProps={{ loop: true, style: { fontSize: 12, color: 'red' } }}
         >
           Notice: The arrival time of incomes and transfers of Yu 'E Bao will be

@@ -1,5 +1,5 @@
 import { StyleSheet, View } from 'react-native'
-import themeVars from '../../style/themes/default'
+import theme from '../../style/themes/default'
 
 const defautlStyles = StyleSheet.create({
   containerRow: {

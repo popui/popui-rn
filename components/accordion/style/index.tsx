@@ -1,5 +1,5 @@
-import { StyleSheet, TextStyle, ViewStyle } from 'react-native'
-import themeVars from '../../style/themes/default'
+import { StyleSheet, TextStyle, ViewStyle } from 'react-native';
+import theme from '../../style/themes/default';
 
 export interface AccordionStyle {
   container: ViewStyle
@@ -16,15 +16,15 @@ export interface AccordionStyle {
 export default StyleSheet.create<any>({
   container: {
     borderTopWidth: StyleSheet.hairlineWidth,
-    borderTopColor: themeVars.border_color_base,
+    borderTopColor: theme.border_color_base,
   },
   header: {
     flexDirection: 'row',
     alignItems: 'center',
-    paddingLeft: themeVars.h_spacing_lg,
-    paddingRight: 2 * themeVars.h_spacing_lg,
+    paddingLeft: theme.h_spacing_lg,
+    paddingRight: 2 * theme.h_spacing_lg,
     borderBottomWidth: StyleSheet.hairlineWidth,
-    borderBottomColor: themeVars.border_color_base,
+    borderBottomColor: theme.border_color_base,
   },
   arrow: {
     width: 12,
@@ -32,22 +32,22 @@ export default StyleSheet.create<any>({
   },
   headerWrap: {
     flex: 1,
-    height: themeVars.list_item_height,
+    height: theme.list_item_height,
     alignItems: 'center',
     flexDirection: 'row',
   },
   headerText: {
-    color: themeVars.color_text_base,
-    fontSize: themeVars.font_size_heading,
+    color: theme.color_text_base,
+    fontSize: theme.font_size_heading,
   },
   content: {
-    paddingVertical: themeVars.v_spacing_md,
-    paddingHorizontal: themeVars.h_spacing_md,
+    paddingVertical: theme.v_spacing_md,
+    paddingHorizontal: theme.h_spacing_md,
     borderBottomWidth: StyleSheet.hairlineWidth,
-    borderBottomColor: themeVars.border_color_base,
+    borderBottomColor: theme.border_color_base,
   },
   contentText: {
-    fontSize: themeVars.font_size_subhead,
-    color: themeVars.color_text_paragraph,
+    fontSize: theme.font_size_subhead,
+    color: theme.color_text_paragraph,
   },
 })

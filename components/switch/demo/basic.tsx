@@ -1,7 +1,7 @@
 // tslint:disable:jsx-no-multiline-js
-import React from 'react'
+import { List, Switch } from '@popui/popui-rn';
+import React from 'react';
 
-import { List, Switch } from '@popui/popui-rn'
 
 export default class SwitchExample extends React.Component<any, any> {
   constructor(props: any) {

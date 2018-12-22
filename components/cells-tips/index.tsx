@@ -1,21 +1,21 @@
 import React from 'react'
 import { Text } from 'react-native'
 import { create } from '../style/utils/StyleSheet'
-import themeVars from '../style/themes/default'
+import theme from '../style/themes/default'
 
 const defaultStyles = create({
   cellsTips: {
-    paddingHorizontal: themeVars.CellGapH,
-    fontSize: themeVars.CellTipsFontSize,
-    color: themeVars.TextColorGray,
-    marginTop: themeVars.CellTipsFontSize * 0.3,
-    lineHeight: themeVars.CellTipsFontSize * themeVars.baseLineHeight,
+    paddingHorizontal: theme.CellGapH,
+    fontSize: theme.CellTipsFontSize,
+    color: theme.TextColorGray,
+    marginTop: theme.CellTipsFontSize * 0.3,
+    lineHeight: theme.CellTipsFontSize * theme.baseLineHeight,
     android: {
       lineHeight: Math.round(
-        themeVars.CellTipsFontSize * themeVars.baseLineHeight
+        theme.CellTipsFontSize * theme.baseLineHeight
       ),
     },
-    // backgroundColor: themeVars.CellBg,
+    // backgroundColor: theme.CellBg,
   },
 })
 

@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types'
 import React from 'react'
 import { StyleSheet, Text, TouchableOpacity, ViewPropTypes } from 'react-native'
-import themeVars from '../style/themes/default'
+import theme from '../style/themes/default'
 
 const TextFontSize = 14
 const styles = StyleSheet.create({
@@ -10,7 +10,7 @@ const styles = StyleSheet.create({
     marginRight: 0.64 * TextFontSize,
   },
   footerLinkText: {
-    color: themeVars.LinkColorDefault,
+    color: theme.LinkColorDefault,
     fontSize: TextFontSize,
   },
 })

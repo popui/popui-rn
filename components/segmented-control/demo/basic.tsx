@@ -1,8 +1,8 @@
 /* tslint:disable:no-console */
-import React from 'react'
+import { GapH, SegmentedControl } from '@popui/popui-rn';
+import React from 'react';
+import { Text, View } from 'react-native';
 
-import { Text, View } from 'react-native'
-import { SegmentedControl, GapH } from '@popui/popui-rn'
 
 export default class BasicTagExample extends React.Component<any, any> {
   onChange = (e: any) => {

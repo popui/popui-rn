@@ -1,7 +1,7 @@
 // import PropTypes from 'prop-types'
 import React from 'react'
 import { StyleSheet, View } from 'react-native'
-import themeVars from '../style/themes/default'
+import theme from '../style/themes/default'
 import { PanelPropsType } from './PropsType'
 
 const styles = StyleSheet.create({
@@ -12,7 +12,7 @@ const styles = StyleSheet.create({
     borderTopWidth: StyleSheet.hairlineWidth,
     borderBottomWidth: StyleSheet.hairlineWidth,
     borderStyle: 'solid',
-    borderColor: themeVars.LineColorLight,
+    borderColor: theme.LineColorLight,
   },
 })
 

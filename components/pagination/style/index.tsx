@@ -1,5 +1,5 @@
-import { TextStyle, ViewStyle } from 'react-native'
-import themeVars from '../../style/themes/default'
+import { TextStyle, ViewStyle } from 'react-native';
+import theme from '../../style/themes/default';
 
 export interface IPaginationStyle {
   container: ViewStyle
@@ -23,11 +23,11 @@ export default {
   },
   totalStyle: {
     fontSize: 18,
-    color: themeVars.color_text_base,
+    color: theme.color_text_base,
   },
   activeTextStyle: {
     fontSize: 18,
-    color: themeVars.color_link,
+    color: theme.color_link,
   },
   indicatorStyle: {
     flexDirection: 'row',
@@ -36,13 +36,13 @@ export default {
     width: 8,
     height: 8,
     borderRadius: 8,
-    backgroundColor: themeVars.input_color_icon,
+    backgroundColor: theme.input_color_icon,
   },
   pointActiveStyle: {
     backgroundColor: '#888',
   },
   spaceStyle: {
-    marginHorizontal: themeVars.h_spacing_sm / 2,
-    marginVertical: themeVars.v_spacing_sm / 2,
+    marginHorizontal: theme.h_spacing_sm / 2,
+    marginVertical: theme.v_spacing_sm / 2,
   },
 }

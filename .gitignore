@@ -48,13 +48,14 @@ expo/**/*.js
 expo/**/*/*.jsx
 expo/**/*/*.js
 my-release-key.keystore
-.vscode
-yarn.lock
+# yarn.lock
 npm-debug.log*
 !components/**/__tests__/*.js
+!components/**/__mocks__/*.js
 coverage
 /es/
 package-lock.json
 .cdnkey
 .expo/*
 ana/
+.jest

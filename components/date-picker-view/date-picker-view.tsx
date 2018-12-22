@@ -1,19 +1,15 @@
-import PropTypes from 'prop-types'
-import React from 'react'
-
-import RCDatePicker from 'rmc-date-picker/lib/DatePicker'
-import { getComponentLocale } from '../_util/getLocale'
-import { DatePickerProps } from './PropsType'
-
+import PropTypes from 'prop-types';
+import React from 'react';
+import RCDatePicker from '../date-picker/datepicker';
+import { getComponentLocale } from '../_util/getLocale';
+import { DatePickerProps } from './PropsType';
 export default class DatePickerView extends React.Component<
   DatePickerProps,
   any
 > {
   static defaultProps = {
     mode: 'datetime',
-    extra: '请选择',
-    prefixCls: 'am-picker',
-    pickerPrefixCls: 'am-picker-col',
+    // extra: '请选择',
     minuteStep: 1,
     use12Hours: false,
   }
@@ -26,7 +22,7 @@ export default class DatePickerView extends React.Component<
     // tslint:disable-next-line:no-this-assignment
     const { props, context } = this
     const locale = getComponentLocale(props, context, 'DatePickerView', () =>
-      require('./locale/zh_CN')
+      require('./locale/zh_CN'),
     )
 
     // DatePicker use `defaultDate`, maybe because there are PopupDatePicker inside? @yiminghe

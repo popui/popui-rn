@@ -1,5 +1,5 @@
 import { ViewStyle } from 'react-native'
-import themeVars from '../../style/themes/default'
+import theme from '../../style/themes/default'
 
 export interface IImagePickerAddButtonStyle {
   uploaderAddButton: ViewStyle
@@ -8,19 +8,19 @@ export interface IImagePickerAddButtonStyle {
 export default {
   uploaderAddButton: {
     position: 'relative',
-    marginRight: themeVars.UploaderFileSpacing,
-    marginBottom: themeVars.UploaderFileSpacing,
-    width: themeVars.UploaderSize - themeVars.UploaderBorderWidth * 2,
-    height: themeVars.UploaderSize - themeVars.UploaderBorderWidth * 2,
-    borderWidth: themeVars.UploaderBorderWidth,
-    borderColor: themeVars.UploaderBorderColor,
+    marginRight: theme.UploaderFileSpacing,
+    marginBottom: theme.UploaderFileSpacing,
+    width: theme.UploaderSize - theme.UploaderBorderWidth * 2,
+    height: theme.UploaderSize - theme.UploaderBorderWidth * 2,
+    borderWidth: theme.UploaderBorderWidth,
+    borderColor: theme.UploaderBorderColor,
   },
   uploaderAddButtonRec: {
     position: 'absolute',
-    top: themeVars.UploaderSize / 4 - 4,
-    left: themeVars.UploaderSize / 2 - 4,
-    width: themeVars.UploaderBorderWidth,
-    height: themeVars.UploaderSize / 2,
-    backgroundColor: themeVars.UploaderBorderColor,
+    top: theme.UploaderSize / 4 - 4,
+    left: theme.UploaderSize / 2 - 4,
+    width: theme.UploaderBorderWidth,
+    height: theme.UploaderSize / 2,
+    backgroundColor: theme.UploaderBorderColor,
   },
 }

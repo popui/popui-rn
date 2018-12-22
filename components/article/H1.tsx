@@ -2,16 +2,16 @@ import PropTypes from 'prop-types'
 import React from 'react'
 import { Text } from 'react-native'
 import { create } from '../style/utils/StyleSheet'
-import themeVars from '../style/themes/default'
+import theme from '../style/themes/default'
 
 const styles = create({
   h1: {
     fontSize: 18,
     fontWeight: '400',
     marginBottom: 18 * 0.9,
-    lineHeight: 18 * themeVars.baseLineHeight,
+    lineHeight: 18 * theme.baseLineHeight,
     android: {
-      lineHeight: Math.round(18 * themeVars.baseLineHeight),
+      lineHeight: Math.round(18 * theme.baseLineHeight),
     },
   },
 })

@@ -1,7 +1,7 @@
 // import PropTypes from 'prop-types'
 import React from 'react'
 import { StyleSheet, View } from 'react-native'
-import themeVars from '../style/themes/default'
+import theme from '../style/themes/default'
 import { PreviewItemPropsType } from './PropsType'
 
 const styles = StyleSheet.create({
@@ -10,23 +10,23 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
   },
   bodyPreviewLabel: {
-    marginRight: themeVars.baseFontSize * 0.9,
-    fontSize: themeVars.baseFontSize * 0.9,
-    lineHeight: themeVars.baseFontSize * 0.9 * 2,
+    marginRight: theme.baseFontSize * 0.9,
+    fontSize: theme.baseFontSize * 0.9,
+    lineHeight: theme.baseFontSize * 0.9 * 2,
   },
   bodyPreviewValue: {
-    fontSize: themeVars.baseFontSize * 0.9,
-    lineHeight: themeVars.baseFontSize * 0.9 * 2,
-    color: themeVars.TextColorGray,
+    fontSize: theme.baseFontSize * 0.9,
+    lineHeight: theme.baseFontSize * 0.9 * 2,
+    color: theme.TextColorGray,
   },
   headerPreviewLabel: {
-    marginRight: themeVars.baseFontSize,
-    fontSize: themeVars.baseFontSize,
-    lineHeight: themeVars.baseFontSize * 2.5,
+    marginRight: theme.baseFontSize,
+    fontSize: theme.baseFontSize,
+    lineHeight: theme.baseFontSize * 2.5,
   },
   headerPreviewValue: {
-    fontSize: themeVars.baseFontSize * 1.6,
-    lineHeight: themeVars.baseFontSize * 2.5,
+    fontSize: theme.baseFontSize * 1.6,
+    lineHeight: theme.baseFontSize * 2.5,
     fontStyle: 'normal',
   },
 })

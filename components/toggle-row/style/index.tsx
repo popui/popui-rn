@@ -1,4 +1,4 @@
-import themeVars from '../../style/themes/default'
+import theme from '../../style/themes/default'
 import { ViewStyle, TextStyle } from 'react-native'
 
 export interface IToggleRowStyle {
@@ -16,21 +16,21 @@ export default {
     alignItems: 'center',
     paddingTop: 13 * 0.5,
     paddingBottom: 13 * 0.5,
-    paddingLeft: themeVars.h_spacing_lg,
-    paddingRight: themeVars.h_spacing_lg,
+    paddingLeft: theme.h_spacing_lg,
+    paddingRight: theme.h_spacing_lg,
   },
   icon: {
-    marginRight: themeVars.h_spacing_md,
+    marginRight: theme.h_spacing_md,
   },
   disabled: {
     backgroundColor: '#E1E1E1',
   },
   rowText: {
     fontSize: 13,
-    color: themeVars.color_text_base,
+    color: theme.color_text_base,
     // marginLeft: 5
   },
   rowTextDisabled: {
-    color: themeVars.TextColorGray,
+    color: theme.TextColorGray,
   },
 }

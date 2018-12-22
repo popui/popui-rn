@@ -1,5 +1,5 @@
 import { StyleSheet, TextStyle, ViewStyle, Dimensions } from 'react-native'
-import themeVars from '../../style/themes/default'
+import theme from '../../style/themes/default'
 const { width } = Dimensions.get('window')
 
 export interface IModalStyle {
@@ -25,7 +25,7 @@ export interface IModalStyle {
 
 export default {
   container: {
-    zIndex: themeVars.modal_zindex,
+    zIndex: theme.modal_zindex,
   },
   wrap: {
     justifyContent: 'center',
@@ -33,44 +33,44 @@ export default {
   },
   innerContainer: {
     width: width - 60,
-    backgroundColor: themeVars.DialogBackgroundColor,
+    backgroundColor: theme.DialogBackgroundColor,
     borderRadius: 3,
     overflow: 'hidden',
-    // borderRadius: themeVars.radius_md,
+    // borderRadius: theme.radius_md,
     // width: 286,
-    // paddingTop: themeVars.v_spacing_xl,
+    // paddingTop: theme.v_spacing_xl,
     // overflow: 'hidden',
   },
   // fix android borderRadius
   dialogRoot: {
     width: width - 60,
-    backgroundColor: themeVars.DialogBackgroundColor,
+    backgroundColor: theme.DialogBackgroundColor,
     borderRadius: 3,
     overflow: 'hidden',
     maxHeight: Dimensions.get('window').height - 100,
   },
   header: {
-    paddingTop: 1.3 * themeVars.baseFontSize,
-    paddingBottom: 0.5 * themeVars.baseFontSize,
-    paddingLeft: themeVars.DialogGapWidth,
-    paddingRight: themeVars.DialogGapWidth,
+    paddingTop: 1.3 * theme.baseFontSize,
+    paddingBottom: 0.5 * theme.baseFontSize,
+    paddingLeft: theme.DialogGapWidth,
+    paddingRight: theme.DialogGapWidth,
     fontWeight: '400',
-    color: themeVars.color_text_base,
-    fontSize: themeVars.modal_font_size_heading,
+    color: theme.color_text_base,
+    fontSize: theme.modal_font_size_heading,
     textAlign: 'center',
-    // paddingHorizontal: themeVars.h_spacing_lg,
+    // paddingHorizontal: theme.h_spacing_lg,
   },
   body: {
-    paddingLeft: themeVars.DialogGapWidth,
-    paddingRight: themeVars.DialogGapWidth,
+    paddingLeft: theme.DialogGapWidth,
+    paddingRight: theme.DialogGapWidth,
     paddingBottom: 24, // 15*1.6,
     paddingTop: 0,
     maxHeight: Dimensions.get('window').height - 196,
-    // paddingBottom: themeVars.v_spacing_lg,
-    // paddingHorizontal: themeVars.h_spacing_lg,
+    // paddingBottom: theme.v_spacing_lg,
+    // paddingHorizontal: theme.h_spacing_lg,
   },
   bodyText: {
-    color: themeVars.TextColorGray,
+    color: theme.TextColorGray,
     lineHeight: 19.5, // 15 * 1.3,
     // android: {
     //     lineHeight: Math.round(15 * 1.3),
@@ -88,8 +88,8 @@ export default {
   },
   closeWrap: {
     position: 'absolute',
-    top: themeVars.v_spacing_lg,
-    left: themeVars.h_spacing_lg,
+    top: theme.v_spacing_lg,
+    left: theme.h_spacing_lg,
   },
   close: {
     fontSize: 40,
@@ -102,14 +102,14 @@ export default {
     bottom: 0,
     left: 0,
     right: 0,
-    borderBottomLeftRadius: themeVars.radius_md,
-    borderBottomRightRadius: themeVars.radius_md,
+    borderBottomLeftRadius: theme.radius_md,
+    borderBottomRightRadius: theme.radius_md,
     // flexDirection: 'row',
     // height: 48,
     // alignItems: 'center',
     // justifyContent: 'center',
     // borderTopWidth: StyleSheet.hairlineWidth,
-    // borderColor: themeVars.DialogLineColor,
+    // borderColor: theme.DialogLineColor,
     // borderStyle: 'solid',
   },
   buttonGroupH: {
@@ -121,11 +121,11 @@ export default {
     flexDirection: 'column',
   },
   buttonWrapH: {
-    height: themeVars.modal_button_height,
+    height: theme.modal_button_height,
     flexGrow: 1,
     justifyContent: 'center',
-    // borderColor: themeVars.border_color_base,
-    borderColor: themeVars.DialogLineColor,
+    // borderColor: theme.border_color_base,
+    borderColor: theme.DialogLineColor,
     borderStyle: 'solid',
     borderTopWidth: StyleSheet.hairlineWidth,
     borderRightWidth: StyleSheet.hairlineWidth,
@@ -135,8 +135,8 @@ export default {
     flexGrow: 1,
     borderTopWidth: StyleSheet.hairlineWidth,
     borderStyle: 'solid',
-    // borderColor: themeVars.border_color_base,
-    borderColor: themeVars.DialogLineColor,
+    // borderColor: theme.border_color_base,
+    borderColor: theme.DialogLineColor,
     // paddingVertical: 13,
     paddingTop: 13,
     paddingBottom: 13,
@@ -145,8 +145,8 @@ export default {
   },
   buttonText: {
     textAlign: 'center',
-    color: themeVars.color_link,
-    fontSize: themeVars.modal_button_font_size,
+    color: theme.color_link,
+    fontSize: theme.modal_button_font_size,
     backgroundColor: 'transparent',
   },
   buttonText_default: {
@@ -154,13 +154,13 @@ export default {
   },
   buttonText_primary: {
     // color: '#0BB20C',
-    color: themeVars.color_link,
+    color: theme.color_link,
   },
   buttonText_warn: {
-    color: themeVars.ColorWarn,
+    color: theme.ColorWarn,
   },
   buttonTextOperation: {
-    color: themeVars.color_text_base,
+    color: theme.color_text_base,
     textAlign: 'left',
     paddingHorizontal: 15,
   },

@@ -1,11 +1,11 @@
 import React from 'react'
 
 import { StyleSheet, Text } from 'react-native'
-import themeVars from '../style/themes/default'
+import theme from '../style/themes/default'
 import { ModalBodyPropsType } from './PropsType'
 const styles = StyleSheet.create({
   bodyText: {
-    color: themeVars.TextColorGray,
+    color: theme.TextColorGray,
     lineHeight: 19.5, // 15 * 1.3,
     // android: {
     //     lineHeight: Math.round(15 * 1.3),

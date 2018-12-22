@@ -1,17 +1,22 @@
 /* tslint:disable:no-console */
-import React from 'react'
-
-import { View } from 'react-native'
-import { Accordion, List } from '@popui/popui-rn'
+import React from 'react';
+import { View } from 'react-native';
+import { Accordion, List } from '../../';
 
 export default class AccordionExmple extends React.Component<any, any> {
-  onChange = (key: string) => {
-    console.log(key)
-  }
+  state = {
+    activeSections: [2, 0],
+  };
+  onChange = (activeSections: number[]) => {
+    this.setState({ activeSections });
+  };
   render() {
     return (
       <View style={{ marginTop: 80, marginBottom: 10 }}>
-        <Accordion onChange={this.onChange} defaultActiveKey="2">
+        <Accordion
+          onChange={this.onChange}
+          activeSections={this.state.activeSections}
+        >
           <Accordion.Panel header="Title 1">
             <List>
               <List.Item>Content 1</List.Item>

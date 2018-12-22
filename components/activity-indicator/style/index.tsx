@@ -1,5 +1,5 @@
-import { TextStyle, ViewStyle } from 'react-native'
-import themeVars from '../../style/themes/default'
+import { TextStyle, ViewStyle } from 'react-native';
+import theme from '../../style/themes/default';
 
 export interface IActivityIndicatorStyle {
   container: ViewStyle
@@ -18,7 +18,7 @@ export default {
     bottom: 0,
     right: 0,
     backgroundColor: 'transparent',
-    zIndex: themeVars.toast_zindex,
+    zIndex: theme.toast_zindex,
   },
   innerContainer: {
     flex: 1,
@@ -31,18 +31,18 @@ export default {
     justifyContent: 'center',
     width: 89,
     height: 89,
-    borderRadius: themeVars.radius_md,
-    backgroundColor: themeVars.toast_fill,
+    borderRadius: theme.radius_md,
+    backgroundColor: theme.toast_fill,
   },
   tip: {
-    color: themeVars.color_text_base,
-    fontSize: themeVars.font_size_base,
-    marginLeft: themeVars.h_spacing_md,
+    color: theme.color_text_base,
+    fontSize: theme.font_size_base,
+    marginLeft: theme.h_spacing_md,
   },
   toast: {
-    color: themeVars.color_text_base_inverse,
-    fontSize: themeVars.font_size_base,
-    marginTop: themeVars.v_spacing_sm,
+    color: theme.color_text_base_inverse,
+    fontSize: theme.font_size_base,
+    marginTop: theme.v_spacing_sm,
   },
   spinner: {
     flexDirection: 'row',

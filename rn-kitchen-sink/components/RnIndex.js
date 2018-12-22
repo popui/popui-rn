@@ -3,6 +3,7 @@ import React from 'react'
 import { StyleSheet, View, ScrollView } from 'react-native'
 import { List, SearchBar } from '@popui/popui-rn'
 import { UIVIEWS, UICONTROLS, OTHERS, UIBARS } from '../demoList'
+import Theme from './Theme';
 
 const styles = StyleSheet.create({
   container: {
@@ -11,6 +12,9 @@ const styles = StyleSheet.create({
 })
 
 export default class RnIndex extends React.Component {
+  static navigationOptions = ({ screenProps }) => ({
+    headerLeft: <Theme {...screenProps} />,
+  })
   constructor(props) {
     super(props)
     this.state = {
@@ -52,8 +56,8 @@ export default class RnIndex extends React.Component {
   renderItem = el => (
     <List.Item
       thumb={el.icon}
-      onClick={() => {
-        this.onPressRow(el)
+      onPress={() => {
+        this.onPressRow(el);
       }}
       arrow="horizontal"
       key={el.title}

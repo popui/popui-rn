@@ -1,9 +1,9 @@
-// tslint:disable:jsx-no-multiline-js
-/* tslint:disable:no-console */
-import React from 'react'
 
-import { View } from 'react-native'
-import { List, Stepper } from '@popui/popui-rn'
+/* tslint:disable:no-console */
+import { List, Stepper } from '@popui/popui-rn';
+import React from 'react';
+import { View } from 'react-native';
+
 
 function onChange(value: any) {
   console.log('changed', value)
@@ -13,7 +13,6 @@ export default class StepperExample extends React.Component<any, any> {
   render() {
     const readOnly = (
       <Stepper
-        size="small"
         key="1"
         max={10}
         min={1}

@@ -1,5 +1,5 @@
 import { Platform, TextStyle, ViewStyle } from 'react-native'
-import themeVars from '../../style/themes/default'
+import theme from '../../style/themes/default'
 
 export interface IBadgeStyle {
   wrap: ViewStyle
@@ -25,7 +25,7 @@ export default {
     width: 2 * grid,
     height: 2 * grid,
     borderRadius: grid,
-    backgroundColor: themeVars.ColorWarn,
+    backgroundColor: theme.ColorWarn,
     position: 'absolute',
     top: -1 * grid,
     right: -1 * grid,
@@ -38,8 +38,8 @@ export default {
   textDom: {
     paddingVertical: 0.5 * grid,
     paddingHorizontal: (Platform.OS === 'ios' ? 1.5 : 2) * grid,
-    backgroundColor: themeVars.ColorWarn,
-    borderRadius: 4 * themeVars.radius_sm,
+    backgroundColor: theme.ColorWarn,
+    borderRadius: 4 * theme.radius_sm,
     borderStyle: 'solid',
     position: 'absolute',
     top: -10,
@@ -47,7 +47,7 @@ export default {
   },
   textCorner: {
     width: 18 * grid,
-    backgroundColor: themeVars.ColorWarn,
+    backgroundColor: theme.ColorWarn,
     transform: [
       {
         rotate: '45deg',
@@ -61,7 +61,7 @@ export default {
     top: 3 * grid,
   },
   text: {
-    color: themeVars.color_text_base_inverse,
+    color: theme.color_text_base_inverse,
     textAlign: 'center',
   },
 }

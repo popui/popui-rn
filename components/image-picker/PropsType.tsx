@@ -10,7 +10,7 @@ export interface ImagePickerPropTypes {
   onChange?: (
     files: Array<ImageItemPropType>,
     operationType: string,
-    index?: number
+    index?: number,
   ) => void
   onImageClick?: (index?: number, files?: Array<ImageItemPropType>) => void
   onAddImageClick?: () => void

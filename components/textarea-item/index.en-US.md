@@ -23,11 +23,10 @@ Properties | Descrition | Type | Default
 | rows        | sets the number of lines for a textarea     | number |   1 |
 | count |  it is used for word count and maxlength, the default is 0 which indicates that word count is turned off. | number | -  |
 | onChange    | callback that is called when the textarea's text changes. | (val: string): void |  -  |
-| onBlur     | callback that is called when the textarea is blurred. | (val: string): void |   -  |
-| onFocus    | callback that is called when the textarea is focused. | (val: string): void |  -  |
 | error       | whether to display error         | bool |  false  |
 | onErrorPress   | callback that is called when the error icon is clicked   | (): void |    |
 | autoHeight | auto adjust height (only use one of `autoHeight` and `rows` properties) | bool  | false  |
 | labelNumber  | number of label text, valid value is 2 to 7 | number | `5` |
+| last      |  If it is the last item, the `borderBottom` will be removed, the default has `borderBottom`   | bool | false  |
 
 > More available react-native `TextareaItem` API can be found at [react-native TextInput](http://facebook.github.io/react-native/docs/textinput.html)

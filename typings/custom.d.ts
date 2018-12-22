@@ -1,17 +1,12 @@
 declare module "@popui/popui-rn";
+declare module '@ant-design/react-native';
 
 declare module 'antd-mobile-demo-data';
 
-declare module 'rn-topview';
-
-declare module 'react-native-camera-roll-picker';
-
-declare module 'rmc-dialog';
 declare module 'react-native-menu';
-declare module 'react-native/Libraries/StyleSheet/normalizeColor';
-declare module 'react-native/Libraries/StyleSheet/setNormalizedColorAlpha';
 
 declare module 'normalize-css-color';
+declare module '@bang88/react-native-ultimate-listview';
 
 declare var process: {
   env: {

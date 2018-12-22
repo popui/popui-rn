@@ -10,11 +10,11 @@ import {
   ToggleIconCircle,
 } from '@popui/popui-rn'
 // import WeuiIcon from '../weui-icon'
-import themeVars from '../style/themes/default'
+import theme from '../style/themes/default'
 import { MultiSelectHeaderCellsPropsType } from './PropsType'
 const styles = StyleSheet.create({
   icon: {
-    paddingRight: themeVars.CellInnerGapH,
+    paddingRight: theme.CellInnerGapH,
   },
   disabled: {
     opacity: 0.5,

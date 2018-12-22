@@ -1,5 +1,5 @@
 import { StyleSheet, View } from 'react-native'
-import themeVars from '../../style/themes/default'
+import theme from '../../style/themes/default'
 
 const defautlStyles = StyleSheet.create({
   containerRow: {
@@ -17,7 +17,7 @@ const defautlStyles = StyleSheet.create({
     alignItems: 'flex-end',
   },
   extraText: {
-    color: themeVars.color_text_caption,
+    color: theme.color_text_caption,
     textAlign: 'right',
   },
 })

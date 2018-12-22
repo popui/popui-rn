@@ -1,4 +1,4 @@
-import themeVars from '../../style/themes/default'
+import theme from '../../style/themes/default'
 
 export default {
   badge: {
@@ -9,7 +9,7 @@ export default {
     lineHeight: 14,
     paddingTop: 1,
     textAlign: 'center',
-    backgroundColor: themeVars.ColorWarn,
+    backgroundColor: theme.ColorWarn,
     borderWidth: 1.5,
     borderColor: 'transparent',
     borderRadius: 8.5,

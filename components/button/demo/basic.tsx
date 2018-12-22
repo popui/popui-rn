@@ -1,8 +1,7 @@
 /* tslint:disable:no-unused-variable */
 // tslint:disable:jsx-no-multiline-js
-import React from 'react'
-
-import { Button, GapH, GapV } from '@popui/popui-rn'
+import { Button, GapH, GapV } from '@popui/popui-rn';
+import React from 'react';
 
 /* tslint:disable:no-console */
 export default () => (

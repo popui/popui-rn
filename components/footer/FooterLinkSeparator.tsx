@@ -1,14 +1,14 @@
 import PropTypes from 'prop-types'
 import React from 'react'
 import { StyleSheet, View, ViewPropTypes } from 'react-native'
-import themeVars from '../style/themes/default'
+import theme from '../style/themes/default'
 
 const styles = StyleSheet.create({
   footerlinkseparator: {
-    borderColor: themeVars.grayColor,
+    borderColor: theme.grayColor,
     width: StyleSheet.hairlineWidth,
     borderRightWidth: StyleSheet.hairlineWidth,
-    height: themeVars.globalFontSize,
+    height: theme.globalFontSize,
   },
 })
 

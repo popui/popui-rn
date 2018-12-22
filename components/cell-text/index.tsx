@@ -1,7 +1,7 @@
 // import PropTypes from 'prop-types'
 import React from 'react'
 import { StyleSheet, TextProps, Text } from 'react-native'
-import themeVars from '../style/themes/default'
+import theme from '../style/themes/default'
 
 export interface CellTextPropsType extends TextProps {
   children?: any
@@ -11,9 +11,9 @@ export interface CellTextPropsType extends TextProps {
 
 const styles = StyleSheet.create({
   cellText: {
-    fontSize: themeVars.CellFontSize,
-    marginTop: (themeVars.CellLineHeight - themeVars.CellFontSize) / 2,
-    marginBottom: (themeVars.CellLineHeight - themeVars.CellFontSize) / 2,
+    fontSize: theme.CellFontSize,
+    marginTop: (theme.CellLineHeight - theme.CellFontSize) / 2,
+    marginBottom: (theme.CellLineHeight - theme.CellFontSize) / 2,
   },
 })
 

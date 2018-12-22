@@ -1,6 +1,5 @@
-import React from 'react'
+import React from 'react';
 
-import { NativeSyntheticEvent, TextInputChangeEventData } from 'react-native'
 export interface TextAreaItemPropsType {
   title?: React.ReactNode
   maxLength?: number
@@ -18,4 +17,7 @@ export interface TextAreaItemPropsType {
   editable?: boolean
   disabled?: boolean
   labelNumber?: number
+  // onChange?: TextAreaEventHandle;
+  // onBlur?: TextAreaEventHandle;
+  // onFocus?: TextAreaEventHandle;
 }

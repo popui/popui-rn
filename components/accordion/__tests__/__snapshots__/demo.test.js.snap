@@ -12,42 +12,28 @@ exports[`renders ./components/accordion/demo/basic.tsx correctly 1`] = `
   <View
     style={
       Array [
-        undefined,
         Object {
           "borderTopColor": "#dddddd",
           "borderTopWidth": 0.5,
         },
+        undefined,
       ]
     }
   >
     <View>
-      <View>
+      <View
+        style={Object {}}
+      >
         <View
-          accessibilityComponentType={undefined}
-          accessibilityLabel={undefined}
-          accessibilityTraits={undefined}
           accessible={true}
-          hasTVPreferredFocus={undefined}
-          hitSlop={undefined}
           isTVSelectable={true}
-          nativeID={undefined}
-          onLayout={undefined}
           onResponderGrant={[Function]}
           onResponderMove={[Function]}
           onResponderRelease={[Function]}
           onResponderTerminate={[Function]}
           onResponderTerminationRequest={[Function]}
           onStartShouldSetResponder={[Function]}
-          style={
-            Array [
-              Object {
-                "backgroundColor": "transparent",
-              },
-              undefined,
-            ]
-          }
-          testID={undefined}
-          tvParallaxProperties={undefined}
+          style={null}
         >
           <View
             style={
@@ -75,10 +61,6 @@ exports[`renders ./components/accordion/demo/basic.tsx correctly 1`] = `
               }
             >
               <Text
-                accessible={true}
-                allowFontScaling={true}
-                disabled={false}
-                ellipsizeMode="tail"
                 style={
                   Object {
                     "color": "#000000",
@@ -92,41 +74,40 @@ exports[`renders ./components/accordion/demo/basic.tsx correctly 1`] = `
             <View
               style={
                 Object {
-                  "height": 12,
-                  "width": 12,
+                  "color": "#cccccc",
                 }
               }
             >
-              <Image
-                source={1}
+              <Text
                 style={
-                  Object {
-                    "height": 12,
-                    "width": 12,
-                  }
+                  Array [
+                    Object {
+                      "color": "#cccccc",
+                      "fontFamily": "antoutline",
+                      "fontSize": 22,
+                      "fontStyle": "normal",
+                      "fontWeight": "normal",
+                    },
+                    Object {
+                      "color": "#cccccc",
+                    },
+                  ]
                 }
-              />
+              >
+                
+              </Text>
             </View>
           </View>
         </View>
         <View
-          collapsable={undefined}
-          pointerEvents="none"
-          style={
-            Object {
-              "height": 0,
-              "overflow": "hidden",
-            }
-          }
+          pointerEvents="auto"
+          style={false}
         >
           <View
-            collapsable={undefined}
             onLayout={[Function]}
             style={Object {}}
           >
-            <View
-              style={undefined}
-            >
+            <View>
               <View
                 style={
                   Object {
@@ -137,31 +118,15 @@ exports[`renders ./components/accordion/demo/basic.tsx correctly 1`] = `
                 }
               >
                 <View
-                  accessibilityComponentType={undefined}
-                  accessibilityLabel={undefined}
-                  accessibilityTraits={undefined}
                   accessible={true}
-                  hasTVPreferredFocus={undefined}
-                  hitSlop={undefined}
                   isTVSelectable={true}
-                  nativeID={undefined}
-                  onLayout={undefined}
                   onResponderGrant={[Function]}
                   onResponderMove={[Function]}
                   onResponderRelease={[Function]}
                   onResponderTerminate={[Function]}
                   onResponderTerminationRequest={[Function]}
                   onStartShouldSetResponder={[Function]}
-                  style={
-                    Array [
-                      Object {
-                        "backgroundColor": "transparent",
-                      },
-                      undefined,
-                    ]
-                  }
-                  testID={undefined}
-                  tvParallaxProperties={undefined}
+                  style={null}
                 >
                   <View
                     style={
@@ -206,10 +171,6 @@ exports[`renders ./components/accordion/demo/basic.tsx correctly 1`] = `
                         }
                       >
                         <Text
-                          accessible={true}
-                          allowFontScaling={true}
-                          disabled={false}
-                          ellipsizeMode="tail"
                           numberOfLines={1}
                           style={
                             Array [
@@ -228,31 +189,15 @@ exports[`renders ./components/accordion/demo/basic.tsx correctly 1`] = `
                   </View>
                 </View>
                 <View
-                  accessibilityComponentType={undefined}
-                  accessibilityLabel={undefined}
-                  accessibilityTraits={undefined}
                   accessible={true}
-                  hasTVPreferredFocus={undefined}
-                  hitSlop={undefined}
                   isTVSelectable={true}
-                  nativeID={undefined}
-                  onLayout={undefined}
                   onResponderGrant={[Function]}
                   onResponderMove={[Function]}
                   onResponderRelease={[Function]}
                   onResponderTerminate={[Function]}
                   onResponderTerminationRequest={[Function]}
                   onStartShouldSetResponder={[Function]}
-                  style={
-                    Array [
-                      Object {
-                        "backgroundColor": "transparent",
-                      },
-                      undefined,
-                    ]
-                  }
-                  testID={undefined}
-                  tvParallaxProperties={undefined}
+                  style={null}
                 >
                   <View
                     style={
@@ -297,10 +242,6 @@ exports[`renders ./components/accordion/demo/basic.tsx correctly 1`] = `
                         }
                       >
                         <Text
-                          accessible={true}
-                          allowFontScaling={true}
-                          disabled={false}
-                          ellipsizeMode="tail"
                           numberOfLines={1}
                           style={
                             Array [
@@ -319,31 +260,15 @@ exports[`renders ./components/accordion/demo/basic.tsx correctly 1`] = `
                   </View>
                 </View>
                 <View
-                  accessibilityComponentType={undefined}
-                  accessibilityLabel={undefined}
-                  accessibilityTraits={undefined}
                   accessible={true}
-                  hasTVPreferredFocus={undefined}
-                  hitSlop={undefined}
                   isTVSelectable={true}
-                  nativeID={undefined}
-                  onLayout={undefined}
                   onResponderGrant={[Function]}
                   onResponderMove={[Function]}
                   onResponderRelease={[Function]}
                   onResponderTerminate={[Function]}
                   onResponderTerminationRequest={[Function]}
                   onStartShouldSetResponder={[Function]}
-                  style={
-                    Array [
-                      Object {
-                        "backgroundColor": "transparent",
-                      },
-                      undefined,
-                    ]
-                  }
-                  testID={undefined}
-                  tvParallaxProperties={undefined}
+                  style={null}
                 >
                   <View
                     style={
@@ -388,10 +313,6 @@ exports[`renders ./components/accordion/demo/basic.tsx correctly 1`] = `
                         }
                       >
                         <Text
-                          accessible={true}
-                          allowFontScaling={true}
-                          disabled={false}
-                          ellipsizeMode="tail"
                           numberOfLines={1}
                           style={
                             Array [
@@ -430,33 +351,19 @@ exports[`renders ./components/accordion/demo/basic.tsx correctly 1`] = `
           </View>
         </View>
       </View>
-      <View>
+      <View
+        style={Object {}}
+      >
         <View
-          accessibilityComponentType={undefined}
-          accessibilityLabel={undefined}
-          accessibilityTraits={undefined}
           accessible={true}
-          hasTVPreferredFocus={undefined}
-          hitSlop={undefined}
           isTVSelectable={true}
-          nativeID={undefined}
-          onLayout={undefined}
           onResponderGrant={[Function]}
           onResponderMove={[Function]}
           onResponderRelease={[Function]}
           onResponderTerminate={[Function]}
           onResponderTerminationRequest={[Function]}
           onStartShouldSetResponder={[Function]}
-          style={
-            Array [
-              Object {
-                "backgroundColor": "transparent",
-              },
-              undefined,
-            ]
-          }
-          testID={undefined}
-          tvParallaxProperties={undefined}
+          style={null}
         >
           <View
             style={
@@ -484,10 +391,6 @@ exports[`renders ./components/accordion/demo/basic.tsx correctly 1`] = `
               }
             >
               <Text
-                accessible={true}
-                allowFontScaling={true}
-                disabled={false}
-                ellipsizeMode="tail"
                 style={
                   Object {
                     "color": "#000000",
@@ -501,25 +404,32 @@ exports[`renders ./components/accordion/demo/basic.tsx correctly 1`] = `
             <View
               style={
                 Object {
-                  "height": 12,
-                  "width": 12,
+                  "color": "#cccccc",
                 }
               }
             >
-              <Image
-                source={1}
+              <Text
                 style={
-                  Object {
-                    "height": 12,
-                    "width": 12,
-                  }
+                  Array [
+                    Object {
+                      "color": "#cccccc",
+                      "fontFamily": "antoutline",
+                      "fontSize": 22,
+                      "fontStyle": "normal",
+                      "fontWeight": "normal",
+                    },
+                    Object {
+                      "color": "#cccccc",
+                    },
+                  ]
                 }
-              />
+              >
+                
+              </Text>
             </View>
           </View>
         </View>
         <View
-          collapsable={undefined}
           pointerEvents="none"
           style={
             Object {
@@ -529,7 +439,6 @@ exports[`renders ./components/accordion/demo/basic.tsx correctly 1`] = `
           }
         >
           <View
-            collapsable={undefined}
             onLayout={[Function]}
             style={Object {}}
           >
@@ -544,10 +453,6 @@ exports[`renders ./components/accordion/demo/basic.tsx correctly 1`] = `
               }
             >
               <Text
-                accessible={true}
-                allowFontScaling={true}
-                disabled={false}
-                ellipsizeMode="tail"
                 style={
                   Object {
                     "color": "#333333",
@@ -561,33 +466,19 @@ exports[`renders ./components/accordion/demo/basic.tsx correctly 1`] = `
           </View>
         </View>
       </View>
-      <View>
+      <View
+        style={Object {}}
+      >
         <View
-          accessibilityComponentType={undefined}
-          accessibilityLabel={undefined}
-          accessibilityTraits={undefined}
           accessible={true}
-          hasTVPreferredFocus={undefined}
-          hitSlop={undefined}
           isTVSelectable={true}
-          nativeID={undefined}
-          onLayout={undefined}
           onResponderGrant={[Function]}
           onResponderMove={[Function]}
           onResponderRelease={[Function]}
           onResponderTerminate={[Function]}
           onResponderTerminationRequest={[Function]}
           onStartShouldSetResponder={[Function]}
-          style={
-            Array [
-              Object {
-                "backgroundColor": "transparent",
-              },
-              undefined,
-            ]
-          }
-          testID={undefined}
-          tvParallaxProperties={undefined}
+          style={null}
         >
           <View
             style={
@@ -615,10 +506,6 @@ exports[`renders ./components/accordion/demo/basic.tsx correctly 1`] = `
               }
             >
               <Text
-                accessible={true}
-                allowFontScaling={true}
-                disabled={false}
-                ellipsizeMode="tail"
                 style={
                   Object {
                     "color": "#000000",
@@ -632,30 +519,36 @@ exports[`renders ./components/accordion/demo/basic.tsx correctly 1`] = `
             <View
               style={
                 Object {
-                  "height": 12,
-                  "width": 12,
+                  "color": "#cccccc",
                 }
               }
             >
-              <Image
-                source={1}
+              <Text
                 style={
-                  Object {
-                    "height": 12,
-                    "width": 12,
-                  }
+                  Array [
+                    Object {
+                      "color": "#cccccc",
+                      "fontFamily": "antoutline",
+                      "fontSize": 22,
+                      "fontStyle": "normal",
+                      "fontWeight": "normal",
+                    },
+                    Object {
+                      "color": "#cccccc",
+                    },
+                  ]
                 }
-              />
+              >
+                
+              </Text>
             </View>
           </View>
         </View>
         <View
-          collapsable={undefined}
           pointerEvents="auto"
           style={false}
         >
           <View
-            collapsable={undefined}
             onLayout={[Function]}
             style={Object {}}
           >
@@ -670,10 +563,6 @@ exports[`renders ./components/accordion/demo/basic.tsx correctly 1`] = `
               }
             >
               <Text
-                accessible={true}
-                allowFontScaling={true}
-                disabled={false}
-                ellipsizeMode="tail"
                 style={
                   Object {
                     "color": "#333333",

@@ -12,12 +12,12 @@ import {
   SelectOption,
   SelectFooterCellsItemPropsType,
 } from './PropsType'
-import themeVars from '../style/themes/default'
+import theme from '../style/themes/default'
 
 const styles = StyleSheet.create({
   icon: {
     fontSize: 16,
-    paddingLeft: themeVars.CellInnerGapH,
+    paddingLeft: theme.CellInnerGapH,
   },
   disabled: {
     opacity: 0.5,

@@ -1,8 +1,7 @@
-// tslint:disable:jsx-no-multiline-js
-import React from 'react'
 
-import { ScrollView, StyleSheet, Text, View } from 'react-native'
-import { Button, Drawer, List, GapH } from '@popui/popui-rn'
+import React from 'react';
+import { ScrollView, StyleSheet, Text, View } from 'react-native';
+import { Button, Drawer, List } from '../../';
 
 const styles = StyleSheet.create({
   container: {
@@ -42,7 +41,7 @@ export default class DrawerExample extends React.Component<any, any> {
                 <Button
                   type="primary"
                   size="small"
-                  onClick={() => this.drawer.closeDrawer()}
+                  onPress={() => this.drawer.closeDrawer()}
                 >
                   close drawer
                 </Button>
@@ -77,7 +76,7 @@ export default class DrawerExample extends React.Component<any, any> {
         drawerBackgroundColor="#ccc"
       >
         <View style={{ flex: 1, marginTop: 114, padding: 8 }}>
-          <Button onClick={() => this.drawer && this.drawer.openDrawer()}>
+          <Button onPress={() => this.drawer && this.drawer.openDrawer()}>
             Open drawer
           </Button>
           <GapH />

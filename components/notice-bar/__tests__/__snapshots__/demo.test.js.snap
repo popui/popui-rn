@@ -19,13 +19,7 @@ exports[`renders ./components/notice-bar/demo/basic.tsx correctly 1`] = `
     }
   />
   <View
-    accessibilityComponentType={undefined}
-    accessibilityLabel={undefined}
-    accessibilityTraits={undefined}
     accessible={true}
-    hitSlop={undefined}
-    nativeID={undefined}
-    onLayout={undefined}
     onResponderGrant={[Function]}
     onResponderMove={[Function]}
     onResponderRelease={[Function]}
@@ -44,7 +38,6 @@ exports[`renders ./components/notice-bar/demo/basic.tsx correctly 1`] = `
         undefined,
       ]
     }
-    testID={undefined}
   >
     <View
       style={
@@ -53,19 +46,22 @@ exports[`renders ./components/notice-bar/demo/basic.tsx correctly 1`] = `
         }
       }
     >
-      <Image
-        source={
-          Object {
-            "uri": "https://zos.alipayobjects.com/rmsportal/UgviADRsIpznkjSEXWEaPTlKtPCMSlth.png",
-          }
-        }
+      <Text
         style={
-          Object {
-            "height": 12,
-            "width": 14,
-          }
+          Array [
+            Object {
+              "color": "#f4333c",
+              "fontFamily": "antoutline",
+              "fontSize": 22,
+              "fontStyle": "normal",
+              "fontWeight": "normal",
+            },
+            undefined,
+          ]
         }
-      />
+      >
+        
+      </Text>
     </View>
     <View
       style={
@@ -93,7 +89,6 @@ exports[`renders ./components/notice-bar/demo/basic.tsx correctly 1`] = `
         }
       >
         <View
-          collapsable={undefined}
           style={
             Object {
               "flexDirection": "row",
@@ -103,9 +98,6 @@ exports[`renders ./components/notice-bar/demo/basic.tsx correctly 1`] = `
           }
         >
           <Text
-            accessible={true}
-            allowFontScaling={true}
-            disabled={false}
             ellipsizeMode="tail"
             numberOfLines={1}
             onLayout={[Function]}
@@ -153,19 +145,22 @@ exports[`renders ./components/notice-bar/demo/basic.tsx correctly 1`] = `
         }
       }
     >
-      <Image
-        source={
-          Object {
-            "uri": "https://zos.alipayobjects.com/rmsportal/UgviADRsIpznkjSEXWEaPTlKtPCMSlth.png",
-          }
-        }
+      <Text
         style={
-          Object {
-            "height": 12,
-            "width": 14,
-          }
+          Array [
+            Object {
+              "color": "#f4333c",
+              "fontFamily": "antoutline",
+              "fontSize": 22,
+              "fontStyle": "normal",
+              "fontWeight": "normal",
+            },
+            undefined,
+          ]
         }
-      />
+      >
+        
+      </Text>
     </View>
     <View
       style={
@@ -193,7 +188,6 @@ exports[`renders ./components/notice-bar/demo/basic.tsx correctly 1`] = `
         }
       >
         <View
-          collapsable={undefined}
           style={
             Object {
               "flexDirection": "row",
@@ -203,9 +197,6 @@ exports[`renders ./components/notice-bar/demo/basic.tsx correctly 1`] = `
           }
         >
           <Text
-            accessible={true}
-            allowFontScaling={true}
-            disabled={false}
             ellipsizeMode="tail"
             numberOfLines={1}
             onLayout={[Function]}
@@ -222,13 +213,7 @@ exports[`renders ./components/notice-bar/demo/basic.tsx correctly 1`] = `
       </View>
     </View>
     <View
-      accessibilityComponentType={undefined}
-      accessibilityLabel={undefined}
-      accessibilityTraits={undefined}
       accessible={true}
-      hitSlop={undefined}
-      nativeID={undefined}
-      onLayout={undefined}
       onResponderGrant={[Function]}
       onResponderMove={[Function]}
       onResponderRelease={[Function]}
@@ -240,13 +225,8 @@ exports[`renders ./components/notice-bar/demo/basic.tsx correctly 1`] = `
           "marginRight": 15,
         }
       }
-      testID={undefined}
     >
       <Text
-        accessible={true}
-        allowFontScaling={true}
-        disabled={false}
-        ellipsizeMode="tail"
         style={
           Array [
             Object {
@@ -333,7 +313,6 @@ exports[`renders ./components/notice-bar/demo/basic.tsx correctly 1`] = `
         }
       >
         <View
-          collapsable={undefined}
           style={
             Object {
               "flexDirection": "row",
@@ -343,9 +322,6 @@ exports[`renders ./components/notice-bar/demo/basic.tsx correctly 1`] = `
           }
         >
           <Text
-            accessible={true}
-            allowFontScaling={true}
-            disabled={false}
             ellipsizeMode="tail"
             numberOfLines={1}
             onLayout={[Function]}
@@ -362,13 +338,7 @@ exports[`renders ./components/notice-bar/demo/basic.tsx correctly 1`] = `
       </View>
     </View>
     <View
-      accessibilityComponentType={undefined}
-      accessibilityLabel={undefined}
-      accessibilityTraits={undefined}
       accessible={true}
-      hitSlop={undefined}
-      nativeID={undefined}
-      onLayout={undefined}
       onResponderGrant={[Function]}
       onResponderMove={[Function]}
       onResponderRelease={[Function]}
@@ -380,13 +350,8 @@ exports[`renders ./components/notice-bar/demo/basic.tsx correctly 1`] = `
           "marginRight": 15,
         }
       }
-      testID={undefined}
     >
       <Text
-        accessible={true}
-        allowFontScaling={true}
-        disabled={false}
-        ellipsizeMode="tail"
         style={
           Array [
             Object {
@@ -413,13 +378,7 @@ exports[`renders ./components/notice-bar/demo/basic.tsx correctly 1`] = `
     }
   />
   <View
-    accessibilityComponentType={undefined}
-    accessibilityLabel={undefined}
-    accessibilityTraits={undefined}
     accessible={true}
-    hitSlop={undefined}
-    nativeID={undefined}
-    onLayout={undefined}
     onResponderGrant={[Function]}
     onResponderMove={[Function]}
     onResponderRelease={[Function]}
@@ -438,7 +397,6 @@ exports[`renders ./components/notice-bar/demo/basic.tsx correctly 1`] = `
         undefined,
       ]
     }
-    testID={undefined}
   >
     <View
       style={
@@ -447,19 +405,22 @@ exports[`renders ./components/notice-bar/demo/basic.tsx correctly 1`] = `
         }
       }
     >
-      <Image
-        source={
-          Object {
-            "uri": "https://zos.alipayobjects.com/rmsportal/UgviADRsIpznkjSEXWEaPTlKtPCMSlth.png",
-          }
-        }
+      <Text
         style={
-          Object {
-            "height": 12,
-            "width": 14,
-          }
+          Array [
+            Object {
+              "color": "#f4333c",
+              "fontFamily": "antoutline",
+              "fontSize": 22,
+              "fontStyle": "normal",
+              "fontWeight": "normal",
+            },
+            undefined,
+          ]
         }
-      />
+      >
+        
+      </Text>
     </View>
     <View
       style={
@@ -487,7 +448,6 @@ exports[`renders ./components/notice-bar/demo/basic.tsx correctly 1`] = `
         }
       >
         <View
-          collapsable={undefined}
           style={
             Object {
               "flexDirection": "row",
@@ -497,9 +457,6 @@ exports[`renders ./components/notice-bar/demo/basic.tsx correctly 1`] = `
           }
         >
           <Text
-            accessible={true}
-            allowFontScaling={true}
-            disabled={false}
             ellipsizeMode="tail"
             numberOfLines={1}
             onLayout={[Function]}
@@ -523,10 +480,6 @@ exports[`renders ./components/notice-bar/demo/basic.tsx correctly 1`] = `
       }
     >
       <Text
-        accessible={true}
-        allowFontScaling={true}
-        disabled={false}
-        ellipsizeMode="tail"
         style={
           Array [
             Object {
@@ -558,13 +511,7 @@ exports[`renders ./components/notice-bar/demo/basic.tsx correctly 1`] = `
     }
   />
   <View
-    accessibilityComponentType={undefined}
-    accessibilityLabel={undefined}
-    accessibilityTraits={undefined}
     accessible={true}
-    hitSlop={undefined}
-    nativeID={undefined}
-    onLayout={undefined}
     onResponderGrant={[Function]}
     onResponderMove={[Function]}
     onResponderRelease={[Function]}
@@ -583,7 +530,6 @@ exports[`renders ./components/notice-bar/demo/basic.tsx correctly 1`] = `
         undefined,
       ]
     }
-    testID={undefined}
   >
     <View
       style={
@@ -592,19 +538,22 @@ exports[`renders ./components/notice-bar/demo/basic.tsx correctly 1`] = `
         }
       }
     >
-      <Image
-        source={
-          Object {
-            "uri": "https://zos.alipayobjects.com/rmsportal/UgviADRsIpznkjSEXWEaPTlKtPCMSlth.png",
-          }
-        }
+      <Text
         style={
-          Object {
-            "height": 12,
-            "width": 14,
-          }
+          Array [
+            Object {
+              "color": "#f4333c",
+              "fontFamily": "antoutline",
+              "fontSize": 22,
+              "fontStyle": "normal",
+              "fontWeight": "normal",
+            },
+            undefined,
+          ]
         }
-      />
+      >
+        
+      </Text>
     </View>
     <View
       style={
@@ -632,7 +581,6 @@ exports[`renders ./components/notice-bar/demo/basic.tsx correctly 1`] = `
         }
       >
         <View
-          collapsable={undefined}
           style={
             Object {
               "flexDirection": "row",
@@ -642,9 +590,6 @@ exports[`renders ./components/notice-bar/demo/basic.tsx correctly 1`] = `
           }
         >
           <Text
-            accessible={true}
-            allowFontScaling={true}
-            disabled={false}
             ellipsizeMode="tail"
             numberOfLines={1}
             onLayout={[Function]}
@@ -668,10 +613,6 @@ exports[`renders ./components/notice-bar/demo/basic.tsx correctly 1`] = `
       }
     >
       <Text
-        accessible={true}
-        allowFontScaling={true}
-        disabled={false}
-        ellipsizeMode="tail"
         style={
           Array [
             Object {
@@ -718,6 +659,30 @@ exports[`renders ./components/notice-bar/demo/basic.tsx correctly 1`] = `
   >
     <View
       style={
+        Object {
+          "marginLeft": 15,
+        }
+      }
+    >
+      <Text
+        style={
+          Array [
+            Object {
+              "color": "#f4333c",
+              "fontFamily": "antoutline",
+              "fontSize": 22,
+              "fontStyle": "normal",
+              "fontWeight": "normal",
+            },
+            undefined,
+          ]
+        }
+      >
+        
+      </Text>
+    </View>
+    <View
+      style={
         Array [
           Object {
             "flex": 1,
@@ -726,7 +691,7 @@ exports[`renders ./components/notice-bar/demo/basic.tsx correctly 1`] = `
             "width": 0,
           },
           Object {
-            "marginLeft": 15,
+            "marginLeft": 5,
           },
         ]
       }
@@ -742,7 +707,6 @@ exports[`renders ./components/notice-bar/demo/basic.tsx correctly 1`] = `
         }
       >
         <View
-          collapsable={undefined}
           style={
             Object {
               "flexDirection": "row",
@@ -752,9 +716,6 @@ exports[`renders ./components/notice-bar/demo/basic.tsx correctly 1`] = `
           }
         >
           <Text
-            accessible={true}
-            allowFontScaling={true}
-            disabled={false}
             ellipsizeMode="tail"
             numberOfLines={1}
             onLayout={[Function]}
@@ -771,13 +732,7 @@ exports[`renders ./components/notice-bar/demo/basic.tsx correctly 1`] = `
       </View>
     </View>
     <View
-      accessibilityComponentType={undefined}
-      accessibilityLabel={undefined}
-      accessibilityTraits={undefined}
       accessible={true}
-      hitSlop={undefined}
-      nativeID={undefined}
-      onLayout={undefined}
       onResponderGrant={[Function]}
       onResponderMove={[Function]}
       onResponderRelease={[Function]}
@@ -789,13 +744,8 @@ exports[`renders ./components/notice-bar/demo/basic.tsx correctly 1`] = `
           "marginRight": 15,
         }
       }
-      testID={undefined}
     >
       <Text
-        accessible={true}
-        allowFontScaling={true}
-        disabled={false}
-        ellipsizeMode="tail"
         style={
           Array [
             Object {
@@ -842,19 +792,22 @@ exports[`renders ./components/notice-bar/demo/basic.tsx correctly 1`] = `
         }
       }
     >
-      <Image
-        source={
-          Object {
-            "uri": "https://zos.alipayobjects.com/rmsportal/UgviADRsIpznkjSEXWEaPTlKtPCMSlth.png",
-          }
-        }
+      <Text
         style={
-          Object {
-            "height": 12,
-            "width": 14,
-          }
+          Array [
+            Object {
+              "color": "#f4333c",
+              "fontFamily": "antoutline",
+              "fontSize": 22,
+              "fontStyle": "normal",
+              "fontWeight": "normal",
+            },
+            undefined,
+          ]
         }
-      />
+      >
+        
+      </Text>
     </View>
     <View
       style={
@@ -882,7 +835,6 @@ exports[`renders ./components/notice-bar/demo/basic.tsx correctly 1`] = `
         }
       >
         <View
-          collapsable={undefined}
           style={
             Object {
               "flexDirection": "row",
@@ -892,9 +844,6 @@ exports[`renders ./components/notice-bar/demo/basic.tsx correctly 1`] = `
           }
         >
           <Text
-            accessible={true}
-            allowFontScaling={true}
-            disabled={false}
             ellipsizeMode="tail"
             numberOfLines={1}
             onLayout={[Function]}
@@ -911,13 +860,7 @@ exports[`renders ./components/notice-bar/demo/basic.tsx correctly 1`] = `
       </View>
     </View>
     <View
-      accessibilityComponentType={undefined}
-      accessibilityLabel={undefined}
-      accessibilityTraits={undefined}
       accessible={true}
-      hitSlop={undefined}
-      nativeID={undefined}
-      onLayout={undefined}
       onResponderGrant={[Function]}
       onResponderMove={[Function]}
       onResponderRelease={[Function]}
@@ -929,13 +872,8 @@ exports[`renders ./components/notice-bar/demo/basic.tsx correctly 1`] = `
           "marginRight": 15,
         }
       }
-      testID={undefined}
     >
       <Text
-        accessible={true}
-        allowFontScaling={true}
-        disabled={false}
-        ellipsizeMode="tail"
         style={
           Object {
             "color": "#a1a1a1",
@@ -957,13 +895,7 @@ exports[`renders ./components/notice-bar/demo/basic.tsx correctly 1`] = `
     }
   />
   <View
-    accessibilityComponentType={undefined}
-    accessibilityLabel={undefined}
-    accessibilityTraits={undefined}
     accessible={true}
-    hitSlop={undefined}
-    nativeID={undefined}
-    onLayout={undefined}
     onResponderGrant={[Function]}
     onResponderMove={[Function]}
     onResponderRelease={[Function]}
@@ -982,7 +914,6 @@ exports[`renders ./components/notice-bar/demo/basic.tsx correctly 1`] = `
         undefined,
       ]
     }
-    testID={undefined}
   >
     <View
       style={
@@ -991,19 +922,22 @@ exports[`renders ./components/notice-bar/demo/basic.tsx correctly 1`] = `
         }
       }
     >
-      <Image
-        source={
-          Object {
-            "uri": "https://zos.alipayobjects.com/rmsportal/UgviADRsIpznkjSEXWEaPTlKtPCMSlth.png",
-          }
-        }
+      <Text
         style={
-          Object {
-            "height": 12,
-            "width": 14,
-          }
+          Array [
+            Object {
+              "color": "#f4333c",
+              "fontFamily": "antoutline",
+              "fontSize": 22,
+              "fontStyle": "normal",
+              "fontWeight": "normal",
+            },
+            undefined,
+          ]
         }
-      />
+      >
+        
+      </Text>
     </View>
     <View
       style={
@@ -1031,7 +965,6 @@ exports[`renders ./components/notice-bar/demo/basic.tsx correctly 1`] = `
         }
       >
         <View
-          collapsable={undefined}
           style={
             Object {
               "flexDirection": "row",
@@ -1041,9 +974,6 @@ exports[`renders ./components/notice-bar/demo/basic.tsx correctly 1`] = `
           }
         >
           <Text
-            accessible={true}
-            allowFontScaling={true}
-            disabled={false}
             ellipsizeMode="tail"
             numberOfLines={1}
             onLayout={[Function]}
@@ -1066,12 +996,7 @@ exports[`renders ./components/notice-bar/demo/basic.tsx correctly 1`] = `
         }
       }
     >
-      <Text
-        accessible={true}
-        allowFontScaling={true}
-        disabled={false}
-        ellipsizeMode="tail"
-      >
+      <Text>
         去看看
       </Text>
     </View>

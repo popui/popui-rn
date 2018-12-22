@@ -1,19 +1,8 @@
-import React from 'react'
-import {
-  StyleSheet,
-  View,
-  Text,
-  Image,
-  Platform,
-  TouchableOpacity,
-  Alert,
-  Linking,
-  ActivityIndicator,
-  StatusBar,
-} from 'react-native'
-import { List } from '@popui/popui-rn'
+import { List } from '@popui/popui-rn';
+import React from 'react';
+import { ActivityIndicator, Alert, Image, Linking, Platform, StatusBar, StyleSheet, Text, TouchableOpacity, View } from 'react-native';
 // import codePush from 'react-native-code-push';
-import AppInfo from './appInfo.js'
+import AppInfo from './appInfo.js';
 
 // const codePushOptions = { checkFrequency: codePush.CheckFrequency.MANUAL };
 

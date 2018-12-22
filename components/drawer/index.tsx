@@ -1,8 +1,7 @@
-/* tslint:disable:jsx-no-multiline-js */
-import React from 'react'
 
-import DrawerLayout from 'react-native-drawer-layout'
-import { DrawerProps } from './PropsType'
+import React from 'react';
+import DrawerLayout from 'react-native-drawer-layout';
+import { DrawerProps } from './PropsType';
 
 export interface DrawerNativeProps extends DrawerProps {
   drawerRef?: (el: DrawerLayout | null) => void
@@ -44,8 +43,8 @@ export default class Drawer extends React.Component<DrawerNativeProps, any> {
       drawerRef,
       drawerWidth = 300,
       ...restProps
-    } = this.props
-    ;[
+    } = this.props;
+    [
       'onOpenChange',
       'onDrawerOpen',
       'onDrawerClose',

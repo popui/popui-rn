@@ -1,22 +1,18 @@
 /* tslint:disable:jsx-no-multiline-js */
-import React from 'react'
-import { StyleSheet, View } from 'react-native'
+import Expo from 'expo';
+import React from 'react';
+import { StyleSheet, View } from 'react-native';
+import ImagePickerAddButton from '../image-picker-add-button';
+import ImagePickerItem from '../image-picker-item';
+import { noopFunc } from '../_util/noop';
+import { ensureHasPermission } from '../_util/permission';
 // import ImageRoll from './ImageRoll';
-import {
-  ImagePickerPropTypes,
-  ImageItemPropType,
-  ImageItemFuncArgs,
-} from './PropsType'
-import imagePickerStyle, { IImagePickerStyle } from './style/index'
-import Expo from 'expo'
-import { ensureHasPermission } from '../_util/permission'
-import ImagePickerItem from '../image-picker-item'
-import ImagePickerAddButton from '../image-picker-add-button'
+import { ImageItemFuncArgs, ImageItemPropType, ImagePickerPropTypes } from './PropsType';
+import imagePickerStyle, { IImagePickerStyle } from './style/index';
 
 export interface ImagePickerNativeProps extends ImagePickerPropTypes {
   styles?: IImagePickerStyle
 }
-import { noopFunc } from '../_util/noop'
 const imagePickerStyles = StyleSheet.create<any>(imagePickerStyle)
 
 export default class ImagePicker extends React.Component<
@@ -42,13 +38,13 @@ export default class ImagePicker extends React.Component<
       return
     }
     const { status } = await Expo.Permissions.getAsync(
-      Expo.Permissions.CAMERA_ROLL
+      Expo.Permissions.CAMERA_ROLL,
     )
     if (status !== 'granted') {
       await Expo.Permissions.askAsync(Expo.Permissions.CAMERA_ROLL)
     }
     await ensureHasPermission(Expo.Permissions.CAMERA_ROLL)
-    let result = await Expo.ImagePicker.launchImageLibraryAsync(pickerOptions)
+    const result = await Expo.ImagePicker.launchImageLibraryAsync(pickerOptions)
     if (!result.cancelled) {
       this.addImage(result)
     }

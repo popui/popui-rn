@@ -1,9 +1,7 @@
-import { DatePickerPropsType } from '../date-picker/PropsType'
+import { DatePickerPropsType } from '../date-picker/PropsType';
 
 export interface DatePickerProps extends DatePickerPropsType {
-  onScrollChange?: (newValue: any, vals: any, index: number) => void
-  /** rn only */
-  triggerTypes?: string
-  /** rn only */
-  styles?: any
+  onScrollChange?: (newValue: any, vals: any, index: number) => void;
+  triggerTypes?: string;
+  styles?: any;
 }

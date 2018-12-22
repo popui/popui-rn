@@ -1,8 +1,8 @@
 /* tslint:disable:no-console */
-import React from 'react'
+import { List, SwipeAction } from '@popui/popui-rn';
+import React from 'react';
+import { View } from 'react-native';
 
-import { View } from 'react-native'
-import { List, SwipeAction } from '@popui/popui-rn'
 
 export default class BasicSwipeActionExample extends React.Component<any, any> {
   render() {

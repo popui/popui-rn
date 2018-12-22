@@ -1,18 +1,10 @@
-import React from 'react'
-
-import { View } from 'react-native'
-import {
-  Pagination,
-  LocaleProvider,
-  List,
-  DatePicker,
-  GapH,
-  GapV,
-  Picker,
-  SearchBar,
-} from '@popui/popui-rn'
-import enUS from '../en_US'
-import ruRU from '../ru_RU'
+import React from 'react';
+import { View } from 'react-native';
+import LocaleProvider from '..';
+import { DatePicker, GapH, GapV, List, Pagination, Picker, SearchBar } from '../../';
+import enUS from '../en_US';
+import ruRU from '../ru_RU';
+import zhCN from '../zh_CN';
 
 const maxDate = new Date(2018, 11, 3, 22, 0)
 const minDate = new Date(2015, 7, 6, 8, 30)
@@ -82,7 +74,7 @@ export default class LocaleProviderExample extends React.Component<any, any> {
       {
         value: '中国',
         label: '中国',
-        language: undefined,
+        language: zhCN,
       },
       {
         value: 'English',
@@ -94,8 +86,13 @@ export default class LocaleProviderExample extends React.Component<any, any> {
         label: 'Русский',
         language: ruRU,
       },
-    ]
-    const currentLocale = languages.find(item => item.value === locale).language
+      {
+        value: 'Español',
+        label: 'Español',
+        language: esES,
+      },
+    ];
+    const currentLocale = languages.find(item => item.value === locale).language;
 
     return (
       <GapV>

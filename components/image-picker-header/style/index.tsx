@@ -13,7 +13,7 @@ export default {
     flexDirection: 'row',
     alignItems: 'center',
     justifyContent: 'space-between',
-    // height: 17 * themeVars.baseLineHeight,
+    // height: 17 * theme.baseLineHeight,
   },
   uploaderTitle: {
     fontSize: 17,

@@ -3,7 +3,7 @@ order: 0
 title: Ant Design Mobile RN of React
 ---
 
-`popui-rn` is the React implementation of the [Ant Design](http://ant.design)'s mobile specification, serving the ant and koubei wireless service.
+`@ant-design/react-native` is the React implementation of the [Ant Design](http://ant.design)'s mobile specification, serving the ant and koubei wireless service.
 
 <div class="pic-plus">
   <img width="160" src="https://gw.alipayobjects.com/zos/rmsportal/KDpgvguMpGfqaHPjicRK.svg">
@@ -58,7 +58,65 @@ The complete procedure please check the document here: [antd-mobile-sample/creat
 ### 2. Installation
 
 ```bash
-$ npm install popui-rn --save
+$ npm install @ant-design/react-native --save
+```
+
+or
+
+```bash
+yarn add @ant-design/react-native
+```
+
+### Link icon fonts
+
+```bash
+react-native link @ant-design/icons-react-native
+```
+
+> If you are using expo please make sure fonts has been loaded
+
+```jsx
+import { AppLoading, Font } from 'expo';
+...
+...
+class App extends React.Component {
+  state = {
+    theme: null,
+    currentTheme: null,
+    isReady: false,
+  };
+  changeTheme = (theme, currentTheme) => {
+    this.setState({ theme, currentTheme });
+  };
+  async componentDidMount() {
+    await Font.loadAsync(
+      'antoutline',
+      // eslint-disable-next-line
+      require('@ant-design/icons-react-native/fonts/antoutline.ttf')
+    );
+
+    await Font.loadAsync(
+      'antfill',
+      // eslint-disable-next-line
+      require('@ant-design/icons-react-native/fonts/antfill.ttf')
+    );
+    // eslint-disable-next-line
+    this.setState({ isReady: true });
+  }
+  render() {
+    const { theme, currentTheme, isReady } = this.state;
+    if (!isReady) {
+      return <AppLoading />;
+    }
+    return (
+      <Provider theme={theme}>
+        <RootNavigator
+          screenProps={{ changeTheme: this.changeTheme, currentTheme }}
+        />
+      </Provider>
+    );
+  }
+}
 ```
 
 ### 3. Usage
@@ -68,7 +126,7 @@ Example of usage:
 ```jsx
 import React, { Component } from 'react';
 import { AppRegistry } from 'react-native';
-import Button from '@popui/popui-rn/lib/button';
+import Button from '@ant-design/react-native/lib/button';
 
 class HelloWorldApp extends Component {
   render() {
@@ -79,34 +137,34 @@ class HelloWorldApp extends Component {
 AppRegistry.registerComponent('HelloWorldApp', () => HelloWorldApp);
 ```
 
-##### Use modularized popui-rn
+##### Use modularized @ant-design/react-native
 
 The following two ways used to load the **only components you used**, select one of the ways you like.
 
 - Use [babel-plugin-import](https://github.com/ant-design/babel-plugin-import) (Recommended)
 
-   ```js
-   // .babelrc or babel-loader option
-   {
-     "plugins": [
-       ["import", { libraryName: "@popui/popui-rn" }] // The difference with the Web platform is that you do not need to set the style
-     ]
-   }
-   ```
+  ```js
+  // .babelrc or babel-loader option
+  {
+    "plugins": [
+      ["import", { libraryName: "@ant-design/react-native" }] // The difference with the Web platform is that you do not need to set the style
+    ]
+  }
+  ```
 
-   Then just change the way of import modules from popui-rn.
+  Then just change the way of import modules from @ant-design/react-native.
 
-   ```jsx
-   import { Button } from "@popui/popui-rn";
-   ```
+  ```jsx
+  import { Button } from '@ant-design/react-native';
+  ```
 
-   > Note: Some people reflected that it would be [unable to resolve module `react-dom`](https://github.com/ant-design/ant-design-mobile/issues/2054) in a project created with `react-native init`. If you encounter the same problem, you might try to install [babel-plugin-module-resolver](https://www.npmjs.com/package/babel-plugin-module-resolver).
+  > Note: Some people reflected that it would be [unable to resolve module `react-dom`](https://github.com/ant-design/ant-design-mobile/issues/2054) in a project created with `react-native init`. If you encounter the same problem, you might try to install [babel-plugin-module-resolver](https://www.npmjs.com/package/babel-plugin-module-resolver).
 
 - Manually import
 
-   ```jsx
-   import Button from '@popui/popui-rn/lib/button';
-   ```
+  ```jsx
+  import Button from '@ant-design/react-native/lib/button';
+  ```
 
 ##### More enhanced (optional):
 
@@ -115,8 +173,8 @@ The following two ways used to load the **only components you used**, select one
 
 ## Version
 
-- Stable: [![npm package](http://img.shields.io/npm/v/popui-rn.svg?style=flat-square)](http://npmjs.com/package/popui-rn)
-- Next: [![npm package](https://img.shields.io/npm/v/@popui/popui-rn/next.svg)](http://npmjs.com/package/popui-rn)
+- Stable: [![npm package](http://img.shields.io/npm/v/@ant-design/react-native.svg?style=flat-square)](http://npmjs.com/package/@ant-design/react-native)
+- Next: [![npm package](https://img.shields.io/npm/v/@ant-design/react-native/next.svg)](http://npmjs.com/package/@ant-design/react-native)
 
 ## Links
 
@@ -128,9 +186,9 @@ The following two ways used to load the **only components you used**, select one
 
 Please read our [CONTRIBUTING.md](https://github.com/ant-design/ant-design-mobile-rn/blob/master/.github/CONTRIBUTING.md) first.
 
-If you'd like to help us improve popui-rn, just create a [Pull Request](https://github.com/ant-design/ant-design-mobile-rn/pulls). Feel free to report bugs and issues [here](https://github.com/ant-design/ant-design-mobile-rn/issues/new).
+If you'd like to help us improve @ant-design/react-native, just create a [Pull Request](https://github.com/ant-design/ant-design-mobile-rn/pulls). Feel free to report bugs and issues [here](https://github.com/ant-design/ant-design-mobile-rn/issues/new).
 
-> If you're new to posting issues, we ask that you read [*How To Ask Questions The Smart Way*](http://www.catb.org/~esr/faqs/smart-questions.html) and [How to Ask a Question in Open Source Community](https://github.com/seajs/seajs/issues/545) and [How to Report Bugs Effectively](http://www.chiark.greenend.org.uk/~sgtatham/bugs.html) prior to posting. Well written bug reports help us help you!
+> If you're new to posting issues, we ask that you read [_How To Ask Questions The Smart Way_](http://www.catb.org/~esr/faqs/smart-questions.html) and [How to Ask a Question in Open Source Community](https://github.com/seajs/seajs/issues/545) and [How to Report Bugs Effectively](http://www.chiark.greenend.org.uk/~sgtatham/bugs.html) prior to posting. Well written bug reports help us help you!
 
 ## Need Help?
 

@@ -1,24 +1,15 @@
-import React from 'react'
-
-import {
-  Animated,
-  Easing,
-  LayoutChangeEvent,
-  StyleProp,
-  Text,
-  TextStyle,
-  View,
-} from 'react-native'
+import React from 'react';
+import { Animated, Easing, LayoutChangeEvent, StyleProp, Text, TextStyle, View } from 'react-native';
 
 export interface MarqueeProps {
-  text: React.ReactNode
-  loop?: boolean
-  leading?: number
-  trailing?: number
-  className?: string
-  fps?: number
-  style?: StyleProp<TextStyle>
-  maxWidth?: number
+  text?: React.ReactNode;
+  loop?: boolean;
+  leading?: number;
+  trailing?: number;
+  className?: string;
+  fps?: number;
+  style?: StyleProp<TextStyle>;
+  maxWidth?: number;
 }
 
 class Marquee extends React.Component<MarqueeProps, any> {
@@ -69,7 +60,7 @@ class Marquee extends React.Component<MarqueeProps, any> {
         },
         () => {
           this.tryStart()
-        }
+        },
       )
     }
   }

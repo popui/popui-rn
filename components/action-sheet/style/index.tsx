@@ -1,23 +1,23 @@
-import { StyleSheet, TextStyle, ViewStyle } from 'react-native'
-import themeVars from '../../style/themes/default'
+import { StyleSheet, TextStyle, ViewStyle } from 'react-native';
+import { Theme } from '../../style';
 
 export interface ActionSheetStyle {
-  container: ViewStyle
-  wrap: ViewStyle
-  content: ViewStyle
-  mask: ViewStyle
-  title: ViewStyle
-  titleText: TextStyle
-  message: ViewStyle
-  btn: ViewStyle
-  cancelBtn: ViewStyle
-  cancelBtnMask: ViewStyle
-  destructiveBtn: TextStyle
+  container: ViewStyle;
+  wrap: ViewStyle;
+  content: ViewStyle;
+  mask: ViewStyle;
+  title: ViewStyle;
+  titleText: TextStyle;
+  message: ViewStyle;
+  btn: ViewStyle;
+  cancelBtn: ViewStyle;
+  cancelBtnMask: ViewStyle;
+  destructiveBtn: TextStyle;
 }
 
-export default StyleSheet.create<any>({
+export default (theme: Theme) => StyleSheet.create<ActionSheetStyle>({
   container: {
-    zIndex: themeVars.action_sheet_zindex,
+    zIndex: theme.action_sheet_zindex,
   },
   wrap: {
     position: 'absolute',
@@ -30,7 +30,7 @@ export default StyleSheet.create<any>({
     left: 0,
     right: 0,
     bottom: 0,
-    backgroundColor: themeVars.fill_base,
+    backgroundColor: theme.fill_base,
   },
   mask: {
     position: 'absolute',
@@ -38,14 +38,14 @@ export default StyleSheet.create<any>({
     bottom: 0,
     left: 0,
     right: 0,
-    backgroundColor: themeVars.fill_mask,
+    backgroundColor: theme.fill_mask,
   },
   title: {
     flex: 1,
     alignItems: 'center',
     // justifyContent: 'center',
-    marginTop: themeVars.h_spacing_lg,
-    marginBottom: themeVars.h_spacing_lg,
+    marginTop: theme.h_spacing_lg,
+    marginBottom: theme.h_spacing_lg,
   },
   titleText: {
     fontWeight: '500',
@@ -54,35 +54,35 @@ export default StyleSheet.create<any>({
     flex: 1,
     alignItems: 'center',
     // justifyContent: 'center',
-    marginBottom: themeVars.h_spacing_lg,
+    marginBottom: theme.h_spacing_lg,
   },
   btn: {
     flex: 1,
     alignItems: 'center',
     justifyContent: 'center',
-    height: themeVars.actionsheet_item_height,
+    height: theme.actionsheet_item_height,
     borderStyle: 'solid',
     borderTopWidth: 1,
-    borderTopColor: themeVars.border_color_base,
+    borderTopColor: theme.border_color_base,
     backgroundColor: 'white',
   },
   cancelBtn: {
-    marginTop: themeVars.v_spacing_md,
+    marginTop: theme.v_spacing_md,
     position: 'relative',
   },
   cancelBtnMask: {
     position: 'absolute',
-    top: -themeVars.v_spacing_md,
+    top: -theme.v_spacing_md,
     left: 0,
     right: 0,
-    height: themeVars.v_spacing_md,
-    backgroundColor: themeVars.fill_grey,
+    height: theme.v_spacing_md,
+    backgroundColor: theme.fill_grey,
     borderStyle: 'solid',
     borderTopWidth: 1,
-    borderTopColor: themeVars.border_color_base,
+    borderTopColor: theme.border_color_base,
   },
   destructiveBtn: {
-    color: themeVars.brand_error,
-    fontSize: themeVars.actionsheet_item_font_size,
+    color: theme.brand_error,
+    fontSize: theme.actionsheet_item_font_size,
   },
-})
+});

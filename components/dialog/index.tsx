@@ -10,7 +10,7 @@ import {
   ViewStyle,
   TextStyle,
 } from 'react-native'
-import themeVars from '../style/themes/default'
+import theme from '../style/themes/default'
 // import RCModal from "rmc-dialog/lib/Modal";
 import { DialogPropsType, ActionPropsType } from './PropsType'
 import modalStyle, { IModalStyle } from './style/index'
@@ -122,7 +122,7 @@ class Dialog extends React.Component<IModalNativeProps, any> {
       <TouchableWithFallback
         key={index}
         style={this.horizontalFlex}
-        underlayColor={themeVars.DialogLinkActiveBc}
+        underlayColor={theme.DialogLinkActiveBc}
         onPress={onPressFn}
       >
         <View style={[buttonWrapStyle, noneBorder]}>

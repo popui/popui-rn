@@ -1,5 +1,5 @@
-import { TextStyle, ViewStyle } from 'react-native'
-import themeVars from '../../style/themes/default'
+import { TextStyle, ViewStyle } from 'react-native';
+import theme from '../../style/themes/default';
 
 export interface INoticeBarStyle {
   notice: ViewStyle
@@ -14,41 +14,41 @@ export interface INoticeBarStyle {
 
 export default {
   notice: {
-    backgroundColor: themeVars.notice_bar_fill,
-    height: themeVars.notice_bar_height,
+    backgroundColor: theme.notice_bar_fill,
+    height: theme.notice_bar_height,
     overflow: 'hidden',
     flexDirection: 'row',
     alignItems: 'center',
   },
   container: {
     flex: 1,
-    marginRight: themeVars.h_spacing_lg,
+    marginRight: theme.h_spacing_lg,
     overflow: 'hidden',
     width: 0, // ios bug: width size is wrong (usecase: with react-navigation).
   },
   content: {
-    fontSize: themeVars.font_size_subhead,
-    color: themeVars.brand_warning,
+    fontSize: theme.font_size_subhead,
+    color: theme.brand_warning,
   },
   left6: {
-    marginLeft: themeVars.h_spacing_sm,
+    marginLeft: theme.h_spacing_sm,
   },
   left15: {
-    marginLeft: themeVars.h_spacing_lg,
+    marginLeft: theme.h_spacing_lg,
   },
   actionWrap: {
-    marginRight: themeVars.h_spacing_lg,
+    marginRight: theme.h_spacing_lg,
   },
   close: {
-    color: themeVars.brand_warning,
+    color: theme.brand_warning,
     fontSize: 18,
     fontWeight: '200',
     textAlign: 'left',
   },
   link: {
     transform: [{ rotate: '225deg' }],
-    color: themeVars.brand_warning,
-    fontSize: themeVars.font_size_icontext,
+    color: theme.brand_warning,
+    fontSize: theme.font_size_icontext,
     fontWeight: '500',
     textAlign: 'left',
   },

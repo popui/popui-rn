@@ -15,12 +15,7 @@ exports[`renders ./components/carousel/demo/basic.tsx correctly 1`] = `
       }
     }
   >
-    <Text
-      accessible={true}
-      allowFontScaling={true}
-      disabled={false}
-      ellipsizeMode="tail"
-    >
+    <Text>
       horizontal
     </Text>
     <View
@@ -65,37 +60,6 @@ exports[`renders ./components/carousel/demo/basic.tsx correctly 1`] = `
             "backgroundColor": "#fff",
           }
         }
-        styles={
-          Object {
-            "pagination": Object {
-              "alignItems": "center",
-              "position": "absolute",
-            },
-            "paginationX": Object {
-              "bottom": 10,
-              "left": 0,
-              "right": 0,
-            },
-            "paginationY": Object {
-              "bottom": 0,
-              "right": 10,
-              "top": 0,
-            },
-            "pointActiveStyle": Object {
-              "backgroundColor": "#888",
-            },
-            "pointStyle": Object {
-              "backgroundColor": "#cccccc",
-              "borderRadius": 8,
-              "height": 8,
-              "width": 8,
-            },
-            "spaceStyle": Object {
-              "marginHorizontal": 2.5,
-              "marginVertical": 3,
-            },
-          }
-        }
         vertical={false}
       >
         <View>
@@ -122,12 +86,7 @@ exports[`renders ./components/carousel/demo/basic.tsx correctly 1`] = `
                 ]
               }
             >
-              <Text
-                accessible={true}
-                allowFontScaling={true}
-                disabled={false}
-                ellipsizeMode="tail"
-              >
+              <Text>
                 Carousel 5
               </Text>
             </View>
@@ -155,12 +114,7 @@ exports[`renders ./components/carousel/demo/basic.tsx correctly 1`] = `
                 ]
               }
             >
-              <Text
-                accessible={true}
-                allowFontScaling={true}
-                disabled={false}
-                ellipsizeMode="tail"
-              >
+              <Text>
                 Carousel 1
               </Text>
             </View>
@@ -188,12 +142,7 @@ exports[`renders ./components/carousel/demo/basic.tsx correctly 1`] = `
                 ]
               }
             >
-              <Text
-                accessible={true}
-                allowFontScaling={true}
-                disabled={false}
-                ellipsizeMode="tail"
-              >
+              <Text>
                 Carousel 2
               </Text>
             </View>
@@ -221,12 +170,7 @@ exports[`renders ./components/carousel/demo/basic.tsx correctly 1`] = `
                 ]
               }
             >
-              <Text
-                accessible={true}
-                allowFontScaling={true}
-                disabled={false}
-                ellipsizeMode="tail"
-              >
+              <Text>
                 Carousel 3
               </Text>
             </View>
@@ -254,12 +198,7 @@ exports[`renders ./components/carousel/demo/basic.tsx correctly 1`] = `
                 ]
               }
             >
-              <Text
-                accessible={true}
-                allowFontScaling={true}
-                disabled={false}
-                ellipsizeMode="tail"
-              >
+              <Text>
                 Carousel 4
               </Text>
             </View>
@@ -287,12 +226,7 @@ exports[`renders ./components/carousel/demo/basic.tsx correctly 1`] = `
                 ]
               }
             >
-              <Text
-                accessible={true}
-                allowFontScaling={true}
-                disabled={false}
-                ellipsizeMode="tail"
-              >
+              <Text>
                 Carousel 5
               </Text>
             </View>
@@ -320,12 +254,7 @@ exports[`renders ./components/carousel/demo/basic.tsx correctly 1`] = `
                 ]
               }
             >
-              <Text
-                accessible={true}
-                allowFontScaling={true}
-                disabled={false}
-                ellipsizeMode="tail"
-              >
+              <Text>
                 Carousel 1
               </Text>
             </View>
@@ -454,20 +383,10 @@ exports[`renders ./components/carousel/demo/basic.tsx correctly 1`] = `
         </View>
       </View>
     </View>
-    <Text
-      accessible={true}
-      allowFontScaling={true}
-      disabled={false}
-      ellipsizeMode="tail"
-    >
+    <Text>
       Carousel will adjust height based on content
     </Text>
-    <Text
-      accessible={true}
-      allowFontScaling={true}
-      disabled={false}
-      ellipsizeMode="tail"
-    >
+    <Text>
       0
     </Text>
   </View>
@@ -478,12 +397,7 @@ exports[`renders ./components/carousel/demo/basic.tsx correctly 1`] = `
       }
     }
   >
-    <Text
-      accessible={true}
-      allowFontScaling={true}
-      disabled={false}
-      ellipsizeMode="tail"
-    >
+    <Text>
       vertical
     </Text>
     <View
@@ -528,37 +442,6 @@ exports[`renders ./components/carousel/demo/basic.tsx correctly 1`] = `
             "backgroundColor": "#fff",
           }
         }
-        styles={
-          Object {
-            "pagination": Object {
-              "alignItems": "center",
-              "position": "absolute",
-            },
-            "paginationX": Object {
-              "bottom": 10,
-              "left": 0,
-              "right": 0,
-            },
-            "paginationY": Object {
-              "bottom": 0,
-              "right": 10,
-              "top": 0,
-            },
-            "pointActiveStyle": Object {
-              "backgroundColor": "#888",
-            },
-            "pointStyle": Object {
-              "backgroundColor": "#cccccc",
-              "borderRadius": 8,
-              "height": 8,
-              "width": 8,
-            },
-            "spaceStyle": Object {
-              "marginHorizontal": 2.5,
-              "marginVertical": 3,
-            },
-          }
-        }
         vertical={true}
       >
         <View>
@@ -585,12 +468,7 @@ exports[`renders ./components/carousel/demo/basic.tsx correctly 1`] = `
                 ]
               }
             >
-              <Text
-                accessible={true}
-                allowFontScaling={true}
-                disabled={false}
-                ellipsizeMode="tail"
-              >
+              <Text>
                 Carousel 5
               </Text>
             </View>
@@ -618,12 +496,7 @@ exports[`renders ./components/carousel/demo/basic.tsx correctly 1`] = `
                 ]
               }
             >
-              <Text
-                accessible={true}
-                allowFontScaling={true}
-                disabled={false}
-                ellipsizeMode="tail"
-              >
+              <Text>
                 Carousel 1
               </Text>
             </View>
@@ -651,12 +524,7 @@ exports[`renders ./components/carousel/demo/basic.tsx correctly 1`] = `
                 ]
               }
             >
-              <Text
-                accessible={true}
-                allowFontScaling={true}
-                disabled={false}
-                ellipsizeMode="tail"
-              >
+              <Text>
                 Carousel 2
               </Text>
             </View>
@@ -684,12 +552,7 @@ exports[`renders ./components/carousel/demo/basic.tsx correctly 1`] = `
                 ]
               }
             >
-              <Text
-                accessible={true}
-                allowFontScaling={true}
-                disabled={false}
-                ellipsizeMode="tail"
-              >
+              <Text>
                 Carousel 3
               </Text>
             </View>
@@ -717,12 +580,7 @@ exports[`renders ./components/carousel/demo/basic.tsx correctly 1`] = `
                 ]
               }
             >
-              <Text
-                accessible={true}
-                allowFontScaling={true}
-                disabled={false}
-                ellipsizeMode="tail"
-              >
+              <Text>
                 Carousel 4
               </Text>
             </View>
@@ -750,12 +608,7 @@ exports[`renders ./components/carousel/demo/basic.tsx correctly 1`] = `
                 ]
               }
             >
-              <Text
-                accessible={true}
-                allowFontScaling={true}
-                disabled={false}
-                ellipsizeMode="tail"
-              >
+              <Text>
                 Carousel 5
               </Text>
             </View>
@@ -783,12 +636,7 @@ exports[`renders ./components/carousel/demo/basic.tsx correctly 1`] = `
                 ]
               }
             >
-              <Text
-                accessible={true}
-                allowFontScaling={true}
-                disabled={false}
-                ellipsizeMode="tail"
-              >
+              <Text>
                 Carousel 1
               </Text>
             </View>
@@ -917,20 +765,10 @@ exports[`renders ./components/carousel/demo/basic.tsx correctly 1`] = `
         </View>
       </View>
     </View>
-    <Text
-      accessible={true}
-      allowFontScaling={true}
-      disabled={false}
-      ellipsizeMode="tail"
-    >
+    <Text>
       Use the height of the first child as the height of the Carousel
     </Text>
-    <Text
-      accessible={true}
-      allowFontScaling={true}
-      disabled={false}
-      ellipsizeMode="tail"
-    >
+    <Text>
       0
     </Text>
   </View>

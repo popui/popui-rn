@@ -1,19 +1,19 @@
 import { StyleSheet } from 'react-native'
-import themeVars from '../../style/themes/default'
+import theme from '../../style/themes/default'
 
 export default {
   underlayColor: {
-    backgroundColor: themeVars.fill_tap,
+    backgroundColor: theme.fill_tap,
   },
   container: {
     // marginTop:15,
   },
   body: {
-    // marginTop: themeVars.CellsMarginTop,
-    backgroundColor: themeVars.CellBg,
+    // marginTop: theme.CellsMarginTop,
+    backgroundColor: theme.CellBg,
     overflow: 'hidden',
     borderTopWidth: StyleSheet.hairlineWidth,
     borderBottomWidth: StyleSheet.hairlineWidth,
-    borderColor: themeVars.CellBorderColor,
+    borderColor: theme.CellBorderColor,
   },
 }

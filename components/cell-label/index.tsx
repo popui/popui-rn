@@ -1,13 +1,13 @@
 import React from 'react'
 import { StyleSheet, Text, TextProps, ViewStyle } from 'react-native'
-import themeVars from '../style/themes/default'
+import theme from '../style/themes/default'
 
 const styles = StyleSheet.create({
   label: {
-    width: themeVars.CellLabelWidth,
-    fontSize: themeVars.CellFontSize,
-    marginTop: (themeVars.CellLineHeight - themeVars.CellFontSize) / 2,
-    marginBottom: (themeVars.CellLineHeight - themeVars.CellFontSize) / 2,
+    width: theme.CellLabelWidth,
+    fontSize: theme.CellFontSize,
+    marginTop: (theme.CellLineHeight - theme.CellFontSize) / 2,
+    marginBottom: (theme.CellLineHeight - theme.CellFontSize) / 2,
   },
 })
 

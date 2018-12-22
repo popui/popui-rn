@@ -1,6 +1,5 @@
-import React from 'react'
-
-import { PickerView } from '@popui/popui-rn'
+import { PickerView } from '@popui/popui-rn';
+import React from 'react';
 
 const seasons = [
   [
@@ -27,8 +26,8 @@ const seasons = [
 
 export default class PickerViewExample extends React.Component {
   state = {
-    value: null,
-  }
+    value: undefined,
+  };
   onChange = (value: any) => {
     this.setState({
       value,

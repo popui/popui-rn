@@ -1,9 +1,8 @@
-/* tslint:disable:jsx-no-multiline-js */
-// tslint:disable:no-empty
-import React from 'react'
 
-import { Image, ScrollView, View } from 'react-native'
-import { List } from '@popui/popui-rn'
+// tslint:disable:no-empty
+import { List } from '@popui/popui-rn';
+import React from 'react';
+import { Image, View } from 'react-native';
 
 const Item = List.Item
 const Brief = Item.Brief
@@ -17,7 +16,7 @@ export default class BasicListExample extends React.Component<any, any> {
         showsHorizontalScrollIndicator={false}
         showsVerticalScrollIndicator={false}
       >
-        <List renderHeader={() => 'basic'}>
+        <List renderHeader={'basic'}>
           <Item data-seed="logId">
             标题文字点击无反馈，文字超长则隐藏，文字超长则隐藏
           </Item>
@@ -27,10 +26,10 @@ export default class BasicListExample extends React.Component<any, any> {
           <Item disabled extra="箭头向右" arrow="right" onClick={() => {}}>
             标题文字
           </Item>
-          <Item extra="箭头向下" arrow="down" onClick={() => {}}>
+          <Item extra="箭头向下" arrow="down" onPress={() => {}}>
             标题文字
           </Item>
-          <Item extra="箭头向上" arrow="up" onClick={() => {}}>
+          <Item extra="箭头向上" arrow="up" onPress={() => {}}>
             标题文字
           </Item>
           <Item extra="没有箭头" arrow="empty">
@@ -75,7 +74,7 @@ export default class BasicListExample extends React.Component<any, any> {
             底部对齐
           </Item>
         </List>
-        <List renderHeader={() => '带缩略图'}>
+        <List renderHeader={'带缩略图'}>
           <Item thumb="https://os.alipayobjects.com/rmsportal/mOoPurdIfmcuqtr.png">
             thumb
           </Item>

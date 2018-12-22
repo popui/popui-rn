@@ -1,4 +1,4 @@
-import React from 'react'
+import React from 'react';
 
 export interface DataItem {
   icon?: any
@@ -7,14 +7,14 @@ export interface DataItem {
 }
 
 export interface GridPropsType {
-  data?: Array<DataItem | undefined>
-  hasLine?: boolean
-  columnNum?: number
-  isCarousel?: boolean
-  carouselMaxRow?: number
-  onClick?: (dataItem: DataItem | undefined, itemIndex: number) => void
+  data?: Array<DataItem | undefined>;
+  hasLine?: boolean;
+  columnNum: number;
+  isCarousel?: boolean;
+  carouselMaxRow: number;
+  onPress?: (dataItem: DataItem | undefined, itemIndex: number) => void;
   renderItem?: (
     dataItem: DataItem | undefined,
-    itemIndex: number
+    itemIndex: number,
   ) => React.ReactElement<any>
 }

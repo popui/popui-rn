@@ -1,19 +1,25 @@
-import React from 'react'
 
-import { StyleProp, View, ViewStyle } from 'react-native'
+import React from 'react';
+import { StyleProp, View, ViewStyle } from 'react-native';
+import { WithThemeStyles } from '../style';
+import { CardStyle } from './style';
 
-export interface CardBodyProps {
-  styles?: any
-  style?: StyleProp<ViewStyle>
+export interface CardBodyProps
+  extends WithThemeStyles<Pick<CardStyle, 'body'>> {
+  style?: StyleProp<ViewStyle>;
 }
 
 export default class CardBody extends React.Component<CardBodyProps, any> {
   static defaultProps = {
     style: {},
-  }
+  };
 
   render() {
-    const { style, styles, ...restProps } = this.props
-    return <View style={[styles.body, style]} {...restProps} />
+    const { style, styles, ...restProps } = this.props;
+    return (
+      <WithTheme styles={styles} themeStyles={cardStyles}>
+        {s => <View style={[s.body, style]} {...restProps} />}
+      </WithTheme>
+    );
   }
 }

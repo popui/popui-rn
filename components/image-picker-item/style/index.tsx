@@ -1,4 +1,4 @@
-import themeVars from '../../style/themes/default'
+import theme from '../../style/themes/default'
 export interface IImagePickerItemStyle {
   [key: string]: any
 }
@@ -6,16 +6,16 @@ export interface IImagePickerItemStyle {
 export default {
   uploaderFile: {
     position: 'relative',
-    width: themeVars.UploaderSize,
-    height: themeVars.UploaderSize,
-    marginRight: themeVars.UploaderFileSpacing,
-    marginBottom: themeVars.UploaderFileSpacing,
+    width: theme.UploaderSize,
+    height: theme.UploaderSize,
+    marginRight: theme.UploaderFileSpacing,
+    marginBottom: theme.UploaderFileSpacing,
   },
   uploaderFileImage: {
-    width: themeVars.UploaderSize,
-    height: themeVars.UploaderSize,
+    width: theme.UploaderSize,
+    height: theme.UploaderSize,
     overflow: 'hidden',
-    borderRadius: themeVars.radius_sm,
+    borderRadius: theme.radius_sm,
   },
   uploaderStatusContainer: {
     position: 'absolute',

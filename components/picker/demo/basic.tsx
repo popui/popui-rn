@@ -1,12 +1,10 @@
-import React from 'react'
-
-import { View, Text, TouchableOpacity } from 'react-native'
-import { List, Picker } from '@popui/popui-rn'
-
-import { district } from 'antd-mobile-demo-data'
-
+import { List, Picker } from '@popui/popui-rn';
+import { district } from 'antd-mobile-demo-data';
+import React from 'react';
+import { Text, TouchableOpacity, View } from 'react-native';
+const data = require('./data.json')
 const CustomChildren = (props: any) => (
-  <TouchableOpacity onPress={props.onClick}>
+  <TouchableOpacity onPress={props.onPress}>
     <View
       style={{
         height: 36,
@@ -50,6 +48,7 @@ export default class PopupExample extends React.Component<any, any> {
     this.setState({ value })
   }
   render() {
+
     return (
       <View style={{ marginTop: 30 }}>
         <List>

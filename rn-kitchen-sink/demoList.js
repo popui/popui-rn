@@ -86,6 +86,13 @@ module.exports = {
       description: '',
       icon: 'https://os.alipayobjects.com/rmsportal/tiapjpdKPQGHhnC.png',
       module: require('../components/cell/demo/basic'),
+      module: require('../components/list/demo/basic'),
+    },
+    {
+      title: 'ListView',
+      description: '列表',
+      icon: 'https://os.alipayobjects.com/rmsportal/tiapjpdKPQGHhnC.png',
+      module: require('../components/list-view/demo/basic'),
     },
     {
       title: 'Dialog',
@@ -98,6 +105,12 @@ module.exports = {
       description: '气泡',
       icon: 'https://os.alipayobjects.com/rmsportal/iIOLFHTKUCxBgUV.png',
       module: require('../components/popover/demo/basic'),
+    },
+    {
+      title: 'Portal',
+      description: 'portal',
+      icon: 'https://os.alipayobjects.com/rmsportal/iIOLFHTKUCxBgUV.png',
+      module: require('../components/portal/demo/basic'),
     },
     {
       title: 'Result', // 必须
@@ -144,10 +157,22 @@ module.exports = {
       module: require('../components/badge/demo/basic'),
     },
     {
+      title: 'Button',
+      description: '按钮',
+      icon: 'https://os.alipayobjects.com/rmsportal/ZRDUYEzfOzKWdzE.png',
+      module: require('../components/button/demo/basic'),
+    },
+    {
       title: 'Carousel', // 必须
       description: '走马灯',
       icon: 'https://os.alipayobjects.com/rmsportal/FbIGJuDaiQoKNvj.png',
       module: require('../components/carousel/demo/basic'), // 必须
+    },
+    {
+      title: 'Checkbox', // 必须
+      description: '复选框',
+      icon: 'https://os.alipayobjects.com/rmsportal/dWPGltvdjaanrRd.png',
+      module: require('../components/checkbox/demo/basic'), // 必须
     },
     {
       title: 'DatePicker', // 必须

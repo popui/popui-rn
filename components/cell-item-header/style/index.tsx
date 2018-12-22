@@ -1,5 +1,5 @@
 import { StyleSheet, View } from 'react-native'
-import themeVars from '../../style/themes/default'
+import theme from '../../style/themes/default'
 
 const defautlStyles = StyleSheet.create({
   header: {
@@ -8,13 +8,13 @@ const defautlStyles = StyleSheet.create({
     alignItems: 'center',
   },
   thumb: {
-    width: themeVars.icon_size_md,
-    height: themeVars.icon_size_md,
-    marginRight: themeVars.h_spacing_lg,
+    width: theme.icon_size_md,
+    height: theme.icon_size_md,
+    marginRight: theme.h_spacing_lg,
   },
   multipleThumb: {
-    width: themeVars.icon_size_lg,
-    height: themeVars.icon_size_lg,
+    width: theme.icon_size_lg,
+    height: theme.icon_size_lg,
   },
 })
 

@@ -12,7 +12,7 @@ import {
   TouchableNativeFeedback,
   TouchableWithoutFeedback,
 } from 'react-native'
-import themeVars from '../style/themes/default'
+import theme from '../style/themes/default'
 
 let TouchableComponent: any
 
@@ -46,7 +46,7 @@ export default class TouchableWithFallback extends React.Component<any, any> {
       background,
       useForeground,
       activeOpacity = 0.5,
-      underlayColor = themeVars.BgColorActive,
+      underlayColor = theme.BgColorActive,
       ...restProps
     } = this.props
     return (
@@ -63,7 +63,7 @@ export default class TouchableWithFallback extends React.Component<any, any> {
       background,
       useForeground,
       activeOpacity = 0.5,
-      underlayColor = themeVars.BgColorActive,
+      underlayColor = theme.BgColorActive,
       ...restProps
     } = this.props
     // 如果 disabled, 则不可点击

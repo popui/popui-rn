@@ -2,13 +2,13 @@
 import React from 'react'
 import { Text } from 'react-native'
 import { create } from '../style/utils/StyleSheet'
-import themeVars from '../style/themes/default'
+import theme from '../style/themes/default'
 import { MediaDescriptionPropsType } from './PropsType'
 
 const styles = create({
   mediaDesc: {
     fontSize: 13,
-    color: themeVars.TextColorGray,
+    color: theme.TextColorGray,
     lineHeight: 13 * 1.2,
     android: {
       lineHeight: Math.round(13 * 1.2),

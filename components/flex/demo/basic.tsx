@@ -1,8 +1,7 @@
 // tslint:disable:jsx-no-multiline-js
-import React from 'react'
-
-import { ScrollView, Text, TouchableWithoutFeedback, View } from 'react-native'
-import { Button, Flex, GapH, GapV } from '@popui/popui-rn'
+import { Button, Flex, GapH, GapV } from '@popui/popui-rn';
+import { default as React } from 'react';
+import { ScrollView, Text, TouchableWithoutFeedback, View } from 'react-native';
 
 const Circle = (props: any) => {
   const size = props.size || 20

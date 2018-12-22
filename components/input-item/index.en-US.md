@@ -22,6 +22,7 @@ Properties | Description | Type | Default
 | defaultValue | provides an initial value that will change when the user starts typing. | String |  -  |
 | placeholder  | the string that will be rendered before text input has been entered. | String | ''  |
 | editable    | whether is editable        | bool |  true  |
+| disabled    | whether is disabled        | bool |  true  |
 | clear      |  whether to display clear(it takes effect only `editable` is `true` and `disabled` is `false` has been set) | bool | false  |
 | maxLength      |  limits the maximum number of characters that can be entered      | number |    |
 | onChange    | callback that is called when the text input's text changes | (val: string): void |  -  |
@@ -34,6 +35,7 @@ Properties | Description | Type | Default
 | onVirtualKeyboardConfirm | callback that is called when "confirm" button of virtual keyboard is clicked | (val: string): void |  |
 | labelNumber  | number of label text, valid value is 2 to 7 | number | `5` |
 | locale   | 国际化，可覆盖全局`[LocaleProvider](https://mobile.ant.design/components/locale-provider)`的配置,  when`type`is`money`，can cunstom the keyboard confirm item's label | Object: { confirmLabel } |  无 |
+| last      |  If it is the last item, the `borderBottom` will be removed, the default has `borderBottom`   | bool | false  |
 
 > More available react-native `InputItem` API can be found at [react-native TextInput](http://facebook.github.io/react-native/docs/textinput.html)
 

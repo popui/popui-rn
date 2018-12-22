@@ -1,7 +1,6 @@
-import React from 'react'
-
-import { View, Text, Platform } from 'react-native'
-import { ActionSheet, Button } from '@popui/popui-rn'
+import React from 'react';
+import { Platform, Text, View } from 'react-native';
+import { ActionSheet, Button } from '../../';
 
 export default class Test extends React.Component<any, any> {
   constructor(props: any) {
@@ -15,13 +14,13 @@ export default class Test extends React.Component<any, any> {
     return (
       <View style={{ marginTop: 30 }}>
         <View style={[{ padding: 8 }]}>
-          <Button onClick={this.showActionSheet}>showActionSheet</Button>
+          <Button onPress={this.showActionSheet}>showActionSheet</Button>
         </View>
         <Text style={[{ padding: 8 }]}>
           clicked button: {this.state.clicked}
         </Text>
         <View style={[{ padding: 8 }]}>
-          <Button onClick={this.showShareActionSheet}>
+          <Button onPress={this.showShareActionSheet}>
             showShareActionSheet
           </Button>
         </View>
@@ -47,7 +46,7 @@ export default class Test extends React.Component<any, any> {
       },
       (buttonIndex: any) => {
         this.setState({ clicked: BUTTONS[buttonIndex] })
-      }
+      },
     )
   }
   showShareActionSheet = () => {
@@ -73,7 +72,7 @@ export default class Test extends React.Component<any, any> {
           text = 'Did not share'
         }
         this.setState({ text })
-      }
+      },
     )
   }
 }

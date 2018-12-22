@@ -33,15 +33,8 @@ exports[`renders ./components/image-picker/demo/basic.tsx correctly 1`] = `
       }
     >
       <View
-        accessibilityComponentType={undefined}
-        accessibilityLabel={undefined}
-        accessibilityTraits={undefined}
         accessible={true}
-        collapsable={undefined}
-        hitSlop={undefined}
         isTVSelectable={true}
-        nativeID={undefined}
-        onLayout={undefined}
         onResponderGrant={[Function]}
         onResponderMove={[Function]}
         onResponderRelease={[Function]}
@@ -53,8 +46,6 @@ exports[`renders ./components/image-picker/demo/basic.tsx correctly 1`] = `
             "opacity": 1,
           }
         }
-        testID={undefined}
-        tvParallaxProperties={undefined}
       >
         <Image
           source={
@@ -77,15 +68,8 @@ exports[`renders ./components/image-picker/demo/basic.tsx correctly 1`] = `
         />
       </View>
       <View
-        accessibilityComponentType={undefined}
-        accessibilityLabel={undefined}
-        accessibilityTraits={undefined}
         accessible={true}
-        collapsable={undefined}
-        hitSlop={undefined}
         isTVSelectable={true}
-        nativeID={undefined}
-        onLayout={undefined}
         onResponderGrant={[Function]}
         onResponderMove={[Function]}
         onResponderRelease={[Function]}
@@ -107,14 +91,8 @@ exports[`renders ./components/image-picker/demo/basic.tsx correctly 1`] = `
             "width": 16,
           }
         }
-        testID={undefined}
-        tvParallaxProperties={undefined}
       >
         <Text
-          accessible={true}
-          allowFontScaling={true}
-          disabled={false}
-          ellipsizeMode="tail"
           style={
             Object {
               "backgroundColor": "transparent",
@@ -146,15 +124,8 @@ exports[`renders ./components/image-picker/demo/basic.tsx correctly 1`] = `
       }
     >
       <View
-        accessibilityComponentType={undefined}
-        accessibilityLabel={undefined}
-        accessibilityTraits={undefined}
         accessible={true}
-        collapsable={undefined}
-        hitSlop={undefined}
         isTVSelectable={true}
-        nativeID={undefined}
-        onLayout={undefined}
         onResponderGrant={[Function]}
         onResponderMove={[Function]}
         onResponderRelease={[Function]}
@@ -166,8 +137,6 @@ exports[`renders ./components/image-picker/demo/basic.tsx correctly 1`] = `
             "opacity": 1,
           }
         }
-        testID={undefined}
-        tvParallaxProperties={undefined}
       >
         <Image
           source={
@@ -190,15 +159,8 @@ exports[`renders ./components/image-picker/demo/basic.tsx correctly 1`] = `
         />
       </View>
       <View
-        accessibilityComponentType={undefined}
-        accessibilityLabel={undefined}
-        accessibilityTraits={undefined}
         accessible={true}
-        collapsable={undefined}
-        hitSlop={undefined}
         isTVSelectable={true}
-        nativeID={undefined}
-        onLayout={undefined}
         onResponderGrant={[Function]}
         onResponderMove={[Function]}
         onResponderRelease={[Function]}
@@ -220,14 +182,8 @@ exports[`renders ./components/image-picker/demo/basic.tsx correctly 1`] = `
             "width": 16,
           }
         }
-        testID={undefined}
-        tvParallaxProperties={undefined}
       >
         <Text
-          accessible={true}
-          allowFontScaling={true}
-          disabled={false}
-          ellipsizeMode="tail"
           style={
             Object {
               "backgroundColor": "transparent",
@@ -259,15 +215,8 @@ exports[`renders ./components/image-picker/demo/basic.tsx correctly 1`] = `
       }
     >
       <View
-        accessibilityComponentType={undefined}
-        accessibilityLabel={undefined}
-        accessibilityTraits={undefined}
         accessible={true}
-        collapsable={undefined}
-        hitSlop={undefined}
         isTVSelectable={true}
-        nativeID={undefined}
-        onLayout={undefined}
         onResponderGrant={[Function]}
         onResponderMove={[Function]}
         onResponderRelease={[Function]}
@@ -279,8 +228,6 @@ exports[`renders ./components/image-picker/demo/basic.tsx correctly 1`] = `
             "opacity": 1,
           }
         }
-        testID={undefined}
-        tvParallaxProperties={undefined}
       >
         <Image
           source={
@@ -303,15 +250,8 @@ exports[`renders ./components/image-picker/demo/basic.tsx correctly 1`] = `
         />
       </View>
       <View
-        accessibilityComponentType={undefined}
-        accessibilityLabel={undefined}
-        accessibilityTraits={undefined}
         accessible={true}
-        collapsable={undefined}
-        hitSlop={undefined}
         isTVSelectable={true}
-        nativeID={undefined}
-        onLayout={undefined}
         onResponderGrant={[Function]}
         onResponderMove={[Function]}
         onResponderRelease={[Function]}
@@ -333,14 +273,8 @@ exports[`renders ./components/image-picker/demo/basic.tsx correctly 1`] = `
             "width": 16,
           }
         }
-        testID={undefined}
-        tvParallaxProperties={undefined}
       >
         <Text
-          accessible={true}
-          allowFontScaling={true}
-          disabled={false}
-          ellipsizeMode="tail"
           style={
             Object {
               "backgroundColor": "transparent",
@@ -372,15 +306,8 @@ exports[`renders ./components/image-picker/demo/basic.tsx correctly 1`] = `
       }
     >
       <View
-        accessibilityComponentType={undefined}
-        accessibilityLabel={undefined}
-        accessibilityTraits={undefined}
         accessible={true}
-        collapsable={undefined}
-        hitSlop={undefined}
         isTVSelectable={true}
-        nativeID={undefined}
-        onLayout={undefined}
         onResponderGrant={[Function]}
         onResponderMove={[Function]}
         onResponderRelease={[Function]}
@@ -392,8 +319,6 @@ exports[`renders ./components/image-picker/demo/basic.tsx correctly 1`] = `
             "opacity": 1,
           }
         }
-        testID={undefined}
-        tvParallaxProperties={undefined}
       >
         <Image
           source={
@@ -416,15 +341,8 @@ exports[`renders ./components/image-picker/demo/basic.tsx correctly 1`] = `
         />
       </View>
       <View
-        accessibilityComponentType={undefined}
-        accessibilityLabel={undefined}
-        accessibilityTraits={undefined}
         accessible={true}
-        collapsable={undefined}
-        hitSlop={undefined}
         isTVSelectable={true}
-        nativeID={undefined}
-        onLayout={undefined}
         onResponderGrant={[Function]}
         onResponderMove={[Function]}
         onResponderRelease={[Function]}
@@ -446,14 +364,8 @@ exports[`renders ./components/image-picker/demo/basic.tsx correctly 1`] = `
             "width": 16,
           }
         }
-        testID={undefined}
-        tvParallaxProperties={undefined}
       >
         <Text
-          accessible={true}
-          allowFontScaling={true}
-          disabled={false}
-          ellipsizeMode="tail"
           style={
             Object {
               "backgroundColor": "transparent",
@@ -485,15 +397,8 @@ exports[`renders ./components/image-picker/demo/basic.tsx correctly 1`] = `
       }
     >
       <View
-        accessibilityComponentType={undefined}
-        accessibilityLabel={undefined}
-        accessibilityTraits={undefined}
         accessible={true}
-        collapsable={undefined}
-        hitSlop={undefined}
         isTVSelectable={true}
-        nativeID={undefined}
-        onLayout={undefined}
         onResponderGrant={[Function]}
         onResponderMove={[Function]}
         onResponderRelease={[Function]}
@@ -505,8 +410,6 @@ exports[`renders ./components/image-picker/demo/basic.tsx correctly 1`] = `
             "opacity": 1,
           }
         }
-        testID={undefined}
-        tvParallaxProperties={undefined}
       >
         <Image
           source={
@@ -529,15 +432,8 @@ exports[`renders ./components/image-picker/demo/basic.tsx correctly 1`] = `
         />
       </View>
       <View
-        accessibilityComponentType={undefined}
-        accessibilityLabel={undefined}
-        accessibilityTraits={undefined}
         accessible={true}
-        collapsable={undefined}
-        hitSlop={undefined}
         isTVSelectable={true}
-        nativeID={undefined}
-        onLayout={undefined}
         onResponderGrant={[Function]}
         onResponderMove={[Function]}
         onResponderRelease={[Function]}
@@ -559,14 +455,8 @@ exports[`renders ./components/image-picker/demo/basic.tsx correctly 1`] = `
             "width": 16,
           }
         }
-        testID={undefined}
-        tvParallaxProperties={undefined}
       >
         <Text
-          accessible={true}
-          allowFontScaling={true}
-          disabled={false}
-          ellipsizeMode="tail"
           style={
             Object {
               "backgroundColor": "transparent",
@@ -598,15 +488,8 @@ exports[`renders ./components/image-picker/demo/basic.tsx correctly 1`] = `
       }
     >
       <View
-        accessibilityComponentType={undefined}
-        accessibilityLabel={undefined}
-        accessibilityTraits={undefined}
         accessible={true}
-        collapsable={undefined}
-        hitSlop={undefined}
         isTVSelectable={true}
-        nativeID={undefined}
-        onLayout={undefined}
         onResponderGrant={[Function]}
         onResponderMove={[Function]}
         onResponderRelease={[Function]}
@@ -618,8 +501,6 @@ exports[`renders ./components/image-picker/demo/basic.tsx correctly 1`] = `
             "opacity": 1,
           }
         }
-        testID={undefined}
-        tvParallaxProperties={undefined}
       >
         <Image
           source={
@@ -642,15 +523,8 @@ exports[`renders ./components/image-picker/demo/basic.tsx correctly 1`] = `
         />
       </View>
       <View
-        accessibilityComponentType={undefined}
-        accessibilityLabel={undefined}
-        accessibilityTraits={undefined}
         accessible={true}
-        collapsable={undefined}
-        hitSlop={undefined}
         isTVSelectable={true}
-        nativeID={undefined}
-        onLayout={undefined}
         onResponderGrant={[Function]}
         onResponderMove={[Function]}
         onResponderRelease={[Function]}
@@ -672,14 +546,8 @@ exports[`renders ./components/image-picker/demo/basic.tsx correctly 1`] = `
             "width": 16,
           }
         }
-        testID={undefined}
-        tvParallaxProperties={undefined}
       >
         <Text
-          accessible={true}
-          allowFontScaling={true}
-          disabled={false}
-          ellipsizeMode="tail"
           style={
             Object {
               "backgroundColor": "transparent",
@@ -696,13 +564,7 @@ exports[`renders ./components/image-picker/demo/basic.tsx correctly 1`] = `
       </View>
     </View>
     <View
-      accessibilityComponentType={undefined}
-      accessibilityLabel={undefined}
-      accessibilityTraits={undefined}
       accessible={true}
-      hitSlop={undefined}
-      nativeID={undefined}
-      onLayout={undefined}
       onResponderGrant={[Function]}
       onResponderMove={[Function]}
       onResponderRelease={[Function]}
@@ -732,13 +594,8 @@ exports[`renders ./components/image-picker/demo/basic.tsx correctly 1`] = `
           },
         ]
       }
-      testID={undefined}
     >
       <Text
-        accessible={true}
-        allowFontScaling={true}
-        disabled={false}
-        ellipsizeMode="tail"
         style={
           Array [
             Object {
@@ -773,13 +630,7 @@ exports[`renders ./components/image-picker/demo/basic.tsx correctly 1`] = `
     }
   >
     <View
-      accessibilityComponentType={undefined}
-      accessibilityLabel={undefined}
-      accessibilityTraits={undefined}
       accessible={true}
-      hitSlop={undefined}
-      nativeID={undefined}
-      onLayout={undefined}
       onResponderGrant={[Function]}
       onResponderMove={[Function]}
       onResponderRelease={[Function]}
@@ -809,13 +660,8 @@ exports[`renders ./components/image-picker/demo/basic.tsx correctly 1`] = `
           },
         ]
       }
-      testID={undefined}
     >
       <Text
-        accessible={true}
-        allowFontScaling={true}
-        disabled={false}
-        ellipsizeMode="tail"
         style={
           Array [
             Object {

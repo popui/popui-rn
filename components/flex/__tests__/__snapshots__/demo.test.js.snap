@@ -27,10 +27,6 @@ exports[`renders ./components/flex/demo/basic.tsx correctly 1`] = `
       }
     >
       <Text
-        accessible={true}
-        allowFontScaling={true}
-        disabled={false}
-        ellipsizeMode="tail"
         style={
           Object {
             "marginBottom": 10,
@@ -39,12 +35,7 @@ exports[`renders ./components/flex/demo/basic.tsx correctly 1`] = `
       >
         项目的排列方向
       </Text>
-      <Text
-        accessible={true}
-        allowFontScaling={true}
-        disabled={false}
-        ellipsizeMode="tail"
-      >
+      <Text>
         direction="row":主轴为水平方向，起点在左端
       </Text>
     </View>
@@ -88,15 +79,8 @@ exports[`renders ./components/flex/demo/basic.tsx correctly 1`] = `
           }
         >
           <View
-            accessibilityComponentType={undefined}
-            accessibilityLabel={undefined}
-            accessibilityTraits={undefined}
             accessible={true}
-            hasTVPreferredFocus={undefined}
-            hitSlop={undefined}
             isTVSelectable={true}
-            nativeID={undefined}
-            onLayout={undefined}
             onResponderGrant={[Function]}
             onResponderMove={[Function]}
             onResponderRelease={[Function]}
@@ -106,33 +90,26 @@ exports[`renders ./components/flex/demo/basic.tsx correctly 1`] = `
             style={
               Array [
                 Object {
-                  "backgroundColor": "transparent",
+                  "alignItems": "center",
+                  "borderRadius": 5,
+                  "borderWidth": 1,
+                  "justifyContent": "center",
                 },
-                Array [
-                  Object {
-                    "alignItems": "center",
-                    "borderRadius": 5,
-                    "borderWidth": 1,
-                    "justifyContent": "center",
-                  },
-                  Object {
-                    "height": 23,
-                    "paddingLeft": 5,
-                    "paddingRight": 5,
-                  },
-                  Object {
-                    "backgroundColor": "#ffffff",
-                    "borderColor": "#dddddd",
-                  },
-                  false,
-                  false,
-                  false,
-                  undefined,
-                ],
+                Object {
+                  "height": 23,
+                  "paddingLeft": 5,
+                  "paddingRight": 5,
+                },
+                Object {
+                  "backgroundColor": "#ffffff",
+                  "borderColor": "#dddddd",
+                },
+                false,
+                false,
+                undefined,
+                undefined,
               ]
             }
-            testID={undefined}
-            tvParallaxProperties={undefined}
           >
             <View
               style={
@@ -142,10 +119,6 @@ exports[`renders ./components/flex/demo/basic.tsx correctly 1`] = `
               }
             >
               <Text
-                accessible={true}
-                allowFontScaling={true}
-                disabled={false}
-                ellipsizeMode="tail"
                 style={
                   Array [
                     Object {
@@ -178,15 +151,8 @@ exports[`renders ./components/flex/demo/basic.tsx correctly 1`] = `
           }
         >
           <View
-            accessibilityComponentType={undefined}
-            accessibilityLabel={undefined}
-            accessibilityTraits={undefined}
             accessible={true}
-            hasTVPreferredFocus={undefined}
-            hitSlop={undefined}
             isTVSelectable={true}
-            nativeID={undefined}
-            onLayout={undefined}
             onResponderGrant={[Function]}
             onResponderMove={[Function]}
             onResponderRelease={[Function]}
@@ -196,33 +162,26 @@ exports[`renders ./components/flex/demo/basic.tsx correctly 1`] = `
             style={
               Array [
                 Object {
-                  "backgroundColor": "transparent",
+                  "alignItems": "center",
+                  "borderRadius": 5,
+                  "borderWidth": 1,
+                  "justifyContent": "center",
                 },
-                Array [
-                  Object {
-                    "alignItems": "center",
-                    "borderRadius": 5,
-                    "borderWidth": 1,
-                    "justifyContent": "center",
-                  },
-                  Object {
-                    "height": 23,
-                    "paddingLeft": 5,
-                    "paddingRight": 5,
-                  },
-                  Object {
-                    "backgroundColor": "#ffffff",
-                    "borderColor": "#dddddd",
-                  },
-                  false,
-                  false,
-                  false,
-                  undefined,
-                ],
+                Object {
+                  "height": 23,
+                  "paddingLeft": 5,
+                  "paddingRight": 5,
+                },
+                Object {
+                  "backgroundColor": "#ffffff",
+                  "borderColor": "#dddddd",
+                },
+                false,
+                false,
+                undefined,
+                undefined,
               ]
             }
-            testID={undefined}
-            tvParallaxProperties={undefined}
           >
             <View
               style={
@@ -232,10 +191,6 @@ exports[`renders ./components/flex/demo/basic.tsx correctly 1`] = `
               }
             >
               <Text
-                accessible={true}
-                allowFontScaling={true}
-                disabled={false}
-                ellipsizeMode="tail"
                 style={
                   Array [
                     Object {
@@ -268,15 +223,8 @@ exports[`renders ./components/flex/demo/basic.tsx correctly 1`] = `
           }
         >
           <View
-            accessibilityComponentType={undefined}
-            accessibilityLabel={undefined}
-            accessibilityTraits={undefined}
             accessible={true}
-            hasTVPreferredFocus={undefined}
-            hitSlop={undefined}
             isTVSelectable={true}
-            nativeID={undefined}
-            onLayout={undefined}
             onResponderGrant={[Function]}
             onResponderMove={[Function]}
             onResponderRelease={[Function]}
@@ -286,33 +234,26 @@ exports[`renders ./components/flex/demo/basic.tsx correctly 1`] = `
             style={
               Array [
                 Object {
-                  "backgroundColor": "transparent",
+                  "alignItems": "center",
+                  "borderRadius": 5,
+                  "borderWidth": 1,
+                  "justifyContent": "center",
                 },
-                Array [
-                  Object {
-                    "alignItems": "center",
-                    "borderRadius": 5,
-                    "borderWidth": 1,
-                    "justifyContent": "center",
-                  },
-                  Object {
-                    "height": 23,
-                    "paddingLeft": 5,
-                    "paddingRight": 5,
-                  },
-                  Object {
-                    "backgroundColor": "#ffffff",
-                    "borderColor": "#dddddd",
-                  },
-                  false,
-                  false,
-                  false,
-                  undefined,
-                ],
+                Object {
+                  "height": 23,
+                  "paddingLeft": 5,
+                  "paddingRight": 5,
+                },
+                Object {
+                  "backgroundColor": "#ffffff",
+                  "borderColor": "#dddddd",
+                },
+                false,
+                false,
+                undefined,
+                undefined,
               ]
             }
-            testID={undefined}
-            tvParallaxProperties={undefined}
           >
             <View
               style={
@@ -322,10 +263,6 @@ exports[`renders ./components/flex/demo/basic.tsx correctly 1`] = `
               }
             >
               <Text
-                accessible={true}
-                allowFontScaling={true}
-                disabled={false}
-                ellipsizeMode="tail"
                 style={
                   Array [
                     Object {
@@ -360,12 +297,7 @@ exports[`renders ./components/flex/demo/basic.tsx correctly 1`] = `
         ]
       }
     >
-      <Text
-        accessible={true}
-        allowFontScaling={true}
-        disabled={false}
-        ellipsizeMode="tail"
-      >
+      <Text>
         direction="column":主轴为垂直方向，起点在上沿
       </Text>
     </View>
@@ -408,15 +340,8 @@ exports[`renders ./components/flex/demo/basic.tsx correctly 1`] = `
           }
         >
           <View
-            accessibilityComponentType={undefined}
-            accessibilityLabel={undefined}
-            accessibilityTraits={undefined}
             accessible={true}
-            hasTVPreferredFocus={undefined}
-            hitSlop={undefined}
             isTVSelectable={true}
-            nativeID={undefined}
-            onLayout={undefined}
             onResponderGrant={[Function]}
             onResponderMove={[Function]}
             onResponderRelease={[Function]}
@@ -426,33 +351,26 @@ exports[`renders ./components/flex/demo/basic.tsx correctly 1`] = `
             style={
               Array [
                 Object {
-                  "backgroundColor": "transparent",
+                  "alignItems": "center",
+                  "borderRadius": 5,
+                  "borderWidth": 1,
+                  "justifyContent": "center",
                 },
-                Array [
-                  Object {
-                    "alignItems": "center",
-                    "borderRadius": 5,
-                    "borderWidth": 1,
-                    "justifyContent": "center",
-                  },
-                  Object {
-                    "height": 23,
-                    "paddingLeft": 5,
-                    "paddingRight": 5,
-                  },
-                  Object {
-                    "backgroundColor": "#ffffff",
-                    "borderColor": "#dddddd",
-                  },
-                  false,
-                  false,
-                  false,
-                  undefined,
-                ],
+                Object {
+                  "height": 23,
+                  "paddingLeft": 5,
+                  "paddingRight": 5,
+                },
+                Object {
+                  "backgroundColor": "#ffffff",
+                  "borderColor": "#dddddd",
+                },
+                false,
+                false,
+                undefined,
+                undefined,
               ]
             }
-            testID={undefined}
-            tvParallaxProperties={undefined}
           >
             <View
               style={
@@ -462,10 +380,6 @@ exports[`renders ./components/flex/demo/basic.tsx correctly 1`] = `
               }
             >
               <Text
-                accessible={true}
-                allowFontScaling={true}
-                disabled={false}
-                ellipsizeMode="tail"
                 style={
                   Array [
                     Object {
@@ -497,15 +411,8 @@ exports[`renders ./components/flex/demo/basic.tsx correctly 1`] = `
           }
         >
           <View
-            accessibilityComponentType={undefined}
-            accessibilityLabel={undefined}
-            accessibilityTraits={undefined}
             accessible={true}
-            hasTVPreferredFocus={undefined}
-            hitSlop={undefined}
             isTVSelectable={true}
-            nativeID={undefined}
-            onLayout={undefined}
             onResponderGrant={[Function]}
             onResponderMove={[Function]}
             onResponderRelease={[Function]}
@@ -515,33 +422,26 @@ exports[`renders ./components/flex/demo/basic.tsx correctly 1`] = `
             style={
               Array [
                 Object {
-                  "backgroundColor": "transparent",
+                  "alignItems": "center",
+                  "borderRadius": 5,
+                  "borderWidth": 1,
+                  "justifyContent": "center",
                 },
-                Array [
-                  Object {
-                    "alignItems": "center",
-                    "borderRadius": 5,
-                    "borderWidth": 1,
-                    "justifyContent": "center",
-                  },
-                  Object {
-                    "height": 23,
-                    "paddingLeft": 5,
-                    "paddingRight": 5,
-                  },
-                  Object {
-                    "backgroundColor": "#ffffff",
-                    "borderColor": "#dddddd",
-                  },
-                  false,
-                  false,
-                  false,
-                  undefined,
-                ],
+                Object {
+                  "height": 23,
+                  "paddingLeft": 5,
+                  "paddingRight": 5,
+                },
+                Object {
+                  "backgroundColor": "#ffffff",
+                  "borderColor": "#dddddd",
+                },
+                false,
+                false,
+                undefined,
+                undefined,
               ]
             }
-            testID={undefined}
-            tvParallaxProperties={undefined}
           >
             <View
               style={
@@ -551,10 +451,6 @@ exports[`renders ./components/flex/demo/basic.tsx correctly 1`] = `
               }
             >
               <Text
-                accessible={true}
-                allowFontScaling={true}
-                disabled={false}
-                ellipsizeMode="tail"
                 style={
                   Array [
                     Object {
@@ -586,15 +482,8 @@ exports[`renders ./components/flex/demo/basic.tsx correctly 1`] = `
           }
         >
           <View
-            accessibilityComponentType={undefined}
-            accessibilityLabel={undefined}
-            accessibilityTraits={undefined}
             accessible={true}
-            hasTVPreferredFocus={undefined}
-            hitSlop={undefined}
             isTVSelectable={true}
-            nativeID={undefined}
-            onLayout={undefined}
             onResponderGrant={[Function]}
             onResponderMove={[Function]}
             onResponderRelease={[Function]}
@@ -604,33 +493,26 @@ exports[`renders ./components/flex/demo/basic.tsx correctly 1`] = `
             style={
               Array [
                 Object {
-                  "backgroundColor": "transparent",
+                  "alignItems": "center",
+                  "borderRadius": 5,
+                  "borderWidth": 1,
+                  "justifyContent": "center",
                 },
-                Array [
-                  Object {
-                    "alignItems": "center",
-                    "borderRadius": 5,
-                    "borderWidth": 1,
-                    "justifyContent": "center",
-                  },
-                  Object {
-                    "height": 23,
-                    "paddingLeft": 5,
-                    "paddingRight": 5,
-                  },
-                  Object {
-                    "backgroundColor": "#ffffff",
-                    "borderColor": "#dddddd",
-                  },
-                  false,
-                  false,
-                  false,
-                  undefined,
-                ],
+                Object {
+                  "height": 23,
+                  "paddingLeft": 5,
+                  "paddingRight": 5,
+                },
+                Object {
+                  "backgroundColor": "#ffffff",
+                  "borderColor": "#dddddd",
+                },
+                false,
+                false,
+                undefined,
+                undefined,
               ]
             }
-            testID={undefined}
-            tvParallaxProperties={undefined}
           >
             <View
               style={
@@ -640,10 +522,6 @@ exports[`renders ./components/flex/demo/basic.tsx correctly 1`] = `
               }
             >
               <Text
-                accessible={true}
-                allowFontScaling={true}
-                disabled={false}
-                ellipsizeMode="tail"
                 style={
                   Array [
                     Object {
@@ -679,10 +557,6 @@ exports[`renders ./components/flex/demo/basic.tsx correctly 1`] = `
       }
     >
       <Text
-        accessible={true}
-        allowFontScaling={true}
-        disabled={false}
-        ellipsizeMode="tail"
         style={
           Object {
             "marginBottom": 20,
@@ -692,12 +566,7 @@ exports[`renders ./components/flex/demo/basic.tsx correctly 1`] = `
       >
         项目在主轴上的对齐方式
       </Text>
-      <Text
-        accessible={true}
-        allowFontScaling={true}
-        disabled={false}
-        ellipsizeMode="tail"
-      >
+      <Text>
         justify="start":左对齐
       </Text>
     </View>
@@ -798,12 +667,7 @@ exports[`renders ./components/flex/demo/basic.tsx correctly 1`] = `
         ]
       }
     >
-      <Text
-        accessible={true}
-        allowFontScaling={true}
-        disabled={false}
-        ellipsizeMode="tail"
-      >
+      <Text>
         justify="center":居中
       </Text>
     </View>
@@ -904,12 +768,7 @@ exports[`renders ./components/flex/demo/basic.tsx correctly 1`] = `
         ]
       }
     >
-      <Text
-        accessible={true}
-        allowFontScaling={true}
-        disabled={false}
-        ellipsizeMode="tail"
-      >
+      <Text>
         justify="end":右对齐
       </Text>
     </View>
@@ -1010,12 +869,7 @@ exports[`renders ./components/flex/demo/basic.tsx correctly 1`] = `
         ]
       }
     >
-      <Text
-        accessible={true}
-        allowFontScaling={true}
-        disabled={false}
-        ellipsizeMode="tail"
-      >
+      <Text>
         justify="between":两端对齐，项目之间的间隔都相等
       </Text>
     </View>
@@ -1116,12 +970,7 @@ exports[`renders ./components/flex/demo/basic.tsx correctly 1`] = `
         ]
       }
     >
-      <Text
-        accessible={true}
-        allowFontScaling={true}
-        disabled={false}
-        ellipsizeMode="tail"
-      >
+      <Text>
         justify="around":每个项目两侧的间隔相等
       </Text>
     </View>
@@ -1223,10 +1072,6 @@ exports[`renders ./components/flex/demo/basic.tsx correctly 1`] = `
       }
     >
       <Text
-        accessible={true}
-        allowFontScaling={true}
-        disabled={false}
-        ellipsizeMode="tail"
         style={
           Object {
             "marginBottom": 20,
@@ -1236,12 +1081,7 @@ exports[`renders ./components/flex/demo/basic.tsx correctly 1`] = `
       >
         项目在交叉轴上的对齐方式
       </Text>
-      <Text
-        accessible={true}
-        allowFontScaling={true}
-        disabled={false}
-        ellipsizeMode="tail"
-      >
+      <Text>
         align="start":交叉轴的起点对齐
       </Text>
     </View>
@@ -1274,10 +1114,6 @@ exports[`renders ./components/flex/demo/basic.tsx correctly 1`] = `
         }
       >
         <Text
-          accessible={true}
-          allowFontScaling={true}
-          disabled={false}
-          ellipsizeMode="tail"
           style={
             Object {
               "borderColor": "#527fe4",
@@ -1290,10 +1126,6 @@ exports[`renders ./components/flex/demo/basic.tsx correctly 1`] = `
           兜兜
         </Text>
         <Text
-          accessible={true}
-          allowFontScaling={true}
-          disabled={false}
-          ellipsizeMode="tail"
           style={
             Object {
               "borderColor": "#527fe4",
@@ -1306,10 +1138,6 @@ exports[`renders ./components/flex/demo/basic.tsx correctly 1`] = `
           兜兜
         </Text>
         <Text
-          accessible={true}
-          allowFontScaling={true}
-          disabled={false}
-          ellipsizeMode="tail"
           style={
             Object {
               "borderColor": "#527fe4",
@@ -1322,10 +1150,6 @@ exports[`renders ./components/flex/demo/basic.tsx correctly 1`] = `
           兜兜
         </Text>
         <Text
-          accessible={true}
-          allowFontScaling={true}
-          disabled={false}
-          ellipsizeMode="tail"
           style={
             Object {
               "borderColor": "#527fe4",
@@ -1353,12 +1177,7 @@ exports[`renders ./components/flex/demo/basic.tsx correctly 1`] = `
         ]
       }
     >
-      <Text
-        accessible={true}
-        allowFontScaling={true}
-        disabled={false}
-        ellipsizeMode="tail"
-      >
+      <Text>
         align="center":交叉轴的中点对齐
       </Text>
     </View>
@@ -1391,10 +1210,6 @@ exports[`renders ./components/flex/demo/basic.tsx correctly 1`] = `
         }
       >
         <Text
-          accessible={true}
-          allowFontScaling={true}
-          disabled={false}
-          ellipsizeMode="tail"
           style={
             Object {
               "borderColor": "#527fe4",
@@ -1407,10 +1222,6 @@ exports[`renders ./components/flex/demo/basic.tsx correctly 1`] = `
           兜兜
         </Text>
         <Text
-          accessible={true}
-          allowFontScaling={true}
-          disabled={false}
-          ellipsizeMode="tail"
           style={
             Object {
               "borderColor": "#527fe4",
@@ -1423,10 +1234,6 @@ exports[`renders ./components/flex/demo/basic.tsx correctly 1`] = `
           兜兜
         </Text>
         <Text
-          accessible={true}
-          allowFontScaling={true}
-          disabled={false}
-          ellipsizeMode="tail"
           style={
             Object {
               "borderColor": "#527fe4",
@@ -1439,10 +1246,6 @@ exports[`renders ./components/flex/demo/basic.tsx correctly 1`] = `
           兜兜
         </Text>
         <Text
-          accessible={true}
-          allowFontScaling={true}
-          disabled={false}
-          ellipsizeMode="tail"
           style={
             Object {
               "borderColor": "#527fe4",
@@ -1470,12 +1273,7 @@ exports[`renders ./components/flex/demo/basic.tsx correctly 1`] = `
         ]
       }
     >
-      <Text
-        accessible={true}
-        allowFontScaling={true}
-        disabled={false}
-        ellipsizeMode="tail"
-      >
+      <Text>
         align="end":交叉轴的终点对齐
       </Text>
     </View>
@@ -1508,10 +1306,6 @@ exports[`renders ./components/flex/demo/basic.tsx correctly 1`] = `
         }
       >
         <Text
-          accessible={true}
-          allowFontScaling={true}
-          disabled={false}
-          ellipsizeMode="tail"
           style={
             Object {
               "borderColor": "#527fe4",
@@ -1524,10 +1318,6 @@ exports[`renders ./components/flex/demo/basic.tsx correctly 1`] = `
           兜兜
         </Text>
         <Text
-          accessible={true}
-          allowFontScaling={true}
-          disabled={false}
-          ellipsizeMode="tail"
           style={
             Object {
               "borderColor": "#527fe4",
@@ -1540,10 +1330,6 @@ exports[`renders ./components/flex/demo/basic.tsx correctly 1`] = `
           兜兜
         </Text>
         <Text
-          accessible={true}
-          allowFontScaling={true}
-          disabled={false}
-          ellipsizeMode="tail"
           style={
             Object {
               "borderColor": "#527fe4",
@@ -1556,10 +1342,6 @@ exports[`renders ./components/flex/demo/basic.tsx correctly 1`] = `
           兜兜
         </Text>
         <Text
-          accessible={true}
-          allowFontScaling={true}
-          disabled={false}
-          ellipsizeMode="tail"
           style={
             Object {
               "borderColor": "#527fe4",
@@ -1587,12 +1369,7 @@ exports[`renders ./components/flex/demo/basic.tsx correctly 1`] = `
         ]
       }
     >
-      <Text
-        accessible={true}
-        allowFontScaling={true}
-        disabled={false}
-        ellipsizeMode="tail"
-      >
+      <Text>
         align="stretch":如果项目未设置高度或设为auto，将占满整个容器的高度
       </Text>
     </View>
@@ -1636,10 +1413,6 @@ exports[`renders ./components/flex/demo/basic.tsx correctly 1`] = `
           }
         >
           <Text
-            accessible={true}
-            allowFontScaling={true}
-            disabled={false}
-            ellipsizeMode="tail"
             style={
               Object {
                 "borderColor": "#527fe4",
@@ -1652,10 +1425,6 @@ exports[`renders ./components/flex/demo/basic.tsx correctly 1`] = `
             兜兜
           </Text>
           <Text
-            accessible={true}
-            allowFontScaling={true}
-            disabled={false}
-            ellipsizeMode="tail"
             style={
               Object {
                 "borderColor": "#527fe4",
@@ -1668,10 +1437,6 @@ exports[`renders ./components/flex/demo/basic.tsx correctly 1`] = `
             兜兜
           </Text>
           <Text
-            accessible={true}
-            allowFontScaling={true}
-            disabled={false}
-            ellipsizeMode="tail"
             style={
               Object {
                 "borderColor": "#527fe4",
@@ -1684,10 +1449,6 @@ exports[`renders ./components/flex/demo/basic.tsx correctly 1`] = `
             兜兜
           </Text>
           <Text
-            accessible={true}
-            allowFontScaling={true}
-            disabled={false}
-            ellipsizeMode="tail"
             style={
               Object {
                 "borderColor": "#527fe4",
@@ -1717,10 +1478,6 @@ exports[`renders ./components/flex/demo/basic.tsx correctly 1`] = `
       }
     >
       <Text
-        accessible={true}
-        allowFontScaling={true}
-        disabled={false}
-        ellipsizeMode="tail"
         style={
           Object {
             "marginBottom": 10,
@@ -1729,12 +1486,7 @@ exports[`renders ./components/flex/demo/basic.tsx correctly 1`] = `
       >
         是否折行
       </Text>
-      <Text
-        accessible={true}
-        allowFontScaling={true}
-        disabled={false}
-        ellipsizeMode="tail"
-      >
+      <Text>
         wrap="wrap":换行
       </Text>
     </View>
@@ -1752,13 +1504,7 @@ exports[`renders ./components/flex/demo/basic.tsx correctly 1`] = `
       }
     >
       <View
-        accessibilityComponentType={undefined}
-        accessibilityLabel={undefined}
-        accessibilityTraits={undefined}
         accessible={true}
-        hitSlop={undefined}
-        nativeID={undefined}
-        onLayout={undefined}
         onResponderGrant={[Function]}
         onResponderMove={[Function]}
         onResponderRelease={[Function]}
@@ -1776,7 +1522,6 @@ exports[`renders ./components/flex/demo/basic.tsx correctly 1`] = `
             undefined,
           ]
         }
-        testID={undefined}
       >
         <View
           style={
@@ -2113,12 +1858,7 @@ exports[`renders ./components/flex/demo/basic.tsx correctly 1`] = `
         ]
       }
     >
-      <Text
-        accessible={true}
-        allowFontScaling={true}
-        disabled={false}
-        ellipsizeMode="tail"
-      >
+      <Text>
         wrap="nowrap":不换行
       </Text>
     </View>
@@ -2136,13 +1876,7 @@ exports[`renders ./components/flex/demo/basic.tsx correctly 1`] = `
       }
     >
       <View
-        accessibilityComponentType={undefined}
-        accessibilityLabel={undefined}
-        accessibilityTraits={undefined}
         accessible={true}
-        hitSlop={undefined}
-        nativeID={undefined}
-        onLayout={undefined}
         onPress={[Function]}
         onResponderGrant={[Function]}
         onResponderMove={[Function]}
@@ -2161,7 +1895,6 @@ exports[`renders ./components/flex/demo/basic.tsx correctly 1`] = `
             undefined,
           ]
         }
-        testID={undefined}
       >
         <View
           style={

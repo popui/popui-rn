@@ -1,4 +1,4 @@
-import themeVars from '../../style/themes/default'
+import theme from '../../style/themes/default'
 
 export default {
   container: {
@@ -10,10 +10,10 @@ export default {
   },
   input: {
     flex: 1,
-    height: themeVars.textinput_base_height,
+    height: theme.textinput_base_height,
     backgroundColor: 'transparent',
-    fontSize: themeVars.input_font_size,
-    color: themeVars.color_text_base,
+    fontSize: theme.input_font_size,
+    color: theme.color_text_base,
   },
   clear: {},
 }

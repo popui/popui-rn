@@ -1,27 +1,43 @@
-import React from 'react'
+import normalizeColor from 'normalize-css-color';
+import React from 'react';
+import { StyleProp, Text, TouchableHighlight, View, ViewStyle } from 'react-native';
+import { WithTheme, WithThemeStyles } from '../style';
+import { SegmentedControlPropsType } from './PropsType';
+import AndroidStyles, { SegmentControlStyle } from './style/index';
 
-import {
-  StyleProp,
-  StyleSheet,
-  Text,
-  TouchableHighlight,
-  View,
-  ViewStyle,
-} from 'react-native'
-import normalizeColor from 'normalize-css-color'
-import setNormalizedColorAlpha from 'react-native/Libraries/StyleSheet/setNormalizedColorAlpha'
-import { SegmentedControlPropsType } from './PropsType'
-import AndroidStyle, { ISegmentControlStyle } from './style/index'
+/**
+ * Copyright (c) Facebook, Inc. and its affiliates.
+ *
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
+ *
+ */
 
-export interface SegmentControlNativeProps extends SegmentedControlPropsType {
-  styles?: ISegmentControlStyle
-  style?: StyleProp<ViewStyle>
+/**
+ * number should be a color processed by `normalizeColor`
+ * alpha should be number between 0 and 1
+ */
+function setNormalizedColorAlpha(input: number, alpha: number) {
+  if (alpha < 0) {
+    alpha = 0;
+  } else if (alpha > 1) {
+    alpha = 1;
+  }
+
+  alpha = Math.round(alpha * 255);
+  // magic bitshift guarantees we return an unsigned int
+  // tslint:disable-next-line:no-bitwise
+  return ((input & 0xffffff00) | alpha) >>> 0;
 }
 
-const AndroidStyles = StyleSheet.create<any>(AndroidStyle)
+export interface SegmentControlProps
+  extends SegmentedControlPropsType,
+    WithThemeStyles<SegmentControlStyle> {
+  style?: StyleProp<ViewStyle>;
+}
 
 export default class SegmentedControl extends React.Component<
-  SegmentControlNativeProps,
+  SegmentControlProps,
   any
 > {
   static defaultProps = {
@@ -32,17 +48,16 @@ export default class SegmentedControl extends React.Component<
     onValueChange() {},
     tintColor: '#108ee9',
     style: {},
-    styles: AndroidStyles,
-  }
+  };
 
-  constructor(props: SegmentControlNativeProps) {
-    super(props)
+  constructor(props: SegmentControlProps) {
+    super(props);
     this.state = {
       selectedIndex: props.selectedIndex,
     }
   }
 
-  componentWillReceiveProps(nextProps: SegmentControlNativeProps) {
+  componentWillReceiveProps(nextProps: SegmentControlProps) {
     if (nextProps.selectedIndex !== this.props.selectedIndex) {
       this.setState({
         selectedIndex: nextProps.selectedIndex,
@@ -68,60 +83,71 @@ export default class SegmentedControl extends React.Component<
   }
 
   render() {
-    const { style, disabled, values = [], tintColor } = this.props
-    const styles = this.props.styles!
+    const { style, disabled, values = [], tintColor } = this.props;
 
-    const selectedIndex = this.state.selectedIndex
-    const items = values.map((value, idx) => {
-      let itemRadius: any = null
-      if (idx === 0) {
-        itemRadius = styles.itemLeftRadius
-      } else if (idx === values.length - 1) {
-        itemRadius = styles.itemRightRadius
-      }
+    return (
+      <WithTheme styles={this.props.styles} themeStyles={AndroidStyles}>
+        {styles => {
+          const selectedIndex = this.state.selectedIndex;
+          const items = values.map((value, idx) => {
+            let itemRadius: any = null;
+            if (idx === 0) {
+              itemRadius = styles.itemLeftRadius;
+            } else if (idx === values.length - 1) {
+              itemRadius = styles.itemRightRadius;
+            }
 
-      const itemStyle = [
-        styles.item,
-        itemRadius,
-        {
-          backgroundColor: idx === selectedIndex ? tintColor : 'transparent',
-          borderColor: tintColor,
-        },
-      ]
+            const itemStyle = [
+              styles.item,
+              itemRadius,
+              {
+                backgroundColor:
+                  idx === selectedIndex ? tintColor : 'transparent',
+                borderColor: tintColor,
+              },
+            ];
 
-      const underlayColor =
-        idx === selectedIndex
-          ? tintColor
-          : setNormalizedColorAlpha(normalizeColor(tintColor), 0.3)
+            const underlayColor =
+              idx === selectedIndex
+                ? tintColor
+                : setNormalizedColorAlpha(
+                    normalizeColor(tintColor),
+                    0.3,
+                  ).toString();
 
-      return (
-        <TouchableHighlight
-          disabled={disabled}
-          key={idx}
-          onPress={(e?: any) => this.onPress(e, idx, value)}
-          underlayColor={underlayColor}
-          style={itemStyle}
-          activeOpacity={1}
-        >
-          <Text
-            // tslint:disable-next-line:jsx-no-multiline-js
-            style={[
-              styles.itemText,
-              { color: idx === selectedIndex ? '#fff' : tintColor },
-            ]}
-          >
-            {value}
-          </Text>
-        </TouchableHighlight>
-      )
-    })
+            return (
+              <TouchableHighlight
+                disabled={disabled}
+                key={idx}
+                onPress={(e?: any) => this.onPress(e, idx, value)}
+                underlayColor={underlayColor}
+                style={itemStyle}
+                activeOpacity={1}
+              >
+                <Text
+                  // tslint:disable-next-line:jsx-no-multiline-js
+                  style={[
+                    styles.itemText,
+                    { color: idx === selectedIndex ? '#fff' : tintColor },
+                  ]}
+                >
+                  {value}
+                </Text>
+              </TouchableHighlight>
+            );
+          });
 
-    const enabledOpacity = !disabled ? 1 : 0.5
-    const segmentedStyle = {
-      opacity: enabledOpacity,
-      borderColor: tintColor,
-    }
+          const enabledOpacity = !disabled ? 1 : 0.5;
+          const segmentedStyle = {
+            opacity: enabledOpacity,
+            borderColor: tintColor,
+          };
 
-    return <View style={[styles.segment, segmentedStyle, style]}>{items}</View>
+          return (
+            <View style={[styles.segment, segmentedStyle, style]}>{items}</View>
+          );
+        }}
+      </WithTheme>
+    );
   }
 }

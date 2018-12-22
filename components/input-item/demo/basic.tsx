@@ -1,8 +1,7 @@
 /* tslint:disable:jsx-no-multiline-js */
-import React from 'react'
-
-import { ScrollView, Text, View } from 'react-native'
-import { Button, InputItem, List } from '@popui/popui-rn'
+import { Button, InputItem, List } from '@popui/popui-rn';
+import React from 'react';
+import { ScrollView, Text, View } from 'react-native';
 
 declare var jest: any
 
@@ -57,7 +56,6 @@ export default class BasicInputItemExample extends React.Component<any, any> {
           <InputItem
             clear
             error
-            onErrorPress={() => alert('clicked me')}
             value={this.state.value}
             onChange={(value: any) => {
               this.setState({
@@ -83,6 +81,20 @@ export default class BasicInputItemExample extends React.Component<any, any> {
             extra={<Text>元</Text>}
             placeholder="不可编辑"
             editable={false}
+          >
+            输入框
+          </InputItem>
+          <InputItem
+            clear
+            value="disabled"
+            onChange={(value: any) => {
+              this.setState({
+                value,
+              });
+            }}
+            extra={<Text>元</Text>}
+            placeholder="disabled"
+            disabled
           >
             输入框
           </InputItem>
@@ -125,7 +137,7 @@ export default class BasicInputItemExample extends React.Component<any, any> {
             </Button>
           </List.Item>
         </List>
-        <List renderHeader={() => '固定标签字数'}>
+        <List renderHeader={'固定标签字数'}>
           <InputItem
             clear
             value={this.state.labelnum1}
@@ -166,7 +178,7 @@ export default class BasicInputItemExample extends React.Component<any, any> {
             四字标签
           </InputItem>
         </List>
-        <List renderHeader={() => '格式'}>
+        <List renderHeader={'格式'}>
           <InputItem
             clear
             error

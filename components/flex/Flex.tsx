@@ -1,12 +1,6 @@
-import React from 'react'
-
-import {
-  StyleProp,
-  TouchableWithoutFeedback,
-  View,
-  ViewStyle,
-} from 'react-native'
-import { FlexPropsType } from './PropsType'
+import React from 'react';
+import { StyleProp, TouchableWithoutFeedback, View, ViewStyle } from 'react-native';
+import { FlexPropsType } from './PropsType';
 
 export interface FlexProps extends FlexPropsType {
   onPress?: () => void
@@ -35,8 +29,8 @@ export default class Flex extends React.Component<FlexProps, any> {
       align,
       children,
       ...restProps
-    } = this.props
-    const transferConst = [justify, align]
+    } = this.props;
+    const transferConst = [justify, align];
     const transferConstStyle = transferConst.map(el => {
       let tempTxt
       switch (el) {
