@@ -1,20 +1,7 @@
-<p align="center">
-  <a href="#">
-    <img width="80" src="https://en.gravatar.com/userimage/142653667/8ca38e8d70b0e4f61621331a4e750aed.png">
-  </a>
-</p>
+# PopUI React Native
 
-# Popui React Native
-[![](https://img.shields.io/travis/ant-design/ant-design-mobile-rn.svg?style=flat-square)](https://travis-ci.org/ant-design/ant-design-mobile-rn)
-[![Codecov](https://img.shields.io/codecov/c/github/ant-design/ant-design-mobile-rn.svg?style=flat-square)](https://codecov.io/gh/ant-design/ant-design-mobile-rn)
-[![npm package](https://img.shields.io/npm/v/popui-rn.svg?style=flat-square)](https://www.npmjs.org/package/popui-rn)
-[![NPM downloads](http://img.shields.io/npm/dm/popui-rn.svg?style=flat-square)](https://npmjs.org/package/popui-rn)
-[![Dependency Status](https://david-dm.org/ant-design/ant-design-mobile-rn.svg?style=flat-square)](https://david-dm.org/ant-design/ant-design-mobile-rn)
-[![Percentage of issues still open](http://isitmaintained.com/badge/open/ant-design/ant-design-mobile-rn.svg)](http://isitmaintained.com/project/ant-design/ant-design-mobile-rn "Percentage of issues still open")
-[![Join the chat at https://gitter.im/ant-design/ant-design](https://img.shields.io/gitter/room/ant-design/ant-design.svg?style=flat-square)](https://gitter.im/ant-design/ant-design?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
-
-`popui-rn` 是移动规范的 React Native 实现,融合了 Weui,Ant Design 等其他 UI。
-
+`@popui/popui-rn` 是 React Native 实现的 UI 库,融合了 Weui,Ant Design 等其他流行
+RN UI 库。
 
 ## 特性
 
@@ -23,11 +10,17 @@
 - 使用 TypeScript 开发，提供类型定义文件。
 
 ## 演示
-[https://expo.io/@popapps/popui](https://expo.io/@popapps/popui)
 
-请先安装 [expo app](https://expo.io/tools), 再扫描上述页面的二维码.
+[https://expo.io/@popui/popui](https://expo.io/@popui/popui)
 
-## 安装 & 使用
+![https://expo.io/@popui/popui](./.github/images/qrcode_expo_popui.png 'https://expo.io/@popui/popui')
 
-[介绍](docs/react/introduce.zh-CN.md#安装)
+请先安装 [expo app](https://expo.io/tools), 用 Expo 扫描上面的二维码.
 
+# 源码
+
+[https://github.com/popui/popui-rn](https://github.com/popui/popui-rn)
+
+## 欢迎贡献
+
+有任何建议或意见您可以进行 [提问](https://github.com/popui/popui-rn/issues)。
