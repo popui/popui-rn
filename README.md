@@ -1,4 +1,4 @@
-# PopUI React Native
+# POPUI React Native
 
 <p align="center">
   <a href="https://popui.github.io/popui-rn">
