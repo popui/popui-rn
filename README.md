@@ -6,8 +6,8 @@
   </a>
 </p>
 
-`@popui/popui-rn` 是 React Native 实现的 UI 库,融合了 Weui,Ant Design 等其他流行
-RN UI 库。
+`@popui/popui-rn` 是基于 React Native 实现的 UI 库,融合了 `Weui`,`Ant Design` 等其他流行
+React Native UI 库。
 
 ## 特性
 
