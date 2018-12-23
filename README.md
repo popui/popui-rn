@@ -19,7 +19,8 @@ RN UI 库。
 
 # 源码
 
-[https://github.com/popui/popui-rn](https://github.com/popui/popui-rn)
+[https://github.com/popui/popui-rn/tree/pmaster](https://github.com/popui/popui-rn/tree/pmaster)
+
 
 ## 欢迎贡献
 
