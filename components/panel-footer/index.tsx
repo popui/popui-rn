@@ -42,7 +42,7 @@ const PanelFooter = ({
       {access ? (
         <Image
           style={{ width: 7.5, height: 12, marginLeft: 5 }}
-          source={require('assets/images/back_arrow.png')}
+          source={require('../assets/images/back_arrow.png')}
         />
       ) : (
         false
