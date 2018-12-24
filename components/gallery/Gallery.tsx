@@ -10,7 +10,7 @@ import {
   ViewPropTypes,
 } from 'react-native'
 import PhotoView from 'react-native-photo-view'
-import { Mask } from '@popui/popui-rn/components/Mask'
+import Mask from '../mask'
 
 const { width, height } = Dimensions.get('window')
 const styles = StyleSheet.create({

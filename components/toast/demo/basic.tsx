@@ -3,7 +3,6 @@ import React from 'react'
 
 import { DeviceEventEmitter, Text } from 'react-native'
 import { Button, Toast, GapH, GapV } from '@popui/popui-rn'
-// import ToastContainer from '@popui/popui-rn/components/toast/ToastContainer';
 // const testText = "This is a toast tips !!! This is a toast tips !!! This is a toast tips !!! This is a toast tips !!! This is a toast tips !!!"
 const testText = 'testText...'
 
